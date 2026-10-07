@@ -179,6 +179,60 @@ html = f"""<!DOCTYPE html>
   name="description"
   content="{description}"
 >
+<link
+  rel="canonical"
+  href="https://korea-plainly.com/{filename}"
+>
+
+<meta
+  property="og:type"
+  content="article"
+>
+
+<meta
+  property="og:title"
+  content="{title}"
+>
+
+<meta
+  property="og:description"
+  content="{description}"
+>
+
+<meta
+  property="og:url"
+  content="https://korea-plainly.com/{filename}"
+>
+
+<meta
+  property="og:image"
+  content="https://korea-plainly.com/{photo}"
+>
+
+<meta
+  property="og:site_name"
+  content="Korea Plainly"
+>
+
+<meta
+  name="twitter:card"
+  content="summary_large_image"
+>
+
+<meta
+  name="twitter:title"
+  content="{title}"
+>
+
+<meta
+  name="twitter:description"
+  content="{description}"
+>
+
+<meta
+  name="twitter:image"
+  content="https://korea-plainly.com/{photo}"
+>
 
 <style>
 
