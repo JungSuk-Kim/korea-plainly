@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Practical guides to Seoul, food, culture, daily life and useful apps in Korea.">
+<title>Guides | Korea Plainly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.guides-hero{padding:85px 0 60px;border-bottom:1px solid var(--line)}
+.guides-hero h1{font-size:clamp(55px,7vw,90px);letter-spacing:-.075em;line-height:.94;margin:0}
+.guides-hero h1 em,.guide-card h2 em{font-family:"Playfair Display",serif;color:var(--red)}
+.guides-intro{max-width:620px;color:var(--muted);font-size:17px;line-height:1.7;margin:25px 0 0}
+.filters{display:flex;gap:10px;flex-wrap:wrap;padding:28px 0;border-bottom:1px solid var(--line)}
+.filter{border:1px solid #c9c6bd;border-radius:99px;padding:9px 15px;font-size:10px;letter-spacing:.08em;background:transparent;cursor:pointer}
+.filter.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.guides-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding:55px 0 110px}
+.guide-card{background:var(--card);border:1px solid var(--line);display:block;overflow:hidden;transition:.2s}
+.guide-card:hover{transform:translateY(-3px);box-shadow:0 14px 35px #0000000d}
+.guide-image{height:285px;background-size:cover;background-position:center;position:relative}
+.guide-image span{position:absolute;left:18px;bottom:18px;background:rgba(255,253,248,.95);padding:8px 10px;font-size:8px;letter-spacing:.15em;font-weight:700}
+.guide-copy{padding:25px}
+.guide-copy small{font-size:8px;letter-spacing:.16em;color:#777;font-weight:700}
+.guide-copy h2{font-size:27px;line-height:1.08;letter-spacing:-.05em;margin:9px 0}
+.guide-copy p{font-size:13px;line-height:1.65;color:var(--muted);margin:0 0 18px}
+.guide-read{font-size:10px;font-weight:700}
+.guide-read span{margin-left:10px}
+.empty-note{grid-column:1/-1;text-align:center;color:var(--muted);padding:35px;border-top:1px solid var(--line)}
+@media(max-width:650px){.guides-hero{padding:60px 0 40px}.guides-hero h1{font-size:54px}.guides-intro{font-size:15px}.guides-grid{grid-template-columns:1fr;padding:35px 0 75px}.guide-image{height:240px}.guide-copy h2{font-size:24px}}
+</style>
+</head>
+<body>
+<header><div class="nav wrap">
+<a class="brand" href="index.html"><span class="taegeuk"></span><span>Korea <b>Plainly</b></span></a>
+<nav><a href="guides.html">Guides</a><a href="index.html#seoul">Seoul</a><a href="index.html#food">Food</a><a href="index.html#culture">Culture</a><a href="index.html#life">Daily Life</a></nav>
+<a class="top-link" href="guides.html">All Guides <span>↗</span></a><button class="menu" aria-label="menu">☰</button>
+</div></header>
+<main>
+<section class="guides-hero"><div class="wrap">
+<p class="kicker"><i></i> KOREA PLAINLY GUIDES</p>
+<h1>Useful things<br><em>worth knowing.</em></h1>
+<p class="guides-intro">Practical guides for getting around Korea, finding good food, understanding everyday life and making your trip a little easier.</p>
+</div></section>
+<div class="wrap">
+<div class="filters" role="tablist">
+<button class="filter active" data-filter="all">ALL</button>
+<button class="filter" data-filter="seoul">SEOUL</button>
+<button class="filter" data-filter="food">FOOD</button>
+<button class="filter" data-filter="culture">CULTURE</button>
+<button class="filter" data-filter="daily">DAILY LIFE</button>
+<button class="filter" data-filter="apps">APPS & TIPS</button>
+</div>
+<section class="guides-grid">
+<a class="guide-card" data-category="seoul" href="seoul-first-time.html">
+<div class="guide-image" style="background-image:url('images/street.jpg')"><span>SEOUL · FIRST TRIP</span></div>
+<div class="guide-copy"><small>SEOUL</small><h2>7 Things First-Time Visitors Should Know About <em>Seoul.</em></h2><p>The little details that make your first days in Seoul much easier.</p><div class="guide-read">Read guide <span>→</span></div></div>
+</a>
+<a class="guide-card" data-category="daily" href="#">
+<div class="guide-image" style="background-image:url('images/store.jpg')"><span>DAILY LIFE</span></div>
+<div class="guide-copy"><small>DAILY LIFE</small><h2>Korean Convenience Stores, <em>Explained.</em></h2><p>What to buy, how to pay and what you can do there.</p><div class="guide-read">Coming next <span>→</span></div></div>
+</a>
+<a class="guide-card" data-category="food" href="#">
+<div class="guide-image" style="background-image:url('images/food.jpg')"><span>K-FOOD</span></div>
+<div class="guide-copy"><small>FOOD</small><h2>10 Korean Restaurant Words <em>Worth Knowing.</em></h2><p>A simple vocabulary guide for ordering and understanding menus.</p><div class="guide-read">Coming next <span>→</span></div></div>
+</a>
+<a class="guide-card" data-category="apps" href="#">
+<div class="guide-image" style="background-image:url('images/seoul.jpg')"><span>APPS & TIPS</span></div>
+<div class="guide-copy"><small>APPS & TIPS</small><h2>Naver Map vs Google Maps <em>in Korea.</em></h2><p>Which map app should you use while traveling in Korea?</p><div class="guide-read">Coming next <span>→</span></div></div>
+</a>
+<div class="empty-note">More practical Korea guides are on the way.</div>
+</section>
+</div>
+</main>
+<footer><div class="foot wrap"><div><a class="brand" href="index.html"><span class="taegeuk"></span><span>Korea <b>Plainly</b></span></a><p>Korea, Made Easy for Everyone.</p></div><div class="foot-links"><a href="guides.html">Guides</a><a href="index.html#seoul">Seoul</a><a href="index.html#food">Food</a><a href="index.html#culture">Culture</a><a href="index.html#life">Daily Life</a></div></div><div class="copyright wrap">© 2026 Korea Plainly <span>Made for curious people.</span></div></footer>
+<script>
+document.querySelector('.menu').addEventListener('click',()=>document.querySelector('nav').classList.toggle('show'));
+const buttons=document.querySelectorAll('.filter'), cards=document.querySelectorAll('.guide-card');
+buttons.forEach(btn=>btn.addEventListener('click',()=>{
+ buttons.forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+ const f=btn.dataset.filter;
+ cards.forEach(card=>card.style.display=(f==='all'||card.dataset.category===f)?'block':'none');
+}));
+</script>
+</body>
+</html>
