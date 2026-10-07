@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -30,13 +31,62 @@ jobs:
           OPENAI_MODEL: gpt-6-luna
         run: python scripts/generate_post.py
 
-      - name: Commit Article
+      - name: Update Sitemap
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          from xml.sax.saxutils import escape
+
+          ROOT = Path(".")
+
+          base_url = "https://jungsuk-kim.github.io/korea-plainly"
+
+          urls = []
+
+          # 메인 페이지
+          urls.append("index.html")
+
+          # Guides
+          urls.append("guides.html")
+
+          # 모든 HTML 페이지 수집
+          for path in sorted(ROOT.glob("*.html")):
+              name = path.name
+
+              if name not in urls:
+                  urls.append(name)
+
+          # sitemap 생성
+          lines = [
+              '<?xml version="1.0" encoding="UTF-8"?>',
+              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+          ]
+
+          for page in urls:
+              lines.append("  <url>")
+              lines.append(
+                  f"    <loc>{escape(base_url + '/' + page)}</loc>"
+              )
+              lines.append("  </url>")
+
+          lines.append("</urlset>")
+
+          Path("sitemap.xml").write_text(
+              "\n".join(lines) + "\n",
+              encoding="utf-8"
+          )
+
+          print("Updated sitemap.xml")
+          PY
+
+      - name: Commit Article and SEO Files
         run: |
           git config user.name "Korea Plainly Bot"
           git config user.email "actions@github.com"
 
           git add .
 
-          git diff --cached --quiet || git commit -m "Auto publish Korea guide"
+          git diff --cached --quiet || git commit -m "Auto publish Korea guide and update SEO"
 
           git push
