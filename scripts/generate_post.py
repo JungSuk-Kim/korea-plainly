@@ -12,23 +12,13 @@ TOPICS_FILE = ROOT / "content" / "topics.json"
 PUBLISHED_FILE = ROOT / "content" / "published.json"
 GUIDES_FILE = ROOT / "guides.html"
 
-topics = json.loads(
-    TOPICS_FILE.read_text(encoding="utf-8")
-)
+topics = json.loads(TOPICS_FILE.read_text(encoding="utf-8"))
+published = json.loads(PUBLISHED_FILE.read_text(encoding="utf-8"))
 
-published = json.loads(
-    PUBLISHED_FILE.read_text(encoding="utf-8")
-)
-
-published_slugs = {
-    item["slug"] for item in published
-}
+published_slugs = {item["slug"] for item in published}
 
 topic = next(
-    (
-        item for item in topics
-        if item["slug"] not in published_slugs
-    ),
+    (item for item in topics if item["slug"] not in published_slugs),
     None
 )
 
@@ -39,7 +29,6 @@ if topic is None:
 slug = topic["slug"]
 filename = f"{slug}.html"
 
-# 기존 파일을 절대 덮어쓰지 않음
 if (ROOT / filename).exists():
     raise RuntimeError(
         f"Refusing to overwrite existing file: {filename}"
@@ -53,15 +42,13 @@ prompt = f"""
 You write for Korea Plainly, an English-language website
 for foreign visitors to Korea.
 
-Write a practical guide about:
-
+Topic:
 {topic["title"]}
 
 Category:
-
 {topic["category"]}
 
-Return ONLY valid JSON with:
+Return ONLY valid JSON containing:
 
 title
 description
@@ -69,16 +56,17 @@ body_html
 thumbnail_alt
 
 Requirements:
-
 - 700-1000 words.
 - Simple, natural English.
-- Useful for foreign visitors.
-- Avoid invented prices, opening hours, laws,
-  statistics, or uncertain facts.
+- Practical and useful for foreign visitors.
+- Avoid invented prices, opening hours, statistics, laws,
+  or uncertain facts.
 - No Markdown.
 - body_html may use only:
   p, h2, h3, ul, ol, li, strong
 - Do not include h1.
+- Use clear sections and practical advice.
+- Write in the same editorial tone as Korea Plainly.
 """
 
 response = client.responses.create(
@@ -102,32 +90,176 @@ description = escape(article["description"])
 category = escape(topic["category"])
 body_html = article["body_html"]
 
-html = f"""<!doctype html>
+html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>{title} | Korea Plainly</title>
 
 <meta name="description" content="{description}">
 
-<link rel="stylesheet" href="style.css">
+<style>
+*{{box-sizing:border-box}}
+
+body{{
+  margin:0;
+  background:#f7f2e8;
+  color:#17233b;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.75;
+}}
+
+a{{
+  color:inherit;
+  text-decoration:none;
+}}
+
+.site-header{{
+  border-bottom:1px solid #ddd4c5;
+  background:#f7f2e8;
+}}
+
+.nav{{
+  max-width:1100px;
+  margin:auto;
+  padding:22px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}}
+
+.brand{{
+  font-weight:900;
+  font-size:22px;
+  letter-spacing:-.04em;
+}}
+
+.back{{
+  font-size:13px;
+  font-weight:700;
+}}
+
+main{{
+  max-width:820px;
+  margin:auto;
+  padding:60px 24px 90px;
+}}
+
+.eyebrow{{
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#c9362b;
+}}
+
+h1{{
+  font-size:clamp(38px,7vw,68px);
+  line-height:1.02;
+  letter-spacing:-.055em;
+  margin:14px 0 22px;
+}}
+
+.dek{{
+  font-size:19px;
+  color:#5b6270;
+  max-width:680px;
+  margin-bottom:38px;
+}}
+
+article h2{{
+  font-size:28px;
+  line-height:1.2;
+  letter-spacing:-.035em;
+  margin:48px 0 12px;
+}}
+
+article h3{{
+  font-size:21px;
+  line-height:1.3;
+  margin:32px 0 10px;
+}}
+
+article p{{
+  font-size:17px;
+  margin:0 0 18px;
+}}
+
+article ul,
+article ol{{
+  padding-left:24px;
+  margin:10px 0 24px;
+}}
+
+article li{{
+  font-size:17px;
+  margin-bottom:8px;
+}}
+
+.tip{{
+  border-left:4px solid #c9362b;
+  background:#eee7d9;
+  padding:18px 20px;
+  margin:28px 0;
+  font-size:15px;
+}}
+
+footer{{
+  border-top:1px solid #ddd4c5;
+  padding:30px 24px;
+  color:#737985;
+  text-align:center;
+  font-size:12px;
+}}
+
+@media(max-width:600px){{
+  main{{padding:42px 18px 70px}}
+  .nav{{padding:18px}}
+  article p,
+  article li{{font-size:16px}}
+  article h2{{font-size:24px}}
+}}
+</style>
 </head>
 
 <body>
 
-<main class="article-page">
+<header class="site-header">
+<nav class="nav">
+<a class="brand" href="index.html">KOREA PLAINLY</a>
+<a class="back" href="guides.html">ALL GUIDES →</a>
+</nav>
+</header>
 
-<a href="guides.html">← Guides</a>
+<main>
+
+<div class="eyebrow">
+{category.upper()} · KOREA GUIDE
+</div>
 
 <h1>{title}</h1>
 
-<p class="article-category">{category}</p>
+<p class="dek">{description}</p>
+
+<article>
 
 {body_html}
 
+<div class="tip">
+<strong>Bottom line:</strong>
+A little preparation can make your time in Korea much easier.
+Keep this guide handy and enjoy exploring at your own pace.
+</div>
+
+</article>
+
 </main>
+
+<footer>
+© Korea Plainly · Korea, Made Easy for Everyone.
+</footer>
 
 </body>
 </html>
@@ -138,7 +270,6 @@ html = f"""<!doctype html>
     encoding="utf-8"
 )
 
-# 발행 기록 저장
 published.append({
     "slug": slug,
     "filename": filename,
@@ -155,18 +286,12 @@ PUBLISHED_FILE.write_text(
     encoding="utf-8"
 )
 
-# Guides 페이지 자동 업데이트
-guides = GUIDES_FILE.read_text(
-    encoding="utf-8"
-)
+guides = GUIDES_FILE.read_text(encoding="utf-8")
 
 if f'href="{filename}"' not in guides:
 
     card_number = len(
-        re.findall(
-            r'<a class="guide-card"',
-            guides
-        )
+        re.findall(r'<a class="guide-card"', guides)
     ) + 1
 
     thumb = f"thumb-auto-{slug}.svg"
@@ -201,22 +326,20 @@ if f'href="{filename}"' not in guides:
         encoding="utf-8"
     )
 
-# 자동 썸네일 생성
-svg_text = (
+svg_title = (
     article["title"]
     .replace("&", "&amp;")
     .replace("<", "&lt;")
     .replace(">", "&gt;")
 )
 
-line1 = escape(svg_text[:42])
-line2 = escape(svg_text[42:84])
+line1 = escape(svg_title[:42])
+line2 = escape(svg_title[42:84])
 
 svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
 viewBox="0 0 1200 700">
 
-<rect width="1200" height="700"
-fill="#f4eee4"/>
+<rect width="1200" height="700" fill="#f4eee4"/>
 
 <rect x="70" y="70"
 width="1060" height="560"
