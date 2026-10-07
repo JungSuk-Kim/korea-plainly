@@ -1,0 +1,42 @@
+name: Korea Plainly Auto Publish
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 23 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install OpenAI
+        run: pip install openai
+
+      - name: Generate Article
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-6-luna
+        run: python scripts/generate_post.py
+
+      - name: Commit Article
+        run: |
+          git config user.name "Korea Plainly Bot"
+          git config user.email "actions@github.com"
+
+          git add .
+
+          git diff --cached --quiet || git commit -m "Auto publish Korea guide"
+
+          git push
