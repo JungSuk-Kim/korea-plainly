@@ -40,7 +40,7 @@ jobs:
 
           ROOT = Path(".")
 
-          base_url = "https://jungsuk-kim.github.io/korea-plainly"
+          base_url = "https://korea-plainly.com"
 
           urls = []
 
