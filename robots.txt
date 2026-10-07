@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jungsuk-kim.github.io/korea-plainly/sitemap.xml
+Sitemap: https://korea-plainly.com/sitemap.xml
