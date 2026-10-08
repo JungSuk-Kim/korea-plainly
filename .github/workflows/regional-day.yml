@@ -1,0 +1,60 @@
+name: Korea Plainly Regional Day
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  regional-day:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install openai requests
+
+      - name: Publish one regional day
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-6-luna
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: python scripts/generate_regional_day.py
+
+      - name: Update sitemap
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          base = "https://korea-plainly.com"
+          html_files = sorted(Path(".").glob("*.html"))
+          urls = []
+          for p in html_files:
+              urls.append(f"  <url><loc>{base}/{p.name}</loc></url>")
+          Path("sitemap.xml").write_text(
+              '<?xml version="1.0" encoding="UTF-8"?>\n'
+              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+              + "\n".join(urls)
+              + '\n</urlset>\n',
+              encoding="utf-8"
+          )
+          PY
+
+      - name: Commit regional articles
+        run: |
+          git config user.name "Korea Plainly Bot"
+          git config user.email "actions@github.com"
+          git add '*.html' '*.jpg' '*.png' '*.json' sitemap.xml
+          git diff --cached --quiet || git commit -m "Publish regional Korea day"
+          git push
