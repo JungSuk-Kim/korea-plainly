@@ -1,0 +1,26 @@
+{
+  "travel": {
+    "query": "best attraction in {region} Korea for first time visitors"
+  },
+  "food": {
+    "query": "best Korean restaurant in {region} Korea"
+  },
+  "cafe": {
+    "query": "best cafe in {region} Korea"
+  },
+  "shopping": {
+    "query": "best shopping area in {region} Korea"
+  },
+  "culture": {
+    "query": "best cultural experience in {region} Korea"
+  },
+  "leisure": {
+    "query": "best leisure activity in {region} Korea"
+  },
+  "stay": {
+    "query": "best hotel in {region} Korea"
+  },
+  "local-guide": {
+    "query": "best local experience in {region} Korea"
+  }
+}
