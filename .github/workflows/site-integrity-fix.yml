@@ -30,6 +30,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes needed."
           else
-            git commit -m "Fix site-wide integrity v4"
+            git commit -m "Fix site-wide integrity v5"
             git push
           fi
