@@ -1,10 +1,13 @@
 name: Build Category And Region Hubs
+
 on:
   workflow_dispatch:
   schedule:
     - cron: "15 0 * * *"
+
 permissions:
   contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,7 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Build hubs
+      - name: Build all hubs and repair navigation
         run: python scripts/build_category_region_hubs.py
       - name: Commit
         run: |
@@ -23,6 +26,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Build regional and category hubs"
+            git commit -m "Repair site navigation and rebuild hubs"
             git push
           fi
