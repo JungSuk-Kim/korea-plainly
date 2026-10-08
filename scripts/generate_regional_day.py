@@ -163,7 +163,8 @@ def choose_place(category, query):
         "types": place.get("types", []),
         "naver_match": bool(n_match),
         "naver_results": naver_signals,
-        "google_place_id": place.get("id")
+        "google_place_id": place.get("id"),
+        "photos": place.get("photos", [])
     }
 
 def google_place_image(place):
