@@ -3,7 +3,7 @@ from pathlib import Path
 import re
 
 ROOT=Path(__file__).resolve().parents[1]
-CSS_VERSION="20261009-5"
+CSS_VERSION="20261009-6"
 REGIONS=[("seoul","Seoul"),("busan","Busan"),("jeju","Jeju")]
 REGION_CATS=[("travel","Travel"),("food","Food"),("cafe","Cafe"),("shopping","Shopping"),
              ("culture","Culture"),("leisure","Leisure"),("stay","Stay"),("local-guide","Local Guide")]
@@ -53,17 +53,16 @@ NAV_JS=r"""<script id="kp-nav-js">
 </script>"""
 
 def nav_html():
-    def drop(label,links):
+    def drop(label, parent_href, links):
         items="".join(f'<a href="{href}">{text}</a>' for text,href in links)
-        first=links[0][1] if links else "index.html"
-        return f'<div class="nav-drop"><a class="nav-parent" href="{first}">{label}<span class="nav-chevron">⌄</span></a><div class="nav-menu">{items}</div></div>'
+        return f'<div class="nav-drop"><a class="nav-parent" href="{parent_href}">{label}<span class="nav-chevron">⌄</span></a><div class="nav-menu">{items}</div></div>'
     guides=[(n,f"guides.html?category={slug}") for n,slug in GUIDES]
     regions=[("Seoul","seoul.html"),("Busan","busan.html"),("Jeju","jeju.html"),("View all regions","regions.html")]
     more=[(n,f"{slug}.html") for slug,n in REGION_CATS]
-    out=['<a href="index.html">Home</a>',drop("Guides",guides),drop("Regions",regions)]
+    out=['<a href="index.html">Home</a>',drop("Guides","guides.html",guides),drop("Regions","regions.html",regions)]
     for slug,name in REGIONS:
-        out.append(drop(name,[(n,f"{slug}-{cat}.html") for cat,n in REGION_CATS]))
-    out.append(drop("More",more))
+        out.append(drop(name,f"{slug}.html",[(n,f"{slug}-{cat}.html") for cat,n in REGION_CATS]))
+    out.append(drop("More","travel.html",more))
     return "\n".join(out)
 
 def patch_css():
