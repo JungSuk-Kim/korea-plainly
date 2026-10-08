@@ -1,0 +1,31 @@
+name: Upgrade Thumbnail Automation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Patch generator
+        run: python scripts/patch_generate_post_thumbnail.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/generate_post.py scripts/patch_generate_post_thumbnail.py
+
+          if git diff --cached --quiet; then
+            echo "No changes needed."
+          else
+            git commit -m "Make auto published guide thumbnails unique"
+            git push
+          fi
