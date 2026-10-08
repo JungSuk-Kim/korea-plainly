@@ -15,7 +15,7 @@ for p in html:
     if p.name=="guides.html":
         if 'id="kp-guide-filter"' not in s: errors.append("guides.html: filter script missing")
         if re.search(r'data-guide-category="[^"]+"\s+data-guide-category=',s): errors.append("guides.html: duplicate category attribute")
-    if p.name!="privacy.html" and 'rel="canonical"' not in s: errors.append(f"{p.name}: canonical missing")
+    if 'rel="canonical"' not in s: errors.append(f"{p.name}: canonical missing")
     if '<nav' in s and 'class="nav-drop"' not in s: errors.append(f"{p.name}: dropdown nav missing")
 css=(ROOT/"style.css").read_text(encoding="utf-8",errors="ignore") if (ROOT/"style.css").exists() else ""
 for name in ["seoul","street","food","store"]:
