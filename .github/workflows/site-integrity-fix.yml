@@ -7,6 +7,7 @@ on:
     paths:
       - "scripts/site_integrity_fix.py"
       - "scripts/site_audit.py"
+      - "scripts/update_sitemap.py"
       - ".github/workflows/site-integrity-fix.yml"
 permissions:
   contents: write
@@ -20,6 +21,8 @@ jobs:
           python-version: "3.12"
       - name: Repair site
         run: python scripts/site_integrity_fix.py
+      - name: Update sitemap
+        run: python scripts/update_sitemap.py
       - name: Audit repaired site
         run: python scripts/site_audit.py
       - name: Commit
@@ -30,6 +33,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes needed."
           else
-            git commit -m "Fix site-wide integrity v5"
+            git commit -m "Repair site integrity and refresh sitemap"
             git push
           fi
