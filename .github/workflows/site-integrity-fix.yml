@@ -20,6 +20,15 @@ jobs:
           python-version: "3.12"
       - name: Repair site
         run: python scripts/site_integrity_fix.py
+      - name: Fix contact email
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("contact.html")
+          s=p.read_text(encoding="utf-8")
+          s=s.replace('href="return0508@naver.com"', 'href="mailto:return0508@naver.com"')
+          p.write_text(s, encoding="utf-8")
+          PY
       - name: Audit repaired site
         run: python scripts/site_audit.py
       - name: Commit
