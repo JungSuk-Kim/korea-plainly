@@ -1,0 +1,31 @@
+name: Fix Navigation And Regional Categories
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply navigation and regional category fix
+        run: python scripts/fix_navigation_and_regions.py
+      - name: Commit changes
+        run: |
+          git config user.name 'Korea Plainly Bot'
+          git config user.email 'actions@github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No changes needed.'
+          else
+            git commit -m 'Fix dropdown navigation and regional category filtering'
+            git push
+          fi
