@@ -90,4 +90,29 @@ a{color:#b73535}
 <h3>Should I check anything before visiting?</h3>
 <p>Yes. Check the official website for current menu and visit details, and contact the restaurant about access, reservations, or dietary needs if those are important to you.</p>
 <section class="useful-links"><h2>Useful links</h2><ul><li><a href="https://maps.google.com/?cid=2583584192381107826&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Google Maps</a></li><li><a href="http://전설의우대갈비.com/" target="_blank" rel="noopener">Official website</a></li></ul></section>
-</article></main></body></html>
+</article></main><script id="kp-nav-js">
+(function(){
+  const drops=[...document.querySelectorAll('.nav-drop')];
+  const mobile=()=>window.matchMedia('(max-width:650px)').matches;
+  drops.forEach(drop=>{
+    drop.addEventListener('mouseenter',()=>{ if(!mobile()) drop.classList.add('open'); });
+    drop.addEventListener('mouseleave',()=>{ if(!mobile()) drop.classList.remove('open'); });
+    const parent=drop.querySelector('.nav-parent');
+    if(parent){
+      parent.addEventListener('click',function(e){
+        if(mobile()){
+          if(!drop.classList.contains('open')){
+            e.preventDefault();
+            drops.forEach(d=>d.classList.remove('open'));
+            drop.classList.add('open');
+          }
+        }
+      });
+    }
+  });
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('.nav-drop')) drops.forEach(d=>d.classList.remove('open'));
+  });
+})();
+</script>
+</body></html>

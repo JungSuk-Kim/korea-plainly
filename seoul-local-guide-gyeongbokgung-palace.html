@@ -90,4 +90,29 @@ a{color:#b73535}
   <li><a href="https://royal.khs.go.kr/ROYAL/contents/menuInfo-gbg.do?grpCode=gbg">Official Gyeongbokgung Palace website</a></li>
 </ul>
 <section class="useful-links"><h2>Useful links</h2><ul><li><a href="https://maps.google.com/?cid=10029593693201569270&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Google Maps</a></li><li><a href="https://royal.khs.go.kr/ROYAL/contents/menuInfo-gbg.do?grpCode=gbg" target="_blank" rel="noopener">Official website</a></li></ul></section>
-</article></main></body></html>
+</article></main><script id="kp-nav-js">
+(function(){
+  const drops=[...document.querySelectorAll('.nav-drop')];
+  const mobile=()=>window.matchMedia('(max-width:650px)').matches;
+  drops.forEach(drop=>{
+    drop.addEventListener('mouseenter',()=>{ if(!mobile()) drop.classList.add('open'); });
+    drop.addEventListener('mouseleave',()=>{ if(!mobile()) drop.classList.remove('open'); });
+    const parent=drop.querySelector('.nav-parent');
+    if(parent){
+      parent.addEventListener('click',function(e){
+        if(mobile()){
+          if(!drop.classList.contains('open')){
+            e.preventDefault();
+            drops.forEach(d=>d.classList.remove('open'));
+            drop.classList.add('open');
+          }
+        }
+      });
+    }
+  });
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('.nav-drop')) drops.forEach(d=>d.classList.remove('open'));
+  });
+})();
+</script>
+</body></html>

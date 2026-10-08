@@ -17,4 +17,29 @@ h1{font-size:clamp(44px,8vw,82px);line-height:1;margin:12px 0}.intro{max-width:7
 <body><header><div class="nav"><strong>KOREA PLAINLY</strong><div><a href="index.html">Home</a><a href="guides.html">Guides</a><a href="regions.html">Regions</a></div></div></header>
 <main><div class="kicker">Regional hub</div><h1>Sokcho</h1>
 <p class="intro">A practical collection of places and experiences in Sokcho for foreign visitors — from travel and food to cafes, shopping, culture, leisure and stays.</p>
-<section class="grid"><p class="empty">New recommendations for this region will appear here automatically.</p></section></main></body></html>
+<section class="grid"><p class="empty">New recommendations for this region will appear here automatically.</p></section></main><script id="kp-nav-js">
+(function(){
+  const drops=[...document.querySelectorAll('.nav-drop')];
+  const mobile=()=>window.matchMedia('(max-width:650px)').matches;
+  drops.forEach(drop=>{
+    drop.addEventListener('mouseenter',()=>{ if(!mobile()) drop.classList.add('open'); });
+    drop.addEventListener('mouseleave',()=>{ if(!mobile()) drop.classList.remove('open'); });
+    const parent=drop.querySelector('.nav-parent');
+    if(parent){
+      parent.addEventListener('click',function(e){
+        if(mobile()){
+          if(!drop.classList.contains('open')){
+            e.preventDefault();
+            drops.forEach(d=>d.classList.remove('open'));
+            drop.classList.add('open');
+          }
+        }
+      });
+    }
+  });
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('.nav-drop')) drops.forEach(d=>d.classList.remove('open'));
+  });
+})();
+</script>
+</body></html>
