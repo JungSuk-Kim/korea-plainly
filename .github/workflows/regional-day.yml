@@ -1,22 +1,31 @@
 name: Korea Plainly Regional Day
+
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
+
 permissions:
   contents: write
+
 jobs:
   regional-day:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests openai
+
       - name: Publish one regional day
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -25,25 +34,21 @@ jobs:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: python scripts/generate_regional_day.py
+
       - name: Build regional hub pages
         run: python scripts/generate_region_pages.py
+
       - name: Update sitemap
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          base = "https://korea-plainly.com"
-          urls = [f"  <url><loc>{base}/{p.name}</loc></url>" for p in sorted(Path(".").glob("*.html"))]
-          xml = '<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-' + "
-".join(urls) + '
-</urlset>
-'
-          Path("sitemap.xml").write_text(xml, encoding="utf-8")
-          PY
+        run: python scripts/update_sitemap.py
+
       - name: Commit
         run: |
           git config user.name "Korea Plainly Bot"
           git config user.email "actions@github.com"
           git add -A
-          if git diff --cached --quiet; then echo "No changes to commit."; else git commit -m "Publish regional Korea day and update hubs"; git push; fi
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Publish regional Korea day and update hubs"
+            git push
+          fi
