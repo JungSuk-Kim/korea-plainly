@@ -3,7 +3,7 @@ from pathlib import Path
 import re
 
 ROOT=Path(__file__).resolve().parents[1]
-CSS_VERSION="20261009-4"
+CSS_VERSION="20261009-5"
 REGIONS=[("seoul","Seoul"),("busan","Busan"),("jeju","Jeju")]
 REGION_CATS=[("travel","Travel"),("food","Food"),("cafe","Cafe"),("shopping","Shopping"),
              ("culture","Culture"),("leisure","Leisure"),("stay","Stay"),("local-guide","Local Guide")]
@@ -12,7 +12,7 @@ GUIDES=[("Travel Basics","travel"),("Transport","transport"),("Money","money"),
         ("Language","language"),("Culture","culture")]
 
 NAV_CSS=r"""
-/* Korea Plainly stable navigation v4 */
+/* Korea Plainly stable navigation v5 */
 .nav-drop{position:relative;display:flex;align-items:center}
 .nav-parent{font-size:12px;color:#62635f;display:flex;align-items:center;gap:5px;padding:27px 0;white-space:nowrap;cursor:pointer}
 .nav-chevron{font-size:13px;line-height:1;transition:transform .18s ease}
@@ -32,7 +32,6 @@ NAV_CSS=r"""
  .nav-menu a{padding:8px 12px!important;font-size:12px!important}
 }
 """
-
 NAV_JS=r"""<script id="kp-nav-js">
 (function(){
   const drops=[...document.querySelectorAll('.nav-drop')];
@@ -73,8 +72,7 @@ def patch_css():
     s=p.read_text(encoding="utf-8",errors="ignore")
     for name in ["seoul","street","food","store"]:
         s=s.replace(f'images/{name}.jpg',f'{name}.jpg')
-    # remove previously appended navigation blocks
-    s=re.sub(r'\n/\* Korea Plainly (?:navigation - stable v3|stable navigation v3|stable navigation v4) \*/.*?(?=\n/\*|\Z)','',s,flags=re.S)
+    s=re.sub(r'\n/\* Korea Plainly (?:navigation - stable v3|stable navigation v3|stable navigation v4|stable navigation v5) \*/.*?(?=\n/\*|\Z)','',s,flags=re.S)
     s += "\n"+NAV_CSS+"\n"
     p.write_text(s,encoding="utf-8")
 
@@ -87,7 +85,6 @@ def patch_nav(s):
     return s
 
 def patch_guides(s):
-    # normalize the actual filter attributes used by guides.html
     s=re.sub(r'data-guide-category="([^"]+)"\s+data-guide-category="\1"',r'data-guide-category="\1"',s)
     s=s.replace('data-filter="','data-guide-filter="')
     s=re.sub(r'\s*<script[^>]*id="kp-guide-filter"[^>]*>.*?</script>\s*','\n',s,flags=re.S)
@@ -125,18 +122,22 @@ def patch_index(s):
       '<a href="#" class="brand">':'<a href="index.html" class="brand">'
     }
     for a,b in replacements.items(): s=s.replace(a,b)
-    # Homepage social destinations: use the internal landing page until channel URLs are supplied.
     s=re.sub(r'<a href="#"(\s*>\s*<span>(?:YT|IG|TK)</span>)',r'<a href="social.html"\1',s)
     return s
 
 def ensure_canonical(s,filename):
+    # Search Console verification file must remain untouched.
+    if filename.startswith("google") and re.fullmatch(r'google[0-9a-f]+\.html',filename):
+        return s
     if re.search(r'<link\s+[^>]*rel=["\']canonical["\']',s,re.I): return s
     url="https://korea-plainly.com/" + ("" if filename=="index.html" else filename)
-    tag=f'<link rel="canonical" href="{url}">\n'
-    return re.sub(r'</title>',lambda m:m.group(0)+"\n"+tag,s,count=1,flags=re.I)
+    return re.sub(r'</title>',lambda m:m.group(0)+f'\n<link rel="canonical" href="{url}">',s,count=1,flags=re.I)
 
 def patch_file(p):
     s=p.read_text(encoding="utf-8",errors="ignore")
+    # Keep Search Console verification byte-stable.
+    if p.name.startswith("google") and re.fullmatch(r'google[0-9a-f]+\.html',p.name):
+        return
     s=re.sub(r'style\.css(?:\?v=[^"\']*)?',f'style.css?v={CSS_VERSION}',s)
     s=patch_nav(s)
     if p.name=="index.html": s=patch_index(s)
@@ -149,5 +150,5 @@ def main():
     patch_css()
     for p in ROOT.glob("*.html"): patch_file(p)
     (ROOT/"SITE_INTEGRITY_VERSION.txt").write_text(CSS_VERSION+"\n",encoding="utf-8")
-    print("Site integrity repair v4 complete.")
+    print("Site integrity repair v5 complete.")
 if __name__=="__main__": main()
