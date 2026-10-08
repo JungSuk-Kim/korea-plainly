@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "current_region_index": 0,
+  "current_round": 1,
+  "regions": [
+    {
+      "slug": "seoul",
+      "name": "Seoul",
+      "type": "city",
+      "priority": 1
+    },
+    {
+      "slug": "busan",
+      "name": "Busan",
+      "type": "city",
+      "priority": 2
+    },
+    {
+      "slug": "jeju",
+      "name": "Jeju",
+      "type": "island",
+      "priority": 3
+    },
+    {
+      "slug": "gyeongju",
+      "name": "Gyeongju",
+      "type": "city",
+      "priority": 4
+    },
+    {
+      "slug": "jeonju",
+      "name": "Jeonju",
+      "type": "city",
+      "priority": 5
+    },
+    {
+      "slug": "gangneung",
+      "name": "Gangneung",
+      "type": "city",
+      "priority": 6
+    },
+    {
+      "slug": "incheon",
+      "name": "Incheon",
+      "type": "city",
+      "priority": 7
+    },
+    {
+      "slug": "sokcho",
+      "name": "Sokcho",
+      "type": "city",
+      "priority": 8
+    },
+    {
+      "slug": "yeosu",
+      "name": "Yeosu",
+      "type": "city",
+      "priority": 9
+    },
+    {
+      "slug": "daegu",
+      "name": "Daegu",
+      "type": "city",
+      "priority": 10
+    },
+    {
+      "slug": "daejeon",
+      "name": "Daejeon",
+      "type": "city",
+      "priority": 11
+    },
+    {
+      "slug": "gwangju",
+      "name": "Gwangju",
+      "type": "city",
+      "priority": 12
+    }
+  ],
+  "categories": [
+    {
+      "slug": "travel",
+      "name": "Travel",
+      "description": "Places worth visiting and practical things to do."
+    },
+    {
+      "slug": "food",
+      "name": "Food",
+      "description": "Restaurants and Korean foods worth trying."
+    },
+    {
+      "slug": "cafe",
+      "name": "Cafe",
+      "description": "Cafes and coffee spots worth visiting."
+    },
+    {
+      "slug": "shopping",
+      "name": "Shopping",
+      "description": "Shopping streets, markets, stores and local finds."
+    },
+    {
+      "slug": "culture",
+      "name": "Culture",
+      "description": "Cultural places, experiences and local traditions."
+    },
+    {
+      "slug": "leisure",
+      "name": "Leisure",
+      "description": "Activities, outdoors, entertainment and things to do."
+    },
+    {
+      "slug": "stay",
+      "name": "Stay",
+      "description": "Useful areas and accommodation choices for visitors."
+    },
+    {
+      "slug": "local-guide",
+      "name": "Local Guide",
+      "description": "Transport, routes, timing and practical local information."
+    }
+  ],
+  "daily_categories": [
+    "travel",
+    "food",
+    "cafe",
+    "shopping",
+    "culture",
+    "leisure",
+    "stay",
+    "local-guide"
+  ],
+  "rules": {
+    "one_region_per_day": true,
+    "publish_all_categories_for_region": true,
+    "avoid_duplicate_place": true,
+    "avoid_duplicate_topic": true,
+    "verify_live_information_before_recommending": true,
+    "use_naver_and_google_for_food": true,
+    "prefer_official_links": true,
+    "include_maps_when_available": true,
+    "include_booking_or_ticket_links_when_available": true,
+    "unique_image_per_article": true
+  }
+}
