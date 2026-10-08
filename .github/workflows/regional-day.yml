@@ -42,18 +42,13 @@ jobs:
           base = "https://korea-plainly.com"
           html_files = sorted(Path(".").glob("*.html"))
           urls = [f"  <url><loc>{base}/{p.name}</loc></url>" for p in html_files]
-          Path("sitemap.xml").write_text(
-              '<?xml version="1.0" encoding="UTF-8"?>
-'
-              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-'
-              + "
-".join(urls)
-              + '
-</urlset>
-',
-              encoding="utf-8"
+          xml = (
+              '<?xml version="1.0" encoding="UTF-8"?>\n'
+              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+              + "\n".join(urls)
+              + '\n</urlset>\n'
           )
+          Path("sitemap.xml").write_text(xml, encoding="utf-8")
           PY
 
       - name: Commit regional articles
