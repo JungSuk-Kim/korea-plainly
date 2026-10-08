@@ -3,6 +3,11 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "45 0 * * *"
+  push:
+    paths:
+      - "scripts/site_integrity_fix.py"
+      - "scripts/site_audit.py"
+      - ".github/workflows/site-integrity-fix.yml"
 permissions:
   contents: write
 jobs:
@@ -11,7 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: {python-version: "3.12"}
+        with:
+          python-version: "3.12"
       - name: Repair site
         run: python scripts/site_integrity_fix.py
       - name: Audit repaired site
@@ -21,4 +27,9 @@ jobs:
           git config user.name "Korea Plainly Bot"
           git config user.email "actions@github.com"
           git add -A
-          if git diff --cached --quiet; then echo "No changes needed."; else git commit -m "Fix site-wide integrity"; git push; fi
+          if git diff --cached --quiet; then
+            echo "No changes needed."
+          else
+            git commit -m "Fix site-wide integrity v4"
+            git push
+          fi
