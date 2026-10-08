@@ -1,0 +1,28 @@
+# Thumbnail selection patch for scripts/generate_post.py
+# Replace the existing photo_map + photo selection block with this logic:
+
+thumb_map = {
+    "korean-convenience-store-tips": "thumb-auto-korean-convenience-store-tips.svg",
+    "korea-recycling-guide": "thumb-auto-korea-recycling-guide.svg",
+    "korean-atm-guide": "thumb-korean-atm-guide.svg",
+    "korea-transit-card-guide": "thumb-korea-transit-card-guide.svg",
+    "seoul-bus-guide": "thumb-seoul-bus-guide.svg",
+    "best-time-seoul-attractions": "thumb-best-time-seoul-attractions.svg",
+}
+
+photo_map = {
+    "Food": "food.jpg",
+    "Travel": "seoul.jpg",
+    "Seoul": "seoul.jpg",
+    "Daily Korea": "store.jpg",
+    "Shopping": "store.jpg",
+    "Lifestyle": "street.jpg",
+    "Culture": "street.jpg",
+    "Money": "street.jpg",
+    "Transport": "street.jpg",
+}
+
+photo = thumb_map.get(
+    topic["slug"],
+    photo_map.get(topic["category"], "street.jpg")
+)

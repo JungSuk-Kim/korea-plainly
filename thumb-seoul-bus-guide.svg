@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+<rect width="1200" height="700" fill="#f7f2e8"/>
+<rect x="220" y="175" width="760" height="390" rx="48" fill="#17233b"/>
+<rect x="275" y="235" width="650" height="170" rx="18" fill="#9fb9c9"/>
+<rect x="300" y="435" width="600" height="55" rx="12" fill="#c9362b"/>
+<circle cx="390" cy="545" r="55" fill="#333b4a"/><circle cx="810" cy="545" r="55" fill="#333b4a"/>
+<rect x="600" y="235" width="18" height="170" fill="#17233b"/>
+<text x="70" y="90" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" letter-spacing="4" fill="#c9362b">KOREA PLAINLY</text>
+<text x="70" y="640" font-family="Arial,Helvetica,sans-serif" font-size="42" font-weight="800" fill="#17233b">Seoul Buses</text>
+<text x="70" y="675" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#5b6270">Transport</text>
+</svg>

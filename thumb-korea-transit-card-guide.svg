@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+<rect width="1200" height="700" fill="#f7f2e8"/>
+<rect x="240" y="215" width="720" height="300" rx="32" fill="#c9362b" transform="rotate(-5 600 365)"/>
+<rect x="305" y="275" width="590" height="175" rx="18" fill="#f7f2e8" transform="rotate(-5 600 365)"/>
+<circle cx="760" cy="350" r="48" fill="#d6a23a"/>
+<path d="M450 350h190" stroke="#17233b" stroke-width="22" stroke-linecap="round"/>
+<text x="70" y="90" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" letter-spacing="4" fill="#c9362b">KOREA PLAINLY</text>
+<text x="70" y="640" font-family="Arial,Helvetica,sans-serif" font-size="42" font-weight="800" fill="#17233b">Transit Cards</text>
+<text x="70" y="675" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#5b6270">Transport</text>
+</svg>

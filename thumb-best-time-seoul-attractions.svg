@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+<rect width="1200" height="700" fill="#f7f2e8"/>
+<circle cx="600" cy="365" r="220" fill="#e7dfd1"/>
+<path d="M600 145 C710 210 790 285 790 395 C790 520 700 590 600 590 C500 590 410 520 410 395 C410 285 490 210 600 145Z" fill="#c9362b"/>
+<circle cx="600" cy="365" r="105" fill="#f7f2e8"/>
+<path d="M600 275v90l65 45" stroke="#17233b" stroke-width="20" fill="none" stroke-linecap="round"/>
+<text x="70" y="90" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" letter-spacing="4" fill="#c9362b">KOREA PLAINLY</text>
+<text x="70" y="640" font-family="Arial,Helvetica,sans-serif" font-size="42" font-weight="800" fill="#17233b">Best Time in Seoul</text>
+<text x="70" y="675" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#5b6270">Travel</text>
+</svg>

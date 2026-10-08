@@ -1,42 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-viewBox="0 0 1200 700">
-
-<rect width="1200" height="700" fill="#f4eee4"/>
-
-<rect x="70" y="70"
-width="1060" height="560"
-fill="#102033"/>
-
-<text x="110" y="180"
-fill="#f4eee4"
-font-family="Arial, sans-serif"
-font-size="30"
-font-weight="700">
-DAILY KOREA
-</text>
-
-<text x="110" y="300"
-fill="#ffffff"
-font-family="Arial, sans-serif"
-font-size="58"
-font-weight="700">
-How Korean Recycling Works for Visitors
-</text>
-
-<text x="110" y="375"
-fill="#ffffff"
-font-family="Arial, sans-serif"
-font-size="58"
-font-weight="700">
-
-</text>
-
-<text x="110" y="555"
-fill="#d33b3b"
-font-family="Arial, sans-serif"
-font-size="28"
-font-weight="700">
-KOREA PLAINLY
-</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+<rect width="1200" height="700" fill="#f7f2e8"/>
+<circle cx="600" cy="365" r="190" fill="#dfe7d8"/>
+<path d="M600 175 L690 330 L640 330 L600 260 L560 330 L510 330 Z" fill="#4d7c63"/>
+<path d="M790 470 L610 470 L635 425 L715 425 L755 355 L800 380 Z" fill="#4d7c63"/>
+<path d="M410 470 L500 315 L545 345 L505 415 L585 415 L560 470 Z" fill="#4d7c63"/>
+<text x="70" y="90" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" letter-spacing="4" fill="#c9362b">KOREA PLAINLY</text>
+<text x="70" y="640" font-family="Arial,Helvetica,sans-serif" font-size="42" font-weight="800" fill="#17233b">Recycling in Korea</text>
+<text x="70" y="675" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#5b6270">Daily Korea</text>
 </svg>

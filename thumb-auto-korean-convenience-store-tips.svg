@@ -1,43 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-viewBox="0 0 1200 700">
-
-<rect width="1200" height="700"
-fill="#f4eee4"/>
-
-<rect x="70" y="70"
-width="1060" height="560"
-fill="#102033"/>
-
-<text x="110" y="180"
-fill="#f4eee4"
-font-family="Arial, sans-serif"
-font-size="30"
-font-weight="700">
-DAILY KOREA
-</text>
-
-<text x="110" y="300"
-fill="#ffffff"
-font-family="Arial, sans-serif"
-font-size="58"
-font-weight="700">
-What to Know Before Using a Korean Conveni
-</text>
-
-<text x="110" y="375"
-fill="#ffffff"
-font-family="Arial, sans-serif"
-font-size="58"
-font-weight="700">
-ence Store
-</text>
-
-<text x="110" y="555"
-fill="#d33b3b"
-font-family="Arial, sans-serif"
-font-size="28"
-font-weight="700">
-KOREA PLAINLY
-</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+<rect width="1200" height="700" fill="#f7f2e8"/>
+<rect x="130" y="210" width="940" height="360" rx="18" fill="#efe5d4"/>
+<rect x="180" y="260" width="840" height="250" rx="10" fill="#c9362b"/>
+<rect x="220" y="300" width="760" height="170" rx="6" fill="#f7f2e8"/>
+<rect x="250" y="335" width="180" height="95" fill="#17233b"/><rect x="465" y="335" width="180" height="95" fill="#7d9a75"/><rect x="680" y="335" width="180" height="95" fill="#d6a23a"/>
+<circle cx="925" cy="390" r="42" fill="#c9362b"/>
+<text x="70" y="90" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" letter-spacing="4" fill="#c9362b">KOREA PLAINLY</text>
+<text x="70" y="640" font-family="Arial,Helvetica,sans-serif" font-size="42" font-weight="800" fill="#17233b">Convenience Store</text>
+<text x="70" y="675" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#5b6270">Daily Korea</text>
 </svg>
