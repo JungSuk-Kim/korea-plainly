@@ -31,12 +31,20 @@
 .guide-card:first-child .guide-image{height:280px}
 }
 </style>
+<style id="guide-category-fix">
+.guide-category-bar{padding:0 0 36px}
+.guide-category-title{font-size:11px;font-weight:700;letter-spacing:.14em;margin-bottom:14px}
+.guide-category-links{display:flex;flex-wrap:wrap;gap:9px}
+.guide-filter{appearance:none;border:1px solid rgba(20,28,42,.18);background:transparent;color:inherit;border-radius:999px;padding:9px 14px;font:inherit;font-size:13px;cursor:pointer}
+.guide-filter:hover,.guide-filter.active{background:#141c2a;color:#fff;border-color:#141c2a}
+.guide-card.is-hidden{display:none}
+</style>
 </head>
 <body>
 <header>
 <div class="nav wrap">
 <a class="brand" href="index.html"><span class="taegeuk"></span><span>Korea <b>Plainly</b></span></a>
-<nav><a href="guides.html">Guides</a><a href="index.html#seoul">Seoul</a><a href="index.html#food">Food</a><a href="index.html#culture">Culture</a><a href="index.html#life">Daily Life</a></nav>
+<nav><a href="guides.html">Guides</a><a href="regions.html">Regions</a><a href="seoul.html">Seoul</a><a href="busan.html">Busan</a><a href="jeju.html">Jeju</a><a href="#guide-categories">More</a></nav>
 <a class="top-link" href="guides.html">Latest <span>↗</span></a>
 <button class="menu" aria-label="menu">☰</button>
 </div>
@@ -46,73 +54,87 @@
 <section class="wrap guides-hero">
 <p class="kicker"><i></i> KOREA PLAINLY GUIDES</p>
 <h1>Useful guides.<br><em>Nothing complicated.</em></h1>
-<p class="guides-intro">Practical information about Korea, written for people who want to understand the basics quickly — from getting around Seoul to everyday Korean life.</p>
+<p class="guides-intro">Practical, nationwide information for understanding Korea — transport, money, apps, food, daily life, language and more.</p>
+</section>
+<section class="wrap guide-category-bar" id="guide-categories">
+<div class="guide-category-title">GUIDE CATEGORIES</div>
+<div class="guide-category-links">
+<button type="button" class="guide-filter active" data-filter="all">All Guides</button>
+<button type="button" class="guide-filter" data-filter="travel">Travel Basics</button>
+<button type="button" class="guide-filter" data-filter="transport">Transport</button>
+<button type="button" class="guide-filter" data-filter="money">Money</button>
+<button type="button" class="guide-filter" data-filter="apps">Apps & Tips</button>
+<button type="button" class="guide-filter" data-filter="food">Food & Dining</button>
+<button type="button" class="guide-filter" data-filter="daily">Daily Life</button>
+<button type="button" class="guide-filter" data-filter="language">Language</button>
+<button type="button" class="guide-filter" data-filter="culture">Culture</button>
+</div>
 </section>
 <section class="wrap guide-grid">
-<a class="guide-card" href="seoul-first-time.html">
+<a class="guide-card" href="seoul-first-time.html" data-guide-category="travel">
 <div class="guide-image" style="background-image:url('thumb-seoul-first-time.jpg')"><span>01</span></div>
 <div class="guide-copy"><small>SEOUL · FIRST TRIP</small><h2>7 Things First-Time Visitors Should Know About Seoul</h2><p>The little details that make your first days in Seoul much easier.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="seoul-subway-for-foreigners.html">
+</a><a class="guide-card" href="seoul-subway-for-foreigners.html" data-guide-category="transport">
 <div class="guide-image" style="background-image:url('thumb-seoul-subway.jpg')"><span>02</span></div>
 <div class="guide-copy"><small>TRANSPORT · SEOUL</small><h2>How to Use the Seoul Subway as a Foreigner</h2><p>Cards, lines, transfers, signs and simple subway etiquette.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="t-money-korea-guide.html">
+</a><a class="guide-card" href="t-money-korea-guide.html" data-guide-category="transport">
 <div class="guide-image" style="background-image:url('thumb-tmoney.jpg')"><span>03</span></div>
 <div class="guide-copy"><small>TRANSPORT · BEGINNER</small><h2>How T-money Works in Korea</h2><p>How to buy, recharge and use a T-money card for everyday travel.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="korean-convenience-store-guide.html">
+</a><a class="guide-card" href="korean-convenience-store-guide.html" data-guide-category="daily">
 <div class="guide-image" style="background-image:url('thumb-convenience-store.jpg')"><span>04</span></div>
 <div class="guide-copy"><small>DAILY LIFE · BEGINNER</small><h2>What to Expect at a Korean Convenience Store</h2><p>What to buy, how to pay and how convenience stores work.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="korean-restaurant-words.html">
+</a><a class="guide-card" href="korean-restaurant-words.html" data-guide-category="food">
 <div class="guide-image" style="background-image:url('thumb-restaurant-words.jpg')"><span>05</span></div>
 <div class="guide-copy"><small>FOOD · BEGINNER</small><h2>10 Korean Restaurant Words Worth Knowing</h2><p>Useful Korean food words that make ordering easier.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="naver-map-vs-google-maps-korea.html">
+</a><a class="guide-card" href="naver-map-vs-google-maps-korea.html" data-guide-category="apps">
 <div class="guide-image" style="background-image:url('thumb-maps-korea.jpg')"><span>06</span></div>
 <div class="guide-copy"><small>APPS & TIPS · TRAVEL</small><h2>Naver Map vs Google Maps in Korea</h2><p>How to use both map apps without making your trip complicated.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="cash-cards-payments-korea.html">
+</a><a class="guide-card" href="cash-cards-payments-korea.html" data-guide-category="money">
 <div class="guide-image" style="background-image:url('thumb-cash-cards.jpg')"><span>07</span></div>
 <div class="guide-copy"><small>MONEY · BEGINNER</small><h2>Do You Need Cash in Korea? Cards, ATMs and Payments</h2><p>When to use cards, cash and ATMs in Korea.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="kakao-t-taxi-korea.html">
+</a><a class="guide-card" href="kakao-t-taxi-korea.html" data-guide-category="transport">
 <div class="guide-image" style="background-image:url('thumb-kakao-t.jpg')"><span>08</span></div>
 <div class="guide-copy"><small>TRANSPORT · APPS</small><h2>Kakao T: A Simple Taxi Guide for Visitors</h2><p>A simple guide to finding taxis and understanding pickup points.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="korean-cafe-etiquette.html">
+</a><a class="guide-card" href="korean-cafe-etiquette.html" data-guide-category="culture">
 <div class="guide-image" style="background-image:url('thumb-cafe-etiquette.jpg')"><span>09</span></div>
 <div class="guide-copy"><small>CULTURE · DAILY LIFE</small><h2>Korean Cafe Etiquette for First-Time Visitors</h2><p>Simple habits that make your Korean cafe experience smoother.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="korean-dining-etiquette.html">
+</a><a class="guide-card" href="korean-dining-etiquette.html" data-guide-category="food">
 <div class="guide-image" style="background-image:url('thumb-dining-etiquette.jpg')"><span>10</span></div>
 <div class="guide-copy"><small>FOOD · CULTURE</small><h2>Korean Dining Etiquette: 9 Simple Things to Know</h2><p>Easy dining habits that help visitors feel comfortable.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="sim-esim-wifi-korea.html">
+</a><a class="guide-card" href="sim-esim-wifi-korea.html" data-guide-category="travel">
 <div class="guide-image" style="background-image:url('thumb-sim-esim-wifi.jpg')"><span>11</span></div>
 <div class="guide-copy"><small>TRAVEL · APPS</small><h2>Wi-Fi, SIM or eSIM: Staying Connected in Korea</h2><p>Compare the main ways to stay connected during your trip.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="read-korean-menu.html">
+</a><a class="guide-card" href="read-korean-menu.html" data-guide-category="food">
 <div class="guide-image" style="background-image:url('thumb-korean-menu.jpg')"><span>12</span></div>
 <div class="guide-copy"><small>FOOD · BEGINNER</small><h2>How to Read a Korean Menu Without Speaking Korean</h2><p>Common words and menu patterns that help you understand what you are ordering.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="korean-convenience-store-meals.html">
+</a><a class="guide-card" href="korean-convenience-store-meals.html" data-guide-category="food">
 <div class="guide-image" style="background-image:url('thumb-convenience-meals.jpg')"><span>13</span></div>
 <div class="guide-copy"><small>FOOD · DAILY LIFE</small><h2>What Is a Korean Convenience Store Meal Like?</h2><p>A quick guide to triangle kimbap, instant noodles and lunch boxes.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="seoul-neighborhoods-guide.html">
+</a><a class="guide-card" href="seoul-neighborhoods-guide.html" data-guide-category="travel">
 <div class="guide-image" style="background-image:url('thumb-seoul-neighborhoods.jpg')"><span>14</span></div>
 <div class="guide-copy"><small>SEOUL · FIRST TRIP</small><h2>Seoul Neighborhoods: A Simple Guide for First-Time Visitors</h2><p>A practical introduction to popular Seoul neighborhoods.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="how-to-order-korean-food.html">
+</a><a class="guide-card" href="how-to-order-korean-food.html" data-guide-category="food">
 <div class="guide-image" style="background-image:url('thumb-order-korean-food.jpg')"><span>15</span></div>
 <div class="guide-copy"><small>FOOD · BEGINNER</small><h2>How to Order Korean Food as a Foreigner</h2><p>A simple step-by-step guide to ordering Korean food with confidence.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="korea-travel-mistakes.html">
+</a><a class="guide-card" href="korea-travel-mistakes.html" data-guide-category="travel">
 <div class="guide-image" style="background-image:url('thumb-travel-mistakes.jpg')"><span>16</span></div>
 <div class="guide-copy"><small>TRAVEL · BEGINNER</small><h2>Korea Travel Mistakes That Are Easy to Avoid</h2><p>Small mistakes that are easy to avoid before and during your trip.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="useful-korean-phrases.html">
+</a><a class="guide-card" href="useful-korean-phrases.html" data-guide-category="language">
 <div class="guide-image" style="background-image:url('thumb-korean-phrases.jpg')"><span>17</span></div>
 <div class="guide-copy"><small>LANGUAGE · BEGINNER</small><h2>Useful Korean Phrases You Will Actually Use</h2><p>Useful expressions for restaurants, shops and transportation.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="korea-public-transport-transfers.html">
+</a><a class="guide-card" href="korea-public-transport-transfers.html" data-guide-category="transport">
 <div class="guide-image" style="background-image:url('thumb-public-transport.jpg')"><span>18</span></div>
 <div class="guide-copy"><small>TRANSPORT · BEGINNER</small><h2>How Korean Public Transport Transfers Work</h2><p>Understand subway and bus transfers and transportation-card rules.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="korean-bathhouse-guide.html">
+</a><a class="guide-card" href="korean-bathhouse-guide.html" data-guide-category="culture">
 <div class="guide-image" style="background-image:url('thumb-bathhouse.jpg')"><span>19</span></div>
 <div class="guide-copy"><small>CULTURE · DAILY LIFE</small><h2>What to Know Before Visiting a Korean Bathhouse</h2><p>A beginner-friendly explanation of what to expect at a jjimjilbang.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="korean-street-food-guide.html">
+</a><a class="guide-card" href="korean-street-food-guide.html" data-guide-category="food">
 <div class="guide-image" style="background-image:url('thumb-street-food.jpg')"><span>20</span></div>
 <div class="guide-copy"><small>FOOD · FIRST TRIP</small><h2>A Beginner’s Guide to Korean Street Food</h2><p>Common Korean street foods and how to order them.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="first-evening-seoul.html">
+</a><a class="guide-card" href="first-evening-seoul.html" data-guide-category="travel">
 <div class="guide-image" style="background-image:url('thumb-first-evening.jpg')"><span>21</span></div>
 <div class="guide-copy"><small>SEOUL · FIRST TRIP</small><h2>How to Spend Your First Evening in Seoul</h2><p>A relaxed first-evening plan for visitors who have just arrived.</p><span class="guide-arrow">Read guide →</span></div>
-</a><a class="guide-card" href="korean-convenience-store-tips.html">
+</a><a class="guide-card" href="korean-convenience-store-tips.html" data-guide-category="daily">
 <div class="guide-image" style="background-image:url('thumb-auto-korean-convenience-store-tips.svg')">
 <span>22</span>
 </div>
@@ -122,7 +144,7 @@
 <p>Learn what Korean convenience stores sell, how to pay, how to heat ready-made food, and what to expect from services such as transit-card top-ups.</p>
 <span class="guide-arrow">Read guide →</span>
 </div>
-</a><a class="guide-card" href="korea-recycling-guide.html">
+</a><a class="guide-card" href="korea-recycling-guide.html" data-guide-category="daily">
 <div class="guide-image" style="background-image:url('thumb-auto-korea-recycling-guide.svg')">
 <span>23</span>
 </div>
@@ -134,7 +156,7 @@
 </div>
 </a><a
 class="guide-card"
-href="korean-atm-guide.html"
+href="korean-atm-guide.html" data-guide-category="money" data-guide-category="money"
 >
 
 <div
@@ -169,7 +191,7 @@ Read guide →
 </a>
 <a
 class="guide-card"
-href="korea-transit-card-guide.html"
+href="korea-transit-card-guide.html" data-guide-category="transport" data-guide-category="transport"
 >
 
 <div
@@ -204,7 +226,7 @@ Read guide →
 </a>
 <a
 class="guide-card"
-href="seoul-bus-guide.html"
+href="seoul-bus-guide.html" data-guide-category="transport" data-guide-category="transport"
 >
 
 <div
@@ -239,7 +261,7 @@ Read guide →
 </a>
 <a
 class="guide-card"
-href="best-time-seoul-attractions.html"
+href="best-time-seoul-attractions.html" data-guide-category="travel" data-guide-category="travel"
 >
 
 <div
@@ -279,10 +301,22 @@ Read guide →
 <footer>
 <div class="wrap foot">
 <div><a class="brand" href="index.html"><span class="taegeuk"></span><span>Korea <b>Plainly</b></span></a><p>Korea, Made Easy for Everyone.</p></div>
-<div class="foot-links"><a href="guides.html">Guides</a><a href="index.html#seoul">Seoul</a><a href="index.html#food">Food</a><a href="index.html#culture">Culture</a><a href="index.html#life">Daily Life</a></div>
+<div class="foot-links"><a href="guides.html">Guides</a><a href="regions.html">Regions</a><a href="seoul.html">Seoul</a><a href="busan.html">Busan</a><a href="jeju.html">Jeju</a><a href="privacy.html">Privacy</a></div>
 </div>
 <div class="wrap copyright">© 2026 Korea Plainly <span>Made for curious people.</span></div>
 </footer>
 <script>document.querySelector('.menu').addEventListener('click',()=>document.querySelector('nav').classList.toggle('show'));</script>
+<script id="guide-category-filter">
+(function(){
+  const buttons=document.querySelectorAll('.guide-filter');
+  const cards=document.querySelectorAll('.guide-card');
+  buttons.forEach(button=>button.addEventListener('click',()=>{
+    const filter=button.dataset.filter;
+    buttons.forEach(b=>b.classList.remove('active'));
+    button.classList.add('active');
+    cards.forEach(card=>card.classList.toggle('is-hidden',filter!=='all' && card.dataset.guideCategory!==filter));
+  }));
+})();
+</script>
 </body>
 </html>
