@@ -70,34 +70,38 @@ def google_text_search(query):
     return r.json().get("places", [])
 
 def naver_local(query):
-    url = "https://openapi.naver.com/v1/search/local.json"
+    url = "https://naverapihub.apigw.ntruss.com/search/v1/local"
     headers = {
-        "X-Naver-Client-Id": NAVER_CLIENT_ID,
-        "X-Naver-Client-Secret": NAVER_CLIENT_SECRET
-    }
-    r = requests.get(url, headers=headers, params={
-        "query": query,
-        "display": 10,
-        "start": 1,
-        "sort": "comment"
-    }, timeout=30)
-    r.raise_for_status()
-    return r.json().get("items", [])
-
-def naver_blog(query):
-    url = "https://openapi.naver.com/v1/search/blog.json"
-    headers = {
-        "X-Naver-Client-Id": NAVER_CLIENT_ID,
-        "X-Naver-Client-Secret": NAVER_CLIENT_SECRET
+        "X-NCP-APIGW-API-KEY-ID": NAVER_CLIENT_ID,
+        "X-NCP-APIGW-API-KEY": NAVER_CLIENT_SECRET
     }
     r = requests.get(url, headers=headers, params={
         "query": query,
         "display": 5,
         "start": 1,
-        "sort": "date"
+        "sort": "comment",
+        "format": "json"
     }, timeout=30)
     r.raise_for_status()
     return r.json().get("items", [])
+
+
+def naver_blog(query):
+    url = "https://naverapihub.apigw.ntruss.com/search/v1/blog"
+    headers = {
+        "X-NCP-APIGW-API-KEY-ID": NAVER_CLIENT_ID,
+        "X-NCP-APIGW-API-KEY": NAVER_CLIENT_SECRET
+    }
+    r = requests.get(url, headers=headers, params={
+        "query": query,
+        "display": 5,
+        "start": 1,
+        "sort": "date",
+        "format": "json"
+    }, timeout=30)
+    r.raise_for_status()
+    return r.json().get("items", [])
+
 
 def norm_name(s):
     s = re.sub(r"<[^>]+>", "", str(s or ""))
