@@ -57,7 +57,7 @@ def google_text_search(query):
             "places.id","places.displayName","places.formattedAddress",
             "places.rating","places.userRatingCount","places.websiteUri",
             "places.googleMapsUri","places.regularOpeningHours",
-            "places.priceLevel","places.types"
+            "places.priceLevel","places.types","places.photos"
         ])
     }
     r = requests.post(url, headers=headers, json={
@@ -165,6 +165,15 @@ def choose_place(category, query):
         "naver_results": naver_signals,
         "google_place_id": place.get("id")
     }
+
+def google_place_image(place):
+    photos = place.get('photos') or []
+    if not photos:
+        return None
+    photo_name = photos[0].get('name')
+    if not photo_name:
+        return None
+    return {'url': f'https://places.googleapis.com/v1/{photo_name}/media?maxWidthPx=1600&maxHeightPx=1200&key={GOOGLE_KEY}', 'title': 'Google Places photo'}
 
 def wikimedia_image(query):
     api = "https://commons.wikimedia.org/w/api.php"
@@ -296,11 +305,15 @@ def main():
             slug = f"{slug_base}-{n}"
             n += 1
 
-        image_info = wikimedia_image(f"{place['name']} {region_name} Korea")
+        image_info = google_place_image(place)
         image_name = download_image(image_info, slug) if image_info else None
+
         if not image_name:
-            # Fail instead of publishing a generic/repeated image.
-            raise RuntimeError(f"No usable unique image found for {place['name']}")
+            image_info = wikimedia_image(f"{place['name']} {region_name} Korea")
+            image_name = download_image(image_info, slug) if image_info else None
+
+        if not image_name:
+            raise RuntimeError(f"No usable place-specific image found for {place['name']}")
 
         body = ask_openai(category["name"], place)
         out = render_article(category["name"], place, body, image_name, slug)
