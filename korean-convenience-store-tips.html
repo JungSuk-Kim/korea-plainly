@@ -33,7 +33,15 @@ footer{border-top:1px solid #ddd4c5;padding:30px 24px;color:#737985;text-align:c
 </style>
 </head>
 <body>
-<header class="site-header"><nav class="nav"><a class="brand" href="index.html">KOREA PLAINLY</a><a class="back" href="guides.html">ALL GUIDES →</a></nav></header>
+<header class="site-header"><nav class="nav">
+<a href="index.html">Home</a>
+<div class="nav-drop"><a class="nav-parent" href="guides.html?category=travel">Guides<span class="nav-chevron">⌄</span></a><div class="nav-menu"><a href="guides.html?category=travel">Travel Basics</a><a href="guides.html?category=transport">Transport</a><a href="guides.html?category=money">Money</a><a href="guides.html?category=apps">Apps & Tips</a><a href="guides.html?category=food">Food & Dining</a><a href="guides.html?category=daily">Daily Life</a><a href="guides.html?category=language">Language</a><a href="guides.html?category=culture">Culture</a></div></div>
+<div class="nav-drop"><a class="nav-parent" href="seoul.html">Regions<span class="nav-chevron">⌄</span></a><div class="nav-menu"><a href="seoul.html">Seoul</a><a href="busan.html">Busan</a><a href="jeju.html">Jeju</a><a href="regions.html">View all regions</a></div></div>
+<div class="nav-drop"><a class="nav-parent" href="seoul-travel.html">Seoul<span class="nav-chevron">⌄</span></a><div class="nav-menu"><a href="seoul-travel.html">Travel</a><a href="seoul-food.html">Food</a><a href="seoul-cafe.html">Cafe</a><a href="seoul-shopping.html">Shopping</a><a href="seoul-culture.html">Culture</a><a href="seoul-leisure.html">Leisure</a><a href="seoul-stay.html">Stay</a><a href="seoul-local-guide.html">Local Guide</a></div></div>
+<div class="nav-drop"><a class="nav-parent" href="busan-travel.html">Busan<span class="nav-chevron">⌄</span></a><div class="nav-menu"><a href="busan-travel.html">Travel</a><a href="busan-food.html">Food</a><a href="busan-cafe.html">Cafe</a><a href="busan-shopping.html">Shopping</a><a href="busan-culture.html">Culture</a><a href="busan-leisure.html">Leisure</a><a href="busan-stay.html">Stay</a><a href="busan-local-guide.html">Local Guide</a></div></div>
+<div class="nav-drop"><a class="nav-parent" href="jeju-travel.html">Jeju<span class="nav-chevron">⌄</span></a><div class="nav-menu"><a href="jeju-travel.html">Travel</a><a href="jeju-food.html">Food</a><a href="jeju-cafe.html">Cafe</a><a href="jeju-shopping.html">Shopping</a><a href="jeju-culture.html">Culture</a><a href="jeju-leisure.html">Leisure</a><a href="jeju-stay.html">Stay</a><a href="jeju-local-guide.html">Local Guide</a></div></div>
+<div class="nav-drop"><a class="nav-parent" href="travel.html">More<span class="nav-chevron">⌄</span></a><div class="nav-menu"><a href="travel.html">Travel</a><a href="food.html">Food</a><a href="cafe.html">Cafe</a><a href="shopping.html">Shopping</a><a href="culture.html">Culture</a><a href="leisure.html">Leisure</a><a href="stay.html">Stay</a><a href="local-guide.html">Local Guide</a></div></div>
+</nav></header>
 <main>
 <div class="eyebrow">DAILY KOREA · KOREA GUIDE</div>
 <h1>What to Know Before Using a Korean Convenience Store</h1>
@@ -98,26 +106,19 @@ footer{border-top:1px solid #ddd4c5;padding:30px 24px;color:#737985;text-align:c
 </article>
 </main>
 <footer>© Korea Plainly · Korea, Made Easy for Everyone.</footer>
-
 <script id="kp-nav-js">
 (function(){
   const drops=[...document.querySelectorAll('.nav-drop')];
   const mobile=()=>window.matchMedia('(max-width:650px)').matches;
   drops.forEach(drop=>{
-    drop.addEventListener('mouseenter',()=>{ if(!mobile()) drop.classList.add('open'); });
-    drop.addEventListener('mouseleave',()=>{ if(!mobile()) drop.classList.remove('open'); });
+    drop.addEventListener('mouseenter',()=>{if(!mobile())drop.classList.add('open')});
+    drop.addEventListener('mouseleave',()=>{if(!mobile())drop.classList.remove('open')});
     const parent=drop.querySelector('.nav-parent');
-    if(parent){
-      parent.addEventListener('click',function(e){
-        if(mobile()){
-          if(!drop.classList.contains('open')){
-            e.preventDefault();
-            drops.forEach(d=>d.classList.remove('open'));
-            drop.classList.add('open');
-          }
-        }
-      });
-    }
+    if(parent) parent.addEventListener('click',function(e){
+      if(mobile() && !drop.classList.contains('open')){
+        e.preventDefault(); drops.forEach(d=>d.classList.remove('open')); drop.classList.add('open');
+      }
+    });
   });
   document.addEventListener('click',e=>{
     if(!e.target.closest('.nav-drop')) drops.forEach(d=>d.classList.remove('open'));
