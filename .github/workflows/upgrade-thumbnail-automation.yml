@@ -26,6 +26,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes needed."
           else
-            git commit -m "Make auto published guide thumbnails unique"
+            git commit -m "Fix unique guide thumbnail automation"
             git push
           fi
