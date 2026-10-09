@@ -14,78 +14,82 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Update repair rules
+      - name: Repair cleanup script safely
         run: |
           python - <<'PY'
           from pathlib import Path
           import re
           p = Path("scripts/site_integrity_fix.py")
           s = p.read_text(encoding="utf-8")
-          s, n = re.subn(r'CSS_VERSION="[^"]+"', 'CSS_VERSION="20261009-8"', s, count=1)
-          if n != 1: raise SystemExit("Could not update CSS_VERSION safely.")
-          nav_fn = '''def nav_html():
-              return "\\n".join([
+          nav_fn = r'''def nav_html():
+              return chr(10).join([
                   '<a href="guides.html">Guides</a>',
                   '<a href="regions.html">Regions</a>',
                   '<a href="about.html">About</a>',
               ])
 
           def patch_css():'''
-          s, n = re.subn(r'def nav_html\(\):.*?\ndef patch_css\(\):', nav_fn, s, count=1, flags=re.S)
-          if n != 1: raise SystemExit("Could not replace nav_html safely.")
-          old_rule = "nav{display:none;position:absolute;left:15px;right:15px;top:68px;background:var(--bg);border:1px solid var(--line);padding:12px;box-shadow:0 18px 35px #0001;z-index:1000}"
-          new_rule = "nav{display:none;position:absolute;left:15px;right:15px;top:68px;max-height:calc(100dvh - 84px);overflow-y:auto;overscroll-behavior:contain;background:var(--bg);border:1px solid var(--line);padding:12px;box-shadow:0 18px 35px #0001;z-index:1000}"
-          if old_rule in s: s = s.replace(old_rule, new_rule, 1)
-          elif new_rule not in s: raise SystemExit("Expected mobile navigation rule not found.")
-          index_fn = '''def patch_index(s):
+          s, n = re.subn(r'def nav_html\(\):.*?\ndef patch_css\(\):', lambda m: nav_fn, s, count=1, flags=re.S)
+          if n != 1: raise SystemExit("Could not safely restore nav_html().")
+          index_fn = r'''def patch_index(s):
               s = re.sub(r'<section class="social-wrap wrap">.*?</section>', '', s, flags=re.S)
-              s = s.replace('href="guides.html"><strong>05</strong> Apps & Tips', 'href="guides.html?category=apps"><strong>05</strong> Apps & Tips')
+              s = re.sub(r'<a href="guides.html"><strong>05</strong> Apps & Tips</a>', '<a href="guides.html?category=apps"><strong>05</strong> Apps & Tips</a>', s)
               return s
 
           def ensure_canonical(s,filename):'''
-          s, n = re.subn(r'def patch_index\(s\):.*?\ndef ensure_canonical\(s,filename\):', index_fn, s, count=1, flags=re.S)
-          if n != 1: raise SystemExit("Could not replace patch_index safely.")
+          s, n = re.subn(r'def patch_index\(s\):.*?\ndef ensure_canonical\(s,filename\):', lambda m: index_fn, s, count=1, flags=re.S)
+          if n != 1: raise SystemExit("Could not safely restore patch_index().")
+          s, n = re.subn(r'CSS_VERSION="[^"]+"', 'CSS_VERSION="20261009-8"', s, count=1)
+          if n != 1: raise SystemExit("Could not update CSS_VERSION.")
+          old_rule = "nav{display:none;position:absolute;left:15px;right:15px;top:68px;background:var(--bg);border:1px solid var(--line);padding:12px;box-shadow:0 18px 35px #0001;z-index:1000}"
+          new_rule = "nav{display:none;position:absolute;left:15px;right:15px;top:68px;max-height:calc(100dvh - 84px);overflow-y:auto;overscroll-behavior:contain;background:var(--bg);border:1px solid var(--line);padding:12px;box-shadow:0 18px 35px #0001;z-index:1000}"
+          if old_rule in s: s = s.replace(old_rule, new_rule, 1)
+          elif new_rule not in s: raise SystemExit("Could not find expected mobile nav CSS rule.")
           marker = '    s=patch_nav(s)\n'
-          if marker not in s: raise SystemExit("Could not locate patch_file navigation step.")
-          s = s.replace(marker, marker + '    s=s.replace(\'href="index.html"\', \'href="/"\')\n', 1)
+          if marker not in s: raise SystemExit("Could not find patch_file() navigation step.")
+          add_line = '    s=s.replace(\\'href="index.html"\\', \\'href="/"\\')\n'
+          if 's=s.replace(\\'href="index.html"\\', \\'href="/"\\')' not in s:
+              s = s.replace(marker, marker + add_line, 1)
           p.write_text(s, encoding="utf-8")
           audit = Path("scripts/site_audit.py")
           a = audit.read_text(encoding="utf-8")
-          old_audit = '''    if not is_verification and '<nav' in s and 'class="nav-drop"' not in s: errors.append(f"{p.name}: dropdown nav missing")'''
-          new_audit = '''    if not is_verification and '<nav' in s:
-          nav=re.search(r'<nav\b[^>]*>(.*?)</nav>',s,re.S|re.I)
+          old = '''    if not is_verification and '<nav' in s and 'class="nav-drop"' not in s: errors.append(f"{p.name}: dropdown nav missing")'''
+          new = '''    if not is_verification and '<nav' in s:
+          nav=re.search(r'<nav\\b[^>]*>(.*?)</nav>',s,re.S|re.I)
           if not nav or not all(label in nav.group(1) for label in ("Guides","Regions","About")):
               errors.append(f"{p.name}: simplified navigation incomplete")'''
-          if old_audit in a: a = a.replace(old_audit, new_audit, 1)
-          elif 'simplified navigation incomplete' not in a: raise SystemExit("Could not update navigation audit safely.")
+          if old in a: a = a.replace(old, new, 1)
+          elif "simplified navigation incomplete" not in a: raise SystemExit("Could not safely update site audit.")
           audit.write_text(a, encoding="utf-8")
-          print("Updated navigation, canonical-root links, mobile scrolling, and audit rules.")
+          print("Repair script restored.")
           PY
+      - name: Check Python syntax
+        run: python -m py_compile scripts/site_integrity_fix.py scripts/site_audit.py scripts/update_sitemap.py
       - name: Repair all pages and stylesheet
         run: python scripts/site_integrity_fix.py
-      - name: Add social sharing metadata
+      - name: Add Open Graph and Twitter metadata
         run: |
           python - <<'PY'
           from pathlib import Path
           import re, html
-          for p in Path('.').glob('*.html'):
-              s = p.read_text(encoding='utf-8', errors='ignore')
+          for p in Path(".").glob("*.html"):
+              s = p.read_text(encoding="utf-8", errors="ignore")
               if re.fullmatch(r'google[0-9a-f]+\.html', p.name): continue
               tm = re.search(r'<title>(.*?)</title>', s, re.I | re.S)
               dm = re.search(r'<meta\s+name=["\']description["\']\s+content=["\'](.*?)["\']', s, re.I | re.S)
-              title = html.unescape(re.sub(r'\s+', ' ', tm.group(1)).strip()) if tm else 'Korea Plainly — Korea, Made Easy for Everyone.'
-              desc = html.unescape(dm.group(1).strip()) if dm else 'Simple, useful guides to Korea for everyone.'
               cm = re.search(r'<link\s+rel=["\']canonical["\']\s+href=["\'](.*?)["\']', s, re.I)
-              canonical = cm.group(1) if cm else 'https://korea-plainly.com/' + ('' if p.name == 'index.html' else p.name)
-              tags = [('property','og:title',title),('property','og:description',desc),('property','og:type','website'),('property','og:url',canonical),('name','twitter:card','summary'),('name','twitter:title',title),('name','twitter:description',desc)]
-              additions=[]
-              for attr,key,value in tags:
-                  if re.search(r'<meta\s+[^>]*(?:property|name)=["\']'+re.escape(key)+r'["\']',s,re.I): continue
-                  additions.append(f'<meta {attr}="{key}" content="{html.escape(value, quote=True)}">')
-              if additions and re.search(r'</head>',s,re.I):
-                  s=re.sub(r'</head>','\n'+'\n'.join(additions)+'\n</head>',s,count=1,flags=re.I)
-                  p.write_text(s,encoding='utf-8')
-          print('Added Open Graph and Twitter metadata where missing.')
+              title = html.unescape(re.sub(r'\s+', ' ', tm.group(1)).strip()) if tm else "Korea Plainly — Korea, Made Easy for Everyone."
+              desc = html.unescape(dm.group(1).strip()) if dm else "Simple, useful guides to Korea for everyone."
+              canonical = cm.group(1) if cm else "https://korea-plainly.com/" + ("" if p.name == "index.html" else p.name)
+              tags = [("property","og:title",title),("property","og:description",desc),("property","og:type","website"),("property","og:url",canonical),("name","twitter:card","summary"),("name","twitter:title",title),("name","twitter:description",desc)]
+              add = []
+              for attr, key, value in tags:
+                  if re.search(r'<meta\s+[^>]*(?:property|name)=["\']' + re.escape(key) + r'["\']', s, re.I): continue
+                  add.append(f'<meta {attr}="{key}" content="{html.escape(value, quote=True)}">')
+              if add and re.search(r'</head>', s, re.I):
+                  s = re.sub(r'</head>', chr(10) + chr(10).join(add) + chr(10) + '</head>', s, count=1, flags=re.I)
+                  p.write_text(s, encoding="utf-8")
+          print("Social metadata added.")
           PY
       - name: Refresh sitemap
         run: python scripts/update_sitemap.py
@@ -99,6 +103,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Simplify navigation and improve site-wide SEO"
+            git commit -m "Repair site-wide navigation and SEO"
             git push
           fi
