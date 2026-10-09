@@ -3,7 +3,7 @@ from pathlib import Path
 import re
 
 ROOT=Path(__file__).resolve().parents[1]
-CSS_VERSION="20261009-6"
+CSS_VERSION="20261009-7"
 REGIONS=[("seoul","Seoul"),("busan","Busan"),("jeju","Jeju")]
 REGION_CATS=[("travel","Travel"),("food","Food"),("cafe","Cafe"),("shopping","Shopping"),
              ("culture","Culture"),("leisure","Leisure"),("stay","Stay"),("local-guide","Local Guide")]
@@ -23,7 +23,7 @@ NAV_CSS=r"""
 .nav-drop:hover>.nav-parent .nav-chevron,.nav-drop:focus-within>.nav-parent .nav-chevron,.nav-drop.open>.nav-parent .nav-chevron{transform:rotate(180deg)}
 .hub-back{display:inline-block;margin-bottom:28px;font-size:13px;color:#666;text-decoration:none}
 @media(max-width:650px){
- nav{display:none;position:absolute;left:15px;right:15px;top:68px;background:var(--bg);border:1px solid var(--line);padding:12px;box-shadow:0 18px 35px #0001;z-index:1000}
+ nav{display:none;position:absolute;left:15px;right:15px;top:68px;max-height:calc(100dvh - 84px);overflow-y:auto;overscroll-behavior:contain;background:var(--bg);border:1px solid var(--line);padding:12px;box-shadow:0 18px 35px #0001;z-index:1000}
  nav.show{display:flex;flex-direction:column;gap:0}
  .nav-drop{display:block;width:100%}
  .nav-parent{padding:11px 6px;font-size:13px;justify-content:space-between}
