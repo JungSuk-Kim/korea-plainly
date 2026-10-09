@@ -1,0 +1,65 @@
+name: Korea Plainly Mobile Navigation Fix
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/mobile-nav-fix.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Patch mobile menu scrolling and cache version
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path("scripts/site_integrity_fix.py")
+          s = p.read_text(encoding="utf-8")
+          old_version = 'CSS_VERSION="20261009-6"'
+          new_version = 'CSS_VERSION="20261009-7"'
+          if old_version in s:
+              s = s.replace(old_version, new_version, 1)
+          elif new_version not in s:
+              raise SystemExit("Unexpected CSS_VERSION value; stopping without overwriting.")
+          old_rule = "nav{display:none;position:absolute;left:15px;right:15px;top:68px;background:var(--bg);border:1px solid var(--line);padding:12px;box-shadow:0 18px 35px #0001;z-index:1000}"
+          new_rule = "nav{display:none;position:absolute;left:15px;right:15px;top:68px;max-height:calc(100dvh - 84px);overflow-y:auto;overscroll-behavior:contain;background:var(--bg);border:1px solid var(--line);padding:12px;box-shadow:0 18px 35px #0001;z-index:1000}"
+          if old_rule in s:
+              s = s.replace(old_rule, new_rule, 1)
+          elif new_rule not in s:
+              raise SystemExit("Expected mobile navigation rule not found; stopping without overwriting.")
+          p.write_text(s, encoding="utf-8")
+          print("Patched mobile navigation scrolling and CSS cache version.")
+          PY
+
+      - name: Run site repair
+        run: python scripts/site_integrity_fix.py
+
+      - name: Refresh sitemap
+        run: python scripts/update_sitemap.py
+
+      - name: Audit site
+        run: python scripts/site_audit.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "Korea Plainly Bot"
+          git config user.email "actions@github.com"
+          git add scripts/site_integrity_fix.py style.css "*.html" sitemap.xml SITE_INTEGRITY_VERSION.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Fix mobile navigation scrolling"
+            git push
+          fi
