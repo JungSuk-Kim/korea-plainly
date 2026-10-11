@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="1200" height="700" fill="#17233b"/>
+<circle cx="1040" cy="120" r="190" fill="#c9362b" opacity="0.88"/>
+<circle cx="1080" cy="570" r="260" fill="#c9362b" opacity="0.18"/>
+<rect x="70" y="70" width="9" height="120" fill="#c9362b"/>
+<text x="110" y="105" fill="#f7f2e8" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" letter-spacing="4">FOOD</text>
+<text x="110" y="330" fill="#f7f2e8" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">Korean Café Menu Basics:</text>
+<text x="110" y="405" fill="#f7f2e8" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">What to Order and How</text>
+<text x="110" y="615" fill="#f7f2e8" opacity="0.72" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="3">KOREA PLAINLY</text>
+</svg>
