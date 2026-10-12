@@ -36,6 +36,8 @@ def main_words(s):
     m = re.search(r"<main.*?</main>", s, re.S | re.I)
     body = m.group(0) if m else s
     body = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", body, flags=re.S | re.I)
+    # the automatic "Related guides" block is not the hub's own content
+    body = re.sub(r'<(section|div|aside)[^>]*class="related-guides".*?</\1>', "", body, flags=re.S | re.I)
     return len(re.sub(r"<[^>]+>", " ", body).split())
 
 

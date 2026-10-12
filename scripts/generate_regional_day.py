@@ -174,14 +174,19 @@ def google_place_image(place):
     photo_name = photos[0].get('name')
     if not photo_name:
         return None
-    return {'url': f'https://places.googleapis.com/v1/{photo_name}/media?maxWidthPx=1600&maxHeightPx=1200&key={GOOGLE_KEY}', 'title': 'Google Places photo'}
+    authors = photos[0].get('authorAttributions') or []
+    author = clean_text(authors[0].get('displayName')) if authors else ''
+    credit = f"Photo: {author} via Google Maps" if author else "Photo: Google Maps"
+    return {'url': f'https://places.googleapis.com/v1/{photo_name}/media?maxWidthPx=1600&maxHeightPx=1200&key={GOOGLE_KEY}',
+            'title': 'Google Places photo', 'credit': credit,
+            'credit_url': authors[0].get('uri', '') if authors else ''}
 
 def wikimedia_image(query):
     api = "https://commons.wikimedia.org/w/api.php"
     r = requests.get(api, params={
         "action":"query","generator":"search","gsrsearch":query,
         "gsrnamespace":6,"gsrlimit":8,"prop":"imageinfo",
-        "iiprop":"url|mime|size","iiurlwidth":1600,"format":"json"
+        "iiprop":"url|mime|size|extmetadata","iiurlwidth":1600,"format":"json"
     }, timeout=30)
     if r.status_code != 200:
         return None
@@ -190,8 +195,15 @@ def wikimedia_image(query):
         info = (page.get("imageinfo") or [{}])[0]
         url = info.get("thumburl") or info.get("url")
         mime = info.get("mime","")
-        if url and mime.startswith("image/"):
-            return {"url": url, "title": page.get("title","")}
+        meta = info.get("extmetadata") or {}
+        licence = clean_text(re.sub(r"<[^>]+>", " ", (meta.get("LicenseShortName") or {}).get("value", "")))
+        if not re.match(r"(?i)(cc0|public domain|pd|cc by(-sa)? \d)", licence):
+            continue  # skip files whose licence does not allow reuse with credit
+        artist = clean_text(re.sub(r"<[^>]+>", " ", (meta.get("Artist") or {}).get("value", ""))) or "Unknown author"
+        if url and mime in ("image/jpeg", "image/png") and (info.get("width") or 0) >= 1000:
+            return {"url": url, "title": page.get("title",""),
+                    "credit": f"Photo: {artist}, {licence}, via Wikimedia Commons",
+                    "credit_url": info.get("descriptionurl", "")}
     return None
 
 def download_image(info, slug):
@@ -243,10 +255,19 @@ def slugify(text):
     s = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
     return s[:80] or "korea-place"
 
-def render_article(category, place, body, image_name, slug):
+def render_article(category, place, body, image_name, slug, credit=None):
     title = re.search(r"<h1>(.*?)</h1>", body, re.S)
     title_text = clean_text(title.group(1)) if title else f"{place['name']} in {region_name}: A Practical Guide"
-    description = clean_text(re.sub(r"<[^>]+>", " ", body))[:155]
+    body_text = re.sub(r"<h1[^>]*>.*?</h1>", " ", body, count=1, flags=re.S)
+    description = clean_text(re.sub(r"<[^>]+>", " ", body_text))
+    description = re.sub(r"^At a glance:\s*", "", description)[:155]
+    caption = ""
+    if credit and credit.get("credit"):
+        text = html.escape(credit["credit"])
+        if credit.get("credit_url"):
+            text = f'<a href="{html.escape(credit["credit_url"], quote=True)}" target="_blank" rel="noopener nofollow">{text}</a>'
+        caption = f'<p class="photo-credit">{text}</p>'
+
     canonical = f"https://korea-plainly.com/{slug}.html"
     links = '<section class="useful-links"><h2>Useful links</h2><ul>'
     if place.get("google_maps"):
@@ -277,7 +298,8 @@ def render_article(category, place, body, image_name, slug):
 body{{margin:0;background:#f6f1e7;color:#17233b;font-family:Arial,sans-serif;line-height:1.75}}
 main{{max-width:900px;margin:auto;padding:40px 22px 70px}}
 article{{background:#fff;padding:30px;border-radius:18px}}
-.cover{{width:100%;max-height:480px;object-fit:cover;border-radius:14px;margin:10px 0 28px}}
+.cover{{width:100%;max-height:480px;object-fit:cover;border-radius:14px;margin:10px 0 6px}}
+.photo-credit{{font-size:12px;color:#777;margin:0 0 24px}}.photo-credit a{{color:#777}}
 h1{{font-size:clamp(34px,6vw,58px);line-height:1.08}}
 h2{{margin-top:36px}}
 .summary,.good-to-know,.useful-links{{padding:20px;background:#f4eee2;border-left:4px solid #b73535;margin:24px 0}}
@@ -286,6 +308,7 @@ a{{color:#b73535}}
 </head>
 <body><main><article>
 <img class="cover" src="{html.escape(image_name, quote=True)}" alt="{html.escape(place['name'], quote=True)}">
+{caption}
 {body}
 {links}
 </article></main></body></html>"""
@@ -298,6 +321,7 @@ def main():
         query = cfg["query"].format(region=region_name)
 
         place = choose_place(cat_key, query)
+        used_places.add(place["name"].strip().lower())  # one place per article, even within the same day
         title_hint = f"{place['name']} {region_name} {category['name'] if isinstance(category, dict) else cat_key}"
         slug_base = slugify(f"{region['slug']}-{cat_key}-{place['name']}")
         slug = slug_base
@@ -312,12 +336,13 @@ def main():
         if not image_name:
             image_info = wikimedia_image(f"{place['name']} {region_name} Korea")
             image_name = download_image(image_info, slug) if image_info else None
+        credit = image_info if image_name else None
 
         if not image_name:
             raise RuntimeError(f"No usable place-specific image found for {place['name']}")
 
         body = ask_openai(category["name"], place)
-        out = render_article(category["name"], place, body, image_name, slug)
+        out = render_article(category["name"], place, body, image_name, slug, credit)
         (ROOT / f"{slug}.html").write_text(out, encoding="utf-8")
 
         published.append({
@@ -331,7 +356,8 @@ def main():
             "google_review_count": place["review_count"],
             "naver_checked": True,
             "published_at": datetime.now(timezone.utc).isoformat(),
-            "image": image_name
+            "image": image_name,
+            "image_credit": (credit or {}).get("credit", "")
         })
         published_slugs.add(slug)
         made.append(slug)

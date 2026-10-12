@@ -1,0 +1,71 @@
+name: Daily Publish
+
+# Once a day (08:30 Korea time): write the new articles, then run every
+# maintenance step once and commit everything in a single commit.
+on:
+  schedule:
+    - cron: "30 23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-bot
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests openai pillow
+
+      - name: Write a general guide
+        id: guide
+        continue-on-error: true
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-6-luna
+        run: |
+          python scripts/generate_post.py
+          python scripts/add_article_faq.py
+
+      - name: Write the regional day
+        id: regional
+        continue-on-error: true
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-6-luna
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: python scripts/generate_regional_day.py
+
+      - name: Maintain site
+        run: python scripts/maintain_site.py
+
+      - name: Commit
+        run: |
+          git config user.name "Korea Plainly Bot"
+          git config user.email "actions@github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Daily publish $(date -u +%F)"
+            git pull --rebase
+            git push
+          fi
+
+      - name: Report failed writing steps
+        if: steps.guide.outcome == 'failure' || steps.regional.outcome == 'failure'
+        run: |
+          echo "guide: ${{ steps.guide.outcome }}, regional: ${{ steps.regional.outcome }}"
+          exit 1

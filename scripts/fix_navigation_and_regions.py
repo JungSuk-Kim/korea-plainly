@@ -77,7 +77,8 @@ def nav_html():
 def title_from_html(p):
     s=p.read_text(encoding='utf-8',errors='ignore')
     m=re.search(r'<title>(.*?)</title>',s,re.I|re.S)
-    return html.unescape(re.sub(r'\s+',' ',m.group(1))).strip() if m else p.stem.replace('-',' ').title()
+    t=html.unescape(re.sub(r'\s+',' ',m.group(1))).strip() if m else p.stem.replace('-',' ').title()
+    return re.sub(r'\s*\|\s*Korea Plainly\s*$','',t)
 
 def style_version(s):
     s=re.sub(r'href=["\']style\.css(?:\?[^"\']*)?["\']', f'href="style.css?v={CSS_VERSION}"', s)

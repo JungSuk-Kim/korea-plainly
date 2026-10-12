@@ -21,6 +21,10 @@ NAV_CSS=r"""
 .nav-menu a:hover{background:#eeeae1}
 .nav-drop:hover>.nav-menu,.nav-drop:focus-within>.nav-menu,.nav-drop.open>.nav-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}
 .nav-drop:hover>.nav-parent .nav-chevron,.nav-drop:focus-within>.nav-parent .nav-chevron,.nav-drop.open>.nav-parent .nav-chevron{transform:rotate(180deg)}
+header a.brand,header a.brand span{color:var(--ink)!important;text-decoration:none}
+header nav>a,header .nav-parent{font-size:12px!important;font-weight:400!important;color:#62635f!important;text-decoration:none}
+@media(min-width:651px){header nav{align-items:center}}
+@media(max-width:650px){header nav>a{padding:10px 6px;font-size:13px!important}}
 .hub-back{display:inline-block;margin-bottom:28px;font-size:13px;color:#666;text-decoration:none}
 @media(max-width:650px){
  nav{display:none;position:absolute;left:15px;right:15px;top:68px;max-height:calc(100dvh - 84px);overflow-y:auto;overscroll-behavior:contain;background:var(--bg);border:1px solid var(--line);padding:12px;box-shadow:0 18px 35px #0001;z-index:1000}
@@ -72,7 +76,7 @@ def patch_css():
     for name in ["seoul","street","food","store"]:
         s=s.replace(f'images/{name}.jpg',f'{name}.jpg')
     s=re.sub(r'\n/\* Korea Plainly (?:navigation - stable v3|stable navigation v3|stable navigation v4|stable navigation v5) \*/.*?(?=\n/\*|\Z)','',s,flags=re.S)
-    s += "\n"+NAV_CSS+"\n"
+    s = s.rstrip() + "\n\n" + NAV_CSS.strip() + "\n"  # no blank lines piling up
     p.write_text(s,encoding="utf-8")
 
 def patch_nav(s):

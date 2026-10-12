@@ -18,7 +18,8 @@ def get_title(p):
     m = re.search(r"<title>(.*?)</title>", s, re.I|re.S)
     if not m:
         m = re.search(r"<h1[^>]*>(.*?)</h1>", s, re.I|re.S)
-    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", m.group(1))).strip() if m else p.stem.replace("-"," ").title()
+    t = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", m.group(1))).strip() if m else p.stem.replace("-"," ").title()
+    return re.sub(r"\s*\|\s*Korea Plainly\s*$", "", t)
 
 def page(region):
     slug, name = region["slug"], region["name"]

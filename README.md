@@ -21,24 +21,37 @@ serves the files as they are.
 
 ## Automation
 
-- **Auto Publish** (`auto-publish.yml`, daily): writes one general guide with
-  `scripts/generate_post.py`, adds an FAQ, then runs the SEO and sitemap steps.
-- **Regional Day** (`regional-day.yml`, daily): writes one regional article, rebuilds the
-  region hubs, shrinks new photos, then runs the SEO and sitemap steps.
+Two workflows, both in `.github/workflows/`:
 
-Both bots commit straight to `main`. **Always run `git pull` before editing locally**, or
-your push will be rejected.
+- **Daily Publish** (`daily-publish.yml`, 08:30 Korea time, or run by hand): writes one
+  general guide (`generate_post.py` + `add_article_faq.py`) and one regional day
+  (`generate_regional_day.py`, one article per category for the next region), then runs
+  `scripts/maintain_site.py` and commits everything once. If a writing step fails, the run
+  still commits the rest and is marked failed so you notice.
+- **Site Maintenance** (`site-maintenance.yml`): runs `scripts/maintain_site.py` whenever you
+  push changes to pages, `style.css`, `scripts/` or `content/`, or by hand.
 
-## SEO rules (enforced automatically)
+`scripts/maintain_site.py` runs these steps in order; each is safe to repeat:
 
-`scripts/seo_basics.py` runs before every sitemap update and is safe to re-run:
+| Step | What it does |
+| --- | --- |
+| `generate_region_pages.py`, `fix_navigation_and_regions.py`, `build_category_region_hubs.py` | Rebuild region and category hubs from `content/published.json` |
+| `add_internal_links.py` | Adds "Related guides" blocks |
+| `site_chrome.py` | Same header, stylesheet, footer and mobile menu on every page (copied from `guides.html`) |
+| `site_integrity_fix.py` | Dropdown menu markup and CSS, canonical tags |
+| `article_enhance.py` | "Published" date and Article structured data on every article (dates in `content/page_dates.json`) |
+| `optimize_images.py` | Shrinks large photos once (tagged so they are never recompressed) |
+| `seo_basics.py` | Favicon, og tags, `noindex` on thin hubs (removed automatically once a hub has 3+ guides) |
+| `update_sitemap.py` | Sitemap without `noindex` pages or the Google verification file |
+| `site_audit.py` | Fails the run on broken links or missing basics |
 
-- every page gets the favicon and Open Graph / Twitter tags (default image `og-default.jpg`);
-- a hub page with fewer than 3 guides and almost no text is marked `noindex,follow`, and the
-  mark is removed automatically once the hub fills up;
-- `scripts/update_sitemap.py` leaves out `noindex` pages and the Google verification file.
+The bots commit straight to `main`. **Always run `git pull` before editing locally.**
 
-`scripts/optimize_images.py` resizes photos wider than 1600px and recompresses large JPEGs.
+## Photo credits
+
+New regional articles show a credit line under the cover photo. Wikimedia Commons photos
+are only used when their licence allows reuse with credit (CC0, public domain, CC BY,
+CC BY-SA). Google Maps photos are credited to their author.
 
 ## Do not delete
 

@@ -9,7 +9,7 @@ for p in html:
     is_verification=bool(re.fullmatch(r'google[0-9a-f]+\.html',p.name))
     for href in re.findall(r'href=["\']([^"\']+)["\']',s,re.I):
         if href.startswith(("http://","https://","mailto:","tel:","#","javascript:")): continue
-        target=href.split("#",1)[0].split("?",1)[0]
+        target=href.split("#",1)[0].split("?",1)[0].lstrip("/")
         if target and not (ROOT/target).exists(): errors.append(f"{p.name}: missing {target}")
     if 'href="#"' in s: errors.append(f"{p.name}: placeholder href=#")
     if re.search(r'images/(seoul|street|food|store)\.jpg',s): errors.append(f"{p.name}: legacy images/ path")
