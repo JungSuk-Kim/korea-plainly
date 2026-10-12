@@ -4,6 +4,8 @@ import json, re, html
 
 ROOT = Path(__file__).resolve().parents[1]
 REGION_FILE = ROOT / "content" / "region_rotation.json"
+INTROS_FILE = ROOT / "content" / "region_intros.json"
+INTROS = json.loads(INTROS_FILE.read_text(encoding="utf-8")) if INTROS_FILE.exists() else {}
 
 CATS = {
     "travel":"Travel","food":"Food","cafe":"Cafe","shopping":"Shopping",
@@ -65,10 +67,11 @@ h1{{font-size:clamp(44px,8vw,82px);line-height:1;margin:12px 0}}.intro{{max-widt
 </style></head>
 <body><header><div class="nav"><strong>KOREA PLAINLY</strong></div></header>
 <main><div class="kicker">Regional hub</div><h1>{name}</h1>
-<p class="intro">A practical collection of places and experiences in {name} for foreign visitors — from travel and food to cafes, shopping, culture, leisure and stays.</p>
+<p class="intro">{intro}</p>
 <div class="chips">{chips}</div>
 <section class="grid">{cards}</section></main></body></html>'''
-    return template.format(name=esc(name),slug=esc(slug),cards=cards,chips=chips)
+    intro = INTROS.get(slug) or "A practical collection of places and experiences in {} for foreign visitors, from travel and food to cafes, shopping, culture, leisure and stays.".format(name)
+    return template.format(name=esc(name),slug=esc(slug),cards=cards,chips=chips,intro=esc(intro))
 
 data = json.loads(REGION_FILE.read_text(encoding="utf-8"))
 for region in data.get("regions", []):

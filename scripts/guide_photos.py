@@ -51,6 +51,7 @@ QUERIES = {
     "korean-convenience-stores-compared": "convenience store Korea",
     "korean-cafe-menu-basics": "cafe Seoul",
     "kakaotalk-korea-guide": "smartphone Seoul",
+    "arriving-in-korea-checklist": "Incheon International Airport",
 }
 STOP = {"a", "an", "the", "to", "in", "of", "for", "and", "how", "what", "is",
         "are", "you", "your", "do", "need", "know", "before", "using", "use",

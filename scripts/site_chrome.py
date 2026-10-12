@@ -60,6 +60,8 @@ def main():
         if p.name in SKIP or re.fullmatch(r"google[0-9a-f]+\.html", p.name):
             continue
         s = read(p)
+        if "kp-redirect" in s:  # merged guides: tiny redirect pages, no site chrome
+            continue
         new = fix(s, parts)
         if new != s:
             p.write_bytes(new.encode("utf-8"))
