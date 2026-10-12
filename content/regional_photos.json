@@ -1,1 +1,62 @@
-{}
+{
+  "busan-cafe-waveon-coffee": {
+    "source_type": "wikimedia",
+    "credit": "Photo: Choi2451, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Waveon_Coffee_in_Gijang,_Busan.jpg"
+  },
+  "busan-food-ribs-of-legend-haeundae": {
+    "source_type": "google",
+    "credit": "Photo: 전설의우대갈비 해운대 ( Legendary Ribs Haeundae ) via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/115418123879406884502"
+  },
+  "busan-shopping-lululemon-busan-shinsegae-centum-city": {
+    "source_type": "google",
+    "credit": "Photo: HY Yun via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/113178048556710064614"
+  },
+  "busan-travel-haedong-yonggungsa-temple": {
+    "source_type": "wikimedia",
+    "credit": "Photo: Christian Bolz, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Haedong_Yonggungsa_Temple_near_Busan.jpg"
+  },
+  "seoul-cafe-cafe-onion-anguk": {
+    "source_type": "google",
+    "credit": "Photo: 허재훈 via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/110821042411586342840"
+  },
+  "seoul-culture-gyeongbokgung-palace": {
+    "source_type": "wikimedia",
+    "credit": "Photo: Frank Schulenburg, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gyeonghoeru_(Royal_Banquet_Hall)_at_Gyeongbokgung_Palace,_Seoul.jpg"
+  },
+  "seoul-food-kampungku-restaurant": {
+    "source_type": "google",
+    "credit": "Photo: Kampungku Restaurant via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/114630104963798806391"
+  },
+  "seoul-leisure-cheonggyecheon": {
+    "source_type": "wikimedia",
+    "credit": "Photo: kallerna This photo was taken with Fujifilm X-T30, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Cheonggyecheon_Seoul_3.jpg"
+  },
+  "seoul-local-guide-gyeongbokgung-palace": {
+    "source_type": "wikimedia",
+    "credit": "Photo: Frank Schulenburg, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gyeonghoeru_(Royal_Banquet_Hall)_at_Gyeongbokgung_Palace,_Seoul.jpg"
+  },
+  "seoul-shopping-myeongdong-shopping-street": {
+    "source_type": "wikimedia",
+    "credit": "Photo: Tristan Surtel, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Namdaemun-ro_and_Aloft_Seoul_Myeongdong_by_night.jpg"
+  },
+  "seoul-stay-four-seasons-hotel-seoul": {
+    "source_type": "google",
+    "credit": "Photo: Four Seasons Hotel Seoul via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/102097517410195567225"
+  },
+  "seoul-travel-cheonggyecheon": {
+    "source_type": "wikimedia",
+    "credit": "Photo: kallerna This photo was taken with Fujifilm X-T30, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Cheonggyecheon_Seoul_3.jpg"
+  }
+}
