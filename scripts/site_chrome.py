@@ -51,6 +51,9 @@ def fix(s, parts):
     if not re.search(r'<link[^>]+href="style\.css', s, re.I):
         s = re.sub(r"<title>", lambda m: parts["css"] + nl + m.group(0), s, count=1, flags=re.I)
 
+    # the old "Latest"/"Guides" button in the header duplicated the Guides menu
+    s = re.sub(r'<a class="top-link"[^>]*>.*?</a>', "", s, count=1, flags=re.S)
+
     header = re.search(r"<header\b[^>]*>.*?</header>", s, re.S | re.I)
     if header and STD_MARK not in header.group(0):
         s = s[:header.start()] + parts["header"] + s[header.end():]

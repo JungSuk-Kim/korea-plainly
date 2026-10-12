@@ -1,0 +1,206 @@
+/* Korea Plainly article design: one look for every article, whatever generator
+   wrote it. Applied by scripts/article_skin.py, which adds class="kp-article" to
+   <body>. Selectors start with .kp-article so they win over each page's own
+   older inline styles without !important. */
+
+.kp-article {
+  --kp-ink: #17233b;
+  --kp-muted: #5f6470;
+  --kp-red: #b73535;
+  --kp-paper: #f7f4ee;
+  --kp-card: #fffdf8;
+  --kp-line: #e3ddd2;
+  background: var(--kp-paper);
+  color: var(--kp-ink);
+  font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* column */
+.kp-article main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 56px 22px 90px;
+  background: none;
+}
+.kp-article main .wrap { width: auto; max-width: none; margin: 0; padding: 0; }
+.kp-article main article,
+.kp-article main .article-body {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  max-width: none;
+  margin: 0;
+  box-shadow: none;
+}
+.kp-article .article-hero { padding: 0; }
+
+/* headline block */
+.kp-article .eyebrow,
+.kp-article .kicker,
+.kp-article .kp-kicker {
+  display: block;
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--kp-red);
+}
+.kp-article .kicker i { display: none; }
+.kp-article main h1 {
+  font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(34px, 5.6vw, 54px);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -.035em;
+  margin: 0 0 14px;
+  max-width: 720px;
+}
+.kp-article .kp-date { font-size: 13px; color: var(--kp-muted); margin: 0 0 18px; }
+.kp-article .dek,
+.kp-article .article-lead {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--kp-muted);
+  max-width: 680px;
+  margin: 0 0 8px;
+}
+.kp-article .article-meta { display: none; }
+
+/* cover photo */
+.kp-article img.cover,
+.kp-article .article-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  max-height: none;
+  min-height: 0;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 26px 0 8px;
+  background-size: cover;
+  background-position: center;
+}
+.kp-article img.cover,
+.kp-article .article-cover { margin-bottom: 30px; }
+.kp-article .photo-credit {
+  font-size: 12px;
+  color: var(--kp-muted);
+  margin: -22px 0 30px !important;
+}
+.kp-article .photo-credit a { color: inherit; text-decoration: underline; }
+.kp-article .kp-cover-gap { height: 22px; }
+
+/* body text */
+.kp-article main h2 {
+  font-size: 26px;
+  line-height: 1.25;
+  letter-spacing: -.02em;
+  margin: 46px 0 12px;
+}
+.kp-article main h3 { font-size: 19px; line-height: 1.35; margin: 28px 0 8px; }
+.kp-article main p,
+.kp-article main li { font-size: 17.5px; line-height: 1.75; }
+.kp-article main ul,
+.kp-article main ol { padding-left: 22px; margin: 10px 0 18px; }
+.kp-article main li { margin: 6px 0; }
+.kp-article main p a,
+.kp-article main li a { color: var(--kp-red); text-decoration: underline; text-underline-offset: 2px; }
+
+/* boxes */
+.kp-article .summary,
+.kp-article .summary-box,
+.kp-article .tip,
+.kp-article .good-to-know {
+  background: var(--kp-card);
+  border: 1px solid var(--kp-line);
+  border-left: 3px solid var(--kp-red);
+  border-radius: 6px;
+  padding: 18px 22px;
+  margin: 26px 0;
+}
+.kp-article .summary p,
+.kp-article .summary-box p,
+.kp-article .tip,
+.kp-article .good-to-know p { font-size: 16.5px; margin: 6px 0; }
+.kp-article .good-to-know h2,
+.kp-article .summary h2 { font-size: 19px; margin: 4px 0 8px; }
+
+/* useful links as buttons */
+.kp-article .useful-links {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 40px 0 10px;
+}
+.kp-article .useful-links h2 { font-size: 19px; margin: 0 0 12px; }
+.kp-article .useful-links ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.kp-article .useful-links li { margin: 0; }
+.kp-article .useful-links li a {
+  display: inline-block;
+  padding: 9px 16px;
+  border: 1px solid var(--kp-ink);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--kp-ink);
+  text-decoration: none;
+}
+.kp-article .useful-links li a:hover { background: var(--kp-ink); color: #fff; }
+
+/* visit info card (regional articles) */
+.kp-article .kp-visit {
+  background: var(--kp-card);
+  border: 1px solid var(--kp-line);
+  border-radius: 6px;
+  padding: 20px 22px;
+  margin: 8px 0 30px;
+}
+.kp-article .kp-visit h2 { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--kp-red); margin: 0 0 12px; }
+.kp-article .kp-visit dl { display: grid; grid-template-columns: 110px 1fr; gap: 8px 14px; margin: 0; font-size: 15.5px; line-height: 1.55; }
+.kp-article .kp-visit dt { color: var(--kp-muted); }
+.kp-article .kp-visit dd { margin: 0; }
+.kp-article .kp-visit .kp-hours { margin: 0; padding: 0; list-style: none; }
+.kp-article .kp-visit .kp-hours li { font-size: 15px; margin: 0; line-height: 1.5; }
+.kp-article .kp-visit .kp-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.kp-article .kp-visit .kp-buttons a {
+  padding: 9px 16px; border-radius: 999px; font-size: 14px; font-weight: 600; text-decoration: none;
+  background: var(--kp-ink); color: #fff;
+}
+.kp-article .kp-visit .kp-buttons a.alt { background: none; color: var(--kp-ink); border: 1px solid var(--kp-ink); }
+.kp-article .kp-visit .kp-note { font-size: 12.5px; color: var(--kp-muted); margin: 14px 0 0; }
+
+/* related guides as photo cards */
+.kp-article .related-guides { margin: 56px 0 0; padding-top: 28px; border-top: 1px solid var(--kp-line); }
+.kp-article .related-guides h2 { font-size: 22px; margin: 0 0 16px; }
+.kp-article .kp-related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.kp-article .kp-related a {
+  display: block;
+  background: var(--kp-card);
+  border: 1px solid var(--kp-line);
+  border-radius: 6px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--kp-ink);
+}
+.kp-article .kp-related img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.kp-article .kp-related span { display: block; padding: 12px 14px 14px; font-size: 15px; font-weight: 600; line-height: 1.35; }
+.kp-article .kp-related a:hover span { text-decoration: underline; }
+
+/* back link */
+.kp-article a.back { display: inline-block; margin-top: 34px; font-size: 14px; font-weight: 600; color: var(--kp-ink); }
+
+@media (max-width: 650px) {
+  .kp-article main { padding: 34px 16px 70px; }
+  .kp-article main h2 { font-size: 23px; }
+  .kp-article main p, .kp-article main li { font-size: 17px; }
+  .kp-article .kp-related { grid-template-columns: 1fr 1fr; }
+  .kp-article .kp-related a:nth-child(3) { display: none; }
+  .kp-article .kp-visit dl { grid-template-columns: 1fr; gap: 2px; }
+  .kp-article .kp-visit dt { margin-top: 8px; }
+}
+
+/* the visit card already has the map and website buttons */
+.kp-article .kp-visit ~ .useful-links { display: none; }
+.kp-article .kp-visit dd small { color: var(--kp-muted); font-size: 13px; }

@@ -12,6 +12,7 @@ serves the files as they are.
 | --- | --- |
 | `*.html` | Every page: home, guides, regional articles, region and category hubs |
 | `style.css` | Shared stylesheet |
+| `article.css` | Article design shared by every guide and regional article |
 | `content/published.json` | Record of every auto-published article (slug, title, category, region, image) |
 | `content/topics.json`, `region_rotation.json`, `regional_queries.json` | Inputs for the publishing bots |
 | `content/region_intros.json` | The introduction shown on each region hub and on the Regions page |
@@ -45,6 +46,7 @@ Two workflows, both in `.github/workflows/`:
 | `guide_photos.py` | Credited Wikimedia Commons photo for each guide that still has a text-card thumbnail (see below) |
 | `article_enhance.py` | "Published" date, Article and breadcrumb structured data on every article (dates in `content/page_dates.json`) |
 | `home_latest.py` | Home page "Latest guides": the two newest guides and two newest regional articles |
+| `article_skin.py` | One article design for every article (`article.css`): headline block, cover photo (older guides get their own image), related guides as photo cards, and on regional articles a "Visiting" card (region, address, Google rating with its date, Naver Map / Google Maps / website buttons) |
 | `optimize_images.py` | Shrinks large photos once (tagged so they are never recompressed) |
 | `seo_basics.py` | Favicon, og tags, `noindex` on thin hubs (removed automatically once a hub has 3+ guides) |
 | `build_search_index.py` | `search-index.json` used by `search.html` |

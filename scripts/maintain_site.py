@@ -21,6 +21,7 @@ STEPS = [
     "site_integrity_fix.py",          # dropdown menu markup, CSS version, canonical tags
     "article_enhance.py",             # publish date + Article structured data
     "home_latest.py",                 # home page "Latest guides" from the newest articles
+    "article_skin.py",                # one article design (article.css), related photo cards, visit info card
     "optimize_images.py",             # shrink oversized photos
     "seo_basics.py",                  # favicon, og tags, noindex for thin hubs
     "build_search_index.py",          # search-index.json for search.html

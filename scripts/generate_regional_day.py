@@ -352,6 +352,7 @@ def main():
             "region": region_name,
             "round": round_no,
             "place_name": place["name"],
+            "address": place.get("address", ""),
             "google_rating": place["rating"],
             "google_review_count": place["review_count"],
             "naver_checked": True,
