@@ -39,6 +39,46 @@
     "credit": "Photo: Christian Bolz, CC BY-SA 4.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Haedong_Yonggungsa_Temple_near_Busan.jpg"
   },
+  "gyeongju-cafe-cafe-arae-heon": {
+    "source_type": "google",
+    "credit": "Photo: 카페 아래헌 / Cafe Arae-Heon / カフェアレホン / 咖啡馆 Arae-heon via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/111238702190482501276"
+  },
+  "gyeongju-culture-bulguksa": {
+    "source_type": "wikimedia",
+    "credit": "Photo: nzj© at w:Picasa, CC BY 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Bulguksa-Gyeongju-Korea-2007-04.jpg"
+  },
+  "gyeongju-food-bar-boon-hwangridangil": {
+    "source_type": "google",
+    "credit": "Photo: Bar Boon Hwangridangil via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/102531661887623002291"
+  },
+  "gyeongju-leisure-woljeonggyo-bridge": {
+    "source_type": "wikimedia",
+    "credit": "Photo: lumoplank, CC0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Woljeonggyo_Bridge,_Gyeongju_-_Woljeonggyo2656.jpg"
+  },
+  "gyeongju-local-guide-woljeonggyo-bridge": {
+    "source_type": "wikimedia",
+    "credit": "Photo: lumoplank, CC0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Woljeonggyo_Bridge,_Gyeongju_-_Woljeonggyo2656.jpg"
+  },
+  "gyeongju-shopping-woljeonggyo-bridge": {
+    "source_type": "wikimedia",
+    "credit": "Photo: lumoplank, CC0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Woljeonggyo_Bridge,_Gyeongju_-_Woljeonggyo2656.jpg"
+  },
+  "gyeongju-stay-hilton-gyeongju": {
+    "source_type": "wikimedia",
+    "credit": "Photo: The White House, Public domain, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:2025_Special_dinner_in_his_honor_of_President_Donald_Trump_and_State_Leaders_hosted_by_President_Lee_Jae_Myung_of_the_Republic_of_Korea_on_October_29_at_the_Hilton_Hotel_in_Gyeongju,_South_Korea.jpg"
+  },
+  "gyeongju-travel-woljeonggyo-bridge": {
+    "source_type": "wikimedia",
+    "credit": "Photo: lumoplank, CC0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Woljeonggyo_Bridge,_Gyeongju_-_Woljeonggyo2656.jpg"
+  },
   "jeju-cafe-haejigae-cafe": {
     "source_type": "google",
     "credit": "Photo: 해지개 카페 via Google Maps",
@@ -78,6 +118,26 @@
     "source_type": "google",
     "credit": "Photo: Sohyun Kwon (Emma) via Google Maps",
     "source": "https://maps.google.com/maps/contrib/100299570138767954052"
+  },
+  "jeonju-cafe-haeyooldam": {
+    "source_type": "google",
+    "credit": "Photo: Phuong Thao Nguyen via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/116483894873605150916"
+  },
+  "jeonju-food-ondam": {
+    "source_type": "google",
+    "credit": "Photo: 온담 전주본점(Ondam Korean BBQ) via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/115776776624806052986"
+  },
+  "jeonju-shopping-jeonju-hanok-village": {
+    "source_type": "wikimedia",
+    "credit": "Photo: Mobius6, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Jeonju_Hanok_Village_20220701_001.jpg"
+  },
+  "jeonju-travel-jeonju-hanok-village": {
+    "source_type": "wikimedia",
+    "credit": "Photo: Mobius6, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Jeonju_Hanok_Village_20220701_001.jpg"
   },
   "seoul-cafe-cafe-onion-anguk": {
     "source_type": "google",
