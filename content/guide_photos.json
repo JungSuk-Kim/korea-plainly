@@ -21,27 +21,31 @@
     "file": "photo-korea-transit-card-guide.jpg",
     "credit": "Photo: Unknown author, Public domain, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:3_sly_old_cards!_(BM_1896,0501.1638).jpg",
-    "query": "T-money",
-    "retry": true
+    "query": "T-money"
   },
   "korean-atm-guide": {
-    "none": true,
-    "query": "ATM Korea",
-    "retry": true
+    "file": "photo-korean-atm-guide.jpg",
+    "credit": "Photo: hyolee2, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Mobile_post_office_Korea.JPG",
+    "query": "ATM Korea"
   },
   "korean-cafe-menu-basics": {
     "file": "photo-korean-cafe-menu-basics.jpg",
-    "credit": "Photo: Jungminho, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Bnc_Internet_Cafe_Seoul_South_March_Korea_1994.jpg",
+    "credit": "Photo: H. Y. Shin 000, CC0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Cafe_Seoul_20190324_131853.jpg",
     "query": "cafe Seoul",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Bnc_Internet_Cafe_Seoul_South_March_Korea_1994.jpg"
+    ]
   },
   "korean-convenience-store-tips": {
     "file": "photo-korean-convenience-store-tips.jpg",
     "credit": "Photo: Jhcbs1019, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Seoul_Ring_Expwy_GuriNamyangju_TGPA_Parkinglot_and_Convenience_Store_1.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul_Ring_Expwy_GuriNamyangju_TGPA_Parkinglot_and_Convenience_Store_2.jpg",
     "query": "convenience store Seoul",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Seoul_Ring_Expwy_GuriNamyangju_TGPA_Parkinglot_and_Convenience_Store_1.jpg"
+    ]
   },
   "korean-convenience-stores-compared": {
     "file": "photo-korean-convenience-stores-compared.jpg",
@@ -50,9 +54,10 @@
     "query": "convenience store Korea"
   },
   "korean-food-delivery-guide": {
-    "none": true,
-    "query": "delivery Seoul",
-    "retry": true
+    "file": "photo-korean-food-delivery-guide.jpg",
+    "credit": "Photo: Julie Facine from Istanbul, Turkey, CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:McDelivery_Seoul_2008.jpg",
+    "query": "delivery Seoul"
   },
   "seoul-bus-guide": {
     "file": "photo-seoul-bus-guide.jpg",
