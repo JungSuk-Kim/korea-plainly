@@ -36,6 +36,7 @@ Two workflows, both in `.github/workflows/`:
 
 | Step | What it does |
 | --- | --- |
+| `regional_photos.py` | Regional articles: credited cover photo (Wikimedia Commons first, else the place's Google Maps photo) and a Naver Map link; choices in `content/regional_photos.json` |
 | `generate_region_pages.py`, `fix_navigation_and_regions.py`, `build_category_region_hubs.py` | Rebuild region and category hubs from `content/published.json` |
 | `add_internal_links.py` | Adds "Related guides" blocks |
 | `site_chrome.py` | Same header, stylesheet, footer, mobile menu and AdSense script on every page (copied from `guides.html`) |

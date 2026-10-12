@@ -92,7 +92,8 @@ def default_query(title):
 
 # ---------------------------------------------------------------- fetching
 
-def search_commons(query, reject=()):
+def search_commons(query, reject=(), require=()):
+    """Best freely licensed JPEG for `query`; `require`: the file title must contain one of these words."""
     import requests
     r = requests.get("https://commons.wikimedia.org/w/api.php", timeout=30,
                      headers={"User-Agent": USER_AGENT}, params={
@@ -118,7 +119,7 @@ def search_commons(query, reject=()):
         t = title.lower()
         title_words = max(len(re.findall(r"[a-z]+", t)), 1)
         hits = sum(word in t for word in words)
-        if hits < 1:
+        if hits < 1 or (require and not any(r.lower() in t for r in require)):
             continue
         # more query words, and fewer unrelated words, is better
         score = hits + hits / title_words

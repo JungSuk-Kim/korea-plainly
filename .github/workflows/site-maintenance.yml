@@ -35,6 +35,7 @@ jobs:
       - name: Maintain site
         env:
           KP_FETCH_PHOTOS: "1"
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
         run: python scripts/maintain_site.py
 
       - name: Commit
