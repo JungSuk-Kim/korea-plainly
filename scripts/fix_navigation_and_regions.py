@@ -7,6 +7,32 @@ CATEGORIES = [
     ('travel','Travel'),('food','Food'),('cafe','Cafe'),('shopping','Shopping'),
     ('culture','Culture'),('leisure','Leisure'),('stay','Stay'),('local-guide','Local Guide')
 ]
+# Regional articles are written in 8 categories but shown in 4 groups.
+GROUPS = [
+    ('see-do','See & Do',['travel','culture','leisure','local-guide']),
+    ('eat-drink','Eat & Drink',['food','cafe']),
+    ('shop','Shop',['shopping']),
+    ('stay','Stay',['stay']),
+]
+GROUP_OF = {cat: (gslug, gname) for gslug, gname, cats in GROUPS for cat in cats}
+GROUP_INTRO = {
+    'see-do': 'Sights, culture, walks and things to do in {where}, explained for first-time visitors.',
+    'eat-drink': 'Where to eat and drink in {where}: restaurants, local dishes and cafes worth the trip.',
+    'shop': 'Markets, shopping streets and stores in {where}, with what to expect before you go.',
+    'stay': 'Hotels and places to stay in {where}, and what each one is like as a base.',
+}
+CAT_NAME = dict(CATEGORIES)
+
+def group_cards(prefix, cats):
+    out = []
+    for c in cats:
+        out += ROOT.glob(f'{prefix}-{c}-*.html')
+    return sorted(set(out))
+
+def card_label(p):
+    m = re.match(r'^[a-z]+-(' + '|'.join(sorted(CAT_NAME, key=len, reverse=True)) + r')-', p.name)
+    return CAT_NAME.get(m.group(1), '') if m else ''
+
 GUIDES = [
     ('Travel Basics','travel'),('Transport','transport'),('Money','money'),('Apps & Tips','apps'),
     ('Food & Dining','food'),('Daily Life','daily'),('Language','language'),('Culture','culture')
@@ -106,11 +132,11 @@ def nav_script(s):
 
 def make_hub(filename, heading, intro, cards, back_href, back_label, prefix=None):
     if prefix:
-        cat_links=''.join(f'<a href="{prefix}-{slug}.html">{n}</a>' for slug,n in CATEGORIES)
+        cat_links=''.join(f'<a href="{prefix}-{g}.html">{html.escape(n)}</a>' for g,n,_ in GROUPS if (ROOT/f'{prefix}-{g}.html').exists() or g in filename)
     else:
-        cat_links=''.join(f'<a href="{slug}.html">{n}</a>' for slug,n in CATEGORIES)
+        cat_links=''.join(f'<a href="{g}.html">{html.escape(n)}</a>' for g,n,_ in GROUPS)
     cards_html=''.join(
-        f'<a class="hub-card" href="{p.name}"><img class="hub-thumb" src="{html.escape(thumb_for(p))}" alt="" loading="lazy"><span>{html.escape((heading.split(" in ")[0]).upper())}</span><h3>{html.escape(title_from_html(p))}</h3><b>Read guide &rarr;</b></a>'
+        f'<a class="hub-card" href="{p.name}"><img class="hub-thumb" src="{html.escape(thumb_for(p))}" alt="" loading="lazy"><span>{html.escape((card_label(p) or heading.split(" in ")[0]).upper())}</span><h3>{html.escape(title_from_html(p))}</h3><b>Read guide &rarr;</b></a>'
         for p in cards
     )
     if not cards_html: cards_html='<div class="empty">New guides are coming soon.</div>'
@@ -118,17 +144,65 @@ def make_hub(filename, heading, intro, cards, back_href, back_label, prefix=None
 .hub-hero{{padding:42px 0 44px;border-bottom:1px solid #ddd8ce}}.hub-hero h1{{font-size:clamp(42px,7vw,78px);margin:8px 0 18px}}.hub-hero p{{max-width:680px;font-size:18px;line-height:1.7}}.hub-cats{{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}}.hub-cats a{{padding:10px 15px;border:1px solid #d8d1c5;border-radius:999px;text-decoration:none}}.hub-grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:30px 0 80px}}.hub-card{{display:block;padding:0 0 22px;border:1px solid #ddd8ce;background:#fff;text-decoration:none;color:inherit;overflow:hidden}}.hub-card>*:not(img){{margin-left:22px;margin-right:22px}}.hub-thumb{{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;margin-bottom:18px}}.hub-card span{{display:block}}.hub-card span{{font-size:12px;letter-spacing:.12em}}.hub-card h3{{font-size:22px;line-height:1.3}}.hub-card b{{font-size:13px}}.empty{{padding:40px;border:1px dashed #ccc}}.hub-back{{display:inline-block;margin-bottom:28px;font-size:13px;color:#666;text-decoration:none}}@media(max-width:800px){{.hub-grid{{grid-template-columns:1fr}}}}
 </style></head><body><header><div class="nav wrap"><a class="brand" href="index.html"><span class="taegeuk"></span><span>Korea <b>Plainly</b></span></a>{nav_html()}<a class="top-link" href="guides.html">Latest <span>↗</span></a><button class="menu" aria-label="menu">☰</button></div></header><main><section class="hub-hero"><div class="wrap"><a class="hub-back" href="{back_href}">{back_label}</a><p class="kicker"><i></i> KOREA PLAINLY</p><h1>{html.escape(heading)}</h1><p>{html.escape(intro)}</p><div class="hub-cats">{cat_links}</div></div></section><section class="wrap section"><div class="hub-grid">{cards_html}</div></section></main><footer><div class="wrap foot"><div><a class="brand" href="index.html"><span class="taegeuk"></span><span>Korea <b>Plainly</b></span></a><p>Korea, Made Easy for Everyone.</p></div><div class="foot-links"><a href="guides.html">Guides</a><a href="regions.html">Regions</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div></div></footer><script>document.querySelector('.menu').addEventListener('click',()=>document.querySelector('nav').classList.toggle('show'));</script>{NAV_JS}</body></html>'''
 
-# 1. Build every region-category page and every nationwide category hub.
-for slug,name in REGIONS:
-    for cat_slug,cat_name in CATEGORIES:
-        cards=sorted(ROOT.glob(f'{slug}-{cat_slug}-*.html'))
-        (ROOT/f'{slug}-{cat_slug}.html').write_text(
-            make_hub(f'{slug}-{cat_slug}.html',f'{cat_name} in {name}',f'Explore {name} through {cat_name.lower()} guides and recommendations.',cards,f'{slug}.html',f'← {name}',slug),encoding='utf-8')
+# 1. Build a hub for every region x group that has articles, and every nationwide group hub.
+import sys as _sys
+_sys.path.insert(0, str(Path("scripts").resolve()))
+from kp_nav import regions as _all_regions
 
-for cat_slug,cat_name in CATEGORIES:
-    cards=sorted(ROOT.glob(f'*-{cat_slug}-*.html'))
-    (ROOT/f'{cat_slug}.html').write_text(
-        make_hub(f'{cat_slug}.html',f'{cat_name} in Korea',f'Useful {cat_name.lower()} picks and guides from Seoul, Busan, Jeju and beyond.',cards,'index.html','← Home'),encoding='utf-8')
+for slug,name in _all_regions():
+    for g,gname,cats in GROUPS:
+        cards=group_cards(slug,cats)
+        target=ROOT/f'{slug}-{g}.html'
+        if not cards and not target.exists():
+            continue
+        target.write_text(
+            make_hub(f'{slug}-{g}.html',f'{gname} in {name}',GROUP_INTRO[g].format(where=name),cards,f'{slug}.html',f'← {name}',slug),encoding='utf-8')
+
+for g,gname,cats in GROUPS:
+    cards=group_cards('*',cats)
+    (ROOT/f'{g}.html').write_text(
+        make_hub(f'{g}.html',f'{gname} in Korea',GROUP_INTRO[g].format(where='Korea'),cards,'index.html','← Home'),encoding='utf-8')
+
+# 1b. The old 8-category hub pages now redirect to their group.
+def _redirect(old, new, title):
+    page = (f'<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<title>Moved: {html.escape(title)} | Korea Plainly</title>\n'
+            f'<meta name="robots" content="noindex,follow">\n<link rel="canonical" href="https://korea-plainly.com/{new}">\n'
+            f'<meta http-equiv="refresh" content="0; url={new}">\n<!-- kp-redirect: category hub merged into {new} -->\n</head>\n'
+            f'<body>\n<p>This page has moved: <a href="{new}">{html.escape(title)}</a>.</p>\n</body>\n</html>\n')
+    path = ROOT/old
+    if not path.exists() or path.read_text(encoding='utf-8', errors='ignore') != page:
+        path.write_text(page, encoding='utf-8')
+
+OLD_TO_NEW = {}
+for cat,cname in CATEGORIES:
+    g,gname = GROUP_OF[cat]
+    if cat != g:
+        OLD_TO_NEW[f'{cat}.html'] = (f'{g}.html', f'{gname} in Korea')
+    for slug,name in _all_regions():
+        if cat != g:
+            OLD_TO_NEW[f'{slug}-{cat}.html'] = (f'{slug}-{g}.html', f'{gname} in {name}')
+for old,(new,title) in list(OLD_TO_NEW.items()):
+    if not (ROOT/new).exists():
+        # nothing in that group yet: send people to the region page instead
+        region = old.split('-')[0]
+        new = f'{region}.html' if (ROOT/f'{region}.html').exists() and old != f'{region}.html' else 'regions.html'
+        OLD_TO_NEW[old] = (new, title)
+    if (ROOT/old).exists():
+        _redirect(old, new, title)
+
+def _relink(s):
+    def fix(m):
+        href, text = m.group(1), m.group(2)
+        new, title = OLD_TO_NEW[href]
+        old_label = re.sub(r'\s+', ' ', text).strip()
+        if re.fullmatch(r'.+ in .+', old_label) and not old_label.startswith('Moved'):
+            text = html.escape(title)
+        return f'<a href="{new}">{text}</a>'
+    pattern = r'<a href="(' + '|'.join(re.escape(k) for k in OLD_TO_NEW) + r')">(.*?)</a>'
+    s = re.sub(pattern, fix, s, flags=re.S)
+    for old,(new,_) in OLD_TO_NEW.items():
+        s = s.replace(f'href="{old}"', f'href="{new}"')
+    return s
 
 # 2. Repair region hub pages with region-only category links and a real back link.
 for slug,name in REGIONS:
@@ -177,6 +251,8 @@ for p in ROOT.glob('*.html'):
     if p.name=='regions.html':
         continue
     s=p.read_text(encoding='utf-8',errors='ignore')
+    if 'kp-redirect' not in s:
+        s=_relink(s)
     if '<nav>' in s:
         s=re.sub(r'<nav>.*?</nav>',nav_html(),s,count=1,flags=re.S)
     s=style_version(s)

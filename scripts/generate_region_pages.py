@@ -45,7 +45,10 @@ def page(region):
             esc(fn), esc(img), esc(cat), esc(title)
         ) for _,cat,title,fn,img in items
     )
-    chips = "".join('<a href="{}-{}.html">{}</a>'.format(esc(slug), k, CATS[k]) for k in CATS if k in cats_with_items and (ROOT / "{}-{}.html".format(slug, k)).exists())
+    groups = [("see-do", "See &amp; Do"), ("eat-drink", "Eat &amp; Drink"), ("shop", "Shop"), ("stay", "Stay")]
+    chips = "".join('<a href="{}-{}.html">{}</a>'.format(esc(slug), g, label) for g, label in groups
+                    if (ROOT / "{}-{}.html".format(slug, g)).exists()
+                    and "kp-redirect" not in (ROOT / "{}-{}.html".format(slug, g)).read_text(encoding="utf-8", errors="ignore"))
     if not cards:
         cards = '<p class="empty">New recommendations for this region will appear here automatically.</p>'
     template = '''<!doctype html>

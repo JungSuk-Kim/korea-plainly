@@ -38,7 +38,7 @@ Two workflows, both in `.github/workflows/`:
 | --- | --- |
 | `lazy_cards.py` | Guide cards on guides.html: real `<img loading="lazy">` thumbnails and a category on every card |
 | `regional_photos.py` | Regional articles: credited cover photo (Wikimedia Commons first, else the place's Google Maps photo) and a Naver Map link; choices in `content/regional_photos.json` |
-| `generate_region_pages.py`, `fix_navigation_and_regions.py`, `build_category_region_hubs.py` | Rebuild region and category hubs from `content/published.json` |
+| `generate_region_pages.py`, `fix_navigation_and_regions.py`, `build_category_region_hubs.py` | Rebuild region hubs and the four group hubs per region (See & Do = travel/culture/leisure/local guide, Eat & Drink = food/cafe, Shop, Stay) plus nationwide group hubs; old 8-category hub URLs redirect to their group |
 | `add_internal_links.py` | Adds "Related guides" blocks |
 | `site_chrome.py` | Same header, stylesheet, footer, mobile menu, AdSense and Google Analytics (G-F508WWT8G9) on every page (copied from `guides.html`) |
 | `site_integrity_fix.py` | Main menu (defined once in `scripts/kp_nav.py`), its CSS, canonical tags |
