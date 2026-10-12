@@ -18,16 +18,24 @@
     "query": "recycling bins Korea"
   },
   "korea-transit-card-guide": {
-    "file": "photo-korea-transit-card-guide.jpg",
-    "credit": "Photo: Unknown author, Public domain, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:3_sly_old_cards!_(BM_1896,0501.1638).jpg",
-    "query": "T-money"
+    "file": "thumb-tmoney.jpg",
+    "credit": "",
+    "source": "",
+    "manual": true,
+    "note": "no good Wikimedia photo found; using the site's own image",
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:3_sly_old_cards!_(BM_1896,0501.1638).jpg"
+    ]
   },
   "korean-atm-guide": {
-    "file": "photo-korean-atm-guide.jpg",
-    "credit": "Photo: hyolee2, CC BY-SA 3.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Mobile_post_office_Korea.JPG",
-    "query": "ATM Korea"
+    "file": "thumb-cash-cards.jpg",
+    "credit": "",
+    "source": "",
+    "manual": true,
+    "note": "no good Wikimedia photo found; using the site's own image",
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Mobile_post_office_Korea.JPG"
+    ]
   },
   "korean-cafe-menu-basics": {
     "file": "photo-korean-cafe-menu-basics.jpg",
@@ -39,12 +47,14 @@
     ]
   },
   "korean-convenience-store-tips": {
-    "file": "photo-korean-convenience-store-tips.jpg",
-    "credit": "Photo: Jhcbs1019, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Seoul_Ring_Expwy_GuriNamyangju_TGPA_Parkinglot_and_Convenience_Store_2.jpg",
-    "query": "convenience store Seoul",
+    "file": "thumb-convenience-store.jpg",
+    "credit": "",
+    "source": "",
+    "manual": true,
+    "note": "no good Wikimedia photo found; using the site's own image",
     "reject": [
-      "https://commons.wikimedia.org/wiki/File:Seoul_Ring_Expwy_GuriNamyangju_TGPA_Parkinglot_and_Convenience_Store_1.jpg"
+      "https://commons.wikimedia.org/wiki/File:Seoul_Ring_Expwy_GuriNamyangju_TGPA_Parkinglot_and_Convenience_Store_1.jpg",
+      "https://commons.wikimedia.org/wiki/File:Seoul_Ring_Expwy_GuriNamyangju_TGPA_Parkinglot_and_Convenience_Store_2.jpg"
     ]
   },
   "korean-convenience-stores-compared": {
