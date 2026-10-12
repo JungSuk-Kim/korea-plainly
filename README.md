@@ -39,6 +39,7 @@ Two workflows, both in `.github/workflows/`:
 | `add_internal_links.py` | Adds "Related guides" blocks |
 | `site_chrome.py` | Same header, stylesheet, footer and mobile menu on every page (copied from `guides.html`) |
 | `site_integrity_fix.py` | Dropdown menu markup and CSS, canonical tags |
+| `guide_photos.py` | Credited Wikimedia Commons photo for each guide that still has a text-card thumbnail (see below) |
 | `article_enhance.py` | "Published" date and Article structured data on every article (dates in `content/page_dates.json`) |
 | `optimize_images.py` | Shrinks large photos once (tagged so they are never recompressed) |
 | `seo_basics.py` | Favicon, og tags, `noindex` on thin hubs (removed automatically once a hub has 3+ guides) |
@@ -52,6 +53,11 @@ The bots commit straight to `main`. **Always run `git pull` before editing local
 New regional articles show a credit line under the cover photo. Wikimedia Commons photos
 are only used when their licence allows reuse with credit (CC0, public domain, CC BY,
 CC BY-SA). Google Maps photos are credited to their author.
+
+General guides get their photo from `scripts/guide_photos.py`. Every choice is listed in
+`content/guide_photos.json` with its source page. To change a photo, replace that guide's
+entry with `{"query": "better search words"}` and delete its `photo-<slug>.jpg`; to keep
+the text card, use `{"skip": true}`. The next run applies the change.
 
 ## Do not delete
 

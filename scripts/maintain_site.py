@@ -16,6 +16,7 @@ STEPS = [
     "add_internal_links.py",          # "related guides" blocks
     "site_chrome.py",                 # same header, stylesheet and footer everywhere
     "site_integrity_fix.py",          # dropdown menu markup, CSS version, canonical tags
+    "guide_photos.py",                # credited Wikimedia photos for guides (fetches when KP_FETCH_PHOTOS=1)
     "article_enhance.py",             # publish date + Article structured data
     "optimize_images.py",             # shrink oversized photos
     "seo_basics.py",                  # favicon, og tags, noindex for thin hubs

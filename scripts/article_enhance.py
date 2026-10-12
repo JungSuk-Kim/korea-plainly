@@ -72,8 +72,8 @@ def meta(s, pattern):
 
 
 def add_jsonld(s, name, published, nl):
-    if 'id="kp-article-ld"' in s:
-        return s
+    # Rebuilt on every run so it follows title or image changes.
+    s = re.sub(r'<script type="application/ld\+json" id="kp-article-ld">.*?</script>\r?\n?', "", s, flags=re.S)
     h1 = re.search(r"<h1[^>]*>(.*?)</h1>", s, re.S | re.I)
     headline = text_of(h1.group(1)) if h1 else (meta(s, r"<title>(.*?)</title>") or name)
     url = meta(s, r'<link[^>]+rel=["\']canonical["\'][^>]*href=["\'](.*?)["\']') or f"{BASE}/{name}"
