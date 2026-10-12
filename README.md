@@ -39,7 +39,7 @@ Two workflows, both in `.github/workflows/`:
 | `regional_photos.py` | Regional articles: credited cover photo (Wikimedia Commons first, else the place's Google Maps photo) and a Naver Map link; choices in `content/regional_photos.json` |
 | `generate_region_pages.py`, `fix_navigation_and_regions.py`, `build_category_region_hubs.py` | Rebuild region and category hubs from `content/published.json` |
 | `add_internal_links.py` | Adds "Related guides" blocks |
-| `site_chrome.py` | Same header, stylesheet, footer, mobile menu and AdSense script on every page (copied from `guides.html`) |
+| `site_chrome.py` | Same header, stylesheet, footer, mobile menu, AdSense and Google Analytics (G-T8P5V8G0C0) on every page (copied from `guides.html`) |
 | `site_integrity_fix.py` | Main menu (defined once in `scripts/kp_nav.py`), its CSS, canonical tags |
 | `guide_photos.py` | Credited Wikimedia Commons photo for each guide that still has a text-card thumbnail (see below) |
 | `article_enhance.py` | "Published" date and Article structured data on every article (dates in `content/page_dates.json`) |

@@ -14,6 +14,10 @@ SKIP = {"404.html"}
 STD_MARK = 'class="nav wrap"'
 ADSENSE = ('<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7379462117232471" '
            'crossorigin="anonymous"></script>')
+GA_ID = "G-T8P5V8G0C0"  # Google Analytics 4 measurement ID
+ANALYTICS = (f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>'
+             f"<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}"
+             f"gtag('js',new Date());gtag('config','{GA_ID}');</script>")
 
 
 def read(p):
@@ -37,6 +41,9 @@ def reference_parts():
 
 def fix(s, parts):
     nl = "\r\n" if "\r\n" in s else "\n"
+
+    if "googletagmanager.com/gtag/js" not in s:  # Google Analytics
+        s = re.sub(r"</head>", lambda m: ANALYTICS + nl + m.group(0), s, count=1, flags=re.I)
 
     if "adsbygoogle.js" not in s:  # Google AdSense, same publisher ID as ads.txt
         s = re.sub(r"</head>", lambda m: ADSENSE + nl + m.group(0), s, count=1, flags=re.I)
