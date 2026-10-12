@@ -21,23 +21,27 @@
     "file": "photo-korea-transit-card-guide.jpg",
     "credit": "Photo: Unknown author, Public domain, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:3_sly_old_cards!_(BM_1896,0501.1638).jpg",
-    "query": "T-money card"
+    "query": "T-money",
+    "retry": true
   },
   "korean-atm-guide": {
     "none": true,
-    "query": "ATM Seoul"
+    "query": "ATM Korea",
+    "retry": true
   },
   "korean-cafe-menu-basics": {
     "file": "photo-korean-cafe-menu-basics.jpg",
     "credit": "Photo: Jungminho, CC BY-SA 4.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Bnc_Internet_Cafe_Seoul_South_March_Korea_1994.jpg",
-    "query": "cafe Seoul"
+    "query": "cafe Seoul",
+    "retry": true
   },
   "korean-convenience-store-tips": {
     "file": "photo-korean-convenience-store-tips.jpg",
     "credit": "Photo: Jhcbs1019, CC BY-SA 4.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Seoul_Ring_Expwy_GuriNamyangju_TGPA_Parkinglot_and_Convenience_Store_1.jpg",
-    "query": "convenience store Seoul"
+    "query": "convenience store Seoul",
+    "retry": true
   },
   "korean-convenience-stores-compared": {
     "file": "photo-korean-convenience-stores-compared.jpg",
@@ -47,7 +51,8 @@
   },
   "korean-food-delivery-guide": {
     "none": true,
-    "query": "delivery motorcycle Seoul"
+    "query": "delivery Seoul",
+    "retry": true
   },
   "seoul-bus-guide": {
     "file": "photo-seoul-bus-guide.jpg",

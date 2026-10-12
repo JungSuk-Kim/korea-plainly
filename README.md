@@ -55,9 +55,10 @@ are only used when their licence allows reuse with credit (CC0, public domain, C
 CC BY-SA). Google Maps photos are credited to their author.
 
 General guides get their photo from `scripts/guide_photos.py`. Every choice is listed in
-`content/guide_photos.json` with its source page. To change a photo, replace that guide's
-entry with `{"query": "better search words"}` and delete its `photo-<slug>.jpg`; to keep
-the text card, use `{"skip": true}`. The next run applies the change.
+`content/guide_photos.json` with its source page. To get a different photo, add
+`"retry": true` to that guide's entry (optionally with a new `"query"`); the rejected photo
+is remembered and the current one stays until a better one is found. To keep the text card,
+use `{"skip": true}`. The next run applies the change.
 
 ## Do not delete
 

@@ -14,8 +14,9 @@ Every decision is stored in content/guide_photos.json, so you can review it:
   "korean-atm-guide": {"file": "photo-korean-atm-guide.jpg", "credit": "...",
                        "source": "https://commons.wikimedia.org/...", "query": "ATM Seoul"}
 
-  * Don't like a photo? Replace the entry with {"query": "better search words"}
-    and delete the photo file; the next run picks a new one.
+  * Don't like a photo? Add "retry": true to its entry (and optionally a new
+    "query"). The next run looks for another photo, never re-picks a rejected
+    one ("reject" list), and keeps the current photo if nothing better is found.
   * Keep the SVG card for a guide: {"skip": true}.
 
 Searching and downloading only happens when KP_FETCH_PHOTOS=1 (set in the
@@ -56,6 +57,10 @@ STOP = {"a", "an", "the", "to", "in", "of", "for", "and", "how", "what", "is",
         "works", "visitors", "foreigner", "foreigners", "guide", "simple",
         "korean", "korea", "basics", "explained", "compared", "things", "best",
         "with", "from", "when", "where", "why", "can", "will", "should", "first", "time"}
+# The file title must clearly be about Korea (place names count).
+KOREA_WORDS = re.compile(r"(?i)(korea|seoul|busan|jeju|incheon|daegu|daejeon|gwangju|gyeong|jeonju|gangneung|"
+                         r"hanok|myeong|gangnam|hongdae|insadong|jongno|itaewon|namsan|t-?money|kakao|hangul)")
+OLD_PHOTO = re.compile(r"\b(18|19)\d\d\b|\b200[0-4]\b")
 BAD_TITLE = re.compile(r"(?i)\b(map|logo|icon|diagram|chart|flag|seal|emblem|screenshot|signature|symbol|coat of arms|poster)\b")
 GOOD_LICENCE = re.compile(r"(?i)^(cc0|public domain|pd\b|cc by(-sa)? \d)")
 
@@ -86,7 +91,7 @@ def default_query(title):
 
 # ---------------------------------------------------------------- fetching
 
-def search_commons(query):
+def search_commons(query, reject=()):
     import requests
     r = requests.get("https://commons.wikimedia.org/w/api.php", timeout=30,
                      headers={"User-Agent": USER_AGENT}, params={
@@ -105,12 +110,17 @@ def search_commons(query):
         w, h = info.get("width") or 0, info.get("height") or 0
         if info.get("mime") != "image/jpeg" or w < 1200 or w < h * 1.2:
             continue
-        if not GOOD_LICENCE.match(licence) or BAD_TITLE.search(title):
+        if not GOOD_LICENCE.match(licence) or BAD_TITLE.search(title) or OLD_PHOTO.search(title):
+            continue
+        if not KOREA_WORDS.search(title) or info.get("descriptionurl", "") in reject:
             continue
         t = title.lower()
-        score = sum(word in t for word in words) + (1 if ("korea" in t or "seoul" in t) else 0)
-        if score < 1:
+        title_words = max(len(re.findall(r"[a-z]+", t)), 1)
+        hits = sum(word in t for word in words)
+        if hits < 1:
             continue
+        # more query words, and fewer unrelated words, is better
+        score = hits + hits / title_words
         if not best or score > best[0]:
             artist = clean((meta.get("Artist") or {}).get("value")) or "Unknown author"
             best = (score, {
@@ -155,7 +165,8 @@ def apply_photo(slug, entry, guides_html):
     new = re.sub(r'(<img\b[^>]*class="cover"[^>]*src=")([^"]+)(")', lambda m: m.group(1) + photo + m.group(3), s, count=1, flags=re.S)
     new = re.sub(r'(<img\s+class="cover"\s+src=")([^"]+)(")', lambda m: m.group(1) + photo + m.group(3), new, count=1, flags=re.S)
     new = set_share_image(new, photo)
-    if 'data-kp="photo-credit"' not in new and entry.get("credit"):
+    new = re.sub(r'[ \t]*<p class="photo-credit" data-kp="photo-credit".*?</p>\r?\n?', "", new, flags=re.S)
+    if entry.get("credit"):
         text = html.escape(entry["credit"])
         if entry.get("source"):
             text = f'<a href="{html.escape(entry["source"], quote=True)}" target="_blank" rel="noopener nofollow" style="color:inherit">{text}</a>'
@@ -188,25 +199,36 @@ def main():
                 write(page, set_share_image(s, thumb))
             continue
 
-        if entry.get("file") and (ROOT / entry["file"]).exists():
+        has_photo = entry.get("file") and (ROOT / entry["file"]).exists()
+        if has_photo and not (FETCH and entry.get("retry")):
             guides_html = apply_photo(slug, entry, guides_html)
             applied += 1
             continue
 
-        if not FETCH or entry.get("none"):
+        if not FETCH or (entry.get("none") and not entry.get("retry")):
             continue
         title = clean((re.search(r"<h1[^>]*>(.*?)</h1>", read(page), re.S) or [None, slug])[1])
         query = entry.get("query") or QUERIES.get(slug) or default_query(title)
         try:
-            found = search_commons(query)
+            reject = list(entry.get("reject", []))
+            if has_photo and entry.get("source"):
+                reject.append(entry["source"])  # asked for a different photo
+            found = search_commons(query, reject)
             if found:
                 photo = f"photo-{slug}.jpg"
                 download(found["url"], ROOT / photo)
                 entry = {"file": photo, "credit": found["credit"], "source": found["source"], "query": query}
+                if reject:
+                    entry["reject"] = sorted(set(reject))
                 guides_html = apply_photo(slug, entry, guides_html)
                 fetched += 1
+            elif has_photo:
+                entry = {k: v for k, v in entry.items() if k != "retry"}  # keep the current photo
+                guides_html = apply_photo(slug, entry, guides_html)
             else:
                 entry = {"none": True, "query": query}
+                if reject:
+                    entry["reject"] = sorted(set(reject))
         except Exception as e:  # network trouble: try again next run
             print(f"guide_photos: {slug}: {e}")
             continue
