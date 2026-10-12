@@ -80,6 +80,15 @@ def title_from_html(p):
     t=html.unescape(re.sub(r'\s+',' ',m.group(1))).strip() if m else p.stem.replace('-',' ').title()
     return re.sub(r'\s*\|\s*Korea Plainly\s*$','',t)
 
+def thumb_for(p):
+    """Cover photo of an article (falls back to og:image, then the site default)."""
+    s=p.read_text(encoding='utf-8',errors='ignore')
+    m=re.search(r'<img[^>]+class="cover"[^>]+src="([^"]+)"',s) or re.search(r'<img[^>]+src="([^"]+)"[^>]+class="cover"',s)
+    if not m:
+        m=re.search(r'property="og:image"\s+content="https://korea-plainly\.com/([^"]+)"',s)
+    src=m.group(1) if m else 'og-default.jpg'
+    return src if (ROOT/src).exists() else 'og-default.jpg'
+
 def style_version(s):
     s=re.sub(r'href=["\']style\.css(?:\?[^"\']*)?["\']', f'href="style.css?v={CSS_VERSION}"', s)
     return s
@@ -95,12 +104,12 @@ def make_hub(filename, heading, intro, cards, back_href, back_label, prefix=None
     else:
         cat_links=''.join(f'<a href="{slug}.html">{n}</a>' for slug,n in CATEGORIES)
     cards_html=''.join(
-        f'<a class="hub-card" href="{p.name}"><span>{html.escape((heading.split(" in ")[0]).upper())}</span><h3>{html.escape(title_from_html(p))}</h3><b>Read guide &rarr;</b></a>'
+        f'<a class="hub-card" href="{p.name}"><img class="hub-thumb" src="{html.escape(thumb_for(p))}" alt="" loading="lazy"><span>{html.escape((heading.split(" in ")[0]).upper())}</span><h3>{html.escape(title_from_html(p))}</h3><b>Read guide &rarr;</b></a>'
         for p in cards
     )
     if not cards_html: cards_html='<div class="empty">New guides are coming soon.</div>'
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{html.escape(intro)}"><link rel="canonical" href="https://korea-plainly.com/{filename}"><title>{html.escape(heading)} | Korea Plainly</title><link rel="stylesheet" href="style.css?v={CSS_VERSION}"><style>
-.hub-hero{{padding:42px 0 44px;border-bottom:1px solid #ddd8ce}}.hub-hero h1{{font-size:clamp(42px,7vw,78px);margin:8px 0 18px}}.hub-hero p{{max-width:680px;font-size:18px;line-height:1.7}}.hub-cats{{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}}.hub-cats a{{padding:10px 15px;border:1px solid #d8d1c5;border-radius:999px;text-decoration:none}}.hub-grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:30px 0 80px}}.hub-card{{display:block;padding:24px;border:1px solid #ddd8ce;text-decoration:none;color:inherit;min-height:170px}}.hub-card span{{font-size:12px;letter-spacing:.12em}}.hub-card h3{{font-size:22px;line-height:1.3}}.hub-card b{{font-size:13px}}.empty{{padding:40px;border:1px dashed #ccc}}.hub-back{{display:inline-block;margin-bottom:28px;font-size:13px;color:#666;text-decoration:none}}@media(max-width:800px){{.hub-grid{{grid-template-columns:1fr}}}}
+.hub-hero{{padding:42px 0 44px;border-bottom:1px solid #ddd8ce}}.hub-hero h1{{font-size:clamp(42px,7vw,78px);margin:8px 0 18px}}.hub-hero p{{max-width:680px;font-size:18px;line-height:1.7}}.hub-cats{{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}}.hub-cats a{{padding:10px 15px;border:1px solid #d8d1c5;border-radius:999px;text-decoration:none}}.hub-grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:30px 0 80px}}.hub-card{{display:block;padding:0 0 22px;border:1px solid #ddd8ce;background:#fff;text-decoration:none;color:inherit;overflow:hidden}}.hub-card>*:not(img){{margin-left:22px;margin-right:22px}}.hub-thumb{{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;margin-bottom:18px}}.hub-card span{{display:block}}.hub-card span{{font-size:12px;letter-spacing:.12em}}.hub-card h3{{font-size:22px;line-height:1.3}}.hub-card b{{font-size:13px}}.empty{{padding:40px;border:1px dashed #ccc}}.hub-back{{display:inline-block;margin-bottom:28px;font-size:13px;color:#666;text-decoration:none}}@media(max-width:800px){{.hub-grid{{grid-template-columns:1fr}}}}
 </style></head><body><header><div class="nav wrap"><a class="brand" href="index.html"><span class="taegeuk"></span><span>Korea <b>Plainly</b></span></a>{nav_html()}<a class="top-link" href="guides.html">Latest <span>↗</span></a><button class="menu" aria-label="menu">☰</button></div></header><main><section class="hub-hero"><div class="wrap"><a class="hub-back" href="{back_href}">{back_label}</a><p class="kicker"><i></i> KOREA PLAINLY</p><h1>{html.escape(heading)}</h1><p>{html.escape(intro)}</p><div class="hub-cats">{cat_links}</div></div></section><section class="wrap section"><div class="hub-grid">{cards_html}</div></section></main><footer><div class="wrap foot"><div><a class="brand" href="index.html"><span class="taegeuk"></span><span>Korea <b>Plainly</b></span></a><p>Korea, Made Easy for Everyone.</p></div><div class="foot-links"><a href="guides.html">Guides</a><a href="regions.html">Regions</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div></div></footer><script>document.querySelector('.menu').addEventListener('click',()=>document.querySelector('nav').classList.toggle('show'));</script>{NAV_JS}</body></html>'''
 
 # 1. Build every region-category page and every nationwide category hub.

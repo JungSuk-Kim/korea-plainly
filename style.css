@@ -31,6 +31,8 @@ footer{background:#121419;color:#fff}.foot{padding:55px 0;display:flex;justify-c
 .story-art.photo-street{background:url("street.jpg") center/cover no-repeat}
 .story-art.photo-food{background:url("food.jpg") center/cover no-repeat}
 .story-art.photo-store{background:url("store.jpg") center/cover no-repeat}
+.story-art.photo-seoul{background:url("thumb-seoul-subway.jpg") center/cover no-repeat}
+main>.related-guides{width:min(1180px,calc(100% - 44px));margin:0 auto 70px;padding-top:30px;border-top:1px solid var(--line)}main>.related-guides h2{font-size:22px}main>.related-guides li{margin:6px 0}
 .photo-street:after,.photo-food:after,.photo-store:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04),rgba(0,0,0,.30))}
 .photo-street>span,.photo-street>b{position:absolute;z-index:2;color:#fff;top:18px;font-size:9px;letter-spacing:.18em}.photo-street>span{left:20px}.photo-street>b{right:18px}
 .photo-badge{position:absolute;z-index:2;left:18px;bottom:18px;background:rgba(255,253,248,.95);padding:8px 10px;font-size:8px;letter-spacing:.15em;font-weight:700}

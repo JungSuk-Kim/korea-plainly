@@ -57,7 +57,9 @@ for page in pages:
 </section>
 '''
 
-    if "</article>" in html:
+    # Only article pages (one <article>) get the block inside the article;
+    # hub pages full of <article> cards get it at the end of <main>.
+    if html.count("</article>") == 1:
         html = html.replace("</article>", block + "\n</article>", 1)
     elif "</main>" in html:
         html = html.replace("</main>", block + "\n</main>", 1)
