@@ -112,7 +112,8 @@
   "gyeongju-stay-hilton-gyeongju": {
     "source_type": "wikimedia",
     "credit": "Photo: The White House, Public domain, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:2025_Special_dinner_in_his_honor_of_President_Donald_Trump_and_State_Leaders_hosted_by_President_Lee_Jae_Myung_of_the_Republic_of_Korea_on_October_29_at_the_Hilton_Hotel_in_Gyeongju,_South_Korea.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:2025_Special_dinner_in_his_honor_of_President_Donald_Trump_and_State_Leaders_hosted_by_President_Lee_Jae_Myung_of_the_Republic_of_Korea_on_October_29_at_the_Hilton_Hotel_in_Gyeongju,_South_Korea.jpg",
+    "retry": true
   },
   "gyeongju-travel-woljeonggyo-bridge": {
     "source_type": "wikimedia",
@@ -147,7 +148,8 @@
   "jeju-shopping-jeju-traditional-five-day-market": {
     "source_type": "wikimedia",
     "credit": "Photo: Grapesurgeon, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Jeju_City_Traditional_Five-Day_Market_01.jpg"
+    "source": "https://commons.wikimedia.org/wiki/File:Jeju_City_Traditional_Five-Day_Market_01.jpg",
+    "retry": true
   },
   "jeju-stay-maison-glad-jeju": {
     "source_type": "wikimedia",
