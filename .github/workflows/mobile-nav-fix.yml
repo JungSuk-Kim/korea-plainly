@@ -46,6 +46,8 @@ jobs:
       - name: Run site repair
         run: python scripts/site_integrity_fix.py
 
+      - name: SEO basics
+        run: python scripts/seo_basics.py
       - name: Refresh sitemap
         run: python scripts/update_sitemap.py
 

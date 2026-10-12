@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests openai
+          pip install requests openai pillow
       - name: Publish one regional day
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -34,6 +34,10 @@ jobs:
         run: python scripts/generate_region_pages.py
       - name: Fix navigation and regional category pages
         run: python scripts/fix_navigation_and_regions.py
+      - name: Optimize images
+        run: python scripts/optimize_images.py
+      - name: SEO basics
+        run: python scripts/seo_basics.py
       - name: Update sitemap
         run: python scripts/update_sitemap.py
       - name: Commit

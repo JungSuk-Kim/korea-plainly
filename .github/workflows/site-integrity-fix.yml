@@ -21,6 +21,8 @@ jobs:
           python-version: "3.12"
       - name: Repair site
         run: python scripts/site_integrity_fix.py
+      - name: SEO basics
+        run: python scripts/seo_basics.py
       - name: Update sitemap
         run: python scripts/update_sitemap.py
       - name: Audit repaired site
