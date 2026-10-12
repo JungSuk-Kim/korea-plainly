@@ -57,6 +57,12 @@ NAV_JS=r"""<script id="kp-nav-js">
 </script>"""
 
 def nav_html():
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from kp_nav import nav_inner
+    return nav_inner()
+
+def _old_nav_html():
     def drop(label, parent_href, links):
         items="".join(f'<a href="{href}">{text}</a>' for text,href in links)
         return f'<div class="nav-drop"><a class="nav-parent" href="{parent_href}">{label}<span class="nav-chevron">⌄</span></a><div class="nav-menu">{items}</div></div>'

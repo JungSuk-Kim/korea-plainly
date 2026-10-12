@@ -10,8 +10,10 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SKIP = {"404.html", "guides.html"}
+SKIP = {"404.html"}
 STD_MARK = 'class="nav wrap"'
+ADSENSE = ('<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7379462117232471" '
+           'crossorigin="anonymous"></script>')
 
 
 def read(p):
@@ -35,6 +37,9 @@ def reference_parts():
 
 def fix(s, parts):
     nl = "\r\n" if "\r\n" in s else "\n"
+
+    if "adsbygoogle.js" not in s:  # Google AdSense, same publisher ID as ads.txt
+        s = re.sub(r"</head>", lambda m: ADSENSE + nl + m.group(0), s, count=1, flags=re.I)
 
     if not re.search(r'<link[^>]+href="style\.css', s, re.I):
         s = re.sub(r"<title>", lambda m: parts["css"] + nl + m.group(0), s, count=1, flags=re.I)

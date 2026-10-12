@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="style.css?v=20261009-7">
+<title>Search | Korea Plainly</title>
+<meta name="description" content="Search Korea Plainly's practical guides to travelling in Korea.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://korea-plainly.com/search.html">
+<style>
+.search-page{padding:60px 0 90px}
+.search-page h1{font-size:clamp(40px,7vw,70px);line-height:1.02;margin:0 0 22px}
+.search-box{display:flex;gap:10px;max-width:720px}
+.search-box input{flex:1;font:inherit;font-size:18px;padding:14px 16px;border:1px solid #c9c3b8;background:#fff;color:#17233b}
+.search-box input:focus{outline:2px solid #17233b;outline-offset:1px}
+.search-count{color:#62635f;font-size:14px;margin:18px 0 6px}
+.search-results{list-style:none;padding:0;margin:0;max-width:820px}
+.search-results li{border-bottom:1px solid #ddd8ce;padding:18px 0}
+.search-results a{font-size:21px;font-weight:700;color:#17233b;text-decoration:none}
+.search-results a:hover{text-decoration:underline}
+.search-results small{display:block;letter-spacing:.1em;text-transform:uppercase;font-size:11px;color:#b73535;margin-bottom:5px}
+.search-results p{margin:6px 0 0;color:#4f5157;line-height:1.6}
+.search-hints a{margin-right:12px;color:#b73535}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7379462117232471" crossorigin="anonymous"></script>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Search | Korea Plainly">
+<meta property="og:description" content="Search Korea Plainly">
+<meta property="og:url" content="https://korea-plainly.com/search.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://korea-plainly.com/og-default.jpg">
+<meta property="og:site_name" content="Korea Plainly">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Search | Korea Plainly">
+<meta name="twitter:description" content="Search Korea Plainly">
+<meta name="twitter:image" content="https://korea-plainly.com/og-default.jpg">
+</head>
+<body>
+<header>
+<div class="nav wrap">
+<a class="brand" href="index.html"><span class="taegeuk"></span><span>Korea <b>Plainly</b></span></a>
+<nav>
+<a href="index.html">Home</a>
+<div class="nav-drop"><a class="nav-parent" href="guides.html">Guides<span class="nav-chevron">⌄</span></a><div class="nav-menu"><a href="guides.html">All guides</a><a href="guides.html?category=travel">Travel Basics</a><a href="guides.html?category=transport">Transport</a><a href="guides.html?category=money">Money</a><a href="guides.html?category=apps">Apps &amp; Tips</a><a href="guides.html?category=food">Food &amp; Dining</a><a href="guides.html?category=daily">Daily Life</a><a href="guides.html?category=language">Language</a><a href="guides.html?category=culture">Culture</a></div></div>
+<div class="nav-drop"><a class="nav-parent" href="regions.html">Regions<span class="nav-chevron">⌄</span></a><div class="nav-menu"><a href="seoul.html">Seoul</a><a href="busan.html">Busan</a><a href="jeju.html">Jeju</a><a href="gyeongju.html">Gyeongju</a><a href="jeonju.html">Jeonju</a><a href="gangneung.html">Gangneung</a><a href="incheon.html">Incheon</a><a href="sokcho.html">Sokcho</a><a href="yeosu.html">Yeosu</a><a href="daegu.html">Daegu</a><a href="daejeon.html">Daejeon</a><a href="gwangju.html">Gwangju</a><a href="regions.html">All regions</a></div></div>
+<a href="about.html">About</a>
+<a href="search.html" class="nav-search" aria-label="Search">Search</a>
+</nav>
+<a class="top-link" href="guides.html">Latest <span>↗</span></a>
+<button class="menu" aria-label="menu">☰</button>
+</div>
+</header>
+<main class="wrap search-page">
+<p class="kicker"><i></i> SEARCH</p>
+<h1>Find a guide.</h1>
+<form class="search-box" role="search" onsubmit="return false">
+<input id="q" type="search" placeholder="Try: T-money, eSIM, Busan, bathhouse" aria-label="Search guides" autocomplete="off">
+</form>
+<p class="search-count" id="count"></p>
+<ul class="search-results" id="results"></ul>
+<p class="search-hints" id="hints">Popular: <a href="?q=transit">transit card</a><a href="?q=esim">eSIM</a><a href="?q=cash">cash</a><a href="?q=busan">Busan</a><a href="?q=food">food</a></p>
+
+<section class="related-guides">
+<h2>Related guides</h2>
+<ul>
+<li><a href="korean-street-food-guide.html">A Beginner’s Guide to Korean Street Food</a></li>
+<li><a href="gyeongju-culture-bulguksa.html">Bulguksa Temple: A Guide to Gyeongju’s Great Silla-Era Sanctuary</a></li>
+<li><a href="seoul-local-guide-gyeongbokgung-palace.html">Gyeongbokgung Palace: A First-Time Visitor’s Guide to Seoul’s Grand Royal Landmark</a></li>
+</ul>
+</section>
+
+</main>
+<script>
+(function(){
+  var input=document.getElementById('q'), list=document.getElementById('results'), count=document.getElementById('count');
+  var data=[];
+  function norm(s){return (s||'').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9가-힣]+/g,' ').trim();}
+  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+  function run(){
+    var q=norm(input.value), words=q?q.split(' '):[];
+    list.innerHTML='';
+    if(!words.length){count.textContent='';return;}
+    var hits=data.map(function(it){
+      var t=norm(it.t), all=t+' '+norm(it.d)+' '+norm(it.k)+' '+norm(it.u);
+      var score=0;
+      for(var i=0;i<words.length;i++){
+        var w=words[i];
+        if(all.indexOf(w)<0) return null;
+        score+=(t.indexOf(w)>=0?3:1);
+      }
+      return {it:it,score:score};
+    }).filter(Boolean).sort(function(a,b){return b.score-a.score;}).slice(0,40);
+    count.textContent=hits.length?(hits.length+(hits.length===1?' result':' results')):'No results. Try a shorter word.';
+    list.innerHTML=hits.map(function(h){
+      var it=h.it;
+      return '<li>'+(it.k?'<small>'+esc(it.k)+'</small>':'')+'<a href="'+encodeURI(it.u)+'">'+esc(it.t)+'</a>'+(it.d?'<p>'+esc(it.d)+'</p>':'')+'</li>';
+    }).join('');
+  }
+  var params=new URLSearchParams(location.search);
+  input.value=params.get('q')||'';
+  fetch('search-index.json').then(function(r){return r.json();}).then(function(d){data=d;run();}).catch(function(){count.textContent='Search is unavailable right now.';});
+  input.addEventListener('input',function(){
+    var u=new URL(location.href);
+    if(input.value)u.searchParams.set('q',input.value);else u.searchParams.delete('q');
+    history.replaceState(null,'',u);
+    run();
+  });
+  input.focus();
+})();
+</script>
+<footer>
+<div class="wrap foot">
+<div><a class="brand" href="index.html"><span class="taegeuk"></span><span>Korea <b>Plainly</b></span></a><p>Korea, Made Easy for Everyone.</p></div>
+<div class="foot-links"><a href="guides.html">Guides</a><a href="regions.html">Regions</a><a href="seoul.html">Seoul</a><a href="busan.html">Busan</a><a href="jeju.html">Jeju</a><a href="privacy.html">Privacy</a></div>
+</div>
+<div class="wrap copyright">© 2026 Korea Plainly <span>Made for curious people.</span></div>
+</footer>
+<script>document.querySelector('.menu').addEventListener('click',()=>document.querySelector('nav').classList.toggle('show'));</script>
+<script id="kp-nav-js">
+(function(){
+  const drops=[...document.querySelectorAll('.nav-drop')];
+  const mobile=()=>window.matchMedia('(max-width:650px)').matches;
+  drops.forEach(drop=>{
+    drop.addEventListener('mouseenter',()=>{if(!mobile())drop.classList.add('open')});
+    drop.addEventListener('mouseleave',()=>{if(!mobile())drop.classList.remove('open')});
+    const parent=drop.querySelector('.nav-parent');
+    if(parent) parent.addEventListener('click',function(e){
+      if(mobile() && !drop.classList.contains('open')){
+        e.preventDefault(); drops.forEach(d=>d.classList.remove('open')); drop.classList.add('open');
+      }
+    });
+  });
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('.nav-drop')) drops.forEach(d=>d.classList.remove('open'));
+  });
+})();
+</script>
+</body>
+</html>
