@@ -36,18 +36,19 @@ Two workflows, both in `.github/workflows/`:
 
 | Step | What it does |
 | --- | --- |
+| `lazy_cards.py` | Guide cards on guides.html: real `<img loading="lazy">` thumbnails and a category on every card |
 | `regional_photos.py` | Regional articles: credited cover photo (Wikimedia Commons first, else the place's Google Maps photo) and a Naver Map link; choices in `content/regional_photos.json` |
 | `generate_region_pages.py`, `fix_navigation_and_regions.py`, `build_category_region_hubs.py` | Rebuild region and category hubs from `content/published.json` |
 | `add_internal_links.py` | Adds "Related guides" blocks |
 | `site_chrome.py` | Same header, stylesheet, footer, mobile menu, AdSense and Google Analytics (G-F508WWT8G9) on every page (copied from `guides.html`) |
 | `site_integrity_fix.py` | Main menu (defined once in `scripts/kp_nav.py`), its CSS, canonical tags |
 | `guide_photos.py` | Credited Wikimedia Commons photo for each guide that still has a text-card thumbnail (see below) |
-| `article_enhance.py` | "Published" date and Article structured data on every article (dates in `content/page_dates.json`) |
+| `article_enhance.py` | "Published" date, Article and breadcrumb structured data on every article (dates in `content/page_dates.json`) |
 | `home_latest.py` | Home page "Latest guides": the two newest guides and two newest regional articles |
 | `optimize_images.py` | Shrinks large photos once (tagged so they are never recompressed) |
 | `seo_basics.py` | Favicon, og tags, `noindex` on thin hubs (removed automatically once a hub has 3+ guides) |
 | `build_search_index.py` | `search-index.json` used by `search.html` |
-| `update_sitemap.py` | Sitemap without `noindex` pages or the Google verification file |
+| `update_sitemap.py` | Sitemap (with publish dates) without `noindex` pages or the Google verification file |
 | `site_audit.py` | Fails the run on broken links or missing basics |
 
 The bots commit straight to `main`. **Always run `git pull` before editing locally.**

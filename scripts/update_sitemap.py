@@ -14,7 +14,11 @@ def skip(path):
 
 
 html_files = [p for p in sorted(Path(".").glob("*.html")) if not skip(p)]
-urls = [f"  <url><loc>{base}/{p.name}</loc></url>" for p in html_files]
+import json
+dates_path = Path("content/page_dates.json")
+dates = json.loads(dates_path.read_text(encoding="utf-8")) if dates_path.exists() else {}
+urls = [f"  <url><loc>{base}/{p.name}</loc>" + (f"<lastmod>{dates[p.name]}</lastmod>" if p.name in dates else "") + "</url>"
+        for p in html_files]
 
 xml = (
     '<?xml version="1.0" encoding="UTF-8"?>\n'

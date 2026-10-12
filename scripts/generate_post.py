@@ -595,9 +595,12 @@ if f'href="{filename}"' not in guides:
         )
     ) + 1
 
+    guide_category = {"daily korea": "daily", "daily life": "daily", "food": "food", "money": "money",
+                      "transport": "transport", "travel": "travel", "culture": "culture",
+                      "language": "language", "apps": "apps", "apps & tips": "apps"}.get(topic["category"].lower(), "travel")
     card = f"""<a
 class="guide-card"
-href="{filename}"
+href="{filename}" data-guide-category="{guide_category}"
 >
 
 <div

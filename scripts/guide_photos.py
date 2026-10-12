@@ -80,9 +80,11 @@ def clean(text):
 
 
 def guide_cards(guides_html):
+    # cards come as <div class="guide-image" style="background-image:url('X')"> from the
+    # publishing bot, and as <div class="guide-image" data-thumb="X"> after lazy_cards.py
     pattern = (r'<a\s+class="guide-card"\s+href="([^"]+)\.html"[^>]*>\s*'
-               r'<div\s+class="guide-image"\s+style="background-image:url\(\'([^\']+)\'\)"')
-    return re.findall(pattern, guides_html)
+               r'<div\s+class="guide-image"\s+(?:style="background-image:url\(\'([^\']+)\'\)"|data-thumb="([^"]+)")')
+    return [(slug, a or b) for slug, a, b in re.findall(pattern, guides_html)]
 
 
 def default_query(title):
@@ -157,9 +159,11 @@ def set_share_image(s, image):
 
 def apply_photo(slug, entry, guides_html):
     photo = entry["file"]
-    old_thumb = re.search(r'href="' + re.escape(slug) + r'\.html"[^>]*>\s*<div\s+class="guide-image"\s+style="background-image:url\(\'([^\']+)\'\)"', guides_html)
-    if old_thumb and old_thumb.group(1) != photo:
-        guides_html = guides_html.replace(old_thumb.group(0), old_thumb.group(0).replace(old_thumb.group(1), photo))
+    card = re.search(r'<a\s+class="guide-card"\s+href="' + re.escape(slug) + r'\.html"[^>]*>.*?</a>', guides_html, re.S)
+    if card:
+        thumb = re.search(r'(?:background-image:url\(\'|data-thumb=")([^\'"]+)', card.group(0))
+        if thumb and thumb.group(1) != photo:
+            guides_html = guides_html.replace(card.group(0), card.group(0).replace(thumb.group(1), photo))
 
     page = ROOT / f"{slug}.html"
     s = read(page)

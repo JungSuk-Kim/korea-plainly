@@ -94,8 +94,28 @@ def add_jsonld(s, name, published, nl):
     return re.sub(r"</head>", lambda m: block + nl + m.group(0), s, count=1, flags=re.I)
 
 
+def add_breadcrumbs(s, name, region, nl):
+    """BreadcrumbList: Home > Guides (or the region hub) > article. Rebuilt every run."""
+    s = re.sub(r'<script type="application/ld\+json" id="kp-breadcrumb-ld">.*?</script>\r?\n?', "", s, flags=re.S)
+    h1 = re.search(r"<h1[^>]*>(.*?)</h1>", s, re.S | re.I)
+    title = text_of(h1.group(1)) if h1 else name
+    if region and (ROOT / f"{region.lower()}.html").exists():
+        middle = (region, f"{BASE}/{region.lower()}.html")
+    else:
+        middle = ("Guides", f"{BASE}/guides.html")
+    items = [("Home", f"{BASE}/"), middle, (title, f"{BASE}/{name}")]
+    data = {"@context": "https://schema.org", "@type": "BreadcrumbList",
+            "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u}
+                                for i, (n, u) in enumerate(items)]}
+    block = ('<script type="application/ld+json" id="kp-breadcrumb-ld">'
+             + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + "</script>")
+    return re.sub(r"</head>", lambda m: block + nl + m.group(0), s, count=1, flags=re.I)
+
+
 def main():
     files, stamps = article_files()
+    published_list = json.loads(read(PUBLISHED_PATH)) if PUBLISHED_PATH.exists() else []
+    region_of = {x["slug"] + ".html": x.get("region", "") for x in published_list if isinstance(x, dict) and x.get("slug") and x.get("place_name")}
     dates = json.loads(read(DATES_PATH)) if DATES_PATH.exists() else {}
     today = date.today().isoformat()
     changed = 0
@@ -105,7 +125,7 @@ def main():
         p = ROOT / name
         s = read(p)
         nl = "\r\n" if "\r\n" in s else "\n"
-        new = add_jsonld(add_date(s, published, nl), name, published, nl)
+        new = add_breadcrumbs(add_jsonld(add_date(s, published, nl), name, published, nl), name, region_of.get(name, ""), nl)
         if new != s:
             write(p, new)
             changed += 1
