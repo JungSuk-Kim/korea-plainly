@@ -17,6 +17,12 @@ html_files = [p for p in sorted(Path(".").glob("*.html")) if not skip(p)]
 import json
 dates_path = Path("content/page_dates.json")
 dates = json.loads(dates_path.read_text(encoding="utf-8")) if dates_path.exists() else {}
+# an article whose text changed is listed with its update date (content/page_updates.json)
+updates_path = Path("content/page_updates.json")
+if updates_path.exists():
+    for _name, _u in json.loads(updates_path.read_text(encoding="utf-8")).items():
+        if _u.get("updated") and _u["updated"] > dates.get(_name, ""):
+            dates[_name] = _u["updated"]
 urls = [f"  <url><loc>{base}/{p.name}</loc>" + (f"<lastmod>{dates[p.name]}</lastmod>" if p.name in dates else "") + "</url>"
         for p in html_files]
 

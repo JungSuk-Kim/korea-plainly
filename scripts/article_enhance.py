@@ -13,6 +13,7 @@ Publish dates live in content/page_dates.json. A new article gets the
 published_at value from published.json, or today's date, the first time this
 script sees it.
 """
+import hashlib
 import html
 import json
 import re
@@ -25,6 +26,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kp_nav import crumb_trail  # noqa: E402
 BASE = "https://korea-plainly.com"
 DATES_PATH = ROOT / "content" / "page_dates.json"
+UPDATES_PATH = ROOT / "content" / "page_updates.json"  # {page: {"hash": text fingerprint, "updated": date}}
 PUBLISHED_PATH = ROOT / "content" / "published.json"
 
 
@@ -54,15 +56,30 @@ def nice(d):
     return f"{dt.day} {dt:%B %Y}"
 
 
-def add_date(s, published, nl):
-    if 'data-kp="date"' in s:
-        return s
-    line = (f'<p class="kp-date" data-kp="date">Published '
-            f'<time datetime="{published}">{nice(published)}</time></p>')
+def add_date(s, published, nl, updated=None):
+    """Byline with the publish date (and the update date once the text has changed). Rebuilt every run."""
+    line = (f'<p class="kp-date" data-kp="date">By <a href="about.html#how-we-work">Korea Plainly</a> · Published '
+            f'<time datetime="{published}">{nice(published)}</time>')
+    if updated and updated > published:
+        line += f' · Updated <time datetime="{updated}">{nice(updated)}</time>'
+    line += "</p>"
     if ".kp-date{" not in s:
         style = '<style>.kp-date{font-size:13px;color:#62635f;margin:-6px 0 22px}</style>'
         s = re.sub(r"</head>", lambda m: style + nl + m.group(0), s, count=1, flags=re.I)
+    if 'data-kp="date"' in s:
+        return re.sub(r'<p class="kp-date" data-kp="date">.*?</p>', lambda m: line, s, count=1, flags=re.S)
     return re.sub(r"</h1>", lambda m: m.group(0) + nl + line, s, count=1, flags=re.I)
+
+
+def content_hash(s):
+    """Fingerprint of the article's own text, ignoring parts other steps generate."""
+    m = re.search(r"<main\b.*?</main>", s, re.S) or re.search(r"<article\b.*?</article>", s, re.S)
+    body = m.group(0) if m else s
+    body = re.sub(r'<(section|nav|script|style)\b[^>]*class="(?:related-guides|kp-visit|kp-toc|kp-crumbs|useful-links)".*?</\1>', " ", body, flags=re.S)
+    body = re.sub(r"<script\b.*?</script>|<style\b.*?</style>|<nav\b.*?</nav>", " ", body, flags=re.S)
+    body = re.sub(r'<p class="(?:kp-date|photo-credit|kp-kicker)"[^>]*>.*?</p>', " ", body, flags=re.S)
+    text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", body))).strip()
+    return hashlib.md5(text.encode()).hexdigest()[:12]
 
 
 def text_of(fragment):
@@ -74,7 +91,7 @@ def meta(s, pattern):
     return html.unescape(m.group(1)).strip() if m else None
 
 
-def add_jsonld(s, name, published, nl):
+def add_jsonld(s, name, published, nl, updated=None):
     # Rebuilt on every run so it follows title or image changes.
     s = re.sub(r'<script type="application/ld\+json" id="kp-article-ld">.*?</script>\r?\n?', "", s, flags=re.S)
     h1 = re.search(r"<h1[^>]*>(.*?)</h1>", s, re.S | re.I)
@@ -87,7 +104,7 @@ def add_jsonld(s, name, published, nl):
         "description": meta(s, r'<meta[^>]+name=["\']description["\'][^>]*content=["\'](.*?)["\']') or "",
         "image": [meta(s, r'<meta[^>]+property=["\']og:image["\'][^>]*content=["\'](.*?)["\']') or f"{BASE}/og-default.jpg"],
         "datePublished": published,
-        "dateModified": published,
+        "dateModified": updated if updated and updated > published else published,
         "author": {"@type": "Organization", "name": "Korea Plainly", "url": BASE + "/"},
         "publisher": {"@type": "Organization", "name": "Korea Plainly", "url": BASE + "/"},
         "mainEntityOfPage": url,
@@ -125,6 +142,7 @@ def main():
     places = {x["slug"] + ".html": x for x in published_list if isinstance(x, dict) and x.get("slug") and x.get("place_name")}
     guide_cats = dict(re.findall(r'<a\s+class="guide-card"\s+href="([^"]+)"\s+data-guide-category="([^"]+)"', read(ROOT / "guides.html")))
     dates = json.loads(read(DATES_PATH)) if DATES_PATH.exists() else {}
+    updates = json.loads(read(UPDATES_PATH)) if UPDATES_PATH.exists() else {}
     today = date.today().isoformat()
     changed = 0
     for name in files:
@@ -136,12 +154,21 @@ def main():
         pl = places.get(name)
         trail = (crumb_trail(region=pl.get("region"), category=pl.get("category")) if pl
                  else crumb_trail(guide_category=guide_cats.get(name)))
-        new = add_breadcrumbs(add_jsonld(add_date(s, published, nl), name, published, nl), name, trail, nl)
+        h = content_hash(s)
+        entry = updates.get(name)
+        if entry is None:  # first time seen: remember the text, no update date yet
+            entry = {"hash": h, "updated": (pl or {}).get("rewritten_at", "")[:10] or None}
+        elif entry.get("hash") != h:  # the article's own text changed
+            entry = {"hash": h, "updated": today}
+        updates[name] = entry
+        updated = entry.get("updated")
+        new = add_breadcrumbs(add_jsonld(add_date(s, published, nl, updated), name, published, nl, updated), name, trail, nl)
         new = article_meta(new, published, nl)
         if new != s:
             write(p, new)
             changed += 1
     write(DATES_PATH, json.dumps(dict(sorted(dates.items())), indent=2, ensure_ascii=False) + "\n")
+    write(UPDATES_PATH, json.dumps(dict(sorted(updates.items())), indent=2, ensure_ascii=False) + "\n")
     print(f"article_enhance: {len(files)} articles, updated {changed}")
 
 
