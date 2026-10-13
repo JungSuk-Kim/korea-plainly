@@ -9,6 +9,11 @@ on:
   schedule:
     - cron: "17 23 * * *"
   workflow_dispatch:
+    inputs:
+      guide_only:
+        description: "Only write today's general guide (skips the same-day guard and the regional day)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -29,7 +34,10 @@ jobs:
         id: guard
         run: |
           today=$(TZ=Asia/Seoul date +%F)
-          if git log --since="30 hours ago" --format=%s | grep -q "^Daily publish $today"; then
+          if [ "${{ inputs.guide_only }}" = "true" ]; then
+            echo "Guide only run."
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          elif git log --since="30 hours ago" --format=%s | grep -q "^Daily publish $today"; then
             echo "Already published today ($today)."
             echo "skip=true" >> "$GITHUB_OUTPUT"
           else
@@ -58,7 +66,7 @@ jobs:
 
       - name: Write the regional day
         id: regional
-        if: steps.guard.outputs.skip != 'true'
+        if: steps.guard.outputs.skip != 'true' && inputs.guide_only != true
         continue-on-error: true
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

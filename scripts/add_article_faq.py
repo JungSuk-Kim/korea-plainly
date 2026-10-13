@@ -8,7 +8,12 @@ published=json.loads((ROOT/"content/published.json").read_text(encoding="utf-8")
 if not published:
     raise SystemExit("No published articles.")
 
-filename=published[-1]["filename"]
+guides=[p for p in published if isinstance(p, dict) and p.get("filename")]
+if not guides:
+    print("No general guides yet.")
+    raise SystemExit(0)
+latest=guides[-1]
+filename=latest["filename"]
 path=ROOT/filename
 html=path.read_text(encoding="utf-8")
 
@@ -17,7 +22,7 @@ if 'class="faq"' in html:
     raise SystemExit(0)
 
 title=re.search(r"<h1[^>]*>(.*?)</h1>", html, re.I|re.S)
-title=re.sub(r"<[^>]+>","",title.group(1)).strip() if title else published[-1]["title"]
+title=re.sub(r"<[^>]+>","",title.group(1)).strip() if title else latest["title"]
 
 article=re.search(r"<article[^>]*>(.*?)</article>", html, re.I|re.S)
 body=article.group(1) if article else html
