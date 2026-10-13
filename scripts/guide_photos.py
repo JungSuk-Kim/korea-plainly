@@ -68,8 +68,13 @@ STOP = {"a", "an", "the", "to", "in", "of", "for", "and", "how", "what", "is",
         "korean", "korea", "basics", "explained", "compared", "things", "best",
         "with", "from", "when", "where", "why", "can", "will", "should", "first", "time"}
 # The file title must clearly be about Korea (place names count).
-KOREA_WORDS = re.compile(r"(?i)(korea|seoul|busan|jeju|incheon|daegu|daejeon|gwangju|gyeong|jeonju|gangneung|"
-                         r"hanok|myeong|gangnam|hongdae|insadong|jongno|itaewon|namsan|t-?money|kakao|hangul)")
+# The file title must name Korea or a Korean place. "Korean" alone doesn't count: a
+# "Korean dogwood" in New Jersey or a Korean restaurant abroad is not a photo of Korea.
+KOREA_WORDS = re.compile(r"(?i)(korea(?!n)|seoul|busan|jeju|incheon|daegu|daejeon|gwangju|gyeong|jeonju|gangneung|"
+                         r"hanok|myeong|gangnam|hongdae|insadong|jongno|itaewon|namsan|t-?money|kakao|hangul|"
+                         r"naejang|seorak|bukhan|halla|seongsan|udo\b|suwon|hwaseong|nami island|gapyeong|chuncheon|"
+                         r"yeouido|bulguksa|sokcho|yeosu|andong|tongyeong|haeundae|gwangalli|cheonggye|panmunjom|"
+                         r"\bdmz\b|seogwipo|aewol|odaesan|jirisan|deoksugung|changdeokgung)")
 OLD_PHOTO = re.compile(r"\b(18|19)\d\d\b|\b200[0-4]\b")
 BAD_TITLE = re.compile(r"(?i)\b(map|logo|icon|diagram|chart|flag|seal|emblem|screenshot|signature|symbol|coat of arms|poster)\b")
 GOOD_LICENCE = re.compile(r"(?i)^(cc0|public domain|pd\b|cc by(-sa)? \d)")

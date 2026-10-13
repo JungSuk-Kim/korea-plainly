@@ -51,7 +51,8 @@
     "file": "photo-korea-autumn-foliage-2026.jpg",
     "credit": "Photo: Famartin, CC BY-SA 4.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:2024-11-16_08_48_52_A_Korean_Dogwood_(left)_and_green-leaved_Japanese_Maple_(right)_in_late_autumn_along_Pingree_Avenue_in_Ewing_Township,_Mercer_County,_New_Jersey.jpg",
-    "query": "Naejangsan autumn leaves"
+    "query": "Naejangsan autumn",
+    "retry": true
   },
   "korea-entry-k-eta-e-arrival": {
     "file": "photo-korea-entry-k-eta-e-arrival.jpg",
@@ -86,7 +87,8 @@
   },
   "korea-weather-by-season": {
     "none": true,
-    "query": "Yeouido cherry blossoms Seoul"
+    "query": "Yeouido cherry blossoms",
+    "retry": true
   },
   "korean-atm-guide": {
     "file": "thumb-cash-cards.jpg",
