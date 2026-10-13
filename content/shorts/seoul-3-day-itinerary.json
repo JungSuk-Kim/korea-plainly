@@ -14,7 +14,7 @@
      "voice": "Day two. Eat at Gwangjang Market. Try bindaetteok, a crispy mung bean pancake."},
     {"image": "regional-seoul-shopping-myeongdong-shopping-street.jpg", "kicker": "DAY 2", "title": "Shop in Myeongdong", "sub": "Bring your passport for tax refunds",
      "voice": "Shop in Myeongdong, and bring your passport for tax refunds."},
-    {"photo_query": "N Seoul Tower Namsan", "require": ["seoul tower", "namsan tower"], "reject": ["https://commons.wikimedia.org/wiki/File:Namsan_Tower_sunset,_Seoul.jpg"], "kicker": "DAY 2 · SUNSET", "title": "Namsan and N Seoul Tower", "sub": "The best free view of the city",
+    {"photo_query": "N Seoul Tower", "require": ["n seoul tower", "n_seoul_tower"], "reject": ["https://commons.wikimedia.org/wiki/File:Seoul_Tower_from_Namsan_Park_(9595146693).jpg", "https://commons.wikimedia.org/wiki/File:Namsan_Tower_sunset,_Seoul.jpg"], "kicker": "DAY 2 · SUNSET", "title": "Namsan and N Seoul Tower", "sub": "The best free view of the city",
      "voice": "Then watch the sunset from Namsan."},
     {"photo_query": "Huwon Changdeokgung Secret Garden", "require": ["huwon", "secret garden", "changdeokgung"], "kicker": "DAY 3", "title": "Choose your own Seoul", "sub": "Secret Garden, Han River or a jjimjilbang",
      "voice": "Day three is yours. The Secret Garden at Changdeokgung, a Han River park, or a Korean bathhouse."},
