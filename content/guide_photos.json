@@ -105,8 +105,8 @@
     "query": "recycling bins Korea"
   },
   "korea-ski-resorts-guide": {
-    "none": true,
-    "query": "Yongpyong ski resort Korea"
+    "retry": true,
+    "query": "Yongpyong ski slope"
   },
   "korea-tax-refund-guide": {
     "file": "photo-korea-tax-refund-guide.jpg",
