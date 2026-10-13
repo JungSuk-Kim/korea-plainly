@@ -23,11 +23,25 @@
     "source": "https://commons.wikimedia.org/wiki/File:Hwaseong_Fortress,_Suwon,_Gyeonggi-do,_Republic_of_Korea.jpg",
     "query": "Hwaseong Fortress Suwon"
   },
+  "first-evening-seoul": {
+    "file": "thumb-first-evening.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "Cheonggyecheon night Seoul"
+  },
   "gyeongju-1-day-itinerary": {
     "file": "photo-gyeongju-1-day-itinerary.jpg",
     "credit": "Photo: lumoplank, CC0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Donggung_Palace_%26_Wolji_Pond,_Gyeongju_-_Donggung2687.jpg",
     "query": "Donggung Palace Wolji Pond Gyeongju"
+  },
+  "how-to-order-korean-food": {
+    "file": "thumb-order-korean-food.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "restaurant Jongno Seoul"
   },
   "incheon-airport-to-seoul": {
     "file": "photo-incheon-airport-to-seoul.jpg",
@@ -40,6 +54,13 @@
     "credit": "Photo: Asaf Zebulon, CC BY-SA 3.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Jeju_-_Seongsan_Ilchulbong.jpg",
     "query": "Seongsan Ilchulbong Jeju"
+  },
+  "kakao-t-taxi-korea": {
+    "file": "thumb-kakao-t.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "Seoul taxi"
   },
   "kakaotalk-korea-guide": {
     "file": "photo-kakaotalk-korea-guide.jpg",
@@ -61,6 +82,13 @@
     "credit": "Photo: Arne Müseler, CC BY-SA 3.0 de, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Incheon_International_Airport_Terminal_1_Arrival.jpg",
     "query": "Incheon International Airport terminal"
+  },
+  "korea-public-transport-transfers": {
+    "file": "thumb-public-transport.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "Seoul bus stop"
   },
   "korea-recycling-guide": {
     "file": "photo-korea-recycling-guide.jpg",
@@ -87,6 +115,13 @@
       "https://commons.wikimedia.org/wiki/File:3_sly_old_cards!_(BM_1896,0501.1638).jpg"
     ]
   },
+  "korea-travel-mistakes": {
+    "file": "thumb-travel-mistakes.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "Myeongdong street Seoul"
+  },
   "korea-weather-by-season": {
     "file": "photo-korea-weather-by-season.jpg",
     "credit": "Photo: Alexey Komarov, CC BY 3.0, via Wikimedia Commons",
@@ -103,6 +138,20 @@
       "https://commons.wikimedia.org/wiki/File:Mobile_post_office_Korea.JPG"
     ]
   },
+  "korean-bathhouse-guide": {
+    "file": "thumb-bathhouse.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "jjimjilbang Seoul"
+  },
+  "korean-cafe-etiquette": {
+    "file": "thumb-cafe-etiquette.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "cafe Seoul"
+  },
   "korean-cafe-menu-basics": {
     "file": "photo-korean-cafe-menu-basics.jpg",
     "credit": "Photo: H. Y. Shin 000, CC0, via Wikimedia Commons",
@@ -111,6 +160,13 @@
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Bnc_Internet_Cafe_Seoul_South_March_Korea_1994.jpg"
     ]
+  },
+  "korean-convenience-store-meals": {
+    "file": "thumb-convenience-meals.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "convenience store Seoul"
   },
   "korean-convenience-store-tips": {
     "file": "thumb-convenience-store.jpg",
@@ -129,11 +185,32 @@
     "source": "https://commons.wikimedia.org/wiki/File:24_hours_Ramyeon_Ramen_convenience_store_(South_Korea).jpg",
     "query": "convenience store Korea"
   },
+  "korean-dining-etiquette": {
+    "file": "thumb-dining-etiquette.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "banchan Seoul"
+  },
   "korean-food-delivery-guide": {
     "file": "photo-korean-food-delivery-guide.jpg",
     "credit": "Photo: Julie Facine from Istanbul, Turkey, CC BY-SA 2.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:McDelivery_Seoul_2008.jpg",
     "query": "delivery Seoul"
+  },
+  "korean-restaurant-words": {
+    "file": "thumb-restaurant-words.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "restaurant Seoul food"
+  },
+  "korean-street-food-guide": {
+    "file": "thumb-street-food.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "street food Myeongdong Seoul"
   },
   "seoul-3-day-itinerary": {
     "file": "photo-seoul-3-day-itinerary.jpg",
@@ -149,5 +226,26 @@
     "credit": "Photo: STA3816, CC BY-SA 3.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Seoul_City_Bus_152.jpg",
     "query": "Seoul city bus"
+  },
+  "seoul-first-time": {
+    "file": "thumb-seoul-first-time.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "Seoul skyline Namsan"
+  },
+  "seoul-neighborhoods-guide": {
+    "file": "thumb-seoul-neighborhoods.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "Bukchon Hanok Village"
+  },
+  "seoul-subway-for-foreigners": {
+    "file": "thumb-seoul-subway.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "Seoul Metropolitan Subway train"
   }
 }
