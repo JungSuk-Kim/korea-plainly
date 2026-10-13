@@ -17,6 +17,14 @@
     "source": "https://commons.wikimedia.org/wiki/File:Haeundae_Beach_Busan_(45698772572).jpg",
     "query": "Haeundae Beach Busan"
   },
+  "cash-cards-payments-korea": {
+    "file": "thumb-cash-cards.jpg",
+    "credit": "",
+    "source": "",
+    "retry": true,
+    "query": "Namdaemun Market Seoul",
+    "reject": []
+  },
   "christmas-new-year-seoul": {
     "file": "photo-christmas-new-year-seoul.jpg",
     "credit": "Photo: Ken Eckert, CC BY-SA 4.0, via Wikimedia Commons",
@@ -93,11 +101,12 @@
     "file": "photo-korea-public-transport-transfers.jpg",
     "credit": "Photo: Nesnad at en.wikipedia, Public domain, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Wayout-seoul_skorea.jpg",
-    "query": "Seoul subway transfer",
+    "query": "Seoul Metro train platform",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Seoul_City_Bus_152.jpg",
       "https://commons.wikimedia.org/wiki/File:Seoultech_Bungabang_bus_stop.jpg"
-    ]
+    ],
+    "retry": true
   },
   "korea-recycling-guide": {
     "file": "photo-korea-recycling-guide.jpg",
@@ -115,11 +124,12 @@
     "file": "photo-korea-tax-refund-guide.jpg",
     "credit": "Photo: Minseong Kim, CC BY-SA 4.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Shinsegae_Department_Store_Seoul_Signboard.jpg",
-    "query": "department store Seoul",
+    "query": "Lotte Department Store Seoul",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Namdaemun-ro_and_Aloft_Seoul_Myeongdong_by_night.jpg",
       "https://commons.wikimedia.org/wiki/File:Streets_of_Seoul_-_Flickr_-_Sergiy_Galyonkin.jpg"
-    ]
+    ],
+    "retry": true
   },
   "korea-transit-card-guide": {
     "file": "thumb-tmoney.jpg",
@@ -156,7 +166,8 @@
     "file": "thumb-cash-cards.jpg",
     "credit": "",
     "source": "",
-    "query": "ATM Seoul bank",
+    "manual": true,
+    "note": "the illustration of a card going into an ATM fits this guide",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Mobile_post_office_Korea.JPG"
     ]
@@ -177,10 +188,11 @@
     "file": "photo-korean-cafe-menu-basics.jpg",
     "credit": "Photo: H. Y. Shin 000, CC0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Cafe_Seoul_20190324_131853.jpg",
-    "query": "cafe menu Seoul",
+    "query": "cafe Hongdae",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Bnc_Internet_Cafe_Seoul_South_March_Korea_1994.jpg"
-    ]
+    ],
+    "retry": true
   },
   "korean-convenience-store-meals": {
     "file": "thumb-convenience-meals.jpg",

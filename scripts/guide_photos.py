@@ -81,7 +81,7 @@ KOREA_WORDS = re.compile(r"(?i)(korea(?!n)|seoul|busan|jeju|incheon|daegu|daejeo
                          r"\bdmz\b|seogwipo|aewol|odaesan|jirisan|deoksugung|changdeokgung|pyeongchang|yongpyong|high1|jeongseon|"
                          r"hongcheon|vivaldi|alpensia|konjiam|gangwon)")
 OLD_PHOTO = re.compile(r"\b(18|19)\d\d\b|\b200[0-4]\b")
-BAD_TITLE = re.compile(r"(?i)\b(map|logo|icon|diagram|chart|flag|seal|emblem|screenshot|signature|symbol|coat of arms|poster)\b")
+BAD_TITLE = re.compile(r"(?i)\b(map|logo|icon|diagram|chart|flag|seal|emblem|screenshot|signature|symbol|coat of arms|poster|signboard|sign|signage|way ?out|exit|nameplate|plaque)\b")
 GOOD_LICENCE = re.compile(r"(?i)^(cc0|public domain|pd\b|cc by(-sa)? \d)")
 
 
