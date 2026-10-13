@@ -41,6 +41,8 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 # Hand-picked search words for the guides that exist today. New guides fall
 # back to words from their title.
 QUERIES = {
+    "seoul-3-day-itinerary": "Bukchon Hanok Village Seoul",
+    "busan-1-day-itinerary": "Haeundae Beach Busan",
     "korean-convenience-store-tips": "convenience store Seoul",
     "korea-recycling-guide": "recycling bins Korea",
     "korean-atm-guide": "ATM Seoul",
