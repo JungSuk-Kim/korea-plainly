@@ -34,3 +34,26 @@ def nav_inner():
         '<a href="about.html">About</a>',
         '<a href="search.html" class="nav-search" aria-label="Search">Search</a>',
     ])
+
+
+GROUP_OF_CATEGORY = {"travel": "see-do", "culture": "see-do", "leisure": "see-do", "local guide": "see-do",
+                     "local-guide": "see-do", "food": "eat-drink", "cafe": "eat-drink",
+                     "shopping": "shop", "stay": "stay"}
+GROUP_NAMES = {"see-do": "See & Do", "eat-drink": "Eat & Drink", "shop": "Shop", "stay": "Stay"}
+
+
+def crumb_trail(region=None, category=None, guide_category=None):
+    """[(label, href)] between Home and the article: Region › Group, or Guides › Guide category."""
+    if region:
+        slug = region.lower().replace(" ", "-")
+        trail = [(region, f"{slug}.html")] if (ROOT / f"{slug}.html").exists() else [("Regions", "regions.html")]
+        g = GROUP_OF_CATEGORY.get((category or "").lower())
+        hub = ROOT / f"{slug}-{g}.html" if g else None
+        if hub and hub.exists() and "kp-redirect" not in hub.read_text(encoding="utf-8", errors="ignore"):
+            trail.append((GROUP_NAMES[g], hub.name))
+        return trail
+    trail = [("Guides", "guides.html")]
+    label = dict((s, n) for n, s in GUIDE_CATEGORIES).get(guide_category or "")
+    if label:
+        trail.append((label, f"guides.html?category={guide_category}"))
+    return trail

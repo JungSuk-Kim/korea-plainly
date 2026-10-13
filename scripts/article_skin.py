@@ -17,11 +17,15 @@ For each article (cards on guides.html + regional articles in published.json):
 import html
 import json
 import re
+import sys
 from pathlib import Path
 from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent.parent
-CSS_LINK = '<link rel="stylesheet" href="article.css?v=1">'
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from kp_nav import crumb_trail  # noqa: E402
+CSS_VERSION = "2"
+CSS_LINK = f'<link rel="stylesheet" href="article.css?v={CSS_VERSION}">'
 FONTS_LINK = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700'
               '&family=Playfair+Display:ital,wght@0,600;1,600&display=swap">')
 
@@ -32,6 +36,66 @@ def read(p):
 
 def esc(v):
     return html.escape(str(v), quote=True)
+
+
+def guide_categories():
+    g = read(ROOT / "guides.html")
+    return dict(re.findall(r'<a\s+class="guide-card"\s+href="([^"]+)"\s+data-guide-category="([^"]+)"', g))
+
+
+def breadcrumbs(s, trail):
+    """Visible Home › Region › Group (or Home › Guides › Category) path above the headline."""
+    s = re.sub(r'<nav class="kp-crumbs"[^>]*>.*?</nav>\r?\n?', "", s, flags=re.S)
+    links = [("Home", "index.html")] + trail
+    inner = " <span>›</span> ".join(f'<a href="{esc(h)}">{esc(t)}</a>' for t, h in links)
+    crumbs = f'<nav class="kp-crumbs" data-kp="crumbs" aria-label="Breadcrumb">{inner}</nav>'
+    m = re.search(r'(?:<p class="(?:kp-)?kicker"[^>]*>(?:(?!</p>).)*</p>\s*|<div class="eyebrow">(?:(?!</div>).)*</div>\s*)?<h1\b', s, re.S)
+    if not m:
+        return s
+    return s[:m.start()] + crumbs + "\n" + s[m.start():]
+
+
+SKIP_TOC = re.compile(r"(?i)^(useful links|related guides|visiting .*)$")
+
+
+def slugify(text):
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:60] or "section"
+
+
+def toc(s):
+    """'On this page' list before the first section of articles with 4+ sections."""
+    s = re.sub(r'<nav class="kp-toc"[^>]*>.*?</nav>\r?\n?', "", s, flags=re.S)
+    h1 = re.search(r"</h1>", s)
+    if not h1:
+        return s
+    end = len(s)
+    for marker in ('<section class="related-guides"', "<footer"):
+        i = s.find(marker, h1.end())
+        if i != -1:
+            end = min(end, i)
+    blocked = [(m.start(), m.end()) for m in re.finditer(r'<section class="(?:kp-visit|useful-links)"[^>]*>.*?</section>', s, re.S)]
+    heads, used = [], set()
+    for m in re.finditer(r"<h2(\s[^>]*)?>(.*?)</h2>", s[:end], re.S):
+        if m.start() < h1.end() or any(a <= m.start() < b for a, b in blocked):
+            continue
+        text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", m.group(2)))).strip()
+        if not text or SKIP_TOC.match(text):
+            continue
+        idm = re.search(r'\bid="([^"]+)"', m.group(1) or "")
+        hid = idm.group(1) if idm else slugify(text)
+        while not idm and hid in used:
+            hid += "-2"
+        used.add(hid)
+        heads.append((m, hid, text, bool(idm)))
+    if len(heads) < 4:
+        return s
+    items = "".join(f'<li><a href="#{esc(h)}">{esc(t)}</a></li>' for _, h, t, _ in heads)
+    box = f'<nav class="kp-toc" data-kp="toc" aria-label="On this page"><p>On this page</p><ol>{items}</ol></nav>\n'
+    for m, hid, _, has_id in reversed(heads):  # add ids from the end so positions stay valid
+        if not has_id:
+            s = s[:m.start()] + f'<h2 id="{hid}"' + (m.group(1) or "") + ">" + s[m.start() + len("<h2" + (m.group(1) or "") + ">"):]
+    first = re.search(r'<h2 id="' + re.escape(heads[0][1]) + '"', s)
+    return s[:first.start()] + box + s[first.start():]
 
 
 def thumbs_from_guides():
@@ -170,6 +234,7 @@ def main():
     published = [p for p in json.loads(read(ROOT / "content" / "published.json")) if isinstance(p, dict) and p.get("slug")]
     places = {p["slug"] + ".html": p for p in published if p.get("place_name")}
     guide_thumbs = thumbs_from_guides()
+    guide_cats = guide_categories()
     files = set(guide_thumbs) | {p["slug"] + ".html" for p in published}
     changed = 0
     for name in sorted(files):
@@ -188,11 +253,17 @@ def main():
                 new = re.sub(r"<body", '<body class="kp-article"', new, count=1)
         if "article.css" not in new:
             new = re.sub(r"</head>", lambda m: CSS_LINK + nl + m.group(0), new, count=1)
+        new = re.sub(r'href="article\.css\?v=[^"]*"', f'href="article.css?v={CSS_VERSION}"', new)
         if "family=DM+Sans" not in new:
             new = re.sub(r"</head>", lambda m: FONTS_LINK + nl + m.group(0), new, count=1)
         if name in places:
             new = regional_head(new, places[name], nl)
             new = visit_card(new, places[name])
+            trail = crumb_trail(region=places[name].get("region"), category=places[name].get("category"))
+        else:
+            trail = crumb_trail(guide_category=guide_cats.get(name))
+        new = breadcrumbs(new, trail)
+        new = toc(new)
         new = own_cover(new, name, guide_thumbs)
         new = related_cards(new, name, guide_thumbs)
         if new != s:

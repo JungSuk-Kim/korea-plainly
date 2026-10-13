@@ -16,10 +16,13 @@ script sees it.
 import html
 import json
 import re
+import sys
 from datetime import date, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from kp_nav import crumb_trail  # noqa: E402
 BASE = "https://korea-plainly.com"
 DATES_PATH = ROOT / "content" / "page_dates.json"
 PUBLISHED_PATH = ROOT / "content" / "published.json"
@@ -94,16 +97,12 @@ def add_jsonld(s, name, published, nl):
     return re.sub(r"</head>", lambda m: block + nl + m.group(0), s, count=1, flags=re.I)
 
 
-def add_breadcrumbs(s, name, region, nl):
+def add_breadcrumbs(s, name, trail, nl):
     """BreadcrumbList: Home > Guides (or the region hub) > article. Rebuilt every run."""
     s = re.sub(r'<script type="application/ld\+json" id="kp-breadcrumb-ld">.*?</script>\r?\n?', "", s, flags=re.S)
     h1 = re.search(r"<h1[^>]*>(.*?)</h1>", s, re.S | re.I)
     title = text_of(h1.group(1)) if h1 else name
-    if region and (ROOT / f"{region.lower()}.html").exists():
-        middle = (region, f"{BASE}/{region.lower()}.html")
-    else:
-        middle = ("Guides", f"{BASE}/guides.html")
-    items = [("Home", f"{BASE}/"), middle, (title, f"{BASE}/{name}")]
+    items = [("Home", f"{BASE}/")] + [(t, f"{BASE}/{h}") for t, h in trail] + [(title, f"{BASE}/{name}")]
     data = {"@context": "https://schema.org", "@type": "BreadcrumbList",
             "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u}
                                 for i, (n, u) in enumerate(items)]}
@@ -115,7 +114,8 @@ def add_breadcrumbs(s, name, region, nl):
 def main():
     files, stamps = article_files()
     published_list = json.loads(read(PUBLISHED_PATH)) if PUBLISHED_PATH.exists() else []
-    region_of = {x["slug"] + ".html": x.get("region", "") for x in published_list if isinstance(x, dict) and x.get("slug") and x.get("place_name")}
+    places = {x["slug"] + ".html": x for x in published_list if isinstance(x, dict) and x.get("slug") and x.get("place_name")}
+    guide_cats = dict(re.findall(r'<a\s+class="guide-card"\s+href="([^"]+)"\s+data-guide-category="([^"]+)"', read(ROOT / "guides.html")))
     dates = json.loads(read(DATES_PATH)) if DATES_PATH.exists() else {}
     today = date.today().isoformat()
     changed = 0
@@ -125,7 +125,10 @@ def main():
         p = ROOT / name
         s = read(p)
         nl = "\r\n" if "\r\n" in s else "\n"
-        new = add_breadcrumbs(add_jsonld(add_date(s, published, nl), name, published, nl), name, region_of.get(name, ""), nl)
+        pl = places.get(name)
+        trail = (crumb_trail(region=pl.get("region"), category=pl.get("category")) if pl
+                 else crumb_trail(guide_category=guide_cats.get(name)))
+        new = add_breadcrumbs(add_jsonld(add_date(s, published, nl), name, published, nl), name, trail, nl)
         if new != s:
             write(p, new)
             changed += 1
