@@ -139,9 +139,11 @@
   },
   "incheon-leisure-incheon-grand-park": {
     "source_type": "wikimedia",
-    "credit": "Photo: Vitzro2011, CC BY-SA 3.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Incheon_Grand_Park_Station_Namecard.jpg",
-    "retry": true
+    "credit": "Photo: 분당선M, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Q208234780_Incheon_Grand_Park_A01.jpg",
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Incheon_Grand_Park_Station_Namecard.jpg"
+    ]
   },
   "incheon-local-guide-incheon-chinatown": {
     "source_type": "wikimedia",
