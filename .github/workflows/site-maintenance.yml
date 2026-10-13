@@ -24,6 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 30  # IndexNow compares with the commit before the push
 
       - uses: actions/setup-python@v5
         with:
@@ -50,3 +52,7 @@ jobs:
             git pull --rebase
             git push
           fi
+
+      - name: Tell search engines about changed pages (IndexNow)
+        continue-on-error: true
+        run: python scripts/indexnow_ping.py "${{ github.event.before }}"

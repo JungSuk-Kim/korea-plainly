@@ -9,7 +9,7 @@ reply in Korean, keep site content in plain British-leaning English. README.md e
   (Daily Publish at 08:17 KST, Site Maintenance on every push), and both share the concurrency group `site-bot`.
 - Never force-push, never delete articles outright. To retire an article, merge it (see "Merging articles" in README.md):
   `content/redirects.json` + delete the page and its `content/published.json` entry.
-- Do not touch `googlee6ee1fd6d2b284d0.html`, `ads.txt`, `CNAME`, `robots.txt`.
+- Do not touch `googlee6ee1fd6d2b284d0.html`, `ads.txt`, `CNAME`, `robots.txt`, `e2c6381e679c35f682125f233010d0ec.txt` (IndexNow key).
 - Commit as `git -c user.name="JungSuk-Kim" -c user.email="richardjs0718@gmail.com" commit`.
 
 ## Making changes
@@ -35,6 +35,8 @@ reply in Korean, keep site content in plain British-leaning English. README.md e
   Google Places photos credited to their author. Choices live in `content/guide_photos.json` and
   `content/regional_photos.json`; use `"retry": true` (optionally a new `"query"`) to get a different photo. Photo
   searches only run in GitHub Actions (`KP_FETCH_PHOTOS=1`), so push and let Site Maintenance fetch them.
+- Regional articles: a local-guide voice that never narrates sources ("search results", "not confirmed").
+  Fix bad ones with the "Rewrite regional articles" workflow rather than by hand.
 - One article per place. The regional generator skips places already in `content/published.json`.
 
 ## Checking the bots

@@ -30,6 +30,9 @@ Two workflows, both in `.github/workflows/`:
   (`generate_regional_day.py`, one article per category for the next region), then runs
   `scripts/maintain_site.py` and commits everything once. If a writing step fails, the run
   still commits the rest and is marked failed so you notice.
+- **Rewrite regional articles** (`rewrite-regional.yml`, run by hand): rewrites existing regional
+  articles with the current writing rules (`scripts/rewrite_regional.py`); `--flagged` picks the ones that talk
+  about their sources.
 - **Site Maintenance** (`site-maintenance.yml`): runs `scripts/maintain_site.py` whenever you
   push changes to pages, `style.css`, `scripts/` or `content/`, or by hand.
 
@@ -78,3 +81,4 @@ To merge an article into another, copy any useful sections across, delete the ol
 
 - `googlee6ee1fd6d2b284d0.html`: Google Search Console verification
 - `ads.txt`, `CNAME`, `robots.txt`
+- `e2c6381e679c35f682125f233010d0ec.txt`: IndexNow key (proves the site is ours when `scripts/indexnow_ping.py` tells Bing, Naver and others about changed pages after each workflow run)

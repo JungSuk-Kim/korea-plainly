@@ -97,6 +97,11 @@ jobs:
             git push
           fi
 
+      - name: Tell search engines about changed pages (IndexNow)
+        if: steps.guard.outputs.skip != 'true'
+        continue-on-error: true
+        run: python scripts/indexnow_ping.py ""
+
       - name: Report failed writing steps
         if: steps.guide.outcome == 'failure' || steps.regional.outcome == 'failure'
         run: |
