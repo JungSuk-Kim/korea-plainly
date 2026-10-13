@@ -26,7 +26,7 @@ from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from guide_photos import search_commons, download, USER_AGENT  # noqa: E402
+from guide_photos import search_commons, download, sources_in_use, USER_AGENT  # noqa: E402
 
 STATE_PATH = ROOT / "content" / "regional_photos.json"
 FETCH = os.environ.get("KP_FETCH_PHOTOS") == "1"
@@ -104,7 +104,7 @@ def main():
                 if entry.get("retry") and entry.get("source"):
                     reject.append(entry["source"])
                 avoid = None if re.search(r"(?i)station|terminal|airport", place) else TRANSIT_PHOTO
-                found = search_commons(f"{place} {region}", reject, require=distinctive_words(place) or [place], avoid=avoid)
+                found = search_commons(f"{place} {region}", reject + sorted(sources_in_use(slug)), require=distinctive_words(place) or [place], avoid=avoid)
                 kind = "wikimedia"
                 if not found and GOOGLE_KEY:
                     found, kind = google_photo(place, region), "google"

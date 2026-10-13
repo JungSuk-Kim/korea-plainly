@@ -156,6 +156,18 @@ def search_commons(query, reject=(), require=(), avoid=None):
     return best[1] if best else None
 
 
+def sources_in_use(except_key=None):
+    """Every photo source already used by another guide or regional article, so no photo appears twice."""
+    used = set()
+    for name in ("guide_photos.json", "regional_photos.json"):
+        path = ROOT / "content" / name
+        if path.exists():
+            for key, entry in json.loads(path.read_text(encoding="utf-8")).items():
+                if key != except_key and isinstance(entry, dict) and entry.get("source"):
+                    used.add(entry["source"])
+    return used
+
+
 def download(url, path):
     import requests
     from PIL import Image, ImageOps
@@ -240,7 +252,7 @@ def main():
             reject = list(entry.get("reject", []))
             if has_photo and entry.get("source"):
                 reject.append(entry["source"])  # asked for a different photo
-            found = search_commons(query, reject)
+            found = search_commons(query, reject + sorted(sources_in_use(slug)))
             if found:
                 photo = f"photo-{slug}.jpg"
                 download(found["url"], ROOT / photo)

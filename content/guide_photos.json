@@ -93,10 +93,11 @@
     "file": "photo-korea-public-transport-transfers.jpg",
     "credit": "Photo: STA3816, CC BY-SA 3.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Seoul_City_Bus_152.jpg",
-    "query": "Seoul city bus",
+    "query": "Seoul subway transfer",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Seoultech_Bungabang_bus_stop.jpg"
-    ]
+    ],
+    "retry": true
   },
   "korea-recycling-guide": {
     "file": "photo-korea-recycling-guide.jpg",
@@ -114,10 +115,11 @@
     "file": "photo-korea-tax-refund-guide.jpg",
     "credit": "Photo: Tristan Surtel, CC BY-SA 4.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Namdaemun-ro_and_Aloft_Seoul_Myeongdong_by_night.jpg",
-    "query": "Myeongdong shopping street",
+    "query": "department store Seoul",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Streets_of_Seoul_-_Flickr_-_Sergiy_Galyonkin.jpg"
-    ]
+    ],
+    "retry": true
   },
   "korea-transit-card-guide": {
     "file": "thumb-tmoney.jpg",
@@ -154,8 +156,8 @@
     "file": "thumb-cash-cards.jpg",
     "credit": "",
     "source": "",
-    "manual": true,
-    "note": "no good Wikimedia photo found; using the site's own image",
+    "retry": true,
+    "query": "ATM Seoul bank",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Mobile_post_office_Korea.JPG"
     ]
@@ -176,10 +178,11 @@
     "file": "photo-korean-cafe-menu-basics.jpg",
     "credit": "Photo: H. Y. Shin 000, CC0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Cafe_Seoul_20190324_131853.jpg",
-    "query": "cafe Seoul",
+    "query": "cafe menu Seoul",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Bnc_Internet_Cafe_Seoul_South_March_Korea_1994.jpg"
-    ]
+    ],
+    "retry": true
   },
   "korean-convenience-store-meals": {
     "file": "thumb-convenience-meals.jpg",
