@@ -49,10 +49,12 @@
   },
   "korea-autumn-foliage-2026": {
     "file": "photo-korea-autumn-foliage-2026.jpg",
-    "credit": "Photo: Famartin, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:2024-11-16_08_48_52_A_Korean_Dogwood_(left)_and_green-leaved_Japanese_Maple_(right)_in_late_autumn_along_Pingree_Avenue_in_Ewing_Township,_Mercer_County,_New_Jersey.jpg",
+    "credit": "Photo: Marcella Astrid, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:%EB%82%B4%EC%9E%A5%EC%82%B0_(Naejangsan).jpg",
     "query": "Naejangsan autumn",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:2024-11-16_08_48_52_A_Korean_Dogwood_(left)_and_green-leaved_Japanese_Maple_(right)_in_late_autumn_along_Pingree_Avenue_in_Ewing_Township,_Mercer_County,_New_Jersey.jpg"
+    ]
   },
   "korea-entry-k-eta-e-arrival": {
     "file": "photo-korea-entry-k-eta-e-arrival.jpg",
@@ -86,9 +88,10 @@
     ]
   },
   "korea-weather-by-season": {
-    "none": true,
-    "query": "Yeouido cherry blossoms",
-    "retry": true
+    "file": "photo-korea-weather-by-season.jpg",
+    "credit": "Photo: Alexey Komarov, CC BY 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Cherry_Blossom_in_Yeouido_Park_-_panoramio.jpg",
+    "query": "Yeouido cherry blossoms"
   },
   "korean-atm-guide": {
     "file": "thumb-cash-cards.jpg",
