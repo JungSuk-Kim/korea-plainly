@@ -91,13 +91,13 @@
   },
   "korea-public-transport-transfers": {
     "file": "photo-korea-public-transport-transfers.jpg",
-    "credit": "Photo: STA3816, CC BY-SA 3.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Seoul_City_Bus_152.jpg",
+    "credit": "Photo: Nesnad at en.wikipedia, Public domain, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Wayout-seoul_skorea.jpg",
     "query": "Seoul subway transfer",
     "reject": [
+      "https://commons.wikimedia.org/wiki/File:Seoul_City_Bus_152.jpg",
       "https://commons.wikimedia.org/wiki/File:Seoultech_Bungabang_bus_stop.jpg"
-    ],
-    "retry": true
+    ]
   },
   "korea-recycling-guide": {
     "file": "photo-korea-recycling-guide.jpg",
@@ -113,13 +113,13 @@
   },
   "korea-tax-refund-guide": {
     "file": "photo-korea-tax-refund-guide.jpg",
-    "credit": "Photo: Tristan Surtel, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Namdaemun-ro_and_Aloft_Seoul_Myeongdong_by_night.jpg",
+    "credit": "Photo: Minseong Kim, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Shinsegae_Department_Store_Seoul_Signboard.jpg",
     "query": "department store Seoul",
     "reject": [
+      "https://commons.wikimedia.org/wiki/File:Namdaemun-ro_and_Aloft_Seoul_Myeongdong_by_night.jpg",
       "https://commons.wikimedia.org/wiki/File:Streets_of_Seoul_-_Flickr_-_Sergiy_Galyonkin.jpg"
-    ],
-    "retry": true
+    ]
   },
   "korea-transit-card-guide": {
     "file": "thumb-tmoney.jpg",
@@ -156,7 +156,6 @@
     "file": "thumb-cash-cards.jpg",
     "credit": "",
     "source": "",
-    "retry": true,
     "query": "ATM Seoul bank",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Mobile_post_office_Korea.JPG"
@@ -181,8 +180,7 @@
     "query": "cafe menu Seoul",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Bnc_Internet_Cafe_Seoul_South_March_Korea_1994.jpg"
-    ],
-    "retry": true
+    ]
   },
   "korean-convenience-store-meals": {
     "file": "thumb-convenience-meals.jpg",
