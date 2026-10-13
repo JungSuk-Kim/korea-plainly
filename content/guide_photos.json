@@ -51,8 +51,7 @@
     "file": "photo-korea-autumn-foliage-2026.jpg",
     "credit": "Photo: Famartin, CC BY-SA 4.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:2024-11-16_08_48_52_A_Korean_Dogwood_(left)_and_green-leaved_Japanese_Maple_(right)_in_late_autumn_along_Pingree_Avenue_in_Ewing_Township,_Mercer_County,_New_Jersey.jpg",
-    "query": "Naejangsan autumn leaves",
-    "retry": true
+    "query": "Naejangsan autumn leaves"
   },
   "korea-entry-k-eta-e-arrival": {
     "file": "photo-korea-entry-k-eta-e-arrival.jpg",
@@ -68,10 +67,12 @@
   },
   "korea-tax-refund-guide": {
     "file": "photo-korea-tax-refund-guide.jpg",
-    "credit": "Photo: Sergiy Galyonkin from Raleigh, USA, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Streets_of_Seoul_-_Flickr_-_Sergiy_Galyonkin.jpg",
+    "credit": "Photo: Tristan Surtel, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Namdaemun-ro_and_Aloft_Seoul_Myeongdong_by_night.jpg",
     "query": "Myeongdong shopping street",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Streets_of_Seoul_-_Flickr_-_Sergiy_Galyonkin.jpg"
+    ]
   },
   "korea-transit-card-guide": {
     "file": "thumb-tmoney.jpg",
@@ -85,8 +86,7 @@
   },
   "korea-weather-by-season": {
     "none": true,
-    "query": "Yeouido cherry blossoms Seoul",
-    "retry": true
+    "query": "Yeouido cherry blossoms Seoul"
   },
   "korean-atm-guide": {
     "file": "thumb-cash-cards.jpg",
