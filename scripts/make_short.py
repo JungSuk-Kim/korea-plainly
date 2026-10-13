@@ -66,45 +66,50 @@ def wrap(draw, text, f, width):
     return lines + [line] if line else lines
 
 
+# YouTube Shorts, Reels and TikTok cover the bottom ~25% (title, channel, music) and a strip on the right
+# (like/comment buttons) with their own buttons, so all text stays in the upper area and the left/centre.
+SAFE_RIGHT = W - 170
+
+
 def caption_overlay(slide, path):
-    """Transparent PNG: a dark band in the lower third with kicker, title and subtitle."""
+    """Transparent PNG: a dark fade from the top with kicker, title and subtitle, clear of the app's buttons."""
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     grad = Image.new("L", (1, H))
     for y in range(H):
-        grad.putpixel((0, y), int(min(1, max(0, (y - H * 0.42) / (H * 0.3))) * 225))
+        grad.putpixel((0, y), int(min(1, max(0, (H * 0.5 - y) / (H * 0.32))) * 215))
     img.paste(Image.new("RGBA", (W, H), (10, 16, 28, 255)), (0, 0), grad.resize((W, H)))
-    y = int(H * 0.62)
+    y = int(H * 0.11)
     kicker = slide.get("kicker", "")
     if kicker:  # white on a red label, readable on any photo
         kw = d.textlength(kicker, font=font(40))
         d.rounded_rectangle([80, y - 4, 80 + kw + 36, y + 56], radius=10, fill=RED)
         d.text((98, y + 4), kicker, font=font(40), fill=WHITE)
     y += 84
-    for line in wrap(d, slide["title"], font(96), W - 160):
-        d.text((80, y), line, font=font(96), fill=WHITE)
-        y += 104
-    y += 16
-    for line in wrap(d, slide.get("sub", ""), font(52, False), W - 160):
-        d.text((80, y), line, font=font(52, False), fill=CREAM)
-        y += 64
-    d.text((80, H - 150), "korea-plainly.com", font=font(38, False), fill=(200, 205, 215))
+    for line in wrap(d, slide["title"], font(92), SAFE_RIGHT - 80):
+        d.text((80, y), line, font=font(92), fill=WHITE)
+        y += 100
+    y += 12
+    for line in wrap(d, slide.get("sub", ""), font(50, False), SAFE_RIGHT - 80):
+        d.text((80, y), line, font=font(50, False), fill=CREAM)
+        y += 62
+    d.text((80, y + 18), "korea-plainly.com", font=font(36, False), fill=(200, 205, 215))
     img.save(path)
 
 
 def end_card(slide, path):
     img = Image.new("RGB", (W, H), NAVY)
     d = ImageDraw.Draw(img)
-    cx, cy, r = W // 2, int(H * 0.36), 150
+    cx, cy, r = W // 2, int(H * 0.2), 130
     d.pieslice([cx - r, cy - r, cx + r, cy + r], 90, 270, fill=RED)
     d.pieslice([cx - r, cy - r, cx + r, cy + r], 270, 90, fill=(240, 242, 246))
-    d.ellipse([cx - 56, cy - 56, cx + 56, cy + 56], fill=NAVY)
-    for i, (text, f, col) in enumerate([("Korea Plainly", font(110), WHITE), (slide["title"], font(64, False), CREAM),
-                                        (slide["sub"], font(72), RED)]):
+    d.ellipse([cx - 48, cy - 48, cx + 48, cy + 48], fill=NAVY)
+    for i, (text, f, col) in enumerate([("Korea Plainly", font(104), WHITE), (slide["title"], font(62, False), CREAM),
+                                        (slide["sub"], font(70), RED)]):
         tw = d.textlength(text, font=f)
-        d.text(((W - tw) / 2, int(H * 0.52) + i * 130), text, font=f, fill=col)
-    d.text(((W - d.textlength("Link in bio", font=font(48, False))) / 2, int(H * 0.52) + 420), "Link in bio",
-           font=font(48, False), fill=(200, 205, 215))
+        d.text(((W - tw) / 2, int(H * 0.31) + i * 120), text, font=f, fill=col)
+    d.text(((W - d.textlength("Link in bio", font=font(46, False))) / 2, int(H * 0.31) + 380), "Link in bio",
+           font=font(46, False), fill=(200, 205, 215))
     img.save(path)
 
 
@@ -189,11 +194,11 @@ def subtitle_png(text, path, y_center):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     f = font(78)
-    lines = wrap(d, text, f, W - 140)
+    lines = wrap(d, text, f, 2 * min(W // 2 - 70, SAFE_RIGHT - W // 2) )
     y = y_center - len(lines) * 92 // 2
     for line in lines:
         tw = d.textlength(line, font=f)
-        d.text(((W - tw) / 2, y), line, font=f, fill=WHITE, stroke_width=7, stroke_fill=(12, 14, 20))
+        d.text(((W - tw) / 2 - 40, y), line, font=f, fill=WHITE, stroke_width=7, stroke_fill=(12, 14, 20))
         y += 92
     img.save(path)
 
@@ -234,7 +239,7 @@ def segment(slide, i, tmp, voice):
     if audio:
         for k, (text, a, b) in enumerate(chunks(word_times(audio, slide["voice"]))):
             png = tmp / f"sub{i:02d}_{k:02d}.png"
-            subtitle_png(text, png, int(H * 0.30) if slide.get("end") else int(H * 0.52))
+            subtitle_png(text, png, int(H * 0.6))
             subs.append((png, a, min(b, dur)))
     audio_in = ["-i", str(audio)] if audio else ["-f", "lavfi", "-t", f"{dur:.2f}", "-i", "anullsrc=r=44100:cl=stereo"]
     fade = f"fade=t=in:st=0:d=0.25,fade=t=out:st={dur - 0.25:.2f}:d=0.25"
