@@ -17,6 +17,12 @@
     "source": "https://commons.wikimedia.org/wiki/File:Haeundae_Beach_Busan_(45698772572).jpg",
     "query": "Haeundae Beach Busan"
   },
+  "christmas-new-year-seoul": {
+    "file": "photo-christmas-new-year-seoul.jpg",
+    "credit": "Photo: Ken Eckert, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Myeongdong_Crowd_at_Christmas,_Seoul.jpg",
+    "query": "Myeongdong Christmas Seoul"
+  },
   "day-trips-from-seoul": {
     "file": "photo-day-trips-from-seoul.jpg",
     "credit": "Photo: Lance Vanlewen, CC BY-SA 4.0, via Wikimedia Commons",
@@ -98,6 +104,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:Recycling_bins_at_Busan,_South_Korea.jpg",
     "query": "recycling bins Korea"
   },
+  "korea-ski-resorts-guide": {
+    "none": true,
+    "query": "Yongpyong ski resort Korea"
+  },
   "korea-tax-refund-guide": {
     "file": "photo-korea-tax-refund-guide.jpg",
     "credit": "Photo: Tristan Surtel, CC BY-SA 4.0, via Wikimedia Commons",
@@ -131,6 +141,12 @@
     "credit": "Photo: Alexey Komarov, CC BY 3.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Cherry_Blossom_in_Yeouido_Park_-_panoramio.jpg",
     "query": "Yeouido cherry blossoms"
+  },
+  "korea-winter-travel-guide": {
+    "file": "photo-korea-winter-travel-guide.jpg",
+    "credit": "Photo: Korea.net / Korean Culture and Information Service (Jeon Han), CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Korea_Seoul_Snow_02.jpg",
+    "query": "Gyeongbokgung snow Seoul"
   },
   "korean-atm-guide": {
     "file": "thumb-cash-cards.jpg",
@@ -218,6 +234,12 @@
     "credit": "",
     "source": "",
     "query": "street food Myeongdong Seoul"
+  },
+  "seollal-travel-tips": {
+    "file": "photo-seollal-travel-tips.jpg",
+    "credit": "Photo: Republic of Korea from Seoul, Republic of Korea, CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul_Day_before_Seollal_20150218_26_(15946926243).jpg",
+    "query": "Seollal Korea hanbok"
   },
   "seoul-3-day-itinerary": {
     "file": "photo-seoul-3-day-itinerary.jpg",
