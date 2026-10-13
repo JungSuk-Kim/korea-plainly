@@ -11,6 +11,12 @@
     "source": "https://commons.wikimedia.org/wiki/File:Visitors_inside_Gyeongbokgung_Palace.jpg",
     "query": "Gyeongbokgung Palace visitors"
   },
+  "busan-1-day-itinerary": {
+    "file": "photo-busan-1-day-itinerary.jpg",
+    "credit": "Photo: bryan..., CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Haeundae_Beach_Busan_(45698772572).jpg",
+    "query": "Haeundae Beach Busan"
+  },
   "incheon-airport-to-seoul": {
     "file": "photo-incheon-airport-to-seoul.jpg",
     "credit": "Photo: calflier001, CC BY-SA 2.0, via Wikimedia Commons",
@@ -80,6 +86,12 @@
     "credit": "Photo: Julie Facine from Istanbul, Turkey, CC BY-SA 2.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:McDelivery_Seoul_2008.jpg",
     "query": "delivery Seoul"
+  },
+  "seoul-3-day-itinerary": {
+    "file": "photo-seoul-3-day-itinerary.jpg",
+    "credit": "Photo: Stevenliuyi, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Bukchon_Hanok_Village_in_Seoul.jpg",
+    "query": "Bukchon Hanok Village Seoul"
   },
   "seoul-bus-guide": {
     "file": "photo-seoul-bus-guide.jpg",
