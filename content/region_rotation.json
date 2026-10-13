@@ -129,7 +129,7 @@
     "local-guide"
   ],
   "rules": {
-    "one_region_per_day": true,
+    "one_region_per_day": false,
     "publish_all_categories_for_region": true,
     "avoid_duplicate_place": true,
     "avoid_duplicate_topic": true,
@@ -138,6 +138,9 @@
     "prefer_official_links": true,
     "include_maps_when_available": true,
     "include_booking_or_ticket_links_when_available": true,
-    "unique_image_per_article": true
-  }
+    "unique_image_per_article": true,
+    "note": "3 articles a day: the next 3 categories for the current region; the region changes once all 8 are done (3 days)."
+  },
+  "categories_per_day": 3,
+  "current_category_offset": 0
 }

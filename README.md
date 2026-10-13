@@ -26,8 +26,9 @@ serves the files as they are.
 Two workflows, both in `.github/workflows/`:
 
 - **Daily Publish** (`daily-publish.yml`, 08:17 Korea time, or run by hand): writes one
-  general guide (`generate_post.py` + `add_article_faq.py`) and one regional day
-  (`generate_regional_day.py`, one article per category for the next region), then runs
+  general guide (`generate_post.py` + `add_article_faq.py`) and three regional
+  articles (`generate_regional_day.py`: the next 3 of the 8 categories for the current region; the region changes
+  once all 8 are done, so each region takes 3 days), then runs
   `scripts/maintain_site.py` and commits everything once. If a writing step fails, the run
   still commits the rest and is marked failed so you notice.
 - **Rewrite regional articles** (`rewrite-regional.yml`, run by hand): rewrites existing regional

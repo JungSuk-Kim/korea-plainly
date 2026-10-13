@@ -357,9 +357,14 @@ a{{color:#b73535}}
 {links}
 </article></main></body></html>"""
 
+PER_DAY = int(state.get("categories_per_day") or len(categories))
+OFFSET = int(state.get("current_category_offset", 0)) % len(categories)
+TODAY = categories[OFFSET:OFFSET + PER_DAY]  # a few categories a day; the region changes after all of them
+
+
 def main():
     made = []
-    for category in categories:
+    for category in TODAY:
         cat_key = category["slug"] if isinstance(category, dict) else str(category)
         place, last_error = None, None
         for query in query_list(cat_key):
@@ -412,10 +417,15 @@ def main():
         published_slugs.add(slug)
         made.append(slug)
 
-    # Advance only after all categories succeed.
-    state["current_region_index"] = (idx + 1) % len(regions)
-    if state["current_region_index"] == 0:
-        state["current_round"] = round_no + 1
+    # Advance only after today's categories succeed; move to the next region once all are done.
+    next_offset = OFFSET + PER_DAY
+    if next_offset >= len(categories):
+        state["current_category_offset"] = 0
+        state["current_region_index"] = (idx + 1) % len(regions)
+        if state["current_region_index"] == 0:
+            state["current_round"] = round_no + 1
+    else:
+        state["current_category_offset"] = next_offset
 
     PUBLISHED_PATH.write_text(json.dumps(published, ensure_ascii=False, indent=2), encoding="utf-8")
     STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
