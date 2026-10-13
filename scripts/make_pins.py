@@ -9,8 +9,8 @@ when its title or photo changes (content/pins.json keeps a fingerprint).
 Regional articles get pins too (their cover photo + title). Two RSS feeds let
 Pinterest publish new pins automatically, one board per feed:
   pins/places.xml  every regional article  -> board "Places to Visit in Korea"
-  pins/guides.xml  guides published from FEED_GUIDES_FROM on (older guides were
-                   uploaded once with pins.csv, so they are left out)
+  pins/guides.xml  guides not in content/pins_uploaded.json (those were uploaded
+                   once with pins.csv, so they are left out)
 """
 import csv
 import hashlib
@@ -33,7 +33,7 @@ NAVY, RED, WHITE, MUTED = (23, 36, 60), (201, 65, 58), (255, 255, 255), (190, 19
 BOARDS = {"food": "Korean Food Guide", "travel": "Korea Travel Planning"}
 DEFAULT_BOARD = "Korea Travel Tips"
 FEED_SIZE = 50
-FEED_GUIDES_FROM = "2026-10-14"
+UPLOADED = ROOT / "content" / "pins_uploaded.json"
 
 
 def clean(text):
@@ -159,7 +159,8 @@ def main():
     newest = lambda lst: sorted(lst, key=lambda i: dates.get(f"{i['slug']}.html", ""), reverse=True)[:FEED_SIZE]
     (OUT / "places.xml").write_text(rss(newest(place_items), dates, "Korea Plainly: places to visit",
                                         "Places worth visiting across Korea, for first-time visitors."), encoding="utf-8")
-    new_guides = [i for i in guide_items if dates.get(f"{i['slug']}.html", "") >= FEED_GUIDES_FROM]
+    uploaded = set(json.loads(UPLOADED.read_text(encoding="utf-8")).get("slugs", [])) if UPLOADED.exists() else set()
+    new_guides = [i for i in guide_items if i["slug"] not in uploaded]
     (OUT / "guides.xml").write_text(rss(newest(new_guides), dates, "Korea Plainly: guides",
                                         "Plain-English guides for first-time visitors to Korea."), encoding="utf-8")
     print(f"make_pins: {len(items)} pins ({len(place_items)} places), {made} drawn; feeds: "

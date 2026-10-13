@@ -678,5 +678,29 @@
     "filename": "day-trips-from-seoul.html",
     "title": "Easy Day Trips from Seoul for First-Time Visitors",
     "category": "Travel"
+  },
+  {
+    "slug": "korea-winter-travel-guide",
+    "filename": "korea-winter-travel-guide.html",
+    "title": "Korea in Winter: What to Expect, Pack and Do",
+    "category": "Travel"
+  },
+  {
+    "slug": "korea-ski-resorts-guide",
+    "filename": "korea-ski-resorts-guide.html",
+    "title": "Skiing in Korea: Resorts Near Seoul and How to Get There",
+    "category": "Travel"
+  },
+  {
+    "slug": "christmas-new-year-seoul",
+    "filename": "christmas-new-year-seoul.html",
+    "title": "Christmas and New Year in Seoul: Lights, Bells and Sunrise",
+    "category": "Travel"
+  },
+  {
+    "slug": "seollal-travel-tips",
+    "filename": "seollal-travel-tips.html",
+    "title": "Seollal 2027: Visiting Korea During Lunar New Year",
+    "category": "Travel"
   }
 ]

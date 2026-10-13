@@ -41,6 +41,10 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 # Hand-picked search words for the guides that exist today. New guides fall
 # back to words from their title.
 QUERIES = {
+    "seollal-travel-tips": "Seollal Korea hanbok",
+    "christmas-new-year-seoul": "Myeongdong Christmas Seoul",
+    "korea-ski-resorts-guide": "Yongpyong ski resort Korea",
+    "korea-winter-travel-guide": "Gyeongbokgung snow Seoul",
     "day-trips-from-seoul": "Hwaseong Fortress Suwon",
     "gyeongju-1-day-itinerary": "Donggung Palace Wolji Pond Gyeongju",
     "jeju-3-day-itinerary": "Seongsan Ilchulbong Jeju",
