@@ -1,0 +1,62 @@
+{
+  "seoul-leisure-cheonggyecheon.html": {
+    "to": "seoul-travel-cheonggyecheon.html",
+    "title": "Cheonggyecheon: A Quiet Walk Through the Heart of Seoul"
+  },
+  "seoul-local-guide-gyeongbokgung-palace.html": {
+    "to": "seoul-culture-gyeongbokgung-palace.html",
+    "title": "Gyeongbokgung Palace: A Guide to Seoul’s Grand Joseon Landmark"
+  },
+  "busan-travel-haedong-yonggungsa-temple.html": {
+    "to": "busan-culture-haedong-yonggungsa-temple.html",
+    "title": "Haedong Yonggungsa: Busan’s Temple Above the Sea"
+  },
+  "busan-local-guide-haedong-yonggungsa-temple.html": {
+    "to": "busan-culture-haedong-yonggungsa-temple.html",
+    "title": "Haedong Yonggungsa: Busan’s Temple Above the Sea"
+  },
+  "jeju-local-guide-hyeopjae-beach.html": {
+    "to": "jeju-travel-hyeopjae-beach.html",
+    "title": "Hyeopjae Beach, Jeju: A Clear-Water Escape on the Island’s West Coast"
+  },
+  "gyeongju-shopping-woljeonggyo-bridge.html": {
+    "to": "gyeongju-travel-woljeonggyo-bridge.html",
+    "title": "Woljeonggyo Bridge: Gyeongju’s Most Atmospheric Riverside Walk"
+  },
+  "gyeongju-leisure-woljeonggyo-bridge.html": {
+    "to": "gyeongju-travel-woljeonggyo-bridge.html",
+    "title": "Woljeonggyo Bridge: Gyeongju’s Most Atmospheric Riverside Walk"
+  },
+  "gyeongju-local-guide-woljeonggyo-bridge.html": {
+    "to": "gyeongju-travel-woljeonggyo-bridge.html",
+    "title": "Woljeonggyo Bridge: Gyeongju’s Most Atmospheric Riverside Walk"
+  },
+  "jeonju-travel-jeonju-hanok-village.html": {
+    "to": "jeonju-culture-jeonju-hanok-village.html",
+    "title": "Jeonju Hanok Village: A Thoughtful Guide to Korea’s Traditional Heart"
+  },
+  "jeonju-shopping-jeonju-hanok-village.html": {
+    "to": "jeonju-culture-jeonju-hanok-village.html",
+    "title": "Jeonju Hanok Village: A Thoughtful Guide to Korea’s Traditional Heart"
+  },
+  "jeonju-leisure-jeonju-hanok-village.html": {
+    "to": "jeonju-culture-jeonju-hanok-village.html",
+    "title": "Jeonju Hanok Village: A Thoughtful Guide to Korea’s Traditional Heart"
+  },
+  "jeonju-local-guide-jeonju-hanok-village.html": {
+    "to": "jeonju-culture-jeonju-hanok-village.html",
+    "title": "Jeonju Hanok Village: A Thoughtful Guide to Korea’s Traditional Heart"
+  },
+  "gangneung-travel-ojukheon.html": {
+    "to": "gangneung-culture-ojukheon.html",
+    "title": "Ojukheon, Gangneung: A Thoughtful Visit to the Home of Shin Saimdang and Yi I"
+  },
+  "gangneung-shopping-ojukheon.html": {
+    "to": "gangneung-culture-ojukheon.html",
+    "title": "Ojukheon, Gangneung: A Thoughtful Visit to the Home of Shin Saimdang and Yi I"
+  },
+  "gangneung-local-guide-ojukheon.html": {
+    "to": "gangneung-culture-ojukheon.html",
+    "title": "Ojukheon, Gangneung: A Thoughtful Visit to the Home of Shin Saimdang and Yi I"
+  }
+}

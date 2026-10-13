@@ -27,7 +27,7 @@ def group_cards(prefix, cats):
     out = []
     for c in cats:
         out += ROOT.glob(f'{prefix}-{c}-*.html')
-    return sorted(set(out))
+    return sorted(p for p in set(out) if 'kp-redirect' not in p.read_text(encoding='utf-8', errors='ignore'))
 
 def card_label(p):
     m = re.match(r'^[a-z]+-(' + '|'.join(sorted(CAT_NAME, key=len, reverse=True)) + r')-', p.name)

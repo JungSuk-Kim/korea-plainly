@@ -25,7 +25,7 @@ serves the files as they are.
 
 Two workflows, both in `.github/workflows/`:
 
-- **Daily Publish** (`daily-publish.yml`, 08:30 Korea time, or run by hand): writes one
+- **Daily Publish** (`daily-publish.yml`, 08:17 Korea time, or run by hand): writes one
   general guide (`generate_post.py` + `add_article_faq.py`) and one regional day
   (`generate_regional_day.py`, one article per category for the next region), then runs
   `scripts/maintain_site.py` and commits everything once. If a writing step fails, the run
@@ -37,6 +37,7 @@ Two workflows, both in `.github/workflows/`:
 
 | Step | What it does |
 | --- | --- |
+| `apply_redirects.py` | Merged articles: old pages become noindex redirects and every link points to the article that replaced them (`content/redirects.json`) |
 | `lazy_cards.py` | Guide cards on guides.html: real `<img loading="lazy">` thumbnails and a category on every card |
 | `regional_photos.py` | Regional articles: credited cover photo (Wikimedia Commons first, else the place's Google Maps photo) and a Naver Map link; choices in `content/regional_photos.json` |
 | `generate_region_pages.py`, `fix_navigation_and_regions.py`, `build_category_region_hubs.py` | Rebuild region hubs and the four group hubs per region (See & Do = travel/culture/leisure/local guide, Eat & Drink = food/cafe, Shop, Stay) plus nationwide group hubs; old 8-category hub URLs redirect to their group |
@@ -66,6 +67,12 @@ General guides get their photo from `scripts/guide_photos.py`. Every choice is l
 `"retry": true` to that guide's entry (optionally with a new `"query"`); the rejected photo
 is remembered and the current one stays until a better one is found. To keep the text card,
 use `{"skip": true}`. The next run applies the change.
+
+## Merging articles
+
+To merge an article into another, copy any useful sections across, delete the old page and its
+`content/published.json` entry, and add `"old.html": {"to": "new.html", "title": "New title"}` to
+`content/redirects.json`. The next maintenance run writes the redirect page and fixes every link.
 
 ## Do not delete
 

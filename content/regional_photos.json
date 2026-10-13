@@ -19,11 +19,6 @@
     "credit": "Photo: Ashely Liu via Google Maps",
     "source": "https://maps.google.com/maps/contrib/104110222004701770824"
   },
-  "busan-local-guide-haedong-yonggungsa-temple": {
-    "source_type": "wikimedia",
-    "credit": "Photo: Christian Bolz, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Haedong_Yonggungsa_Temple_near_Busan.jpg"
-  },
   "busan-shopping-lululemon-busan-shinsegae-centum-city": {
     "source_type": "google",
     "credit": "Photo: HY Yun via Google Maps",
@@ -33,11 +28,6 @@
     "source_type": "google",
     "credit": "Photo: Ananti at Busan Cove via Google Maps",
     "source": "https://maps.google.com/maps/contrib/115728940872563825873"
-  },
-  "busan-travel-haedong-yonggungsa-temple": {
-    "source_type": "wikimedia",
-    "credit": "Photo: Christian Bolz, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Haedong_Yonggungsa_Temple_near_Busan.jpg"
   },
   "gangneung-cafe-terarosa-coffee": {
     "source_type": "google",
@@ -59,25 +49,10 @@
     "credit": "Photo: 나한정 via Google Maps",
     "source": "https://maps.google.com/maps/contrib/104534689441183419642"
   },
-  "gangneung-local-guide-ojukheon": {
-    "source_type": "wikimedia",
-    "credit": "Photo: Klaus314 at English Wikipedia, Public domain, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Korea-Gangneung-Ojukheon-01.jpg"
-  },
-  "gangneung-shopping-ojukheon": {
-    "source_type": "wikimedia",
-    "credit": "Photo: Klaus314 at English Wikipedia, Public domain, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Korea-Gangneung-Ojukheon-01.jpg"
-  },
   "gangneung-stay-skybay-hotel-gyeongpo": {
     "source_type": "google",
     "credit": "Photo: 스카이베이호텔 경포 via Google Maps",
     "source": "https://maps.google.com/maps/contrib/113042545928960502857"
-  },
-  "gangneung-travel-ojukheon": {
-    "source_type": "wikimedia",
-    "credit": "Photo: Klaus314 at English Wikipedia, Public domain, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Korea-Gangneung-Ojukheon-01.jpg"
   },
   "gyeongju-cafe-cafe-arae-heon": {
     "source_type": "google",
@@ -93,21 +68,6 @@
     "source_type": "google",
     "credit": "Photo: Bar Boon Hwangridangil via Google Maps",
     "source": "https://maps.google.com/maps/contrib/102531661887623002291"
-  },
-  "gyeongju-leisure-woljeonggyo-bridge": {
-    "source_type": "wikimedia",
-    "credit": "Photo: lumoplank, CC0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Woljeonggyo_Bridge,_Gyeongju_-_Woljeonggyo2656.jpg"
-  },
-  "gyeongju-local-guide-woljeonggyo-bridge": {
-    "source_type": "wikimedia",
-    "credit": "Photo: lumoplank, CC0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Woljeonggyo_Bridge,_Gyeongju_-_Woljeonggyo2656.jpg"
-  },
-  "gyeongju-shopping-woljeonggyo-bridge": {
-    "source_type": "wikimedia",
-    "credit": "Photo: lumoplank, CC0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Woljeonggyo_Bridge,_Gyeongju_-_Woljeonggyo2656.jpg"
   },
   "gyeongju-stay-hilton-gyeongju": {
     "source_type": "google",
@@ -187,11 +147,6 @@
     "credit": "Photo: 제주카트장 제주레포츠랜드(주) via Google Maps",
     "source": "https://maps.google.com/maps/contrib/101398391086653806529"
   },
-  "jeju-local-guide-hyeopjae-beach": {
-    "source_type": "google",
-    "credit": "Photo: Sohyun Kwon (Emma) via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/100299570138767954052"
-  },
   "jeju-shopping-jeju-traditional-five-day-market": {
     "source_type": "wikimedia",
     "credit": "Photo: Grapesurgeon, CC BY-SA 4.0, via Wikimedia Commons",
@@ -225,30 +180,10 @@
     "credit": "Photo: 온담 전주본점(Ondam Korean BBQ) via Google Maps",
     "source": "https://maps.google.com/maps/contrib/115776776624806052986"
   },
-  "jeonju-leisure-jeonju-hanok-village": {
-    "source_type": "wikimedia",
-    "credit": "Photo: Mobius6, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Jeonju_Hanok_Village_20220701_003.jpg"
-  },
-  "jeonju-local-guide-jeonju-hanok-village": {
-    "source_type": "wikimedia",
-    "credit": "Photo: Mobius6, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Jeonju_Hanok_Village_20220701_001.jpg"
-  },
-  "jeonju-shopping-jeonju-hanok-village": {
-    "source_type": "wikimedia",
-    "credit": "Photo: Mobius6, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Jeonju_Hanok_Village_20220701_001.jpg"
-  },
   "jeonju-stay-lahan-hotel-jeonju": {
     "source_type": "google",
     "credit": "Photo: Inmook Lee (이인묵) via Google Maps",
     "source": "https://maps.google.com/maps/contrib/112322727489597014623"
-  },
-  "jeonju-travel-jeonju-hanok-village": {
-    "source_type": "wikimedia",
-    "credit": "Photo: Mobius6, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Jeonju_Hanok_Village_20220701_001.jpg"
   },
   "seoul-cafe-cafe-onion-anguk": {
     "source_type": "google",
@@ -264,16 +199,6 @@
     "source_type": "google",
     "credit": "Photo: Kampungku Restaurant via Google Maps",
     "source": "https://maps.google.com/maps/contrib/114630104963798806391"
-  },
-  "seoul-leisure-cheonggyecheon": {
-    "source_type": "wikimedia",
-    "credit": "Photo: kallerna This photo was taken with Fujifilm X-T30, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Cheonggyecheon_Seoul_3.jpg"
-  },
-  "seoul-local-guide-gyeongbokgung-palace": {
-    "source_type": "wikimedia",
-    "credit": "Photo: Frank Schulenburg, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Gyeonghoeru_(Royal_Banquet_Hall)_at_Gyeongbokgung_Palace,_Seoul.jpg"
   },
   "seoul-shopping-myeongdong-shopping-street": {
     "source_type": "wikimedia",

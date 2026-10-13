@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parent.parent
 STEPS = [
     "guide_photos.py",                # first, so hub cards show the new photos; credited Wikimedia photos for guides (fetches when KP_FETCH_PHOTOS=1)
     "lazy_cards.py",                  # guide card photos load lazily, as real <img> tags
+    "apply_redirects.py",             # merged articles redirect to the article that replaced them (content/redirects.json)
     "regional_photos.py",             # credited photos (Wikimedia, else Google Maps) + Naver Map links for regional articles
     "generate_region_pages.py",       # region hub pages from content/published.json
     "fix_navigation_and_regions.py",  # region/category hubs and menus

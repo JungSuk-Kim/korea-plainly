@@ -1,5 +1,5 @@
 from pathlib import Path
-from html import escape
+from html import escape, unescape
 import re
 
 ROOT = Path(".")
@@ -13,7 +13,7 @@ for p in ROOT.glob("*.html"):
     m = re.search(r"<h1[^>]*>(.*?)</h1>", s, re.I | re.S)
     if not m:
         continue
-    title = re.sub(r"<[^>]+>", "", m.group(1))
+    title = unescape(re.sub(r"<[^>]+>", "", m.group(1)))
     title = re.sub(r"\s+", " ", title).strip()
     pages.append({"file": p.name, "title": title})
 

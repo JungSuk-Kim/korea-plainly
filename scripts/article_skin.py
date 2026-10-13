@@ -79,13 +79,15 @@ def hub_photo(name):
     return None
 
 
-def related_cards(s, guide_thumbs):
+def related_cards(s, name, guide_thumbs):
     sec = re.search(r'(<section class="related-guides"[^>]*>)(.*?)(</section>)', s, re.S)
     if not sec:
         return s
     inner = sec.group(2)
     links = re.findall(r'<a href="([^"]+)">\s*(?:<img[^>]*>)?\s*(?:<span>)?(.*?)(?:</span>)?\s*</a>', inner, re.S)
-    links = [(h, re.sub(r"<[^>]+>", "", t).strip()) for h, t in links if h.endswith(".html")][:3]
+    seen = {name}  # never link to itself, never the same guide twice (merged guides share one target)
+    links = [(h, re.sub(r"<[^>]+>", "", t).strip()) for h, t in links
+             if h.endswith(".html") and not (h in seen or seen.add(h))][:3]
     if not links:
         return s
     cards = "".join(f'<a href="{esc(h)}"><img src="{esc(thumb_for(h, guide_thumbs))}" alt="" loading="lazy"><span>{t}</span></a>'
@@ -192,7 +194,7 @@ def main():
             new = regional_head(new, places[name], nl)
             new = visit_card(new, places[name])
         new = own_cover(new, name, guide_thumbs)
-        new = related_cards(new, guide_thumbs)
+        new = related_cards(new, name, guide_thumbs)
         if new != s:
             p.write_bytes(new.encode("utf-8"))
             changed += 1

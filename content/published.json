@@ -101,19 +101,6 @@
     "image": "regional-seoul-culture-gyeongbokgung-palace.jpg"
   },
   {
-    "title": "Cheonggyecheon: A Riverside Walk Through the Heart of Seoul",
-    "slug": "seoul-leisure-cheonggyecheon",
-    "category": "Leisure",
-    "region": "Seoul",
-    "round": 1,
-    "place_name": "Cheonggyecheon",
-    "google_rating": 4.6,
-    "google_review_count": 11130,
-    "naver_checked": true,
-    "published_at": "2026-10-08T15:33:35.149943+00:00",
-    "image": "regional-seoul-leisure-cheonggyecheon.jpg"
-  },
-  {
     "title": "Four Seasons Hotel Seoul: A Refined Base for Exploring Central Seoul",
     "slug": "seoul-stay-four-seasons-hotel-seoul",
     "category": "Stay",
@@ -125,32 +112,6 @@
     "naver_checked": true,
     "published_at": "2026-10-08T15:34:00.994048+00:00",
     "image": "regional-seoul-stay-four-seasons-hotel-seoul.jpg"
-  },
-  {
-    "title": "Gyeongbokgung Palace: A First-Time Visitor’s Guide to Seoul’s Grand Royal Landmark",
-    "slug": "seoul-local-guide-gyeongbokgung-palace",
-    "category": "Local Guide",
-    "region": "Seoul",
-    "round": 1,
-    "place_name": "Gyeongbokgung Palace",
-    "google_rating": 4.6,
-    "google_review_count": 46914,
-    "naver_checked": true,
-    "published_at": "2026-10-08T15:34:37.598281+00:00",
-    "image": "regional-seoul-local-guide-gyeongbokgung-palace.jpg"
-  },
-  {
-    "title": "Haedong Yonggungsa Temple: Busan’s Seaside Sanctuary",
-    "slug": "busan-travel-haedong-yonggungsa-temple",
-    "category": "Travel",
-    "region": "Busan",
-    "round": 1,
-    "place_name": "Haedong Yonggungsa Temple",
-    "google_rating": 4.5,
-    "google_review_count": 27862,
-    "naver_checked": true,
-    "published_at": "2026-10-08T15:51:13.064536+00:00",
-    "image": "regional-busan-travel-haedong-yonggungsa-temple.jpg"
   },
   {
     "title": "Ribs of Legend Haeundae: A Korean Rib Stop in Busan",
@@ -229,19 +190,6 @@
     "naver_checked": true,
     "published_at": "2026-10-08T15:53:47.299320+00:00",
     "image": "regional-busan-stay-ananti-at-busan-cove.jpg"
-  },
-  {
-    "title": "Haedong Yonggungsa Temple: A Local’s Guide to Visiting",
-    "slug": "busan-local-guide-haedong-yonggungsa-temple",
-    "category": "Local Guide",
-    "region": "Busan",
-    "round": 1,
-    "place_name": "Haedong Yonggungsa Temple",
-    "google_rating": 4.5,
-    "google_review_count": 27862,
-    "naver_checked": true,
-    "published_at": "2026-10-08T15:54:08.084932+00:00",
-    "image": "regional-busan-local-guide-haedong-yonggungsa-temple.jpg"
   },
   {
     "slug": "korean-food-delivery-guide",
@@ -341,19 +289,6 @@
     "image": "regional-jeju-stay-maison-glad-jeju.jpg"
   },
   {
-    "title": "Hyeopjae Beach, Jeju: A Practical Guide to the Island’s Clear West-Coast Waters",
-    "slug": "jeju-local-guide-hyeopjae-beach",
-    "category": "Local Guide",
-    "region": "Jeju",
-    "round": 1,
-    "place_name": "Hyeopjae Beach",
-    "google_rating": 4.6,
-    "google_review_count": 8898,
-    "naver_checked": true,
-    "published_at": "2026-10-09T05:04:30.278559+00:00",
-    "image": "regional-jeju-local-guide-hyeopjae-beach.jpg"
-  },
-  {
     "slug": "korean-convenience-stores-compared",
     "filename": "korean-convenience-stores-compared.html",
     "title": "How Korean Convenience Stores Compare",
@@ -399,19 +334,6 @@
     "image": "regional-gyeongju-cafe-cafe-arae-heon.jpg"
   },
   {
-    "title": "Woljeonggyo Bridge, Gyeongju: A Scenic Stop, Not a Shopping Mall",
-    "slug": "gyeongju-shopping-woljeonggyo-bridge",
-    "category": "Shopping",
-    "region": "Gyeongju",
-    "round": 1,
-    "place_name": "Woljeonggyo Bridge",
-    "google_rating": 4.6,
-    "google_review_count": 8895,
-    "naver_checked": true,
-    "published_at": "2026-10-10T04:48:31.830904+00:00",
-    "image": "regional-gyeongju-shopping-woljeonggyo-bridge.jpg"
-  },
-  {
     "title": "Bulguksa Temple: A Guide to Gyeongju’s Great Silla-Era Sanctuary",
     "slug": "gyeongju-culture-bulguksa",
     "category": "Culture",
@@ -423,19 +345,6 @@
     "naver_checked": true,
     "published_at": "2026-10-10T04:48:52.422427+00:00",
     "image": "regional-gyeongju-culture-bulguksa.jpg"
-  },
-  {
-    "title": "Woljeonggyo Bridge: Gyeongju’s Silla-Era Landmark by Day and After Dark",
-    "slug": "gyeongju-leisure-woljeonggyo-bridge",
-    "category": "Leisure",
-    "region": "Gyeongju",
-    "round": 1,
-    "place_name": "Woljeonggyo Bridge",
-    "google_rating": 4.6,
-    "google_review_count": 8895,
-    "naver_checked": true,
-    "published_at": "2026-10-10T04:49:16.706602+00:00",
-    "image": "regional-gyeongju-leisure-woljeonggyo-bridge.jpg"
   },
   {
     "title": "Hilton Gyeongju: A Relaxed Base for Exploring Bomun Lake and Historic Gyeongju",
@@ -451,36 +360,10 @@
     "image": "regional-gyeongju-stay-hilton-gyeongju.jpg"
   },
   {
-    "title": "Woljeonggyo Bridge, Gyeongju: A Guide to the City’s Glowing Historic Crossing",
-    "slug": "gyeongju-local-guide-woljeonggyo-bridge",
-    "category": "Local Guide",
-    "region": "Gyeongju",
-    "round": 1,
-    "place_name": "Woljeonggyo Bridge",
-    "google_rating": 4.6,
-    "google_review_count": 8895,
-    "naver_checked": true,
-    "published_at": "2026-10-10T04:50:00.008234+00:00",
-    "image": "regional-gyeongju-local-guide-woljeonggyo-bridge.jpg"
-  },
-  {
     "slug": "korean-cafe-menu-basics",
     "filename": "korean-cafe-menu-basics.html",
     "title": "Korean Café Menu Basics: What to Order and How",
     "category": "Food"
-  },
-  {
-    "title": "Jeonju Hanok Village: A Practical Guide to Korea’s Traditional Rooflines and Lanes",
-    "slug": "jeonju-travel-jeonju-hanok-village",
-    "category": "Travel",
-    "region": "Jeonju",
-    "round": 1,
-    "place_name": "Jeonju Hanok Village",
-    "google_rating": 4.1,
-    "google_review_count": 29275,
-    "naver_checked": true,
-    "published_at": "2026-10-11T04:32:54.508930+00:00",
-    "image": "regional-jeonju-travel-jeonju-hanok-village.jpg"
   },
   {
     "title": "Ondam in Jeonju: A Food Stop to Check Before You Go",
@@ -509,19 +392,6 @@
     "image": "regional-jeonju-cafe-haeyooldam.jpg"
   },
   {
-    "title": "Shopping in Jeonju Hanok Village: A Guide to Souvenirs, Crafts, and Local Finds",
-    "slug": "jeonju-shopping-jeonju-hanok-village",
-    "category": "Shopping",
-    "region": "Jeonju",
-    "round": 1,
-    "place_name": "Jeonju Hanok Village",
-    "google_rating": 4.1,
-    "google_review_count": 29275,
-    "naver_checked": true,
-    "published_at": "2026-10-11T04:33:54.721060+00:00",
-    "image": "regional-jeonju-shopping-jeonju-hanok-village.jpg"
-  },
-  {
     "title": "Jeonju Hanok Village: A Thoughtful Guide to Korea’s Traditional Heart",
     "slug": "jeonju-culture-jeonju-hanok-village",
     "category": "Culture",
@@ -533,19 +403,6 @@
     "naver_checked": true,
     "published_at": "2026-10-11T04:34:14.893098+00:00",
     "image": "regional-jeonju-culture-jeonju-hanok-village.jpg"
-  },
-  {
-    "title": "Jeonju Hanok Village: A Practical Guide to Korea’s Traditional Heartland",
-    "slug": "jeonju-leisure-jeonju-hanok-village",
-    "category": "Leisure",
-    "region": "Jeonju",
-    "round": 1,
-    "place_name": "Jeonju Hanok Village",
-    "google_rating": 4.1,
-    "google_review_count": 29275,
-    "naver_checked": true,
-    "published_at": "2026-10-11T04:34:36.365531+00:00",
-    "image": "regional-jeonju-leisure-jeonju-hanok-village.jpg"
   },
   {
     "title": "Stay Beside Jeonju Hanok Village: A Practical Guide to Lahan Hotel Jeonju",
@@ -561,36 +418,10 @@
     "image": "regional-jeonju-stay-lahan-hotel-jeonju.jpg"
   },
   {
-    "title": "How to Explore Jeonju Hanok Village: A Practical Guide to Korea’s Traditional Streets",
-    "slug": "jeonju-local-guide-jeonju-hanok-village",
-    "category": "Local Guide",
-    "region": "Jeonju",
-    "round": 1,
-    "place_name": "Jeonju Hanok Village",
-    "google_rating": 4.1,
-    "google_review_count": 29275,
-    "naver_checked": true,
-    "published_at": "2026-10-11T04:35:16.984916+00:00",
-    "image": "regional-jeonju-local-guide-jeonju-hanok-village.jpg"
-  },
-  {
     "slug": "kakaotalk-korea-guide",
     "filename": "kakaotalk-korea-guide.html",
     "title": "How to Use KakaoTalk in Korea",
     "category": "Daily Korea"
-  },
-  {
-    "title": "Ojukheon, Gangneung: A Thoughtful Guide to Korea’s Historic House and Gardens",
-    "slug": "gangneung-travel-ojukheon",
-    "category": "Travel",
-    "region": "Gangneung",
-    "round": 1,
-    "place_name": "Ojukheon",
-    "google_rating": 4.4,
-    "google_review_count": 10768,
-    "naver_checked": true,
-    "published_at": "2026-10-12T04:48:09.591796+00:00",
-    "image": "regional-gangneung-travel-ojukheon.jpg"
   },
   {
     "title": "Umjine in Gangneung: A Seafood Stop for Cockle-Rice Fans",
@@ -617,19 +448,6 @@
     "naver_checked": true,
     "published_at": "2026-10-12T04:48:53.906861+00:00",
     "image": "regional-gangneung-cafe-terarosa-coffee.jpg"
-  },
-  {
-    "title": "Ojukheon, Gangneung: A Cultural Stop, Not a Shopping District",
-    "slug": "gangneung-shopping-ojukheon",
-    "category": "Shopping",
-    "region": "Gangneung",
-    "round": 1,
-    "place_name": "Ojukheon",
-    "google_rating": 4.4,
-    "google_review_count": 10768,
-    "naver_checked": true,
-    "published_at": "2026-10-12T04:49:16.481845+00:00",
-    "image": "regional-gangneung-shopping-ojukheon.jpg"
   },
   {
     "title": "Ojukheon, Gangneung: A Thoughtful Visit to the Home of Shin Saimdang and Yi I",
@@ -669,19 +487,6 @@
     "naver_checked": true,
     "published_at": "2026-10-12T04:50:14.511500+00:00",
     "image": "regional-gangneung-stay-skybay-hotel-gyeongpo.jpg"
-  },
-  {
-    "title": "Ojukheon, Gangneung: A Thoughtful Visit to Korea’s Historic Home of Shin Saimdang and Yi I",
-    "slug": "gangneung-local-guide-ojukheon",
-    "category": "Local Guide",
-    "region": "Gangneung",
-    "round": 1,
-    "place_name": "Ojukheon",
-    "google_rating": 4.4,
-    "google_review_count": 10768,
-    "naver_checked": true,
-    "published_at": "2026-10-12T04:50:34.727751+00:00",
-    "image": "regional-gangneung-local-guide-ojukheon.jpg"
   },
   {
     "title": "Songdo Central Park: A Waterfront Escape in Incheon’s Modern City",

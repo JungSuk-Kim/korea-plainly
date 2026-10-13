@@ -35,7 +35,7 @@ def page(region):
     for p in ROOT.glob(slug + "-*.html"):
         rest = p.stem[len(slug)+1:]
         cat = next((k for k in sorted(CATS,key=len,reverse=True) if rest.startswith(k+"-")), None)
-        if cat:  # an article, not the category hub page itself
+        if cat and "kp-redirect" not in p.read_text(encoding="utf-8", errors="ignore"):  # an article, not a hub or merged page
             items.append((list(CATS).index(cat), CATS[cat], get_title(p), p.name, thumb_for(p)))
             if cat not in cats_with_items:
                 cats_with_items.append(cat)
