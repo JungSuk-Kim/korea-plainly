@@ -61,8 +61,24 @@ def before_head_end(s, block, nl):
     return s if not m else s[:m.start()] + block + nl + s[m.start():]
 
 
+TITLE_LIMIT = 65  # Google shows about 60 characters; keep the words that describe the page
+
+
+def short_title(s):
+    """Drop the " | Korea Plainly" suffix from titles too long to show in search results."""
+    m = re.search(r"<title>(.*?)</title>", s, re.S | re.I)
+    if not m:
+        return s
+    text = re.sub(r"\s+", " ", m.group(1)).strip()
+    suffix = " | " + SITE_NAME
+    if text.endswith(suffix) and len(text) > TITLE_LIMIT:
+        return s[:m.start(1)] + text[: -len(suffix)] + s[m.end(1):]
+    return s
+
+
 def patch(s, name):
     nl = "\r\n" if "\r\n" in s else "\n"
+    s = short_title(s)
 
     if not re.search(r'rel=["\'](?:shortcut )?icon["\']', s, re.I):
         s = before_head_end(s, FAVICON, nl)
