@@ -164,10 +164,13 @@
     ]
   },
   "korean-convenience-store-meals": {
-    "file": "photo-korean-convenience-store-meals.jpg",
-    "credit": "Photo: Jhcbs1019, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Seoul_Ring_Expwy_GuriNamyangju_TGPA_Parkinglot_and_Convenience_Store_1.jpg",
-    "query": "GS25 Seoul"
+    "file": "thumb-convenience-meals.jpg",
+    "credit": "",
+    "source": "",
+    "manual": true,
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Seoul_Ring_Expwy_GuriNamyangju_TGPA_Parkinglot_and_Convenience_Store_1.jpg"
+    ]
   },
   "korean-convenience-store-tips": {
     "file": "thumb-convenience-store.jpg",
