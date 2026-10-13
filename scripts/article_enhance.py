@@ -111,6 +111,14 @@ def add_breadcrumbs(s, name, trail, nl):
     return re.sub(r"</head>", lambda m: block + nl + m.group(0), s, count=1, flags=re.I)
 
 
+def article_meta(s, published, nl):
+    """og:type article and article:published_time, which Pinterest rich pins and others read."""
+    s = re.sub(r'(<meta\s+property="og:type"\s+content=")website(")', r"\1article\2", s, count=1)
+    s = re.sub(r'<meta property="article:published_time" content="[^"]*">\r?\n?', "", s)
+    tag = f'<meta property="article:published_time" content="{published}">'
+    return re.sub(r"</head>", lambda m: tag + nl + m.group(0), s, count=1, flags=re.I)
+
+
 def main():
     files, stamps = article_files()
     published_list = json.loads(read(PUBLISHED_PATH)) if PUBLISHED_PATH.exists() else []
@@ -129,6 +137,7 @@ def main():
         trail = (crumb_trail(region=pl.get("region"), category=pl.get("category")) if pl
                  else crumb_trail(guide_category=guide_cats.get(name)))
         new = add_breadcrumbs(add_jsonld(add_date(s, published, nl), name, published, nl), name, trail, nl)
+        new = article_meta(new, published, nl)
         if new != s:
             write(p, new)
             changed += 1

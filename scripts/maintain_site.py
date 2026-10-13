@@ -26,6 +26,7 @@ STEPS = [
     "optimize_images.py",             # shrink oversized photos
     "responsive_images.py",           # small WebP copies + srcset so phones download less
     "seo_basics.py",                  # favicon, og tags, noindex for thin hubs
+    "make_pins.py",                   # Pinterest pin images + bulk-upload CSV in pins/
     "build_search_index.py",          # search-index.json for search.html
     "update_sitemap.py",              # sitemap without noindex pages
     "site_audit.py",                  # fail on broken links / missing basics
