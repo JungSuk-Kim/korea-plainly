@@ -2,7 +2,7 @@
 """Make a vertical short video (1080x1920) from a script in content/shorts/<name>.json.
 
     python scripts/make_short.py content/shorts/seoul-3-day-itinerary.json            # silent, captions only
-    python scripts/make_short.py content/shorts/seoul-3-day-itinerary.json --voice    # with AI narration (OPENAI_API_KEY)
+    python scripts/make_short.py content/shorts/seoul-3-day-itinerary.json --voice    # AI narration + spoken subtitles (OPENAI_API_KEY)
 
 Each slide pans slowly across one of the site's photos with a caption on top; the
 last slide is an end card. Output goes to _shorts/ (not published on the site),
@@ -11,6 +11,7 @@ with a description file that credits every photo, as their licences require.
 import argparse
 import json
 import os
+import re
 import subprocess
 import tempfile
 from pathlib import Path
@@ -22,6 +23,31 @@ FONTS = Path(__file__).resolve().parent / "fonts"
 W, H, FPS = 1080, 1920, 30
 NAVY, RED, WHITE, CREAM = (23, 36, 60), (201, 65, 58), (255, 255, 255), (247, 245, 239)
 SILENT_SECONDS = 3.6
+PHOTOS = ROOT / "_shorts" / "photos"
+PHOTO_LOG = ROOT / "content" / "shorts" / "photos.json"   # {query: {file, source, credit}}
+
+
+def slide_photo(slide, taken):
+    """The slide's photo: "image" (one of the site's photos) or "photo_query", a Wikimedia Commons search
+    for a photo of exactly the place the narration names. Found photos are kept, so a rerun uses the same one."""
+    if slide.get("image"):
+        return slide["image"]
+    q = slide["photo_query"]
+    log = json.loads(PHOTO_LOG.read_text(encoding="utf-8")) if PHOTO_LOG.exists() else {}
+    if q not in log:
+        import sys
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from guide_photos import download, search_commons
+        hit = search_commons(q, reject=sorted(taken), require=slide.get("require", ()))
+        if not hit:
+            raise SystemExit(f"no freely licensed photo for {q!r}; change the query or set an image")
+        PHOTOS.mkdir(parents=True, exist_ok=True)
+        name = re.sub(r"[^a-z0-9]+", "-", q.lower()).strip("-") + ".jpg"
+        download(hit["url"], PHOTOS / name)
+        log[q] = {"file": f"_shorts/photos/{name}", "source": hit["source"], "credit": hit["credit"]}
+        PHOTO_LOG.write_text(json.dumps(log, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    taken.add(log[q]["source"])
+    return log[q]["file"]
 
 
 def font(size, bold=True):
@@ -93,10 +119,102 @@ def tts(text, path):
     Path(path).write_bytes(r.content)
 
 
+def word_times(audio, text):
+    """[(word, start, end)] for the script's words, timed to the narration.
+
+    Uses OpenAI's transcription word timestamps when they line up with the script
+    (the script's own spelling is shown, so place names stay correct); otherwise
+    spreads the words over the speech by length."""
+    words = text.split()
+    total = duration(audio)
+    span = (0.05, total - 0.05)
+    try:
+        import requests
+        with open(audio, "rb") as f:
+            r = requests.post("https://api.openai.com/v1/audio/transcriptions", timeout=120,
+                              headers={"Authorization": f"Bearer {os.environ['OPENAI_API_KEY']}"},
+                              data={"model": "whisper-1", "response_format": "verbose_json",
+                                    "timestamp_granularities[]": "word"},
+                              files={"file": (Path(audio).name, f, "audio/mpeg")})
+        r.raise_for_status()
+        heard = r.json().get("words") or []
+        if heard:
+            span = (heard[0]["start"], heard[-1]["end"])
+        if len(heard) == len(words):
+            return [(w, h["start"], h["end"]) for w, h in zip(words, heard)]
+    except Exception as e:  # timing by length is good enough as a fallback
+        print(f"word timing fallback: {e}")
+    weights = [len(w) + 2 for w in words]
+    t, out = span[0], []
+    for w, k in zip(words, weights):
+        d = (span[1] - span[0]) * k / sum(weights)
+        out.append((w, t, t + d))
+        t += d
+    return out
+
+
+def chunks(timed, max_words=4, max_chars=22):
+    """Group timed words into short subtitle lines, breaking after punctuation."""
+    out, cur = [], []
+    for w in timed:
+        if cur and (len(cur) >= max_words or len(" ".join(x[0] for x in cur + [w])) > max_chars):
+            out.append(cur)
+            cur = []
+        cur.append(w)
+        if w[0][-1] in ".,?!:;":
+            out.append(cur)
+            cur = []
+    if cur:
+        out.append(cur)
+    # don't leave one word on its own ("Market.") when it fits with the words before it
+    merged = []
+    for c in out:
+        prev = merged[-1] if merged else None
+        if (prev and len(c) == 1 and prev[-1][0][-1] not in ".?!"
+                and len(" ".join(x[0] for x in prev + c)) <= max_chars + 10):
+            prev.extend(c)
+        else:
+            merged.append(c)
+    out = merged
+    # each line stays up until the next one starts, so the screen never flickers empty mid-sentence
+    lines = []
+    for i, c in enumerate(out):
+        end = out[i + 1][0][1] if i + 1 < len(out) else c[-1][2] + 0.3
+        lines.append((" ".join(x[0] for x in c).rstrip(","), c[0][1], end))
+    return lines
+
+
+def subtitle_png(text, path, y_center):
+    """White bold text with a dark outline, centred, as spoken."""
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    f = font(78)
+    lines = wrap(d, text, f, W - 140)
+    y = y_center - len(lines) * 92 // 2
+    for line in lines:
+        tw = d.textlength(line, font=f)
+        d.text(((W - tw) / 2, y), line, font=f, fill=WHITE, stroke_width=7, stroke_fill=(12, 14, 20))
+        y += 92
+    img.save(path)
+
+
 def duration(path):
     out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)],
                          capture_output=True, text=True)
     return float(out.stdout.strip())
+
+
+def sub_inputs(subs, dur):
+    return [a for png, _, _ in subs for a in ("-loop", "1", "-t", f"{dur:.2f}", "-i", str(png))]
+
+
+def sub_chain(subs, first_input, label_in):
+    """Filter text overlaying each subtitle PNG only while it is being spoken."""
+    chain, cur = "", label_in
+    for k, (_, a, b) in enumerate(subs):
+        chain += f";[{cur}][{first_input + k}]overlay=0:0:enable='between(t,{a:.2f},{b:.2f})'[s{k}]"
+        cur = f"s{k}"
+    return chain, cur
 
 
 def run(cmd):
@@ -112,18 +230,25 @@ def segment(slide, i, tmp, voice):
         dur = duration(audio) + 0.45
     else:
         dur = SILENT_SECONDS if not slide.get("end") else 3.0
+    subs = []
+    if audio:
+        for k, (text, a, b) in enumerate(chunks(word_times(audio, slide["voice"]))):
+            png = tmp / f"sub{i:02d}_{k:02d}.png"
+            subtitle_png(text, png, int(H * 0.30) if slide.get("end") else int(H * 0.52))
+            subs.append((png, a, min(b, dur)))
     audio_in = ["-i", str(audio)] if audio else ["-f", "lavfi", "-t", f"{dur:.2f}", "-i", "anullsrc=r=44100:cl=stereo"]
     fade = f"fade=t=in:st=0:d=0.25,fade=t=out:st={dur - 0.25:.2f}:d=0.25"
     if slide.get("end"):
         card = tmp / f"end{i:02d}.png"
         end_card(slide, card)
-        run(["ffmpeg", "-y", "-loop", "1", "-t", f"{dur:.2f}", "-i", str(card), *audio_in,
-             "-filter_complex", f"[0]fps={FPS},{fade},format=yuv420p[v]", "-map", "[v]", "-map", "1:a",
+        chain, last = sub_chain(subs, 2, "base")
+        run(["ffmpeg", "-y", "-loop", "1", "-t", f"{dur:.2f}", "-i", str(card), *audio_in, *sub_inputs(subs, dur),
+             "-filter_complex", f"[0]fps={FPS}[base]{chain};[{last}]{fade},format=yuv420p[v]", "-map", "[v]", "-map", "1:a",
              "-af", "apad", "-t", f"{dur:.2f}", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
              "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-ac", "2", str(seg)])
         return seg, dur
     # photo scaled to fill the height; pan slowly from left to right across it
-    with Image.open(ROOT / slide["image"]) as im:
+    with Image.open(ROOT / slide["file"]) as im:
         im = im.convert("RGB")
         scale = H / im.height
         pan = im.resize((max(W, int(im.width * scale)), H), Image.LANCZOS)
@@ -133,9 +258,10 @@ def segment(slide, i, tmp, voice):
     caption_overlay(slide, over)
     travel = max(pan.width - W, 0)
     x = f"min({travel},{travel}*t/{dur:.2f})" if i % 2 == 0 else f"max(0,{travel}-{travel}*t/{dur:.2f})"
+    chain, last = sub_chain(subs, 3, "base")
     run(["ffmpeg", "-y", "-loop", "1", "-t", f"{dur:.2f}", "-i", str(photo), "-loop", "1", "-t", f"{dur:.2f}", "-i", str(over),
-         *audio_in, "-filter_complex",
-         f"[0]fps={FPS},crop={W}:{H}:x='{x}':y=0[bg];[bg][1]overlay=0:0,{fade},format=yuv420p[v]",
+         *audio_in, *sub_inputs(subs, dur), "-filter_complex",
+         f"[0]fps={FPS},crop={W}:{H}:x='{x}':y=0[bg];[bg][1]overlay=0:0[base]{chain};[{last}]{fade},format=yuv420p[v]",
          "-map", "[v]", "-map", "2:a", "-af", "apad", "-t", f"{dur:.2f}", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
          "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-ac", "2", str(seg)])
     return seg, dur
@@ -143,8 +269,14 @@ def segment(slide, i, tmp, voice):
 
 def credits(spec):
     out = []
+    log = json.loads(PHOTO_LOG.read_text(encoding="utf-8")) if PHOTO_LOG.exists() else {}
     for s in spec["slides"]:
         img = s.get("image")
+        if s.get("photo_query") in log:
+            c = log[s["photo_query"]]["credit"]
+            if c not in out:
+                out.append(c)
+            continue
         if not img:
             continue
         credit = ""
@@ -174,10 +306,16 @@ def main():
     name = Path(args.spec).stem + ("-voice" if args.voice else "-silent")
     with tempfile.TemporaryDirectory() as t:
         tmp = Path(t)
+        taken = set()
+        for s in spec["slides"]:
+            if not s.get("end"):
+                s["file"] = slide_photo(s, taken)
         segs = [segment(s, i, tmp, args.voice) for i, s in enumerate(spec["slides"])]
         lst = tmp / "list.txt"
         lst.write_text("".join(f"file '{p}'\n" for p, _ in segs))
-        run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", "-movflags", "+faststart",
+        # voiced videos: level the narration to the loudness phones expect (about -14 LUFS)
+        audio = ["-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:a", "aac", "-b:a", "160k", "-ar", "44100"] if args.voice else ["-c:a", "copy"]
+        run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c:v", "copy", *audio, "-movflags", "+faststart",
              str(out_dir / f"{name}.mp4")])
     total = sum(d for _, d in segs)
     desc = [spec["title"], "", f"Full guide: https://korea-plainly.com/{spec['article']}.html", "",
