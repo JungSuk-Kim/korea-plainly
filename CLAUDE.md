@@ -39,6 +39,13 @@ reply in Korean, keep site content in plain British-leaning English. README.md e
   Fix bad ones with the "Rewrite regional articles" workflow rather than by hand.
 - One article per place. The regional generator skips places already in `content/published.json`.
 
+## Short videos
+
+`scripts/make_short.py` renders a vertical short from `content/shorts/<name>.json` (workflow "Make short video"; output
+in `_shorts/`, not published). Slides use a site photo (`image`) or a Commons search for the exact place named
+(`photo_query`, logged in `content/shorts/photos.json`). Once the owner uploads a short, add it to `content/videos.json`
+with a poster frame in `img/`; `scripts/embed_videos.py` then shows it in its article.
+
 ## Checking the bots
 
 `gh` works through the REST API only (`gh run list` fails):

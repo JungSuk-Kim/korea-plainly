@@ -23,6 +23,7 @@ STEPS = [
     "article_enhance.py",             # publish date + Article structured data
     "home_latest.py",                 # home page "Latest guides" from the newest articles
     "article_skin.py",                # one article design (article.css), related photo cards, visit info card
+    "embed_videos.py",                # our YouTube Shorts inside their articles (content/videos.json)
     "optimize_images.py",             # shrink oversized photos
     "responsive_images.py",           # small WebP copies + srcset so phones download less
     "seo_basics.py",                  # favicon, og tags, noindex for thin hubs
