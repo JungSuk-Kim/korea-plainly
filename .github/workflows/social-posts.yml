@@ -1,0 +1,53 @@
+name: Social posts
+
+# Shares one article per run on Bluesky (scripts/post_social.py), newest first,
+# then works slowly through older articles. Twice a day: about 10:43 and 19:43 Korea time.
+on:
+  schedule:
+    - cron: "43 1 * * *"
+    - cron: "43 10 * * *"
+  workflow_dispatch:
+    inputs:
+      max:
+        description: "How many articles to share in this run"
+        default: "1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-bot
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests pillow
+
+      - name: Share on Bluesky
+        env:
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+        run: python scripts/post_social.py bluesky --max "${{ inputs.max || '1' }}"
+
+      - name: Record what was shared
+        if: always()
+        run: |
+          git config user.name "Korea Plainly Bot"
+          git config user.email "actions@github.com"
+          git add content/social_posted.json
+          if git diff --cached --quiet; then
+            echo "Nothing to record."
+          else
+            git commit -m "Social posts"
+            git pull --rebase
+            git push
+          fi

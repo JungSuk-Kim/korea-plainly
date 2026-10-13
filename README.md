@@ -34,6 +34,9 @@ Two workflows, both in `.github/workflows/`:
 - **Rewrite regional articles** (`rewrite-regional.yml`, run by hand): rewrites existing regional
   articles with the current writing rules (`scripts/rewrite_regional.py`); `--flagged` picks the ones that talk
   about their sources.
+- **Social posts** (`social-posts.yml`, about 10:43 and 19:43 Korea time, or by hand): shares one article per run on
+  Bluesky with `scripts/post_social.py` (newest first, then older ones); what was shared is in
+  `content/social_posted.json`. Needs the secrets `BLUESKY_HANDLE` and `BLUESKY_APP_PASSWORD`.
 - **Site Maintenance** (`site-maintenance.yml`): runs `scripts/maintain_site.py` whenever you
   push changes to pages, `style.css`, `scripts/` or `content/`, or by hand.
 
