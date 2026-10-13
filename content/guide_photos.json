@@ -37,10 +37,12 @@
   },
   "how-to-order-korean-food": {
     "file": "photo-how-to-order-korean-food.jpg",
-    "credit": "Photo: taylorandayumi, CC BY 2.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Korea-Seoul-Sosim-Vegetarian_restaurant-01.jpg",
+    "credit": "Photo: kallerna, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Dongdaemun_Shopping_Complex,_Seoul_2.jpg",
     "query": "Gwangjang Market Seoul food",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Korea-Seoul-Sosim-Vegetarian_restaurant-01.jpg"
+    ]
   },
   "incheon-airport-to-seoul": {
     "file": "photo-incheon-airport-to-seoul.jpg",
@@ -83,10 +85,12 @@
   },
   "korea-public-transport-transfers": {
     "file": "photo-korea-public-transport-transfers.jpg",
-    "credit": "Photo: Twotwo2019, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Seoultech_Bungabang_bus_stop.jpg",
+    "credit": "Photo: STA3816, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul_City_Bus_152.jpg",
     "query": "Seoul city bus",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Seoultech_Bungabang_bus_stop.jpg"
+    ]
   },
   "korea-recycling-guide": {
     "file": "photo-korea-recycling-guide.jpg",
@@ -115,10 +119,12 @@
   },
   "korea-travel-mistakes": {
     "file": "photo-korea-travel-mistakes.jpg",
-    "credit": "Photo: by Tom@HK, CC BY 2.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Seoul-Myeongdong-01.jpg",
+    "credit": "Photo: Sergiy Galyonkin from Raleigh, USA, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Streets_of_Seoul_-_Flickr_-_Sergiy_Galyonkin.jpg",
     "query": "Myeongdong shopping street",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Seoul-Myeongdong-01.jpg"
+    ]
   },
   "korea-weather-by-season": {
     "file": "photo-korea-weather-by-season.jpg",
@@ -161,8 +167,7 @@
     "file": "photo-korean-convenience-store-meals.jpg",
     "credit": "Photo: Jhcbs1019, CC BY-SA 4.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Seoul_Ring_Expwy_GuriNamyangju_TGPA_Parkinglot_and_Convenience_Store_1.jpg",
-    "query": "GS25 Seoul",
-    "retry": true
+    "query": "GS25 Seoul"
   },
   "korean-convenience-store-tips": {
     "file": "thumb-convenience-store.jpg",
@@ -198,10 +203,12 @@
   },
   "korean-restaurant-words": {
     "file": "photo-korean-restaurant-words.jpg",
-    "credit": "Photo: kallerna, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Food_waste_Seoul.jpg",
+    "credit": "Photo: travelmate2021 / 東大策略顧問有限公司) from Taiwan, CC BY 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul-Insadong-Restaurant-01.jpg",
     "query": "restaurant Insadong Seoul",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Food_waste_Seoul.jpg"
+    ]
   },
   "korean-street-food-guide": {
     "file": "thumb-street-food.jpg",
@@ -226,10 +233,12 @@
   },
   "seoul-first-time": {
     "file": "photo-seoul-first-time.jpg",
-    "credit": "Photo: Matt Kieffer from London, United Kingdom, CC BY-SA 2.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Seoul_city_skyline_at_night_from_Namsan_Mountain_(49174548523).jpg",
+    "credit": "Photo: USAGI_POST, CC0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Han_River_Seoul_skyline_Pixabay_1214950.jpg",
     "query": "Seoul skyline Han River",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Seoul_city_skyline_at_night_from_Namsan_Mountain_(49174548523).jpg"
+    ]
   },
   "seoul-neighborhoods-guide": {
     "file": "photo-seoul-neighborhoods-guide.jpg",
