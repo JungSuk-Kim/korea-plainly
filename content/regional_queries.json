@@ -1,26 +1,75 @@
 {
+  "_about": "Searches the regional bot uses to pick a place for each category. Each round uses the next search in the list ({region} is filled in); if every result is already used, it tries the following one.",
   "travel": {
-    "query": "best attraction in {region} Korea for first time visitors"
+    "queries": [
+      "most famous landmark in {region} Korea",
+      "scenic viewpoint in {region} Korea",
+      "beach or coastal walk in {region} Korea",
+      "historic site in {region} Korea",
+      "famous park or garden in {region} Korea"
+    ]
   },
   "food": {
-    "query": "best Korean restaurant in {region} Korea"
+    "queries": [
+      "famous local specialty restaurant in {region} Korea",
+      "traditional Korean restaurant in {region} Korea popular with locals",
+      "famous food street or market food in {region} Korea",
+      "Korean barbecue restaurant in {region} Korea",
+      "seafood restaurant in {region} Korea"
+    ]
   },
   "cafe": {
-    "query": "best cafe in {region} Korea"
+    "queries": [
+      "cafe with a view in {region} Korea",
+      "hanok cafe in {region} Korea",
+      "famous bakery in {region} Korea",
+      "specialty coffee roastery in {region} Korea",
+      "traditional tea house in {region} Korea"
+    ]
   },
   "shopping": {
-    "query": "best shopping area in {region} Korea"
+    "queries": [
+      "traditional market in {region} Korea",
+      "shopping street in {region} Korea",
+      "night market in {region} Korea",
+      "local crafts and souvenir shops in {region} Korea",
+      "department store or shopping mall in {region} Korea"
+    ]
   },
   "culture": {
-    "query": "best cultural experience in {region} Korea"
+    "queries": [
+      "famous temple in {region} Korea",
+      "museum in {region} Korea",
+      "palace or traditional village in {region} Korea",
+      "cultural heritage site in {region} Korea",
+      "traditional culture experience in {region} Korea"
+    ]
   },
   "leisure": {
-    "query": "best leisure activity in {region} Korea"
+    "queries": [
+      "hiking trail or mountain in {region} Korea",
+      "popular park in {region} Korea",
+      "cable car or observation deck in {region} Korea",
+      "spa or jjimjilbang in {region} Korea",
+      "outdoor activity in {region} Korea"
+    ]
   },
   "stay": {
-    "query": "best hotel in {region} Korea"
+    "queries": [
+      "best hotel in {region} Korea",
+      "hanok stay in {region} Korea",
+      "boutique hotel in {region} Korea",
+      "resort in {region} Korea",
+      "guesthouse in {region} Korea"
+    ]
   },
   "local-guide": {
-    "query": "best local experience in {region} Korea"
+    "queries": [
+      "night view spot in {region} Korea",
+      "popular walking street in {region} Korea",
+      "local neighborhood to explore in {region} Korea",
+      "riverside or lakeside walk in {region} Korea",
+      "famous street food alley in {region} Korea"
+    ]
   }
 }

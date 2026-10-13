@@ -144,6 +144,20 @@ def place_info(place, n_match=False):
     }
 
 
+# Places visitors don't travel for: single-brand shops, airports, offices.
+AVOID_TYPES = {"clothing_store", "shoe_store", "cell_phone_store", "electronics_store", "furniture_store",
+               "hardware_store", "home_goods_store", "jewelry_store", "airport", "corporate_office",
+               "car_dealer", "gas_station", "convenience_store", "supermarket", "grocery_store"}
+
+
+def query_list(cat_key):
+    """The searches for a category, starting with the one for this round."""
+    cfg = queries[cat_key]
+    qs = cfg.get("queries") or [cfg["query"]]
+    start = (round_no - 1) % len(qs)
+    return [q.format(region=region_name) for q in qs[start:] + qs[:start]]
+
+
 def choose_place(category, query):
     google = google_text_search(query)
     if not google:
@@ -171,6 +185,8 @@ def choose_place(category, query):
         fits = CATEGORY_TYPES.get(category)
         if fits:
             score += 25 if fits(p.get("types", [])) else -60
+        if AVOID_TYPES & set(p.get("types", [])) and not (category == "shopping" and "shopping_mall" in p.get("types", [])):
+            continue
         candidates.append((score, p, n_match))
 
     if not candidates:
@@ -345,10 +361,15 @@ def main():
     made = []
     for category in categories:
         cat_key = category["slug"] if isinstance(category, dict) else str(category)
-        cfg = queries[cat_key]
-        query = cfg["query"].format(region=region_name)
-
-        place = choose_place(cat_key, query)
+        place, last_error = None, None
+        for query in query_list(cat_key):
+            try:
+                place = choose_place(cat_key, query)
+                break
+            except RuntimeError as e:  # every result already used: try the next search
+                last_error = e
+        if not place:
+            raise last_error
         used_places.add(place["name"].strip().lower())  # one place per article, even within the same day
         title_hint = f"{place['name']} {region_name} {category['name'] if isinstance(category, dict) else cat_key}"
         slug_base = slugify(f"{region['slug']}-{cat_key}-{place['name']}")
