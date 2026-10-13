@@ -57,7 +57,8 @@ def google_text_search(query):
             "places.id","places.displayName","places.formattedAddress",
             "places.rating","places.userRatingCount","places.websiteUri",
             "places.googleMapsUri","places.regularOpeningHours",
-            "places.priceLevel","places.types","places.photos"
+            "places.priceLevel","places.types","places.photos",
+            "places.primaryType","places.primaryTypeDisplayName","places.editorialSummary"
         ])
     }
     r = requests.post(url, headers=headers, json={
@@ -108,6 +109,41 @@ def norm_name(s):
     s = clean_text(s).lower()
     return re.sub(r"[^a-z0-9가-힣]+", "", s)
 
+# What a place must look like (Google place types) to fit a category. Categories
+# not listed accept any place. A place that doesn't fit is only used when nothing
+# else is left, which stops a barbecue restaurant being written up as a cafe.
+CATEGORY_TYPES = {
+    "food": lambda t: any(x.endswith("restaurant") or x in ("food_court", "meal_takeaway") for x in t),
+    "cafe": lambda t: any(x in ("cafe", "coffee_shop", "bakery", "tea_house", "dessert_shop", "cafeteria") for x in t),
+    "stay": lambda t: any(x in ("lodging", "hotel", "resort_hotel", "guest_house", "hostel", "motel", "bed_and_breakfast") for x in t),
+    "shopping": lambda t: any(("store" in x or "mall" in x or "market" in x or x == "shopping_mall") for x in t),
+}
+
+
+def place_info(place, n_match=False):
+    """The facts about one Google Places result that the writer is given."""
+    name = clean_text((place.get("displayName") or {}).get("text"))
+    blogs = naver_blog(f"{region_name} {name}")
+    return {
+        "name": name,
+        "address": clean_text(place.get("formattedAddress")),
+        "rating": place.get("rating"),
+        "review_count": place.get("userRatingCount"),
+        "website": place.get("websiteUri"),
+        "google_maps": place.get("googleMapsUri"),
+        "opening_hours": place.get("regularOpeningHours"),
+        "price_level": place.get("priceLevel"),
+        "types": place.get("types", []),
+        "kind": clean_text((place.get("primaryTypeDisplayName") or {}).get("text")) or place.get("primaryType", ""),
+        "summary": clean_text((place.get("editorialSummary") or {}).get("text")),
+        "naver_match": bool(n_match),
+        "naver_results": [{"title": clean_text(x.get("title")), "description": clean_text(x.get("description"))}
+                          for x in blogs[:5]],
+        "google_place_id": place.get("id"),
+        "photos": place.get("photos", [])
+    }
+
+
 def choose_place(category, query):
     google = google_text_search(query)
     if not google:
@@ -132,6 +168,9 @@ def choose_place(category, query):
         # and a matching Naver local result. Do not treat Naver data as a
         # numeric rating because the public Naver Search API does not expose it.
         score = (g_rating * 20) + min(g_count, 5000) / 100 + n_match * 18
+        fits = CATEGORY_TYPES.get(category)
+        if fits:
+            score += 25 if fits(p.get("types", [])) else -60
         candidates.append((score, p, n_match))
 
     if not candidates:
@@ -139,33 +178,7 @@ def choose_place(category, query):
 
     candidates.sort(key=lambda x: x[0], reverse=True)
     score, place, n_match = candidates[0]
-    name = clean_text((place.get("displayName") or {}).get("text"))
-
-    blogs = naver_blog(f"{region_name} {name}")
-    naver_signals = [
-        {
-            "title": clean_text(x.get("title")),
-            "description": clean_text(x.get("description")),
-            "link": x.get("link", "")
-        }
-        for x in blogs[:5]
-    ]
-
-    return {
-        "name": name,
-        "address": clean_text(place.get("formattedAddress")),
-        "rating": place.get("rating"),
-        "review_count": place.get("userRatingCount"),
-        "website": place.get("websiteUri"),
-        "google_maps": place.get("googleMapsUri"),
-        "opening_hours": place.get("regularOpeningHours"),
-        "price_level": place.get("priceLevel"),
-        "types": place.get("types", []),
-        "naver_match": bool(n_match),
-        "naver_results": naver_signals,
-        "google_place_id": place.get("id"),
-        "photos": place.get("photos", [])
-    }
+    return place_info(place, n_match)
 
 def google_place_image(place):
     photos = place.get('photos') or []
@@ -221,32 +234,45 @@ def download_image(info, slug):
 
 def ask_openai(category, place):
     prompt = f"""
-Write a high-quality English travel article for Korea Plainly.
+Write an English travel article for Korea Plainly, a guide for first-time foreign visitors to Korea.
 
-Region: {region_name}
-Category: {category}
 Place: {place['name']}
+What it is (Google): {place.get('kind') or ', '.join(place.get('types', [])[:4])}
+Short description (Google, may be empty): {place.get('summary', '')}
+Region: {region_name}
 Address: {place['address']}
-Google rating: {place['rating']}
-Google review count: {place['review_count']}
-Google Maps URL: {place['google_maps']}
+Google rating: {place['rating']} from {place['review_count']} reviews
 Official website: {place['website']}
-Naver local match: {place['naver_match']}
-Naver recent search signals: {json.dumps(place['naver_results'], ensure_ascii=False)}
+Site section it will appear in: {category}
+Background notes from recent Korean blog posts (may be noisy; use only what is clearly about this place):
+{json.dumps(place['naver_results'], ensure_ascii=False)}
 
-Rules:
-- Do not invent facts, prices, opening hours, menus, awards, reservations, or transportation details.
-- Treat Google rating/review count as current verification data.
-- Mention that Naver was also checked only when useful; never invent a Naver rating.
-- Make the article genuinely useful to foreign visitors.
+Voice:
+- Write as a knowledgeable local guide talking directly to the reader: confident, warm, plain English.
+- Never talk about your sources or what is unknown. Do not write "search results", "Naver", "blog",
+  "listing", "according to", "reviews suggest", "the information provided", "not confirmed",
+  "we could not verify", "this article" or "this guide". Never say the place is "listed under" a category.
+- If you don't know a detail, leave it out instead of hedging about it. At most one sentence in the
+  whole article (in "Good to know") may tell readers to check current hours or prices on Naver Map.
+- Describe the place as what it really is. If it doesn't match the site section, still write it
+  accurately as what it is; the section name is only where the article is filed.
+
+Facts:
+- Do not invent prices, opening hours, specific menu items, awards, booking rules, or travel times.
+- General, reliable context is welcome: the neighbourhood, what this kind of place is like in Korea,
+  local customs, how to combine it with well-known nearby sights.
+- Mention the Google rating and review count once, naturally.
+
+Format:
 - 700-1000 words.
-- Strong H1 title.
-- Include a short summary box.
-- Use clear H2 sections.
-- Include practical "Good to know" information.
-- End with a concise FAQ of exactly 3 questions and answers.
-- Include a "Useful links" section with Google Maps and official website when available.
-- Output ONLY the article body HTML beginning with <h1> and ending before </article>.
+- <h1>: the place name first, then a colon and a short, specific description; at most 60 characters.
+- Then <div class="summary"><p><strong>At a glance:</strong> ...</p></div>. Its first sentence (under
+  150 characters) says what the place is and why it's worth a visit; it is used as the search snippet.
+- Clear <h2> sections a visitor needs: what it is, what to see, do or order, how to plan the visit
+  (time needed, best time of day, what to pair it with nearby), and "Good to know".
+- End with <section class="faq"><h2>FAQ</h2> and exactly 3 questions as <h3> with <p> answers.</section>
+- No "Useful links" section; links are added automatically.
+- Output ONLY the HTML, starting with <h1> and ending after the FAQ section.
 """
     r = client.responses.create(model=MODEL, input=prompt)
     return r.output_text.strip()
@@ -260,7 +286,9 @@ def render_article(category, place, body, image_name, slug, credit=None):
     title_text = clean_text(title.group(1)) if title else f"{place['name']} in {region_name}: A Practical Guide"
     body_text = re.sub(r"<h1[^>]*>.*?</h1>", " ", body, count=1, flags=re.S)
     description = clean_text(re.sub(r"<[^>]+>", " ", body_text))
-    description = re.sub(r"^At a glance:\s*", "", description)[:155]
+    description = re.sub(r"^(At a glance|In brief|Summary):\s*", "", description)
+    first = re.match(r"(.{40,155}?[.!?])(\s|$)", description)
+    description = first.group(1) if first else description[:155].rsplit(" ", 1)[0]
     caption = ""
     if credit and credit.get("credit"):
         text = html.escape(credit["credit"])

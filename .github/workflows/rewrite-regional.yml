@@ -1,0 +1,59 @@
+name: Rewrite regional articles
+
+# Run by hand: rewrites existing regional articles with the current writing rules
+# (scripts/rewrite_regional.py), then runs maintenance and commits.
+on:
+  workflow_dispatch:
+    inputs:
+      slugs:
+        description: "Article slugs separated by spaces, or --flagged for every article that talks about its sources"
+        required: true
+        default: "--flagged"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-bot
+  cancel-in-progress: false
+
+jobs:
+  rewrite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests openai pillow
+
+      - name: Rewrite
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-6-luna
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          SLUGS: ${{ inputs.slugs }}
+        run: python scripts/rewrite_regional.py $SLUGS
+
+      - name: Maintain site
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+        run: python scripts/maintain_site.py
+
+      - name: Commit
+        run: |
+          git config user.name "Korea Plainly Bot"
+          git config user.email "actions@github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "Rewrite regional articles"
+            git pull --rebase
+            git push
+          fi

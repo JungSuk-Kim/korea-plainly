@@ -162,8 +162,10 @@ def related_cards(s, name, guide_thumbs):
 
 def regional_head(s, place, nl):
     """Kicker above the headline, and the headline above the cover photo."""
-    if 'data-kp="kicker"' not in s:
-        kicker = f'<p class="kp-kicker" data-kp="kicker">{esc(place.get("region", ""))} · {esc(place.get("category", ""))}</p>'
+    kicker = f'<p class="kp-kicker" data-kp="kicker">{esc(place.get("region", ""))} · {esc(place.get("category", ""))}</p>'
+    if 'data-kp="kicker"' in s:  # follow category changes in published.json
+        s = re.sub(r'<p class="kp-kicker" data-kp="kicker">.*?</p>', lambda m: kicker, s, count=1)
+    else:
         s = re.sub(r"(<h1[^>]*>)", lambda m: kicker + nl + m.group(1), s, count=1)
     art = re.search(r"<article[^>]*>", s)
     cover = re.search(r'<img\b[^>]*class="cover"[^>]*>(?:\s*<p class="photo-credit"[^>]*>.*?</p>)?', s, re.S)
