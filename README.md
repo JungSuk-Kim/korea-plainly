@@ -46,7 +46,7 @@ Two workflows, both in `.github/workflows/`:
 | `site_integrity_fix.py` | Main menu (defined once in `scripts/kp_nav.py`), its CSS, canonical tags |
 | `guide_photos.py` | Credited Wikimedia Commons photo for each guide that still has a text-card thumbnail (see below) |
 | `article_enhance.py` | "Published" date, Article and breadcrumb structured data on every article (dates in `content/page_dates.json`) |
-| `home_latest.py` | Home page "Latest guides": the two newest guides and two newest regional articles |
+| `home_latest.py` | Home page "Latest guides" (two newest guides and two newest regional articles) and the "Find Korea by place" photo grid of every region with a hub |
 | `article_skin.py` | One article design for every article (`article.css`): headline block, cover photo (older guides get their own image), related guides as photo cards, and on regional articles a "Visiting" card (region, address, Google rating with its date, Naver Map / Google Maps / website buttons) |
 | `optimize_images.py` | Shrinks large photos once (tagged so they are never recompressed) |
 | `seo_basics.py` | Favicon, og tags, `noindex` on thin hubs (removed automatically once a hub has 3+ guides) |
