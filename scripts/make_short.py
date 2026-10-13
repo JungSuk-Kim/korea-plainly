@@ -300,6 +300,40 @@ def credits(spec):
     return out
 
 
+MUSIC = ROOT / "_shorts" / "music"
+MUSIC_LIST = ROOT / "content" / "shorts" / "music.json"
+
+
+def pick_music(spec, name):
+    """(title, path) of the background track: the spec's "music", else one chosen by the video's name."""
+    tracks = json.loads(MUSIC_LIST.read_text(encoding="utf-8"))["tracks"]
+    title = spec.get("music") or tracks[sum(map(ord, name)) % len(tracks)]
+    path = MUSIC / f"{title}.mp3"
+    if not path.exists():
+        import requests
+        from urllib.parse import quote
+        r = requests.get(f"https://incompetech.com/music/royalty-free/mp3-royaltyfree/{quote(title)}.mp3", timeout=120,
+                         headers={"User-Agent": "KoreaPlainlyShorts/1.0 (https://korea-plainly.com)"})
+        r.raise_for_status()
+        MUSIC.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(r.content)
+    return title, path
+
+
+def mix_music(video, music, total, voiced, out):
+    """Lay the track under the video: quiet, fading in and out, and ducking further whenever the narrator speaks."""
+    fade = f"afade=t=in:d=1.5,afade=t=out:st={max(total - 2.5, 0):.2f}:d=2.5"
+    if voiced:
+        graph = (f"[0:a]asplit=2[v][key];[1:a]volume=0.30,{fade}[m];"
+                 "[m][key]sidechaincompress=threshold=0.02:ratio=10:attack=15:release=450[duck];"
+                 "[v][duck]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11[a]")
+    else:
+        graph = f"[1:a]volume=0.55,{fade},loudnorm=I=-16:TP=-1.5[a]"
+    run(["ffmpeg", "-y", "-i", str(video), "-stream_loop", "-1", "-i", str(music), "-filter_complex", graph,
+         "-map", "0:v", "-map", "[a]", "-t", f"{total:.2f}", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-ar", "44100",
+         "-movflags", "+faststart", str(out)])
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("spec")
@@ -318,14 +352,17 @@ def main():
         segs = [segment(s, i, tmp, args.voice) for i, s in enumerate(spec["slides"])]
         lst = tmp / "list.txt"
         lst.write_text("".join(f"file '{p}'\n" for p, _ in segs))
-        # voiced videos: level the narration to the loudness phones expect (about -14 LUFS)
-        audio = ["-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:a", "aac", "-b:a", "160k", "-ar", "44100"] if args.voice else ["-c:a", "copy"]
-        run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c:v", "copy", *audio, "-movflags", "+faststart",
-             str(out_dir / f"{name}.mp4")])
-    total = sum(d for _, d in segs)
+        joined = tmp / "joined.mp4"
+        run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", str(joined)])
+        total = sum(d for _, d in segs)
+        track, music = pick_music(spec, Path(args.spec).stem)
+        # music under the narration; the whole mix levelled to the loudness phones expect (about -14 LUFS)
+        mix_music(joined, music, total, args.voice, out_dir / f"{name}.mp4")
     desc = [spec["title"], "", f"Full guide: https://korea-plainly.com/{spec['article']}.html", "",
-            "#Seoul #KoreaTravel #SeoulItinerary #Korea #TravelTips", "", "Photos (Wikimedia Commons, text added):"]
+            spec.get("hashtags", "#KoreaTravel #Korea #TravelTips"), "", "Photos (Wikimedia Commons, text added):"]
     desc += [c.replace("Photo: ", "• ") for c in credits(spec)]
+    desc += ["", "Music:", f'"{track}" Kevin MacLeod (incompetech.com)',
+             "Licensed under Creative Commons: By Attribution 4.0 License", "http://creativecommons.org/licenses/by/4.0/"]
     (out_dir / f"{name}.txt").write_text("\n".join(desc) + "\n", encoding="utf-8")
     print(f"{name}.mp4: {total:.1f}s")
 
