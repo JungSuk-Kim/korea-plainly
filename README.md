@@ -51,6 +51,7 @@ Two workflows, both in `.github/workflows/`:
 | `article_enhance.py` | "Published" date, Article and breadcrumb structured data on every article (dates in `content/page_dates.json`) |
 | `home_latest.py` | Home page "Latest guides" (two newest guides and two newest regional articles) and the "Find Korea by place" photo grid of every region with a hub |
 | `article_skin.py` | One article design for every article (`article.css`): visible breadcrumb path (Home › Region › Group, or Home › Guides › Category; trail defined in `kp_nav.crumb_trail`), "On this page" contents box on articles with 4+ sections, headline block, cover photo (older guides get their own image), related guides as photo cards, and on regional articles a "Visiting" card (region, address, Google rating with its date, Naver Map / Google Maps / website buttons) |
+| `responsive_images.py` | Small WebP copies (480/800/1200px, in `img/`) of every large photo, with `srcset` so phones download only what they need; cover photos load first; `image-set()` overrides for the background photos in `style.css`; unused copies are deleted |
 | `optimize_images.py` | Shrinks large photos once (tagged so they are never recompressed) |
 | `seo_basics.py` | Favicon, og tags, `noindex` on thin hubs (removed automatically once a hub has 3+ guides) |
 | `build_search_index.py` | `search-index.json` used by `search.html` |

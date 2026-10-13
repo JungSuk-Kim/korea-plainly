@@ -1,3 +1,9 @@
+/* kp-responsive: smaller WebP backgrounds, written by scripts/responsive_images.py */
+.hero-visual.photo-seoul{background-image:image-set(url("img/seoul.40adc166.w1200.webp") type("image/webp"),url("seoul.jpg") type("image/jpeg"))!important}
+.story-art.photo-street{background-image:image-set(url("img/street.5386e01c.w1200.webp") type("image/webp"),url("street.jpg") type("image/jpeg"))!important}
+.story-art.photo-food{background-image:image-set(url("img/food.6e286a0d.w1200.webp") type("image/webp"),url("food.jpg") type("image/jpeg"))!important}
+.story-art.photo-store{background-image:image-set(url("img/store.438a5153.w1200.webp") type("image/webp"),url("store.jpg") type("image/jpeg"))!important}
+/* /kp-responsive */
 *{box-sizing:border-box}
 :root{--bg:#f7f5ef;--ink:#141518;--muted:#6d6e6a;--line:#dedbd2;--red:#c9413a;--navy:#17243c;--card:#fffdf8}
 html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}

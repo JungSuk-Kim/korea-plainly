@@ -24,6 +24,7 @@ STEPS = [
     "home_latest.py",                 # home page "Latest guides" from the newest articles
     "article_skin.py",                # one article design (article.css), related photo cards, visit info card
     "optimize_images.py",             # shrink oversized photos
+    "responsive_images.py",           # small WebP copies + srcset so phones download less
     "seo_basics.py",                  # favicon, og tags, noindex for thin hubs
     "build_search_index.py",          # search-index.json for search.html
     "update_sitemap.py",              # sitemap without noindex pages

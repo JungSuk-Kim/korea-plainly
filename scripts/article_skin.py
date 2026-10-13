@@ -24,7 +24,7 @@ from urllib.parse import quote
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kp_nav import crumb_trail  # noqa: E402
-CSS_VERSION = "2"
+CSS_VERSION = "3"
 CSS_LINK = f'<link rel="stylesheet" href="article.css?v={CSS_VERSION}">'
 FONTS_LINK = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700'
               '&family=Playfair+Display:ital,wght@0,600;1,600&display=swap">')

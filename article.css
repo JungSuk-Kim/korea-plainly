@@ -220,3 +220,10 @@
 .kp-article .kp-toc a:hover { border-bottom-color: currentColor; }
 .kp-article h2[id] { scroll-margin-top: 90px; }
 @media (max-width: 650px) { .kp-article .kp-toc ol { columns: 1; } }
+
+/* The breadcrumb and contents box are <nav> elements: keep the mobile menu rules in style.css
+   (nav{position:absolute;...}) from applying to them. */
+.kp-article nav.kp-crumbs,
+.kp-article nav.kp-toc { position: static; left: auto; right: auto; top: auto; box-shadow: none; z-index: auto; }
+.kp-article nav.kp-crumbs { display: flex; background: none; border: 0; padding: 0; }
+.kp-article nav.kp-toc { display: block; }
