@@ -1,10 +1,13 @@
 name: Daily Publish
 
-# Once a day (08:30 Korea time): write the new articles, then run every
+# Once a day (about 08:17 Korea time): write the new articles, then run every
 # maintenance step once and commit everything in a single commit.
+# GitHub sometimes delays or skips scheduled runs; the daily check starts this
+# workflow by hand when that happens, and the guard below stops a second
+# publish on the same day.
 on:
   schedule:
-    - cron: "30 23 * * *"
+    - cron: "17 23 * * *"
   workflow_dispatch:
 
 permissions:
@@ -19,16 +22,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+
+      - name: Skip if today's articles are already published
+        id: guard
+        run: |
+          today=$(TZ=Asia/Seoul date +%F)
+          if git log --since="30 hours ago" --format=%s | grep -q "^Daily publish $today"; then
+            echo "Already published today ($today)."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - uses: actions/setup-python@v5
+        if: steps.guard.outputs.skip != 'true'
         with:
           python-version: "3.12"
 
       - name: Install dependencies
+        if: steps.guard.outputs.skip != 'true'
         run: pip install requests openai pillow
 
       - name: Write a general guide
         id: guide
+        if: steps.guard.outputs.skip != 'true'
         continue-on-error: true
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -39,6 +58,7 @@ jobs:
 
       - name: Write the regional day
         id: regional
+        if: steps.guard.outputs.skip != 'true'
         continue-on-error: true
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
@@ -49,12 +69,14 @@ jobs:
         run: python scripts/generate_regional_day.py
 
       - name: Maintain site
+        if: steps.guard.outputs.skip != 'true'
         env:
           KP_FETCH_PHOTOS: "1"
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
         run: python scripts/maintain_site.py
 
       - name: Commit
+        if: steps.guard.outputs.skip != 'true'
         run: |
           git config user.name "Korea Plainly Bot"
           git config user.email "actions@github.com"
@@ -62,7 +84,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Nothing to commit."
           else
-            git commit -m "Daily publish $(date -u +%F)"
+            git commit -m "Daily publish $(TZ=Asia/Seoul date +%F)"
             git pull --rebase
             git push
           fi
