@@ -41,6 +41,13 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 # Hand-picked search words for the guides that exist today. New guides fall
 # back to words from their title.
 QUERIES = {
+    "day-trips-from-seoul": "Hwaseong Fortress Suwon",
+    "gyeongju-1-day-itinerary": "Donggung Palace Wolji Pond Gyeongju",
+    "jeju-3-day-itinerary": "Seongsan Ilchulbong Jeju",
+    "korea-weather-by-season": "Seoul cherry blossom season",
+    "korea-entry-k-eta-e-arrival": "Incheon International Airport terminal",
+    "korea-tax-refund-guide": "Myeongdong shopping street Seoul",
+    "korea-autumn-foliage-2026": "autumn foliage Korea maple",
     "seoul-3-day-itinerary": "Bukchon Hanok Village Seoul",
     "busan-1-day-itinerary": "Haeundae Beach Busan",
     "korean-convenience-store-tips": "convenience store Seoul",
