@@ -9,7 +9,7 @@ reply in Korean, keep site content in plain British-leaning English. README.md e
   (Daily Publish at 08:17 KST, Site Maintenance on every push), and both share the concurrency group `site-bot`.
 - Never force-push, never delete articles outright. To retire an article, merge it (see "Merging articles" in README.md):
   `content/redirects.json` + delete the page and its `content/published.json` entry.
-- Do not touch `googlee6ee1fd6d2b284d0.html`, `ads.txt`, `CNAME`, `robots.txt`, `e2c6381e679c35f682125f233010d0ec.txt` (IndexNow key), and the `naver-site-verification` meta tag in `index.html` (Naver Search Advisor).
+- Do not touch `googlee6ee1fd6d2b284d0.html`, `ads.txt`, `CNAME`, `robots.txt`, `e2c6381e679c35f682125f233010d0ec.txt` (IndexNow key), and the `naver-site-verification` meta tag in `index.html` (Naver Search Advisor), and the `p:domain_verify` meta tag in `index.html` (Pinterest).
 - Commit as `git -c user.name="JungSuk-Kim" -c user.email="richardjs0718@gmail.com" commit`.
 
 ## Making changes
