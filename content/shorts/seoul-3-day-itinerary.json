@@ -1,0 +1,22 @@
+{
+  "article": "seoul-3-day-itinerary",
+  "title": "3 Days in Seoul: a first-timer's plan",
+  "slides": [
+    {"image": "photo-seoul-first-time.jpg", "kicker": "FIRST TIME IN SEOUL?", "title": "Here's a 3-day plan", "sub": "that won't wear you out",
+     "voice": "First time in Seoul? Here's a three-day plan that won't wear you out."},
+    {"image": "regional-seoul-culture-gyeongbokgung-palace.jpg", "kicker": "DAY 1", "title": "Gyeongbokgung Palace", "sub": "Go early. Closed on Tuesdays.",
+     "voice": "Day one. Start early at Gyeongbokgung Palace, before the crowds. It's closed on Tuesdays."},
+    {"image": "photo-seoul-neighborhoods-guide.jpg", "kicker": "DAY 1", "title": "Bukchon's hanok lanes", "sub": "People live here: keep it quiet",
+     "voice": "Then walk the hanok lanes of Bukchon. People live here, so keep your voice down."},
+    {"image": "photo-first-evening-seoul.jpg", "kicker": "DAY 1 · EVENING", "title": "Cheonggyecheon at night", "sub": "A free, easy walk, lit up after dark",
+     "voice": "In the evening, follow Cheonggyecheon stream. It's free, and it's lit up after dark."},
+    {"image": "photo-how-to-order-korean-food.jpg", "kicker": "DAY 2", "title": "Gwangjang Market", "sub": "Try bindaetteok, a mung bean pancake",
+     "voice": "Day two. Eat your way through Gwangjang Market. Try bindaetteok, a crispy mung bean pancake."},
+    {"image": "regional-seoul-shopping-myeongdong-shopping-street.jpg", "kicker": "DAY 2", "title": "Myeongdong, then Namsan", "sub": "Bring your passport for tax refunds",
+     "voice": "Shop in Myeongdong, and bring your passport for tax refunds. Then watch the sunset from Namsan."},
+    {"image": "photo-seoul-3-day-itinerary.jpg", "kicker": "DAY 3", "title": "Choose your own Seoul", "sub": "Secret Garden, Han River or a jjimjilbang",
+     "voice": "Day three is yours. The Secret Garden, a Han River park, or a Korean bathhouse."},
+    {"end": true, "title": "Full plan and tips", "sub": "korea-plainly.com",
+     "voice": "The full plan is on Korea Plainly. Link in bio."}
+  ]
+}
