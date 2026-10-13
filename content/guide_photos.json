@@ -89,10 +89,12 @@
   },
   "seoul-3-day-itinerary": {
     "file": "photo-seoul-3-day-itinerary.jpg",
-    "credit": "Photo: Stevenliuyi, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Bukchon_Hanok_Village_in_Seoul.jpg",
+    "credit": "Photo: Brady Bellini, CC0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gyeongbokgung(palace)_Geunjeongjeon(hall).jpg",
     "query": "Gyeongbokgung Palace Geunjeongjeon",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Bukchon_Hanok_Village_in_Seoul.jpg"
+    ]
   },
   "seoul-bus-guide": {
     "file": "photo-seoul-bus-guide.jpg",
