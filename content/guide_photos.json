@@ -184,13 +184,13 @@
   },
   "korean-cafe-menu-basics": {
     "file": "photo-korean-cafe-menu-basics.jpg",
-    "credit": "Photo: H. Y. Shin 000, CC0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Cafe_Seoul_20190324_131853.jpg",
+    "credit": "Photo: Teemeah, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Injeolmi_bingsu,_Seoul.jpg",
     "query": "bingsu Seoul",
     "reject": [
-      "https://commons.wikimedia.org/wiki/File:Bnc_Internet_Cafe_Seoul_South_March_Korea_1994.jpg"
-    ],
-    "retry": true
+      "https://commons.wikimedia.org/wiki/File:Bnc_Internet_Cafe_Seoul_South_March_Korea_1994.jpg",
+      "https://commons.wikimedia.org/wiki/File:Cafe_Seoul_20190324_131853.jpg"
+    ]
   },
   "korean-convenience-store-meals": {
     "file": "thumb-convenience-meals.jpg",
