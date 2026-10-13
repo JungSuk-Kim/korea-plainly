@@ -38,7 +38,7 @@ def slide_photo(slide, taken):
         import sys
         sys.path.insert(0, str(Path(__file__).resolve().parent))
         from guide_photos import download, search_commons
-        hit = search_commons(q, reject=sorted(taken), require=slide.get("require", ()))
+        hit = search_commons(q, reject=sorted(taken | set(slide.get("reject", []))), require=slide.get("require", ()))
         if not hit:
             raise SystemExit(f"no freely licensed photo for {q!r}; change the query or set an image")
         PHOTOS.mkdir(parents=True, exist_ok=True)
