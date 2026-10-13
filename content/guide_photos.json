@@ -18,12 +18,10 @@
     "query": "Haeundae Beach Busan"
   },
   "cash-cards-payments-korea": {
-    "file": "thumb-cash-cards.jpg",
-    "credit": "",
-    "source": "",
-    "retry": true,
-    "query": "Namdaemun Market Seoul",
-    "reject": []
+    "file": "photo-cash-cards-payments-korea.jpg",
+    "credit": "Photo: No machine-readable author provided. IGEL assumed (based on copyright claims)., CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul_namdaemun_market_2005-08-07.jpg",
+    "query": "Namdaemun Market Seoul"
   },
   "christmas-new-year-seoul": {
     "file": "photo-christmas-new-year-seoul.jpg",
@@ -99,14 +97,14 @@
   },
   "korea-public-transport-transfers": {
     "file": "photo-korea-public-transport-transfers.jpg",
-    "credit": "Photo: Nesnad at en.wikipedia, Public domain, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Wayout-seoul_skorea.jpg",
+    "credit": "Photo: LERK, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul-metro-124-Cheongnyangni-station-platform-20191023-110350.jpg",
     "query": "Seoul Metro train platform",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Seoul_City_Bus_152.jpg",
-      "https://commons.wikimedia.org/wiki/File:Seoultech_Bungabang_bus_stop.jpg"
-    ],
-    "retry": true
+      "https://commons.wikimedia.org/wiki/File:Seoultech_Bungabang_bus_stop.jpg",
+      "https://commons.wikimedia.org/wiki/File:Wayout-seoul_skorea.jpg"
+    ]
   },
   "korea-recycling-guide": {
     "file": "photo-korea-recycling-guide.jpg",
@@ -122,14 +120,14 @@
   },
   "korea-tax-refund-guide": {
     "file": "photo-korea-tax-refund-guide.jpg",
-    "credit": "Photo: Minseong Kim, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Shinsegae_Department_Store_Seoul_Signboard.jpg",
+    "credit": "Photo: LERK, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Lotte_department_store_Gangnam_branch_20181121_154056.jpg",
     "query": "Lotte Department Store Seoul",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Namdaemun-ro_and_Aloft_Seoul_Myeongdong_by_night.jpg",
+      "https://commons.wikimedia.org/wiki/File:Shinsegae_Department_Store_Seoul_Signboard.jpg",
       "https://commons.wikimedia.org/wiki/File:Streets_of_Seoul_-_Flickr_-_Sergiy_Galyonkin.jpg"
-    ],
-    "retry": true
+    ]
   },
   "korea-transit-card-guide": {
     "file": "thumb-tmoney.jpg",
@@ -191,8 +189,7 @@
     "query": "cafe Hongdae",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Bnc_Internet_Cafe_Seoul_South_March_Korea_1994.jpg"
-    ],
-    "retry": true
+    ]
   },
   "korean-convenience-store-meals": {
     "file": "thumb-convenience-meals.jpg",
