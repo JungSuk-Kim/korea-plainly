@@ -105,7 +105,9 @@
     "query": "recycling bins Korea"
   },
   "korea-ski-resorts-guide": {
-    "retry": true,
+    "file": "photo-korea-ski-resorts-guide.jpg",
+    "credit": "Photo: Kalatpadai, CC0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Ski_slopes_of_YongPyong_Resort,_2013-03-10.jpg",
     "query": "Yongpyong ski slope"
   },
   "korea-tax-refund-guide": {
