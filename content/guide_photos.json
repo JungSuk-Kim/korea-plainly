@@ -17,11 +17,29 @@
     "source": "https://commons.wikimedia.org/wiki/File:Haeundae_Beach_Busan_(45698772572).jpg",
     "query": "Haeundae Beach Busan"
   },
+  "day-trips-from-seoul": {
+    "file": "photo-day-trips-from-seoul.jpg",
+    "credit": "Photo: Lance Vanlewen, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Hwaseong_Fortress,_Suwon,_Gyeonggi-do,_Republic_of_Korea.jpg",
+    "query": "Hwaseong Fortress Suwon"
+  },
+  "gyeongju-1-day-itinerary": {
+    "file": "photo-gyeongju-1-day-itinerary.jpg",
+    "credit": "Photo: lumoplank, CC0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Donggung_Palace_%26_Wolji_Pond,_Gyeongju_-_Donggung2687.jpg",
+    "query": "Donggung Palace Wolji Pond Gyeongju"
+  },
   "incheon-airport-to-seoul": {
     "file": "photo-incheon-airport-to-seoul.jpg",
     "credit": "Photo: calflier001, CC BY-SA 2.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:INCHEON_AIRPORT_SEOUL_SOUTH_KOREA_OCT_2012_(8161913884).jpg",
     "query": "Incheon Airport Seoul Korea"
+  },
+  "jeju-3-day-itinerary": {
+    "file": "photo-jeju-3-day-itinerary.jpg",
+    "credit": "Photo: Asaf Zebulon, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Jeju_-_Seongsan_Ilchulbong.jpg",
+    "query": "Seongsan Ilchulbong Jeju"
   },
   "kakaotalk-korea-guide": {
     "file": "photo-kakaotalk-korea-guide.jpg",
@@ -29,11 +47,29 @@
     "source": "https://commons.wikimedia.org/wiki/File:Woman_taking_photographs_with_a_smartphone_at_night_in_Seoul_(35605735705).jpg",
     "query": "smartphone Seoul"
   },
+  "korea-autumn-foliage-2026": {
+    "file": "photo-korea-autumn-foliage-2026.jpg",
+    "credit": "Photo: Famartin, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:2024-11-16_08_48_52_A_Korean_Dogwood_(left)_and_green-leaved_Japanese_Maple_(right)_in_late_autumn_along_Pingree_Avenue_in_Ewing_Township,_Mercer_County,_New_Jersey.jpg",
+    "query": "autumn foliage Korea maple"
+  },
+  "korea-entry-k-eta-e-arrival": {
+    "file": "photo-korea-entry-k-eta-e-arrival.jpg",
+    "credit": "Photo: Arne Müseler, CC BY-SA 3.0 de, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Incheon_International_Airport_Terminal_1_Arrival.jpg",
+    "query": "Incheon International Airport terminal"
+  },
   "korea-recycling-guide": {
     "file": "photo-korea-recycling-guide.jpg",
     "credit": "Photo: ProjectManhattan, CC BY-SA 3.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Recycling_bins_at_Busan,_South_Korea.jpg",
     "query": "recycling bins Korea"
+  },
+  "korea-tax-refund-guide": {
+    "file": "photo-korea-tax-refund-guide.jpg",
+    "credit": "Photo: Sergiy Galyonkin from Raleigh, USA, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Streets_of_Seoul_-_Flickr_-_Sergiy_Galyonkin.jpg",
+    "query": "Myeongdong shopping street Seoul"
   },
   "korea-transit-card-guide": {
     "file": "thumb-tmoney.jpg",
@@ -44,6 +80,10 @@
     "reject": [
       "https://commons.wikimedia.org/wiki/File:3_sly_old_cards!_(BM_1896,0501.1638).jpg"
     ]
+  },
+  "korea-weather-by-season": {
+    "none": true,
+    "query": "Seoul cherry blossom season"
   },
   "korean-atm-guide": {
     "file": "thumb-cash-cards.jpg",
