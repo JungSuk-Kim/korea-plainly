@@ -54,7 +54,7 @@ Two workflows, both in `.github/workflows/`:
 | `responsive_images.py` | Small WebP copies (480/800/1200px, in `img/`) of every large photo, with `srcset` so phones download only what they need; cover photos load first; `image-set()` overrides for the background photos in `style.css`; unused copies are deleted |
 | `optimize_images.py` | Shrinks large photos once (tagged so they are never recompressed) |
 | `seo_basics.py` | Favicon, og tags, `noindex` on thin hubs (removed automatically once a hub has 3+ guides) |
-| `make_pins.py` | Pinterest pin images (1000x1500, photo + title) in `pins/` and `pins/pins.csv` for Pinterest's "Bulk create Pins"; redrawn only when a guide's title or photo changes (`content/pins.json`) |
+| `make_pins.py` | Pinterest pin images (1000x1500, photo + title) for guides and regional articles in `pins/`, `pins/pins.csv` (guides, uploaded once with "Bulk create Pins"), and RSS feeds Pinterest auto-publishes from: `pins/places.xml` (regional articles) and `pins/guides.xml` (guides from 14 Oct 2026); redrawn only when a guide's title or photo changes (`content/pins.json`) |
 | `build_search_index.py` | `search-index.json` used by `search.html` |
 | `update_sitemap.py` | Sitemap (with publish dates) without `noindex` pages or the Google verification file |
 | `site_audit.py` | Fails the run on broken links or missing basics |

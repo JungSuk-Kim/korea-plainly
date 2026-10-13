@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
-"""Pinterest pin images and a bulk-upload CSV for every guide. Idempotent.
+"""Pinterest pin images, a bulk-upload CSV and RSS feeds. Idempotent.
 
 For each guide card on guides.html this makes pins/<slug>.jpg (1000x1500: the
 guide's photo on top, its title below) and lists all pins in pins/pins.csv,
 which can be uploaded with Pinterest's "Bulk create Pins". A pin is only redrawn
 when its title or photo changes (content/pins.json keeps a fingerprint).
+
+Regional articles get pins too (their cover photo + title). Two RSS feeds let
+Pinterest publish new pins automatically, one board per feed:
+  pins/places.xml  every regional article  -> board "Places to Visit in Korea"
+  pins/guides.xml  guides published from FEED_GUIDES_FROM on (older guides were
+                   uploaded once with pins.csv, so they are left out)
 """
 import csv
 import hashlib
@@ -26,6 +32,8 @@ W, H, PHOTO_H = 1000, 1500, 900
 NAVY, RED, WHITE, MUTED = (23, 36, 60), (201, 65, 58), (255, 255, 255), (190, 198, 212)
 BOARDS = {"food": "Korean Food Guide", "travel": "Korea Travel Planning"}
 DEFAULT_BOARD = "Korea Travel Tips"
+FEED_SIZE = 50
+FEED_GUIDES_FROM = "2026-10-14"
 
 
 def clean(text):
@@ -41,6 +49,45 @@ def guides():
         desc = clean((re.search(r"<p>(.*?)</p>", inner, re.S) or [None, ""])[1])
         if thumb and (ROOT / f"{slug}.html").exists():
             yield {"slug": slug, "cat": cat, "title": title, "desc": desc, "photo": thumb.group(1)}
+
+
+def places():
+    pub = json.loads((ROOT / "content" / "published.json").read_text(encoding="utf-8"))
+    for p in pub:
+        if not (isinstance(p, dict) and p.get("place_name")):
+            continue
+        page = ROOT / f"{p['slug']}.html"
+        if not page.exists():
+            continue
+        s = page.read_text(encoding="utf-8")
+        if "kp-redirect" in s:
+            continue
+        cover = re.search(r'<img\b[^>]*class="cover"[^>]*src="([^"]+)"', s, re.S) or re.search(r'<img\s+class="cover"\s+src="([^"]+)"', s)
+        desc = re.search(r'<meta\s+name="description"\s+content="([^"]*)"', s)
+        if cover:
+            yield {"slug": p["slug"], "cat": "place", "title": clean(p.get("title", "")), "region": p.get("region", ""),
+                   "desc": html.unescape(desc.group(1)) if desc else "", "photo": cover.group(1)}
+
+
+def rss(items, dates, title, description):
+    from email.utils import format_datetime
+    from datetime import datetime, timezone
+    esc = lambda t: html.escape(t or "", quote=False)
+    out = ['<?xml version="1.0" encoding="UTF-8"?>',
+           '<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel>',
+           f"<title>{esc(title)}</title><link>{BASE}/</link><description>{esc(description)}</description><language>en</language>"]
+    for i in items:
+        d = dates.get(f"{i['slug']}.html", "2026-01-01")
+        when = format_datetime(datetime.strptime(d[:10], "%Y-%m-%d").replace(hour=9, tzinfo=timezone.utc))
+        img = f"{BASE}/pins/{i['slug']}.jpg"
+        size = (OUT / f"{i['slug']}.jpg").stat().st_size
+        out.append(f"<item><title>{esc(i['title'])}</title><link>{BASE}/{i['slug']}.html</link>"
+                   f"<guid isPermaLink=\"true\">{BASE}/{i['slug']}.html</guid><pubDate>{when}</pubDate>"
+                   f"<description>{esc(i['desc'])}</description>"
+                   f'<enclosure url="{img}" length="{size}" type="image/jpeg"/>'
+                   f'<media:content url="{img}" medium="image" type="image/jpeg" width="{W}" height="{H}"/></item>')
+    out.append("</channel></rss>")
+    return "\n".join(out) + "\n"
 
 
 def wrap(draw, text, font, width):
@@ -64,7 +111,8 @@ def draw_pin(item, path):
     d = ImageDraw.Draw(img)
     d.rectangle([0, PHOTO_H, W, PHOTO_H + 10], fill=RED)
     kicker = ImageFont.truetype(str(FONT_BOLD), 30)
-    d.text((70, PHOTO_H + 60), "KOREA PLAINLY", font=kicker, fill=RED)
+    label = f"{item['region'].upper()} · KOREA PLAINLY" if item.get("region") else "KOREA PLAINLY"
+    d.text((70, PHOTO_H + 60), label, font=kicker, fill=RED)
     title = item["title"].split(":")[0] if len(item["title"]) > 60 else item["title"]
     for size in (78, 70, 62, 56):
         font = ImageFont.truetype(str(FONT_BOLD), size)
@@ -83,7 +131,8 @@ def draw_pin(item, path):
 
 def main():
     state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
-    items, made = list(guides()), 0
+    guide_items, place_items = list(guides()), list(places())
+    items, made = guide_items + place_items, 0
     for item in items:
         src = ROOT / item["photo"]
         fp = hashlib.md5((item["title"] + "|" + item["photo"] + "|").encode() + (src.read_bytes() if src.exists() else b"")).hexdigest()[:12]
@@ -101,11 +150,20 @@ def main():
     buf = io.StringIO()
     w = csv.writer(buf, lineterminator="\n")
     w.writerow(["Title", "Media URL", "Pinterest board", "Description", "Link", "Publish date", "Keywords"])
-    for i in items:
+    for i in guide_items:
         w.writerow([i["title"][:100], f"{BASE}/pins/{i['slug']}.jpg", BOARDS.get(i["cat"], DEFAULT_BOARD),
                     i["desc"][:500], f"{BASE}/{i['slug']}.html", "", "Korea travel, Seoul, Korea tips"])
     (OUT / "pins.csv").write_text(buf.getvalue(), encoding="utf-8")
-    print(f"make_pins: {len(items)} pins, {made} drawn")
+    dates_path = ROOT / "content" / "page_dates.json"
+    dates = json.loads(dates_path.read_text(encoding="utf-8")) if dates_path.exists() else {}
+    newest = lambda lst: sorted(lst, key=lambda i: dates.get(f"{i['slug']}.html", ""), reverse=True)[:FEED_SIZE]
+    (OUT / "places.xml").write_text(rss(newest(place_items), dates, "Korea Plainly: places to visit",
+                                        "Places worth visiting across Korea, for first-time visitors."), encoding="utf-8")
+    new_guides = [i for i in guide_items if dates.get(f"{i['slug']}.html", "") >= FEED_GUIDES_FROM]
+    (OUT / "guides.xml").write_text(rss(newest(new_guides), dates, "Korea Plainly: guides",
+                                        "Plain-English guides for first-time visitors to Korea."), encoding="utf-8")
+    print(f"make_pins: {len(items)} pins ({len(place_items)} places), {made} drawn; feeds: "
+          f"{min(len(place_items), FEED_SIZE)} places, {len(new_guides)} new guides")
 
 
 if __name__ == "__main__":
