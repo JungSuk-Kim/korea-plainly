@@ -34,7 +34,7 @@ GOOGLE_KEY = os.environ.get("GOOGLE_PLACES_API_KEY", "").strip()
 MAX_FETCH = 12
 # Places often share a name with their subway station; skip station photos
 # unless the place itself is a station or terminal.
-TRANSIT_PHOTO = re.compile(r"(?i)\b(station|platform|namecard|name card|signboard|sign|exit|line \d|subway|metro)\b")
+TRANSIT_PHOTO = re.compile(r"(?i)\b(station|stn|platform|namecard|name card|signboard|sign|exit|line \d|subway|metro)\b")
 GENERIC = {"cafe", "coffee", "hotel", "restaurant", "the", "and", "korea", "korean", "seoul", "busan",
            "jeju", "temple", "beach", "market", "museum", "park", "village", "street", "branch", "city"}
 
@@ -106,11 +106,11 @@ def main():
                 avoid = None if re.search(r"(?i)station|terminal|airport", place) else TRANSIT_PHOTO
                 found = search_commons(f"{place} {region}", reject, require=distinctive_words(place) or [place], avoid=avoid)
                 kind = "wikimedia"
-                if not found and p.get("image_credit"):
-                    # new articles already carry their Google Maps credit
-                    found, kind = {"credit": p["image_credit"], "source": "", "url": None}, "google"
-                elif not found and GOOGLE_KEY:
+                if not found and GOOGLE_KEY:
                     found, kind = google_photo(place, region), "google"
+                elif not found and p.get("image_credit") and not entry.get("source_type"):
+                    # untouched new article: its file is still the Google photo it was published with
+                    found, kind = {"credit": p["image_credit"], "source": "", "url": None}, "google"
                 if found:
                     if found.get("url"):
                         download(found["url"], ROOT / image)

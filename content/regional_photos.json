@@ -138,14 +138,15 @@
     "source": ""
   },
   "incheon-leisure-incheon-grand-park": {
-    "source_type": "google",
+    "source_type": "",
     "credit": "Photo: Andy Kim via Google Maps",
     "source": "",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:ITC-Incheon_Grand_Park_Stn-Exterior.jpg",
       "https://commons.wikimedia.org/wiki/File:Incheon_Grand_Park_Station_Namecard.jpg",
       "https://commons.wikimedia.org/wiki/File:Q208234780_Incheon_Grand_Park_A01.jpg"
-    ]
+    ],
+    "retry": true
   },
   "incheon-local-guide-incheon-chinatown": {
     "source_type": "wikimedia",
