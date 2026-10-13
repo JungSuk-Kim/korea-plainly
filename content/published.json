@@ -49,17 +49,19 @@
     "image": "regional-seoul-travel-cheonggyecheon.jpg"
   },
   {
-    "title": "Kampungku Restaurant in Seoul: A Malaysian Food Stop Near Myeongdong",
+    "title": "Kampungku Restaurant: Halal Malaysian Food in Seoul",
     "slug": "seoul-food-kampungku-restaurant",
     "category": "Food",
     "region": "Seoul",
     "round": 1,
     "place_name": "Kampungku Restaurant",
     "google_rating": 4.7,
-    "google_review_count": 3906,
+    "google_review_count": 3909,
     "naver_checked": true,
     "published_at": "2026-10-08T15:31:41.366068+00:00",
-    "image": "regional-seoul-food-kampungku-restaurant.jpg"
+    "image": "regional-seoul-food-kampungku-restaurant.jpg",
+    "address": "16-4 Namsan-dong 2(i)-ga, Jung District, Seoul",
+    "rewritten_at": "2026-10-13T04:53:28.158458+00:00"
   },
   {
     "title": "Cafe Onion Anguk: A Hanok Café Break in the Heart of Seoul",
@@ -114,30 +116,34 @@
     "image": "regional-seoul-stay-four-seasons-hotel-seoul.jpg"
   },
   {
-    "title": "Ribs of Legend Haeundae: A Korean Rib Stop in Busan",
+    "title": "Ribs of Legend Haeundae: Korean Beef Ribs",
     "slug": "busan-food-ribs-of-legend-haeundae",
     "category": "Food",
     "region": "Busan",
     "round": 1,
     "place_name": "Ribs of Legend haeundae",
     "google_rating": 4.8,
-    "google_review_count": 2405,
+    "google_review_count": 2412,
     "naver_checked": true,
     "published_at": "2026-10-08T15:51:39.437763+00:00",
-    "image": "regional-busan-food-ribs-of-legend-haeundae.jpg"
+    "image": "regional-busan-food-ribs-of-legend-haeundae.jpg",
+    "address": "Busan, Haeundae, Haeundaehaebyeon-ro, 277 3층",
+    "rewritten_at": "2026-10-13T04:53:50.292779+00:00"
   },
   {
-    "title": "Waveon Coffee in Busan: A Sea-View Cafe Escape in Gijang",
+    "title": "Waveon Coffee: A Seaside Café in Gijang",
     "slug": "busan-cafe-waveon-coffee",
     "category": "Cafe",
     "region": "Busan",
     "round": 1,
     "place_name": "Waveon Coffee",
     "google_rating": 4.2,
-    "google_review_count": 6301,
+    "google_review_count": 6302,
     "naver_checked": true,
     "published_at": "2026-10-08T15:52:10.193413+00:00",
-    "image": "regional-busan-cafe-waveon-coffee.jpg"
+    "image": "regional-busan-cafe-waveon-coffee.jpg",
+    "address": "286 Haemaji-ro, Gijang, Busan",
+    "rewritten_at": "2026-10-13T04:54:09.462422+00:00"
   },
   {
     "title": "Shop Lululemon at Shinsegae Centum City in Busan",
@@ -211,30 +217,34 @@
     "image": "regional-jeju-travel-hyeopjae-beach.jpg"
   },
   {
-    "title": "Gozip Dol Wooluck Jeju Airport Branch: A Seafood Stop to Consider in Jeju",
+    "title": "Gozip Dol Wooluck Jeju Airport Branch: Jeju Seafood",
     "slug": "jeju-food-gozip-dol-wooluck-jeju-airport-branch",
     "category": "Food",
     "region": "Jeju",
     "round": 1,
     "place_name": "Gozip Dol Wooluck Jeju Airport Branch",
     "google_rating": 4.7,
-    "google_review_count": 5874,
+    "google_review_count": 5873,
     "naver_checked": true,
     "published_at": "2026-10-09T05:02:06.281106+00:00",
-    "image": "regional-jeju-food-gozip-dol-wooluck-jeju-airport-branch.jpg"
+    "image": "regional-jeju-food-gozip-dol-wooluck-jeju-airport-branch.jpg",
+    "address": "30 Imhang-ro, 특별자치도, Cheju, Jeju-do",
+    "rewritten_at": "2026-10-13T04:54:36.022307+00:00"
   },
   {
-    "title": "Haejigae Cafe in Aewol: A Jeju Coast Stop for Sea Views and Sunset Light",
+    "title": "Haejigae Cafe: Aewol’s Sea-View Cafe",
     "slug": "jeju-cafe-haejigae-cafe",
     "category": "Cafe",
     "region": "Jeju",
     "round": 1,
     "place_name": "Haejigae Cafe",
     "google_rating": 4.8,
-    "google_review_count": 2358,
+    "google_review_count": 2122,
     "naver_checked": true,
     "published_at": "2026-10-09T05:02:26.478712+00:00",
-    "image": "regional-jeju-cafe-haejigae-cafe.jpg"
+    "image": "regional-jeju-cafe-haejigae-cafe.jpg",
+    "address": "52 Aewolbukseo-gil, Aewol-eup, 특별자치도, Cheju, Jeju-do",
+    "rewritten_at": "2026-10-13T04:54:59.393196+00:00"
   },
   {
     "title": "Jeju Traditional Five-Day Market: A Lively Shopping Stop in Jeju City",
@@ -308,7 +318,7 @@
     "image": "regional-gyeongju-travel-woljeonggyo-bridge.jpg"
   },
   {
-    "title": "Bar Boon on Hwangnidan-gil: A Relaxed Evening Stop in Gyeongju",
+    "title": "Bar Boon Hwangridangil: Cocktails in Gyeongju",
     "slug": "gyeongju-food-bar-boon-hwangridangil",
     "category": "Food",
     "region": "Gyeongju",
@@ -318,10 +328,12 @@
     "google_review_count": 954,
     "naver_checked": true,
     "published_at": "2026-10-10T04:47:51.140345+00:00",
-    "image": "regional-gyeongju-food-bar-boon-hwangridangil.jpg"
+    "image": "regional-gyeongju-food-bar-boon-hwangridangil.jpg",
+    "address": "56호, 1058-7 Poseok-ro, Gyeongju, Gyeongsangbuk-do",
+    "rewritten_at": "2026-10-13T04:55:24.713177+00:00"
   },
   {
-    "title": "Cafe Arae Heon: A Hanok-Style Cafe Stop in Gyeongju",
+    "title": "Cafe Arae Heon: A Hanok Cafe in Gyeongju",
     "slug": "gyeongju-cafe-cafe-arae-heon",
     "category": "Cafe",
     "region": "Gyeongju",
@@ -331,7 +343,9 @@
     "google_review_count": 1388,
     "naver_checked": true,
     "published_at": "2026-10-10T04:48:14.608988+00:00",
-    "image": "regional-gyeongju-cafe-cafe-arae-heon.jpg"
+    "image": "regional-gyeongju-cafe-cafe-arae-heon.jpg",
+    "address": "181 Bobul-ro, Gyeongju, Gyeongsangbuk-do",
+    "rewritten_at": "2026-10-13T04:55:49.290545+00:00"
   },
   {
     "title": "Bulguksa Temple: A Guide to Gyeongju’s Great Silla-Era Sanctuary",
@@ -366,7 +380,7 @@
     "category": "Food"
   },
   {
-    "title": "Ondam in Jeonju: A Food Stop to Check Before You Go",
+    "title": "Ondam: Korean barbecue in Jeonju",
     "slug": "jeonju-food-ondam",
     "category": "Food",
     "region": "Jeonju",
@@ -376,20 +390,24 @@
     "google_review_count": 2885,
     "naver_checked": true,
     "published_at": "2026-10-11T04:33:16.047202+00:00",
-    "image": "regional-jeonju-food-ondam.jpg"
+    "image": "regional-jeonju-food-ondam.jpg",
+    "address": "Jeonbuk State, Jeonju, Wansan-gu, Jeonjucheondong-ro, 210 1층 KR",
+    "rewritten_at": "2026-10-13T04:56:10.647639+00:00"
   },
   {
-    "title": "Haeyooldam in Jeonju: A Café-Looking Stop That May Actually Be a Barbecue Restaurant",
+    "title": "Haeyooldam: Charcoal barbecue in Jeonju",
     "slug": "jeonju-cafe-haeyooldam",
     "category": "Food",
     "region": "Jeonju",
     "round": 1,
     "place_name": "해율담 haeyooldam",
     "google_rating": 4.9,
-    "google_review_count": 1107,
+    "google_review_count": 1111,
     "naver_checked": true,
     "published_at": "2026-10-11T04:33:35.304484+00:00",
-    "image": "regional-jeonju-cafe-haeyooldam.jpg"
+    "image": "regional-jeonju-cafe-haeyooldam.jpg",
+    "address": "16 Hyeonmu 1-gil, Wansan-gu, Jeonju, Jeonbuk State",
+    "rewritten_at": "2026-10-13T04:56:26.673056+00:00"
   },
   {
     "title": "Jeonju Hanok Village: A Thoughtful Guide to Korea’s Traditional Heart",
@@ -424,17 +442,19 @@
     "category": "Daily Korea"
   },
   {
-    "title": "Umjine in Gangneung: A Seafood Stop for Cockle-Rice Fans",
+    "title": "Umjine: Gangneung’s Cockle-Rice Favorite",
     "slug": "gangneung-food-umjine",
     "category": "Food",
     "region": "Gangneung",
     "round": 1,
     "place_name": "Umjine",
-    "google_rating": 4.2,
-    "google_review_count": 4682,
+    "google_rating": 4.4,
+    "google_review_count": 704,
     "naver_checked": true,
     "published_at": "2026-10-12T04:48:29.844785+00:00",
-    "image": "regional-gangneung-food-umjine.jpg"
+    "image": "regional-gangneung-food-umjine.jpg",
+    "address": "22 Namgu-gil 30beon-gil, Gangneung, Gangwon-do",
+    "rewritten_at": "2026-10-13T04:56:50.963649+00:00"
   },
   {
     "title": "Terarosa Coffee in Gangneung: A Roastery Worth Making Time For",
@@ -504,7 +524,7 @@
     "image_credit": "Photo: 송도 센트럴파크 via Google Maps"
   },
   {
-    "title": "Where to Eat at Incheon Airport Terminal 2: A Practical Guide to the Food Court",
+    "title": "Incheon Airport Terminal 2 Food Court: A practical meal stop",
     "slug": "incheon-food-incheon-airport-terminal-2-food-court",
     "category": "Food",
     "region": "Incheon",
@@ -516,10 +536,11 @@
     "naver_checked": true,
     "published_at": "2026-10-13T00:26:59.695429+00:00",
     "image": "regional-incheon-food-incheon-airport-terminal-2-food-court.jpg",
-    "image_credit": "Photo: Justina Han via Google Maps"
+    "image_credit": "Photo: Justina Han via Google Maps",
+    "rewritten_at": "2026-10-13T04:57:17.321334+00:00"
   },
   {
-    "title": "Joyang Textile: A Vast Old Factory Reimagined as a Café in Ganghwa",
+    "title": "Joyang Textile: A Factory Turned Café",
     "slug": "incheon-cafe-joyang-textile",
     "category": "Cafe",
     "region": "Incheon",
@@ -531,10 +552,11 @@
     "naver_checked": true,
     "published_at": "2026-10-13T00:27:21.193789+00:00",
     "image": "regional-incheon-cafe-joyang-textile.jpg",
-    "image_credit": "Photo: Yongseok Choi via Google Maps"
+    "image_credit": "Photo: Yongseok Choi via Google Maps",
+    "rewritten_at": "2026-10-13T04:57:39.197155+00:00"
   },
   {
-    "title": "Hyundai Premium Outlets Songdo: A Practical Shopping Guide for Incheon",
+    "title": "Hyundai Premium Outlets Songdo: Fashion, food and more",
     "slug": "incheon-shopping-hyundai-premium-outlets-songdo",
     "category": "Shopping",
     "region": "Incheon",
@@ -546,7 +568,8 @@
     "naver_checked": true,
     "published_at": "2026-10-13T00:27:40.386624+00:00",
     "image": "regional-incheon-shopping-hyundai-premium-outlets-songdo.jpg",
-    "image_credit": "Photo: carl hong via Google Maps"
+    "image_credit": "Photo: carl hong via Google Maps",
+    "rewritten_at": "2026-10-13T04:57:59.632098+00:00"
   },
   {
     "title": "A Cultural Pause at Incheon Airport: Korean Traditional Culture Experience Center (East)",
