@@ -1,0 +1,342 @@
+{
+  "title": "One Day in Busan: Temple, Haeundae Beach and Korean Spa",
+  "intro": "See Busan’s east coast in one easy day, from a seaside temple to Haeundae Beach and an afternoon at a Korean spa. This practical itinerary covers how to get between stops, what to check ahead, and where to finish the day.",
+  "hashtags": "#Busan #BusanTravel #Haeundae #KoreaTravel #SouthKorea",
+  "thumb": {
+    "big": "1 DAY",
+    "mid": "IN BUSAN",
+    "small": "EAST COAST PLAN"
+  },
+  "maps": {
+    "busan-east-coast-day": {
+      "stops": [
+        {
+          "name": "Haedong Yonggungsa",
+          "lat": 35.1884189,
+          "lon": 129.2230985
+        },
+        {
+          "name": "Haeundae Beach",
+          "lat": 35.1577809,
+          "lon": 129.1581318
+        },
+        {
+          "name": "SPA LAND",
+          "lat": 35.1687198,
+          "lon": 129.1293987
+        }
+      ],
+      "route": true,
+      "note": "Taxi to the temple; subway and short walks for the rest"
+    }
+  },
+  "chapters": [
+    {
+      "name": "Intro",
+      "segments": [
+        {
+          "voice": "Busan can feel like a lot of city to cover in one day. The coast stretches a long way, so the trick is not to race from one side to the other. Stay on the east coast for a temple above the sea, a relaxed beach stop, a Korean spa, and dinner near the water. Here is a simple route that keeps the day moving without turning it into a marathon.",
+          "show": [
+            {
+              "photo_query": "Haedong Yonggungsa sea",
+              "require": [
+                "haedong"
+              ]
+            },
+            {
+              "photo_query": "Haeundae Beach Busan",
+              "require": [
+                "haeundae"
+              ]
+            },
+            {
+              "photo_query": "Centum City spa",
+              "require": [
+                "centum"
+              ]
+            }
+          ]
+        },
+        {
+          "voice": "This is the order: start at Haedong Yonggungsa, return to Haeundae for the beach and lunch, spend the afternoon at SPA LAND in Centum City, then come back to Haeundae for dinner. The map shows the four main stops.",
+          "show": [
+            {
+              "map": "busan-east-coast-day"
+            }
+          ]
+        },
+        {
+          "voice": "One day on Busan’s east coast. Let’s make the most of it without trying to see the whole city at once.",
+          "show": [
+            {
+              "card": {
+                "big": "BUSAN",
+                "title": "One Day on the East Coast",
+                "sub": "Temple, beach, spa, dinner"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Before you go",
+      "segments": [
+        {
+          "voice": "Coming from Seoul is possible, but it makes for a long day. The KTX from Seoul Station to Busan Station takes about two and a half hours. Busan Station is on the other side of the city from Haeundae, so the trip across town adds time. If this is your plan, think about staying at least one night rather than trying to squeeze everything into a return day.",
+          "show": [
+            {
+              "card": {
+                "big": "FROM SEOUL",
+                "title": "Allow for the trip across Busan",
+                "sub": "KTX to Busan, then travel across the city"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "For this itinerary, staying near Haeundae the night before makes the morning simpler. Haedong Yonggungsa is north-east of Haeundae, and the first ride is the longest transfer in this plan. You can also stay near the temple in the Osiria area, but that makes more sense if you want to wake up there or have plans nearby.",
+          "show": [
+            {
+              "card": {
+                "big": "STAY EAST",
+                "title": "Make the morning easier",
+                "sub": "Haeundae is a useful base for this route"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Bring the same transit card you use in Seoul. It works on Busan’s subway and buses. For directions, use Naver Map or KakaoMap, especially for the current local bus route to the temple. Taxis are the easiest way to reach Haedong Yonggungsa from Haeundae. You can show the driver the name on your map app, or book with the Kakao T app.",
+          "show": [
+            {
+              "card": {
+                "big": "GET AROUND",
+                "title": "Use your transit card",
+                "sub": "Check routes in Naver Map or KakaoMap"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Check opening hours on a map app on the day, especially for SPA LAND and the Haeundae Blueline Park. If you want to ride the sky capsules, book ahead in summer and on weekends because tickets can sell out. Summer weekends at Haeundae are busy, too, so start early and save the beach for later in the morning.",
+          "show": [
+            {
+              "card": {
+                "big": "CHECK AHEAD",
+                "title": "Hours, routes, and tickets",
+                "sub": "Confirm current details before you go"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "One Day on Busan's East Coast",
+      "segments": [
+        {
+          "voice": "The route follows the coast in a sensible order. Go north-east first, then come back toward Haeundae and Centum City. You will still need to travel between stops, but you avoid spending the day crossing back and forth across Busan.",
+          "show": [
+            {
+              "card": {
+                "big": "DAY ONE",
+                "title": "Busan’s East Coast",
+                "sub": "A simple route from morning to dinner"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Start early at Haedong Yonggungsa, a Buddhist temple built on rocks above the sea in Gijang. Most Korean temples sit in the mountains, so this shoreline setting is what makes this one stand out. It gets busy from mid-morning, which is another reason to begin here. From Haeundae, a taxi takes around twenty to thirty minutes depending on traffic. Local buses also run, so check the current route before setting off. Allow about an hour for your visit. There are steps down to the main hall. This is a place of worship, so keep your voice low and be considerate when taking photos.",
+          "show": [
+            {
+              "image": "regional-busan-culture-haedong-yonggungsa-temple.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY ONE · MORNING",
+            "title": "Haedong Yonggungsa"
+          }
+        },
+        {
+          "voice": "After the temple, head back to Haeundae Beach. Keep this part of the day easy: walk along the sand and the promenade, then find lunch in the streets behind the beach. Haeundae Traditional Market is a short walk from the sand and is a handy place to look for snacks such as fish cakes and tteokbokki. If you have time and want another coastal ride, the Haeundae Blueline Park runs a beach train and small sky capsules along the old coastal railway, between Mipo near the end of the beach and Cheongsapo. Check the current details, and book sky capsules ahead during busy periods.",
+          "show": [
+            {
+              "image": "photo-busan-1-day-itinerary.jpg"
+            },
+            {
+              "photo_query": "Haeundae Traditional Market",
+              "require": [
+                "haeundae"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DAY ONE · MIDDAY",
+            "title": "Haeundae Beach"
+          }
+        },
+        {
+          "voice": "In the afternoon, take the subway one stop from Haeundae to Centum City on Line Two. SPA LAND is inside Shinsegae Centum City department store. It has hot-spring baths and themed rest rooms, making it a comfortable introduction to Korean bathhouse culture. Give yourself time to slow down here instead of treating it as a quick photo stop. The department store is in the same building, so it is also a useful indoor option if the weather turns. Check SPA LAND’s hours before you go.",
+          "show": [
+            {
+              "photo_query": "SPA LAND Centum City",
+              "require": [
+                "spa"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DAY ONE · AFTERNOON",
+            "title": "SPA LAND Centum City"
+          }
+        },
+        {
+          "voice": "For dinner, return to Haeundae. Ribs of Legend Haeundae is close to the beach and serves Korean grilled ribs. After eating, you can take a gentle walk along the beach at night. If you would rather see another stretch of coast, take a short taxi ride to Gwangalli Beach, where Gwangan Bridge is lit up after dark. Choose one easy finish; you do not need to add another long cross-city trip.",
+          "show": [
+            {
+              "photo_query": "Ribs",
+              "require": [
+                "ribs"
+              ]
+            },
+            {
+              "photo_query": "Gwangalli Beach night",
+              "require": [
+                "gwangalli"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DAY ONE · EVENING",
+            "title": "Dinner by the Sea"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Getting around",
+      "segments": [
+        {
+          "voice": "The day is easiest if you think of it as one longer ride followed by short local trips. Use a taxi or a checked bus route for the temple. Then return to Haeundae, where the beach and market are close together on foot. For Centum City, take Line Two one stop from Haeundae. After the spa, return to Haeundae for dinner. Traffic can affect the taxi ride to the temple, so leave room in your plan rather than relying on an exact arrival time.",
+          "show": [
+            {
+              "card": {
+                "big": "ONE SIDE",
+                "title": "Keep the route simple",
+                "sub": "Temple first, then Haeundae and Centum City"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mistakes to avoid",
+      "segments": [
+        {
+          "voice": "A few choices can make this day harder than it needs to be. Avoid these common planning mistakes.",
+          "show": [
+            {
+              "list": {
+                "heading": "Make the day easier",
+                "items": [
+                  "Starting the temple visit late",
+                  "Underestimating the trip from Busan Station",
+                  "Trying to cross the city for extra stops",
+                  "Assuming hours and tickets will not change"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "voice": "First, do not leave the temple until the middle of the day; it gets busy from mid-morning, so an early start helps. Second, remember that Busan Station is on the other side of the city from Haeundae. The subway trip takes about an hour, so build that into a day trip from Seoul. Third, resist adding the west side of Busan to this route. Jagalchi Fish Market, BIFF Square, and Gamcheon Culture Village are better saved for a second day. Finally, check opening hours and current transport details on the day, particularly for the spa and the Blueline Park.",
+          "show": [
+            {
+              "card": {
+                "big": "STAY EAST",
+                "title": "Do not overpack the route",
+                "sub": "Save Busan’s west side for another day"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quick questions",
+      "segments": [
+        {
+          "voice": "Can you visit Busan as a day trip from Seoul? Yes, the KTX makes it possible, but it will be a long day. You will see more if you stay at least one night, ideally near Haeundae for this plan.",
+          "show": [
+            {
+              "card": {
+                "big": "FROM SEOUL?",
+                "title": "Yes, but it is a long day",
+                "sub": "Staying overnight gives you more time"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "What is the simplest way to reach Haedong Yonggungsa? Take a taxi from Haeundae. The ride is around twenty to thirty minutes, depending on traffic. Local buses also go there, so check the current route in Naver Map or KakaoMap.",
+          "show": [
+            {
+              "card": {
+                "big": "TEMPLE TRIP",
+                "title": "Taxi is the simplest option",
+                "sub": "Check the current route before you leave"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Does this plan work on a rainy day? Partly. The temple and beach are outdoors, but SPA LAND and Shinsegae Centum City are indoors. If the weather is poor, you can give the afternoon more time and keep the outdoor stops flexible.",
+          "show": [
+            {
+              "card": {
+                "big": "RAINY DAY?",
+                "title": "Keep the afternoon indoors",
+                "sub": "SPA LAND and Shinsegae are inside"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Summary",
+      "segments": [
+        {
+          "voice": "Here is the day in one line: start early at Haedong Yonggungsa, spend late morning and lunch around Haeundae Beach, rest at SPA LAND in Centum City, then return to Haeundae for dinner. Use your transit card, check current hours and routes, and keep your plans on the east side of Busan. The full guide, with links for every stop, is on Korea Plainly. The link is in the description. If this helped, subscribe for more plain, practical guides to Korea.",
+          "show": [
+            {
+              "list": {
+                "heading": "Your east-coast day",
+                "items": [
+                  "Morning: Haedong Yonggungsa",
+                  "Midday: Haeundae Beach and lunch",
+                  "Afternoon: SPA LAND Centum City",
+                  "Evening: dinner near the sea"
+                ]
+              }
+            },
+            {
+              "card": {
+                "big": "KOREA",
+                "title": "korea-plainly.com",
+                "sub": "The full guide, with links for every stop, is on Korea Plainly. The link is in the description. If this helped, subscribe for more plain, practical guides to Korea."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "article": "busan-1-day-itinerary",
+  "music": "Daily Beetle",
+  "fallback": "photo-busan-1-day-itinerary.jpg",
+  "thumb_photo": "photo-busan-1-day-itinerary.jpg"
+}
