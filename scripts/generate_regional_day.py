@@ -377,7 +377,17 @@ def main():
             raise last_error
         used_places.add(place["name"].strip().lower())  # one place per article, even within the same day
         title_hint = f"{place['name']} {region_name} {category['name'] if isinstance(category, dict) else cat_key}"
-        slug_base = slugify(f"{region['slug']}-{cat_key}-{place['name']}")
+        # A Korean-only place name slugifies to nothing, which would leave "<region>-<category>": the URL of an
+        # old category hub that maintain_site.py turns into a redirect, overwriting the article. In that case
+        # write the article first and take the slug from the English part of its headline.
+        body = None
+        place_part = re.sub(r"[^a-z0-9]+", "-", place["name"].lower()).strip("-")
+        if not place_part:
+            body = ask_openai(category["name"], place)
+            h1 = re.search(r"<h1>(.*?)</h1>", body, re.S)
+            headline = clean_text(h1.group(1)) if h1 else ""
+            place_part = re.sub(r"[^a-z0-9]+", "-", headline.split(":")[0].lower()).strip("-")[:50].strip("-") or "place"
+        slug_base = slugify(f"{region['slug']}-{cat_key}-{place_part}")
         slug = slug_base
         n = 2
         while slug in published_slugs or (ROOT / f"{slug}.html").exists():
@@ -395,7 +405,7 @@ def main():
         if not image_name:
             raise RuntimeError(f"No usable place-specific image found for {place['name']}")
 
-        body = ask_openai(category["name"], place)
+        body = body or ask_openai(category["name"], place)
         out = render_article(category["name"], place, body, image_name, slug, credit)
         (ROOT / f"{slug}.html").write_text(out, encoding="utf-8")
 

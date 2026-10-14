@@ -26,7 +26,10 @@ META = re.compile(r"(?i)(search results?|supplied information|not confirmed|cann
 
 
 def article_text(slug):
-    s = (ROOT / f"{slug}.html").read_text(encoding="utf-8")
+    path = ROOT / f"{slug}.html"
+    if not path.exists():  # an article whose page was lost: write it again from its published.json entry
+        return "", ""
+    s = path.read_text(encoding="utf-8")
     a = re.search(r"<article.*?</article>", s, re.S)
     a = re.sub(r'<section class="(kp-visit|useful-links|related-guides)".*?</section>', "", a.group(0) if a else "", flags=re.S)
     return s, re.sub(r"<[^>]+>", " ", a)

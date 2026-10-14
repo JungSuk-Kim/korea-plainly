@@ -178,7 +178,8 @@
   },
   "korean-bbq-guide": {
     "none": true,
-    "query": "Eat BBQ Step-by-Step Korea"
+    "retry": true,
+    "query": "Samgyeopsal grill"
   },
   "korean-cafe-etiquette": {
     "file": "photo-korean-cafe-etiquette.jpg",
