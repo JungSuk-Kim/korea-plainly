@@ -1,0 +1,64 @@
+{
+  "article": "korea-autumn-foliage-2026",
+  "fallback": "photo-korea-autumn-foliage-2026.jpg",
+  "title": "When to see autumn leaves in Korea",
+  "hashtags": "#Korea #KoreaTravel #AutumnInKorea #FallFoliage #SeoulTravel",
+  "music": "Wallpaper",
+  "slides": [
+    {
+      "kicker": "FALL COLORS",
+      "title": "When will Korea turn gold?",
+      "sub": "The 2026 peak is forecast for late October",
+      "voice": "Want to catch Korea at peak color? The leaves change from north to south, and the nationwide peak is forecast for late October in twenty twenty-six.",
+      "photo_query": "Autumn foliage in South Korea",
+      "require": [
+        "autumn",
+        "korea"
+      ]
+    },
+    {
+      "kicker": "FIRST TO PEAK",
+      "title": "See Seoraksan early",
+      "sub": "Peak color is forecast around October twentieth",
+      "voice": "Seoraksan peaks first, around October twentieth. Forecasts can shift by several days, so check conditions before you go.",
+      "photo_query": "Seoraksan National Park autumn foliage",
+      "require": [
+        "seoraksan"
+      ]
+    },
+    {
+      "kicker": "SEOUL",
+      "title": "Palace leaves last longer",
+      "sub": "Aim for late October to mid-November",
+      "voice": "In Seoul, palaces and parks are usually at their best from late October into mid-November. Ginkgo trees often turn later.",
+      "image": "photo-best-time-seoul-attractions.jpg"
+    },
+    {
+      "kicker": "SILVER GRASS",
+      "title": "Try Haneul Park in October",
+      "sub": "Go for the hilltop grass and late light",
+      "voice": "For a different autumn look, Haneul Park is known for its silver grass in October. Late afternoon light is lovely there.",
+      "photo_query": "Haneul Park silver grass Seoul",
+      "require": [
+        "haneul"
+      ]
+    },
+    {
+      "kicker": "DAY TRIP",
+      "title": "Follow the trees to Nami",
+      "sub": "The river island is about 1.5 hours from Seoul",
+      "voice": "Nami Island has tree-lined avenues of ginkgo and metasequoia. It’s about an hour and a half from Seoul.",
+      "photo_query": "Nami Island autumn foliage South Korea",
+      "require": [
+        "nami",
+        "island"
+      ]
+    },
+    {
+      "end": true,
+      "title": "Full guide and tips",
+      "sub": "korea-plainly.com",
+      "voice": "The full guide is on Korea Plainly. Link in bio."
+    }
+  ]
+}
