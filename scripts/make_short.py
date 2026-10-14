@@ -125,14 +125,24 @@ def end_card(slide, path):
 
 
 def tts(text, path):
+    """OpenAI text-to-speech, retried a few times: one slow reply should not sink a whole video."""
+    import time
     import requests
-    r = requests.post("https://api.openai.com/v1/audio/speech", timeout=120,
-                      headers={"Authorization": f"Bearer {os.environ['OPENAI_API_KEY']}"},
-                      json={"model": os.environ.get("TTS_MODEL", "gpt-4o-mini-tts"), "voice": os.environ.get("TTS_VOICE", "coral"),
-                            "input": text, "response_format": "mp3",
-                            "instructions": "Warm, friendly local travel guide. Clear, relaxed pace."})
-    r.raise_for_status()
-    Path(path).write_bytes(r.content)
+    for attempt in range(4):
+        try:
+            r = requests.post("https://api.openai.com/v1/audio/speech", timeout=180,
+                              headers={"Authorization": f"Bearer {os.environ['OPENAI_API_KEY']}"},
+                              json={"model": os.environ.get("TTS_MODEL", "gpt-4o-mini-tts"),
+                                    "voice": os.environ.get("TTS_VOICE", "coral"), "input": text, "response_format": "mp3",
+                                    "instructions": "Warm, friendly local travel guide. Clear, relaxed pace."})
+            r.raise_for_status()
+            Path(path).write_bytes(r.content)
+            return
+        except Exception as e:
+            if attempt == 3:
+                raise
+            print(f"text-to-speech retry {attempt + 1}: {e}")
+            time.sleep(10 * (attempt + 1))
 
 
 def word_times(audio, text):
