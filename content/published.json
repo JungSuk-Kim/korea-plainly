@@ -710,7 +710,7 @@
     "category": "Food"
   },
   {
-    "title": "Seoraksan National Park: Seorak-dong mountain gateway",
+    "title": "Seoraksan National Park: Sokcho’s mountain gateway",
     "slug": "sokcho-travel-seoraksan-national-park",
     "category": "Travel",
     "region": "Sokcho",
@@ -722,7 +722,8 @@
     "naver_checked": true,
     "published_at": "2026-10-14T00:21:36.955604+00:00",
     "image": "regional-sokcho-travel-seoraksan-national-park.jpg",
-    "image_credit": "Photo: Ayan Bardhan via Google Maps"
+    "image_credit": "Photo: Ayan Bardhan via Google Maps",
+    "rewritten_at": "2026-10-14T00:25:30.514516+00:00"
   },
   {
     "title": "Chungchosoo Mulhoe: Sokcho’s Chilled Seafood Specialty",
