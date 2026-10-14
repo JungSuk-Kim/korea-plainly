@@ -177,8 +177,9 @@
     "query": "jjimjilbang Seoul"
   },
   "korean-bbq-guide": {
-    "none": true,
-    "retry": true,
+    "file": "photo-korean-bbq-guide.jpg",
+    "credit": "Photo: moso, CC BY 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Korean_Barbecue-Samgyeopsal-01.jpg",
     "query": "Samgyeopsal grill barbecue"
   },
   "korean-cafe-etiquette": {
