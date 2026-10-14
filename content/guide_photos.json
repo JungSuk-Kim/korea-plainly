@@ -178,7 +178,8 @@
   },
   "korean-bbq-guide": {
     "none": true,
-    "query": "Seoul barbecue samgyeopsal galbi"
+    "retry": true,
+    "query": "Samgyeopsal grill barbecue"
   },
   "korean-cafe-etiquette": {
     "file": "photo-korean-cafe-etiquette.jpg",
