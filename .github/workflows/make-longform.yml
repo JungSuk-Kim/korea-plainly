@@ -1,0 +1,66 @@
+name: Make long-form video
+
+# Run by hand: renders a long-form video from content/longform/<name>.json (scripts/make_longform.py),
+# uploads it to YouTube as PRIVATE for review, and keeps the file as a 30-day artifact.
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: "Script file in content/longform/"
+        required: true
+        default: "content/longform/seoul-3-day-itinerary.json"
+      title:
+        description: "YouTube title"
+        default: "First Time in Seoul? A Relaxed 3-Day Itinerary (Local's Guide)"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-bot
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      HAS_YT: ${{ secrets.YT_REFRESH_TOKEN != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install requests pillow
+      - name: Render
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python scripts/make_longform.py "${{ inputs.spec }}"
+      - name: Preview frames for review
+        run: |
+          f=_shorts/$(basename "${{ inputs.spec }}" .json)-long.mp4
+          ffmpeg -v error -i "$f" -vf "fps=1/20,scale=480:-1,tile=4x8" -frames:v 1 -update 1 "${f%.mp4}-contact.jpg"
+      - name: Keep the video for 30 days
+        uses: actions/upload-artifact@v4
+        with:
+          name: longform-video
+          path: _shorts/*-long*
+          retention-days: 30
+      - name: Upload to YouTube (private)
+        if: env.HAS_YT == 'true'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python scripts/youtube_upload.py "_shorts/$(basename "${{ inputs.spec }}" .json)-long.mp4" "${{ inputs.title }}" "Seoul,Seoul itinerary,Korea travel,Seoul travel guide,first time in Seoul"
+      - name: Commit the script, photo log, description and preview
+        run: |
+          git config user.name "Korea Plainly Bot"
+          git config user.email "actions@github.com"
+          git add content/longform content/shorts/photos.json _shorts
+          git commit -m "Long-form video: ${{ inputs.spec }}" || exit 0
+          git pull --rebase -X theirs
+          git push

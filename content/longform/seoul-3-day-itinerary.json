@@ -1,0 +1,125 @@
+{
+  "article": "seoul-3-day-itinerary",
+  "title": "First Time in Seoul? A Relaxed 3-Day Itinerary (Local's Guide)",
+  "music": "Laid Back Guitars",
+  "maps": {
+    "overview": {"stops": [
+      {"name": "Gyeongbokgung", "lat": 37.5796, "lon": 126.9770},
+      {"name": "Bukchon", "lat": 37.5826, "lon": 126.9850},
+      {"name": "Insadong", "lat": 37.5740, "lon": 126.9853},
+      {"name": "Cheonggyecheon", "lat": 37.5692, "lon": 126.9784},
+      {"name": "Gwangjang Market", "lat": 37.5701, "lon": 126.9996},
+      {"name": "Myeongdong", "lat": 37.5636, "lon": 126.9850},
+      {"name": "N Seoul Tower", "lat": 37.5512, "lon": 126.9882}
+    ], "route": false},
+    "day1": {"stops": [
+      {"name": "Gyeongbokgung", "lat": 37.5796, "lon": 126.9770},
+      {"name": "Bukchon", "lat": 37.5826, "lon": 126.9850},
+      {"name": "Insadong", "lat": 37.5740, "lon": 126.9853},
+      {"name": "Cheonggyecheon", "lat": 37.5692, "lon": 126.9784}
+    ], "route": true, "note": "All on foot"},
+    "day2": {"stops": [
+      {"name": "Gwangjang Market", "lat": 37.5701, "lon": 126.9996},
+      {"name": "Myeongdong", "lat": 37.5636, "lon": 126.9850},
+      {"name": "N Seoul Tower", "lat": 37.5512, "lon": 126.9882}
+    ], "route": true, "note": "Subway, then cable car or bus"},
+    "day3": {"stops": [
+      {"name": "Changdeokgung", "lat": 37.5794, "lon": 126.9910},
+      {"name": "Dongdaemun (DDP)", "lat": 37.5665, "lon": 127.0092},
+      {"name": "Yeouido Hangang Park", "lat": 37.5284, "lon": 126.9340}
+    ], "route": false, "note": "Pick two"}
+  },
+  "chapters": [
+    {"name": "Intro", "segments": [
+      {"voice": "Three days in Seoul. Palaces, markets, a city view at sunset, and one day that's completely yours.",
+       "show": [{"image": "photo-seoul-first-time.jpg"}, {"image": "regional-seoul-culture-gyeongbokgung-palace.jpg"}, {"photo_query": "Gwangjang Market Seoul", "require": ["gwangjang"]}]},
+      {"voice": "If this is your first time, this plan keeps each day in one part of the city, so you spend your time looking around, not changing trains. I'll show you the route for every day, what to eat, and the small mistakes that trip up first-time visitors.",
+       "show": [{"map": "overview"}]},
+      {"voice": "Let's start with a few things to sort out before day one.",
+       "show": [{"card": {"big": "3 DAYS IN SEOUL", "title": "A relaxed first-timer's plan", "sub": "Korea Plainly"}}]}
+    ]},
+    {"name": "Before you go", "segments": [
+      {"voice": "First, check your dates. Gyeongbokgung Palace is closed on Tuesdays, and Changdeokgung Palace is closed on Mondays. If your trip falls that way, just swap day one and day three.",
+       "show": [{"card": {"big": "BEFORE YOU GO", "title": "Two palace closing days", "sub": "Gyeongbokgung: Tuesday · Changdeokgung: Monday"}}],
+       "label": {"kicker": "TIP", "title": "Check closing days"}},
+      {"voice": "Second, get a transit card when you arrive. You tap it on the subway and on buses, and transfers within a short time are discounted.",
+       "show": [{"image": "photo-seoul-subway-for-foreigners.jpg"}, {"image": "photo-korea-public-transport-transfers.jpg"}],
+       "label": {"kicker": "TIP", "title": "Get a transit card"}},
+      {"voice": "Third, install Naver Map or KakaoMap. Google Maps can show you places in Korea, but its directions are limited, so a Korean map app will save you a lot of guessing.",
+       "show": [{"image": "photo-kakaotalk-korea-guide.jpg"}],
+       "label": {"kicker": "TIP", "title": "Use Naver Map or KakaoMap"}},
+      {"voice": "And where should you stay? Central Seoul works best for this plan. Around Gwanghwamun, Jongno, City Hall or Myeongdong, every stop is a short subway ride or a walk away.",
+       "show": [{"map": "overview"}],
+       "label": {"kicker": "WHERE TO STAY", "title": "Gwanghwamun, Jongno or Myeongdong"}}
+    ]},
+    {"name": "Day 1: Palaces and hanok lanes", "segments": [
+      {"voice": "Day one is all about old Seoul, and you can do the whole day on foot.",
+       "show": [{"card": {"big": "DAY 1", "title": "Palaces, hanok lanes and the stream", "sub": "All on foot"}}, {"map": "day1"}]},
+      {"voice": "Start early at Gyeongbokgung Palace, the largest of Seoul's royal palaces from the Joseon dynasty. Get off at Gyeongbokgung Station on Line 3. If you arrive around opening time, the big courtyards are much quieter.",
+       "show": [{"image": "photo-seoul-3-day-itinerary.jpg"}, {"image": "regional-seoul-culture-gyeongbokgung-palace.jpg"}],
+       "label": {"kicker": "DAY 1 · MORNING", "title": "Gyeongbokgung Palace"}},
+      {"voice": "The changing of the royal guard at Gwanghwamun Gate usually happens at ten in the morning and two in the afternoon. And here's a fun one: if you wear hanbok, the traditional dress, entry to the palaces is free. There are rental shops near the station.",
+       "show": [{"image": "photo-best-time-seoul-attractions.jpg"}, {"photo_query": "Gwanghwamun Gate royal guard changing ceremony", "require": ["gwanghwamun", "guard"]}],
+       "label": {"kicker": "DAY 1 · MORNING", "title": "Guard ceremony and hanbok"}},
+      {"voice": "Give the palace about two hours. Then walk east to Anguk and the hanok lanes of Bukchon. These are real homes, so keep your voice down and stay out of doorways. Some parts of Bukchon now have visiting hours for tourists, so check the signs as you go.",
+       "show": [{"image": "photo-seoul-neighborhoods-guide.jpg"}, {"photo_query": "Bukchon Hanok Village alley Seoul", "require": ["bukchon"]}],
+       "label": {"kicker": "DAY 1 · MIDDAY", "title": "Bukchon hanok lanes"}},
+      {"voice": "In the afternoon, head a few minutes south to Insadong. The main street and its side alleys are full of traditional crafts, tea houses and small galleries. It's a good place for small souvenirs, like hanji paper goods.",
+       "show": [{"photo_query": "Insadong street Seoul", "require": ["insadong"]}, {"image": "photo-korean-restaurant-words.jpg"}],
+       "label": {"kicker": "DAY 1 · AFTERNOON", "title": "Insadong"}},
+      {"voice": "Finish with an evening walk along Cheonggyecheon, the stream that runs below street level from Cheonggye Plaza. It's lit up after dark, it's free, and it's an easy way to end a long first day.",
+       "show": [{"image": "photo-first-evening-seoul.jpg"}, {"image": "regional-seoul-travel-cheonggyecheon.jpg"}],
+       "label": {"kicker": "DAY 1 · EVENING", "title": "Cheonggyecheon stream"}}
+    ]},
+    {"name": "Day 2: Markets, Myeongdong and Namsan", "segments": [
+      {"voice": "Day two is for food, shopping and the best view of the city.",
+       "show": [{"card": {"big": "DAY 2", "title": "Markets, Myeongdong and Namsan", "sub": "Subway, then cable car or bus"}}, {"map": "day2"}]},
+      {"voice": "Start at Gwangjang Market, near Jongno 5-ga Station on Line 1. It's one of Seoul's oldest markets and a great place for breakfast or an early lunch. Look for bindaetteok, a crispy mung bean pancake fried right at the stall, and mayak gimbap, little rice rolls that are hard to stop eating. Bring some cash for the stalls.",
+       "show": [{"photo_query": "Gwangjang Market Seoul", "require": ["gwangjang"]}, {"photo_query": "Bindaetteok mung bean pancake", "require": ["bindaetteok"]}],
+       "label": {"kicker": "DAY 2 · MORNING", "title": "Gwangjang Market"}},
+      {"voice": "Then take the subway to Myeongdong on Line 4. It's packed with cosmetics shops and fashion stores, and from late afternoon the street food stalls open. Many shops offer tax refunds for visitors, so bring your passport when you go shopping.",
+       "show": [{"image": "regional-seoul-shopping-myeongdong-shopping-street.jpg"}, {"image": "photo-christmas-new-year-seoul.jpg"}],
+       "label": {"kicker": "DAY 2 · AFTERNOON", "title": "Myeongdong"}},
+      {"voice": "As the sun goes down, go up Namsan to N Seoul Tower. From Myeongdong you can walk to the cable car, or take a bus up the mountain. The view is best around sunset. Cable car and observatory times change with the season, so check them that morning.",
+       "show": [{"photo_query": "N Seoul Tower", "require": ["n seoul tower", "n_seoul_tower"]}, {"photo_query": "Seoul night view from Namsan", "require": ["namsan", "night"]}],
+       "label": {"kicker": "DAY 2 · SUNSET", "title": "N Seoul Tower"}}
+    ]},
+    {"name": "Day 3: Choose your own Seoul", "segments": [
+      {"voice": "Day three is yours. Each of these options fills about half a day, so pick two.",
+       "show": [{"card": {"big": "DAY 3", "title": "Choose your own Seoul", "sub": "Pick two"}}, {"map": "day3"}]},
+      {"voice": "Want more history? Visit Changdeokgung Palace and its Secret Garden. The garden can only be seen on a guided tour with its own ticket, and places are limited, so book ahead.",
+       "show": [{"photo_query": "Huwon Changdeokgung Secret Garden", "require": ["huwon", "secret garden", "changdeokgung"]}, {"photo_query": "Changdeokgung Palace Seoul", "require": ["changdeokgung"]}],
+       "label": {"kicker": "OPTION 1", "title": "Changdeokgung and the Secret Garden"}},
+      {"voice": "Into design and shopping? Go to Dongdaemun Design Plaza, and the fashion malls around Dongdaemun that stay open late.",
+       "show": [{"photo_query": "Dongdaemun Design Plaza", "require": ["dongdaemun design plaza", "ddp"]}, {"image": "photo-how-to-order-korean-food.jpg"}],
+       "label": {"kicker": "OPTION 2", "title": "Dongdaemun Design Plaza"}},
+      {"voice": "Want to slow down like a local? Spend the afternoon in a Han River park, like Yeouido. People picnic, cycle and order fried chicken to the riverbank. Renting a bike is easy, and there's always a convenience store nearby.",
+       "show": [{"image": "photo-korea-weather-by-season.jpg"}, {"photo_query": "Yeouido Hangang Park", "require": ["yeouido"]}],
+       "label": {"kicker": "OPTION 3", "title": "A Han River park"}},
+      {"voice": "Or relax properly at a jjimjilbang, a Korean bathhouse. It's one of the most local things you can do in Seoul. Just read up on the etiquette before you go.",
+       "show": [{"photo_query": "Jjimjilbang Korea", "require": ["jjimjilbang"]}],
+       "label": {"kicker": "OPTION 4", "title": "A jjimjilbang"}}
+    ]},
+    {"name": "Getting around", "segments": [
+      {"voice": "Almost everything in this plan is on the subway. Tap your card in and out at the gates, and use the same card on buses.",
+       "show": [{"image": "photo-seoul-subway-for-foreigners.jpg"}, {"image": "photo-seoul-bus-guide.jpg"}],
+       "label": {"kicker": "GETTING AROUND", "title": "Subway and bus"}},
+      {"voice": "Taxis are easy to find and fair for short trips. With the Kakao T app, you can book one without speaking any Korean.",
+       "show": [{"image": "photo-kakao-t-taxi-korea.jpg"}],
+       "label": {"kicker": "GETTING AROUND", "title": "Taxis with Kakao T"}}
+    ]},
+    {"name": "Mistakes to avoid", "segments": [
+      {"voice": "Before you go, here are four small mistakes that catch a lot of first-time visitors.",
+       "show": [{"list": {"heading": "4 mistakes to avoid", "items": ["Palaces on a weekend", "Lunch after 2 pm", "No cash at the market", "Trusting old opening hours"]}}]},
+      {"voice": "One. Palaces on a weekend. Most sights are busiest on weekends and public holidays, so do the palaces on a weekday if you can. Two. Lunch after two o'clock. Many restaurants close for a break in the middle of the afternoon, so eat lunch early. Three. No cash at the market. Cards work almost everywhere, but carry a little cash for market stalls. And four. Trusting old opening hours. Hours and closing days change, so check each place on a map app the morning you go.",
+       "show": [{"image": "photo-korea-travel-mistakes.jpg"}, {"image": "photo-cash-cards-payments-korea.jpg"}, {"image": "photo-korean-convenience-stores-compared.jpg"}],
+       "label": {"kicker": "AVOID", "title": "Small mistakes, big difference"}}
+    ]},
+    {"name": "Summary", "segments": [
+      {"voice": "So that's three days in Seoul. Day one, palaces, hanok lanes and the stream. Day two, a market breakfast, Myeongdong and the sunset from Namsan. Day three, whatever you love most.",
+       "show": [{"list": {"heading": "Your 3 days", "items": ["Day 1: Gyeongbokgung, Bukchon, Insadong, Cheonggyecheon", "Day 2: Gwangjang Market, Myeongdong, N Seoul Tower", "Day 3: pick two of palace, design, river or bathhouse"]}}]},
+      {"voice": "The full plan, with links for every stop, is on Korea Plainly. The link is in the description. Have a wonderful trip to Seoul.",
+       "show": [{"card": {"big": "KOREA PLAINLY", "title": "Full plan and links", "sub": "korea-plainly.com"}}]}
+    ]}
+  ]
+}

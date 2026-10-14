@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 _shorts/music/
 _shorts/*.mp4
+_shorts/tiles/
