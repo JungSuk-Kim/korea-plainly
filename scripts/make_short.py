@@ -43,10 +43,10 @@ def slide_photo(slide, taken, fallback=None):
         # photos of a place, not of people: skip celebrity, event and portrait shots
         people = re.compile(r"(?i)\b(bts|blackpink|exo|twice|concert|fan ?meeting|idol|performing|perform|press conference|"
                             r"portrait|members|singer|actor|actress|celebrity|showcase)\b")
-        hit = (search_commons(q, reject=reject, require=slide.get("require", ()), avoid=people)
-               or search_commons(q, reject=reject, avoid=people)
-               or (slide.get("require") and search_commons(" ".join(slide["require"]) + " Korea", reject=reject,
-                                                             require=slide["require"], avoid=people)))
+        # always keep the place words: a photo of somewhere else is worse than no photo (the caller shows a card)
+        hit = search_commons(q, reject=reject, require=slide.get("require", ()), avoid=people)
+        if not hit and slide.get("require"):
+            hit = search_commons(" ".join(slide["require"]) + " Korea", reject=reject, require=slide["require"], avoid=people)
         if not hit:
             if fallback:
                 print(f"warning: no freely licensed photo for {q!r}; using {fallback}")

@@ -82,7 +82,11 @@ Rules:
   English letters only: never write Korean script (say "show the driver the name on your map app" instead).
 - Use only facts from the article. Never invent prices, times or dates; for things that change say "check before you go".
 - Every picture must show exactly what its segment talks about. Prefer a site photo when its description matches;
-  otherwise a photo_query for that exact place. For a general tip with no place, use a card. Never use one photo twice.
+  otherwise a photo_query for that exact place. Never use one photo twice.
+- Keep it visual: cards ONLY for each chapter's opening and the closing; never more than one card in a row.
+  For practical tips use a fitting site photo (subway platforms, buses, taxis, airports, convenience stores, cafes,
+  markets, crowds, payment counters are all in the list below). Every other segment needs a photo or a map.
+- Keep segments short: at most 45 words each, with 2 visuals for segments over 25 words.
 - Maps: 2-6 stops each; "geocode" must be precise enough for OpenStreetMap to find (official name + district + city).
   Use "route": true only for stops visited in that order.
 - Each segment has 1-3 visuals. Labels: kicker in capitals, at most 24 characters; title at most 34 characters.
