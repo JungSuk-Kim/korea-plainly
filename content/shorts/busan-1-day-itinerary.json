@@ -1,0 +1,58 @@
+{
+  "article": "busan-1-day-itinerary",
+  "fallback": "photo-busan-1-day-itinerary.jpg",
+  "title": "One day in Busan: an easy east-coast route",
+  "hashtags": "#Busan #Korea #KoreaTravel #Haeundae #BusanItinerary",
+  "music": "Easy Lemon",
+  "slides": [
+    {
+      "kicker": "BUSAN",
+      "title": "Only one day?",
+      "sub": "Stay on the east coast",
+      "voice": "Only one day in Busan? Stick to the east coast. This route keeps the stops close, so you spend minutes—not hours—getting around.",
+      "image": "photo-busan-1-day-itinerary.jpg"
+    },
+    {
+      "kicker": "MORNING",
+      "title": "Temple by the sea",
+      "sub": "Go early to beat the crowds",
+      "voice": "Start early at Haedong Yonggungsa, a rare Korean temple right above the sea. Allow about an hour, and keep your voice low.",
+      "image": "regional-busan-culture-haedong-yonggungsa-temple.jpg"
+    },
+    {
+      "kicker": "LATE MORNING",
+      "title": "Haeundae Beach",
+      "sub": "Save beach time for late morning",
+      "voice": "Then head back to Haeundae Beach. Walk the sand and promenade, and remember that summer weekends get busy.",
+      "image": "photo-busan-1-day-itinerary.jpg"
+    },
+    {
+      "kicker": "LUNCH",
+      "title": "Market snacks",
+      "sub": "Try fish cakes or tteokbokki",
+      "voice": "For lunch, try Haeundae Traditional Market, just a short walk from the beach. Look for fish cakes or tteokbokki.",
+      "photo_query": "Haeundae Traditional Market Busan",
+      "require": [
+        "haeundae",
+        "market"
+      ]
+    },
+    {
+      "kicker": "EVENING",
+      "title": "Dinner by the sea",
+      "sub": "See Gwangan Bridge after dark",
+      "voice": "Return to Haeundae for dinner, then walk the beach at night. Or take a short taxi to Gwangalli Beach to see Gwangan Bridge lit after dark.",
+      "photo_query": "Gwangalli Beach Gwangan Bridge Busan",
+      "require": [
+        "gwangalli",
+        "gwangan"
+      ]
+    },
+    {
+      "end": true,
+      "title": "Full guide and tips",
+      "sub": "korea-plainly.com",
+      "voice": "The full guide is on Korea Plainly. Link in bio."
+    }
+  ]
+}
