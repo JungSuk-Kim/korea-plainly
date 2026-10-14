@@ -42,7 +42,7 @@ jobs:
       - name: Preview frames for review
         run: |
           f=_shorts/$(basename "${{ inputs.spec }}" .json)-long.mp4
-          ffmpeg -v error -i "$f" -vf "fps=1/20,scale=480:-1,tile=4x8" -frames:v 1 -update 1 "${f%.mp4}-contact.jpg"
+          ffmpeg -y -v error -i "$f" -vf "fps=1/20,scale=480:-1,tile=4x8" -frames:v 1 -update 1 "${f%.mp4}-contact.jpg"
       - name: Keep the video for 30 days
         uses: actions/upload-artifact@v4
         with:
