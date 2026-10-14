@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Show our YouTube Shorts inside the articles they come from. Idempotent.
 
-content/videos.json lists the uploaded videos:
+content/videos.json lists the uploaded videos (one, or a list of several per article;
+"format": "long" for a 16:9 video, "place": "end" to show it near the end of the article):
 
     {"seoul-3-day-itinerary": {"youtube": "0Adi6IjLADs", "title": "...", "uploaded": "2026-10-14T08:30:00+09:00",
                                "seconds": 57, "poster": "img/video-seoul-3-day-itinerary.jpg"}}
@@ -39,7 +40,7 @@ SCRIPT = ("<script>document.querySelectorAll('.kp-video-box[data-yt]').forEach(f
           "});});</script>")
 
 
-def block(slug, v, nl):
+def block(slug, v, nl, first=True):
     vid, title = v["youtube"], v["title"]
     long = v.get("format") == "long"          # a long-form video (16:9) rather than a Short
     url = f"https://www.youtube.com/watch?v={vid}" if long else f"https://www.youtube.com/shorts/{vid}"
@@ -51,11 +52,11 @@ def block(slug, v, nl):
     t = html.escape(title, quote=True)
     return nl.join([
         START,
-        f'<figure class="kp-video{" kp-long" if long else ""}">{STYLE}',
+        f'<figure class="kp-video{" kp-long" if long else ""}">{STYLE if first else ""}',
         f'<a class="kp-video-box" href="{url}" data-yt="{vid}" aria-label="Play video: {t}" target="_blank" rel="noopener">'
         f'<img src="{v["poster"]}" alt="{t}" {size} loading="lazy"><span class="kp-play"></span></a>',
         f'<p>{html.escape(v.get("caption", "Watch the one-minute version"))}</p>',
-        f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>{SCRIPT}',
+        f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>{SCRIPT if first else ""}',
         "</figure>",
         END,
     ])
@@ -71,14 +72,24 @@ def main():
             continue
         nl = "\r\n" if "\r\n" in s else "\n"
         new = re.sub(re.escape(START) + r".*?" + re.escape(END) + r"\r?\n?", "", s, flags=re.S)
-        v = videos.get(p.stem)
-        if v and (ROOT / v["poster"]).exists():
-            art = new.find("<article")
-            toc = re.search(r"<nav class=\"kp-toc\".*?</nav>\r?\n?", new[art:], re.S) if art >= 0 else None
-            h2 = re.search(r"<h2\b", new[art:]) if art >= 0 else None
-            at = art + (toc.end() if toc else h2.start() if h2 else -1)
-            if art >= 0 and (toc or h2):
-                new = new[:at] + block(p.stem, v, nl) + nl + new[at:]
+        entries = videos.get(p.stem) or []
+        entries = [e for e in (entries if isinstance(entries, list) else [entries]) if (ROOT / e["poster"]).exists()]
+        art = new.find("<article")
+        for k, v in enumerate(entries):
+            # "top" (default): just after the table of contents; "end": before the FAQ, or the last section
+            if art < 0:
+                break
+            body = new[art:]
+            if v.get("place") == "end":
+                spot = (re.search(r'<h2[^>]*id="faq"', body) or re.search(r"<h2>Related guides", body)
+                        or re.search(r"</article>", body))
+                at = art + spot.start() if spot else -1
+            else:
+                toc = re.search(r"<nav class=\"kp-toc\".*?</nav>\r?\n?", body, re.S)
+                h2 = re.search(r"<h2\b", body)
+                at = art + (toc.end() if toc else h2.start() if h2 else -1)
+            if at > art:
+                new = new[:at] + block(p.stem, v, nl, first=k == 0) + nl + new[at:]
         if new != s:
             p.write_bytes(new.encode("utf-8"))
             changed += 1

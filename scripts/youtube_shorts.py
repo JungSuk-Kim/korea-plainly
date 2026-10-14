@@ -101,13 +101,18 @@ def check():
             continue
         v["status"] = now
         print(f"{slug}: now {now}")
-        if now == "public" and v["article"] not in videos:
+        have = videos.get(v["article"]) or []
+        have = have if isinstance(have, list) else [have]
+        if now == "public" and all(e.get("youtube") != v["youtube"] for e in have):
             poster = f"img/video-{v['article']}.jpg"
             (ROOT / poster).write_bytes((ROOT / "_shorts" / f"{slug}-poster.jpg").read_bytes())
-            videos[v["article"]] = {"youtube": v["youtube"], "title": v["title"],
-                                    "description": f"{v['title']}: the short version of our guide.",
-                                    "caption": "Watch the one-minute version", "uploaded": v["uploaded"],
-                                    "seconds": v["seconds"], "poster": poster}
+            entry = {"youtube": v["youtube"], "title": v["title"],
+                     "description": f"{v['title']}: the short version of our guide.",
+                     "caption": "Watch the one-minute version", "uploaded": v["uploaded"],
+                     "seconds": v["seconds"], "poster": poster}
+            if any(e.get("format") == "long" for e in have):   # a long-form video is already at the top
+                entry.update(place="end", caption="Short on time? The guide in under a minute")
+            videos[v["article"]] = have + [entry] if have else entry
     save(UPLOADS, log)
     save(VIDEOS, videos)
 
