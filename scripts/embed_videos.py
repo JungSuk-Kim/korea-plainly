@@ -28,7 +28,9 @@ STYLE = ("<style>.kp-video{margin:1.5rem auto;max-width:300px;text-align:center}
          "border-radius:50%;background:rgba(201,65,58,.92);box-shadow:0 4px 18px rgba(0,0,0,.35)}"
          ".kp-video .kp-play:after{content:'';position:absolute;left:29px;top:22px;border-style:solid;"
          "border-width:14px 0 14px 22px;border-color:transparent transparent transparent #fff}"
-         ".kp-video p{font-size:.9rem;margin:.5rem 0 0;color:#5b6472}</style>")
+         ".kp-video p{font-size:.9rem;margin:.5rem 0 0;color:#5b6472}"
+         ".kp-video.kp-long{max-width:820px}.kp-video.kp-long .kp-video-box{aspect-ratio:16/9}"
+         ".kp-video.kp-long .kp-play{top:50%}</style>")
 SCRIPT = ("<script>document.querySelectorAll('.kp-video-box[data-yt]').forEach(function(a){a.addEventListener('click',"
           "function(e){e.preventDefault();var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'"
           "+a.dataset.yt+'?autoplay=1&playsinline=1&rel=0';f.title=a.getAttribute('aria-label');"
@@ -39,7 +41,9 @@ SCRIPT = ("<script>document.querySelectorAll('.kp-video-box[data-yt]').forEach(f
 
 def block(slug, v, nl):
     vid, title = v["youtube"], v["title"]
-    url = f"https://www.youtube.com/shorts/{vid}"
+    long = v.get("format") == "long"          # a long-form video (16:9) rather than a Short
+    url = f"https://www.youtube.com/watch?v={vid}" if long else f"https://www.youtube.com/shorts/{vid}"
+    size = 'width="1280" height="720"' if long else 'width="540" height="960"'
     data = {"@context": "https://schema.org", "@type": "VideoObject", "name": title,
             "description": v.get("description", title), "thumbnailUrl": [f"{BASE}/{v['poster']}"],
             "uploadDate": v["uploaded"], "duration": f"PT{int(v['seconds'])}S",
@@ -47,9 +51,9 @@ def block(slug, v, nl):
     t = html.escape(title, quote=True)
     return nl.join([
         START,
-        f'<figure class="kp-video">{STYLE}',
+        f'<figure class="kp-video{" kp-long" if long else ""}">{STYLE}',
         f'<a class="kp-video-box" href="{url}" data-yt="{vid}" aria-label="Play video: {t}" target="_blank" rel="noopener">'
-        f'<img src="{v["poster"]}" alt="{t}" width="540" height="960" loading="lazy"><span class="kp-play"></span></a>',
+        f'<img src="{v["poster"]}" alt="{t}" {size} loading="lazy"><span class="kp-play"></span></a>',
         f'<p>{html.escape(v.get("caption", "Watch the one-minute version"))}</p>',
         f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>{SCRIPT}',
         "</figure>",
