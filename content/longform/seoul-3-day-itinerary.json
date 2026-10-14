@@ -413,13 +413,13 @@
           "voice": "From late afternoon, Myeongdong's main streets fill with food stalls. Grilled skewers, egg bread, sweet pancakes called hotteok. Most stalls take cards now, but keep a little cash just in case, and look for the price on the sign before you order.",
           "show": [
             {
-              "photo_query": "Myeongdong street food stalls",
+              "photo_query": "Myeongdong street Seoul night",
               "require": [
                 "myeongdong"
               ]
             },
             {
-              "image": "photo-korean-convenience-stores-compared.jpg"
+              "image": "photo-cash-cards-payments-korea.jpg"
             }
           ],
           "label": {
