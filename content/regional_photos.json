@@ -214,5 +214,20 @@
     "source_type": "wikimedia",
     "credit": "Photo: kallerna This photo was taken with Fujifilm X-T30, CC BY-SA 4.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Cheonggyecheon_Seoul_3.jpg"
+  },
+  "sokcho-cafe-seaside-garden": {
+    "source_type": "google",
+    "credit": "Photo: 바다정원 via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/105659642939494417667"
+  },
+  "sokcho-food-chungchosoo-mulhoe": {
+    "source_type": "google",
+    "credit": "Photo: 청초수물회 via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/104585115653001336225"
+  },
+  "sokcho-travel": {
+    "source_type": "google",
+    "credit": "Photo: Ayan Bardhan via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/113124878451300041934"
   }
 }

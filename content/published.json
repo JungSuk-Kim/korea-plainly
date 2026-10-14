@@ -702,5 +702,56 @@
     "filename": "seollal-travel-tips.html",
     "title": "Seollal 2027: Visiting Korea During Lunar New Year",
     "category": "Travel"
+  },
+  {
+    "slug": "korean-bbq-guide",
+    "filename": "korean-bbq-guide.html",
+    "title": "How to Eat Korean BBQ: A Step-by-Step Guide for Visitors",
+    "category": "Food"
+  },
+  {
+    "title": "Seoraksan National Park: Seorak-dong mountain gateway",
+    "slug": "sokcho-travel",
+    "category": "Travel",
+    "region": "Sokcho",
+    "round": 1,
+    "place_name": "설악산국립공원 설악동지구",
+    "address": "Seorak-dong, Sokcho-si, Gangwon-do",
+    "google_rating": 4.6,
+    "google_review_count": 10052,
+    "naver_checked": true,
+    "published_at": "2026-10-14T00:21:36.955604+00:00",
+    "image": "regional-sokcho-travel.jpg",
+    "image_credit": "Photo: Ayan Bardhan via Google Maps"
+  },
+  {
+    "title": "Chungchosoo Mulhoe: Sokcho’s Chilled Seafood Specialty",
+    "slug": "sokcho-food-chungchosoo-mulhoe",
+    "category": "Food",
+    "region": "Sokcho",
+    "round": 1,
+    "place_name": "Chungchosoo Mulhoe",
+    "address": "12-36 Expo-ro, Sokcho-si, Gangwon-do",
+    "google_rating": 4,
+    "google_review_count": 12392,
+    "naver_checked": true,
+    "published_at": "2026-10-14T00:22:02.884899+00:00",
+    "image": "regional-sokcho-food-chungchosoo-mulhoe.jpg",
+    "image_credit": "Photo: 청초수물회 via Google Maps"
+  },
+  {
+    "title": "Seaside Garden: A coastal café in Goseong",
+    "slug": "sokcho-cafe-seaside-garden",
+    "category": "Cafe",
+    "region": "Sokcho",
+    "round": 1,
+    "place_name": "Seaside Garden",
+    "address": "23 Beorikkae-gil, Toseong-myeon, Goseong-gun, Gangwon-do",
+    "google_rating": 4.2,
+    "google_review_count": 8278,
+    "naver_checked": true,
+    "published_at": "2026-10-14T00:22:24.958140+00:00",
+    "image": "regional-sokcho-cafe-seaside-garden.jpg",
+    "image_credit": "Photo: 바다정원 via Google Maps"
   }
 ]

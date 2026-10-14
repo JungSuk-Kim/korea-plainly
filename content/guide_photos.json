@@ -176,6 +176,10 @@
     "source": "",
     "query": "jjimjilbang Seoul"
   },
+  "korean-bbq-guide": {
+    "none": true,
+    "query": "Eat BBQ Step-by-Step Korea"
+  },
   "korean-cafe-etiquette": {
     "file": "photo-korean-cafe-etiquette.jpg",
     "credit": "Photo: H. Y. Shin 000, CC0, via Wikimedia Commons",
