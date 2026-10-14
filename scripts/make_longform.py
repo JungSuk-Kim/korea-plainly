@@ -366,8 +366,10 @@ def main():
                         except SystemExit as e:  # no licensed photo of exactly that: show the others instead
                             print(f"::warning::{e}")
                             seg["show"].remove(v)
-                if not seg["show"]:
-                    seg["show"] = [{"file": used_photos[-1]}]
+                if not seg["show"]:   # nothing to show of exactly this: a title card rather than an unrelated photo
+                    lab = seg.get("label") or {}
+                    seg["show"] = [{"card": {"big": (lab.get("kicker") or ch["name"]).upper()[:22],
+                                             "title": lab.get("title", ch["name"]), "sub": "Korea Plainly"}}]
                 seg_photo = next((v["file"] for v in seg["show"] if "file" in v), used_photos[-1] if used_photos else None)
                 weights = [WEIGHT.get(next(iter(k for k in v if k in WEIGHT), ""), 1.0) for v in seg["show"]]
                 label = tmp / f"l{n:03d}.png"

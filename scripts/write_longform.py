@@ -64,7 +64,7 @@ Return JSON only:
  ]}}]
 }}
 VISUAL is one of:
-  {{"image": "<site photo file>"}}  |  {{"photo_query": "Wikimedia Commons search for exactly that place or thing in Korea", "require": ["1-3 lowercase words that must be in the file title"]}}
+  {{"image": "<site photo file>"}}  |  {{"photo_query": "2-4 words naming the place, e.g. 'Haeundae Beach' or 'Haedong Yonggungsa'", "require": ["1-2 lowercase words that must be in the file title, e.g. 'haeundae'"]}}
   {{"map": "<map id>"}}  |  {{"card": {{"big": "SHORT CAPS", "title": "...", "sub": "..."}}}}  |  {{"list": {{"heading": "...", "items": ["...", "..."]}}}}
 
 Structure (use these chapter names where they fit):
@@ -79,6 +79,7 @@ Structure (use these chapter names where they fit):
 
 Rules:
 - Narration: {min_words}-{max_words} words in total. Short spoken sentences, numbers as spoken, no emoji.
+  English letters only: never write Korean script (say "show the driver the name on your map app" instead).
 - Use only facts from the article. Never invent prices, times or dates; for things that change say "check before you go".
 - Every picture must show exactly what its segment talks about. Prefer a site photo when its description matches;
   otherwise a photo_query for that exact place. For a general tip with no place, use a card. Never use one photo twice.
@@ -108,9 +109,33 @@ def geocode(query, cache={}):
     return cache[query]
 
 
+HANGUL = re.compile(r"\s*[(\[]?[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]+[)\]]?")
+
+
+def short_query(q):
+    """Commons search works best with a few words: drop 'in Busan, South Korea' style tails."""
+    q = re.sub(r",.*$", "", q)
+    q = re.sub(r"\b(in|at|on|of|the|and|near)\b.*$", "", q, flags=re.I).strip() or q
+    return " ".join(q.split()[:4])
+
+
 def clean(spec, photos):
-    """Make the model's script safe to render: real site photos only, maps with found stops, no repeated photos."""
+    """Make the model's script safe to render: real site photos only, maps with found stops, no repeated photos,
+    no Korean script (the subtitle font cannot show it, and the English voice cannot read it)."""
     used = set()
+    for ch in spec["chapters"]:
+        for seg in ch["segments"]:
+            seg["voice"] = re.sub(r",\s*\.", ".", re.sub(r"\s+([,.])", r"\1", HANGUL.sub("", seg["voice"]))).strip()
+            for v in seg.get("show", []):
+                if "photo_query" in v:
+                    v["photo_query"] = short_query(v["photo_query"])
+                for key in ("card", "list"):
+                    if key in v:
+                        for k2 in ("big", "title", "sub", "heading"):
+                            if isinstance(v[key].get(k2), str):
+                                v[key][k2] = HANGUL.sub("", v[key][k2]).strip()
+                        if key == "list":
+                            v[key]["items"] = [HANGUL.sub("", i).strip() for i in v[key].get("items", [])]
     for m in spec.get("maps", {}).values():
         stops = []
         for s in m.get("stops", []):
