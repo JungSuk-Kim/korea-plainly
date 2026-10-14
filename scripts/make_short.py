@@ -27,7 +27,7 @@ PHOTOS = ROOT / "_shorts" / "photos"
 PHOTO_LOG = ROOT / "content" / "shorts" / "photos.json"   # {query: {file, source, credit}}
 
 
-def slide_photo(slide, taken):
+def slide_photo(slide, taken, fallback=None):
     """The slide's photo: "image" (one of the site's photos) or "photo_query", a Wikimedia Commons search
     for a photo of exactly the place the narration names. Found photos are kept, so a rerun uses the same one."""
     if slide.get("image"):
@@ -38,8 +38,12 @@ def slide_photo(slide, taken):
         import sys
         sys.path.insert(0, str(Path(__file__).resolve().parent))
         from guide_photos import download, search_commons
-        hit = search_commons(q, reject=sorted(taken | set(slide.get("reject", []))), require=slide.get("require", ()))
+        reject = sorted(taken | set(slide.get("reject", [])))
+        hit = search_commons(q, reject=reject, require=slide.get("require", ())) or search_commons(q, reject=reject)
         if not hit:
+            if fallback:
+                print(f"warning: no freely licensed photo for {q!r}; using {fallback}")
+                return fallback
             raise SystemExit(f"no freely licensed photo for {q!r}; change the query or set an image")
         PHOTOS.mkdir(parents=True, exist_ok=True)
         name = re.sub(r"[^a-z0-9]+", "-", q.lower()).strip("-") + ".jpg"
@@ -348,7 +352,7 @@ def main():
         taken = set()
         for s in spec["slides"]:
             if not s.get("end"):
-                s["file"] = slide_photo(s, taken)
+                s["file"] = slide_photo(s, taken, spec.get("fallback"))
         segs = [segment(s, i, tmp, args.voice) for i, s in enumerate(spec["slides"])]
         lst = tmp / "list.txt"
         lst.write_text("".join(f"file '{p}'\n" for p, _ in segs))

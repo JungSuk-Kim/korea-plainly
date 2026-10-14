@@ -33,7 +33,13 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/make_short.py "${{ inputs.spec }}" --voice
-      - name: Commit the video
+      - name: Keep the video for 30 days (download from this run's page)
+        uses: actions/upload-artifact@v4
+        with:
+          name: short-video
+          path: _shorts/*-voice.*
+          retention-days: 30
+      - name: Commit the script and photo log
         run: |
           git config user.name "Korea Plainly Bot"
           git config user.email "actions@github.com"
