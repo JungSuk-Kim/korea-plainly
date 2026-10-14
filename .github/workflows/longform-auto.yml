@@ -1,0 +1,82 @@
+name: Long-form video (weekly)
+
+# Tuesdays 10:23 KST: write a long-form script from the next article (content/longform/queue.json),
+# render it (maps, Kkachi, subtitles, music) and upload it to YouTube as PRIVATE for the owner to check.
+# "Shorts (automatic)" checks every 2 hours and adds it to its article once it is public.
+on:
+  schedule:
+    - cron: "23 1 * * 2"
+  workflow_dispatch:
+    inputs:
+      article:
+        description: "Article slug (empty = next in the queue)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-bot
+  cancel-in-progress: false
+
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      HAS_YT: ${{ secrets.YT_REFRESH_TOKEN != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install requests pillow openai
+      - name: Write the script
+        id: write
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          spec=$(python scripts/write_longform.py ${{ inputs.article }} | tail -1)
+          echo "$spec"
+          case "$spec" in content/longform/*.json) echo "spec=$spec" >> "$GITHUB_OUTPUT"; echo "slug=$(basename "$spec" .json)" >> "$GITHUB_OUTPUT";; esac
+      - name: Render
+        if: steps.write.outputs.spec != ''
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python scripts/make_longform.py "${{ steps.write.outputs.spec }}"
+      - name: Preview frames for review
+        if: steps.write.outputs.spec != ''
+        run: |
+          f=_shorts/${{ steps.write.outputs.slug }}-long.mp4
+          ffmpeg -y -v error -i "$f" -vf "fps=1/20,scale=480:-1,tile=4x8" -frames:v 1 -update 1 "${f%.mp4}-contact.jpg"
+      - name: Keep the video for 30 days
+        if: steps.write.outputs.spec != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.write.outputs.slug }}-long
+          path: _shorts/${{ steps.write.outputs.slug }}-long*
+          retention-days: 30
+      - name: Upload to YouTube (private)
+        if: steps.write.outputs.spec != '' && env.HAS_YT == 'true'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          slug=${{ steps.write.outputs.slug }}
+          title=$(python -c "import json;print(json.load(open('content/longform/$slug.json'))['title'])")
+          tags=$(python -c "import json;print(','.join(t.lstrip('#') for t in json.load(open('content/longform/$slug.json')).get('hashtags','').split()))")
+          python scripts/youtube_upload.py "_shorts/${slug}-long.mp4" "$title" "$tags,Korea travel,Korea Plainly"
+          python scripts/youtube_shorts.py record-long "$slug"
+      - name: Commit
+        if: steps.write.outputs.spec != ''
+        run: |
+          git config user.name "Korea Plainly Bot"
+          git config user.email "actions@github.com"
+          git add _shorts content/longform content/shorts
+          git commit -m "Long-form video: ${{ steps.write.outputs.slug }}" || exit 0
+          git pull --rebase -X theirs
+          git push

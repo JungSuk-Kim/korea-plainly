@@ -50,6 +50,10 @@ The "Shorts (automatic)" workflow does all of this: `write_short.py` writes the 
 `youtube_shorts.py upload` uploads it as private (log: `content/shorts/uploads.json`), the owner makes it public,
 and `youtube_shorts.py check` (every 2 hours) adds it to the article. Videos are not committed (`_shorts/*.mp4`
 is ignored); each run keeps its video as a 30-day artifact. Never use Google Maps photos in videos.
+Long-form (16:9, 8-9 min): "Long-form video (weekly)" runs Tuesdays: `write_longform.py` (script from the next article in
+`content/longform/queue.json`, map stops geocoded with OSM Nominatim) → `make_longform.py` (OSM maps, chapters, subtitles,
+Kkachi) → `youtube_upload.py` (private) → `youtube_shorts.py record-long`; the 2-hourly check embeds it at the top of the
+article once public (a Short for the same article moves to the end). Kkachi the magpie mascot lives in `scripts/mascot/`.
 
 ## Checking the bots
 

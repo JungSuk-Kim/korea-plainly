@@ -104,21 +104,48 @@ def check():
         have = videos.get(v["article"]) or []
         have = have if isinstance(have, list) else [have]
         if now == "public" and all(e.get("youtube") != v["youtube"] for e in have):
-            poster = f"img/video-{v['article']}.jpg"
+            long = v.get("format") == "long"
+            poster = f"img/video-{v['article']}{'-long' if long else ''}.jpg"
             (ROOT / poster).write_bytes((ROOT / "_shorts" / f"{slug}-poster.jpg").read_bytes())
-            entry = {"youtube": v["youtube"], "title": v["title"],
-                     "description": f"{v['title']}: the short version of our guide.",
-                     "caption": "Watch the one-minute version", "uploaded": v["uploaded"],
+            entry = {"youtube": v["youtube"], "title": v["title"], "uploaded": v["uploaded"],
                      "seconds": v["seconds"], "poster": poster}
-            if any(e.get("format") == "long" for e in have):   # a long-form video is already at the top
-                entry.update(place="end", caption="Short on time? The guide in under a minute")
-            videos[v["article"]] = have + [entry] if have else entry
+            if long:   # the long-form video goes at the top; any Short moves to the end of the article
+                minutes = max(1, round(v["seconds"] / 60))
+                entry.update(format="long", description=f"{v['title']}: the full guide as a video.",
+                             caption=f"Watch the whole guide, with maps ({minutes} minutes)")
+                for e in have:
+                    e.update(place="end", caption="Short on time? The guide in under a minute")
+                videos[v["article"]] = [entry] + have
+            else:
+                entry.update(description=f"{v['title']}: the short version of our guide.",
+                             caption="Watch the one-minute version")
+                if any(e.get("format") == "long" for e in have):   # a long-form video is already at the top
+                    entry.update(place="end", caption="Short on time? The guide in under a minute")
+                videos[v["article"]] = have + [entry] if have else entry
     save(UPLOADS, log)
     save(VIDEOS, videos)
 
 
+def record_long(article):
+    """Log a long-form video uploaded by youtube_upload.py, so `check` adds it to its article once public."""
+    spec = json.loads((ROOT / "content" / "longform" / f"{article}.json").read_text(encoding="utf-8"))
+    stem = ROOT / "_shorts" / f"{article}-long"
+    vid = Path(f"{stem}.youtube").read_text().strip()
+    seconds = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
+                                    f"{stem}.mp4"], capture_output=True, text=True).stdout.strip() or 0)
+    (ROOT / "_shorts" / f"{article}-long-poster.jpg").write_bytes(Path(f"{stem}-thumb.jpg").read_bytes())
+    log = load(UPLOADS)
+    log[f"{article}-long"] = {"article": article, "format": "long", "youtube": vid, "status": "private",
+                              "uploaded": datetime.now(KST).isoformat(timespec="seconds"), "title": spec["title"],
+                              "seconds": round(seconds)}
+    save(UPLOADS, log)
+    print(f"{article}: long-form logged ({vid})")
+
+
 if __name__ == "__main__":
-    if sys.argv[1:2] == ["upload"]:
+    if sys.argv[1:2] == ["record-long"]:
+        record_long(sys.argv[2])
+    elif sys.argv[1:2] == ["upload"]:
         upload(sys.argv[2])
     elif sys.argv[1:2] == ["check"]:
         check()

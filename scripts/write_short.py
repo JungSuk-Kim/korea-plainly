@@ -35,7 +35,7 @@ def done():
     for name in ("uploads.json",):
         p = SHORTS / name
         if p.exists():
-            have |= {v.get("article", k) for k, v in json.loads(read(p)).items()}
+            have |= {v.get("article", k) for k, v in json.loads(read(p)).items() if v.get("format") != "long"}
     return have
 
 
