@@ -202,6 +202,21 @@
           }
         },
         {
+          "voice": "Flying into Incheon? The AREX airport train is the simplest way into central Seoul, and airport buses and taxis are good options if you have heavy bags or arrive late. Pick whichever drops you closest to your hotel.",
+          "show": [
+            {
+              "image": "photo-incheon-airport-to-seoul.jpg"
+            },
+            {
+              "image": "photo-korea-entry-k-eta-e-arrival.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "ARRIVING",
+            "title": "From Incheon Airport"
+          }
+        },
+        {
           "voice": "And where should you stay? Central Seoul works best for this plan. Around Gwanghwamun, Jongno, City Hall or Myeongdong, every stop is a short subway ride or a walk away.",
           "show": [
             {
@@ -282,6 +297,18 @@
           }
         },
         {
+          "voice": "When your feet need a rest, Anguk is full of cafes, and some are inside old hanok houses with wooden beams and little courtyards. Order at the counter, and it's normal to sit as long as you like.",
+          "show": [
+            {
+              "image": "photo-korean-cafe-etiquette.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 1 · BREAK",
+            "title": "A hanok cafe in Anguk"
+          }
+        },
+        {
           "voice": "In the afternoon, head a few minutes south to Insadong. The main street and its side alleys are full of traditional crafts, tea houses and small galleries. It's a good place for small souvenirs, like hanji paper goods.",
           "show": [
             {
@@ -297,6 +324,18 @@
           "label": {
             "kicker": "DAY 1 · AFTERNOON",
             "title": "Insadong"
+          }
+        },
+        {
+          "voice": "If you want a quiet moment before dinner, step into one of Insadong's traditional tea houses. Try a herbal tea like jujube or citron, and enjoy a slower side of the city.",
+          "show": [
+            {
+              "image": "photo-korean-restaurant-words.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 1 · AFTERNOON",
+            "title": "A traditional tea house"
           }
         },
         {
@@ -368,6 +407,24 @@
           "label": {
             "kicker": "DAY 2 · AFTERNOON",
             "title": "Myeongdong"
+          }
+        },
+        {
+          "voice": "From late afternoon, Myeongdong's main streets fill with food stalls. Grilled skewers, egg bread, sweet pancakes called hotteok. Most stalls take cards now, but keep a little cash just in case, and look for the price on the sign before you order.",
+          "show": [
+            {
+              "photo_query": "Myeongdong street food stalls",
+              "require": [
+                "myeongdong"
+              ]
+            },
+            {
+              "image": "photo-korean-convenience-stores-compared.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 2 · EVENING",
+            "title": "Myeongdong street food"
           }
         },
         {
@@ -482,6 +539,21 @@
             "kicker": "OPTION 4",
             "title": "A jjimjilbang"
           }
+        },
+        {
+          "voice": "And if you have more than three days, explore neighbourhoods like Seongsu, Hongdae or Itaewon, or take a day trip out of the city, like Suwon's Hwaseong Fortress, an easy train ride away.",
+          "show": [
+            {
+              "image": "photo-day-trips-from-seoul.jpg"
+            },
+            {
+              "image": "photo-korea-travel-mistakes.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "MORE TIME?",
+            "title": "Neighbourhoods and day trips"
+          }
         }
       ]
     },
@@ -501,6 +573,18 @@
           "label": {
             "kicker": "GETTING AROUND",
             "title": "Subway and bus"
+          }
+        },
+        {
+          "voice": "Seoul's subway is easy for visitors. Lines have numbers and colours, station names are in English, and announcements are in English too. When you change lines, just follow the colour of the line you want.",
+          "show": [
+            {
+              "image": "photo-korea-public-transport-transfers.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "GETTING AROUND",
+            "title": "Follow the line colours"
           }
         },
         {
@@ -553,6 +637,64 @@
             "kicker": "AVOID",
             "title": "Small mistakes, big difference"
           }
+        },
+        {
+          "voice": "And one bonus tip. Convenience stores are your best friend in Seoul. They're on almost every corner, many are open around the clock, and you can buy water, snacks and a quick meal, and top up your transit card with cash.",
+          "show": [
+            {
+              "image": "photo-korean-convenience-stores-compared.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "BONUS TIP",
+            "title": "Convenience stores"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Quick questions",
+      "segments": [
+        {
+          "voice": "A few questions people often ask. Is three days enough for Seoul? It covers the main palaces, a traditional market, a shopping street and a city view, at a comfortable pace.",
+          "show": [
+            {
+              "card": {
+                "big": "Q&A",
+                "title": "Is three days enough?",
+                "sub": "Yes, for the highlights at a relaxed pace"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Which day should you visit Gyeongbokgung? Any day except Tuesday, when it's closed. Weekday mornings are the quietest.",
+          "show": [
+            {
+              "image": "photo-seoul-3-day-itinerary.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "When to visit Gyeongbokgung"
+          }
+        },
+        {
+          "voice": "Do you need to book anything? Most of this plan needs no booking at all. The one exception is the Secret Garden tour at Changdeokgung, which has limited places. Popular restaurants can also have queues at busy times.",
+          "show": [
+            {
+              "photo_query": "Huwon Changdeokgung Secret Garden",
+              "require": [
+                "huwon",
+                "secret garden",
+                "changdeokgung"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "What to book ahead"
+          }
         }
       ]
     },
@@ -575,7 +717,7 @@
           ]
         },
         {
-          "voice": "The full plan, with links for every stop, is on Korea Plainly. The link is in the description. Have a wonderful trip to Seoul.",
+          "voice": "The full plan, with links for every stop, is on Korea Plainly. The link is in the description. If this helped, subscribe for more plain, practical guides to Korea. Have a wonderful trip to Seoul.",
           "show": [
             {
               "card": {
@@ -588,5 +730,10 @@
         }
       ]
     }
-  ]
+  ],
+  "thumb": {
+    "big": "3 DAYS",
+    "mid": "IN SEOUL",
+    "small": "First-timer's plan"
+  }
 }
