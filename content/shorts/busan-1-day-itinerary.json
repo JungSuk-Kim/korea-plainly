@@ -1,39 +1,29 @@
 {
   "article": "busan-1-day-itinerary",
   "fallback": "photo-busan-1-day-itinerary.jpg",
-  "title": "One day in Busan: an easy east-coast route",
-  "hashtags": "#Busan #Korea #KoreaTravel #Haeundae #BusanItinerary",
-  "music": "Easy Lemon",
+  "title": "One day in Busan: follow the east coast",
+  "hashtags": "#Busan #BusanTravel #Korea #KoreaTravel #Haeundae",
+  "music": "Wallpaper",
   "slides": [
     {
-      "kicker": "BUSAN",
-      "title": "Only one day?",
-      "sub": "Stay on the east coast",
-      "voice": "Only one day in Busan? Stick to the east coast. This route keeps the stops close, so you spend minutes—not hours—getting around.",
-      "photo_query": "Busan skyline",
-      "require": [
-        "busan"
-      ]
-    },
-    {
-      "kicker": "MORNING",
-      "title": "Temple by the sea",
-      "sub": "Go early to beat the crowds",
-      "voice": "Start early at Haedong Yonggungsa, a rare Korean temple right above the sea. Allow about an hour, and keep your voice low.",
-      "image": "regional-busan-culture-haedong-yonggungsa-temple.jpg"
-    },
-    {
-      "kicker": "LATE MORNING",
-      "title": "Haeundae Beach",
-      "sub": "Save beach time for late morning",
-      "voice": "Then head back to Haeundae Beach. Walk the sand and promenade, and remember that summer weekends get busy.",
+      "kicker": "BUSAN IN A DAY",
+      "title": "Stay on the east coast",
+      "sub": "Keep travel between stops short",
+      "voice": "Only one day in Busan? Keep to the east coast, so you spend minutes—not hours—getting between stops.",
       "image": "photo-busan-1-day-itinerary.jpg"
     },
     {
-      "kicker": "LUNCH",
-      "title": "Market snacks",
+      "kicker": "MORNING",
+      "title": "Start at a seaside temple",
+      "sub": "Go early, before it gets busy",
+      "voice": "Start at Haedong Yonggungsa, a temple on the rocks above the sea. Go early, and keep your voice low at this place of worship.",
+      "image": "regional-busan-culture-haedong-yonggungsa-temple.jpg"
+    },
+    {
+      "kicker": "MIDDAY",
+      "title": "Beach, then market snacks",
       "sub": "Try fish cakes or tteokbokki",
-      "voice": "For lunch, try Haeundae Traditional Market, just a short walk from the beach. Look for fish cakes or tteokbokki.",
+      "voice": "Head back to Haeundae Beach for a walk, then find lunch in the streets behind it. The nearby traditional market is good for snacks like fish cakes and tteokbokki.",
       "photo_query": "Haeundae Traditional Market Busan",
       "require": [
         "haeundae",
@@ -41,14 +31,25 @@
       ]
     },
     {
+      "kicker": "OPTIONAL STOP",
+      "title": "Ride the coastal line",
+      "sub": "Book sky capsules ahead on busy days",
+      "voice": "If you have time, the Blueline Park beach train and sky capsules follow the coast from Mipo to Cheongsapo. Sky capsule tickets can sell out at busy times.",
+      "photo_query": "Haeundae Blueline Park sky capsule Busan",
+      "require": [
+        "haeundae",
+        "blueline"
+      ]
+    },
+    {
       "kicker": "EVENING",
       "title": "Dinner by the sea",
-      "sub": "See Gwangan Bridge after dark",
-      "voice": "Return to Haeundae for dinner, then walk the beach at night. Or take a short taxi to Gwangalli Beach to see Gwangan Bridge lit after dark.",
-      "photo_query": "Gwangalli Beach Gwangan Bridge Busan",
+      "sub": "See Gwangan Bridge lit after dark",
+      "voice": "Return to Haeundae for dinner, then walk the beach at night or take a short taxi ride to Gwangalli Beach for views of the lit-up bridge.",
+      "photo_query": "Gwangalli Beach Gwangan Bridge Busan night",
       "require": [
         "gwangalli",
-        "gwangan"
+        "bridge"
       ]
     },
     {
