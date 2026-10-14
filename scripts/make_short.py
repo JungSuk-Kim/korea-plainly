@@ -239,14 +239,15 @@ SUB_BESIDE = (620, 580, int(H * 0.70))   # with Kkachi: subtitles to its right (
                                           # clear of the like/comment buttons on the right
 
 
-def mascot_pngs(tmp):
+def mascot_pngs(tmp, height=None):
     """Kkachi's three states (closed, open, blink) scaled for the video, made once per run."""
+    height = height or MASCOT_H
     out = {}
     for state in ("closed", "open", "blink"):
-        dst = tmp / f"kkachi_{state}.png"
+        dst = tmp / f"kkachi_{state}_{height}.png"
         if not dst.exists():
             with Image.open(MASCOT_DIR / f"kkachi_{state}.png") as im:
-                im = im.convert("RGBA").resize((round(im.width * MASCOT_H / im.height), MASCOT_H), Image.LANCZOS)
+                im = im.convert("RGBA").resize((round(im.width * height / im.height), height), Image.LANCZOS)
             # a white outline keeps the navy bird visible on dark photos and the end card
             pad = 8
             canvas = Image.new("RGBA", (im.width + 2 * pad, im.height + 2 * pad), (0, 0, 0, 0))

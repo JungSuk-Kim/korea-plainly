@@ -26,8 +26,8 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from make_short import (FONTS, NAVY, RED, WHITE, CREAM, chunks, duration, font, pick_music, run,  # noqa: E402
-                        slide_photo, tts, word_times, wrap)
+from make_short import (FONTS, NAVY, RED, WHITE, CREAM, MASCOT_DIR, chunks, duration, font, mascot_pngs,  # noqa: E402
+                        pick_music, run, slide_photo, talk_intervals, tts, word_times, wrap)
 
 ROOT = Path(__file__).resolve().parent.parent
 W, H, FPS = 1920, 1080, 30
@@ -35,6 +35,36 @@ OUT = ROOT / "_shorts"
 TILES = OUT / "tiles"
 GAP = 0.45                     # pause after each segment's narration
 WEIGHT = {"card": 0.8, "map": 1.4, "list": 1.2}
+MASCOT_H = 290                 # Kkachi in the bottom-left corner; subtitles sit to its right
+SUB_LEFT = 400 if (MASCOT_DIR / "kkachi_closed.png").exists() else 160
+
+
+def mascot_track(voice, total, tmp):
+    """Kkachi as one image sequence for the whole video: beak moving with the narration, a blink every few seconds."""
+    pngs = mascot_pngs(tmp, MASCOT_H)
+    fps = 12
+    talk = talk_intervals(voice, fps)
+    n = int(total * fps) + 1
+    state = ["closed"] * n
+    for a, b in talk:
+        for k in range(int(a * fps), min(n, int(b * fps))):
+            state[k] = "open"
+    k = int(1.3 * fps)
+    while k < n:
+        if state[k] == "closed":
+            state[k] = state[min(k + 1, n - 1)] = "blink"
+        k += int(3.6 * fps)
+    lines, cur, run_len = [], state[0], 0
+    for st in state + [None]:
+        if st == cur:
+            run_len += 1
+            continue
+        lines += [f"file '{pngs[cur]}'", f"duration {run_len / fps:.4f}"]
+        cur, run_len = st, 1
+    lines.append(f"file '{pngs[state[-1]]}'")
+    txt = tmp / "kkachi.txt"
+    txt.write_text("ffconcat version 1.0\n" + "\n".join(lines) + "\n")
+    return txt
 
 
 # ---------------------------------------------------------------- visuals
@@ -132,15 +162,15 @@ def list_clip(spec, photo, secs, out, tmp):
         shown = min(len(items), int((i / fps) / (secs * 0.8 / steps)))
         img = base.copy()
         d = ImageDraw.Draw(img)
-        d.text((180, 170), spec["heading"], font=font(80), fill=WHITE)
-        d.rectangle([180, 280, 300, 288], fill=RED)
+        d.text((SUB_LEFT, 170), spec["heading"], font=font(80), fill=WHITE)
+        d.rectangle([SUB_LEFT, 280, SUB_LEFT + 120, 288], fill=RED)
         y = 350
         for k, item in enumerate(items[:shown]):
-            d.ellipse([180, y + 8, 230, y + 58], fill=RED)
-            d.text((193 if k < 9 else 186, y + 10), str(k + 1), font=font(38), fill=WHITE)
-            for j, line in enumerate(wrap(d, item, font(54, False), W - 460)):
-                d.text((270, y + j * 64), line, font=font(54, False), fill=WHITE)
-            y += 64 * len(wrap(d, item, font(54, False), W - 460)) + 46
+            d.ellipse([SUB_LEFT, y + 8, SUB_LEFT + 50, y + 58], fill=RED)
+            d.text((SUB_LEFT + 13, y + 10), str(k + 1), font=font(38), fill=WHITE)
+            for j, line in enumerate(wrap(d, item, font(54, False), W - SUB_LEFT - 280)):
+                d.text((SUB_LEFT + 90, y + j * 64), line, font=font(54, False), fill=WHITE)
+            y += 64 * len(wrap(d, item, font(54, False), W - SUB_LEFT - 280)) + 46
         img.save(frames / f"f{i:04d}.png")
     frames_clip(frames, fps, secs, out)
 
@@ -274,7 +304,7 @@ PlayResY: {H}
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Carlito,58,&H00FFFFFF,&H00FFFFFF,&H00141008,&H64000000,-1,0,0,0,100,100,0,0,1,4,1,2,160,160,64,1
+Style: Default,Carlito,58,&H00FFFFFF,&H00FFFFFF,&H00141008,&H64000000,-1,0,0,0,100,100,0,0,1,4,1,2,{SUB_LEFT},160,64,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -372,8 +402,15 @@ def main():
         graph = (f"[1:a]asplit=2[v][key];[2:a]volume=0.22,{fade}[m];"
                  "[m][key]sidechaincompress=threshold=0.02:ratio=10:attack=15:release=500[duck];"
                  "[v][duck]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11[a];"
-                 f"[0:v]subtitles={ass}:fontsdir={FONTS}[vs]")
-        run(["ffmpeg", "-y", "-i", str(tmp / "video.mp4"), "-i", str(tmp / "voice.wav"), "-stream_loop", "-1", "-i", str(music),
+                 f"[0:v]subtitles={ass}:fontsdir={FONTS}[sv]")
+        kk = []
+        if spec.get("mascot", True) and (MASCOT_DIR / "kkachi_closed.png").exists():
+            kk = ["-f", "concat", "-safe", "0", "-i", str(mascot_track(tmp / "voice.wav", clock, tmp))]
+            graph += (f";[3:v]format=rgba[kk];[sv][kk]overlay=x=24:y='{H - MASCOT_H - 30}+5*sin(2*PI*t/1.6)':"
+                      "eval=frame:eof_action=repeat[vs]")
+        else:
+            graph = graph.replace("[sv]", "[vs]")
+        run(["ffmpeg", "-y", "-i", str(tmp / "video.mp4"), "-i", str(tmp / "voice.wav"), "-stream_loop", "-1", "-i", str(music), *kk,
              "-filter_complex", graph, "-map", "[vs]", "-map", "[a]", "-t", f"{clock:.2f}",
              "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-c:a", "aac", "-b:a", "192k", "-ar", "44100",
              "-movflags", "+faststart", str(OUT / f"{name}.mp4")])
