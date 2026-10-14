@@ -198,16 +198,17 @@ def chunks(timed, max_words=4, max_chars=22):
     return lines
 
 
-def subtitle_png(text, path, y_center):
+def subtitle_png(text, path, y_center, x_center=W // 2, width=None):
     """White bold text with a dark outline, centred, as spoken."""
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     f = font(78)
-    lines = wrap(d, text, f, 2 * min(W // 2 - 70, SAFE_RIGHT - W // 2) )
+    lines = wrap(d, text, f, width or 2 * min(W // 2 - 70, SAFE_RIGHT - W // 2))
     y = y_center - len(lines) * 92 // 2
     for line in lines:
         tw = d.textlength(line, font=f)
-        d.text(((W - tw) / 2 - 40, y), line, font=f, fill=WHITE, stroke_width=7, stroke_fill=(12, 14, 20))
+        x = x_center - tw / 2 if width else (W - tw) / 2 - 40
+        d.text((x, y), line, font=f, fill=WHITE, stroke_width=7, stroke_fill=(12, 14, 20))
         y += 92
     img.save(path)
 
@@ -232,8 +233,10 @@ def sub_chain(subs, first_input, label_in):
 
 
 MASCOT_DIR = Path(__file__).resolve().parent / "mascot"
-MASCOT_H = 380                      # Kkachi, the Korea Plainly magpie, bottom-left above the app's buttons
-MASCOT_X, MASCOT_Y = 20, int(H * 0.55)
+MASCOT_H = 330                      # Kkachi, the Korea Plainly magpie, low on the left, above the video title
+MASCOT_X, MASCOT_Y = 14, int(H * 0.62)
+SUB_BESIDE = (620, 580, int(H * 0.70))   # with Kkachi: subtitles to its right (centre x, width, centre y),
+                                          # clear of the like/comment buttons on the right
 
 
 def mascot_pngs(tmp):
@@ -315,7 +318,10 @@ def segment(slide, i, tmp, voice, mascot=False):
     if audio and not (mascot and slide.get("end")):  # the end card already shows what is said
         for k, (text, a, b) in enumerate(chunks(word_times(audio, slide["voice"]))):
             png = tmp / f"sub{i:02d}_{k:02d}.png"
-            subtitle_png(text, png, int(H * 0.48) if mascot else int(H * 0.6))
+            if mascot:
+                subtitle_png(text, png, SUB_BESIDE[2], SUB_BESIDE[0], SUB_BESIDE[1])
+            else:
+                subtitle_png(text, png, int(H * 0.6))
             subs.append((png, a, min(b, dur)))
     audio_in = ["-i", str(audio)] if audio else ["-f", "lavfi", "-t", f"{dur:.2f}", "-i", "anullsrc=r=44100:cl=stereo"]
     fade = f"fade=t=in:st=0:d=0.25,fade=t=out:st={dur - 0.25:.2f}:d=0.25"
