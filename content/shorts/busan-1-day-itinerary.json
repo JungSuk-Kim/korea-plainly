@@ -10,7 +10,10 @@
       "title": "Only one day?",
       "sub": "Stay on the east coast",
       "voice": "Only one day in Busan? Stick to the east coast. This route keeps the stops close, so you spend minutes—not hours—getting around.",
-      "image": "photo-busan-1-day-itinerary.jpg"
+      "photo_query": "Busan skyline",
+      "require": [
+        "busan"
+      ]
     },
     {
       "kicker": "MORNING",

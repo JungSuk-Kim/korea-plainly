@@ -106,6 +106,7 @@ Rules:
     that must appear in the photo's file title (e.g. ["haedong", "yonggungsa"]).
   * For a general tip with no single place, pick the site photo that fits best, or a concrete thing
     (e.g. "T-money card", "Incheon Airport arrivals hall").
+- Never use the same site photo twice in one video.
 - "title" of the video: at most 60 characters, plain and specific (e.g. "Busan in one day: a simple plan").
 - "hashtags": 4-6 hashtags, the place first.
 
@@ -133,6 +134,8 @@ def write(slug):
         if s.get("image") and s["image"] not in photos:
             s.pop("image")  # not one of ours: search instead
             s.setdefault("photo_query", s["title"] + " Korea")
+        if s.get("image") and s["image"] in {x.get("image") for x in slides}:
+            s["photo_query"] = s.pop("image") and f"{s['title']} Korea"  # the same photo twice: find another
         if not s.get("image") and not s.get("photo_query"):
             s["image"] = cover if cover in photos else next(iter(photos))
         s["kicker"] = s.get("kicker", "").upper()[:28]

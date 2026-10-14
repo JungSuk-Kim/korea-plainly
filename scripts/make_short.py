@@ -277,30 +277,19 @@ def segment(slide, i, tmp, voice):
 
 
 def credits(spec):
+    """Credit lines for every photo the video shows (site photos and Commons finds), in order, once each."""
+    by_file = {}
+    for name, prefix in (("guide_photos.json", None), ("regional_photos.json", "regional-")):
+        for key, e in json.loads((ROOT / "content" / name).read_text(encoding="utf-8")).items():
+            if isinstance(e, dict) and e.get("credit"):
+                by_file[e.get("file") or f"{prefix}{key}.jpg"] = f'{e["credit"]} ({e.get("source", "")})'.replace(" ()", "")
+    for e in (json.loads(PHOTO_LOG.read_text(encoding="utf-8")) if PHOTO_LOG.exists() else {}).values():
+        by_file[e["file"]] = f'{e["credit"]} ({e["source"]})'
     out = []
-    log = json.loads(PHOTO_LOG.read_text(encoding="utf-8")) if PHOTO_LOG.exists() else {}
     for s in spec["slides"]:
-        img = s.get("image")
-        if s.get("photo_query") in log:
-            c = log[s["photo_query"]]["credit"]
-            if c not in out:
-                out.append(c)
-            continue
-        if not img:
-            continue
-        credit = ""
-        for name in ("guide_photos.json", "regional_photos.json"):
-            for e in json.loads((ROOT / "content" / name).read_text(encoding="utf-8")).values():
-                if isinstance(e, dict) and e.get("credit") and (e.get("file") == img or img.endswith(".jpg") and False):
-                    credit = e["credit"]
-            if credit:
-                break
-        if not credit:  # regional photos are stored by article slug
-            slug = img[len("regional-"):-4] if img.startswith("regional-") else None
-            e = json.loads((ROOT / "content" / "regional_photos.json").read_text(encoding="utf-8")).get(slug or "", {})
-            credit = e.get("credit", "")
-        if credit and credit not in out:
-            out.append(credit)
+        c = by_file.get(s.get("file") or s.get("image"))
+        if c and c not in out:
+            out.append(c)
     return out
 
 
