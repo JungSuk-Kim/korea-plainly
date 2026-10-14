@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SHORTS = ROOT / "content" / "shorts"
 QUEUE = SHORTS / "queue.json"
 MODEL = os.environ.get("OPENAI_MODEL", "gpt-6-luna").strip()
-MAX_WORDS = 115          # about 40-45 seconds of narration
+MAX_WORDS = 100          # keeps the video under about 50 seconds
 TRACKS = json.loads((SHORTS / "music.json").read_text(encoding="utf-8"))["tracks"]
 
 
