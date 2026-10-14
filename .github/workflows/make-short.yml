@@ -9,6 +9,9 @@ on:
         description: "Script file in content/shorts/"
         required: true
         default: "content/shorts/seoul-3-day-itinerary.json"
+      upload:
+        description: "Also upload to YouTube as private for review (yes/no)"
+        default: "no"
 
 permissions:
   contents: write
@@ -33,6 +36,16 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/make_short.py "${{ inputs.spec }}" --voice
+      - name: Upload to YouTube (private, for review)
+        if: inputs.upload == 'yes'
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          name=$(basename "${{ inputs.spec }}" .json)
+          title=$(python -c "import json;print(json.load(open('${{ inputs.spec }}'))['title'])")
+          python scripts/youtube_upload.py "_shorts/${name}-voice.mp4" "[TEST] ${title} #Shorts"
       - name: Keep the video for 30 days (download from this run's page)
         uses: actions/upload-artifact@v4
         with:

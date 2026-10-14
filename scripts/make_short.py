@@ -10,6 +10,7 @@ with a description file that credits every photo, as their licences require.
 """
 import argparse
 import json
+import math
 import os
 import re
 import subprocess
@@ -230,11 +231,78 @@ def sub_chain(subs, first_input, label_in):
     return chain, cur
 
 
+MASCOT_DIR = Path(__file__).resolve().parent / "mascot"
+MASCOT_H = 380                      # Kkachi, the Korea Plainly magpie, bottom-left above the app's buttons
+MASCOT_X, MASCOT_Y = 20, int(H * 0.55)
+
+
+def mascot_pngs(tmp):
+    """Kkachi's three states (closed, open, blink) scaled for the video, made once per run."""
+    out = {}
+    for state in ("closed", "open", "blink"):
+        dst = tmp / f"kkachi_{state}.png"
+        if not dst.exists():
+            with Image.open(MASCOT_DIR / f"kkachi_{state}.png") as im:
+                im = im.convert("RGBA").resize((round(im.width * MASCOT_H / im.height), MASCOT_H), Image.LANCZOS)
+            # a white outline keeps the navy bird visible on dark photos and the end card
+            pad = 8
+            canvas = Image.new("RGBA", (im.width + 2 * pad, im.height + 2 * pad), (0, 0, 0, 0))
+            canvas.paste(im, (pad, pad), im)
+            halo = canvas.getchannel("A").filter(ImageFilter.MaxFilter(11))
+            out_img = Image.new("RGBA", canvas.size, (255, 255, 255, 0))
+            out_img.putalpha(halo.point(lambda v: 235 if v > 40 else 0))
+            out_img.alpha_composite(canvas)
+            out_img.save(dst)
+        out[state] = dst
+    return out
+
+
+def talk_intervals(audio, fps=12):
+    """[(start, end)] when the beak should be open: loud moments of the narration, flapping rather than held open."""
+    from array import array
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(audio), "-ac", "1", "-ar", "8000", "-f", "s16le", "-"],
+                         capture_output=True, check=True).stdout
+    pcm = array("h")
+    pcm.frombytes(raw[: len(raw) // 2 * 2])
+    win = 8000 // fps
+    rms = [math.sqrt(sum(v * v for v in pcm[k:k + win]) / win) for k in range(0, len(pcm) - win, win)]
+    if not rms:
+        return []
+    thr = max(rms) * 0.18
+    spans, start = [], None
+    for k, r in enumerate(rms):
+        talking = r > thr and k % 3 != 2
+        if talking and start is None:
+            start = k / fps
+        elif not talking and start is not None:
+            spans.append((start, k / fps))
+            start = None
+    if start is not None:
+        spans.append((start, len(rms) / fps))
+    return spans
+
+
+def mascot_layer(audio, dur, first_input, label_in, tmp, offset=0.0):
+    """Inputs and filter text that put Kkachi on the video: bobbing gently, blinking, beak moving with the voice."""
+    pngs = mascot_pngs(tmp)
+    inputs = [a for st in ("closed", "open", "blink") for a in ("-loop", "1", "-t", f"{dur:.2f}", "-i", str(pngs[st]))]
+    talk = talk_intervals(audio) if audio else []
+    blinks = [(t, t + 0.15) for t in [1.1 + 3.4 * n - offset % 3.4 for n in range(int(dur / 3.4) + 2)] if 0 < t < dur - 0.2]
+    def when(spans):
+        return "+".join(f"between(t,{a:.2f},{b:.2f})" for a, b in spans) or "0"
+    y = f"{MASCOT_Y}+6*sin(2*PI*(t+{offset:.2f})/1.5)"
+    c, o, b = first_input, first_input + 1, first_input + 2
+    chain = (f";[{label_in}][{c}]overlay=x={MASCOT_X}:y='{y}':eval=frame[mk1]"
+             f";[mk1][{o}]overlay=x={MASCOT_X}:y='{y}':eval=frame:enable='{when(talk)}'[mk2]"
+             f";[mk2][{b}]overlay=x={MASCOT_X}:y='{y}':eval=frame:enable='{when(blinks)}'[mk3]")
+    return inputs, chain, "mk3"
+
+
 def run(cmd):
     subprocess.run(cmd, check=True, capture_output=True)
 
 
-def segment(slide, i, tmp, voice):
+def segment(slide, i, tmp, voice, mascot=False):
     seg = tmp / f"seg{i:02d}.mp4"
     audio = None
     if voice and slide.get("voice"):
@@ -244,10 +312,10 @@ def segment(slide, i, tmp, voice):
     else:
         dur = SILENT_SECONDS if not slide.get("end") else 3.0
     subs = []
-    if audio:
+    if audio and not (mascot and slide.get("end")):  # the end card already shows what is said
         for k, (text, a, b) in enumerate(chunks(word_times(audio, slide["voice"]))):
             png = tmp / f"sub{i:02d}_{k:02d}.png"
-            subtitle_png(text, png, int(H * 0.6))
+            subtitle_png(text, png, int(H * 0.48) if mascot else int(H * 0.6))
             subs.append((png, a, min(b, dur)))
     audio_in = ["-i", str(audio)] if audio else ["-f", "lavfi", "-t", f"{dur:.2f}", "-i", "anullsrc=r=44100:cl=stereo"]
     fade = f"fade=t=in:st=0:d=0.25,fade=t=out:st={dur - 0.25:.2f}:d=0.25"
@@ -255,8 +323,11 @@ def segment(slide, i, tmp, voice):
         card = tmp / f"end{i:02d}.png"
         end_card(slide, card)
         chain, last = sub_chain(subs, 2, "base")
-        run(["ffmpeg", "-y", "-loop", "1", "-t", f"{dur:.2f}", "-i", str(card), *audio_in, *sub_inputs(subs, dur),
-             "-filter_complex", f"[0]fps={FPS}[base]{chain};[{last}]{fade},format=yuv420p[v]", "-map", "[v]", "-map", "1:a",
+        m_in, m_chain = [], ""
+        if mascot:
+            m_in, m_chain, last = mascot_layer(audio, dur, 2 + len(subs), last, tmp, offset=i * 1.7)
+        run(["ffmpeg", "-y", "-loop", "1", "-t", f"{dur:.2f}", "-i", str(card), *audio_in, *sub_inputs(subs, dur), *m_in,
+             "-filter_complex", f"[0]fps={FPS}[base]{chain}{m_chain};[{last}]{fade},format=yuv420p[v]", "-map", "[v]", "-map", "1:a",
              "-af", "apad", "-t", f"{dur:.2f}", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
              "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-ac", "2", str(seg)])
         return seg, dur
@@ -272,9 +343,12 @@ def segment(slide, i, tmp, voice):
     travel = max(pan.width - W, 0)
     x = f"min({travel},{travel}*t/{dur:.2f})" if i % 2 == 0 else f"max(0,{travel}-{travel}*t/{dur:.2f})"
     chain, last = sub_chain(subs, 3, "base")
+    m_in, m_chain = [], ""
+    if mascot:
+        m_in, m_chain, last = mascot_layer(audio, dur, 3 + len(subs), last, tmp, offset=i * 1.7)
     run(["ffmpeg", "-y", "-loop", "1", "-t", f"{dur:.2f}", "-i", str(photo), "-loop", "1", "-t", f"{dur:.2f}", "-i", str(over),
-         *audio_in, *sub_inputs(subs, dur), "-filter_complex",
-         f"[0]fps={FPS},crop={W}:{H}:x='{x}':y=0[bg];[bg][1]overlay=0:0[base]{chain};[{last}]{fade},format=yuv420p[v]",
+         *audio_in, *sub_inputs(subs, dur), *m_in, "-filter_complex",
+         f"[0]fps={FPS},crop={W}:{H}:x='{x}':y=0[bg];[bg][1]overlay=0:0[base]{chain}{m_chain};[{last}]{fade},format=yuv420p[v]",
          "-map", "[v]", "-map", "2:a", "-af", "apad", "-t", f"{dur:.2f}", "-c:v", "libx264", "-preset", "medium", "-crf", "20",
          "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-ac", "2", str(seg)])
     return seg, dur
@@ -346,7 +420,8 @@ def main():
         for s in spec["slides"]:
             if not s.get("end"):
                 s["file"] = slide_photo(s, taken, spec.get("fallback"))
-        segs = [segment(s, i, tmp, args.voice) for i, s in enumerate(spec["slides"])]
+        mascot = spec.get("mascot", True) and (MASCOT_DIR / "kkachi_closed.png").exists()
+        segs = [segment(s, i, tmp, args.voice, mascot) for i, s in enumerate(spec["slides"])]
         lst = tmp / "list.txt"
         lst.write_text("".join(f"file '{p}'\n" for p, _ in segs))
         joined = tmp / "joined.mp4"
