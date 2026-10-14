@@ -1,652 +1,908 @@
 1
-00:00:00,000 --> 00:00:02,700
+00:00:00,000 --> 00:00:02,820
 Three days in Seoul.
 
 2
-00:00:02,700 --> 00:00:03,840
+00:00:02,820 --> 00:00:04,220
 Palaces, markets
 
 3
-00:00:03,840 --> 00:00:05,400
+00:00:04,220 --> 00:00:05,740
 a city view at sunset
 
 4
-00:00:05,400 --> 00:00:08,080
+00:00:05,740 --> 00:00:08,680
 and one day that's completely yours.
 
 5
-00:00:09,114 --> 00:00:10,907
+00:00:09,066 --> 00:00:10,842
 If this is your first time
 
 6
-00:00:10,907 --> 00:00:13,490
+00:00:10,842 --> 00:00:13,402
 this plan keeps each day in one part of
 
 7
-00:00:13,490 --> 00:00:14,123
+00:00:13,402 --> 00:00:14,029
 the city
 
 8
-00:00:14,123 --> 00:00:16,548
+00:00:14,029 --> 00:00:16,433
 so you spend your time looking around
 
 9
-00:00:16,548 --> 00:00:17,813
+00:00:16,433 --> 00:00:17,686
 not changing trains.
 
 10
-00:00:17,813 --> 00:00:20,291
+00:00:17,686 --> 00:00:20,142
 I'll show you the route for every day
 
 11
-00:00:20,291 --> 00:00:21,134
+00:00:20,142 --> 00:00:20,978
 what to eat
 
 12
-00:00:21,134 --> 00:00:24,914
+00:00:20,978 --> 00:00:24,726
 and the small mistakes that trip up first-time visitors.
 
 13
-00:00:25,476 --> 00:00:27,656
+00:00:25,236 --> 00:00:27,596
 Let's start with a few things to sort out
 
 14
-00:00:27,656 --> 00:00:28,916
+00:00:27,596 --> 00:00:28,856
 before day one.
 
 15
-00:00:29,742 --> 00:00:30,722
+00:00:29,646 --> 00:00:30,446
 First
 
 16
-00:00:30,722 --> 00:00:32,622
+00:00:30,446 --> 00:00:32,646
 check your dates.
 
 17
-00:00:32,622 --> 00:00:35,242
+00:00:32,646 --> 00:00:35,086
 Gyeongbokgung Palace is closed on Tuesdays
 
 18
-00:00:35,242 --> 00:00:38,262
+00:00:35,086 --> 00:00:38,806
 and Changdeokgung Palace is closed on Mondays.
 
 19
-00:00:38,262 --> 00:00:40,062
+00:00:38,806 --> 00:00:40,566
 If your trip falls that way
 
 20
-00:00:40,062 --> 00:00:42,322
+00:00:40,566 --> 00:00:42,906
 just swap day one and day three.
 
 21
-00:00:42,696 --> 00:00:43,816
+00:00:43,248 --> 00:00:44,308
 Second
 
 22
-00:00:43,816 --> 00:00:46,236
+00:00:44,308 --> 00:00:46,768
 get a transit card when you arrive.
 
 23
-00:00:46,236 --> 00:00:48,656
+00:00:46,768 --> 00:00:49,248
 You tap it on the subway and on buses
 
 24
-00:00:48,656 --> 00:00:51,936
+00:00:49,248 --> 00:00:52,108
 and transfers within a short time are discounted.
 
 25
-00:00:52,266 --> 00:00:52,774
+00:00:52,458 --> 00:00:52,906
 Third
 
 26
-00:00:52,774 --> 00:00:55,059
+00:00:52,906 --> 00:00:54,923
 install Naver Map or KakaoMap.
 
 27
-00:00:55,059 --> 00:00:58,232
+00:00:54,923 --> 00:00:57,724
 Google Maps can show you places in Korea
 
 28
-00:00:58,232 --> 00:01:00,580
+00:00:57,724 --> 00:00:59,797
 but its directions are limited
 
 29
-00:01:00,580 --> 00:01:03,437
+00:00:59,797 --> 00:01:02,318
 so a Korean map app will save you a
 
 30
-00:01:03,437 --> 00:01:05,006
+00:01:02,318 --> 00:01:03,738
 lot of guessing.
 
 31
-00:01:05,676 --> 00:01:08,516
-And where should you stay?
+00:01:04,524 --> 00:01:06,564
+Flying into Incheon?
 
 32
-00:01:08,516 --> 00:01:12,096
-Central Seoul works best for this plan.
+00:01:06,564 --> 00:01:09,004
+The AREX airport train is the simplest way
 
 33
-00:01:12,096 --> 00:01:14,296
-Around Gwanghwamun, Jongno
+00:01:09,004 --> 00:01:10,564
+into central Seoul
 
 34
-00:01:14,296 --> 00:01:16,516
-City Hall or Myeongdong
+00:01:10,564 --> 00:01:12,964
+and airport buses and taxis are good options
 
 35
-00:01:16,516 --> 00:01:19,416
-every stop is a short subway ride or a
+00:01:12,964 --> 00:01:16,364
+if you have heavy bags or arrive late.
 
 36
-00:01:19,416 --> 00:01:20,076
-walk away.
+00:01:16,364 --> 00:01:18,824
+Pick whichever drops you closest to your hotel.
 
 37
-00:01:20,478 --> 00:01:23,218
-Day one is all about old Seoul
+00:01:19,230 --> 00:01:21,470
+And where should you stay?
 
 38
-00:01:23,218 --> 00:01:26,158
-and you can do the whole day on foot.
+00:01:21,470 --> 00:01:24,670
+Central Seoul works best for this plan.
 
 39
-00:01:26,592 --> 00:01:29,692
-Start early at Gyeongbokgung Palace
+00:01:24,670 --> 00:01:26,770
+Around Gwanghwamun, Jongno
 
 40
-00:01:29,692 --> 00:01:32,632
-the largest of Seoul's royal palaces from the
+00:01:26,770 --> 00:01:28,870
+City Hall or Myeongdong
 
 41
-00:01:32,632 --> 00:01:34,672
-Joseon dynasty.
+00:01:28,870 --> 00:01:31,490
+every stop is a short subway ride or a
 
 42
-00:01:34,672 --> 00:01:38,232
-Get off at Gyeongbokgung Station on Line 3.
+00:01:31,490 --> 00:01:32,130
+walk away.
 
 43
-00:01:38,232 --> 00:01:40,352
-If you arrive around opening time
+00:01:32,496 --> 00:01:35,656
+Day one is all about old Seoul
 
 44
-00:01:40,352 --> 00:01:42,672
-the big courtyards are much quieter.
+00:01:35,656 --> 00:01:37,836
+and you can do the whole day on foot.
 
 45
-00:01:43,098 --> 00:01:45,858
-The changing of the royal guard at Gwanghwamun
+00:01:38,346 --> 00:01:41,306
+Start early at Gyeongbokgung Palace
 
 46
-00:01:45,858 --> 00:01:48,578
-Gate usually happens at ten in the morning and
+00:01:41,306 --> 00:01:44,006
+the largest of Seoul's royal palaces from the
 
 47
-00:01:48,578 --> 00:01:50,098
-two in the afternoon.
+00:01:44,006 --> 00:01:45,586
+Joseon dynasty.
 
 48
-00:01:50,098 --> 00:01:51,578
-And here's a fun one:
+00:01:45,586 --> 00:01:48,766
+Get off at Gyeongbokgung Station on Line 3.
 
 49
-00:01:51,578 --> 00:01:52,898
-if you wear hanbok
+00:01:48,766 --> 00:01:50,666
+If you arrive around opening time
 
 50
-00:01:52,898 --> 00:01:54,298
-the traditional dress
+00:01:50,666 --> 00:01:52,926
+the big courtyards are much quieter.
 
 51
-00:01:54,298 --> 00:01:56,338
-entry to the palaces is free.
+00:01:53,964 --> 00:01:56,944
+The changing of the royal guard at Gwanghwamun
 
 52
-00:01:56,338 --> 00:01:58,198
-There are rental shops near the station.
+00:01:56,944 --> 00:01:59,944
+Gate usually happens at ten in the morning and
 
 53
-00:01:58,596 --> 00:02:01,016
-Give the palace about two hours.
+00:01:59,944 --> 00:02:01,664
+two in the afternoon.
 
 54
-00:02:01,016 --> 00:02:03,516
-Then walk east to Anguk and the hanok lanes
+00:02:01,664 --> 00:02:03,084
+And here's a fun one:
 
 55
-00:02:03,516 --> 00:02:04,816
-of Bukchon.
+00:02:03,084 --> 00:02:04,644
+if you wear hanbok
 
 56
-00:02:04,816 --> 00:02:06,076
-These are real homes
+00:02:04,644 --> 00:02:06,404
+the traditional dress
 
 57
-00:02:06,076 --> 00:02:09,296
-so keep your voice down and stay out of doorways.
+00:02:06,404 --> 00:02:08,924
+entry to the palaces is free.
 
 58
-00:02:09,296 --> 00:02:11,376
-Some parts of Bukchon now have visiting hours
+00:02:08,924 --> 00:02:11,184
+There are rental shops near the station.
 
 59
-00:02:11,376 --> 00:02:12,516
-for tourists
+00:02:11,670 --> 00:02:14,850
+Give the palace about two hours.
 
 60
-00:02:12,516 --> 00:02:14,196
-so check the signs as you go.
+00:02:14,850 --> 00:02:18,270
+Then walk east to Anguk and the hanok lanes
 
 61
-00:02:14,646 --> 00:02:15,899
-In the afternoon
+00:02:18,270 --> 00:02:19,810
+of Bukchon.
 
 62
-00:02:15,899 --> 00:02:18,585
-head a few minutes south to Insadong.
+00:02:19,810 --> 00:02:21,530
+These are real homes
 
 63
-00:02:18,585 --> 00:02:21,809
-The main street and its side alleys are full
+00:02:21,530 --> 00:02:25,550
+so keep your voice down and stay out of doorways.
 
 64
-00:02:21,809 --> 00:02:23,361
-of traditional crafts
+00:02:25,550 --> 00:02:27,730
+Some parts of Bukchon now have visiting hours
 
 65
-00:02:23,361 --> 00:02:25,569
-tea houses and small galleries.
+00:02:27,730 --> 00:02:28,990
+for tourists
 
 66
-00:02:25,569 --> 00:02:28,315
-It's a good place for small souvenirs
+00:02:28,990 --> 00:02:30,910
+so check the signs as you go.
 
 67
-00:02:28,315 --> 00:02:30,286
-like hanji paper goods.
+00:02:32,520 --> 00:02:34,760
+When your feet need a rest
 
 68
-00:02:30,696 --> 00:02:33,896
-Finish with an evening walk along Cheonggyecheon
+00:02:34,760 --> 00:02:36,060
+Anguk is full of cafes
 
 69
-00:02:33,896 --> 00:02:36,136
-the stream that runs below street level from
+00:02:36,060 --> 00:02:38,960
+and some are inside old hanok houses with
 
 70
-00:02:36,136 --> 00:02:37,576
-Cheonggye Plaza.
+00:02:38,960 --> 00:02:41,980
+wooden beams and little courtyards.
 
 71
-00:02:37,576 --> 00:02:39,016
-It's lit up after dark
+00:02:41,980 --> 00:02:42,580
+Order at the counter
 
 72
-00:02:39,016 --> 00:02:39,676
-it's free
+00:02:42,580 --> 00:02:45,720
+and it's normal to sit as long as you like.
 
 73
-00:02:39,676 --> 00:02:41,736
-and it's an easy way to end a long
+00:02:46,074 --> 00:02:47,154
+In the afternoon
 
 74
-00:02:41,736 --> 00:02:42,656
-first day.
+00:02:47,154 --> 00:02:49,469
+head a few minutes south to Insadong.
 
 75
-00:02:43,266 --> 00:02:45,926
-Day two is for food
+00:02:49,469 --> 00:02:52,247
+The main street and its side alleys are full
 
 76
-00:02:45,926 --> 00:02:48,366
-shopping and the best view of the city.
+00:02:52,247 --> 00:02:53,584
+of traditional crafts
 
 77
-00:02:48,828 --> 00:02:50,761
-Start at Gwangjang Market
+00:02:53,584 --> 00:02:55,487
+tea houses and small galleries.
 
 78
-00:02:50,761 --> 00:02:53,443
-near Jongno 5-ga Station on Line 1.
+00:02:55,487 --> 00:02:57,854
+It's a good place for small souvenirs
 
 79
-00:02:53,443 --> 00:02:56,936
-It's one of Seoul's oldest markets and a great
+00:02:57,854 --> 00:02:59,594
+like hanji paper goods.
 
 80
-00:02:56,936 --> 00:02:59,805
-place for breakfast or an early lunch.
+00:03:00,084 --> 00:03:03,163
+If you want a quiet moment before dinner
 
 81
-00:02:59,805 --> 00:03:01,364
-Look for bindaetteok
+00:03:03,163 --> 00:03:06,857
+step into one of Insadong's traditional tea houses.
 
 82
-00:03:01,364 --> 00:03:05,293
-a crispy mung bean pancake fried right at the stall
+00:03:06,857 --> 00:03:09,813
+Try a herbal tea like jujube or citron
 
 83
-00:03:05,293 --> 00:03:06,603
-and mayak gimbap
+00:03:09,813 --> 00:03:12,884
+and enjoy a slower side of the city.
 
 84
-00:03:06,603 --> 00:03:10,158
-little rice rolls that are hard to stop eating.
+00:03:13,302 --> 00:03:17,102
+Finish with an evening walk along Cheonggyecheon
 
 85
-00:03:10,158 --> 00:03:12,828
-Bring some cash for the stalls.
+00:03:17,102 --> 00:03:19,622
+the stream that runs below street level from
 
 86
-00:03:13,326 --> 00:03:18,026
-Then take the subway to Myeongdong on Line 4.
+00:03:19,622 --> 00:03:21,282
+Cheonggye Plaza.
 
 87
-00:03:18,026 --> 00:03:21,326
-It's packed with cosmetics shops and fashion stores
+00:03:21,282 --> 00:03:22,822
+It's lit up after dark
 
 88
-00:03:21,326 --> 00:03:25,146
-and from late afternoon the street food stalls open.
+00:03:22,822 --> 00:03:23,822
+it's free
 
 89
-00:03:25,146 --> 00:03:28,106
-Many shops offer tax refunds for visitors
+00:03:23,822 --> 00:03:25,842
+and it's an easy way to end a long
 
 90
-00:03:28,106 --> 00:03:30,566
-so bring your passport when you go shopping.
+00:03:25,842 --> 00:03:26,722
+first day.
 
 91
-00:03:31,128 --> 00:03:32,805
-As the sun goes down
+00:03:27,072 --> 00:03:29,692
+Day two is for food
 
 92
-00:03:32,805 --> 00:03:35,165
-go up Namsan to N Seoul Tower.
+00:03:29,692 --> 00:03:31,792
+shopping and the best view of the city.
 
 93
-00:03:35,165 --> 00:03:38,642
-From Myeongdong you can walk to the cable car
+00:03:32,274 --> 00:03:33,910
+Start at Gwangjang Market
 
 94
-00:03:38,642 --> 00:03:41,002
-or take a bus up the mountain.
+00:03:33,910 --> 00:03:36,180
+near Jongno 5-ga Station on Line 1.
 
 95
-00:03:41,002 --> 00:03:43,362
-The view is best around sunset.
+00:03:36,180 --> 00:03:39,137
+It's one of Seoul's oldest markets and a great
 
 96
-00:03:43,362 --> 00:03:46,529
-Cable car and observatory times change with
+00:03:39,137 --> 00:03:41,565
+place for breakfast or an early lunch.
 
 97
-00:03:46,529 --> 00:03:47,399
-the season
+00:03:41,565 --> 00:03:42,885
+Look for bindaetteok
 
 98
-00:03:47,399 --> 00:03:49,748
-so check them that morning.
+00:03:42,885 --> 00:03:46,210
+a crispy mung bean pancake fried right at the stall
 
 99
-00:03:50,178 --> 00:03:52,478
-Day three is yours.
+00:03:46,210 --> 00:03:47,319
+and mayak gimbap
 
 100
-00:03:52,478 --> 00:03:55,318
-Each of these options fills about half a day
+00:03:47,319 --> 00:03:50,328
+little rice rolls that are hard to stop eating.
 
 101
-00:03:55,318 --> 00:03:56,298
-so pick two.
+00:03:50,328 --> 00:03:52,634
+Bring some cash for the stalls.
 
 102
-00:03:56,628 --> 00:03:59,408
-Want more history?
+00:03:53,124 --> 00:03:57,384
+Then take the subway to Myeongdong on Line 4.
 
 103
-00:03:59,408 --> 00:04:02,988
-Visit Changdeokgung Palace and its Secret Garden.
+00:03:57,384 --> 00:04:00,804
+It's packed with cosmetics shops and fashion stores
 
 104
-00:04:02,988 --> 00:04:04,988
-The garden can only be seen on a guided
+00:04:00,804 --> 00:04:04,544
+and from late afternoon the street food stalls open.
 
 105
-00:04:04,988 --> 00:04:06,848
-tour with its own ticket
+00:04:04,544 --> 00:04:07,204
+Many shops offer tax refunds for visitors
 
 106
-00:04:06,848 --> 00:04:08,608
-and places are limited
+00:04:07,204 --> 00:04:09,464
+so bring your passport when you go shopping.
 
 107
-00:04:08,608 --> 00:04:09,668
-so book ahead.
+00:04:10,686 --> 00:04:12,606
+From late afternoon
 
 108
-00:04:10,134 --> 00:04:13,574
-Into design and shopping?
+00:04:12,606 --> 00:04:15,526
+Myeongdong's main streets fill with food stalls.
 
 109
-00:04:13,574 --> 00:04:15,414
-Go to Dongdaemun Design Plaza
+00:04:15,526 --> 00:04:16,506
+Grilled skewers
 
 110
-00:04:15,414 --> 00:04:18,434
-and the fashion malls around Dongdaemun that
+00:04:16,506 --> 00:04:17,246
+egg bread
 
 111
-00:04:18,434 --> 00:04:19,654
-stay open late.
+00:04:17,246 --> 00:04:19,446
+sweet pancakes called hotteok.
 
 112
-00:04:19,992 --> 00:04:22,472
-Want to slow down like a local?
+00:04:19,446 --> 00:04:21,286
+Most stalls take cards now
 
 113
-00:04:22,472 --> 00:04:24,612
-Spend the afternoon in a Han River park
+00:04:21,286 --> 00:04:23,666
+but keep a little cash just in case
 
 114
-00:04:24,612 --> 00:04:25,992
-like Yeouido.
+00:04:23,666 --> 00:04:25,806
+and look for the price on the sign before
 
 115
-00:04:25,992 --> 00:04:27,252
-People picnic
+00:04:25,806 --> 00:04:26,586
+you order.
 
 116
-00:04:27,252 --> 00:04:30,212
-cycle and order fried chicken to the riverbank.
+00:04:27,000 --> 00:04:28,589
+As the sun goes down
 
 117
-00:04:30,212 --> 00:04:31,272
-Renting a bike is easy
+00:04:28,589 --> 00:04:30,825
+go up Namsan to N Seoul Tower.
 
 118
-00:04:31,272 --> 00:04:33,412
-and there's always a convenience store nearby.
+00:04:30,825 --> 00:04:34,121
+From Myeongdong you can walk to the cable car
 
 119
-00:04:33,858 --> 00:04:36,738
-Or relax properly at a jjimjilbang
+00:04:34,121 --> 00:04:36,357
+or take a bus up the mountain.
 
 120
-00:04:36,738 --> 00:04:38,578
-a Korean bathhouse.
+00:04:36,357 --> 00:04:38,593
+The view is best around sunset.
 
 121
-00:04:38,578 --> 00:04:40,258
-It's one of the most local things you can
+00:04:38,593 --> 00:04:41,594
+Cable car and observatory times change with
 
 122
-00:04:40,258 --> 00:04:41,518
-do in Seoul.
+00:04:41,594 --> 00:04:42,418
+the season
 
 123
-00:04:41,518 --> 00:04:44,118
-Just read up on the etiquette before you go.
+00:04:42,418 --> 00:04:44,660
+so check them that morning.
 
 124
-00:04:44,460 --> 00:04:48,320
-Almost everything in this plan is on the subway.
+00:04:45,114 --> 00:04:48,034
+Day three is yours.
 
 125
-00:04:48,320 --> 00:04:50,120
-Tap your card in and out at the gates
+00:04:48,034 --> 00:04:50,894
+Each of these options fills about half a day
 
 126
-00:04:50,120 --> 00:04:52,100
-and use the same card on buses.
+00:04:50,894 --> 00:04:51,974
+so pick two.
 
 127
-00:04:52,830 --> 00:04:56,159
-Taxis are easy to find and fair for short trips.
+00:04:52,332 --> 00:04:54,192
+Want more history?
 
 128
-00:04:56,159 --> 00:04:57,683
-With the Kakao T app
+00:04:54,192 --> 00:04:57,392
+Visit Changdeokgung Palace and its Secret Garden.
 
 129
-00:04:57,683 --> 00:05:01,030
-you can book one without speaking any Korean.
+00:04:57,392 --> 00:04:59,132
+The garden can only be seen on a guided
 
 130
-00:05:01,584 --> 00:05:02,502
-Before you go
+00:04:59,132 --> 00:05:00,772
+tour with its own ticket
 
 131
-00:05:02,502 --> 00:05:05,307
-here are four small mistakes that catch a lot
+00:05:00,772 --> 00:05:02,032
+and places are limited
 
 132
-00:05:05,307 --> 00:05:06,984
-of first-time visitors.
+00:05:02,032 --> 00:05:02,952
+so book ahead.
 
 133
-00:05:08,082 --> 00:05:08,441
-One.
+00:05:03,342 --> 00:05:06,142
+Into design and shopping?
 
 134
-00:05:08,441 --> 00:05:09,999
-Palaces on a weekend.
+00:05:06,142 --> 00:05:07,942
+Go to Dongdaemun Design Plaza
 
 135
-00:05:09,999 --> 00:05:13,951
-Most sights are busiest on weekends and public holidays
+00:05:07,942 --> 00:05:11,242
+and the fashion malls around Dongdaemun that
 
 136
-00:05:13,951 --> 00:05:17,126
-so do the palaces on a weekday if you can.
+00:05:11,242 --> 00:05:12,482
+stay open late.
 
 137
-00:05:17,126 --> 00:05:17,485
-Two.
+00:05:13,056 --> 00:05:15,876
+Want to slow down like a local?
 
 138
-00:05:17,485 --> 00:05:19,222
-Lunch after two o'clock.
+00:05:15,876 --> 00:05:17,976
+Spend the afternoon in a Han River park
 
 139
-00:05:19,222 --> 00:05:22,216
-Many restaurants close for a break in the
+00:05:17,976 --> 00:05:19,696
+like Yeouido.
 
 140
-00:05:22,216 --> 00:05:23,953
-middle of the afternoon
+00:05:19,696 --> 00:05:20,976
+People picnic
 
 141
-00:05:23,953 --> 00:05:25,391
-so eat lunch early.
+00:05:20,976 --> 00:05:24,096
+cycle and order fried chicken to the riverbank.
 
 142
-00:05:25,391 --> 00:05:25,870
-Three.
+00:05:24,096 --> 00:05:25,476
+Renting a bike is easy
 
 143
-00:05:25,870 --> 00:05:27,547
-No cash at the market.
+00:05:25,476 --> 00:05:27,836
+and there's always a convenience store nearby.
 
 144
-00:05:27,547 --> 00:05:29,583
-Cards work almost everywhere
+00:05:28,914 --> 00:05:31,514
+Or relax properly at a jjimjilbang
 
 145
-00:05:29,583 --> 00:05:32,638
-but carry a little cash for market stalls.
+00:05:31,514 --> 00:05:33,114
+a Korean bathhouse.
 
 146
-00:05:32,638 --> 00:05:33,356
-And four.
+00:05:33,114 --> 00:05:34,834
+It's one of the most local things you can
 
 147
-00:05:33,356 --> 00:05:35,273
-Trusting old opening hours.
+00:05:34,834 --> 00:05:35,994
+do in Seoul.
 
 148
-00:05:35,273 --> 00:05:37,429
-Hours and closing days change
+00:05:35,994 --> 00:05:38,274
+Just read up on the etiquette before you go.
 
 149
-00:05:37,429 --> 00:05:40,184
-so check each place on a map app the
+00:05:38,964 --> 00:05:42,164
+And if you have more than three days
 
 150
-00:05:40,184 --> 00:05:41,622
-morning you go.
+00:05:42,164 --> 00:05:44,144
+explore neighbourhoods like Seongsu
 
 151
-00:05:42,036 --> 00:05:45,296
-So that's three days in Seoul.
+00:05:44,144 --> 00:05:45,604
+Hongdae or Itaewon
 
 152
-00:05:45,296 --> 00:05:47,256
-Day one, palaces
+00:05:45,604 --> 00:05:47,984
+or take a day trip out of the city
 
 153
-00:05:47,256 --> 00:05:49,356
-hanok lanes and the stream.
+00:05:47,984 --> 00:05:50,024
+like Suwon's Hwaseong Fortress
 
 154
-00:05:49,356 --> 00:05:50,296
-Day two
+00:05:50,024 --> 00:05:51,684
+an easy train ride away.
 
 155
-00:05:50,296 --> 00:05:51,996
-a market breakfast
+00:05:52,014 --> 00:05:55,834
+Almost everything in this plan is on the subway.
 
 156
-00:05:51,996 --> 00:05:54,776
-Myeongdong and the sunset from Namsan.
+00:05:55,834 --> 00:05:58,174
+Tap your card in and out at the gates
 
 157
-00:05:54,776 --> 00:05:55,956
-Day three
+00:05:58,174 --> 00:06:00,394
+and use the same card on buses.
 
 158
-00:05:55,956 --> 00:05:57,396
-whatever you love most.
+00:06:01,272 --> 00:06:04,872
+Seoul's subway is easy for visitors.
 
 159
-00:05:57,750 --> 00:05:59,210
-The full plan
+00:06:04,872 --> 00:06:06,852
+Lines have numbers and colours
 
 160
-00:05:59,210 --> 00:06:01,310
-with links for every stop
+00:06:06,852 --> 00:06:08,252
+station names are in English
 
 161
-00:06:01,310 --> 00:06:03,310
-is on Korea Plainly.
+00:06:08,252 --> 00:06:10,472
+and announcements are in English too.
 
 162
-00:06:03,310 --> 00:06:05,730
-The link is in the description.
+00:06:10,472 --> 00:06:11,932
+When you change lines
 
 163
-00:06:05,730 --> 00:06:07,850
+00:06:11,932 --> 00:06:14,272
+just follow the colour of the line you want.
+
+164
+00:06:14,826 --> 00:06:18,518
+Taxis are easy to find and fair for short trips.
+
+165
+00:06:18,518 --> 00:06:20,207
+With the Kakao T app
+
+166
+00:06:20,207 --> 00:06:23,886
+you can book one without speaking any Korean.
+
+167
+00:06:24,324 --> 00:06:25,332
+Before you go
+
+168
+00:06:25,332 --> 00:06:28,412
+here are four small mistakes that catch a lot
+
+169
+00:06:28,412 --> 00:06:30,224
+of first-time visitors.
+
+170
+00:06:30,822 --> 00:06:31,176
+One.
+
+171
+00:06:31,176 --> 00:06:32,709
+Palaces on a weekend.
+
+172
+00:06:32,709 --> 00:06:36,600
+Most sights are busiest on weekends and public holidays
+
+173
+00:06:36,600 --> 00:06:39,724
+so do the palaces on a weekday if you can.
+
+174
+00:06:39,724 --> 00:06:40,078
+Two.
+
+175
+00:06:40,078 --> 00:06:41,788
+Lunch after two o'clock.
+
+176
+00:06:41,788 --> 00:06:44,735
+Many restaurants close for a break in the
+
+177
+00:06:44,735 --> 00:06:46,445
+middle of the afternoon
+
+178
+00:06:46,445 --> 00:06:47,860
+so eat lunch early.
+
+179
+00:06:47,860 --> 00:06:48,332
+Three.
+
+180
+00:06:48,332 --> 00:06:49,982
+No cash at the market.
+
+181
+00:06:49,982 --> 00:06:51,987
+Cards work almost everywhere
+
+182
+00:06:51,987 --> 00:06:54,994
+but carry a little cash for market stalls.
+
+183
+00:06:54,994 --> 00:06:55,701
+And four.
+
+184
+00:06:55,701 --> 00:06:57,588
+Trusting old opening hours.
+
+185
+00:06:57,588 --> 00:06:59,710
+Hours and closing days change
+
+186
+00:06:59,710 --> 00:07:02,422
+so check each place on a map app the
+
+187
+00:07:02,422 --> 00:07:03,842
+morning you go.
+
+188
+00:07:04,440 --> 00:07:06,800
+And one bonus tip.
+
+189
+00:07:06,800 --> 00:07:09,840
+Convenience stores are your best friend in Seoul.
+
+190
+00:07:09,840 --> 00:07:12,240
+They're on almost every corner
+
+191
+00:07:12,240 --> 00:07:14,160
+many are open around the clock
+
+192
+00:07:14,160 --> 00:07:15,820
+and you can buy water
+
+193
+00:07:15,820 --> 00:07:17,080
+snacks and a quick meal
+
+194
+00:07:17,080 --> 00:07:19,300
+and top up your transit card with cash.
+
+195
+00:07:19,746 --> 00:07:22,966
+A few questions people often ask.
+
+196
+00:07:22,966 --> 00:07:25,186
+Is three days enough for Seoul?
+
+197
+00:07:25,186 --> 00:07:27,306
+It covers the main palaces
+
+198
+00:07:27,306 --> 00:07:28,786
+a traditional market
+
+199
+00:07:28,786 --> 00:07:30,746
+a shopping street and a city view
+
+200
+00:07:30,746 --> 00:07:32,546
+at a comfortable pace.
+
+201
+00:07:32,844 --> 00:07:36,084
+Which day should you visit Gyeongbokgung?
+
+202
+00:07:36,084 --> 00:07:38,104
+Any day except Tuesday
+
+203
+00:07:38,104 --> 00:07:39,604
+when it's closed.
+
+204
+00:07:39,604 --> 00:07:41,884
+Weekday mornings are the quietest.
+
+205
+00:07:42,246 --> 00:07:44,906
+Do you need to book anything?
+
+206
+00:07:44,906 --> 00:07:47,486
+Most of this plan needs no booking at all.
+
+207
+00:07:47,486 --> 00:07:50,286
+The one exception is the Secret Garden tour at
+
+208
+00:07:50,286 --> 00:07:51,246
+Changdeokgung
+
+209
+00:07:51,246 --> 00:07:53,806
+which has limited places.
+
+210
+00:07:53,806 --> 00:07:56,026
+Popular restaurants can also have queues at
+
+211
+00:07:56,026 --> 00:07:56,946
+busy times.
+
+212
+00:07:57,312 --> 00:08:00,552
+So that's three days in Seoul.
+
+213
+00:08:00,552 --> 00:08:02,372
+Day one, palaces
+
+214
+00:08:02,372 --> 00:08:04,512
+hanok lanes and the stream.
+
+215
+00:08:04,512 --> 00:08:05,352
+Day two
+
+216
+00:08:05,352 --> 00:08:06,932
+a market breakfast
+
+217
+00:08:06,932 --> 00:08:09,632
+Myeongdong and the sunset from Namsan.
+
+218
+00:08:09,632 --> 00:08:10,612
+Day three
+
+219
+00:08:10,612 --> 00:08:11,872
+whatever you love most.
+
+220
+00:08:12,210 --> 00:08:13,990
+The full plan
+
+221
+00:08:13,990 --> 00:08:15,930
+with links for every stop
+
+222
+00:08:15,930 --> 00:08:18,070
+is on Korea Plainly.
+
+223
+00:08:18,070 --> 00:08:20,370
+The link is in the description.
+
+224
+00:08:20,370 --> 00:08:22,090
+If this helped
+
+225
+00:08:22,090 --> 00:08:23,550
+subscribe for more plain
+
+226
+00:08:23,550 --> 00:08:25,130
+practical guides to Korea.
+
+227
+00:08:25,130 --> 00:08:27,070
 Have a wonderful trip to Seoul.
 
