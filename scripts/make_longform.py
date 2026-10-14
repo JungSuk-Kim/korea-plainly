@@ -328,10 +328,16 @@ def main():
                 run(["ffmpeg", "-y", "-i", str(voice), "-af", "apad", "-t", f"{secs:.3f}", "-ar", "44100", "-ac", "2", str(wav)])
                 wavs.append(wav)
                 # the segment's photos (resolved first, so cards and lists can use one as a backdrop)
-                for v in seg["show"]:
+                for v in list(seg["show"]):
                     if "image" in v or "photo_query" in v:
-                        v["file"] = slide_photo(v, taken, spec.get("fallback"))
-                        used_photos.append(v["file"])
+                        try:
+                            v["file"] = slide_photo(v, taken)
+                            used_photos.append(v["file"])
+                        except SystemExit as e:  # no licensed photo of exactly that: show the others instead
+                            print(f"::warning::{e}")
+                            seg["show"].remove(v)
+                if not seg["show"]:
+                    seg["show"] = [{"file": used_photos[-1]}]
                 seg_photo = next((v["file"] for v in seg["show"] if "file" in v), used_photos[-1] if used_photos else None)
                 weights = [WEIGHT.get(next(iter(k for k in v if k in WEIGHT), ""), 1.0) for v in seg["show"]]
                 label = tmp / f"l{n:03d}.png"
@@ -394,4 +400,12 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except subprocess.CalledProcessError as e:
+        err = (e.stderr or b"").decode(errors="replace").strip().splitlines()[-3:]
+        print(f"::error::{' '.join(e.cmd[:3])}... failed: {' | '.join(err)}")
+        raise
+    except BaseException as e:
+        print(f"::error::{type(e).__name__}: {e}")
+        raise
