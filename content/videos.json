@@ -21,15 +21,28 @@
       "place": "end"
     }
   ],
-  "busan-1-day-itinerary": {
-    "youtube": "QPsof1_LFbA",
-    "title": "One day in Busan: follow the east coast",
-    "description": "One day in Busan: follow the east coast: the short version of our guide.",
-    "caption": "Watch the one-minute version",
-    "uploaded": "2026-10-14T10:18:59+09:00",
-    "seconds": 59,
-    "poster": "img/video-busan-1-day-itinerary.jpg"
-  },
+  "busan-1-day-itinerary": [
+    {
+      "youtube": "5vIbm2LQPmY",
+      "title": "One Day in Busan: Temple, Haeundae Beach and Spa",
+      "uploaded": "2026-10-14T23:09:13+09:00",
+      "seconds": 539,
+      "poster": "img/video-busan-1-day-itinerary-long.jpg",
+      "format": "long",
+      "description": "One Day in Busan: Temple, Haeundae Beach and Spa: the full guide as a video.",
+      "caption": "Watch the whole guide, with maps (9 minutes)"
+    },
+    {
+      "youtube": "QPsof1_LFbA",
+      "title": "One day in Busan: follow the east coast",
+      "description": "One day in Busan: follow the east coast: the short version of our guide.",
+      "caption": "Short on time? The guide in under a minute",
+      "uploaded": "2026-10-14T10:18:59+09:00",
+      "seconds": 59,
+      "poster": "img/video-busan-1-day-itinerary.jpg",
+      "place": "end"
+    }
+  ],
   "korea-autumn-foliage-2026": {
     "youtube": "qSv1ySQfzh4",
     "title": "When to see autumn leaves in Korea",
