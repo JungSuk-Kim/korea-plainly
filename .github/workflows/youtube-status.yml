@@ -1,0 +1,57 @@
+name: YouTube status
+
+# Run by hand: shows the status of the given videos (and the channel's latest uploads) as notes on the run.
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: "Video IDs, comma separated"
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Ask YouTube
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          IDS: ${{ inputs.ids }}
+        run: |
+          pip install -q requests
+          python - <<'PY'
+          import os, sys, requests
+          sys.path.insert(0, "scripts")
+          from youtube_shorts import token
+          auth = token()
+          ch = requests.get("https://www.googleapis.com/youtube/v3/channels", headers=auth,
+                            params={"part": "contentDetails,snippet", "mine": "true"}, timeout=30).json()
+          for c in ch.get("items", []):
+              print(f"::notice::channel {c['snippet']['title']} ({c['id']})")
+              up = c["contentDetails"]["relatedPlaylists"]["uploads"]
+              items = requests.get("https://www.googleapis.com/youtube/v3/playlistItems", headers=auth,
+                                   params={"part": "snippet,status", "playlistId": up, "maxResults": 10}, timeout=30).json()
+              for i in items.get("items", []):
+                  s = i["snippet"]
+                  print(f"::notice::upload {s['resourceId']['videoId']} | {s['title'][:60]} | {i['status']['privacyStatus']} | {s['publishedAt']}")
+          ids = [x.strip() for x in os.environ.get("IDS", "").split(",") if x.strip()]
+          if ids:
+              r = requests.get("https://www.googleapis.com/youtube/v3/videos", headers=auth,
+                               params={"part": "status,processingDetails,contentDetails", "id": ",".join(ids)}, timeout=30).json()
+              found = {v["id"] for v in r.get("items", [])}
+              for v in r.get("items", []):
+                  st = v["status"]
+                  print(f"::notice::video {v['id']} | upload {st.get('uploadStatus')} | {st.get('privacyStatus')} | "
+                        f"rejection {st.get('rejectionReason', '-')} | failure {st.get('failureReason', '-')} | "
+                        f"processing {v.get('processingDetails', {}).get('processingStatus', '-')} | {v['contentDetails'].get('duration')}")
+              for i in set(ids) - found:
+                  print(f"::notice::video {i} | not found (deleted or never finished)")
+          PY
