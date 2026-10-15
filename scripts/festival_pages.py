@@ -17,10 +17,11 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "content" / "festivals.json"
 START, END = "<!-- kp-festivals -->", "<!-- /kp-festivals -->"
 RSTART, REND = "<!-- kp-region-festivals -->", "<!-- /kp-region-festivals -->"
-REGIONS = {  # hub slug: words in the English address
-    "seoul": ["Seoul"], "busan": ["Busan"], "jeju": ["Jeju"], "gyeongju": ["Gyeongju"], "jeonju": ["Jeonju"],
-    "gangneung": ["Gangneung"], "incheon": ["Incheon"], "sokcho": ["Sokcho"], "yeosu": ["Yeosu"],
-    "daegu": ["Daegu"], "daejeon": ["Daejeon"], "gwangju": ["Gwangju"],
+REGIONS = {  # hub slug: words in the address (English or Korean)
+    "seoul": ["Seoul", "서울"], "busan": ["Busan", "부산"], "jeju": ["Jeju", "제주"], "gyeongju": ["Gyeongju", "경주"],
+    "jeonju": ["Jeonju", "전주"], "gangneung": ["Gangneung", "강릉"], "incheon": ["Incheon", "인천"],
+    "sokcho": ["Sokcho", "속초"], "yeosu": ["Yeosu", "여수"], "daegu": ["Daegu", "대구"], "daejeon": ["Daejeon", "대전"],
+    "gwangju": [],
 }
 STYLE = ("<style>.kp-fest{list-style:none;padding:0;margin:14px 0 26px}.kp-fest li{display:grid;grid-template-columns:110px 1fr;"
          "gap:14px;padding:13px 0;border-bottom:1px solid rgba(20,28,42,.1)}.kp-fest time{font-size:13px;font-weight:700;"
@@ -39,8 +40,42 @@ def load():
         return None
     d = json.loads(DATA.read_text(encoding="utf-8"))
     t = today().isoformat()
-    d["festivals"] = [f for f in d.get("festivals", []) if f["end"] >= t]
+    d["festivals"] = [f for f in d.get("festivals", []) if f["end"] >= t and length(f) <= MAX_DAYS]
     return d
+
+
+MAX_DAYS = 92   # longer "festivals" are season-long performance series, not events to plan a day around
+HANGUL = re.compile(r"[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]")
+PROVINCES = [("서울", "Seoul"), ("부산", "Busan"), ("대구", "Daegu"), ("인천", "Incheon"), ("광주광역시", "Gwangju"),
+             ("대전", "Daejeon"), ("울산", "Ulsan"), ("세종", "Sejong"), ("경기", "Gyeonggi-do"), ("강원", "Gangwon-do"),
+             ("충청북도", "Chungcheongbuk-do"), ("충북", "Chungcheongbuk-do"), ("충청남도", "Chungcheongnam-do"),
+             ("충남", "Chungcheongnam-do"), ("전북", "Jeonbuk-do"), ("전라북도", "Jeonbuk-do"), ("전남", "Jeollanam-do"),
+             ("전라남도", "Jeollanam-do"), ("경상북도", "Gyeongsangbuk-do"), ("경북", "Gyeongsangbuk-do"),
+             ("경상남도", "Gyeongsangnam-do"), ("경남", "Gyeongsangnam-do"), ("제주", "Jeju")]
+
+
+def length(f):
+    return (date.fromisoformat(f["end"]) - date.fromisoformat(f["start"])).days
+
+
+def names(title):
+    """(English name, Korean name or '') from titles like 'Raftman(뗏꾼)'."""
+    m = re.search(r"\s*\((?=[^)]*[\uac00-\ud7af])", title)
+    if m and m.start() > 0:
+        ko = title[m.end():].strip()
+        ko = ko[:-1] if ko.endswith(")") and ko.count("(") < ko.count(")") else ko
+        return title[:m.start()].strip(), ko.strip()
+    return title, ""
+
+
+def place(addr):
+    """An English address; for one written in Korean, its English part (usually the venue) and the province."""
+    addr = re.sub(r"\s*\(.*?\)", "", addr or "").strip()
+    if not HANGUL.search(addr):
+        return addr
+    latin = " ".join(w for w in addr.split() if not HANGUL.search(w) and not re.fullmatch(r"[\d,-]+", w))
+    prov = next((en for ko, en in PROVINCES if addr.startswith(ko) or ko in addr.split()[0]), "")
+    return ", ".join(x for x in (latin, prov) if x)
 
 
 def nice(s):
@@ -50,11 +85,13 @@ def nice(s):
 
 def item(f):
     when = nice(f["start"]) if f["start"] == f["end"] else f"{nice(f['start'])} – {nice(f['end'])}"
-    where = html.escape(re.sub(r"\s*\(.*?\)", "", f.get("address", "")))
-    q = quote(f["title"])
-    return (f'<li><time datetime="{f["start"]}">{when}</time><div><b>{html.escape(f["title"])}</b>'
-            f'<small>{where}</small><a href="https://map.naver.com/p/search/{q}" target="_blank" rel="noopener">'
-            f'Find it on Naver Map</a></div></li>')
+    en, ko = names(f["title"])
+    where = html.escape(place(f.get("address", "")))
+    q = quote(ko or en)
+    ko_html = f' <span lang="ko">{html.escape(ko)}</span>' if ko else ""
+    return (f'<li><time datetime="{f["start"]}">{when}</time><div><b>{html.escape(en)}</b>'
+            f'<small>{where}{" · " if where and ko else ""}{ko_html}</small>'
+            f'<a href="https://map.naver.com/p/search/{q}" target="_blank" rel="noopener">Find it on Naver Map</a></div></li>')
 
 
 def credit(d):
@@ -96,9 +133,13 @@ def main_page(d):
 
 def region_block(d, slug, name):
     words = REGIONS.get(slug, [])
-    hits = [f for f in (d or {}).get("festivals", [])
-            if any(w.lower() in f.get("address", "").lower() for w in words)
-            and not (slug == "gwangju" and "gyeonggi" in f.get("address", "").lower())]
+    def match(f):
+        a = f.get("address", "")
+        if slug == "gwangju":
+            # Gwangju city only (its five districts), not the wider Jeonnam-Gwangju area or Gwangju-si in Gyeonggi
+            return bool(re.search(r"(Buk|Dong|Seo|Nam|Gwangsan)-gu,\s*(Jeonnam-)?Gwangju|Gwangju Metropolitan|광주광역시|광주\S*\s+(동구|서구|남구|북구|광산구)", a))
+        return any(w.lower() in a.lower() for w in words)
+    hits = [f for f in (d or {}).get("festivals", []) if match(f)]
     if not hits:
         return ""
     return (STYLE + f'<section class="kp-region-fest"><h2>Festivals coming up in {html.escape(name)}</h2>'
