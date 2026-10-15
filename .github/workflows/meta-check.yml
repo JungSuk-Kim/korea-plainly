@@ -1,0 +1,58 @@
+name: Meta check
+
+# Run by hand: checks the Instagram, Facebook Page and Threads tokens (read-only, posts nothing)
+# and prints the account names, IDs and token expiry as notes on the run. Tokens are never printed.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check tokens
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+        run: |
+          python3 - <<'PY'
+          import json, os, time, urllib.request, urllib.parse
+          def get(url, **p):
+              try:
+                  with urllib.request.urlopen(url + "?" + urllib.parse.urlencode(p), timeout=30) as r:
+                      return json.load(r)
+              except urllib.error.HTTPError as e:
+                  try: return json.load(e)
+                  except Exception: return {"error": {"message": f"HTTP {e.code}"}}
+          def say(level, msg): print(f"::{level}::{msg}")
+          E = os.environ
+          # Instagram
+          if E.get("IG_ACCESS_TOKEN"):
+              r = get("https://graph.instagram.com/v23.0/me", fields="user_id,username,account_type", access_token=E["IG_ACCESS_TOKEN"])
+              if "error" in r: say("error", f"Instagram: {r['error'].get('message')}")
+              else:
+                  same = str(r.get("user_id")) == E.get("IG_USER_ID", "").strip() or str(r.get("id")) == E.get("IG_USER_ID", "").strip()
+                  say("notice", f"Instagram OK: @{r.get('username')} ({r.get('account_type')}), user_id {r.get('user_id')}, id {r.get('id')}; IG_USER_ID secret {'matches' if same else 'DIFFERS'}")
+          else: say("warning", "IG_ACCESS_TOKEN missing")
+          # Facebook Page
+          if E.get("FB_PAGE_TOKEN"):
+              r = get(f"https://graph.facebook.com/v23.0/{E.get('FB_PAGE_ID','').strip() or 'me'}", fields="id,name,fan_count", access_token=E["FB_PAGE_TOKEN"])
+              if "error" in r: say("error", f"Facebook Page: {r['error'].get('message')}")
+              else: say("notice", f"Facebook Page OK: {r.get('name')} (id {r.get('id')})")
+              d = get("https://graph.facebook.com/v23.0/debug_token", input_token=E["FB_PAGE_TOKEN"], access_token=E["FB_PAGE_TOKEN"]).get("data", {})
+              exp = d.get("expires_at")
+              say("notice", f"Facebook Page token: type {d.get('type')}, expires {'never' if exp == 0 else time.strftime('%Y-%m-%d', time.gmtime(exp)) if exp else '?'}, scopes {','.join(d.get('scopes', []))}")
+          else: say("warning", "FB_PAGE_TOKEN missing")
+          # Threads
+          if E.get("THREADS_ACCESS_TOKEN"):
+              r = get("https://graph.threads.net/v1.0/me", fields="id,username", access_token=E["THREADS_ACCESS_TOKEN"])
+              if "error" in r: say("error", f"Threads: {r['error'].get('message')}")
+              else: say("notice", f"Threads OK: @{r.get('username')} (id {r.get('id')}); THREADS_USER_ID secret {'set' if E.get('THREADS_USER_ID') else 'not set (id above will be used)'}")
+          else: say("warning", "THREADS_ACCESS_TOKEN missing")
+          PY
