@@ -141,7 +141,9 @@
     "query": "Seoul autumn November"
   },
   "korea-packing-list": {
-    "retry": true,
+    "file": "photo-korea-packing-list.jpg",
+    "credit": "Photo: Jnpet, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Incheon_Airport3.JPG",
     "query": "Incheon Airport departure hall"
   },
   "korea-public-transport-transfers": {
