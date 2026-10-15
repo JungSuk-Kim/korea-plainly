@@ -11,6 +11,16 @@
     "sokcho-food-chungchosoo-mulhoe": {
       "at": "2026-10-14T15:28:23+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mxtueicli32r"
+    },
+    "sokcho-shopping-sokcho-tourist-fishery-market": {
+      "at": "2026-10-15T02:10:21+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mxuyafmtfa2m"
+    }
+  },
+  "bluesky_videos": {
+    "5vIbm2LQPmY": {
+      "at": "2026-10-15T02:10:23+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mxuyai2bek2f"
     }
   }
 }
