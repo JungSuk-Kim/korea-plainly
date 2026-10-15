@@ -101,6 +101,22 @@
     "source": "https://commons.wikimedia.org/wiki/File:Incheon_International_Airport_Terminal_1_Arrival.jpg",
     "query": "Incheon International Airport terminal"
   },
+  "korea-in-december": {
+    "none": true,
+    "query": "Seoul winter December night lights"
+  },
+  "korea-in-february": {
+    "file": "photo-korea-in-february.jpg",
+    "credit": "Photo: Korea.net, CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:2018_PyeongChang_Winter_Olympic_001.jpg",
+    "query": "Korea winter February"
+  },
+  "korea-in-january": {
+    "file": "photo-korea-in-january.jpg",
+    "credit": "Photo: Korea.net / Korean Culture and Information Service (Jeon Han), CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:KOCIS_Korea_Snowfall_in_Gyeongbokgung_05_(11318789535).jpg",
+    "query": "Gyeongbokgung snow winter"
+  },
   "korea-in-november": {
     "file": "photo-korea-in-november.jpg",
     "credit": "Photo: Eggmoon, CC BY-SA 3.0, via Wikimedia Commons",
@@ -174,6 +190,10 @@
     "credit": "Photo: Alexey Komarov, CC BY 3.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Cherry_Blossom_in_Yeouido_Park_-_panoramio.jpg",
     "query": "Yeouido cherry blossoms"
+  },
+  "korea-winter-festivals": {
+    "none": true,
+    "query": "Hwacheon Sancheoneo Ice Festival"
   },
   "korea-winter-travel-guide": {
     "file": "photo-korea-winter-travel-guide.jpg",
