@@ -29,6 +29,7 @@ def nav_inner():
     regs = [(name, f"{slug}.html") for slug, name in regions()] + [("All regions", "regions.html")]
     return "\n".join([
         '<a href="index.html">Home</a>',
+        '<a href="start-here.html">Start here</a>',
         _drop("Guides", "guides.html", guides),
         _drop("Regions", "regions.html", regs),
         '<a href="videos.html">Videos</a>',

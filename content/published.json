@@ -895,5 +895,11 @@
     "filename": "seoul-5-day-itinerary.html",
     "title": "5 Days in Seoul: A Relaxed Itinerary for First-Timers",
     "category": "Travel"
+  },
+  {
+    "slug": "start-here",
+    "filename": "start-here.html",
+    "title": "First Trip to Korea? Start Here: A Step-by-Step Planner",
+    "category": "Travel"
   }
 ]
