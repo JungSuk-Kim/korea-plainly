@@ -322,10 +322,12 @@
   },
   "learn-hangul": {
     "file": "photo-learn-hangul.jpg",
-    "credit": "Photo: U.S. Department of State from United States, Public domain, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Deputy_Secretary_Blinken_and_Ambassador_Lippert_Stand_in_Front_of_the_King_Sejong_Statue_in_Downtown_Seoul_(16457481066).jpg",
+    "credit": "Photo: Pinterpandai, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gwanghwamun_is_the_main_gate_to_the_south_of_Gyeongbokgung_Palace.jpg",
     "query": "Statue of King Sejong the Great",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Deputy_Secretary_Blinken_and_Ambassador_Lippert_Stand_in_Front_of_the_King_Sejong_Statue_in_Downtown_Seoul_(16457481066).jpg"
+    ]
   },
   "seollal-travel-tips": {
     "file": "photo-seollal-travel-tips.jpg",
