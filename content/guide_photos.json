@@ -153,10 +153,12 @@
   },
   "korea-travel-budget": {
     "file": "photo-korea-travel-budget.jpg",
-    "credit": "Photo: Photographer: Gabriel Wicke, CC BY-SA 3.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Seoul_market_street.jpg",
+    "credit": "Photo: Smiley.toerist, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Namdaemun_market_in_Seoul_I.jpg",
     "query": "Namdaemun Market Seoul",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Seoul_market_street.jpg"
+    ]
   },
   "korea-travel-mistakes": {
     "file": "photo-korea-travel-mistakes.jpg",
@@ -311,10 +313,12 @@
   },
   "seoul-night-views": {
     "file": "photo-seoul-night-views.jpg",
-    "credit": "Photo: Dokdo2005, CC BY-SA 3.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Seoul_Station_Night_View.JPG",
+    "credit": "Photo: Matt Kieffer from London, United Kingdom, CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul_city_skyline_at_night_from_Namsan_Mountain_(49174548523).jpg",
     "query": "Seoul skyline night Namsan",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Seoul_Station_Night_View.JPG"
+    ]
   },
   "seoul-subway-for-foreigners": {
     "file": "photo-seoul-subway-for-foreigners.jpg",
