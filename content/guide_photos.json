@@ -114,8 +114,8 @@
     "query": "Incheon International Airport terminal"
   },
   "korea-festivals": {
-    "none": true,
-    "query": "Jinju lantern festival"
+    "retry": true,
+    "query": "Lotus Lantern Festival Seoul"
   },
   "korea-in-december": {
     "file": "photo-korea-in-december.jpg",
