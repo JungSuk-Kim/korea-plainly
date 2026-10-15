@@ -75,7 +75,8 @@ Structure (use these chapter names where they fit):
 - "Getting around", "Mistakes to avoid" (a list of 3-4, then a segment explaining them), "Quick questions" (2-3 Q&A
   from the article's FAQ), "Summary" (a list recapping the plan, then a closing card with "korea-plainly.com" and
   the line "The full guide, with links for every stop, is on Korea Plainly. The link is in the description.
-  If this helped, subscribe for more plain, practical guides to Korea.").
+  If this helped, subscribe for more plain, practical guides to Korea."). The closing card is
+  {{"card": {{"big": "KOREA PLAINLY", "title": "The full guide is in the description", "sub": "korea-plainly.com"}}}}.
 
 Rules:
 - Narration: {min_words}-{max_words} words in total. Short spoken sentences, numbers as spoken, no emoji.
@@ -87,6 +88,9 @@ Rules:
   For practical tips use a fitting site photo (subway platforms, buses, taxis, airports, convenience stores, cafes,
   markets, crowds, payment counters are all in the list below). Every other segment needs a photo or a map.
 - Keep segments short: at most 45 words each, with 2 visuals for segments over 25 words.
+- "Quick questions": one segment per question, each with a photo of what the answer is about (a place, a train,
+  a bus, a street, a market) and a label with kicker "Q&A" and the question as the title. No cards here.
+- "Summary": the recap list, then the closing card. The list segment should also show one photo of the place.
 - Maps: 2-6 stops each; "geocode" must be precise enough for OpenStreetMap to find (official name + district + city).
   Use "route": true only for stops visited in that order.
 - Each segment has 1-3 visuals. Labels: kicker in capitals, at most 24 characters; title at most 34 characters.
