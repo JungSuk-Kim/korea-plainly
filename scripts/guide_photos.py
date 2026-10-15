@@ -43,7 +43,7 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 QUERIES = {
     "which-korean-city-quiz": "Busan Gwangalli Bridge night",
     "korea-trip-cost-calculator": "Gwangjang Market Seoul",
-    "korea-packing-list": "luggage suitcase",
+    "korea-packing-list": "Incheon Airport departure hall",
     "learn-hangul": "King Sejong statue Gwanghwamun",
     "start-here": "Seoul skyline Namsan",
     "seoul-5-day-itinerary": "Han River Seoul",

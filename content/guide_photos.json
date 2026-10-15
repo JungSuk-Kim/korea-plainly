@@ -141,8 +141,8 @@
     "query": "Seoul autumn November"
   },
   "korea-packing-list": {
-    "none": true,
-    "query": "luggage suitcase"
+    "retry": true,
+    "query": "Incheon Airport departure hall"
   },
   "korea-public-transport-transfers": {
     "file": "photo-korea-public-transport-transfers.jpg",
