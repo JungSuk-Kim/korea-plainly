@@ -53,7 +53,9 @@ is ignored); each run keeps its video as a 30-day artifact. Never use Google Map
 Long-form (16:9, 8-9 min): "Long-form video (weekly)" runs Tuesdays: `write_longform.py` (script from the next article in
 `content/longform/queue.json`, map stops geocoded with OSM Nominatim) → `make_longform.py` (OSM maps, chapters, subtitles,
 Kkachi) → `youtube_upload.py` (private) → `youtube_shorts.py record-long`; the 2-hourly check embeds it at the top of the
-article once public (a Short for the same article moves to the end). Kkachi the magpie mascot lives in `scripts/mascot/`.
+article once public (a Short for the same article moves to the end). Kkachi the magpie mascot lives in `scripts/mascot/`;
+`site_mascot.py` puts Kkachi on the site (article sign-off, About, 404) and `video_hub.py` builds videos.html and the
+home page "Watch" section from `content/videos.json`.
 
 ## Checking the bots
 

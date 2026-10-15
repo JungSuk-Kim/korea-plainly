@@ -31,6 +31,7 @@ def nav_inner():
         '<a href="index.html">Home</a>',
         _drop("Guides", "guides.html", guides),
         _drop("Regions", "regions.html", regs),
+        '<a href="videos.html">Videos</a>',
         '<a href="about.html">About</a>',
         '<a href="search.html" class="nav-search" aria-label="Search">Search</a>',
     ])
