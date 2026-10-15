@@ -89,11 +89,23 @@
       "https://commons.wikimedia.org/wiki/File:2024-11-16_08_48_52_A_Korean_Dogwood_(left)_and_green-leaved_Japanese_Maple_(right)_in_late_autumn_along_Pingree_Avenue_in_Ewing_Township,_Mercer_County,_New_Jersey.jpg"
     ]
   },
+  "korea-cherry-blossom-2027": {
+    "file": "photo-korea-cherry-blossom-2027.jpg",
+    "credit": "Photo: WANGYIFAN2024, CC0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Cherry_blossoms_in_Seoul_Forest,_South_Korea2.jpg",
+    "query": "cherry blossom Seoul"
+  },
   "korea-entry-k-eta-e-arrival": {
     "file": "photo-korea-entry-k-eta-e-arrival.jpg",
     "credit": "Photo: Arne Müseler, CC BY-SA 3.0 de, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Incheon_International_Airport_Terminal_1_Arrival.jpg",
     "query": "Incheon International Airport terminal"
+  },
+  "korea-in-november": {
+    "file": "photo-korea-in-november.jpg",
+    "credit": "Photo: Eggmoon, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Cornus_kousa_at_november_in_Seoul,_Korea.jpg",
+    "query": "Seoul autumn November"
   },
   "korea-public-transport-transfers": {
     "file": "photo-korea-public-transport-transfers.jpg",
@@ -138,6 +150,12 @@
     "reject": [
       "https://commons.wikimedia.org/wiki/File:3_sly_old_cards!_(BM_1896,0501.1638).jpg"
     ]
+  },
+  "korea-travel-budget": {
+    "file": "photo-korea-travel-budget.jpg",
+    "credit": "Photo: Photographer: Gabriel Wicke, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul_market_street.jpg",
+    "query": "Seoul street market"
   },
   "korea-travel-mistakes": {
     "file": "photo-korea-travel-mistakes.jpg",
@@ -289,6 +307,12 @@
     "credit": "Photo: Bgag, CC0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Bukchon_Hanok_Village_01.jpg",
     "query": "Bukchon Hanok Village"
+  },
+  "seoul-night-views": {
+    "file": "photo-seoul-night-views.jpg",
+    "credit": "Photo: Dokdo2005, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul_Station_Night_View.JPG",
+    "query": "Seoul night view"
   },
   "seoul-subway-for-foreigners": {
     "file": "photo-seoul-subway-for-foreigners.jpg",
