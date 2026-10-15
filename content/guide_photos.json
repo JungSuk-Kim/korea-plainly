@@ -80,6 +80,18 @@
     "source": "https://commons.wikimedia.org/wiki/File:Woman_taking_photographs_with_a_smartphone_at_night_in_Seoul_(35605735705).jpg",
     "query": "smartphone Seoul"
   },
+  "korea-10-day-itinerary": {
+    "file": "photo-korea-10-day-itinerary.jpg",
+    "credit": "Photo: Mobius6, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Jeonju_Hanok_Village_20220701_001.jpg",
+    "query": "Jeonju Hanok Village"
+  },
+  "korea-7-day-itinerary": {
+    "file": "photo-korea-7-day-itinerary.jpg",
+    "credit": "Photo: Basile Morin, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Front_view_of_Heungnyemun_Gate_in_Gyeongbokgung_Palace_Seoul_South_Korea.jpg",
+    "query": "Gyeongbokgung Palace Seoul"
+  },
   "korea-autumn-foliage-2026": {
     "file": "photo-korea-autumn-foliage-2026.jpg",
     "credit": "Photo: Marcella Astrid, CC BY-SA 3.0, via Wikimedia Commons",
@@ -322,6 +334,12 @@
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Bukchon_Hanok_Village_in_Seoul.jpg"
     ]
+  },
+  "seoul-5-day-itinerary": {
+    "file": "photo-seoul-5-day-itinerary.jpg",
+    "credit": "Photo: Matt Kieffer from London, United Kingdom, CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Han_River,_Seoul_(49531226448).jpg",
+    "query": "Han River Seoul"
   },
   "seoul-bus-guide": {
     "file": "photo-seoul-bus-guide.jpg",
