@@ -901,5 +901,11 @@
     "filename": "start-here.html",
     "title": "First Trip to Korea? Start Here: A Step-by-Step Planner",
     "category": "Travel"
+  },
+  {
+    "slug": "learn-hangul",
+    "filename": "learn-hangul.html",
+    "title": "Learn to Read Hangul in an Hour: Korean Alphabet for Travellers",
+    "category": "Language"
   }
 ]
