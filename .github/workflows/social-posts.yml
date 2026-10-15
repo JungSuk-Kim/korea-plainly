@@ -1,7 +1,7 @@
 name: Social posts
 
 # Shares one article per run on Bluesky (scripts/post_social.py), newest first,
-# then works slowly through older articles. Twice a day: about 10:43 and 19:43 Korea time.
+# then works slowly through older articles, plus one of our YouTube videos not yet shared. Twice a day: about 10:43 and 19:43 Korea time.
 on:
   schedule:
     - cron: "43 1 * * *"
@@ -37,6 +37,13 @@ jobs:
           BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
         run: python scripts/post_social.py bluesky --max "${{ inputs.max || '1' }}"
+
+      - name: Share a new video on Bluesky
+        if: always()
+        env:
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+        run: python scripts/post_social.py bluesky --videos --max 1
 
       - name: Record what was shared
         if: always()

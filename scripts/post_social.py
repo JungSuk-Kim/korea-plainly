@@ -2,6 +2,7 @@
 """Share articles on social networks, a few at a time. Run by the "Social posts" workflow.
 
     python scripts/post_social.py bluesky [--max 1] [--dry-run]
+    python scripts/post_social.py bluesky --videos [--max 1]   # our YouTube videos (content/videos.json)
 
 Picks the newest article not yet shared on that network (guides and regional
 articles; redirects and noindex pages are skipped), posts its title, a short
@@ -63,6 +64,22 @@ def articles():
     return sorted(out, key=lambda a: (a["date"], a["slug"]), reverse=True)
 
 
+def videos():
+    """Public videos from content/videos.json, newest first, each pointing to YouTube and to its guide."""
+    data = json.loads(read(ROOT / "content" / "videos.json"))
+    out = []
+    for slug, entries in data.items():
+        for v in entries if isinstance(entries, list) else [entries]:
+            if not (ROOT / v["poster"]).exists() or not (ROOT / f"{slug}.html").exists():
+                continue
+            long = v.get("format") == "long"
+            out.append({"key": v["youtube"], "slug": slug, "title": v["title"], "image": v["poster"], "long": long,
+                        "youtube": (f"https://www.youtube.com/watch?v={v['youtube']}" if long
+                                    else f"https://www.youtube.com/shorts/{v['youtube']}"),
+                        "desc": v.get("description", ""), "date": v.get("uploaded", "")})
+    return sorted(out, key=lambda v: v["date"], reverse=True)
+
+
 def shorten(text, limit):
     if len(text) <= limit:
         return text
@@ -106,9 +123,36 @@ def bluesky_text(a):
     return text, facets
 
 
+def link_facets(text, urls, tags):
+    b = text.encode("utf-8")
+    facets = []
+    for url in urls:
+        start = b.find(url.encode())
+        facets.append({"index": {"byteStart": start, "byteEnd": start + len(url.encode())},
+                       "features": [{"$type": "app.bsky.richtext.facet#link", "uri": url}]})
+    pos = b.rfind(" ".join("#" + t for t in tags).encode())
+    for t in tags:
+        tag = ("#" + t).encode()
+        facets.append({"index": {"byteStart": pos, "byteEnd": pos + len(tag)},
+                       "features": [{"$type": "app.bsky.richtext.facet#tag", "tag": t}]})
+        pos += len(tag) + 1
+    return facets
+
+
+def video_text(v):
+    """A video post: what it is, the YouTube link (shown as a player card) and the guide on the site."""
+    guide = f"{BASE}/{v['slug']}.html"
+    tags = HASHTAGS + ["KoreaPlainly"]
+    kind = "New video" if v["long"] else "New one-minute video"
+    head = f"{kind}: {shorten(v['title'], 110)}"
+    text = f"{head}\n\nWatch: {v['youtube']}\nFull guide: {guide}\n" + " ".join("#" + t for t in tags)
+    return text, link_facets(text, [v["youtube"], guide], tags)
+
+
 def post_bluesky(a, dry_run=False):
     import requests
-    text, facets = bluesky_text(a)
+    video = "youtube" in a
+    text, facets = video_text(a) if video else bluesky_text(a)
     if dry_run:
         print("---\n" + text)
         return "dry-run"
@@ -129,7 +173,7 @@ def post_bluesky(a, dry_run=False):
         "langs": ["en"],
         "createdAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "embed": {"$type": "app.bsky.embed.external", "external": {
-            "uri": f"{BASE}/{a['slug']}.html", "title": shorten(a["title"], 120),
+            "uri": a["youtube"] if video else f"{BASE}/{a['slug']}.html", "title": shorten(a["title"], 120),
             "description": shorten(a["desc"], 280), "thumb": blob.json()["blob"]}},
     }
     r = requests.post(f"{host}/com.atproto.repo.createRecord", timeout=30, headers=auth,
@@ -146,10 +190,12 @@ def main():
     ap.add_argument("network", choices=sorted(NETWORKS))
     ap.add_argument("--max", type=int, default=1)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--videos", action="store_true", help="share our YouTube videos instead of articles")
     args = ap.parse_args()
     state = json.loads(read(STATE)) if STATE.exists() else {}
-    done = state.setdefault(args.network, {})
-    todo = [a for a in articles() if a["slug"] not in done][: args.max]
+    done = state.setdefault(args.network + ("_videos" if args.videos else ""), {})
+    items = videos() if args.videos else articles()
+    todo = [a for a in items if a.get("key", a["slug"]) not in done][: args.max]
     if not todo:
         print(f"{args.network}: nothing new to share")
         return
@@ -160,8 +206,8 @@ def main():
             print(f"{args.network}: could not share {a['slug']}: {e}")
             sys.exit(1)
         if not args.dry_run:
-            done[a["slug"]] = {"at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "ref": ref}
-        print(f"{args.network}: shared {a['slug']}")
+            done[a.get("key", a["slug"])] = {"at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "ref": ref}
+        print(f"{args.network}: shared {a.get('key', a['slug'])} ({a['slug']})")
     if not args.dry_run:
         STATE.write_text(json.dumps(state, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
