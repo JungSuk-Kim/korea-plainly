@@ -53,7 +53,7 @@ first-time visitors to Korea, narrated by a warm, plain-spoken local. Turn the a
 
 Return JSON only:
 {{
- "title": "YouTube title, at most 70 characters, specific and searchable, e.g. 'Busan in One Day: An Easy East Coast Itinerary'",
+ "title": "YouTube title, at most 70 characters, starting with the words a traveller would type into YouTube search, e.g. 'Busan One Day Itinerary: Temple, Beach and Market' or 'Korea Winter Festivals: Ice Fishing, Snow and Lights'",
  "intro": "two sentences for the video description",
  "hashtags": "#Place #KoreaTravel ... (4-6)",
  "thumb": {{"big": "at most 8 characters, e.g. '1 DAY'", "mid": "at most 10 characters, e.g. 'IN BUSAN'", "small": "at most 22 characters"}},
@@ -74,8 +74,8 @@ Structure (use these chapter names where they fit):
   then one segment per stop, each with a "label" naming the place.
 - "Getting around", "Mistakes to avoid" (a list of 3-4, then a segment explaining them), "Quick questions" (2-3 Q&A
   from the article's FAQ), "Summary" (a list recapping the plan, then a closing card with "korea-plainly.com" and
-  the line "The full guide, with links for every stop, is on Korea Plainly. The link is in the description.
-  If this helped, subscribe for more plain, practical guides to Korea."). The closing card is
+  the line "The full guide, with maps and links for every stop, is free at Korea Plainly dot com. The link is at
+  the top of the description. If this helped, subscribe for more plain, practical guides to Korea."). The closing card is
   {{"card": {{"big": "KOREA PLAINLY", "title": "The full guide is in the description", "sub": "korea-plainly.com"}}}}.
 
 Rules:

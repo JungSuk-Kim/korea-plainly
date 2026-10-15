@@ -449,7 +449,8 @@ def main():
         track, music = pick_music(spec, Path(args.spec).stem)
         # music under the narration; the whole mix levelled to the loudness phones expect (about -14 LUFS)
         mix_music(joined, music, total, args.voice, out_dir / f"{name}.mp4")
-    desc = [spec["title"], "", f"Full guide: https://korea-plainly.com/{spec['article']}.html", "",
+    from video_text import header
+    desc = header(spec["article"], spec.get("summary") or spec["title"]) + [
             spec.get("hashtags", "#KoreaTravel #Korea #TravelTips"), "", "Photos (Wikimedia Commons, text added):"]
     desc += [c.replace("Photo: ", "• ") for c in credits(spec)]
     desc += ["", "Music:", f'"{track}" Kevin MacLeod (incompetech.com)',

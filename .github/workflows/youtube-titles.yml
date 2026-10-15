@@ -1,0 +1,40 @@
+name: YouTube titles
+
+# Run by hand: updates the title and description of videos listed in content/shorts/retitle.json
+# (scripts/youtube_meta.py), then commits the new titles to the site.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-bot
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Update YouTube
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          pip install -q requests pillow
+          python scripts/youtube_meta.py
+          python scripts/maintain_site.py
+      - name: Commit
+        run: |
+          git config user.name "Korea Plainly Bot"
+          git config user.email "actions@github.com"
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "YouTube: new video titles"
+          git pull --rebase -X theirs
+          git push

@@ -17,6 +17,9 @@ from html import unescape
 from pathlib import Path
 from urllib.parse import unquote
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from video_text import SHORT_OUTRO  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 SHORTS = ROOT / "content" / "shorts"
 QUEUE = SHORTS / "queue.json"
@@ -86,7 +89,7 @@ PROMPT = """You write vertical short videos (YouTube Shorts / Reels) for Korea P
 for first-time visitors to Korea. Turn the article below into one short.
 
 Return JSON only, in this form:
-{{"title": "...", "hashtags": "#Korea #KoreaTravel ...", "slides": [
+{{"title": "...", "summary": "...", "hashtags": "#Korea #KoreaTravel ...", "slides": [
   {{"kicker": "...", "title": "...", "sub": "...", "voice": "...", "image": "..."}} or
   {{"kicker": "...", "title": "...", "sub": "...", "voice": "...", "photo_query": "...", "require": ["..."]}}
 ]}}
@@ -107,7 +110,10 @@ Rules:
   * For a general tip with no single place, pick the site photo that fits best, or a concrete thing
     (e.g. "T-money card", "Incheon Airport arrivals hall").
 - Never use the same site photo twice in one video.
-- "title" of the video: at most 60 characters, plain and specific (e.g. "Busan in one day: a simple plan").
+- "title" of the video: at most 60 characters. Start with the words a traveller would type into YouTube search
+  (place + what they want), then a short promise, e.g. "Busan One Day Itinerary: The Easy East Coast Route",
+  "Seoul Subway for Foreigners: 5 Things to Know", "Korea in December: What to Pack and Do". Title Case.
+- "summary": one or two plain sentences for the top of the description, naming the place and what the viewer learns.
 - "hashtags": 4-6 hashtags, the place first.
 
 Site photos (file: what it shows):
@@ -144,8 +150,9 @@ def write(slug):
     while sum(len(s["voice"].split()) for s in slides) > MAX_WORDS and len(slides) > 5:
         slides.pop(-2)
     slides.append({"end": True, "title": "Full guide and tips", "sub": "korea-plainly.com",
-                   "voice": "The full guide is on Korea Plainly. Link in bio."})
-    out = {"article": slug, "fallback": cover if cover in photos else slides[0].get("image", ""), "title": spec["title"][:90], "hashtags": spec.get("hashtags", "#Korea #KoreaTravel"),
+                   "voice": SHORT_OUTRO})
+    out = {"article": slug, "fallback": cover if cover in photos else slides[0].get("image", ""), "title": spec["title"][:90],
+           "summary": spec.get("summary", ""), "hashtags": spec.get("hashtags", "#Korea #KoreaTravel"),
            "music": TRACKS[len(done()) % len(TRACKS)], "slides": slides}
     path = SHORTS / f"{slug}.json"
     path.write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

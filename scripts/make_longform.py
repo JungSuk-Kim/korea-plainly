@@ -425,9 +425,8 @@ def main():
     from make_short import credits
     stamp = lambda s: f"{int(s // 60)}:{int(s % 60):02d}"  # noqa: E731
     credit_spec = {"slides": [{"file": f} for f in dict.fromkeys(used_photos)]}
-    desc = [spec["title"], "", spec.get("intro", "A relaxed three-day plan for your first trip to Seoul, with the route for "
-            "every day, what to eat, and the small mistakes to avoid."), "",
-            f"Full guide with links for every stop: https://korea-plainly.com/{spec['article']}.html", "", "Chapters:"]
+    from video_text import header
+    desc = header(spec["article"], spec.get("intro", spec["title"])) + ["Chapters:"]
     desc += [f"{stamp(s)} {c}" for s, c in chapters]
     desc += ["", spec.get("hashtags", "#Seoul #KoreaTravel #SeoulItinerary #Korea"), "", "Photos (Wikimedia Commons, text added):"]
     desc += [c.replace("Photo: ", "• ") for c in credits(credit_spec)]
