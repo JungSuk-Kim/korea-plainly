@@ -237,7 +237,8 @@ def main():
         if entry.get("skip"):
             continue
 
-        if not thumb.lower().endswith(".svg") and not entry.get("file"):
+        placeholder = thumb.lower().endswith(".svg") or thumb.rsplit("/", 1)[-1] == "og-default.jpg"
+        if not placeholder and not entry.get("file"):
             # Already has a real thumbnail: only stop sharing the stock photo.
             s = read(page)
             og = re.search(r'property=["\']og:image["\'][^>]*content="[^"]*/([^"/]+)"', s, re.S)
