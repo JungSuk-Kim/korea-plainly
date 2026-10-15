@@ -320,6 +320,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:KOREAN_RAIL_KTX_TRAIN_AT_BUSAN_STATION_SOUTH_KOREA_OCT_2012_(8176085968).jpg",
     "query": "KTX train"
   },
+  "learn-hangul": {
+    "none": true,
+    "query": "Hangul Korean alphabet sign"
+  },
   "seollal-travel-tips": {
     "file": "photo-seollal-travel-tips.jpg",
     "credit": "Photo: Republic of Korea from Seoul, Republic of Korea, CC BY-SA 2.0, via Wikimedia Commons",
