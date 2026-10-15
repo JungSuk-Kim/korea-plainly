@@ -140,6 +140,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:Cornus_kousa_at_november_in_Seoul,_Korea.jpg",
     "query": "Seoul autumn November"
   },
+  "korea-packing-list": {
+    "none": true,
+    "query": "suitcase travel packing"
+  },
   "korea-public-transport-transfers": {
     "file": "photo-korea-public-transport-transfers.jpg",
     "credit": "Photo: LERK, CC BY-SA 4.0, via Wikimedia Commons",
@@ -201,6 +205,10 @@
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Seoul-Myeongdong-01.jpg"
     ]
+  },
+  "korea-trip-cost-calculator": {
+    "none": true,
+    "query": "Korean won banknotes"
   },
   "korea-weather-by-season": {
     "file": "photo-korea-weather-by-season.jpg",
@@ -391,5 +399,11 @@
     "credit": "Photo: Matt Kieffer from London, United Kingdom, CC BY-SA 2.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Seoul_city_skyline_at_night_from_Namsan_Mountain_(49175035266).jpg",
     "query": "Seoul skyline Namsan"
+  },
+  "which-korean-city-quiz": {
+    "file": "photo-which-korean-city-quiz.jpg",
+    "credit": "Photo: by frakorea, CC BY 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Korea-Busan-Gwangan.Bridge-06.jpg",
+    "query": "Busan Gwangalli Bridge night"
   }
 }
