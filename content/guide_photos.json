@@ -102,14 +102,12 @@
     "query": "Incheon International Airport terminal"
   },
   "korea-in-december": {
-    "none": true,
-    "query": "Seoul winter December night lights"
+    "retry": true,
+    "query": "Seoul Lantern Festival Cheonggyecheon"
   },
   "korea-in-february": {
-    "file": "photo-korea-in-february.jpg",
-    "credit": "Photo: Korea.net, CC BY-SA 2.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:2018_PyeongChang_Winter_Olympic_001.jpg",
-    "query": "Korea winter February"
+    "retry": true,
+    "query": "Seollal Korea traditional"
   },
   "korea-in-january": {
     "file": "photo-korea-in-january.jpg",
@@ -192,8 +190,8 @@
     "query": "Yeouido cherry blossoms"
   },
   "korea-winter-festivals": {
-    "none": true,
-    "query": "Hwacheon Sancheoneo Ice Festival"
+    "retry": true,
+    "query": "Hwacheon ice fishing"
   },
   "korea-winter-travel-guide": {
     "file": "photo-korea-winter-travel-guide.jpg",

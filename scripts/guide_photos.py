@@ -41,10 +41,10 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 # Hand-picked search words for the guides that exist today. New guides fall
 # back to words from their title.
 QUERIES = {
-    "korea-winter-festivals": "Hwacheon Sancheoneo Ice Festival",
-    "korea-in-february": "Korea winter February",
+    "korea-winter-festivals": "Hwacheon ice fishing",
+    "korea-in-february": "Seollal Korea traditional",
     "korea-in-january": "Gyeongbokgung snow winter",
-    "korea-in-december": "Seoul winter December night lights",
+    "korea-in-december": "Seoul Lantern Festival Cheonggyecheon",
     "seollal-travel-tips": "Seollal Korea hanbok",
     "christmas-new-year-seoul": "Myeongdong Christmas Seoul",
     "korea-ski-resorts-guide": "Yongpyong ski resort Korea",
