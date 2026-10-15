@@ -102,6 +102,31 @@ def wrap(draw, text, font, width):
     return lines + [line] if line else lines
 
 
+MASCOT = ROOT / "scripts" / "mascot" / "kkachi_closed.png"
+MASCOT_VERSION = "kkachi1"   # change to redraw every pin with a new mascot drawing
+_mascot = []
+
+
+def kkachi(height=220):
+    """Kkachi with a white outline, once per run (None if the drawing is missing)."""
+    if not _mascot:
+        if not MASCOT.exists():
+            _mascot.append(None)
+        else:
+            from PIL import ImageFilter
+            with Image.open(MASCOT) as im:
+                im = im.convert("RGBA").resize((round(im.width * height / im.height), height), Image.LANCZOS)
+            pad = 8
+            canvas = Image.new("RGBA", (im.width + 2 * pad, im.height + 2 * pad), (0, 0, 0, 0))
+            canvas.paste(im, (pad, pad), im)
+            halo = canvas.getchannel("A").filter(ImageFilter.MaxFilter(11)).point(lambda v: 240 if v > 40 else 0)
+            out = Image.new("RGBA", canvas.size, (255, 255, 255, 0))
+            out.putalpha(halo)
+            out.alpha_composite(canvas)
+            _mascot.append(out)
+    return _mascot[0]
+
+
 def draw_pin(item, path):
     img = Image.new("RGB", (W, H), NAVY)
     src = ROOT / item["photo"]
@@ -125,6 +150,9 @@ def draw_pin(item, path):
         y += int(size * 1.12)
     small = ImageFont.truetype(str(FONT_REG), 30)
     d.text((70, H - 75), "korea-plainly.com", font=small, fill=MUTED)
+    mascot = kkachi()
+    if mascot:   # Kkachi stands on the red line, on the right, clear of the text
+        img.paste(mascot, (W - mascot.width - 40, PHOTO_H + 8 - mascot.height), mascot)
     OUT.mkdir(exist_ok=True)
     img.save(path, "JPEG", quality=84, optimize=True, progressive=True)
 
@@ -135,7 +163,7 @@ def main():
     items, made = guide_items + place_items, 0
     for item in items:
         src = ROOT / item["photo"]
-        fp = hashlib.md5((item["title"] + "|" + item["photo"] + "|").encode() + (src.read_bytes() if src.exists() else b"")).hexdigest()[:12]
+        fp = hashlib.md5((item["title"] + "|" + item["photo"] + "|" + MASCOT_VERSION + "|").encode() + (src.read_bytes() if src.exists() else b"")).hexdigest()[:12]
         path = OUT / f"{item['slug']}.jpg"
         if state.get(item["slug"]) != fp or not path.exists():
             draw_pin(item, path)
