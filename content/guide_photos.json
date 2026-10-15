@@ -109,10 +109,12 @@
   },
   "korea-in-february": {
     "file": "photo-korea-in-february.jpg",
-    "credit": "Photo: Korea.net, CC BY-SA 2.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:2018_PyeongChang_Winter_Olympic_001.jpg",
+    "credit": "Photo: KOREA.NET - Official page of the Republic of Korea, CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Korea_2013_Seollal_01.jpg",
     "query": "Seollal Korea traditional",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:2018_PyeongChang_Winter_Olympic_001.jpg"
+    ]
   },
   "korea-in-january": {
     "file": "photo-korea-in-january.jpg",
@@ -195,7 +197,9 @@
     "query": "Yeouido cherry blossoms"
   },
   "korea-winter-festivals": {
-    "retry": true,
+    "file": "photo-korea-winter-festivals.jpg",
+    "credit": "Photo: Christian Bolz, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Pyeongchang_Trout_Festival_(1).jpg",
     "query": "Pyeongchang trout festival"
   },
   "korea-winter-travel-guide": {
