@@ -754,5 +754,29 @@
     "published_at": "2026-10-14T00:22:24.958140+00:00",
     "image": "regional-sokcho-cafe-seaside-garden.jpg",
     "image_credit": "Photo: 바다정원 via Google Maps"
+  },
+  {
+    "slug": "korea-in-november",
+    "filename": "korea-in-november.html",
+    "title": "Korea in November: Weather, What to Pack and What to Do",
+    "category": "Travel"
+  },
+  {
+    "slug": "seoul-night-views",
+    "filename": "seoul-night-views.html",
+    "title": "Best Night Views in Seoul: Where to See the City Lights",
+    "category": "Travel"
+  },
+  {
+    "slug": "korea-cherry-blossom-2027",
+    "filename": "korea-cherry-blossom-2027.html",
+    "title": "Cherry Blossom in Korea 2027: When and Where to See It",
+    "category": "Travel"
+  },
+  {
+    "slug": "korea-travel-budget",
+    "filename": "korea-travel-budget.html",
+    "title": "How Much Does a Trip to Korea Cost? A Daily Budget Guide",
+    "category": "Money"
   }
 ]

@@ -65,6 +65,10 @@ QUERIES = {
     "korean-cafe-menu-basics": "cafe Seoul",
     "kakaotalk-korea-guide": "smartphone Seoul",
     "arriving-in-korea-checklist": "Incheon International Airport",
+    "korea-travel-budget": "Seoul street market",
+    "korea-cherry-blossom-2027": "cherry blossom Seoul",
+    "seoul-night-views": "Seoul night view",
+    "korea-in-november": "Seoul autumn November",
 }
 STOP = {"a", "an", "the", "to", "in", "of", "for", "and", "how", "what", "is",
         "are", "you", "your", "do", "need", "know", "before", "using", "use",
