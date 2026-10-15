@@ -192,8 +192,8 @@
     "query": "Yeouido cherry blossoms"
   },
   "korea-winter-festivals": {
-    "none": true,
-    "query": "Hwacheon ice fishing"
+    "retry": true,
+    "query": "Sancheoneo festival"
   },
   "korea-winter-travel-guide": {
     "file": "photo-korea-winter-travel-guide.jpg",
