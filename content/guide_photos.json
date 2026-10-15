@@ -155,7 +155,8 @@
     "file": "photo-korea-travel-budget.jpg",
     "credit": "Photo: Photographer: Gabriel Wicke, CC BY-SA 3.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Seoul_market_street.jpg",
-    "query": "Seoul street market"
+    "query": "Namdaemun Market Seoul",
+    "retry": true
   },
   "korea-travel-mistakes": {
     "file": "photo-korea-travel-mistakes.jpg",
@@ -312,7 +313,8 @@
     "file": "photo-seoul-night-views.jpg",
     "credit": "Photo: Dokdo2005, CC BY-SA 3.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Seoul_Station_Night_View.JPG",
-    "query": "Seoul night view"
+    "query": "Seoul skyline night Namsan",
+    "retry": true
   },
   "seoul-subway-for-foreigners": {
     "file": "photo-seoul-subway-for-foreigners.jpg",
