@@ -64,17 +64,19 @@
     "rewritten_at": "2026-10-13T04:53:28.158458+00:00"
   },
   {
-    "title": "Cafe Onion Anguk: A Hanok Café Break in the Heart of Seoul",
+    "title": "Cafe Onion Anguk: Coffee in a Seoul hanok",
     "slug": "seoul-cafe-cafe-onion-anguk",
     "category": "Cafe",
     "region": "Seoul",
     "round": 1,
     "place_name": "Cafe Onion Anguk",
     "google_rating": 4.2,
-    "google_review_count": 4689,
+    "google_review_count": 4704,
     "naver_checked": true,
     "published_at": "2026-10-08T15:32:07.262422+00:00",
-    "image": "regional-seoul-cafe-cafe-onion-anguk.jpg"
+    "image": "regional-seoul-cafe-cafe-onion-anguk.jpg",
+    "address": "5 Gyedong-gil, Jongno District, Seoul",
+    "rewritten_at": "2026-10-15T01:19:02.861215+00:00"
   },
   {
     "title": "Myeongdong Shopping Street: A Practical Guide to Seoul’s Busy Retail District",
@@ -103,17 +105,19 @@
     "image": "regional-seoul-culture-gyeongbokgung-palace.jpg"
   },
   {
-    "title": "Four Seasons Hotel Seoul: A Refined Base for Exploring Central Seoul",
+    "title": "Four Seasons Hotel Seoul: A polished base in Jongno",
     "slug": "seoul-stay-four-seasons-hotel-seoul",
     "category": "Stay",
     "region": "Seoul",
     "round": 1,
     "place_name": "Four Seasons Hotel Seoul",
     "google_rating": 4.6,
-    "google_review_count": 7409,
+    "google_review_count": 7416,
     "naver_checked": true,
     "published_at": "2026-10-08T15:34:00.994048+00:00",
-    "image": "regional-seoul-stay-four-seasons-hotel-seoul.jpg"
+    "image": "regional-seoul-stay-four-seasons-hotel-seoul.jpg",
+    "address": "97 Saemunan-ro, Jongno District, Seoul",
+    "rewritten_at": "2026-10-15T01:19:26.578271+00:00"
   },
   {
     "title": "Ribs of Legend Haeundae: Korean Beef Ribs",
@@ -146,17 +150,19 @@
     "rewritten_at": "2026-10-13T04:54:09.462422+00:00"
   },
   {
-    "title": "Shop Lululemon at Shinsegae Centum City in Busan",
+    "title": "lululemon Busan Shinsegae Centum City: Activewear shopping",
     "slug": "busan-shopping-lululemon-busan-shinsegae-centum-city",
     "category": "Shopping",
     "region": "Busan",
     "round": 1,
     "place_name": "lululemon Busan Shinsegae Centum City",
     "google_rating": 4.4,
-    "google_review_count": 15663,
+    "google_review_count": 15662,
     "naver_checked": true,
     "published_at": "2026-10-08T15:52:38.009764+00:00",
-    "image": "regional-busan-shopping-lululemon-busan-shinsegae-centum-city.jpg"
+    "image": "regional-busan-shopping-lululemon-busan-shinsegae-centum-city.jpg",
+    "address": "Busan, Haeundae, 1 Shinsegae Centum City Mall F 15, Centum 4-ro",
+    "rewritten_at": "2026-10-15T01:19:47.039223+00:00"
   },
   {
     "title": "Haedong Yonggungsa: Busan’s Temple Above the Sea",
@@ -185,17 +191,19 @@
     "image": "regional-busan-leisure-spa-land-centum-city.jpg"
   },
   {
-    "title": "Ananti at Busan Cove: A Coastal Resort Stay in Gijang",
+    "title": "Ananti at Busan Cove: A Seaside Hotel in Gijang",
     "slug": "busan-stay-ananti-at-busan-cove",
     "category": "Stay",
     "region": "Busan",
     "round": 1,
     "place_name": "Ananti at Busan Cove",
     "google_rating": 4.6,
-    "google_review_count": 11239,
+    "google_review_count": 11242,
     "naver_checked": true,
     "published_at": "2026-10-08T15:53:47.299320+00:00",
-    "image": "regional-busan-stay-ananti-at-busan-cove.jpg"
+    "image": "regional-busan-stay-ananti-at-busan-cove.jpg",
+    "address": "268-32 Gijanghaean-ro, Gijang, Busan",
+    "rewritten_at": "2026-10-15T01:20:09.629743+00:00"
   },
   {
     "slug": "korean-food-delivery-guide",
@@ -247,17 +255,19 @@
     "rewritten_at": "2026-10-13T04:54:59.393196+00:00"
   },
   {
-    "title": "Jeju Traditional Five-Day Market: A Lively Shopping Stop in Jeju City",
+    "title": "Jeju Traditional Five-Day Market: A taste of local life",
     "slug": "jeju-shopping-jeju-traditional-five-day-market",
     "category": "Shopping",
     "region": "Jeju",
     "round": 1,
     "place_name": "Jeju Traditional Five-Day Market",
     "google_rating": 4.2,
-    "google_review_count": 6985,
+    "google_review_count": 6988,
     "naver_checked": true,
     "published_at": "2026-10-09T05:02:52.357491+00:00",
-    "image": "regional-jeju-shopping-jeju-traditional-five-day-market.jpg"
+    "image": "regional-jeju-shopping-jeju-traditional-five-day-market.jpg",
+    "address": "26 Oiljangseo-gil, Cheju, Jeju-do",
+    "rewritten_at": "2026-10-15T01:20:32.295777+00:00"
   },
   {
     "title": "Arte Museum Jeju: Step Inside a World of Light, Color, and Sound",
@@ -273,30 +283,34 @@
     "image": "regional-jeju-culture-arte-museum-jeju.jpg"
   },
   {
-    "title": "Jeju Leports Land: A Practical Guide to Jeju’s Outdoor Adventure Park",
+    "title": "Jeju Leports Land: Outdoor Kart Racing in Jeju",
     "slug": "jeju-leisure-jeju-leports-land",
     "category": "Leisure",
     "region": "Jeju",
     "round": 1,
     "place_name": "Jeju Leports Land",
     "google_rating": 4.6,
-    "google_review_count": 4600,
+    "google_review_count": 4621,
     "naver_checked": true,
     "published_at": "2026-10-09T05:03:47.688830+00:00",
-    "image": "regional-jeju-leisure-jeju-leports-land.jpg"
+    "image": "regional-jeju-leisure-jeju-leports-land.jpg",
+    "address": "Jeju-do, Cheju, 특별자치도, Jocheon-eup, Waheulsangseo 2-gil, 47 KR",
+    "rewritten_at": "2026-10-15T01:21:03.710206+00:00"
   },
   {
-    "title": "Maison GLAD Jeju: A Convenient City Base for Exploring Jeju",
+    "title": "Maison GLAD Jeju: A city hotel base",
     "slug": "jeju-stay-maison-glad-jeju",
     "category": "Stay",
     "region": "Jeju",
     "round": 1,
     "place_name": "Maison GLAD Jeju",
     "google_rating": 4.2,
-    "google_review_count": 4172,
+    "google_review_count": 4174,
     "naver_checked": true,
     "published_at": "2026-10-09T05:04:08.304325+00:00",
-    "image": "regional-jeju-stay-maison-glad-jeju.jpg"
+    "image": "regional-jeju-stay-maison-glad-jeju.jpg",
+    "address": "80 Noyeon-ro, 특별자치도, Cheju, Jeju-do",
+    "rewritten_at": "2026-10-15T01:21:28.315966+00:00"
   },
   {
     "slug": "korean-convenience-stores-compared",
@@ -423,17 +437,19 @@
     "image": "regional-jeonju-culture-jeonju-hanok-village.jpg"
   },
   {
-    "title": "Stay Beside Jeonju Hanok Village: A Practical Guide to Lahan Hotel Jeonju",
+    "title": "Lahan Hotel Jeonju: A Stay Beside Hanok Village",
     "slug": "jeonju-stay-lahan-hotel-jeonju",
     "category": "Stay",
     "region": "Jeonju",
     "round": 1,
     "place_name": "Lahan Hotel Jeonju",
     "google_rating": 4.2,
-    "google_review_count": 1407,
+    "google_review_count": 1409,
     "naver_checked": true,
     "published_at": "2026-10-11T04:34:55.917037+00:00",
-    "image": "regional-jeonju-stay-lahan-hotel-jeonju.jpg"
+    "image": "regional-jeonju-stay-lahan-hotel-jeonju.jpg",
+    "address": "85 Girin-daero, Wansan-gu, Jeonju, Jeonbuk State",
+    "rewritten_at": "2026-10-15T01:21:47.987834+00:00"
   },
   {
     "slug": "kakaotalk-korea-guide",
@@ -457,17 +473,19 @@
     "rewritten_at": "2026-10-13T04:56:50.963649+00:00"
   },
   {
-    "title": "Terarosa Coffee in Gangneung: A Roastery Worth Making Time For",
+    "title": "Terarosa Coffee: Gangneung’s Coffee Factory",
     "slug": "gangneung-cafe-terarosa-coffee",
     "category": "Cafe",
     "region": "Gangneung",
     "round": 1,
     "place_name": "Terarosa Coffee",
     "google_rating": 4.1,
-    "google_review_count": 7953,
+    "google_review_count": 7955,
     "naver_checked": true,
     "published_at": "2026-10-12T04:48:53.906861+00:00",
-    "image": "regional-gangneung-cafe-terarosa-coffee.jpg"
+    "image": "regional-gangneung-cafe-terarosa-coffee.jpg",
+    "address": "7 Hyeoncheon-gil, Gujeong-myeon, Gangneung, Gangwon-do",
+    "rewritten_at": "2026-10-15T01:22:07.019039+00:00"
   },
   {
     "title": "Ojukheon, Gangneung: A Thoughtful Visit to the Home of Shin Saimdang and Yi I",
@@ -496,20 +514,22 @@
     "image": "regional-gangneung-leisure-arte-museum-valley-gangneung.jpg"
   },
   {
-    "title": "Skybay Hotel Gyeongpo: A Sea-and-Lake Stay in Gangneung",
+    "title": "Skybay Hotel Gyeongpo: A sea-and-lake stay in Gangneung",
     "slug": "gangneung-stay-skybay-hotel-gyeongpo",
     "category": "Stay",
     "region": "Gangneung",
     "round": 1,
     "place_name": "Skybay Hotel Gyeongpo",
     "google_rating": 4.1,
-    "google_review_count": 5001,
+    "google_review_count": 5003,
     "naver_checked": true,
     "published_at": "2026-10-12T04:50:14.511500+00:00",
-    "image": "regional-gangneung-stay-skybay-hotel-gyeongpo.jpg"
+    "image": "regional-gangneung-stay-skybay-hotel-gyeongpo.jpg",
+    "address": "476 Haean-ro, Gangneung, Gangwon-do",
+    "rewritten_at": "2026-10-15T01:22:30.927659+00:00"
   },
   {
-    "title": "Songdo Central Park: A Waterfront Escape in Incheon’s Modern City",
+    "title": "Songdo Central Park: A waterfront walk in Incheon",
     "slug": "incheon-travel-songdo-central-park",
     "category": "Travel",
     "region": "Incheon",
@@ -517,11 +537,12 @@
     "place_name": "Songdo Central Park",
     "address": "160 Convensia-daero, Yeonsu-gu, Incheon",
     "google_rating": 4.5,
-    "google_review_count": 6163,
+    "google_review_count": 6166,
     "naver_checked": true,
     "published_at": "2026-10-13T00:26:33.429162+00:00",
     "image": "regional-incheon-travel-songdo-central-park.jpg",
-    "image_credit": "Photo: 송도 센트럴파크 via Google Maps"
+    "image_credit": "Photo: 송도 센트럴파크 via Google Maps",
+    "rewritten_at": "2026-10-15T01:22:55.408565+00:00"
   },
   {
     "title": "Incheon Airport Terminal 2 Food Court: A practical meal stop",
@@ -572,7 +593,7 @@
     "rewritten_at": "2026-10-13T04:57:59.632098+00:00"
   },
   {
-    "title": "A Cultural Pause at Incheon Airport: Korean Traditional Culture Experience Center (East)",
+    "title": "Korean Traditional Culture Center (East): Airport gifts",
     "slug": "incheon-culture-incheon-international-airport-terminal-2-korean-traditional-cult",
     "category": "Culture",
     "region": "Incheon",
@@ -580,14 +601,15 @@
     "place_name": "Incheon International Airport Terminal 2 Korean Traditional Culture Experience Center (East)",
     "address": "272 Gonghang-ro, Jung-gu, Incheon",
     "google_rating": 4.6,
-    "google_review_count": 4784,
+    "google_review_count": 4797,
     "naver_checked": true,
     "published_at": "2026-10-13T00:27:59.795120+00:00",
     "image": "regional-incheon-culture-incheon-international-airport-terminal-2-korean-traditional-cult.jpg",
-    "image_credit": "Photo: Chang via Google Maps"
+    "image_credit": "Photo: Chang via Google Maps",
+    "rewritten_at": "2026-10-15T01:23:21.683482+00:00"
   },
   {
-    "title": "Incheon Grand Park: A Green Escape for Walks, Gardens, and Family Days",
+    "title": "Incheon Grand Park: A Green Escape in the City",
     "slug": "incheon-leisure-incheon-grand-park",
     "category": "Leisure",
     "region": "Incheon",
@@ -595,14 +617,15 @@
     "place_name": "Incheon Grand Park",
     "address": "236 Munemi-ro, Namdong-gu, Incheon",
     "google_rating": 4.5,
-    "google_review_count": 6761,
+    "google_review_count": 6762,
     "naver_checked": true,
     "published_at": "2026-10-13T00:28:22.917428+00:00",
     "image": "regional-incheon-leisure-incheon-grand-park.jpg",
-    "image_credit": "Photo: Andy Kim via Google Maps"
+    "image_credit": "Photo: Andy Kim via Google Maps",
+    "rewritten_at": "2026-10-15T01:23:49.102747+00:00"
   },
   {
-    "title": "Nest Hotel Incheon: A Coastal Stay on Yeongjong Island",
+    "title": "Nest Hotel Incheon: A Seaside Stay on Yeongjong Island",
     "slug": "incheon-stay-nest-hotel-incheon",
     "category": "Stay",
     "region": "Incheon",
@@ -614,7 +637,8 @@
     "naver_checked": true,
     "published_at": "2026-10-13T00:28:47.180302+00:00",
     "image": "regional-incheon-stay-nest-hotel-incheon.jpg",
-    "image_credit": "Photo: 초록술 via Google Maps"
+    "image_credit": "Photo: 초록술 via Google Maps",
+    "rewritten_at": "2026-10-15T01:24:16.493935+00:00"
   },
   {
     "title": "Incheon Chinatown: A Food-and-History Guide to Korea’s Open-Port District",
