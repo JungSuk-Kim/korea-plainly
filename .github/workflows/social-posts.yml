@@ -1,7 +1,8 @@
 name: Social posts
 
 # Shares one article per run on Bluesky (scripts/post_social.py), newest first,
-# then works slowly through older articles, plus one of our YouTube videos not yet shared. Twice a day: about 10:43 and 19:43 Korea time.
+# then works slowly through older articles, plus one of our YouTube videos not yet shared;
+# the same on Instagram (Reels), the Facebook Page and Threads (scripts/post_meta.py). Twice a day: about 10:43 and 19:43 Korea time.
 on:
   schedule:
     - cron: "43 1 * * *"
@@ -14,6 +15,7 @@ on:
 
 permissions:
   contents: write
+  actions: read
 
 concurrency:
   group: site-bot
@@ -44,6 +46,27 @@ jobs:
           BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
           BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
         run: python scripts/post_social.py bluesky --videos --max 1
+
+      - name: Share a new video on Instagram, Facebook and Threads
+        if: always()
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/post_meta.py videos --max 1
+
+      - name: Share an article on Facebook and Threads
+        if: always()
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+        run: python scripts/post_meta.py articles --max 1
 
       - name: Record what was shared
         if: always()

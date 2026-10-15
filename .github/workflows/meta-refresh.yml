@@ -1,0 +1,28 @@
+name: Meta token refresh
+
+# Refreshes the 60-day Instagram and Threads tokens (scripts/meta_refresh.py) and saves the new
+# ones as repository secrets using GH_SECRETS_TOKEN. On the 1st and 15th, about 12:17 Korea time.
+on:
+  schedule:
+    - cron: "17 3 1,15 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Refresh tokens
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          GH_SECRETS_TOKEN: ${{ secrets.GH_SECRETS_TOKEN }}
+        run: |
+          pip install -q requests pynacl
+          python scripts/meta_refresh.py
