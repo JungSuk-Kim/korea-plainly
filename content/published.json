@@ -778,5 +778,56 @@
     "filename": "korea-travel-budget.html",
     "title": "How Much Does a Trip to Korea Cost? A Daily Budget Guide",
     "category": "Money"
+  },
+  {
+    "slug": "ktx-train-guide",
+    "filename": "ktx-train-guide.html",
+    "title": "How to Ride the KTX: Booking Korea's High-Speed Trains",
+    "category": "Transport"
+  },
+  {
+    "title": "Sokcho Tourist & Fishery Market: A Taste of the Coast",
+    "slug": "sokcho-shopping-sokcho-tourist-fishery-market",
+    "category": "Shopping",
+    "region": "Sokcho",
+    "round": 1,
+    "place_name": "Sokcho Tourist & Fishery Market",
+    "address": "16 Jungang-ro 147beon-gil, Sokcho-si, Gangwon-do",
+    "google_rating": 4,
+    "google_review_count": 26431,
+    "naver_checked": true,
+    "published_at": "2026-10-15T00:21:29.385608+00:00",
+    "image": "regional-sokcho-shopping-sokcho-tourist-fishery-market.jpg",
+    "image_credit": "Photo: 도사아몬드 via Google Maps"
+  },
+  {
+    "title": "Naksansa Temple: A Seaside Sanctuary Above the East Sea",
+    "slug": "sokcho-culture-naksansa-temple",
+    "category": "Culture",
+    "region": "Sokcho",
+    "round": 1,
+    "place_name": "Naksansa Temple",
+    "address": "100 Naksansa-ro, Ganghyeon-myeon, Yangyang, Gangwon-do",
+    "google_rating": 4.5,
+    "google_review_count": 10686,
+    "naver_checked": true,
+    "published_at": "2026-10-15T00:21:56.637129+00:00",
+    "image": "regional-sokcho-culture-naksansa-temple.jpg",
+    "image_credit": "Photo: John Lee via Google Maps"
+  },
+  {
+    "title": "Biseondae Peak: Seoraksan’s Scenic Rock Terrace",
+    "slug": "sokcho-leisure-biseondae-peak",
+    "category": "Leisure",
+    "region": "Sokcho",
+    "round": 1,
+    "place_name": "Biseondae Peak",
+    "address": "Seoraksan Buk-myeon, Inje-gun",
+    "google_rating": 4.6,
+    "google_review_count": 1808,
+    "naver_checked": true,
+    "published_at": "2026-10-15T00:22:21.323263+00:00",
+    "image": "regional-sokcho-leisure-biseondae-peak.jpg",
+    "image_credit": "Photo: Sun Chul Kim via Google Maps"
   }
 ]

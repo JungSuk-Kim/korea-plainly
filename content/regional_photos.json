@@ -220,10 +220,25 @@
     "credit": "Photo: 바다정원 via Google Maps",
     "source": "https://maps.google.com/maps/contrib/105659642939494417667"
   },
+  "sokcho-culture-naksansa-temple": {
+    "source_type": "wikimedia",
+    "credit": "Photo: Steve46814, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Korea-Naksansa_2110-07_Uisangdae.JPG"
+  },
   "sokcho-food-chungchosoo-mulhoe": {
     "source_type": "google",
     "credit": "Photo: 청초수물회 via Google Maps",
     "source": "https://maps.google.com/maps/contrib/104585115653001336225"
+  },
+  "sokcho-leisure-biseondae-peak": {
+    "source_type": "google",
+    "credit": "Photo: Sun Chul Kim via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/109246567885716347732"
+  },
+  "sokcho-shopping-sokcho-tourist-fishery-market": {
+    "source_type": "wikimedia",
+    "credit": "Photo: Christophe95, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Fish_market_in_Sokcho.jpg"
   },
   "sokcho-travel-seoraksan-national-park": {
     "source_type": "google",

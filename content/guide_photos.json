@@ -275,6 +275,10 @@
     "source": "",
     "query": "street food Myeongdong Seoul"
   },
+  "ktx-train-guide": {
+    "none": true,
+    "query": "Ride KTX Booking Korea"
+  },
   "seollal-travel-tips": {
     "file": "photo-seollal-travel-tips.jpg",
     "credit": "Photo: Republic of Korea from Seoul, Republic of Korea, CC BY-SA 2.0, via Wikimedia Commons",

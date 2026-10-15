@@ -142,5 +142,5 @@
     "note": "3 articles a day: the next 3 categories for the current region; the region changes once all 8 are done (3 days)."
   },
   "categories_per_day": 3,
-  "current_category_offset": 3
+  "current_category_offset": 6
 }
