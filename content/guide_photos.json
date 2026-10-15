@@ -277,7 +277,8 @@
   },
   "ktx-train-guide": {
     "none": true,
-    "query": "Ride KTX Booking Korea"
+    "query": "KTX train",
+    "retry": true
   },
   "seollal-travel-tips": {
     "file": "photo-seollal-travel-tips.jpg",
