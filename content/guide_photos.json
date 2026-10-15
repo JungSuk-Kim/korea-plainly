@@ -113,6 +113,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:Incheon_International_Airport_Terminal_1_Arrival.jpg",
     "query": "Incheon International Airport terminal"
   },
+  "korea-festivals": {
+    "none": true,
+    "query": "Jinju Namgang Lantern Festival"
+  },
   "korea-in-december": {
     "file": "photo-korea-in-december.jpg",
     "credit": "Photo: Bohyunlee, CC BY-SA 3.0, via Wikimedia Commons",
