@@ -321,8 +321,8 @@
     "query": "KTX train"
   },
   "learn-hangul": {
-    "none": true,
-    "query": "Hangul Korean alphabet sign"
+    "retry": true,
+    "query": "Hunminjeongeum"
   },
   "seollal-travel-tips": {
     "file": "photo-seollal-travel-tips.jpg",
