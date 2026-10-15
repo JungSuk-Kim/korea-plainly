@@ -321,7 +321,7 @@
     "query": "KTX train"
   },
   "learn-hangul": {
-    "retry": true,
+    "none": true,
     "query": "Hunminjeongeum"
   },
   "seollal-travel-tips": {
