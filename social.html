@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Follow Korea Plainly</title><meta name="description" content="Follow Korea Plainly for practical Korea guides and local recommendations."><link rel="canonical" href="https://korea-plainly.com/social.html"><link rel="stylesheet" href="style.css?v=20261009-7">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Follow Korea Plainly</title><meta name="description" content="Follow Korea Plainly for practical Korea guides and local recommendations."><link rel="canonical" href="https://korea-plainly.com/social.html"><link rel="stylesheet" href="style.css?v=20261015-1">
 <meta property="og:title" content="Follow Korea Plainly">
 <meta property="og:description" content="Follow Korea Plainly for practical Korea guides and local recommendations.">
 <meta property="og:type" content="website">
@@ -48,9 +48,12 @@
     drop.addEventListener('mouseleave',()=>{if(!mobile())drop.classList.remove('open')});
     const parent=drop.querySelector('.nav-parent');
     if(parent) parent.addEventListener('click',function(e){
-      if(mobile() && !drop.classList.contains('open')){
-        e.preventDefault(); drops.forEach(d=>d.classList.remove('open')); drop.classList.add('open');
-      }
+      if(!mobile()) return;
+      e.preventDefault();
+      const was=drop.classList.contains('open');
+      drops.forEach(d=>d.classList.remove('open'));
+      if(!was) drop.classList.add('open'); else parent.blur();
+      parent.setAttribute('aria-expanded', was ? 'false' : 'true');
     });
   });
   document.addEventListener('click',e=>{

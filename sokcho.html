@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css?v=20261009-7">
+<link rel="stylesheet" href="style.css?v=20261015-1">
 <title>Sokcho Travel, Food, Shopping & Local Guides | Korea Plainly</title>
 <meta name="description" content="A small east coast port town at the foot of Seoraksan National Park, with fresh seafood, a lively market and one of Korea&#x27;s most loved mountain hikes.">
 <link rel="canonical" href="https://korea-plainly.com/sokcho.html">
@@ -81,9 +81,12 @@ h1{font-size:clamp(44px,8vw,82px);line-height:1;margin:12px 0}.intro{max-width:7
     drop.addEventListener('mouseleave',()=>{if(!mobile())drop.classList.remove('open')});
     const parent=drop.querySelector('.nav-parent');
     if(parent) parent.addEventListener('click',function(e){
-      if(mobile() && !drop.classList.contains('open')){
-        e.preventDefault(); drops.forEach(d=>d.classList.remove('open')); drop.classList.add('open');
-      }
+      if(!mobile()) return;
+      e.preventDefault();
+      const was=drop.classList.contains('open');
+      drops.forEach(d=>d.classList.remove('open'));
+      if(!was) drop.classList.add('open'); else parent.blur();
+      parent.setAttribute('aria-expanded', was ? 'false' : 'true');
     });
   });
   document.addEventListener('click',e=>{

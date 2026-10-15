@@ -52,9 +52,12 @@ a{color:#b73535;font-weight:700}
     drop.addEventListener('mouseleave',()=>{if(!mobile())drop.classList.remove('open')});
     const parent=drop.querySelector('.nav-parent');
     if(parent) parent.addEventListener('click',function(e){
-      if(mobile() && !drop.classList.contains('open')){
-        e.preventDefault(); drops.forEach(d=>d.classList.remove('open')); drop.classList.add('open');
-      }
+      if(!mobile()) return;
+      e.preventDefault();
+      const was=drop.classList.contains('open');
+      drops.forEach(d=>d.classList.remove('open'));
+      if(!was) drop.classList.add('open'); else parent.blur();
+      parent.setAttribute('aria-expanded', was ? 'false' : 'true');
     });
   });
   document.addEventListener('click',e=>{

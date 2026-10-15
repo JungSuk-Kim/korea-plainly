@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20261009-7">
+  <link rel="stylesheet" href="style.css?v=20261015-1">
 
 <meta property="og:title" content="Privacy Policy — Korea Plainly">
 <meta property="og:description" content="Privacy Policy for Korea Plainly.">
@@ -183,9 +183,12 @@ if (menu && nav) {
     drop.addEventListener('mouseleave',()=>{if(!mobile())drop.classList.remove('open')});
     const parent=drop.querySelector('.nav-parent');
     if(parent) parent.addEventListener('click',function(e){
-      if(mobile() && !drop.classList.contains('open')){
-        e.preventDefault(); drops.forEach(d=>d.classList.remove('open')); drop.classList.add('open');
-      }
+      if(!mobile()) return;
+      e.preventDefault();
+      const was=drop.classList.contains('open');
+      drops.forEach(d=>d.classList.remove('open'));
+      if(!was) drop.classList.add('open'); else parent.blur();
+      parent.setAttribute('aria-expanded', was ? 'false' : 'true');
     });
   });
   document.addEventListener('click',e=>{

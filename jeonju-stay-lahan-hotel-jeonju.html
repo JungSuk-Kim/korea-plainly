@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css?v=20261009-7">
+<link rel="stylesheet" href="style.css?v=20261015-1">
 <title>Lahan Hotel Jeonju: A Stay Beside Hanok Village | Korea Plainly</title>
 <meta name="description" content="Lahan Hotel Jeonju is a full-service hotel beside Jeonju Hanok Village, making it a handy base for exploring the city’s historic heart.">
 <link rel="canonical" href="https://korea-plainly.com/jeonju-stay-lahan-hotel-jeonju.html">
@@ -125,9 +125,12 @@ a{color:#b73535}
     drop.addEventListener('mouseleave',()=>{if(!mobile())drop.classList.remove('open')});
     const parent=drop.querySelector('.nav-parent');
     if(parent) parent.addEventListener('click',function(e){
-      if(mobile() && !drop.classList.contains('open')){
-        e.preventDefault(); drops.forEach(d=>d.classList.remove('open')); drop.classList.add('open');
-      }
+      if(!mobile()) return;
+      e.preventDefault();
+      const was=drop.classList.contains('open');
+      drops.forEach(d=>d.classList.remove('open'));
+      if(!was) drop.classList.add('open'); else parent.blur();
+      parent.setAttribute('aria-expanded', was ? 'false' : 'true');
     });
   });
   document.addEventListener('click',e=>{

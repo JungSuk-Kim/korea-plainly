@@ -10,7 +10,7 @@
   content="width=device-width, initial-scale=1.0"
 >
 
-<link rel="stylesheet" href="style.css?v=20261009-7">
+<link rel="stylesheet" href="style.css?v=20261015-1">
 <title>
 One Day in Busan: A Coastal Itinerary | Korea Plainly
 </title>
@@ -387,9 +387,12 @@ Korea, Made Easy for Everyone.
     drop.addEventListener('mouseleave',()=>{if(!mobile())drop.classList.remove('open')});
     const parent=drop.querySelector('.nav-parent');
     if(parent) parent.addEventListener('click',function(e){
-      if(mobile() && !drop.classList.contains('open')){
-        e.preventDefault(); drops.forEach(d=>d.classList.remove('open')); drop.classList.add('open');
-      }
+      if(!mobile()) return;
+      e.preventDefault();
+      const was=drop.classList.contains('open');
+      drops.forEach(d=>d.classList.remove('open'));
+      if(!was) drop.classList.add('open'); else parent.blur();
+      parent.setAttribute('aria-expanded', was ? 'false' : 'true');
     });
   });
   document.addEventListener('click',e=>{

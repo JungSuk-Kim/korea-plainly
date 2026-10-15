@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css?v=20261009-7">
+<link rel="stylesheet" href="style.css?v=20261015-1">
 <title>lululemon Busan Shinsegae Centum City: Activewear shopping</title>
 <meta name="description" content="This lululemon store sells athletic clothing and accessories inside Shinsegae Centum City, making it an easy stop for activewear while exploring Busan’s">
 <link rel="canonical" href="https://korea-plainly.com/busan-shopping-lululemon-busan-shinsegae-centum-city.html">
@@ -122,9 +122,12 @@ a{color:#b73535}
     drop.addEventListener('mouseleave',()=>{if(!mobile())drop.classList.remove('open')});
     const parent=drop.querySelector('.nav-parent');
     if(parent) parent.addEventListener('click',function(e){
-      if(mobile() && !drop.classList.contains('open')){
-        e.preventDefault(); drops.forEach(d=>d.classList.remove('open')); drop.classList.add('open');
-      }
+      if(!mobile()) return;
+      e.preventDefault();
+      const was=drop.classList.contains('open');
+      drops.forEach(d=>d.classList.remove('open'));
+      if(!was) drop.classList.add('open'); else parent.blur();
+      parent.setAttribute('aria-expanded', was ? 'false' : 'true');
     });
   });
   document.addEventListener('click',e=>{

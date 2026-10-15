@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Explore Korea by region with practical travel, food, cafe, shopping, culture, leisure and stay guides."><link rel="canonical" href="https://korea-plainly.com/regions.html"><title>Regions of Korea | Korea Plainly</title><link rel="stylesheet" href="style.css?v=20261009-7"><style>.regions-hero{padding:48px 0 30px}.regions-hero h1{font-size:clamp(46px,8vw,82px);line-height:1;margin:8px 0 18px}.regions-hero p{max-width:700px;font-size:18px;line-height:1.7}.back-btn{display:inline-block;margin-bottom:24px;color:#666;font-size:14px}.regions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:25px 0 90px}.regions-card img{display:block;width:calc(100% + 56px);margin:-28px -28px 18px;aspect-ratio:16/9;object-fit:cover}.regions-card{background:var(--card);border:1px solid var(--line);padding:28px;overflow:hidden;min-height:190px}.regions-card a{display:block;height:100%}.regions-card h2{font-size:30px;margin:0 0 10px}.regions-card p{line-height:1.65;color:var(--muted)}@media(max-width:800px){.regions-grid{grid-template-columns:1fr}}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-F508WWT8G9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F508WWT8G9');</script>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Explore Korea by region with practical travel, food, cafe, shopping, culture, leisure and stay guides."><link rel="canonical" href="https://korea-plainly.com/regions.html"><title>Regions of Korea | Korea Plainly</title><link rel="stylesheet" href="style.css?v=20261015-1"><style>.regions-hero{padding:48px 0 30px}.regions-hero h1{font-size:clamp(46px,8vw,82px);line-height:1;margin:8px 0 18px}.regions-hero p{max-width:700px;font-size:18px;line-height:1.7}.back-btn{display:inline-block;margin-bottom:24px;color:#666;font-size:14px}.regions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:25px 0 90px}.regions-card img{display:block;width:calc(100% + 56px);margin:-28px -28px 18px;aspect-ratio:16/9;object-fit:cover}.regions-card{background:var(--card);border:1px solid var(--line);padding:28px;overflow:hidden;min-height:190px}.regions-card a{display:block;height:100%}.regions-card h2{font-size:30px;margin:0 0 10px}.regions-card p{line-height:1.65;color:var(--muted)}@media(max-width:800px){.regions-grid{grid-template-columns:1fr}}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-F508WWT8G9"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F508WWT8G9');</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7379462117232471" crossorigin="anonymous"></script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Regions of Korea | Korea Plainly">
@@ -39,9 +39,12 @@
     drop.addEventListener('mouseleave',()=>{if(!mobile())drop.classList.remove('open')});
     const parent=drop.querySelector('.nav-parent');
     if(parent) parent.addEventListener('click',function(e){
-      if(mobile() && !drop.classList.contains('open')){
-        e.preventDefault(); drops.forEach(d=>d.classList.remove('open')); drop.classList.add('open');
-      }
+      if(!mobile()) return;
+      e.preventDefault();
+      const was=drop.classList.contains('open');
+      drops.forEach(d=>d.classList.remove('open'));
+      if(!was) drop.classList.add('open'); else parent.blur();
+      parent.setAttribute('aria-expanded', was ? 'false' : 'true');
     });
   });
   document.addEventListener('click',e=>{

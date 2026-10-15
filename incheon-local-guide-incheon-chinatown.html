@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css?v=20261009-7">
+<link rel="stylesheet" href="style.css?v=20261015-1">
 <title>Incheon Chinatown: A Food-and-History Guide to Korea’s Open-Port District</title>
 <meta name="description" content="At a glance Where: 12-17 Chinatown-ro 26beon-gil, Jung-gu, Incheon Best for: Chinese-Korean food, historic streets, and an easy pairing with Incheon’s old ">
 <link rel="canonical" href="https://korea-plainly.com/incheon-local-guide-incheon-chinatown.html">
@@ -157,9 +157,12 @@ a{color:#b73535}
     drop.addEventListener('mouseleave',()=>{if(!mobile())drop.classList.remove('open')});
     const parent=drop.querySelector('.nav-parent');
     if(parent) parent.addEventListener('click',function(e){
-      if(mobile() && !drop.classList.contains('open')){
-        e.preventDefault(); drops.forEach(d=>d.classList.remove('open')); drop.classList.add('open');
-      }
+      if(!mobile()) return;
+      e.preventDefault();
+      const was=drop.classList.contains('open');
+      drops.forEach(d=>d.classList.remove('open'));
+      if(!was) drop.classList.add('open'); else parent.blur();
+      parent.setAttribute('aria-expanded', was ? 'false' : 'true');
     });
   });
   document.addEventListener('click',e=>{

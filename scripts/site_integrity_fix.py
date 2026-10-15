@@ -3,7 +3,7 @@ from pathlib import Path
 import re
 
 ROOT=Path(__file__).resolve().parents[1]
-CSS_VERSION="20261009-7"
+CSS_VERSION="20261015-1"
 REGIONS=[("seoul","Seoul"),("busan","Busan"),("jeju","Jeju")]
 REGION_CATS=[("travel","Travel"),("food","Food"),("cafe","Cafe"),("shopping","Shopping"),
              ("culture","Culture"),("leisure","Leisure"),("stay","Stay"),("local-guide","Local Guide")]
@@ -12,7 +12,7 @@ GUIDES=[("Travel Basics","travel"),("Transport","transport"),("Money","money"),
         ("Language","language"),("Culture","culture")]
 
 NAV_CSS=r"""
-/* Korea Plainly stable navigation v5 */
+/* Korea Plainly stable navigation v6 */
 .nav-drop{position:relative;display:flex;align-items:center}
 .nav-parent{font-size:12px;color:#62635f;display:flex;align-items:center;gap:5px;padding:27px 0;white-space:nowrap;cursor:pointer}
 .nav-chevron{font-size:13px;line-height:1;transition:transform .18s ease}
@@ -32,7 +32,10 @@ header nav>a,header .nav-parent{font-size:12px!important;font-weight:400!importa
  .nav-drop{display:block;width:100%}
  .nav-parent{padding:11px 6px;font-size:13px;justify-content:space-between}
  .nav-menu{position:static;transform:none!important;opacity:1;visibility:visible;pointer-events:auto;display:none;min-width:0;padding:4px 0 8px;border:0;box-shadow:none;background:transparent}
- .nav-drop.open>.nav-menu,.nav-drop:focus-within>.nav-menu{display:block}
+ .nav-drop.open>.nav-menu{display:block!important}
+ .nav-drop:not(.open) .nav-menu{display:none!important}
+ .nav-drop.open>.nav-parent .nav-chevron{transform:rotate(180deg)}
+ .nav-drop:not(.open)>.nav-parent .nav-chevron{transform:none}
  .nav-menu a{padding:8px 12px!important;font-size:12px!important}
 }
 """
@@ -45,9 +48,12 @@ NAV_JS=r"""<script id="kp-nav-js">
     drop.addEventListener('mouseleave',()=>{if(!mobile())drop.classList.remove('open')});
     const parent=drop.querySelector('.nav-parent');
     if(parent) parent.addEventListener('click',function(e){
-      if(mobile() && !drop.classList.contains('open')){
-        e.preventDefault(); drops.forEach(d=>d.classList.remove('open')); drop.classList.add('open');
-      }
+      if(!mobile()) return;
+      e.preventDefault();
+      const was=drop.classList.contains('open');
+      drops.forEach(d=>d.classList.remove('open'));
+      if(!was) drop.classList.add('open'); else parent.blur();
+      parent.setAttribute('aria-expanded', was ? 'false' : 'true');
     });
   });
   document.addEventListener('click',e=>{
@@ -81,7 +87,7 @@ def patch_css():
     s=p.read_text(encoding="utf-8",errors="ignore")
     for name in ["seoul","street","food","store"]:
         s=s.replace(f'images/{name}.jpg',f'{name}.jpg')
-    s=re.sub(r'\n/\* Korea Plainly (?:navigation - stable v3|stable navigation v3|stable navigation v4|stable navigation v5) \*/.*?(?=\n/\*|\Z)','',s,flags=re.S)
+    s=re.sub(r'\n/\* Korea Plainly (?:navigation - stable v3|stable navigation v3|stable navigation v4|stable navigation v5|stable navigation v6) \*/.*?(?=\n/\*|\Z)','',s,flags=re.S)
     s = s.rstrip() + "\n\n" + NAV_CSS.strip() + "\n"  # no blank lines piling up
     p.write_text(s,encoding="utf-8")
 

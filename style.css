@@ -77,7 +77,7 @@ main>.related-guides{width:min(1180px,calc(100% - 44px));margin:0 auto 70px;padd
   .nav-menu a{padding:8px 12px!important;font-size:12px!important}
 }
 
-/* Korea Plainly stable navigation v5 */
+/* Korea Plainly stable navigation v6 */
 .nav-drop{position:relative;display:flex;align-items:center}
 .nav-parent{font-size:12px;color:#62635f;display:flex;align-items:center;gap:5px;padding:27px 0;white-space:nowrap;cursor:pointer}
 .nav-chevron{font-size:13px;line-height:1;transition:transform .18s ease}
@@ -97,6 +97,9 @@ header nav>a,header .nav-parent{font-size:12px!important;font-weight:400!importa
  .nav-drop{display:block;width:100%}
  .nav-parent{padding:11px 6px;font-size:13px;justify-content:space-between}
  .nav-menu{position:static;transform:none!important;opacity:1;visibility:visible;pointer-events:auto;display:none;min-width:0;padding:4px 0 8px;border:0;box-shadow:none;background:transparent}
- .nav-drop.open>.nav-menu,.nav-drop:focus-within>.nav-menu{display:block}
+ .nav-drop.open>.nav-menu{display:block!important}
+ .nav-drop:not(.open) .nav-menu{display:none!important}
+ .nav-drop.open>.nav-parent .nav-chevron{transform:rotate(180deg)}
+ .nav-drop:not(.open)>.nav-parent .nav-chevron{transform:none}
  .nav-menu a{padding:8px 12px!important;font-size:12px!important}
 }
