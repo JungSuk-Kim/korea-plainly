@@ -22,7 +22,8 @@
   "busan-shopping-lululemon-busan-shinsegae-centum-city": {
     "source_type": "google",
     "credit": "Photo: HY Yun via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/113178048556710064614"
+    "source": "https://maps.google.com/maps/contrib/113178048556710064614",
+    "retry": true
   },
   "busan-stay-ananti-at-busan-cove": {
     "source_type": "google",

@@ -47,7 +47,7 @@ def distinctive_words(name):
     return [w for w in re.findall(r"[A-Za-z]+", name) if len(w) > 3 and w.lower() not in GENERIC]
 
 
-def google_photo(place, region):
+def google_photo(place, region, reject=()):
     import requests
     r = requests.post("https://places.googleapis.com/v1/places:searchText", timeout=30, headers={
         "Content-Type": "application/json", "X-Goog-Api-Key": GOOGLE_KEY,
@@ -56,6 +56,8 @@ def google_photo(place, region):
     r.raise_for_status()
     places = r.json().get("places") or []
     photos = (places[0].get("photos") or []) if places else []
+    # skip photos by authors already rejected with "retry": true
+    photos = [ph for ph in photos if not any(a.get("uri", "") in reject for a in ph.get("authorAttributions") or [])]
     if not photos:
         return None
     ph = photos[0]
@@ -107,7 +109,7 @@ def main():
                 found = search_commons(f"{place} {region}", reject + sorted(sources_in_use(slug)), require=distinctive_words(place) or [place], avoid=avoid)
                 kind = "wikimedia"
                 if not found and GOOGLE_KEY:
-                    found, kind = google_photo(place, region), "google"
+                    found, kind = google_photo(place, region, set(reject)), "google"
                 elif not found and p.get("image_credit") and not entry.get("source_type"):
                     # untouched new article: its file is still the Google photo it was published with
                     found, kind = {"credit": p["image_credit"], "source": "", "url": None}, "google"
