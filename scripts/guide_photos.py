@@ -41,12 +41,12 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 # Hand-picked search words for the guides that exist today. New guides fall
 # back to words from their title.
 QUERIES = {
-    "korea-festivals": "Jinju Namgang Lantern Festival",
+    "korea-festivals": "Jinju lantern festival",
     "which-korean-city-quiz": "Busan Gwangalli Bridge night",
     "korea-trip-cost-calculator": "Gwangjang Market Seoul",
     "korea-packing-list": "Incheon Airport departure hall",
     "learn-hangul": "King Sejong statue Gwanghwamun",
-    "start-here": "Seoul skyline Namsan",
+    "start-here": "Bukchon Hanok Village",
     "seoul-5-day-itinerary": "Han River Seoul",
     "korea-10-day-itinerary": "Jeonju Hanok Village",
     "korea-7-day-itinerary": "Gyeongbokgung Palace Seoul",

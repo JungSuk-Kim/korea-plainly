@@ -114,8 +114,8 @@
     "query": "Incheon International Airport terminal"
   },
   "korea-festivals": {
-    "none": true,
-    "query": "Jinju Namgang Lantern Festival"
+    "retry": true,
+    "query": "Jinju lantern festival"
   },
   "korea-in-december": {
     "file": "photo-korea-in-december.jpg",
@@ -406,7 +406,8 @@
     "file": "photo-start-here.jpg",
     "credit": "Photo: Matt Kieffer from London, United Kingdom, CC BY-SA 2.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Seoul_city_skyline_at_night_from_Namsan_Mountain_(49175035266).jpg",
-    "query": "Seoul skyline Namsan"
+    "query": "Bukchon Hanok Village",
+    "retry": true
   },
   "which-korean-city-quiz": {
     "file": "photo-which-korean-city-quiz.jpg",
