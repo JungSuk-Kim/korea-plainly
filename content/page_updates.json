@@ -196,8 +196,8 @@
     "updated": null
   },
   "korea-7-day-itinerary.html": {
-    "hash": "5a06667a002e",
-    "updated": null
+    "hash": "bba56d2b1fe4",
+    "updated": "2026-10-15"
   },
   "korea-autumn-foliage-2026.html": {
     "hash": "3003687371dd",
@@ -227,6 +227,10 @@
     "hash": "08a358436f43",
     "updated": "2026-10-15"
   },
+  "korea-packing-list.html": {
+    "hash": "1207019ebbfe",
+    "updated": null
+  },
   "korea-public-transport-transfers.html": {
     "hash": "cc43ed94f485",
     "updated": null
@@ -248,12 +252,16 @@
     "updated": null
   },
   "korea-travel-budget.html": {
-    "hash": "540f9c9587de",
-    "updated": null
+    "hash": "9ba00f74023c",
+    "updated": "2026-10-15"
   },
   "korea-travel-mistakes.html": {
     "hash": "0fcc19b63eb8",
     "updated": "2026-10-13"
+  },
+  "korea-trip-cost-calculator.html": {
+    "hash": "11413b3816cc",
+    "updated": null
   },
   "korea-weather-by-season.html": {
     "hash": "7be3ebc771ef",
@@ -264,7 +272,7 @@
     "updated": null
   },
   "korea-winter-travel-guide.html": {
-    "hash": "d1634948c1df",
+    "hash": "31ee2448f17e",
     "updated": "2026-10-15"
   },
   "korean-atm-guide.html": {
@@ -420,11 +428,15 @@
     "updated": null
   },
   "start-here.html": {
-    "hash": "39c5f58b06a9",
+    "hash": "5e7e3e59df19",
     "updated": "2026-10-15"
   },
   "useful-korean-phrases.html": {
     "hash": "a6596e6b67d6",
     "updated": "2026-10-14"
+  },
+  "which-korean-city-quiz.html": {
+    "hash": "f106e27c57b6",
+    "updated": null
   }
 }

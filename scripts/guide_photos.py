@@ -41,6 +41,9 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 # Hand-picked search words for the guides that exist today. New guides fall
 # back to words from their title.
 QUERIES = {
+    "which-korean-city-quiz": "Busan Gwangalli Bridge night",
+    "korea-trip-cost-calculator": "Korean won banknotes",
+    "korea-packing-list": "suitcase travel packing",
     "learn-hangul": "King Sejong statue Gwanghwamun",
     "start-here": "Seoul skyline Namsan",
     "seoul-5-day-itinerary": "Han River Seoul",

@@ -907,5 +907,23 @@
     "filename": "learn-hangul.html",
     "title": "Learn to Read Hangul in an Hour: Korean Alphabet for Travellers",
     "category": "Language"
+  },
+  {
+    "slug": "korea-packing-list",
+    "filename": "korea-packing-list.html",
+    "title": "Korea Packing List: What to Bring in Every Season (Interactive Checklist)",
+    "category": "Travel"
+  },
+  {
+    "slug": "korea-trip-cost-calculator",
+    "filename": "korea-trip-cost-calculator.html",
+    "title": "Korea Trip Cost Calculator: How Much Will Your Trip Cost?",
+    "category": "Money"
+  },
+  {
+    "slug": "which-korean-city-quiz",
+    "filename": "which-korean-city-quiz.html",
+    "title": "Which Korean City Suits You? Take the Quiz",
+    "category": "Travel"
   }
 ]
