@@ -141,8 +141,8 @@
     "query": "Seoul autumn November"
   },
   "korea-packing-list": {
-    "none": true,
-    "query": "suitcase travel packing"
+    "retry": true,
+    "query": "luggage suitcase"
   },
   "korea-public-transport-transfers": {
     "file": "photo-korea-public-transport-transfers.jpg",
@@ -207,8 +207,8 @@
     ]
   },
   "korea-trip-cost-calculator": {
-    "none": true,
-    "query": "Korean won banknotes"
+    "retry": true,
+    "query": "Gwangjang Market Seoul"
   },
   "korea-weather-by-season": {
     "file": "photo-korea-weather-by-season.jpg",
