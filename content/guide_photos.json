@@ -192,7 +192,7 @@
     "query": "Yeouido cherry blossoms"
   },
   "korea-winter-festivals": {
-    "retry": true,
+    "none": true,
     "query": "Sancheoneo festival"
   },
   "korea-winter-travel-guide": {
