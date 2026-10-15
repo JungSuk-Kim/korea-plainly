@@ -26,6 +26,7 @@ STEPS = [
     "embed_videos.py",                # our YouTube Shorts inside their articles (content/videos.json)
     "site_mascot.py",                 # Kkachi the magpie: article sign-off, About section, 404
     "video_hub.py",                   # videos.html and the "Watch" section on the home page
+    "home_tools.py",                  # "Try it" section on the home page (games, calculator, quiz, checklist)
     "optimize_images.py",             # shrink oversized photos
     "responsive_images.py",           # small WebP copies + srcset so phones download less
     "seo_basics.py",                  # favicon, og tags, noindex for thin hubs

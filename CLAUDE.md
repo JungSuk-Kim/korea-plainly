@@ -56,6 +56,8 @@ Kkachi) → `youtube_upload.py` (private) → `youtube_shorts.py record-long`; t
 article once public (a Short for the same article moves to the end). Kkachi the magpie mascot lives in `scripts/mascot/`;
 `site_mascot.py` puts Kkachi on the site (article sign-off, About, 404) and `video_hub.py` builds videos.html and the
 home page "Watch" section from `content/videos.json`.
+Interactive pages (learn-hangul, packing list, cost calculator, city quiz) keep their logic in root `*.js` files;
+`home_tools.py` lists them in the home page "Try it" section.
 Every description starts with the link to the free guide (`scripts/video_text.py`); to retitle videos already on
 YouTube, list them in `content/shorts/retitle.json` and run the "YouTube titles" workflow (`youtube_meta.py`).
 
