@@ -108,8 +108,11 @@
     "query": "Seoul Lantern Festival Cheonggyecheon"
   },
   "korea-in-february": {
-    "retry": true,
-    "query": "Seollal Korea traditional"
+    "file": "photo-korea-in-february.jpg",
+    "credit": "Photo: Korea.net, CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:2018_PyeongChang_Winter_Olympic_001.jpg",
+    "query": "Seollal Korea traditional",
+    "retry": true
   },
   "korea-in-january": {
     "file": "photo-korea-in-january.jpg",
@@ -192,8 +195,8 @@
     "query": "Yeouido cherry blossoms"
   },
   "korea-winter-festivals": {
-    "none": true,
-    "query": "Sancheoneo festival"
+    "retry": true,
+    "query": "Pyeongchang trout festival"
   },
   "korea-winter-travel-guide": {
     "file": "photo-korea-winter-travel-guide.jpg",
