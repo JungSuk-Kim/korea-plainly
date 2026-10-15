@@ -853,5 +853,29 @@
     "published_at": "2026-10-15T00:22:21.323263+00:00",
     "image": "regional-sokcho-leisure-biseondae-peak.jpg",
     "image_credit": "Photo: Sun Chul Kim via Google Maps"
+  },
+  {
+    "slug": "korea-in-december",
+    "filename": "korea-in-december.html",
+    "title": "Korea in December: Weather, What to Pack and What to Do",
+    "category": "Travel"
+  },
+  {
+    "slug": "korea-in-january",
+    "filename": "korea-in-january.html",
+    "title": "Korea in January: Weather, What to Pack and What to Do",
+    "category": "Travel"
+  },
+  {
+    "slug": "korea-in-february",
+    "filename": "korea-in-february.html",
+    "title": "Korea in February: Weather, Seollal and What to Do",
+    "category": "Travel"
+  },
+  {
+    "slug": "korea-winter-festivals",
+    "filename": "korea-winter-festivals.html",
+    "title": "Korea's Winter Festivals: Ice Fishing, Snow and Lights",
+    "category": "Travel"
   }
 ]

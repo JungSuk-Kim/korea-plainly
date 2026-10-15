@@ -40,8 +40,8 @@
     "updated": "2026-10-15"
   },
   "christmas-new-year-seoul.html": {
-    "hash": "5bc3713624ed",
-    "updated": null
+    "hash": "1fab7d9ac0e5",
+    "updated": "2026-10-15"
   },
   "day-trips-from-seoul.html": {
     "hash": "e2543456b04d",
@@ -203,9 +203,21 @@
     "hash": "ea1dffca1a20",
     "updated": null
   },
-  "korea-in-november.html": {
-    "hash": "8c3072e9024e",
+  "korea-in-december.html": {
+    "hash": "4f3573f2e533",
     "updated": null
+  },
+  "korea-in-february.html": {
+    "hash": "2eabd675da7e",
+    "updated": null
+  },
+  "korea-in-january.html": {
+    "hash": "acdbc111e67f",
+    "updated": null
+  },
+  "korea-in-november.html": {
+    "hash": "08a358436f43",
+    "updated": "2026-10-15"
   },
   "korea-public-transport-transfers.html": {
     "hash": "cc43ed94f485",
@@ -216,8 +228,8 @@
     "updated": null
   },
   "korea-ski-resorts-guide.html": {
-    "hash": "b6361ae69d62",
-    "updated": null
+    "hash": "23324aafbba8",
+    "updated": "2026-10-15"
   },
   "korea-tax-refund-guide.html": {
     "hash": "d98111dd313c",
@@ -236,12 +248,16 @@
     "updated": "2026-10-13"
   },
   "korea-weather-by-season.html": {
-    "hash": "86f3478c5d25",
+    "hash": "7be3ebc771ef",
     "updated": "2026-10-15"
   },
-  "korea-winter-travel-guide.html": {
-    "hash": "fa9dae0814e2",
+  "korea-winter-festivals.html": {
+    "hash": "37178e5364e6",
     "updated": null
+  },
+  "korea-winter-travel-guide.html": {
+    "hash": "d1634948c1df",
+    "updated": "2026-10-15"
   },
   "korean-atm-guide.html": {
     "hash": "17e0e7eef41a",
@@ -304,8 +320,8 @@
     "updated": "2026-10-13"
   },
   "seollal-travel-tips.html": {
-    "hash": "7625c611b172",
-    "updated": null
+    "hash": "1ce6b2adfe49",
+    "updated": "2026-10-15"
   },
   "seoul-3-day-itinerary.html": {
     "hash": "7fda65c49e54",
