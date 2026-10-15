@@ -41,6 +41,9 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 # Hand-picked search words for the guides that exist today. New guides fall
 # back to words from their title.
 QUERIES = {
+    "seoul-5-day-itinerary": "Han River Seoul",
+    "korea-10-day-itinerary": "Jeonju Hanok Village",
+    "korea-7-day-itinerary": "Gyeongbokgung Palace Seoul",
     "korea-winter-festivals": "Pyeongchang trout festival",
     "korea-in-february": "Seollal Korea traditional",
     "korea-in-january": "Gyeongbokgung snow winter",

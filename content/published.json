@@ -877,5 +877,23 @@
     "filename": "korea-winter-festivals.html",
     "title": "Korea's Winter Festivals: Ice Fishing, Snow and Lights",
     "category": "Travel"
+  },
+  {
+    "slug": "korea-7-day-itinerary",
+    "filename": "korea-7-day-itinerary.html",
+    "title": "7 Days in Korea: A First-Timer's Itinerary (Seoul, Gyeongju, Busan)",
+    "category": "Travel"
+  },
+  {
+    "slug": "korea-10-day-itinerary",
+    "filename": "korea-10-day-itinerary.html",
+    "title": "10 Days to 2 Weeks in Korea: An Easy Itinerary",
+    "category": "Travel"
+  },
+  {
+    "slug": "seoul-5-day-itinerary",
+    "filename": "seoul-5-day-itinerary.html",
+    "title": "5 Days in Seoul: A Relaxed Itinerary for First-Timers",
+    "category": "Travel"
   }
 ]

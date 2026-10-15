@@ -44,8 +44,8 @@
     "updated": "2026-10-15"
   },
   "day-trips-from-seoul.html": {
-    "hash": "e2543456b04d",
-    "updated": null
+    "hash": "5691e2a002e0",
+    "updated": "2026-10-15"
   },
   "first-evening-seoul.html": {
     "hash": "e915c958fccd",
@@ -72,8 +72,8 @@
     "updated": "2026-10-15"
   },
   "gyeongju-1-day-itinerary.html": {
-    "hash": "7b1b079325a9",
-    "updated": null
+    "hash": "e88f3c201e6c",
+    "updated": "2026-10-15"
   },
   "gyeongju-cafe-cafe-arae-heon.html": {
     "hash": "b16ca943fc5c",
@@ -136,8 +136,8 @@
     "updated": "2026-10-15"
   },
   "jeju-3-day-itinerary.html": {
-    "hash": "3d099e20a6fe",
-    "updated": null
+    "hash": "ffd37f2e7f23",
+    "updated": "2026-10-15"
   },
   "jeju-cafe-haejigae-cafe.html": {
     "hash": "eb4e1da320b2",
@@ -189,6 +189,14 @@
   },
   "kakaotalk-korea-guide.html": {
     "hash": "4501bf49fa18",
+    "updated": null
+  },
+  "korea-10-day-itinerary.html": {
+    "hash": "510f061a6d76",
+    "updated": null
+  },
+  "korea-7-day-itinerary.html": {
+    "hash": "5a06667a002e",
     "updated": null
   },
   "korea-autumn-foliage-2026.html": {
@@ -324,8 +332,12 @@
     "updated": "2026-10-15"
   },
   "seoul-3-day-itinerary.html": {
-    "hash": "7fda65c49e54",
+    "hash": "38f45d7bee45",
     "updated": "2026-10-15"
+  },
+  "seoul-5-day-itinerary.html": {
+    "hash": "a8b2b46d5312",
+    "updated": null
   },
   "seoul-bus-guide.html": {
     "hash": "cba078f4f132",
