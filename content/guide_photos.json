@@ -276,9 +276,10 @@
     "query": "street food Myeongdong Seoul"
   },
   "ktx-train-guide": {
-    "none": true,
-    "query": "KTX train",
-    "retry": true
+    "file": "photo-ktx-train-guide.jpg",
+    "credit": "Photo: calflier001, CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:KOREAN_RAIL_KTX_TRAIN_AT_BUSAN_STATION_SOUTH_KOREA_OCT_2012_(8176085968).jpg",
+    "query": "KTX train"
   },
   "seollal-travel-tips": {
     "file": "photo-seollal-travel-tips.jpg",
