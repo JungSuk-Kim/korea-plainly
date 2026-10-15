@@ -58,6 +58,8 @@ article once public (a Short for the same article moves to the end). Kkachi the 
 home page "Watch" section from `content/videos.json`.
 Interactive pages (learn-hangul, packing list, cost calculator, city quiz) keep their logic in root `*.js` files;
 `home_tools.py` lists them in the home page "Try it" section.
+Festivals: "Festivals (weekly)" runs `fetch_festivals.py` (KTO English TourAPI, secret `TOURAPI_KEY`) into
+`content/festivals.json`; `festival_pages.py` fills korea-festivals.html and "Festivals coming up" on region hubs.
 Every description starts with the link to the free guide (`scripts/video_text.py`); to retitle videos already on
 YouTube, list them in `content/shorts/retitle.json` and run the "YouTube titles" workflow (`youtube_meta.py`).
 

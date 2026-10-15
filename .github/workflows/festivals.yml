@@ -1,0 +1,46 @@
+name: Festivals (weekly)
+
+# Fetches upcoming festivals from the Korea Tourism Organization's English TourAPI
+# (scripts/fetch_festivals.py, secret TOURAPI_KEY), rebuilds the festival pages and commits.
+# Mondays about 06:41 Korea time, or run by hand.
+on:
+  schedule:
+    - cron: "41 21 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-bot
+  cancel-in-progress: false
+
+jobs:
+  festivals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch festivals
+        env:
+          TOURAPI_KEY: ${{ secrets.TOURAPI_KEY }}
+        run: |
+          pip install -q requests pillow
+          python scripts/fetch_festivals.py
+      - name: Maintain site
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+        run: python scripts/maintain_site.py
+      - name: Commit
+        run: |
+          git config user.name "Korea Plainly Bot"
+          git config user.email "actions@github.com"
+          before=$(git rev-parse HEAD)
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "Festivals: weekly update"
+          git pull --rebase -X theirs
+          git push
+          python scripts/indexnow_ping.py "$before" || true

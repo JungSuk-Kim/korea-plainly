@@ -27,6 +27,7 @@ STEPS = [
     "site_mascot.py",                 # Kkachi the magpie: article sign-off, About section, 404
     "video_hub.py",                   # videos.html and the "Watch" section on the home page
     "home_tools.py",                  # "Try it" section on the home page (games, calculator, quiz, checklist)
+    "festival_pages.py",              # festival calendar page and "Festivals coming up" on region hubs
     "optimize_images.py",             # shrink oversized photos
     "responsive_images.py",           # small WebP copies + srcset so phones download less
     "seo_basics.py",                  # favicon, og tags, noindex for thin hubs

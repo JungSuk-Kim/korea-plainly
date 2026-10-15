@@ -41,6 +41,7 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 # Hand-picked search words for the guides that exist today. New guides fall
 # back to words from their title.
 QUERIES = {
+    "korea-festivals": "Jinju Namgang Lantern Festival",
     "which-korean-city-quiz": "Busan Gwangalli Bridge night",
     "korea-trip-cost-calculator": "Gwangjang Market Seoul",
     "korea-packing-list": "Incheon Airport departure hall",

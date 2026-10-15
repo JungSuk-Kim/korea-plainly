@@ -925,5 +925,11 @@
     "filename": "which-korean-city-quiz.html",
     "title": "Which Korean City Suits You? Take the Quiz",
     "category": "Travel"
+  },
+  {
+    "slug": "korea-festivals",
+    "filename": "korea-festivals.html",
+    "title": "Festivals in Korea: What's On This Month and Coming Up",
+    "category": "Travel"
   }
 ]
