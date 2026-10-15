@@ -22,7 +22,8 @@ import generate_regional_day as g  # noqa: E402  (module only reads state on imp
 ROOT = g.ROOT
 META = re.compile(r"(?i)(search results?|supplied information|not confirmed|cannot confirm|can't confirm|"
                   r"is listed (here )?under|listed here|information (provided|available) (here|does)|surfaced|"
-                  r"visitor account|naver search|no official website is listed|unverified)")
+                  r"visitor account|naver search|no official website is listed|unverified|supplied|provided (google )?(listing|data)|"
+                  r"google (maps )?listing|listing data|listing (shows|says)|current verification|online listings)")
 
 
 def article_text(slug):
