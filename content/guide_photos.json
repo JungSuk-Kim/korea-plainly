@@ -321,8 +321,8 @@
     "query": "KTX train"
   },
   "learn-hangul": {
-    "none": true,
-    "query": "Hunminjeongeum"
+    "retry": true,
+    "query": "King Sejong statue Gwanghwamun"
   },
   "seollal-travel-tips": {
     "file": "photo-seollal-travel-tips.jpg",
