@@ -102,7 +102,9 @@
     "query": "Incheon International Airport terminal"
   },
   "korea-in-december": {
-    "retry": true,
+    "file": "photo-korea-in-december.jpg",
+    "credit": "Photo: Bohyunlee, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul_Lantern_Festival_2012.jpg",
     "query": "Seoul Lantern Festival Cheonggyecheon"
   },
   "korea-in-february": {
@@ -190,7 +192,7 @@
     "query": "Yeouido cherry blossoms"
   },
   "korea-winter-festivals": {
-    "retry": true,
+    "none": true,
     "query": "Hwacheon ice fishing"
   },
   "korea-winter-travel-guide": {
