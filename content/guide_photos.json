@@ -114,7 +114,9 @@
     "query": "Incheon International Airport terminal"
   },
   "korea-festivals": {
-    "retry": true,
+    "file": "photo-korea-festivals.jpg",
+    "credit": "Photo: Benjamin Krause, CC BY 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:2008_Lotus_Lantern_Festival-Seoul-01.jpg",
     "query": "Lotus Lantern Festival Seoul"
   },
   "korea-in-december": {
