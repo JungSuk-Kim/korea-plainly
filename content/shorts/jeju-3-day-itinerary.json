@@ -1,0 +1,87 @@
+{
+  "article": "jeju-3-day-itinerary",
+  "fallback": "photo-jeju-3-day-itinerary.jpg",
+  "title": "Jeju Three-Day Itinerary: The Easy Coast-by-Coast Plan",
+  "summary": "Plan three days in Jeju by exploring the west coast, east coast, and either Hallasan or the south. Get practical tips on transport, Udo ferries, and where to stay.",
+  "hashtags": "#Jeju #JejuTravel #KoreaTravel #SouthKorea #JejuItinerary",
+  "music": "Carefree",
+  "slides": [
+    {
+      "kicker": "JEJU PLAN",
+      "title": "Three Days, Three Areas",
+      "sub": "Do west, east, then Hallasan or the south",
+      "voice": "Three days in Jeju? Do west, east, then Hallasan or the south.",
+      "photo_query": "Jeju Island South Korea coastline",
+      "require": [
+        "jeju"
+      ]
+    },
+    {
+      "kicker": "GETTING AROUND",
+      "title": "A Car Saves Time",
+      "sub": "Bring your passport and accepted license",
+      "voice": "A car saves time. Bring your passport and accepted license or International Driving Permit.",
+      "photo_query": "Jeju rental car South Korea",
+      "require": [
+        "jeju"
+      ]
+    },
+    {
+      "kicker": "WHERE TO STAY",
+      "title": "Base Yourself in Jeju City",
+      "sub": "Maison GLAD Jeju is a convenient city base",
+      "voice": "Maison GLAD Jeju is a convenient city base.",
+      "image": "regional-jeju-stay-maison-glad-jeju.jpg"
+    },
+    {
+      "kicker": "DAY 1",
+      "title": "Walk Hyeopjae Beach",
+      "sub": "Explore the sand and coastal path",
+      "voice": "On day one, walk Hyeopjae's sand and coastal path.",
+      "photo_query": "Hyeopjae Beach Jeju",
+      "require": [
+        "hyeopjae"
+      ]
+    },
+    {
+      "kicker": "DAY 2",
+      "title": "Go Early to Sunrise Peak",
+      "sub": "Beat the tour groups at Seongsan Ilchulbong",
+      "voice": "Go early to Seongsan Ilchulbong to avoid tour groups.",
+      "image": "photo-jeju-3-day-itinerary.jpg"
+    },
+    {
+      "kicker": "DAY 2",
+      "title": "Check Udo Ferries",
+      "sub": "Wind can cancel sailings; check that day",
+      "voice": "Udo ferries can be cancelled in strong wind. Check on the day.",
+      "photo_query": "Udo Island Jeju South Korea",
+      "require": [
+        "udo"
+      ]
+    },
+    {
+      "kicker": "DAY 3",
+      "title": "Plan Ahead for Hallasan",
+      "sub": "Summit trails need advance online reservations",
+      "voice": "Hallasan summit trails need advance online reservations; Eoseungsaengak is shorter.",
+      "photo_query": "Hallasan South Korea",
+      "require": [
+        "hallasan"
+      ]
+    },
+    {
+      "kicker": "DAY 3",
+      "title": "Finish at the South Coast",
+      "sub": "Pair the market with Jeongbang Falls",
+      "voice": "Or head south and finish at Seogwipo Maeil Olle Market for snacks.",
+      "image": "regional-jeju-shopping-jeju-traditional-five-day-market.jpg"
+    },
+    {
+      "end": true,
+      "title": "Full guide and tips",
+      "sub": "korea-plainly.com",
+      "voice": "The full guide is free at Korea Plainly dot com."
+    }
+  ]
+}
