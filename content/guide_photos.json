@@ -141,8 +141,8 @@
     "query": "Gyeongbokgung snow winter"
   },
   "korea-in-march": {
-    "none": true,
-    "query": "Gwangyang plum blossom Korea"
+    "retry": true,
+    "query": "Jeju canola flowers"
   },
   "korea-in-november": {
     "file": "photo-korea-in-november.jpg",
@@ -151,8 +151,8 @@
     "query": "Seoul autumn November"
   },
   "korea-in-october": {
-    "none": true,
-    "query": "Seoraksan autumn leaves Korea"
+    "retry": true,
+    "query": "Seoraksan autumn"
   },
   "korea-new-year-sunrise": {
     "file": "regional-sokcho-local-guide-yeonggeumjeong-sunrise-pavilion.jpg",
@@ -332,8 +332,8 @@
     "query": "delivery Seoul"
   },
   "korean-phrases-cheat-sheet": {
-    "none": true,
-    "query": "Hangul Korean alphabet signs Seoul"
+    "retry": true,
+    "query": "Insadong street"
   },
   "korean-restaurant-words": {
     "file": "photo-korean-restaurant-words.jpg",
