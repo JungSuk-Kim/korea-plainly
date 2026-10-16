@@ -27,6 +27,10 @@
     "sokcho-leisure-biseondae-peak": {
       "at": "2026-10-15T15:19:32+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mxwedlcp5424"
+    },
+    "tipping-in-korea": {
+      "at": "2026-10-16T06:21:14+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mxxwpx5ycd2q"
     }
   },
   "bluesky_videos": {
@@ -45,6 +49,10 @@
     "QPsof1_LFbA": {
       "at": "2026-10-15T15:19:34+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mxwedndmem2q"
+    },
+    "P5Dq3oF2XfY": {
+      "at": "2026-10-16T06:21:16+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mxxwpzh54l2q"
     }
   },
   "instagram_videos": {},
@@ -56,6 +64,10 @@
     "aXsQ--xbyuM": {
       "at": "2026-10-15T15:19:34+00:00",
       "ref": "skipped"
+    },
+    "qSv1ySQfzh4": {
+      "at": "2026-10-16T06:21:23+00:00",
+      "ref": "1609525860581813"
     }
   },
   "threads_videos": {
@@ -66,6 +78,10 @@
     "aXsQ--xbyuM": {
       "at": "2026-10-15T15:19:47+00:00",
       "ref": "18028088975700573"
+    },
+    "qSv1ySQfzh4": {
+      "at": "2026-10-16T06:21:35+00:00",
+      "ref": "18072901199735802"
     }
   },
   "facebook": {
@@ -76,6 +92,10 @@
     "start-here": {
       "at": "2026-10-15T15:19:52+00:00",
       "ref": "1261611360380213_122101746273509276"
+    },
+    "tipping-in-korea": {
+      "at": "2026-10-16T06:21:40+00:00",
+      "ref": "1261611360380213_122102265087509276"
     }
   },
   "threads": {
@@ -86,6 +106,10 @@
     "start-here": {
       "at": "2026-10-15T15:20:02+00:00",
       "ref": "18099515708420800"
+    },
+    "tipping-in-korea": {
+      "at": "2026-10-16T06:21:49+00:00",
+      "ref": "17966211636215994"
     }
   }
 }
