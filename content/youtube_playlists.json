@@ -1,11 +1,34 @@
 {
   "playlists": {
     "seoul": "PLBu3k_nz02qg",
-    "itinerary": "PLZ-NPayfdsic"
+    "itinerary": "PLZ-NPayfdsic",
+    "busan": "PLHR-o6SKCRAs",
+    "seasons": "PLPAmMLMMHRV0",
+    "jeju": "PLAWfo6ykY960"
   },
   "added": {
     "P5Dq3oF2XfY": [
-      "seoul"
+      "seoul",
+      "itinerary"
+    ],
+    "QPsof1_LFbA": [
+      "busan",
+      "itinerary"
+    ],
+    "qSv1ySQfzh4": [
+      "seasons"
+    ],
+    "aXsQ--xbyuM": [
+      "seoul",
+      "itinerary"
+    ],
+    "5vIbm2LQPmY": [
+      "busan",
+      "itinerary"
+    ],
+    "vAo-ajdZxPY": [
+      "jeju",
+      "itinerary"
     ]
   }
 }
