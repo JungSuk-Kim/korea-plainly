@@ -35,6 +35,10 @@
     "sokcho-stay-lotte-resort-sokcho": {
       "at": "2026-10-16T09:33:54+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mxybihhr7b26"
+    },
+    "sokcho-local-guide-yeonggeumjeong-sunrise-pavilion": {
+      "at": "2026-10-16T15:00:12+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mxytpwdykl2f"
     }
   },
   "bluesky_videos": {
@@ -116,6 +120,10 @@
     "sokcho-stay-lotte-resort-sokcho": {
       "at": "2026-10-16T09:34:19+00:00",
       "ref": "1261611360380213_122102394573509276"
+    },
+    "sokcho-local-guide-yeonggeumjeong-sunrise-pavilion": {
+      "at": "2026-10-16T15:00:21+00:00",
+      "ref": "1261611360380213_122102642463509276"
     }
   },
   "threads": {
@@ -134,6 +142,10 @@
     "sokcho-stay-lotte-resort-sokcho": {
       "at": "2026-10-16T09:34:30+00:00",
       "ref": "18098452688560639"
+    },
+    "sokcho-local-guide-yeonggeumjeong-sunrise-pavilion": {
+      "at": "2026-10-16T15:00:35+00:00",
+      "ref": "18449620573120649"
     }
   }
 }
