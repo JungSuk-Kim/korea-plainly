@@ -41,6 +41,14 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 # Hand-picked search words for the guides that exist today. New guides fall
 # back to words from their title.
 QUERIES = {
+    "korea-money-exchange": "Myeongdong Seoul street",
+    "best-time-to-visit-korea": "Gyeongbokgung palace spring",
+    "korea-in-september": "Gyeongbokgung palace autumn",
+    "korea-in-august": "Gwangalli beach summer night Busan",
+    "korea-in-july": "Haeundae beach summer Busan",
+    "korea-in-june": "Jeju hydrangea",
+    "korea-in-may": "Jogyesa lotus lanterns Seoul",
+    "korea-in-april": "Yeouido cherry blossom Seoul",
     "korean-phrases-cheat-sheet": "Insadong street",
     "korea-in-october": "Naejangsan autumn",
     "korea-in-march": "Jeju canola flowers",
