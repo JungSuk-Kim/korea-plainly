@@ -147,8 +147,8 @@
     "query": "Seoul autumn November"
   },
   "korea-new-year-sunrise": {
-    "none": true,
-    "query": "Jeongdongjin sunrise"
+    "query": "Haeundae sunrise",
+    "retry": true
   },
   "korea-packing-list": {
     "file": "photo-korea-packing-list.jpg",
