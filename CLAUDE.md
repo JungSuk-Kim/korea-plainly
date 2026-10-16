@@ -1,7 +1,7 @@
 # Working on Korea Plainly
 
 English travel guides for first-time foreign visitors to Korea. Owner: 김중석 (Jungsuk Kim), who writes to Claude in Korean;
-reply in Korean, keep site content in plain British-leaning English. README.md explains the whole system; read it first.
+reply in Korean and address him as "주인님" (not "사장님"), keep site content in plain British-leaning English. README.md explains the whole system; read it first.
 
 ## Ground rules
 
