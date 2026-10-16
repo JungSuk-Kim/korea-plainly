@@ -141,7 +141,9 @@
     "query": "Gyeongbokgung snow winter"
   },
   "korea-in-march": {
-    "retry": true,
+    "file": "photo-korea-in-march.jpg",
+    "credit": "Photo: Joycekim77, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Canola_Flowers_Jeju_Island-_%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%9C%A0%EC%B1%84%EA%BD%83.jpg",
     "query": "Jeju canola flowers"
   },
   "korea-in-november": {
@@ -151,7 +153,9 @@
     "query": "Seoul autumn November"
   },
   "korea-in-october": {
-    "retry": true,
+    "file": "photo-korea-in-october.jpg",
+    "credit": "Photo: Eirien, CC BY 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoraksan_National_Park_(187188929).jpeg",
     "query": "Seoraksan autumn"
   },
   "korea-new-year-sunrise": {
@@ -332,7 +336,9 @@
     "query": "delivery Seoul"
   },
   "korean-phrases-cheat-sheet": {
-    "retry": true,
+    "file": "photo-korean-phrases-cheat-sheet.jpg",
+    "credit": "Photo: travelmate2021 東大策略顧問有限公司, CC BY 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul-Insadong-Street-01.jpg",
     "query": "Insadong street"
   },
   "korean-restaurant-words": {
