@@ -42,7 +42,7 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 # back to words from their title.
 QUERIES = {
     "korean-phrases-cheat-sheet": "Insadong street",
-    "korea-in-october": "Seoraksan autumn",
+    "korea-in-october": "Naejangsan autumn",
     "korea-in-march": "Jeju canola flowers",
     "seoul-vs-busan": "Busan Haeundae beach skyline",
     "korea-new-year-sunrise": "Haeundae sunrise",

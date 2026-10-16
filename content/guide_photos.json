@@ -156,7 +156,8 @@
     "file": "photo-korea-in-october.jpg",
     "credit": "Photo: Eirien, CC BY 3.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Seoraksan_National_Park_(187188929).jpeg",
-    "query": "Seoraksan autumn"
+    "query": "Naejangsan autumn",
+    "retry": true
   },
   "korea-new-year-sunrise": {
     "file": "regional-sokcho-local-guide-yeonggeumjeong-sunrise-pavilion.jpg",
