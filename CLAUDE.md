@@ -58,6 +58,7 @@ article once public (a Short for the same article moves to the end). Kkachi the 
 home page "Watch" section from `content/videos.json`.
 Interactive pages (learn-hangul, packing list, cost calculator, city quiz) keep their logic in root `*.js` files;
 `home_tools.py` lists them in the home page "Try it" section.
+`rss_feed.py` writes feed.xml (newest 40 articles, dates from content/page_dates.json) and links it from index/guides.
 Festivals: "Festivals (weekly)" runs `fetch_festivals.py` (KTO English TourAPI, secret `TOURAPI_KEY`) into
 `content/festivals.json`; `festival_pages.py` fills korea-festivals.html and "Festivals coming up" on region hubs.
 Meta: "Social posts" also runs `post_meta.py` (public videos → Instagram Reels, Facebook Page video, Threads link;
