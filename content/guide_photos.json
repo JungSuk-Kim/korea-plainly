@@ -132,8 +132,10 @@
     "query": "Yeouido cherry blossom Seoul"
   },
   "korea-in-august": {
-    "query": "Gwangalli Bridge night",
-    "retry": true
+    "file": "photo-korea-in-august.jpg",
+    "credit": "Photo: lumoplank, CC0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gwangan_Bridge_and_Gwangalli_Beach_-_Gwangalli2721.jpg",
+    "query": "Gwangalli Bridge night"
   },
   "korea-in-december": {
     "file": "photo-korea-in-december.jpg",
@@ -197,17 +199,21 @@
   },
   "korea-in-september": {
     "file": "photo-korea-in-september.jpg",
-    "credit": "Photo: by ddol-mang, CC BY-SA 2.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Seoul-Gyeongbokgung-Chinjamrye-06.jpg",
+    "credit": "Photo: U2em, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Haneul_Park_Seoul_01.jpg",
     "query": "Haneul Park Seoul",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Seoul-Gyeongbokgung-Chinjamrye-06.jpg"
+    ]
   },
   "korea-money-exchange": {
     "file": "photo-korea-money-exchange.jpg",
-    "credit": "Photo: by Tom@HK, CC BY 2.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Seoul-Myeongdong-01.jpg",
+    "credit": "Photo: Christian Bolz (크리스티안 볼츠), CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Myeongdong_at_night.jpg",
     "query": "Myeongdong night",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Seoul-Myeongdong-01.jpg"
+    ]
   },
   "korea-new-year-sunrise": {
     "file": "regional-sokcho-local-guide-yeonggeumjeong-sunrise-pavilion.jpg",
