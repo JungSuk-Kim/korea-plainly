@@ -154,10 +154,12 @@
   },
   "korea-in-october": {
     "file": "photo-korea-in-october.jpg",
-    "credit": "Photo: Eirien, CC BY 3.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Seoraksan_National_Park_(187188929).jpeg",
+    "credit": "Photo: Tung Thanh Dang, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Naejangsan_Pavilion_2.jpg",
     "query": "Naejangsan autumn",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Seoraksan_National_Park_(187188929).jpeg"
+    ]
   },
   "korea-new-year-sunrise": {
     "file": "regional-sokcho-local-guide-yeonggeumjeong-sunrise-pavilion.jpg",
