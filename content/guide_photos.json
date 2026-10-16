@@ -198,13 +198,10 @@
     ]
   },
   "korea-in-september": {
-    "file": "photo-korea-in-september.jpg",
-    "credit": "Photo: U2em, CC BY-SA 3.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Haneul_Park_Seoul_01.jpg",
-    "query": "Haneul Park Seoul",
-    "reject": [
-      "https://commons.wikimedia.org/wiki/File:Seoul-Gyeongbokgung-Chinjamrye-06.jpg"
-    ]
+    "file": "regional-seoul-culture-gyeongbokgung-palace.jpg",
+    "credit": "Photo: Frank Schulenburg, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gyeonghoeru_(Royal_Banquet_Hall)_at_Gyeongbokgung_Palace,_Seoul.jpg",
+    "manual": true
   },
   "korea-money-exchange": {
     "file": "photo-korea-money-exchange.jpg",
