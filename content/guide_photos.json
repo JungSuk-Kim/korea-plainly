@@ -140,11 +140,19 @@
     "source": "https://commons.wikimedia.org/wiki/File:KOCIS_Korea_Snowfall_in_Gyeongbokgung_05_(11318789535).jpg",
     "query": "Gyeongbokgung snow winter"
   },
+  "korea-in-march": {
+    "none": true,
+    "query": "Gwangyang plum blossom Korea"
+  },
   "korea-in-november": {
     "file": "photo-korea-in-november.jpg",
     "credit": "Photo: Eggmoon, CC BY-SA 3.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Cornus_kousa_at_november_in_Seoul,_Korea.jpg",
     "query": "Seoul autumn November"
+  },
+  "korea-in-october": {
+    "none": true,
+    "query": "Seoraksan autumn leaves Korea"
   },
   "korea-new-year-sunrise": {
     "file": "regional-sokcho-local-guide-yeonggeumjeong-sunrise-pavilion.jpg",
@@ -323,6 +331,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:McDelivery_Seoul_2008.jpg",
     "query": "delivery Seoul"
   },
+  "korean-phrases-cheat-sheet": {
+    "none": true,
+    "query": "Hangul Korean alphabet signs Seoul"
+  },
   "korean-restaurant-words": {
     "file": "photo-korean-restaurant-words.jpg",
     "credit": "Photo: travelmate2021 / 東大策略顧問有限公司) from Taiwan, CC BY 2.0, via Wikimedia Commons",
@@ -409,6 +421,12 @@
     "credit": "Photo: LERK, CC BY 2.5, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Seoul-Metropolitan-Rapid-Transit-7010-20070721.jpg",
     "query": "Seoul Metropolitan Subway train"
+  },
+  "seoul-vs-busan": {
+    "file": "photo-seoul-vs-busan.jpg",
+    "credit": "Photo: by frakorea, CC BY 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Korea-Busan-Haeundae-Beach-03.jpg",
+    "query": "Busan Haeundae beach skyline"
   },
   "start-here": {
     "file": "photo-start-here.jpg",
