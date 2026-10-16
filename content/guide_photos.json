@@ -11,6 +11,12 @@
     "source": "https://commons.wikimedia.org/wiki/File:Visitors_inside_Gyeongbokgung_Palace.jpg",
     "query": "Gyeongbokgung Palace visitors"
   },
+  "best-time-to-visit-korea": {
+    "file": "photo-best-time-to-visit-korea.jpg",
+    "credit": "Photo: GzarJH, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gyeongbokgung_in_Spring.jpg",
+    "query": "Gyeongbokgung palace spring"
+  },
   "busan-1-day-itinerary": {
     "file": "photo-busan-1-day-itinerary.jpg",
     "credit": "Photo: bryan..., CC BY-SA 2.0, via Wikimedia Commons",
@@ -119,6 +125,16 @@
     "source": "https://commons.wikimedia.org/wiki/File:2008_Lotus_Lantern_Festival-Seoul-01.jpg",
     "query": "Lotus Lantern Festival Seoul"
   },
+  "korea-in-april": {
+    "file": "photo-korea-in-april.jpg",
+    "credit": "Photo: Alexey Komarov, CC BY 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Cherry_Blossom_in_Yeouido_Park_-_panoramio_(1).jpg",
+    "query": "Yeouido cherry blossom Seoul"
+  },
+  "korea-in-august": {
+    "none": true,
+    "query": "Gwangalli beach summer night Busan"
+  },
   "korea-in-december": {
     "file": "photo-korea-in-december.jpg",
     "credit": "Photo: Bohyunlee, CC BY-SA 3.0, via Wikimedia Commons",
@@ -140,11 +156,29 @@
     "source": "https://commons.wikimedia.org/wiki/File:KOCIS_Korea_Snowfall_in_Gyeongbokgung_05_(11318789535).jpg",
     "query": "Gyeongbokgung snow winter"
   },
+  "korea-in-july": {
+    "file": "photo-korea-in-july.jpg",
+    "credit": "Photo: ProjectManhattan, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Haeundae_Beach_in_Summer.jpg",
+    "query": "Haeundae beach summer Busan"
+  },
+  "korea-in-june": {
+    "file": "photo-korea-in-june.jpg",
+    "credit": "Photo: Basile Morin, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Hydrangea_macrophylla_in_front_of_Seongsan_Ilchulbong_volcano_at_blue_hour_in_Jeju_Island_South_Korea.jpg",
+    "query": "Jeju hydrangea"
+  },
   "korea-in-march": {
     "file": "photo-korea-in-march.jpg",
     "credit": "Photo: Joycekim77, CC BY-SA 3.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Canola_Flowers_Jeju_Island-_%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%9C%A0%EC%B1%84%EA%BD%83.jpg",
     "query": "Jeju canola flowers"
+  },
+  "korea-in-may": {
+    "file": "photo-korea-in-may.jpg",
+    "credit": "Photo: Ken Eckert, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Lotus_Lantern_Festival_at_Jogyesa,_Seoul.jpg",
+    "query": "Jogyesa lotus lanterns Seoul"
   },
   "korea-in-november": {
     "file": "photo-korea-in-november.jpg",
@@ -160,6 +194,18 @@
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Seoraksan_National_Park_(187188929).jpeg"
     ]
+  },
+  "korea-in-september": {
+    "file": "photo-korea-in-september.jpg",
+    "credit": "Photo: by ddol-mang, CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul-Gyeongbokgung-Chinjamrye-06.jpg",
+    "query": "Gyeongbokgung palace autumn"
+  },
+  "korea-money-exchange": {
+    "file": "photo-korea-money-exchange.jpg",
+    "credit": "Photo: by Tom@HK, CC BY 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul-Myeongdong-01.jpg",
+    "query": "Myeongdong Seoul street"
   },
   "korea-new-year-sunrise": {
     "file": "regional-sokcho-local-guide-yeonggeumjeong-sunrise-pavilion.jpg",
