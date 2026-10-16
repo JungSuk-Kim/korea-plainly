@@ -50,6 +50,48 @@ def workflows():
     return out
 
 
+def today_runs():
+    """Which of today's scheduled jobs (Korea time) have finished successfully, and when."""
+    now = datetime.now(KST)
+    today = now.date()
+
+    def runs(f, n=40):
+        d = gh(f"repos/{REPO}/actions/workflows/{f}/runs?per_page={n}")
+        out = []
+        for r in (d or {}).get("workflow_runs", []):
+            t = datetime.fromisoformat(r["created_at"].replace("Z", "+00:00")).astimezone(KST)
+            if t.date() == today:
+                out.append({"t": t, "ok": r.get("conclusion") == "success", "done": r.get("status") == "completed",
+                            "event": r.get("event"), "end": r.get("updated_at", "")})
+        return out
+
+    def first(rs, cond=lambda r: True):
+        hit = [r for r in rs if r["ok"] and cond(r)]
+        if hit:
+            r = min(hit, key=lambda r: r["t"])
+            return {"done": True, "at": r["t"].isoformat(timespec="minutes")}
+        if any(not r["done"] and cond(r) for r in rs):
+            return {"done": False, "running": True}
+        if any(r["done"] and not r["ok"] and cond(r) for r in rs):
+            return {"done": False, "failed": True}
+        return {"done": False}
+
+    shorts = runs("shorts-auto.yml")
+    social = runs("social-posts.yml")
+    checks = [r for r in shorts if r["ok"] and r["t"].hour != 10]   # the 10:07 run makes a Short; the rest are checks
+    return {
+        "date": today.isoformat(), "weekday": today.weekday(),
+        "fest": first(runs("festivals.yml")),
+        "publish": first(runs("daily-publish.yml")),
+        "shorts": first(shorts, lambda r: r["t"].hour == 10),
+        "longform": first(runs("longform-auto.yml")),
+        "social_am": first(social, lambda r: 6 <= r["t"].hour < 15),
+        "social_pm": first(social, lambda r: r["t"].hour >= 15),
+        "tokens": first(runs("meta-refresh.yml")),
+        "check": {"done": bool(checks), "at": max(r["t"] for r in checks).isoformat(timespec="minutes") if checks else ""},
+    }
+
+
 def main():
     published = [p for p in load("content/published.json", []) if isinstance(p, dict) and p.get("slug")]
     dates = load("content/page_dates.json", {})
@@ -93,6 +135,7 @@ def main():
         "articles": [{"title": p.get("title", p["slug"]), "slug": p["slug"], "date": d} for d, p in recent],
         "next": {"short": {"slug": nq, "title": title_of.get(nq, nq)}, "long": {"slug": nl, "title": title_of.get(nl, nl)}},
         "workflows": workflows(),
+        "today": today_runs(),
     }
     print(json.dumps(status, ensure_ascii=False, indent=1))
 
