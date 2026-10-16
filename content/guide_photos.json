@@ -146,6 +146,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:Cornus_kousa_at_november_in_Seoul,_Korea.jpg",
     "query": "Seoul autumn November"
   },
+  "korea-new-year-sunrise": {
+    "none": true,
+    "query": "Homigot sunrise Pohang"
+  },
   "korea-packing-list": {
     "file": "photo-korea-packing-list.jpg",
     "credit": "Photo: Jnpet, CC BY-SA 3.0, via Wikimedia Commons",
