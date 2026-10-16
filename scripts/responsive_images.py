@@ -67,6 +67,10 @@ def fix_img(tag):
         return tag
     v = variants(src.group(1))
     if not v:
+        # the photo was swapped for a small one: drop a srcset this step wrote for the old photo,
+        # or browsers keep showing the old (soon deleted) copies
+        if re.search(r'\ssrcset="[^"]*img/[^"]*\.webp', tag):
+            tag = re.sub(r'\s(?:srcset|sizes)="[^"]*"', "", tag)
         return tag
     cover = re.search(r'class="[^"]*\bcover\b', tag) is not None
     # remove what this step adds, then add it again in a fixed order (keeps reruns stable)
