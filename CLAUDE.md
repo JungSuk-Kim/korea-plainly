@@ -65,6 +65,9 @@ Festivals: "Festivals (weekly)" runs `fetch_festivals.py` (KTO English TourAPI, 
 Meta: "Social posts" also runs `post_meta.py` (public videos → Instagram Reels, Facebook Page video, Threads link;
 articles → Page and Threads link posts; state in `content/social_posted.json`). "Meta token refresh" renews the 60-day
 Instagram/Threads tokens into Secrets (`GH_SECRETS_TOKEN`); "Meta check" tests all tokens read-only.
+Shorts end with a subscribe ask and a SUBSCRIBE end card (`video_text.SHORT_OUTRO`, `make_short.end_card`); `youtube_playlists.py`
+(run by the 2-hourly check) sorts every upload into playlists (state: `content/youtube_playlists.json`). Subscribe buttons
+(`.kp-sub`, `?sub_confirmation=1`) come from site_mascot.py, embed_videos.py and video_hub.py.
 Every description starts with the link to the free guide (`scripts/video_text.py`); to retitle videos already on
 YouTube, list them in `content/shorts/retitle.json` and run the "YouTube titles" workflow (`youtube_meta.py`).
 

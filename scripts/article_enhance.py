@@ -76,6 +76,7 @@ def content_hash(s):
     m = re.search(r"<main\b.*?</main>", s, re.S) or re.search(r"<article\b.*?</article>", s, re.S)
     body = m.group(0) if m else s
     body = re.sub(r"<!-- kp-kkachi -->.*?<!-- /kp-kkachi -->", " ", body, flags=re.S)   # the mascot's sign-off
+    body = re.sub(r'<a class="kp-sub"[^>]*>.*?</a>', " ", body, flags=re.S)   # subscribe buttons
     body = re.sub(r'<(section|nav|script|style)\b[^>]*class="(?:related-guides|kp-visit|kp-toc|kp-crumbs|useful-links)".*?</\1>', " ", body, flags=re.S)
     body = re.sub(r"<script\b.*?</script>|<style\b.*?</style>|<nav\b.*?</nav>", " ", body, flags=re.S)
     body = re.sub(r'<p class="(?:kp-date|photo-credit|kp-kicker)"[^>]*>.*?</p>', " ", body, flags=re.S)

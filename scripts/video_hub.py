@@ -11,7 +11,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-CHANNEL = "https://www.youtube.com/@KoreaPlainly"
+CHANNEL = "https://www.youtube.com/@KoreaPlainly?sub_confirmation=1"
 START, END = "<!-- kp-videos -->", "<!-- /kp-videos -->"
 HOME_START, HOME_END = "<!-- kp-home-videos -->", "<!-- /kp-home-videos -->"
 
@@ -28,6 +28,7 @@ STYLE = ("<style>.kp-vgrid{display:grid;gap:22px;margin:34px 0}.kp-vgrid.long{gr
          "border-style:solid;border-width:11px 0 11px 17px;border-color:transparent transparent transparent #fff}"
          ".kp-vcard b{display:block;font-size:17px;line-height:1.35;margin:10px 0 4px;letter-spacing:-.01em}"
          ".kp-vlinks{font-size:13px;color:#5b6472}.kp-vlinks a{color:#c9413a;font-weight:600}"
+         ".kp-sub{display:inline-flex;align-items:center;gap:8px;background:#c9413a;color:#fff!important;font-weight:700;font-size:14px;line-height:1;padding:10px 16px;border-radius:999px;text-decoration:none!important;white-space:nowrap}.kp-sub:before{content:'';border-style:solid;border-width:6px 0 6px 10px;border-color:transparent transparent transparent #fff}.kp-sub:hover{background:#a8332d}.kp-vsub{display:flex;gap:14px;align-items:center;flex-wrap:wrap}"
          ".kp-vhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:40px}"
          ".kp-vhead h2{margin:0;font-size:30px;letter-spacing:-.03em}"
          "@media(max-width:800px){.kp-vgrid.long{grid-template-columns:1fr}.kp-vgrid.short{grid-template-columns:repeat(2,1fr)}}"
@@ -87,9 +88,8 @@ def main():
             inner += f'<div class="kp-vhead"><h2>Full travel plans</h2></div>{grid(longs, "long")}'
         if shorts:
             inner += f'<div class="kp-vhead"><h2>One-minute guides</h2></div>{grid(shorts, "short")}'
-        inner += (f'<p style="margin:30px 0 0;font-size:15px">New videos every week: '
-                  f'<a href="{CHANNEL}" target="_blank" rel="noopener" style="color:var(--red);font-weight:700">'
-                  f'subscribe to Korea Plainly on YouTube</a>.</p>')
+        inner += (f'<p class="kp-vsub" style="margin:30px 0 0;font-size:15px">New one-minute Korea tips every Monday, Wednesday and Friday. '
+                  f'<a class="kp-sub" href="{CHANNEL}" target="_blank" rel="noopener">Subscribe on YouTube</a></p>')
         s = page.read_text(encoding="utf-8")
         new = put(s, START, END, inner)
         if new != s:
@@ -101,7 +101,8 @@ def main():
     inner = ""
     if pick:
         inner = (STYLE + '<section class="wrap section" id="videos"><div class="heading"><div><p class="kicker"><i></i> WATCH</p>'
-                 '<h2>Korea in<br><em>a few minutes.</em></h2></div><a class="view-all" href="videos.html">All videos →</a></div>'
+                 f'<h2>Korea in<br><em>a few minutes.</em></h2></div><div class="kp-vsub"><a class="kp-sub" href="{CHANNEL}" target="_blank" rel="noopener">Subscribe</a>'
+                 '<a class="view-all" href="videos.html">All videos →</a></div></div>'
                  + (grid(longs[:2], "long") if longs else "") + (grid(shorts[:4], "short") if shorts else "") + "</section>")
     new = put(s, HOME_START, HOME_END, inner, anchor='<section class="quote">')
     if new != s:

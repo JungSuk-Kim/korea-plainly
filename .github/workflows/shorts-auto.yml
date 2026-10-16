@@ -99,8 +99,16 @@ jobs:
           pip install -q requests pillow
           python scripts/youtube_shorts.py check
           if ! git diff --quiet content/videos.json; then python scripts/maintain_site.py; fi
+      - name: Sort videos into playlists
+        continue-on-error: true
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          pip install -q requests
+          python scripts/youtube_playlists.py
       - name: Commit
-        if: steps.waiting.outputs.yes == '1'
         run: |
           git config user.name "Korea Plainly Bot"
           git config user.email "actions@github.com"

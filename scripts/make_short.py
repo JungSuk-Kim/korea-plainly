@@ -119,8 +119,18 @@ def end_card(slide, path):
                                         (slide["sub"], font(70), RED)]):
         tw = d.textlength(text, font=f)
         d.text(((W - tw) / 2, int(H * 0.31) + i * 120), text, font=f, fill=col)
-    d.text(((W - d.textlength("Link in bio", font=font(46, False))) / 2, int(H * 0.31) + 380), "Link in bio",
-           font=font(46, False), fill=(200, 205, 215))
+    # a subscribe button, the thing we want viewers to do before the next Short starts
+    by = int(H * 0.31) + 400
+    bf = font(64)
+    label = "SUBSCRIBE"
+    bw, bh = d.textlength(label, font=bf) + 150, 120
+    bx = (W - bw) / 2
+    d.rounded_rectangle([bx, by, bx + bw, by + bh], radius=bh // 2, fill=RED)
+    tri = [(bx + 52, by + 38), (bx + 52, by + bh - 38), (bx + 92, by + bh / 2)]
+    d.polygon(tri, fill=WHITE)
+    d.text((bx + 112, by + (bh - 64) / 2 - 6), label, font=bf, fill=WHITE)
+    note = "Full guide free: link in the description"
+    d.text(((W - d.textlength(note, font=font(42, False))) / 2, by + bh + 50), note, font=font(42, False), fill=(200, 205, 215))
     img.save(path)
 
 

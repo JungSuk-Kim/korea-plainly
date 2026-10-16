@@ -31,7 +31,8 @@ STYLE = ("<style>.kp-video{margin:1.5rem auto;max-width:300px;text-align:center}
          "border-width:14px 0 14px 22px;border-color:transparent transparent transparent #fff}"
          ".kp-video p{font-size:.9rem;margin:.5rem 0 0;color:#5b6472}"
          ".kp-video.kp-long{max-width:820px}.kp-video.kp-long .kp-video-box{aspect-ratio:16/9}"
-         ".kp-video.kp-long .kp-play{top:50%}</style>")
+         ".kp-video.kp-long .kp-play{top:50%}.kp-video .kp-sub{margin-top:10px}"
+         ".kp-sub{display:inline-flex;align-items:center;gap:8px;background:#c9413a;color:#fff!important;font-weight:700;font-size:14px;line-height:1;padding:10px 16px;border-radius:999px;text-decoration:none!important;white-space:nowrap}.kp-sub:before{content:'';border-style:solid;border-width:6px 0 6px 10px;border-color:transparent transparent transparent #fff}.kp-sub:hover{background:#a8332d}</style>")
 SCRIPT = ("<script>document.querySelectorAll('.kp-video-box[data-yt]').forEach(function(a){a.addEventListener('click',"
           "function(e){e.preventDefault();var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'"
           "+a.dataset.yt+'?autoplay=1&playsinline=1&rel=0';f.title=a.getAttribute('aria-label');"
@@ -56,6 +57,7 @@ def block(slug, v, nl, first=True):
         f'<a class="kp-video-box" href="{url}" data-yt="{vid}" aria-label="Play video: {t}" target="_blank" rel="noopener">'
         f'<img src="{v["poster"]}" alt="{t}" {size} loading="lazy"><span class="kp-play"></span></a>',
         f'<p>{html.escape(v.get("caption", "Watch the one-minute version"))}</p>',
+        '<a class="kp-sub" href="https://www.youtube.com/@KoreaPlainly?sub_confirmation=1" target="_blank" rel="noopener">Subscribe for new videos</a>',
         f'<script type="application/ld+json">{json.dumps(data, ensure_ascii=False)}</script>{SCRIPT if first else ""}',
         "</figure>",
         END,
