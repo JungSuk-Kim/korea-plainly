@@ -41,6 +41,10 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 # Hand-picked search words for the guides that exist today. New guides fall
 # back to words from their title.
 QUERIES = {
+    "korean-phrases-cheat-sheet": "Hangul Korean alphabet signs Seoul",
+    "korea-in-october": "Seoraksan autumn leaves Korea",
+    "korea-in-march": "Gwangyang plum blossom Korea",
+    "seoul-vs-busan": "Busan Haeundae beach skyline",
     "korea-new-year-sunrise": "Haeundae sunrise",
     "korea-festivals": "Lotus Lantern Festival Seoul",
     "which-korean-city-quiz": "Busan Gwangalli Bridge night",

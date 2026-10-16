@@ -136,8 +136,8 @@
     "updated": "2026-10-15"
   },
   "jeju-3-day-itinerary.html": {
-    "hash": "ffd37f2e7f23",
-    "updated": "2026-10-15"
+    "hash": "45d6ac496f2d",
+    "updated": "2026-10-16"
   },
   "jeju-cafe-haejigae-cafe.html": {
     "hash": "eb4e1da320b2",
@@ -196,8 +196,8 @@
     "updated": null
   },
   "korea-7-day-itinerary.html": {
-    "hash": "bba56d2b1fe4",
-    "updated": "2026-10-15"
+    "hash": "a02c3db0f1f2",
+    "updated": "2026-10-16"
   },
   "korea-autumn-foliage-2026.html": {
     "hash": "3003687371dd",
@@ -220,16 +220,24 @@
     "updated": "2026-10-16"
   },
   "korea-in-february.html": {
-    "hash": "2eabd675da7e",
-    "updated": null
+    "hash": "9eb452b59e4a",
+    "updated": "2026-10-16"
   },
   "korea-in-january.html": {
     "hash": "720701e126c9",
     "updated": "2026-10-16"
   },
+  "korea-in-march.html": {
+    "hash": "11d3260580da",
+    "updated": null
+  },
   "korea-in-november.html": {
-    "hash": "1adb0d9602be",
-    "updated": "2026-10-15"
+    "hash": "19ec49f82a42",
+    "updated": "2026-10-16"
+  },
+  "korea-in-october.html": {
+    "hash": "9ad7217a40a1",
+    "updated": null
   },
   "korea-new-year-sunrise.html": {
     "hash": "b0cf4727369c",
@@ -323,6 +331,10 @@
     "hash": "a5c28eb21768",
     "updated": null
   },
+  "korean-phrases-cheat-sheet.html": {
+    "hash": "9d40ad7a176e",
+    "updated": null
+  },
   "korean-restaurant-words.html": {
     "hash": "db6495635ecf",
     "updated": "2026-10-13"
@@ -380,8 +392,8 @@
     "updated": "2026-10-13"
   },
   "seoul-neighborhoods-guide.html": {
-    "hash": "763dcd9e28e9",
-    "updated": null
+    "hash": "caca5e5b2fba",
+    "updated": "2026-10-16"
   },
   "seoul-night-views.html": {
     "hash": "1b4a69e02d11",
@@ -401,6 +413,10 @@
   },
   "seoul-travel-cheonggyecheon.html": {
     "hash": "edcea605c04c",
+    "updated": null
+  },
+  "seoul-vs-busan.html": {
+    "hash": "dab2f21a88ff",
     "updated": null
   },
   "sim-esim-wifi-korea.html": {
@@ -444,16 +460,16 @@
     "updated": null
   },
   "start-here.html": {
-    "hash": "1cc4d83a8ade",
-    "updated": "2026-10-15"
+    "hash": "f50ae1ed9638",
+    "updated": "2026-10-16"
   },
   "tipping-in-korea.html": {
     "hash": "3aad836517df",
     "updated": null
   },
   "useful-korean-phrases.html": {
-    "hash": "a6596e6b67d6",
-    "updated": "2026-10-14"
+    "hash": "3fc749e4526a",
+    "updated": "2026-10-16"
   },
   "which-korean-city-quiz.html": {
     "hash": "f106e27c57b6",
