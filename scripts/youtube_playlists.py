@@ -11,6 +11,7 @@ Needs YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN (scope youtube), like you
 import json
 import re
 import sys
+import time
 from pathlib import Path
 
 import requests
@@ -72,8 +73,12 @@ def main():
                 break
             state["playlists"][k] = r.json()["id"]
             print(f"created playlist {title}")
-        r = requests.post(f"{API}/playlistItems", params={"part": "snippet"}, headers=auth, timeout=30, json={
-            "snippet": {"playlistId": state["playlists"][k], "resourceId": {"kind": "youtube#video", "videoId": v["youtube"]}}})
+        for attempt in range(5):   # a playlist made seconds ago often answers 409 at first; try again shortly
+            r = requests.post(f"{API}/playlistItems", params={"part": "snippet"}, headers=auth, timeout=30, json={
+                "snippet": {"playlistId": state["playlists"][k], "resourceId": {"kind": "youtube#video", "videoId": v["youtube"]}}})
+            if r.status_code not in (409, 500, 503):
+                break
+            time.sleep(4 * (attempt + 1))
         if r.status_code == 200 or "videoAlreadyInPlaylist" in r.text:
             state["added"].setdefault(v["youtube"], []).append(k)
             print(f"added {v['title']} to {LISTS[k][0]}")
@@ -81,8 +86,7 @@ def main():
             print(f"::warning::{v['youtube']} not found, skipped")
             state["added"].setdefault(v["youtube"], []).append(k)
         else:
-            print(f"::error::could not add {v['youtube']} to {k} ({r.status_code}): {r.text[:300]}")
-            break
+            print(f"::warning::could not add {v['youtube']} to {k} yet ({r.status_code}): {r.text[:200]}; will retry next run")
     save(STATE, state)
 
 
