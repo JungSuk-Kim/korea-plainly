@@ -931,5 +931,41 @@
     "filename": "korea-festivals.html",
     "title": "Festivals in Korea: What's On This Month and Coming Up",
     "category": "Travel"
+  },
+  {
+    "slug": "tipping-in-korea",
+    "filename": "tipping-in-korea.html",
+    "title": "Do You Tip in Korea? What Visitors Should Know",
+    "category": "Money"
+  },
+  {
+    "title": "Lotte Resort Sokcho: A sea-facing stay in Sokcho",
+    "slug": "sokcho-stay-lotte-resort-sokcho",
+    "category": "Stay",
+    "region": "Sokcho",
+    "round": 1,
+    "place_name": "Lotte Resort Sokcho",
+    "address": "186 Daepohang-gil, Daepo-dong, Sokcho-si, Gangwon-do",
+    "google_rating": 4.5,
+    "google_review_count": 5857,
+    "naver_checked": true,
+    "published_at": "2026-10-16T00:18:02.299274+00:00",
+    "image": "regional-sokcho-stay-lotte-resort-sokcho.jpg",
+    "image_credit": "Photo: 롯데리조트 속초 via Google Maps"
+  },
+  {
+    "title": "Yeonggeumjeong Sunrise Pavilion: Sea Views in Sokcho",
+    "slug": "sokcho-local-guide-yeonggeumjeong-sunrise-pavilion",
+    "category": "Local Guide",
+    "region": "Sokcho",
+    "round": 1,
+    "place_name": "Yeonggeumjeong Sunrise Pavilion",
+    "address": "43 Yeonggeumjeong-ro, Dongmyeong-dong, Sokcho-si, Gangwon-do",
+    "google_rating": 4.3,
+    "google_review_count": 11974,
+    "naver_checked": true,
+    "published_at": "2026-10-16T00:18:26.831322+00:00",
+    "image": "regional-sokcho-local-guide-yeonggeumjeong-sunrise-pavilion.jpg",
+    "image_credit": "Photo: KYUNG HEO via Google Maps"
   }
 ]

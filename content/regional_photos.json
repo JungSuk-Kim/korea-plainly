@@ -238,10 +238,20 @@
     "credit": "Photo: Sun Chul Kim via Google Maps",
     "source": "https://maps.google.com/maps/contrib/109246567885716347732"
   },
+  "sokcho-local-guide-yeonggeumjeong-sunrise-pavilion": {
+    "source_type": "google",
+    "credit": "Photo: KYUNG HEO via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/103559777499881303976"
+  },
   "sokcho-shopping-sokcho-tourist-fishery-market": {
     "source_type": "wikimedia",
     "credit": "Photo: Christophe95, CC BY-SA 4.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Fish_market_in_Sokcho.jpg"
+  },
+  "sokcho-stay-lotte-resort-sokcho": {
+    "source_type": "google",
+    "credit": "Photo: 롯데리조트 속초 via Google Maps",
+    "source": "https://maps.google.com/maps/contrib/103502858672140896603"
   },
   "sokcho-travel-seoraksan-national-park": {
     "source_type": "google",

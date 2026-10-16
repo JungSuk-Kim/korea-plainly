@@ -212,8 +212,8 @@
     "updated": null
   },
   "korea-festivals.html": {
-    "hash": "e7d81b54b3b0",
-    "updated": "2026-10-15"
+    "hash": "54b4ef5196d1",
+    "updated": "2026-10-16"
   },
   "korea-in-december.html": {
     "hash": "ac52026510de",
@@ -419,8 +419,16 @@
     "hash": "6982ef146204",
     "updated": null
   },
+  "sokcho-local-guide-yeonggeumjeong-sunrise-pavilion.html": {
+    "hash": "306ae9373a73",
+    "updated": null
+  },
   "sokcho-shopping-sokcho-tourist-fishery-market.html": {
     "hash": "0a4bd209dd26",
+    "updated": null
+  },
+  "sokcho-stay-lotte-resort-sokcho.html": {
+    "hash": "2fb705cdea04",
     "updated": null
   },
   "sokcho-travel-seoraksan-national-park.html": {
@@ -434,6 +442,10 @@
   "start-here.html": {
     "hash": "1cc4d83a8ade",
     "updated": "2026-10-15"
+  },
+  "tipping-in-korea.html": {
+    "hash": "3aad836517df",
+    "updated": null
   },
   "useful-korean-phrases.html": {
     "hash": "a6596e6b67d6",
