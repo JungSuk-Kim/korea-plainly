@@ -387,6 +387,10 @@
     "hash": "f0a548b60e74",
     "updated": "2026-10-13"
   },
+  "noraebang-korean-karaoke-guide.html": {
+    "hash": "96d927eadb57",
+    "updated": null
+  },
   "read-korean-menu.html": {
     "hash": "ecc0aa946501",
     "updated": "2026-10-15"
@@ -505,6 +509,18 @@
   },
   "which-korean-city-quiz.html": {
     "hash": "f106e27c57b6",
+    "updated": null
+  },
+  "yeosu-cafe-cafe-hoi-an.html": {
+    "hash": "29b7c309cb4c",
+    "updated": null
+  },
+  "yeosu-food-crab-1st-avenue-kkotdol.html": {
+    "hash": "be3c2c0d2706",
+    "updated": null
+  },
+  "yeosu-travel-hyangilam-hermitage.html": {
+    "hash": "d2703c035ada",
     "updated": null
   }
 }
