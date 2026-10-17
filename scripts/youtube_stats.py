@@ -79,6 +79,18 @@ def main():
         out["analytics_error"] = f"{a.status_code}: {a.text[:200]}"
         print(f"::notice::YouTube Analytics not available yet ({a.status_code}); saving views, likes and comments only")
 
+    if out["analytics"]:   # where viewers are, to choose when to publish
+        c = requests.get(ANALYTICS, headers=auth, timeout=30, params={
+            "ids": "channel==MINE", "startDate": start, "endDate": end, "dimensions": "country",
+            "metrics": "views,estimatedMinutesWatched", "sort": "-views", "maxResults": 15})
+        if c.status_code == 200:
+            out["countries"] = [{"country": r[0], "views": r[1], "minutes": r[2]} for r in c.json().get("rows") or []]
+        t = requests.get(ANALYTICS, headers=auth, timeout=30, params={
+            "ids": "channel==MINE", "startDate": start, "endDate": end, "dimensions": "insightTrafficSourceType",
+            "metrics": "views", "sort": "-views"})
+        if t.status_code == 200:
+            out["traffic_sources"] = [{"source": r[0], "views": r[1]} for r in t.json().get("rows") or []]
+
     for vid, v in videos.items():
         s = stats.get(vid, {})
         st = s.get("statistics", {})

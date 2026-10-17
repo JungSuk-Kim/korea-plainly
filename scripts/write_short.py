@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SHORTS = ROOT / "content" / "shorts"
 QUEUE = SHORTS / "queue.json"
 MODEL = os.environ.get("OPENAI_MODEL", "gpt-6-luna").strip()
-MAX_WORDS = 100          # keeps the video under about 50 seconds
+MAX_WORDS = 58           # about 25 seconds of narration: viewers left our 50-60 s Shorts after 15-25 s
 TRACKS = json.loads((SHORTS / "music.json").read_text(encoding="utf-8"))["tracks"]
 
 
@@ -95,7 +95,12 @@ Return JSON only, in this form:
 ]}}
 
 Rules:
-- 6 to 8 slides. The first is a hook that makes a traveller stop scrolling (a question or a surprising, useful fact).
+- 4 or 5 slides, about 25 seconds in total. Viewers swipe away fast, so every second must earn its place.
+- Slide 1 is the hook, and the first two seconds decide everything: at most 10 spoken words, naming the viewer's
+  problem or a surprising, useful fact about THIS place or topic (e.g. "Most first-timers waste day one in Seoul.
+  Here's the fix.", "Busan in one day? Do it in this order."). Never start with a greeting, the channel name,
+  "In this video" or "Welcome". The hook's on-screen "title" says the same promise in a few words.
+- Slides 2 onwards: one concrete tip each, said in one or two short sentences, in the order a visitor would use them.
   Do not add an ending slide; it is added for you.
 - Narration ("voice"): warm, plain spoken English, like a friendly local. All slides together at most {max_words} words.
   Short sentences. Spell numbers as they are spoken. No hashtags or emoji in the voice.
@@ -135,7 +140,7 @@ def write(slug):
     raw = r.output_text.strip()
     spec = json.loads(raw[raw.find("{"): raw.rfind("}") + 1])
     slides = []
-    for s in spec["slides"][:8]:
+    for s in spec["slides"][:6]:
         s = {k: v for k, v in s.items() if k in ("kicker", "title", "sub", "voice", "image", "photo_query", "require")}
         if s.get("image") and s["image"] not in photos:
             s.pop("image")  # not one of ours: search instead
@@ -147,7 +152,7 @@ def write(slug):
         s["kicker"] = s.get("kicker", "").upper()[:28]
         slides.append(s)
     # keep the narration short: drop middle slides until it fits
-    while sum(len(s["voice"].split()) for s in slides) > MAX_WORDS and len(slides) > 5:
+    while sum(len(s["voice"].split()) for s in slides) > MAX_WORDS and len(slides) > 4:
         slides.pop(-2)
     slides.append({"end": True, "title": "New Korea tips", "sub": "Mon · Wed · Fri",
                    "voice": SHORT_OUTRO})

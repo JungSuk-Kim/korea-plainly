@@ -68,7 +68,11 @@ VISUAL is one of:
   {{"map": "<map id>"}}  |  {{"card": {{"big": "SHORT CAPS", "title": "...", "sub": "..."}}}}  |  {{"list": {{"heading": "...", "items": ["...", "..."]}}}}
 
 Structure (use these chapter names where they fit):
-- "Intro": a hook (2-3 photos), a segment over an overview map of all stops, then a title card.
+- "Intro": a fast cold open first, because our viewers left in the first minute: 3-4 very short segments (at most 12
+  words each, one striking photo each) showing the best moments of the plan, then one sentence that promises exactly
+  what the viewer gets (e.g. "By the end, you'll have the whole day in the right order, with nothing wasted.").
+  The first spoken words must be about the place, never a greeting, the channel name or "In this video".
+  Only then a segment over an overview map of all stops, then a title card.
 - "Before you go": 3-4 practical tips from the article (closing days, transport cards, map apps, where to stay, arriving).
 - One chapter per day or per main part of the article, each starting with a title card and that part's route map,
   then one segment per stop, each with a "label" naming the place.
