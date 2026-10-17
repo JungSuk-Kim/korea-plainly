@@ -41,6 +41,12 @@
     "source": "https://commons.wikimedia.org/wiki/File:Hwaseong_Fortress,_Suwon,_Gyeonggi-do,_Republic_of_Korea.jpg",
     "query": "Hwaseong Fortress Suwon"
   },
+  "dmz-tour-guide": {
+    "file": "photo-dmz-tour-guide.jpg",
+    "credit": "Photo: Dwxn, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:20240602_075300_DMZ_Imjingak_02.jpg",
+    "query": "Imjingak DMZ Paju"
+  },
   "first-evening-seoul": {
     "file": "photo-first-evening-seoul.jpg",
     "credit": "Photo: Taken by Charles Lam, CC BY-SA 2.0, via Wikimedia Commons",
@@ -52,6 +58,12 @@
     "credit": "Photo: lumoplank, CC0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Donggung_Palace_%26_Wolji_Pond,_Gyeongju_-_Donggung2687.jpg",
     "query": "Donggung Palace Wolji Pond Gyeongju"
+  },
+  "hanbok-rental-guide": {
+    "file": "photo-hanbok-rental-guide.jpg",
+    "credit": "Photo: Republic of Korea from Seoul, Republic of Korea, CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gyeongbokgung_Hanbok_01_(32928645842).jpg",
+    "query": "hanbok Gyeongbokgung"
   },
   "how-to-order-korean-food": {
     "file": "photo-how-to-order-korean-food.jpg",
@@ -118,6 +130,12 @@
     "credit": "Photo: WANGYIFAN2024, CC0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Cherry_blossoms_in_Seoul_Forest,_South_Korea2.jpg",
     "query": "cherry blossom Seoul"
+  },
+  "korea-emergency-help": {
+    "file": "photo-korea-emergency-help.jpg",
+    "credit": "Photo: Bonnielou2013 This photo was taken with Samsung Galaxy Note 4, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Pharmacy_Jongno_2.jpg",
+    "query": "pharmacy Seoul"
   },
   "korea-entry-k-eta-e-arrival": {
     "file": "photo-korea-entry-k-eta-e-arrival.jpg",
@@ -416,6 +434,12 @@
     "source": "",
     "query": "street food Myeongdong Seoul"
   },
+  "kpop-seoul-guide": {
+    "file": "photo-kpop-seoul-guide.jpg",
+    "credit": "Photo: Christian Bolz (크리스티안 볼츠), CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gyeonguiseon_Forest_Trail_Park_and_Ttaeng-ttaeng_Street_in_Seoul_(near_Hongdae,_1).jpg",
+    "query": "Hongdae street Seoul"
+  },
   "ktx-train-guide": {
     "file": "photo-ktx-train-guide.jpg",
     "credit": "Photo: calflier001, CC BY-SA 2.0, via Wikimedia Commons",
@@ -436,6 +460,12 @@
     "credit": "Photo: Christophe95, CC BY-SA 4.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Lotte_World_in_Seoul.jpg",
     "query": "Lotte World Seoul"
+  },
+  "nami-island-gapyeong": {
+    "file": "photo-nami-island-gapyeong.jpg",
+    "credit": "Photo: Minseong Kim, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gapyeong-Nami_Island_Ferry.jpg",
+    "query": "Nami Island Gapyeong"
   },
   "noraebang-korean-karaoke-guide": {
     "none": true,
@@ -531,6 +561,12 @@
     "reject": [
       "https://commons.wikimedia.org/wiki/File:Secretary_Pompeo_Presents_Certificate_to_2018_%27TIP_Report_Hero%27_Kim_Jong-chul_of_South_Korea_(43078724031).jpg"
     ]
+  },
+  "vegetarian-food-korea": {
+    "file": "photo-vegetarian-food-korea.jpg",
+    "credit": "Photo: Chloe Lim from Seoul, South Korea, CC BY 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Dolsot_Bibimbap_(6352434359).jpg",
+    "query": "bibimbap vegetables"
   },
   "which-korean-city-quiz": {
     "file": "photo-which-korean-city-quiz.jpg",
