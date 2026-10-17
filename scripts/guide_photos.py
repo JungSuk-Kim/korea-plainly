@@ -41,6 +41,12 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 # Hand-picked search words for the guides that exist today. New guides fall
 # back to words from their title.
 QUERIES = {
+    "korea-emergency-help": "pharmacy Seoul",
+    "vegetarian-food-korea": "bibimbap vegetables",
+    "kpop-seoul-guide": "Hongdae street Seoul",
+    "hanbok-rental-guide": "hanbok Gyeongbokgung",
+    "nami-island-gapyeong": "Nami Island Gapyeong",
+    "dmz-tour-guide": "Imjingak DMZ Paju",
     "olive-young-korea-guide": "Myeongdong street Seoul",
     "lotte-world-vs-everland": "Lotte World Seoul",
     "jeju-in-winter": "Hallasan snow Jeju",
