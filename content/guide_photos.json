@@ -445,7 +445,8 @@
     "file": "photo-olive-young-korea-guide.jpg",
     "credit": "Photo: by Tom@HK, CC BY 2.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Seoul-Myeongdong-01.jpg",
-    "query": "Myeongdong cosmetics shops"
+    "query": "Myeongdong Seoul",
+    "retry": true
   },
   "seollal-travel-tips": {
     "file": "photo-seollal-travel-tips.jpg",
