@@ -1,0 +1,86 @@
+{
+  "seoul": [
+    ["Getting there", "Most international flights land at Incheon Airport. The AREX train reaches Seoul Station in about an hour, and airport limousine buses stop near most big hotels. Flights from Japan and China also use Gimpo Airport, which is on the subway. See our guide to getting from Incheon Airport to Seoul."],
+    ["How long to stay", "Three days covers the palaces, a market, a hanok neighbourhood and one evening view. Five days lets you add a day trip, such as the DMZ, Suwon or Nami Island, and slow down in neighbourhoods like Seongsu or Yeonnam-dong."],
+    ["Getting around", "The subway reaches almost everywhere, with signs and announcements in English. Get a T-money card at any convenience store, top it up with cash and tap in and out. Taxis are good value for short trips, especially at night, and Kakao T works for foreigners."],
+    ["When to go", "April and May, and late September to early November, are the most comfortable months. Summer is hot, humid and rainy; winter is cold and dry but bright, with fewer crowds and Christmas lights in December."],
+    ["Where to stay", "First-time visitors usually stay around Myeongdong or Jongno for sightseeing, Hongdae for nightlife and a younger feel, or Gangnam for business and shopping. Being close to a subway station matters more than the exact district."]
+  ],
+  "busan": [
+    ["Getting there", "The KTX train runs from Seoul Station to Busan Station in about two and a half to three hours. Gimhae Airport has domestic flights from Seoul and Jeju and some international routes, and is linked to the city by light rail and bus."],
+    ["How long to stay", "Two or three days is enough for the beaches, Gamcheon Culture Village, Haedong Yonggungsa temple and Jagalchi fish market without rushing. Busan also works as the last stop of a one-week trip from Seoul via Gyeongju."],
+    ["Getting around", "Busan has a subway with four main lines, and the same T-money card you use in Seoul works here. The sights are spread along the coast, so expect some longer rides; buses and taxis fill the gaps, especially for the temple and the hillside villages."],
+    ["When to go", "Busan is a few degrees milder than Seoul in winter. July and August are beach season, lively but crowded. Spring and autumn are the best for walking the coastal paths, and early October brings the Busan International Film Festival."],
+    ["Where to stay", "Haeundae is the classic beach base with big hotels; Gwangalli has the bridge view and a lively bar scene; Seomyeon and Nampo are central and good for food, markets and transport."]
+  ],
+  "jeju": [
+    ["Getting there", "Flights from Seoul Gimpo to Jeju take about an hour and run all day; there are also flights from Busan and other cities, and some international routes. Ferries exist from the south coast but take much longer."],
+    ["How long to stay", "Three or four days lets you see the east (Seongsan Ilchulbong and the coast), the west (beaches and tea fields) and the south (waterfalls around Seogwipo), with one day for Hallasan or a slower walk on an Olle trail."],
+    ["Getting around", "Renting a car is the easiest way to see the island; you need an International Driving Permit. Buses reach most sights from Jeju City and Seogwipo but are slower and less frequent. Taxis are useful for short hops."],
+    ["When to go", "Jeju is milder than the mainland but very windy, especially in winter. Canola flowers and cherry blossoms come in late March and early April, summer is beach season, and autumn brings silver grass on the volcanic hills. Strong winds can delay flights, so keep a little slack in your plans."],
+    ["Where to stay", "Jeju City is close to the airport and practical for short stays. Seogwipo in the south suits waterfalls and the southern coast. Staying in the east or west for a night or two saves driving time."]
+  ],
+  "gyeongju": [
+    ["Getting there", "The KTX goes from Seoul Station to Singyeongju Station in about two hours, and from there buses run to the old town centre. Gyeongju is also an easy day trip or overnight stop from Busan by train or intercity bus."],
+    ["How long to stay", "One full day covers the royal tombs, Cheomseongdae, Donggung Palace and Wolji Pond at night and Hwangnidan-gil. Stay a second day for Bulguksa temple and Seokguram grotto on the hillside east of town."],
+    ["Getting around", "The historic centre is flat and walkable, and renting a bicycle is popular. City buses reach Bulguksa and the station; taxis are handy for the hill to Seokguram."],
+    ["When to go", "Cherry blossoms around the tombs and Bomun Lake in early April and the autumn leaves in late October and November are the highlights. Summers are hot; winter is quiet and cold but clear."],
+    ["Where to stay", "Stay near Hwangnidan-gil or the tomb park to walk to the night views, in a hanok guesthouse for the atmosphere, or at Bomun Lake for larger resort hotels."]
+  ],
+  "jeonju": [
+    ["Getting there", "KTX trains run from Seoul (Yongsan) to Jeonju Station in under two hours, and express buses from Seoul take about two and a half to three hours. From the station or bus terminal, a short taxi ride reaches the hanok village."],
+    ["How long to stay", "One day covers the Hanok Village, Gyeonggijeon Shrine, Jeondong Cathedral and the food. Stay overnight to see the village lit up in the evening and visit Nambu Market's night stalls on weekends."],
+    ["Getting around", "The hanok village and the old town are compact and best on foot. Taxis and city buses are easy for the station and other districts."],
+    ["When to go", "Spring and autumn are pleasant for walking; weekends and holidays are busy, so go early in the day. Jeonju is famous for bibimbap and street food at any time of year."],
+    ["Where to stay", "Sleeping in a hanok guesthouse inside the village is the experience most visitors come for; expect floor mattresses and paper doors. Hotels outside the village are cheaper and quieter."]
+  ],
+  "gangneung": [
+    ["Getting there", "The KTX runs from Seoul Station and Cheongnyangni to Gangneung in about two hours. Express buses from Seoul take a little longer."],
+    ["How long to stay", "One day covers Gyeongpo Beach and lake, Anmok's coffee street and Ojukheon; stay overnight for a sunrise at Jeongdongjin or Gyeongpo."],
+    ["Getting around", "City buses and taxis connect the station, beaches and sights. Distances between the beaches are short by taxi."],
+    ["When to go", "Summer is beach season. Winter is cold but bright, and the east coast is the classic place to watch the first sunrise of the year on 1 January. Spring brings cherry blossoms around Gyeongpo Lake."],
+    ["Where to stay", "Stay near Gyeongpo Beach for the sea and the lake, or near the station for easy trains."]
+  ],
+  "incheon": [
+    ["Getting there", "Incheon is next to Seoul and home to Korea's main international airport. Subway Line 1 and the Suin-Bundang line link central Incheon with Seoul, and the AREX train runs between the airport and Seoul."],
+    ["How long to stay", "Half a day or a day is enough for Chinatown, the Fairy Tale Village and Wolmido, or Songdo's Central Park. It also makes a good first or last night close to the airport."],
+    ["Getting around", "The subway covers the main areas and the same T-money card works as in Seoul. Taxis are useful for the airport island and the coast."],
+    ["When to go", "Any time of year. Songdo and the waterfront are pleasant on spring and autumn evenings."],
+    ["Where to stay", "Choose the airport area or Unseo for early flights, Songdo for modern hotels, or central Incheon for easy access to Seoul."]
+  ],
+  "sokcho": [
+    ["Getting there", "Express buses from Seoul reach Sokcho in about two and a half to three hours. It is also an easy bus or taxi ride from Gangneung, an hour or so down the coast."],
+    ["How long to stay", "One or two days: a day for Seoraksan National Park and another for the seafront, Abai Village and the markets."],
+    ["Getting around", "Local buses run to Seoraksan's main entrance and along the coast; taxis are quick around town."],
+    ["When to go", "Mid to late October is the peak for autumn leaves in Seoraksan, and the park is very busy then. Summer brings beach crowds; winter is cold, quiet and good for sunrise views over the East Sea."],
+    ["Where to stay", "Stay by the beach or the port for the sea and the markets, or near Seoraksan's entrance if you want an early start on the trails."]
+  ],
+  "yeosu": [
+    ["Getting there", "The KTX runs from Seoul (Yongsan) to Yeosu Expo Station in about three hours. Yeosu Airport has domestic flights from Seoul."],
+    ["How long to stay", "One or two days covers the sea cable car, Odongdo island and the waterfront at night, with time for seafood and Hyangiram Hermitage at sunrise."],
+    ["Getting around", "City buses and taxis connect the station, the harbour and the main sights."],
+    ["When to go", "Spring and autumn are the most pleasant. Yeosu is known for its night sea views, so plan at least one evening on the waterfront."],
+    ["Where to stay", "Stay near the Expo area or the harbour for walking to the night views and restaurants."]
+  ],
+  "daegu": [
+    ["Getting there", "The KTX takes about one hour forty minutes from Seoul to Dongdaegu Station. Daegu is also about an hour from Busan by train."],
+    ["How long to stay", "One or two days for Seomun Market, the old town alleys, Kim Gwang-seok Street and a view from Apsan Park, with good food throughout."],
+    ["Getting around", "Daegu has subway and monorail lines that cover the main areas; taxis are inexpensive."],
+    ["When to go", "Daegu is one of the hottest cities in Korea in summer. Spring and autumn are the most comfortable months to explore on foot."],
+    ["Where to stay", "Stay in the central Jung-gu area near the markets and old town, or near Dongdaegu Station for easy trains."]
+  ],
+  "daejeon": [
+    ["Getting there", "Daejeon is about an hour from Seoul by KTX, with two main stations, Daejeon and Seodaejeon."],
+    ["How long to stay", "A day trip or one night is enough for the science museums, Hanbat Arboretum and the city's famous bakery."],
+    ["Getting around", "A subway line and buses cover the city; taxis are easy to find."],
+    ["When to go", "Any season; spring and autumn are the best for the parks and arboretum."],
+    ["Where to stay", "Stay near Daejeon Station or in the Dunsan area for restaurants and transport."]
+  ],
+  "gwangju": [
+    ["Getting there", "The KTX runs from Seoul (Yongsan) to Gwangju Songjeong Station in about two hours."],
+    ["How long to stay", "One or two days for the Asia Culture Center, the May 18 memorial sites, Yangnim-dong's old houses and the food. Damyang's bamboo forest is an easy half-day trip."],
+    ["Getting around", "Gwangju has a subway line and a good bus network; taxis are inexpensive."],
+    ["When to go", "Spring and autumn are the most comfortable. Gwangju is known as one of Korea's best food cities at any time of year."],
+    ["Where to stay", "Stay downtown near the Asia Culture Center for walking to sights and restaurants, or near Songjeong Station for trains."]
+  ]
+}

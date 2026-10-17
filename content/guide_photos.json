@@ -213,10 +213,10 @@
     "query": "Jogyesa lotus lanterns Seoul"
   },
   "korea-in-november": {
-    "file": "photo-korea-in-november.jpg",
-    "credit": "Photo: Eggmoon, CC BY-SA 3.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Cornus_kousa_at_november_in_Seoul,_Korea.jpg",
-    "query": "Seoul autumn November"
+    "file": "photo-own-autumn-sunset.jpg",
+    "credit": "Photo: Jungsuk Kim, Korea Plainly",
+    "source": "",
+    "manual": true
   },
   "korea-in-october": {
     "file": "photo-korea-in-october.jpg",
@@ -335,10 +335,10 @@
     "query": "Pyeongchang trout festival"
   },
   "korea-winter-travel-guide": {
-    "file": "photo-korea-winter-travel-guide.jpg",
-    "credit": "Photo: Korea.net / Korean Culture and Information Service (Jeon Han), CC BY-SA 2.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Korea_Seoul_Snow_02.jpg",
-    "query": "Gyeongbokgung snow Seoul"
+    "file": "photo-own-hanok-mountains.jpg",
+    "credit": "Photo: Jungsuk Kim, Korea Plainly",
+    "source": "",
+    "manual": true
   },
   "korean-atm-guide": {
     "file": "thumb-cash-cards.jpg",

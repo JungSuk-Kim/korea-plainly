@@ -1,0 +1,24 @@
+{
+  "why": "Kept out of search results while the site builds trust: link-only hub pages and hotel/shop listing articles. Remove a page from this list to let it be indexed again.",
+  "pages": [
+    "shop",
+    "stay",
+    "eat-drink",
+    "see-do",
+    "incheon-see-do",
+    "jeju-see-do",
+    "sokcho-see-do",
+    "seoul-stay-four-seasons-hotel-seoul",
+    "busan-shopping-lululemon-busan-shinsegae-centum-city",
+    "busan-stay-ananti-at-busan-cove",
+    "jeju-stay-maison-glad-jeju",
+    "gyeongju-stay-hilton-gyeongju",
+    "jeonju-stay-lahan-hotel-jeonju",
+    "gangneung-stay-skybay-hotel-gyeongpo",
+    "incheon-shopping-hyundai-premium-outlets-songdo",
+    "incheon-stay-nest-hotel-incheon",
+    "sokcho-stay-lotte-resort-sokcho",
+    "incheon-food-incheon-airport-terminal-2-food-court",
+    "jeju-food-gozip-dol-wooluck-jeju-airport-branch"
+  ]
+}

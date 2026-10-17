@@ -74,7 +74,10 @@ jobs:
           GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
-        run: python scripts/generate_regional_day.py
+        run: |
+          # paused while the site builds trust for AdSense (quality over volume); delete content/regional_paused to resume
+          if [ -f content/regional_paused ]; then echo "Regional articles are paused (content/regional_paused)."; exit 0; fi
+          python scripts/generate_regional_day.py
 
       - name: Maintain site
         if: steps.guard.outputs.skip != 'true'

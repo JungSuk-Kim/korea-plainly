@@ -38,6 +38,11 @@ reply in Korean and address him as "주인님" (not "사장님"), keep site cont
 - Regional articles: a local-guide voice that never narrates sources ("search results", "not confirmed").
   Fix bad ones with the "Rewrite regional articles" workflow rather than by hand.
 - One article per place. The regional generator skips places already in `content/published.json`.
+- AdSense quality work (Oct 2026, after a "low value content" review): regional place articles are paused while
+  `content/regional_paused` exists; `content/noindex.json` lists pages kept out of search (link-only hubs, hotel/shop
+  listings) and `seo_basics.py` marks them noindex; region hubs get a "Planning a trip to …" section from
+  `content/region_overviews.json`; articles are bylined "Jungsuk Kim" (Person in the Article JSON-LD, about.html#author).
+  The owner's own photos are `photo-own-*.jpg` (EXIF stripped), credited "Photo: Jungsuk Kim, Korea Plainly".
 
 ## Short videos
 

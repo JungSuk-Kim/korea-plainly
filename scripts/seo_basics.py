@@ -11,6 +11,7 @@ Run before scripts/update_sitemap.py. Safe to run any number of times.
 The Search Console verification file (google*.html) is never touched.
 """
 import html
+import json
 import re
 from pathlib import Path
 
@@ -41,9 +42,25 @@ def main_words(s):
     return len(re.sub(r"<[^>]+>", " ", body).split())
 
 
+HELD_BACK = ROOT / "content" / "noindex.json"   # pages kept out of search on purpose (listing-style or link-only pages)
+
+
+def held_back():
+    try:
+        d = json.loads(HELD_BACK.read_text(encoding="utf-8"))
+    except Exception:
+        return set()
+    return {x if x.endswith(".html") else x + ".html" for x in d.get("pages", [])}
+
+
+HELD = held_back()
+
+
 def is_thin(s, name):
     if name in PROTECTED:
         return False
+    if name in HELD:
+        return True
     return main_words(s) < THIN_WORDS and s.count("Read guide") < MIN_CARDS
 
 

@@ -58,7 +58,7 @@ def nice(d):
 
 def add_date(s, published, nl, updated=None):
     """Byline with the publish date (and the update date once the text has changed). Rebuilt every run."""
-    line = (f'<p class="kp-date" data-kp="date">By <a href="about.html#how-we-work">Korea Plainly</a> · Published '
+    line = (f'<p class="kp-date" data-kp="date">By <a href="about.html#author">Jungsuk Kim</a>, Korea Plainly · Published '
             f'<time datetime="{published}">{nice(published)}</time>')
     if updated and updated > published:
         line += f' · Updated <time datetime="{updated}">{nice(updated)}</time>'
@@ -107,7 +107,7 @@ def add_jsonld(s, name, published, nl, updated=None):
         "image": [meta(s, r'<meta[^>]+property=["\']og:image["\'][^>]*content=["\'](.*?)["\']') or f"{BASE}/og-default.jpg"],
         "datePublished": published,
         "dateModified": updated if updated and updated > published else published,
-        "author": {"@type": "Organization", "name": "Korea Plainly", "url": BASE + "/"},
+        "author": {"@type": "Person", "name": "Jungsuk Kim", "url": BASE + "/about.html#author"},
         "publisher": {"@type": "Organization", "name": "Korea Plainly", "url": BASE + "/"},
         "mainEntityOfPage": url,
     }
