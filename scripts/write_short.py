@@ -149,7 +149,7 @@ def write(slug):
     # keep the narration short: drop middle slides until it fits
     while sum(len(s["voice"].split()) for s in slides) > MAX_WORDS and len(slides) > 5:
         slides.pop(-2)
-    slides.append({"end": True, "title": "New Korea tips", "sub": "Every weekday",
+    slides.append({"end": True, "title": "New Korea tips", "sub": "Mon · Wed · Fri",
                    "voice": SHORT_OUTRO})
     out = {"article": slug, "fallback": cover if cover in photos else slides[0].get("image", ""), "title": spec["title"][:90],
            "summary": spec.get("summary", ""), "hashtags": spec.get("hashtags", "#Korea #KoreaTravel"),
