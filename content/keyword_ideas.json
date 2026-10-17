@@ -1,0 +1,1274 @@
+{
+ "updated": "2026-10-18T08:51+09:00",
+ "seeds": 82,
+ "suggestions": 741,
+ "gaps": [
+  {
+   "query": "kakao talk",
+   "seeds": [
+    "kakao t"
+   ],
+   "score": 10
+  },
+  {
+   "query": "halal korean bbq",
+   "seeds": [
+    "halal korea"
+   ],
+   "score": 10
+  },
+  {
+   "query": "gangnam style",
+   "seeds": [
+    "gangnam"
+   ],
+   "score": 10
+  },
+  {
+   "query": "south korea travel tips reddit",
+   "seeds": [
+    "south korea travel tips"
+   ],
+   "score": 9
+  },
+  {
+   "query": "things to do in koreatown los angeles",
+   "seeds": [
+    "things to do in korea"
+   ],
+   "score": 9
+  },
+  {
+   "query": "seoul food meat company",
+   "seeds": [
+    "seoul food"
+   ],
+   "score": 9
+  },
+  {
+   "query": "korea money to usd",
+   "seeds": [
+    "korea money"
+   ],
+   "score": 9
+  },
+  {
+   "query": "vegetarian korean recipes",
+   "seeds": [
+    "vegetarian korea"
+   ],
+   "score": 9
+  },
+  {
+   "query": "halal korean bbq california",
+   "seeds": [
+    "halal korea"
+   ],
+   "score": 9
+  },
+  {
+   "query": "korea entry requirements for us citizens",
+   "seeds": [
+    "korea entry requirements"
+   ],
+   "score": 9
+  },
+  {
+   "query": "korea shopping mall collapse",
+   "seeds": [
+    "korea shopping"
+   ],
+   "score": 9
+  },
+  {
+   "query": "olive young usa",
+   "seeds": [
+    "olive young"
+   ],
+   "score": 9
+  },
+  {
+   "query": "hongdae 33",
+   "seeds": [
+    "hongdae"
+   ],
+   "score": 9
+  },
+  {
+   "query": "gangnam korean bbq",
+   "seeds": [
+    "gangnam"
+   ],
+   "score": 9
+  },
+  {
+   "query": "korean temple stay program",
+   "seeds": [
+    "korean temple stay"
+   ],
+   "score": 9
+  },
+  {
+   "query": "jjimjilbang meaning",
+   "seeds": [
+    "jjimjilbang"
+   ],
+   "score": 9
+  },
+  {
+   "query": "korea nightlife girl",
+   "seeds": [
+    "korea nightlife"
+   ],
+   "score": 9
+  },
+  {
+   "query": "korean words for travelers",
+   "seeds": [
+    "korean phrases for travelers"
+   ],
+   "score": 9
+  },
+  {
+   "query": "korea winter travel package",
+   "seeds": [
+    "korea winter travel"
+   ],
+   "score": 9
+  },
+  {
+   "query": "korea travel packages",
+   "seeds": [
+    "korea travel"
+   ],
+   "score": 8
+  },
+  {
+   "query": "things to do in koreatown",
+   "seeds": [
+    "things to do in korea"
+   ],
+   "score": 8
+  },
+  {
+   "query": "things to do in seoul with kids",
+   "seeds": [
+    "things to do in seoul"
+   ],
+   "score": 8
+  },
+  {
+   "query": "seoul food wahiawa",
+   "seeds": [
+    "seoul food"
+   ],
+   "score": 8
+  },
+  {
+   "query": "jeju island missing people",
+   "seeds": [
+    "jeju island"
+   ],
+   "score": 8
+  },
+  {
+   "query": "korea transportation card for tourist",
+   "seeds": [
+    "korea transport"
+   ],
+   "score": 8
+  },
+  {
+   "query": "korea money heist",
+   "seeds": [
+    "korea money"
+   ],
+   "score": 8
+  },
+  {
+   "query": "cash in korea reddit",
+   "seeds": [
+    "cash in korea"
+   ],
+   "score": 8
+  },
+  {
+   "query": "korean street food orlando",
+   "seeds": [
+    "korean street food"
+   ],
+   "score": 8
+  },
+  {
+   "query": "vegetarian korean bbq",
+   "seeds": [
+    "vegetarian korea"
+   ],
+   "score": 8
+  },
+  {
+   "query": "halal korean bbq nyc",
+   "seeds": [
+    "halal korea"
+   ],
+   "score": 8
+  },
+  {
+   "query": "korea entry requirements uk",
+   "seeds": [
+    "korea entry requirements"
+   ],
+   "score": 8
+  },
+  {
+   "query": "olive young pasadena",
+   "seeds": [
+    "olive young"
+   ],
+   "score": 8
+  },
+  {
+   "query": "myeongdong kyoja",
+   "seeds": [
+    "myeongdong"
+   ],
+   "score": 8
+  },
+  {
+   "query": "hongdae guy",
+   "seeds": [
+    "hongdae"
+   ],
+   "score": 8
+  },
+  {
+   "query": "gangnam style lyrics",
+   "seeds": [
+    "gangnam"
+   ],
+   "score": 8
+  },
+  {
+   "query": "noraebang meaning",
+   "seeds": [
+    "noraebang"
+   ],
+   "score": 8
+  },
+  {
+   "query": "korea nightlife reddit",
+   "seeds": [
+    "korea nightlife"
+   ],
+   "score": 8
+  },
+  {
+   "query": "seoul in november reddit",
+   "seeds": [
+    "seoul in november"
+   ],
+   "score": 8
+  },
+  {
+   "query": "jeju in november reddit",
+   "seeds": [
+    "jeju in november"
+   ],
+   "score": 8
+  },
+  {
+   "query": "busan in november reddit",
+   "seeds": [
+    "busan in november"
+   ],
+   "score": 8
+  },
+  {
+   "query": "seoul in december reddit",
+   "seeds": [
+    "seoul in december"
+   ],
+   "score": 8
+  },
+  {
+   "query": "jeju in december reddit",
+   "seeds": [
+    "jeju in december"
+   ],
+   "score": 8
+  },
+  {
+   "query": "busan in december reddit",
+   "seeds": [
+    "busan in december"
+   ],
+   "score": 8
+  },
+  {
+   "query": "seoul in january reddit",
+   "seeds": [
+    "seoul in january"
+   ],
+   "score": 8
+  },
+  {
+   "query": "busan in january reddit",
+   "seeds": [
+    "busan in january"
+   ],
+   "score": 8
+  },
+  {
+   "query": "things to do in seoul for young adults",
+   "seeds": [
+    "things to do in seoul"
+   ],
+   "score": 7
+  },
+  {
+   "query": "where to stay in seoul for first timers",
+   "seeds": [
+    "where to stay in seoul"
+   ],
+   "score": 7
+  },
+  {
+   "query": "seoul food charlotte",
+   "seeds": [
+    "seoul food"
+   ],
+   "score": 7
+  },
+  {
+   "query": "busan travel blog",
+   "seeds": [
+    "busan travel"
+   ],
+   "score": 7
+  },
+  {
+   "query": "things to do in busan with kids",
+   "seeds": [
+    "things to do in busan"
+   ],
+   "score": 7
+  },
+  {
+   "query": "jeju island pearland",
+   "seeds": [
+    "jeju island"
+   ],
+   "score": 7
+  },
+  {
+   "query": "things to do in jeju-do",
+   "seeds": [
+    "things to do in jeju"
+   ],
+   "score": 7
+  },
+  {
+   "query": "korea transportation safety authority",
+   "seeds": [
+    "korea transport"
+   ],
+   "score": 7
+  },
+  {
+   "query": "t money card apple wallet",
+   "seeds": [
+    "t money card"
+   ],
+   "score": 7
+  },
+  {
+   "query": "korea sim card reddit",
+   "seeds": [
+    "korea sim card"
+   ],
+   "score": 7
+  },
+  {
+   "query": "kakao talk download",
+   "seeds": [
+    "kakao t"
+   ],
+   "score": 7
+  },
+  {
+   "query": "korean bbq las vegas",
+   "seeds": [
+    "korean bbq"
+   ],
+   "score": 7
+  },
+  {
+   "query": "korea visa application",
+   "seeds": [
+    "korea visa"
+   ],
+   "score": 7
+  },
+  {
+   "query": "k-eta application",
+   "seeds": [
+    "k-eta"
+   ],
+   "score": 7
+  },
+  {
+   "query": "korea entry requirements for malaysian",
+   "seeds": [
+    "korea entry requirements"
+   ],
+   "score": 7
+  },
+  {
+   "query": "korean temple stay reddit",
+   "seeds": [
+    "korean temple stay"
+   ],
+   "score": 7
+  },
+  {
+   "query": "hanbok rentals near gyeongbokgung palace",
+   "seeds": [
+    "hanbok rental"
+   ],
+   "score": 7
+  },
+  {
+   "query": "jjimjilbang nyc",
+   "seeds": [
+    "jjimjilbang"
+   ],
+   "score": 7
+  },
+  {
+   "query": "korean phrases for travel reddit",
+   "seeds": [
+    "korean phrases for travelers"
+   ],
+   "score": 7
+  },
+  {
+   "query": "busan in october reddit",
+   "seeds": [
+    "busan in october"
+   ],
+   "score": 7
+  },
+  {
+   "query": "jeju in november temperature",
+   "seeds": [
+    "jeju in november"
+   ],
+   "score": 7
+  },
+  {
+   "query": "busan temperature in november",
+   "seeds": [
+    "busan in november"
+   ],
+   "score": 7
+  },
+  {
+   "query": "korea in december reddit",
+   "seeds": [
+    "korea in december"
+   ],
+   "score": 7
+  },
+  {
+   "query": "things to do in koreatown nyc",
+   "seeds": [
+    "things to do in korea"
+   ],
+   "score": 6
+  },
+  {
+   "query": "seoul travel packages",
+   "seeds": [
+    "seoul travel"
+   ],
+   "score": 6
+  },
+  {
+   "query": "where to stay in seoul reddit",
+   "seeds": [
+    "where to stay in seoul"
+   ],
+   "score": 6
+  },
+  {
+   "query": "seoul food wahiawa menu",
+   "seeds": [
+    "seoul food"
+   ],
+   "score": 6
+  },
+  {
+   "query": "busan travel reddit",
+   "seeds": [
+    "busan travel"
+   ],
+   "score": 6
+  },
+  {
+   "query": "busan itinerary reddit",
+   "seeds": [
+    "busan itinerary"
+   ],
+   "score": 6
+  },
+  {
+   "query": "jeju island solo leveling",
+   "seeds": [
+    "jeju island"
+   ],
+   "score": 6
+  },
+  {
+   "query": "ktx train speed",
+   "seeds": [
+    "ktx train"
+   ],
+   "score": 6
+  },
+  {
+   "query": "kakao talk app",
+   "seeds": [
+    "kakao t"
+   ],
+   "score": 6
+  },
+  {
+   "query": "korea money to us dollar",
+   "seeds": [
+    "korea money"
+   ],
+   "score": 6
+  },
+  {
+   "query": "cash in korean informal",
+   "seeds": [
+    "cash in korea"
+   ],
+   "score": 6
+  },
+  {
+   "query": "korean food to try for beginners",
+   "seeds": [
+    "korean food to try"
+   ],
+   "score": 6
+  }
+ ],
+ "retitle": [
+  {
+   "query": "seoul travel guide",
+   "seeds": [
+    "seoul travel"
+   ],
+   "score": 10,
+   "pages": [
+    "korea-emergency-help.html",
+    "korea-in-december.html",
+    "lotte-world-vs-everland.html"
+   ]
+  },
+  {
+   "query": "things to do in jeju island",
+   "seeds": [
+    "things to do in jeju"
+   ],
+   "score": 10,
+   "pages": [
+    "jeju-3-day-itinerary.html",
+    "korea-in-october.html",
+    "korea-autumn-foliage-2026.html"
+   ]
+  },
+  {
+   "query": "korea transportation card",
+   "seeds": [
+    "korea transport"
+   ],
+   "score": 10,
+   "pages": [
+    "korean-convenience-store-tips.html",
+    "seoul-subway-for-foreigners.html"
+   ]
+  },
+  {
+   "query": "seoul subway map",
+   "seeds": [
+    "seoul subway"
+   ],
+   "score": 10,
+   "pages": [
+    "seoul-5-day-itinerary.html",
+    "seoul-cafe-cafe-onion-anguk.html",
+    "lotte-world-vs-everland.html"
+   ]
+  },
+  {
+   "query": "korea budget airline",
+   "seeds": [
+    "korea budget"
+   ],
+   "score": 10,
+   "pages": [
+    "seoul-vs-busan.html",
+    "olive-young-korea-guide.html"
+   ]
+  },
+  {
+   "query": "jjimjilbang seoul",
+   "seeds": [
+    "jjimjilbang"
+   ],
+   "score": 10,
+   "pages": [
+    "seoul-3-day-itinerary.html",
+    "korea-ski-resorts-guide.html",
+    "korea-winter-travel-guide.html"
+   ]
+  },
+  {
+   "query": "jeju in january weather",
+   "seeds": [
+    "jeju in january"
+   ],
+   "score": 10,
+   "pages": [
+    "korea-in-december.html",
+    "korea-weather-by-season.html",
+    "korea-in-february.html"
+   ]
+  },
+  {
+   "query": "seoul autumn festa 2026",
+   "seeds": [
+    "seoul autumn"
+   ],
+   "score": 10,
+   "pages": [
+    "korea-in-december.html",
+    "korea-festivals.html",
+    "korea-winter-festivals.html"
+   ]
+  },
+  {
+   "query": "korea winter olympics",
+   "seeds": [
+    "korea winter"
+   ],
+   "score": 10,
+   "pages": [
+    "korea-ski-resorts-guide.html"
+   ]
+  },
+  {
+   "query": "korea travel requirements",
+   "seeds": [
+    "korea travel"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-transit-card-guide.html",
+    "seoul-travel-cheonggyecheon.html",
+    "arriving-in-korea-checklist.html"
+   ]
+  },
+  {
+   "query": "korea trip package",
+   "seeds": [
+    "korea trip"
+   ],
+   "score": 9,
+   "pages": [
+    "korean-convenience-store-tips.html",
+    "dmz-tour-guide.html",
+    "korean-convenience-stores-compared.html"
+   ]
+  },
+  {
+   "query": "busan travel guide",
+   "seeds": [
+    "busan travel"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-emergency-help.html",
+    "korea-in-december.html",
+    "lotte-world-vs-everland.html"
+   ]
+  },
+  {
+   "query": "things to do in busan south korea",
+   "seeds": [
+    "things to do in busan"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-in-december.html",
+    "korea-in-may.html",
+    "korea-in-july.html"
+   ]
+  },
+  {
+   "query": "things to do in jeju south korea",
+   "seeds": [
+    "things to do in jeju"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-in-december.html",
+    "korea-in-may.html",
+    "korea-in-july.html"
+   ]
+  },
+  {
+   "query": "jeonju hanok village photos",
+   "seeds": [
+    "jeonju hanok village"
+   ],
+   "score": 9,
+   "pages": [
+    "jeonju-culture-jeonju-hanok-village.html",
+    "kakaotalk-korea-guide.html",
+    "hanbok-rental-guide.html"
+   ]
+  },
+  {
+   "query": "korea transportation",
+   "seeds": [
+    "korea transport"
+   ],
+   "score": 9,
+   "pages": [
+    "korean-convenience-store-tips.html",
+    "seoul-subway-for-foreigners.html"
+   ]
+  },
+  {
+   "query": "t money card korea",
+   "seeds": [
+    "t money card"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-tax-refund-guide.html",
+    "korea-transit-card-guide.html",
+    "tipping-in-korea.html"
+   ]
+  },
+  {
+   "query": "ktx train seoul to busan",
+   "seeds": [
+    "ktx train"
+   ],
+   "score": 9,
+   "pages": [
+    "seoul-vs-busan.html",
+    "korea-trip-cost-calculator.html",
+    "korea-7-day-itinerary.html"
+   ]
+  },
+  {
+   "query": "incheon airport to seoul station",
+   "seeds": [
+    "incheon airport to seoul"
+   ],
+   "score": 9,
+   "pages": [
+    "seoul-3-day-itinerary.html",
+    "seoul-neighborhoods-guide.html",
+    "seoul-vs-busan.html"
+   ]
+  },
+  {
+   "query": "korea sim card with phone number",
+   "seeds": [
+    "korea sim card"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-emergency-help.html",
+    "sim-esim-wifi-korea.html"
+   ]
+  },
+  {
+   "query": "korea esim with phone number",
+   "seeds": [
+    "korea esim"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-emergency-help.html",
+    "sim-esim-wifi-korea.html"
+   ]
+  },
+  {
+   "query": "naver map english",
+   "seeds": [
+    "naver map"
+   ],
+   "score": 9,
+   "pages": [
+    "naver-map-vs-google-maps-korea.html",
+    "korea-emergency-help.html",
+    "sokcho-leisure-biseondae-peak.html"
+   ]
+  },
+  {
+   "query": "south korea apps for tourists",
+   "seeds": [
+    "korea apps for tourists"
+   ],
+   "score": 9,
+   "pages": [
+    "olive-young-korea-guide.html",
+    "kakao-t-taxi-korea.html"
+   ]
+  },
+  {
+   "query": "wowpass card",
+   "seeds": [
+    "wowpass"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-money-exchange.html",
+    "seoul-first-time.html"
+   ]
+  },
+  {
+   "query": "tax refund korea calculator",
+   "seeds": [
+    "tax refund korea"
+   ],
+   "score": 9,
+   "pages": [
+    "korean-phrases-cheat-sheet.html",
+    "korea-travel-budget.html",
+    "start-here.html"
+   ]
+  },
+  {
+   "query": "korean food to try in seoul",
+   "seeds": [
+    "korean food to try"
+   ],
+   "score": 9,
+   "pages": [
+    "seoul-5-day-itinerary.html",
+    "jeonju-cafe-haeyooldam.html",
+    "korean-phrases-cheat-sheet.html"
+   ]
+  },
+  {
+   "query": "korea visa for us citizens",
+   "seeds": [
+    "korea visa"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-entry-k-eta-e-arrival.html"
+   ]
+  },
+  {
+   "query": "korea packing list summer",
+   "seeds": [
+    "korea packing list"
+   ],
+   "score": 9,
+   "pages": [
+    "best-time-to-visit-korea.html",
+    "korea-festivals.html",
+    "jeju-in-winter.html"
+   ]
+  },
+  {
+   "query": "myeongdong night market",
+   "seeds": [
+    "myeongdong"
+   ],
+   "score": 9,
+   "pages": [
+    "seoul-5-day-itinerary.html",
+    "seoul-3-day-itinerary.html",
+    "seoul-neighborhoods-guide.html"
+   ]
+  },
+  {
+   "query": "korean skincare shopping app",
+   "seeds": [
+    "korean skincare shopping"
+   ],
+   "score": 9,
+   "pages": [
+    "olive-young-korea-guide.html"
+   ]
+  },
+  {
+   "query": "dmz tours from seoul",
+   "seeds": [
+    "dmz tour"
+   ],
+   "score": 9,
+   "pages": [
+    "dmz-tour-guide.html",
+    "nami-island-gapyeong.html",
+    "day-trips-from-seoul.html"
+   ]
+  },
+  {
+   "query": "seoul in october weather",
+   "seeds": [
+    "seoul in october"
+   ],
+   "score": 9,
+   "pages": [
+    "seoul-culture-gyeongbokgung-palace.html",
+    "korea-weather-by-season.html",
+    "korea-in-november.html"
+   ]
+  },
+  {
+   "query": "jeju in october weather",
+   "seeds": [
+    "jeju in october"
+   ],
+   "score": 9,
+   "pages": [
+    "gangneung-culture-ojukheon.html",
+    "korea-weather-by-season.html",
+    "korea-in-november.html"
+   ]
+  },
+  {
+   "query": "busan in october weather",
+   "seeds": [
+    "busan in october"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-weather-by-season.html",
+    "sokcho-culture-naksansa-temple.html",
+    "korea-in-november.html"
+   ]
+  },
+  {
+   "query": "seoul in november weather",
+   "seeds": [
+    "seoul in november"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-in-december.html",
+    "lotte-world-vs-everland.html",
+    "korea-weather-by-season.html"
+   ]
+  },
+  {
+   "query": "jeju in november weather",
+   "seeds": [
+    "jeju in november"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-in-december.html",
+    "korea-weather-by-season.html",
+    "korea-in-november.html"
+   ]
+  },
+  {
+   "query": "busan in november weather",
+   "seeds": [
+    "busan in november"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-in-december.html",
+    "lotte-world-vs-everland.html",
+    "korea-weather-by-season.html"
+   ]
+  },
+  {
+   "query": "seoul in december weather",
+   "seeds": [
+    "seoul in december"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-in-december.html",
+    "korea-in-may.html",
+    "lotte-world-vs-everland.html"
+   ]
+  },
+  {
+   "query": "jeju in december weather",
+   "seeds": [
+    "jeju in december"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-in-december.html",
+    "korea-in-may.html",
+    "korea-in-july.html"
+   ]
+  },
+  {
+   "query": "busan in december weather",
+   "seeds": [
+    "busan in december"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-in-december.html",
+    "korea-in-may.html",
+    "lotte-world-vs-everland.html"
+   ]
+  },
+  {
+   "query": "seoul in january weather",
+   "seeds": [
+    "seoul in january"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-in-december.html",
+    "korea-weather-by-season.html",
+    "korea-ski-resorts-guide.html"
+   ]
+  },
+  {
+   "query": "busan in january weather",
+   "seeds": [
+    "busan in january"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-in-december.html",
+    "korea-weather-by-season.html",
+    "korea-in-february.html"
+   ]
+  },
+  {
+   "query": "korea autumn festival",
+   "seeds": [
+    "korea autumn"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-in-december.html",
+    "korea-in-november.html",
+    "nami-island-gapyeong.html"
+   ]
+  },
+  {
+   "query": "seoul autumn festa",
+   "seeds": [
+    "seoul autumn"
+   ],
+   "score": 9,
+   "pages": [
+    "korea-in-december.html",
+    "korea-festivals.html",
+    "korea-winter-festivals.html"
+   ]
+  },
+  {
+   "query": "korea autumn trip",
+   "seeds": [
+    "korea autumn travel"
+   ],
+   "score": 9,
+   "pages": [
+    "seoul-5-day-itinerary.html",
+    "sokcho-leisure-biseondae-peak.html",
+    "korea-in-december.html"
+   ]
+  },
+  {
+   "query": "seoul winter temperature",
+   "seeds": [
+    "seoul winter"
+   ],
+   "score": 9,
+   "pages": [
+    "seoul-travel-cheonggyecheon.html"
+   ]
+  },
+  {
+   "query": "korea trip flight",
+   "seeds": [
+    "korea trip"
+   ],
+   "score": 8,
+   "pages": [
+    "sim-esim-wifi-korea.html",
+    "first-evening-seoul.html",
+    "korea-in-november.html"
+   ]
+  },
+  {
+   "query": "seoul korea travel tips",
+   "seeds": [
+    "south korea travel tips"
+   ],
+   "score": 8,
+   "pages": [
+    "korea-emergency-help.html",
+    "korea-in-december.html",
+    "lotte-world-vs-everland.html"
+   ]
+  },
+  {
+   "query": "first time in korea show",
+   "seeds": [
+    "first time in korea"
+   ],
+   "score": 8,
+   "pages": [
+    "korea-emergency-help.html",
+    "jeonju-cafe-haeyooldam.html",
+    "useful-korean-phrases.html"
+   ]
+  },
+  {
+   "query": "seoul travel pass",
+   "seeds": [
+    "seoul travel"
+   ],
+   "score": 8,
+   "pages": [
+    "lotte-world-vs-everland.html",
+    "olive-young-korea-guide.html",
+    "incheon-culture-incheon-international-airport-terminal-2-korean-traditional-cult.html"
+   ]
+  },
+  {
+   "query": "where to stay in seoul first time",
+   "seeds": [
+    "where to stay in seoul"
+   ],
+   "score": 8,
+   "pages": [
+    "korea-emergency-help.html",
+    "seoul-shopping-myeongdong-shopping-street.html",
+    "korea-in-july.html"
+   ]
+  },
+  {
+   "query": "busan travel pass",
+   "seeds": [
+    "busan travel"
+   ],
+   "score": 8,
+   "pages": [
+    "lotte-world-vs-everland.html"
+   ]
+  },
+  {
+   "query": "things to do in busan for a day",
+   "seeds": [
+    "things to do in busan"
+   ],
+   "score": 8,
+   "pages": [
+    "korea-in-december.html",
+    "korea-in-may.html",
+    "korea-in-july.html"
+   ]
+  },
+  {
+   "query": "things to do in jeju island south korea",
+   "seeds": [
+    "things to do in jeju"
+   ],
+   "score": 8,
+   "pages": [
+    "jeju-3-day-itinerary.html",
+    "korea-in-october.html",
+    "korea-autumn-foliage-2026.html"
+   ]
+  },
+  {
+   "query": "gyeongju world",
+   "seeds": [
+    "gyeongju"
+   ],
+   "score": 8,
+   "pages": [
+    "seoul-5-day-itinerary.html",
+    "lotte-world-vs-everland.html",
+    "gyeongju-1-day-itinerary.html"
+   ]
+  },
+  {
+   "query": "jeonju hanok village from seoul",
+   "seeds": [
+    "jeonju hanok village"
+   ],
+   "score": 8,
+   "pages": [
+    "jeonju-cafe-haeyooldam.html",
+    "seoul-culture-gyeongbokgung-palace.html",
+    "jeonju.html"
+   ]
+  },
+  {
+   "query": "seoul subway map english",
+   "seeds": [
+    "seoul subway"
+   ],
+   "score": 8,
+   "pages": [
+    "first-evening-seoul.html",
+    "olive-young-korea-guide.html",
+    "seoul-subway-for-foreigners.html"
+   ]
+  },
+  {
+   "query": "t money card seoul",
+   "seeds": [
+    "t money card"
+   ],
+   "score": 8,
+   "pages": [
+    "korea-tax-refund-guide.html",
+    "tipping-in-korea.html",
+    "korea-money-exchange.html"
+   ]
+  },
+  {
+   "query": "ktx train tickets",
+   "seeds": [
+    "ktx train"
+   ],
+   "score": 8,
+   "pages": [
+    "korea-ski-resorts-guide.html",
+    "seoul-vs-busan.html",
+    "korea-7-day-itinerary.html"
+   ]
+  },
+  {
+   "query": "incheon airport to seoul train",
+   "seeds": [
+    "incheon airport to seoul"
+   ],
+   "score": 8,
+   "pages": [
+    "seoul-3-day-itinerary.html",
+    "seoul-vs-busan.html",
+    "kakao-t-taxi-korea.html"
+   ]
+  }
+ ],
+ "covered": 112,
+ "note": "gaps = common searches no page title covers (new guide ideas); retitle = searches a page answers in its text but not in its title. Scores are relative, from autocomplete position."
+}
