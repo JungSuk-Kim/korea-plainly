@@ -43,6 +43,10 @@
     "yeosu-travel-hyangilam-hermitage": {
       "at": "2026-10-17T06:10:12+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3my2gl4kn5h2m"
+    },
+    "yeosu-food-crab-1st-avenue-kkotdol": {
+      "at": "2026-10-17T13:55:28+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3my3al3svpb2q"
     }
   },
   "bluesky_videos": {
@@ -132,6 +136,10 @@
     "yeosu-travel-hyangilam-hermitage": {
       "at": "2026-10-17T06:10:19+00:00",
       "ref": "1261611360380213_122103133059509276"
+    },
+    "yeosu-food-crab-1st-avenue-kkotdol": {
+      "at": "2026-10-17T13:55:37+00:00",
+      "ref": "1261611360380213_122103431379509276"
     }
   },
   "threads": {
@@ -158,6 +166,10 @@
     "yeosu-travel-hyangilam-hermitage": {
       "at": "2026-10-17T06:10:31+00:00",
       "ref": "18137386789729276"
+    },
+    "yeosu-food-crab-1st-avenue-kkotdol": {
+      "at": "2026-10-17T13:55:49+00:00",
+      "ref": "17964219666227662"
     }
   }
 }
