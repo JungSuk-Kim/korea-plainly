@@ -1,0 +1,42 @@
+name: YouTube stats
+
+# Daily 08:53 KST (and by hand): views, likes and comments per video, plus watch time and retention once the
+# YouTube token includes yt-analytics.readonly. Saved in content/youtube_stats.json for the ops map and the
+# morning proposals.
+on:
+  schedule:
+    - cron: "53 23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-bot
+  cancel-in-progress: false
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Ask YouTube
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          pip install -q requests
+          python scripts/youtube_stats.py
+      - name: Commit
+        run: |
+          git config user.name "Korea Plainly Bot"
+          git config user.email "actions@github.com"
+          git add content/youtube_stats.json
+          git diff --cached --quiet && exit 0
+          git commit -m "YouTube stats"
+          git pull --rebase -X theirs
+          git push

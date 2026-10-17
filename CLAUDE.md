@@ -68,6 +68,8 @@ Instagram/Threads tokens into Secrets (`GH_SECRETS_TOKEN`); "Meta check" tests a
 Shorts end with a subscribe ask and a SUBSCRIBE end card (`video_text.SHORT_OUTRO`, `make_short.end_card`); `youtube_playlists.py`
 (run by the 2-hourly check) sorts every upload into playlists (state: `content/youtube_playlists.json`). Subscribe buttons
 (`.kp-sub`, `?sub_confirmation=1`) come from site_mascot.py, embed_videos.py and video_hub.py.
+"YouTube stats" (daily 08:53 KST) runs `youtube_stats.py` → `content/youtube_stats.json`: views/likes/comments, and with the
+`yt-analytics.readonly` scope also average % viewed, subscribers gained and a retention summary per video.
 Every description starts with the link to the free guide (`scripts/video_text.py`); to retitle videos already on
 YouTube, list them in `content/shorts/retitle.json` and run the "YouTube titles" workflow (`youtube_meta.py`).
 
