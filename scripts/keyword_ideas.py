@@ -44,6 +44,14 @@ STOP = set("a an the in to of for and or is are do does with on at from by vs be
            "my your near me 2025 2026 2027 korea korean south".split())
 
 
+# searches that are not about visiting Korea (US Koreatowns, pop culture, recipes, news) are dropped
+NOISE = re.compile(r"\b(lyrics|recipes?|usa|us store|california|nyc|new york|los angeles|la|orlando|texas|houston|atlanta|"
+                   r"chicago|toronto|london|sydney|koreatown|wahiawa|pasadena|honolulu|hawaii|money heist|collapse|missing|"
+                   r"gangnam style|psy|olympics|girls?|guys?|drama|kdrama|movie|netflix|song|bts|blackpink|stock|ipo|"
+                   r"shares|news|war|north korea|kim jong|hongdae 33|meat company|near me|delivery|order online)\b")
+STRIP = re.compile(r"\s+(reddit|quora|tripadvisor|blog|youtube)$")
+
+
 def seasonal_seeds():
     now = datetime.now(KST)
     out = []
@@ -95,8 +103,8 @@ def main():
     seen = {}
     for i, seed in enumerate(seeds):
         for rank, s in enumerate(suggest(seed)):
-            s = s.strip().lower()
-            if not s or s == seed:
+            s = STRIP.sub("", s.strip().lower())
+            if not s or s == seed or NOISE.search(s):
                 continue
             e = seen.setdefault(s, {"query": s, "seeds": [], "score": 0})
             e["seeds"].append(seed)
@@ -112,8 +120,10 @@ def main():
         if in_head:
             covered.append({**e, "page": in_head[0]})
             continue
-        near = [p["page"] for p in pages if w <= (p["head"] | p["desc"] | p["body"])]
-        (retitle if near else gaps).append({**e, "pages": near[:3]} if near else e)
+        # a page that answers it in its text: most of the words in its title, all of them somewhere on the page
+        near = sorted((p for p in pages if w <= (p["head"] | p["desc"] | p["body"]) and len(w & p["head"]) * 2 >= len(w)),
+                      key=lambda p: (-len(w & p["head"]), -len(w & p["desc"])))
+        (retitle if near else gaps).append({**e, "pages": [p["page"] for p in near[:3]]} if near else e)
     out = {"updated": datetime.now(KST).isoformat(timespec="minutes"), "seeds": len(seeds), "suggestions": len(seen),
            "gaps": gaps[:80], "retitle": retitle[:60], "covered": len(covered),
            "note": "gaps = common searches no page title covers (new guide ideas); retitle = searches a page answers "
