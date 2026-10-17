@@ -1096,5 +1096,23 @@
     "published_at": "2026-10-17T00:24:41.388351+00:00",
     "image": "regional-yeosu-cafe-cafe-hoi-an.jpg",
     "image_credit": "Photo: Byul (별) via Google Maps"
+  },
+  {
+    "slug": "olive-young-korea-guide",
+    "filename": "olive-young-korea-guide.html",
+    "title": "Olive Young in Korea: How to Shop for K-Beauty as a Visitor",
+    "category": "Money"
+  },
+  {
+    "slug": "lotte-world-vs-everland",
+    "filename": "lotte-world-vs-everland.html",
+    "title": "Lotte World or Everland? Choosing a Seoul Theme Park",
+    "category": "Travel"
+  },
+  {
+    "slug": "jeju-in-winter",
+    "filename": "jeju-in-winter.html",
+    "title": "Jeju in Winter: Tangerines, Camellias and Snow on Hallasan",
+    "category": "Travel"
   }
 ]

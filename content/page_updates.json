@@ -44,12 +44,12 @@
     "updated": "2026-10-17"
   },
   "christmas-new-year-seoul.html": {
-    "hash": "eba89f1d790f",
-    "updated": "2026-10-16"
+    "hash": "3d73a8c9756b",
+    "updated": "2026-10-17"
   },
   "day-trips-from-seoul.html": {
-    "hash": "5691e2a002e0",
-    "updated": "2026-10-15"
+    "hash": "e15d3a80d7dc",
+    "updated": "2026-10-17"
   },
   "first-evening-seoul.html": {
     "hash": "e915c958fccd",
@@ -140,8 +140,8 @@
     "updated": "2026-10-15"
   },
   "jeju-3-day-itinerary.html": {
-    "hash": "45d6ac496f2d",
-    "updated": "2026-10-16"
+    "hash": "53095880df3e",
+    "updated": "2026-10-17"
   },
   "jeju-cafe-haejigae-cafe.html": {
     "hash": "eb4e1da320b2",
@@ -154,6 +154,10 @@
   "jeju-food-gozip-dol-wooluck-jeju-airport-branch.html": {
     "hash": "84f3caf072f8",
     "updated": "2026-10-13"
+  },
+  "jeju-in-winter.html": {
+    "hash": "f11d255c4e1f",
+    "updated": null
   },
   "jeju-leisure-jeju-leports-land.html": {
     "hash": "cd5f0d934b5b",
@@ -228,16 +232,16 @@
     "updated": null
   },
   "korea-in-december.html": {
-    "hash": "b84f911361ae",
-    "updated": "2026-10-16"
+    "hash": "8bf2f29795af",
+    "updated": "2026-10-17"
   },
   "korea-in-february.html": {
-    "hash": "9eb452b59e4a",
-    "updated": "2026-10-16"
+    "hash": "60bde4f2eb1a",
+    "updated": "2026-10-17"
   },
   "korea-in-january.html": {
-    "hash": "720701e126c9",
-    "updated": "2026-10-16"
+    "hash": "847cc8bf00c7",
+    "updated": "2026-10-17"
   },
   "korea-in-july.html": {
     "hash": "8c2f0a78b015",
@@ -292,16 +296,16 @@
     "updated": "2026-10-15"
   },
   "korea-tax-refund-guide.html": {
-    "hash": "d98111dd313c",
-    "updated": "2026-10-15"
+    "hash": "0ea5597042e3",
+    "updated": "2026-10-17"
   },
   "korea-transit-card-guide.html": {
     "hash": "389395e2e8de",
     "updated": null
   },
   "korea-travel-budget.html": {
-    "hash": "9ba00f74023c",
-    "updated": "2026-10-15"
+    "hash": "5f2b78188400",
+    "updated": "2026-10-17"
   },
   "korea-travel-mistakes.html": {
     "hash": "0fcc19b63eb8",
@@ -320,8 +324,8 @@
     "updated": "2026-10-15"
   },
   "korea-winter-travel-guide.html": {
-    "hash": "31ee2448f17e",
-    "updated": "2026-10-15"
+    "hash": "a4231e6d56a5",
+    "updated": "2026-10-17"
   },
   "korean-atm-guide.html": {
     "hash": "17e0e7eef41a",
@@ -383,12 +387,20 @@
     "hash": "f5fabf7d2c75",
     "updated": "2026-10-15"
   },
+  "lotte-world-vs-everland.html": {
+    "hash": "a885679cc50e",
+    "updated": null
+  },
   "naver-map-vs-google-maps-korea.html": {
     "hash": "f0a548b60e74",
     "updated": "2026-10-13"
   },
   "noraebang-korean-karaoke-guide.html": {
     "hash": "96d927eadb57",
+    "updated": null
+  },
+  "olive-young-korea-guide.html": {
+    "hash": "b6780aad1c83",
     "updated": null
   },
   "read-korean-menu.html": {
@@ -404,8 +416,8 @@
     "updated": "2026-10-15"
   },
   "seoul-5-day-itinerary.html": {
-    "hash": "a8b2b46d5312",
-    "updated": null
+    "hash": "f150ce171d5b",
+    "updated": "2026-10-17"
   },
   "seoul-bus-guide.html": {
     "hash": "cba078f4f132",
@@ -436,8 +448,8 @@
     "updated": null
   },
   "seoul-shopping-myeongdong-shopping-street.html": {
-    "hash": "4a1c640ff60e",
-    "updated": null
+    "hash": "9b780caf2efa",
+    "updated": "2026-10-17"
   },
   "seoul-stay-four-seasons-hotel-seoul.html": {
     "hash": "0c74a4014e44",

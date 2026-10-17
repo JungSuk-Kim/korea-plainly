@@ -41,6 +41,9 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 # Hand-picked search words for the guides that exist today. New guides fall
 # back to words from their title.
 QUERIES = {
+    "olive-young-korea-guide": "Myeongdong street Seoul",
+    "lotte-world-vs-everland": "Lotte World Seoul",
+    "jeju-in-winter": "Hallasan snow Jeju",
     "korea-money-exchange": "Myeongdong night",
     "best-time-to-visit-korea": "Gyeongbokgung palace spring",
     "korea-in-september": "Haneul Park Seoul",
