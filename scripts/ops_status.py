@@ -92,6 +92,13 @@ def today_runs():
     }
 
 
+def yt_stats():
+    d = load("content/youtube_stats.json", {})
+    keep = ("title", "format", "status", "views", "likes", "comments", "avg_view_percent", "subscribers_gained", "retention")
+    return {"updated": d.get("updated", ""), "analytics": d.get("analytics", False), "total": d.get("total", {}),
+            "videos": [{k: v.get(k) for k in keep} for v in d.get("videos", []) if v.get("status") == "public"][:8]}
+
+
 def main():
     published = [p for p in load("content/published.json", []) if isinstance(p, dict) and p.get("slug")]
     dates = load("content/page_dates.json", {})
@@ -134,6 +141,7 @@ def main():
         "pending": pending,
         "articles": [{"title": p.get("title", p["slug"]), "slug": p["slug"], "date": d} for d, p in recent],
         "next": {"short": {"slug": nq, "title": title_of.get(nq, nq)}, "long": {"slug": nl, "title": title_of.get(nl, nl)}},
+        "yt": yt_stats(),
         "workflows": workflows(),
         "today": today_runs(),
     }
