@@ -1,0 +1,37 @@
+name: Keyword ideas (weekly)
+
+# Sundays 07:31 KST (and by hand): what visitors type into Google about Korea (autocomplete), compared with the
+# site's pages. Writes content/keyword_ideas.json for the morning proposals, the daily check and the ops map.
+on:
+  schedule:
+    - cron: "31 22 * * 6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-bot
+  cancel-in-progress: false
+
+jobs:
+  ideas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect and compare
+        run: |
+          pip install -q requests
+          python scripts/keyword_ideas.py
+      - name: Commit
+        run: |
+          git config user.name "Korea Plainly Bot"
+          git config user.email "actions@github.com"
+          git add content/keyword_ideas.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Keyword ideas"
+          git pull --rebase -X theirs
+          git push

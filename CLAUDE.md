@@ -75,6 +75,8 @@ Shorts end with a subscribe ask and a SUBSCRIBE end card (`video_text.SHORT_OUTR
 (`.kp-sub`, `?sub_confirmation=1`) come from site_mascot.py, embed_videos.py and video_hub.py.
 "YouTube stats" (daily 08:53 KST) runs `youtube_stats.py` → `content/youtube_stats.json`: views/likes/comments, and with the
 `yt-analytics.readonly` scope also average % viewed, subscribers gained and a retention summary per video.
+"Keyword ideas (weekly)" runs `keyword_ideas.py` (Google autocomplete for travel seeds, compared with page titles) →
+`content/keyword_ideas.json`: "gaps" (common searches with no page) feed new topics, "retitle" feeds title fixes.
 Every description starts with the link to the free guide (`scripts/video_text.py`); to retitle videos already on
 YouTube, list them in `content/shorts/retitle.json` and run the "YouTube titles" workflow (`youtube_meta.py`).
 
