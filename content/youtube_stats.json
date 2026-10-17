@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-17T14:57+09:00",
-  "analytics": false,
+  "updated": "2026-10-17T16:12+09:00",
+  "analytics": true,
   "videos": [
     {
       "id": "vAo-ajdZxPY",
@@ -10,9 +10,14 @@
       "uploaded": "2026-10-16T14:48:57+09:00",
       "status": "public",
       "seconds": 53,
-      "views": 24,
+      "views": 26,
       "likes": 1,
-      "comments": 0
+      "comments": 0,
+      "avg_view_seconds": null,
+      "avg_view_percent": null,
+      "subscribers_gained": 0,
+      "shares": 0,
+      "retention": null
     },
     {
       "id": "5vIbm2LQPmY",
@@ -24,7 +29,11 @@
       "seconds": 539,
       "views": 5,
       "likes": 0,
-      "comments": 0
+      "comments": 0,
+      "avg_view_seconds": 17,
+      "avg_view_percent": 3.32,
+      "subscribers_gained": 0,
+      "shares": 0
     },
     {
       "id": "aXsQ--xbyuM",
@@ -36,7 +45,22 @@
       "seconds": 515,
       "views": 28,
       "likes": 1,
-      "comments": 0
+      "comments": 0,
+      "avg_view_seconds": 162,
+      "avg_view_percent": 31.480000000000004,
+      "subscribers_gained": 0,
+      "shares": 0,
+      "retention": {
+        "at": {
+          "10%": 60,
+          "25%": 40,
+          "50%": 30,
+          "75%": 20,
+          "95%": 20
+        },
+        "biggest_drop_at": "6%",
+        "biggest_drop": 10
+      }
     },
     {
       "id": "qSv1ySQfzh4",
@@ -48,7 +72,11 @@
       "seconds": 51,
       "views": 7,
       "likes": 1,
-      "comments": 0
+      "comments": 0,
+      "avg_view_seconds": 14,
+      "avg_view_percent": 27.04,
+      "subscribers_gained": 0,
+      "shares": 0
     },
     {
       "id": "QPsof1_LFbA",
@@ -60,7 +88,12 @@
       "seconds": 59,
       "views": 22,
       "likes": 1,
-      "comments": 0
+      "comments": 0,
+      "avg_view_seconds": 27,
+      "avg_view_percent": 46.63,
+      "subscribers_gained": 0,
+      "shares": 0,
+      "retention": null
     },
     {
       "id": "P5Dq3oF2XfY",
@@ -72,15 +105,20 @@
       "seconds": null,
       "views": 60,
       "likes": 2,
-      "comments": 0
+      "comments": 0,
+      "avg_view_seconds": 17,
+      "avg_view_percent": 30.620000000000005,
+      "subscribers_gained": 0,
+      "shares": 0,
+      "retention": null
     }
   ],
   "scopes": [
-    "youtube"
+    "youtube",
+    "yt-analytics.readonly"
   ],
-  "analytics_error": "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"YouTube Analytics API has not been used in project 1064022205465 before or it is disabled. Enable it by visiting https://console.developers.google.com/a",
   "total": {
-    "views": 146,
+    "views": 148,
     "likes": 6,
     "comments": 0,
     "subscribers_gained": 0
