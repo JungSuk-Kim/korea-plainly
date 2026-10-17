@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T16:12+09:00",
+  "updated": "2026-10-17T16:17+09:00",
   "analytics": true,
   "videos": [
     {
@@ -116,6 +116,41 @@
   "scopes": [
     "youtube",
     "yt-analytics.readonly"
+  ],
+  "countries": [],
+  "traffic_sources": [
+    {
+      "source": "YT_SEARCH",
+      "views": 18
+    },
+    {
+      "source": "RELATED_VIDEO",
+      "views": 12
+    },
+    {
+      "source": "YT_CHANNEL",
+      "views": 7
+    },
+    {
+      "source": "SHORTS",
+      "views": 5
+    },
+    {
+      "source": "SUBSCRIBER",
+      "views": 4
+    },
+    {
+      "source": "YT_OTHER_PAGE",
+      "views": 1
+    },
+    {
+      "source": "EXT_URL",
+      "views": 1
+    },
+    {
+      "source": "NO_LINK_OTHER",
+      "views": 0
+    }
   ],
   "total": {
     "views": 148,
