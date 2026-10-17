@@ -74,6 +74,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:Jeju_-_Seongsan_Ilchulbong.jpg",
     "query": "Seongsan Ilchulbong Jeju"
   },
+  "jeju-in-winter": {
+    "none": true,
+    "query": "Hallasan snow Jeju"
+  },
   "kakao-t-taxi-korea": {
     "file": "photo-kakao-t-taxi-korea.jpg",
     "credit": "Photo: Ilya Plekhanov, CC BY-SA 4.0, via Wikimedia Commons",
@@ -425,9 +429,21 @@
       "https://commons.wikimedia.org/wiki/File:Deputy_Secretary_Blinken_and_Ambassador_Lippert_Stand_in_Front_of_the_King_Sejong_Statue_in_Downtown_Seoul_(16457481066).jpg"
     ]
   },
+  "lotte-world-vs-everland": {
+    "file": "photo-lotte-world-vs-everland.jpg",
+    "credit": "Photo: Christophe95, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Lotte_World_in_Seoul.jpg",
+    "query": "Lotte World Seoul"
+  },
   "noraebang-korean-karaoke-guide": {
     "none": true,
     "query": "Karaoke room"
+  },
+  "olive-young-korea-guide": {
+    "file": "photo-olive-young-korea-guide.jpg",
+    "credit": "Photo: by Tom@HK, CC BY 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul-Myeongdong-01.jpg",
+    "query": "Myeongdong street Seoul"
   },
   "seollal-travel-tips": {
     "file": "photo-seollal-travel-tips.jpg",
