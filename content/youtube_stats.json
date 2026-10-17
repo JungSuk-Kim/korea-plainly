@@ -1,0 +1,88 @@
+{
+  "updated": "2026-10-17T14:57+09:00",
+  "analytics": false,
+  "videos": [
+    {
+      "id": "vAo-ajdZxPY",
+      "title": "Jeju Three-Day Itinerary: The Easy Coast-by-Coast Plan",
+      "article": "jeju-3-day-itinerary",
+      "format": "short",
+      "uploaded": "2026-10-16T14:48:57+09:00",
+      "status": "public",
+      "seconds": 53,
+      "views": 24,
+      "likes": 1,
+      "comments": 0
+    },
+    {
+      "id": "5vIbm2LQPmY",
+      "title": "Busan One Day Itinerary: Temple, Haeundae Beach and Spa",
+      "article": "busan-1-day-itinerary",
+      "format": "long",
+      "uploaded": "2026-10-14T23:09:13+09:00",
+      "status": "public",
+      "seconds": 539,
+      "views": 5,
+      "likes": 0,
+      "comments": 0
+    },
+    {
+      "id": "aXsQ--xbyuM",
+      "title": "Seoul 3 Day Itinerary for First-Timers (Relaxed Local's Guide)",
+      "article": "seoul-3-day-itinerary",
+      "format": "long",
+      "uploaded": "2026-10-14T21:00:00+09:00",
+      "status": "public",
+      "seconds": 515,
+      "views": 28,
+      "likes": 1,
+      "comments": 0
+    },
+    {
+      "id": "qSv1ySQfzh4",
+      "title": "Korea Autumn Leaves 2026: When and Where to See Them",
+      "article": "korea-autumn-foliage-2026",
+      "format": "short",
+      "uploaded": "2026-10-14T15:05:52+09:00",
+      "status": "public",
+      "seconds": 51,
+      "views": 7,
+      "likes": 1,
+      "comments": 0
+    },
+    {
+      "id": "QPsof1_LFbA",
+      "title": "Busan One Day Itinerary: The Easy East Coast Route",
+      "article": "busan-1-day-itinerary",
+      "format": "short",
+      "uploaded": "2026-10-14T10:18:59+09:00",
+      "status": "public",
+      "seconds": 59,
+      "views": 22,
+      "likes": 1,
+      "comments": 0
+    },
+    {
+      "id": "P5Dq3oF2XfY",
+      "title": "Seoul 3 Day Itinerary for First-Timers",
+      "article": "seoul-3-day-itinerary",
+      "format": "short",
+      "uploaded": "2026-10-14T08:50:00+09:00",
+      "status": "public",
+      "seconds": null,
+      "views": 60,
+      "likes": 2,
+      "comments": 0
+    }
+  ],
+  "scopes": [
+    "youtube"
+  ],
+  "analytics_error": "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"YouTube Analytics API has not been used in project 1064022205465 before or it is disabled. Enable it by visiting https://console.developers.google.com/a",
+  "total": {
+    "views": 146,
+    "likes": 6,
+    "comments": 0,
+    "subscribers_gained": 0
+  }
+}
