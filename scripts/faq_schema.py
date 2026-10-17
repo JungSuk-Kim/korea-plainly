@@ -55,7 +55,10 @@ def main():
             continue
         new = TAG.sub("", s)
         if block:
-            new = new.replace("</head>", block + "</head>", 1)
+            # Before the Article JSON-LD, which article_enhance.py re-appends at the end of <head>
+            # on every run; inserting here keeps the first run's order and the second run idempotent.
+            anchor = '<script type="application/ld+json" id="kp-article-ld">'
+            new = new.replace(anchor if anchor in new else "</head>", block + (anchor if anchor in new else "</head>"), 1)
         if new != s:
             p.write_bytes(new.encode("utf-8"))
             changed += 1

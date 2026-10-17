@@ -427,7 +427,8 @@
   },
   "noraebang-korean-karaoke-guide": {
     "none": true,
-    "query": "Noraebang Karaoke Rooms Korea"
+    "query": "Karaoke room",
+    "retry": true
   },
   "seollal-travel-tips": {
     "file": "photo-seollal-travel-tips.jpg",
