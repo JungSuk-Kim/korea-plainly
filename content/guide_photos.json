@@ -43,10 +43,12 @@
   },
   "dmz-tour-guide": {
     "file": "photo-dmz-tour-guide.jpg",
-    "credit": "Photo: Dwxn, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:20240602_075300_DMZ_Imjingak_02.jpg",
+    "credit": "Photo: Lance Vanlewen, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Freedom_Bridge_at_Imjingak,_Demilitarized_Zone_(DMZ),_South_Korea.jpg",
     "query": "Freedom Bridge Imjingak",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:20240602_075300_DMZ_Imjingak_02.jpg"
+    ]
   },
   "first-evening-seoul": {
     "file": "photo-first-evening-seoul.jpg",
@@ -134,10 +136,12 @@
   },
   "korea-emergency-help": {
     "file": "photo-korea-emergency-help.jpg",
-    "credit": "Photo: Bonnielou2013 This photo was taken with Samsung Galaxy Note 4, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Pharmacy_Jongno_2.jpg",
+    "credit": "Photo: Oleg Kurtsev, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul_National_University_Hospital.jpg",
     "query": "Seoul hospital",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Pharmacy_Jongno_2.jpg"
+    ]
   },
   "korea-entry-k-eta-e-arrival": {
     "file": "photo-korea-entry-k-eta-e-arrival.jpg",
@@ -440,8 +444,7 @@
     "file": "photo-kpop-seoul-guide.jpg",
     "credit": "Photo: Christian Bolz (크리스티안 볼츠), CC BY-SA 4.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Gyeonguiseon_Forest_Trail_Park_and_Ttaeng-ttaeng_Street_in_Seoul_(near_Hongdae,_1).jpg",
-    "query": "Hongdae busking",
-    "retry": true
+    "query": "Hongdae busking"
   },
   "ktx-train-guide": {
     "file": "photo-ktx-train-guide.jpg",
@@ -567,10 +570,12 @@
   },
   "vegetarian-food-korea": {
     "file": "photo-vegetarian-food-korea.jpg",
-    "credit": "Photo: Chloe Lim from Seoul, South Korea, CC BY 2.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Dolsot_Bibimbap_(6352434359).jpg",
+    "credit": "Photo: by ayustety (flickr), CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Korean.cuisine-Banchan-04.jpg",
     "query": "banchan vegetables",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Dolsot_Bibimbap_(6352434359).jpg"
+    ]
   },
   "which-korean-city-quiz": {
     "file": "photo-which-korean-city-quiz.jpg",
