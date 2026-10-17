@@ -92,6 +92,12 @@ def today_runs():
     }
 
 
+def keyword_ideas():
+    d = load("content/keyword_ideas.json", {})
+    return {"updated": d.get("updated", ""), "gaps": [e["query"] for e in d.get("gaps", [])[:10]],
+            "retitle": [{"query": e["query"], "page": (e.get("pages") or [""])[0]} for e in d.get("retitle", [])[:6]]}
+
+
 def yt_stats():
     d = load("content/youtube_stats.json", {})
     keep = ("title", "format", "status", "views", "likes", "comments", "avg_view_percent", "subscribers_gained", "retention")
@@ -142,6 +148,7 @@ def main():
         "articles": [{"title": p.get("title", p["slug"]), "slug": p["slug"], "date": d} for d, p in recent],
         "next": {"short": {"slug": nq, "title": title_of.get(nq, nq)}, "long": {"slug": nl, "title": title_of.get(nl, nl)}},
         "yt": yt_stats(),
+        "keywords": keyword_ideas(),
         "workflows": workflows(),
         "today": today_runs(),
     }
