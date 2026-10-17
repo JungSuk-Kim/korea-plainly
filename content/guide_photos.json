@@ -75,8 +75,8 @@
     "query": "Seongsan Ilchulbong Jeju"
   },
   "jeju-in-winter": {
-    "none": true,
-    "query": "Hallasan snow Jeju"
+    "retry": true,
+    "query": "Hallasan winter"
   },
   "kakao-t-taxi-korea": {
     "file": "photo-kakao-t-taxi-korea.jpg",
@@ -443,7 +443,8 @@
     "file": "photo-olive-young-korea-guide.jpg",
     "credit": "Photo: by Tom@HK, CC BY 2.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Seoul-Myeongdong-01.jpg",
-    "query": "Myeongdong street Seoul"
+    "query": "Myeongdong cosmetics shops",
+    "retry": true
   },
   "seollal-travel-tips": {
     "file": "photo-seollal-travel-tips.jpg",
