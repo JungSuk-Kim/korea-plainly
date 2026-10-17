@@ -90,10 +90,10 @@
     "query": "Seongsan Ilchulbong Jeju"
   },
   "jeju-in-winter": {
-    "file": "photo-jeju-in-winter.jpg",
-    "credit": "Photo: Lcarrion88, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Hallasan_in_Winter.jpg",
-    "query": "Hallasan winter"
+    "file": "photo-own-jeju-hamdeok-winter.jpg",
+    "credit": "Photo: Jungsuk Kim, Korea Plainly",
+    "source": "",
+    "manual": true
   },
   "kakao-t-taxi-korea": {
     "file": "photo-kakao-t-taxi-korea.jpg",
@@ -466,6 +466,12 @@
     "credit": "Photo: Christophe95, CC BY-SA 4.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Lotte_World_in_Seoul.jpg",
     "query": "Lotte World Seoul"
+  },
+  "maisan-tapsa-temple": {
+    "file": "photo-own-maisan-cliff.jpg",
+    "credit": "Photo: Jungsuk Kim, Korea Plainly",
+    "source": "",
+    "manual": true
   },
   "nami-island-gapyeong": {
     "file": "photo-nami-island-gapyeong.jpg",

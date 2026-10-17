@@ -41,6 +41,7 @@ USER_AGENT = "KoreaPlainlyBot/1.0 (https://korea-plainly.com)"
 # Hand-picked search words for the guides that exist today. New guides fall
 # back to words from their title.
 QUERIES = {
+    "maisan-tapsa-temple": "Maisan Tapsa",
     "korea-emergency-help": "pharmacy Seoul",
     "vegetarian-food-korea": "bibimbap vegetables",
     "kpop-seoul-guide": "Hongdae street Seoul",
