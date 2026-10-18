@@ -499,8 +499,10 @@
     ]
   },
   "papago-translation-app": {
-    "none": true,
-    "query": "Papago Other Translation Korea"
+    "file": "photo-own-neon-hangul.jpg",
+    "credit": "Photo: Jungsuk Kim, Korea Plainly",
+    "source": "",
+    "manual": true
   },
   "seollal-travel-tips": {
     "file": "photo-seollal-travel-tips.jpg",
