@@ -85,18 +85,30 @@ def check(r, what):
         raise RuntimeError(f"{what}: HTTP {r.status_code}: {msg}")
 
 
-def instagram_reel(v, data, caption):
+def fb_video_source(video_id):
+    """A direct, public CDN link to a video already on our Facebook Page (Instagram fetches Reels from a URL)."""
+    tok = E["FB_PAGE_TOKEN"].strip()
+    for _ in range(24):   # Facebook needs a little while to process a new upload
+        r = requests.get(f"https://graph.facebook.com/{GV}/{video_id}", timeout=30,
+                         params={"fields": "source,status", "access_token": tok})
+        check(r, "read Page video")
+        src = r.json().get("source")
+        if src:
+            return src
+        time.sleep(15)
+    raise RuntimeError("the Page video has no playable source yet; will try again next run")
+
+
+def instagram_reel(video_url, caption):
+    """Instagram Login accounts publish Reels from a public video_url (resumable upload needs a Facebook-login token)."""
     uid, tok = E["IG_USER_ID"].strip(), E["IG_ACCESS_TOKEN"].strip()
     api = f"https://graph.instagram.com/{GV}"
     r = requests.post(f"{api}/{uid}/media", timeout=60, data={
-        "media_type": "REELS", "upload_type": "resumable", "caption": caption, "share_to_feed": "true",
+        "media_type": "REELS", "video_url": video_url, "caption": caption, "share_to_feed": "true",
         "access_token": tok})
     check(r, "create Reel container")
-    cid, uri = r.json()["id"], r.json().get("uri") or f"https://rupload.facebook.com/ig-api-upload/{GV}/{r.json()['id']}"
-    up = requests.post(uri, data=data, timeout=600, headers={
-        "Authorization": f"OAuth {tok}", "offset": "0", "file_size": str(len(data))})
-    check(up, "upload Reel video")
-    for _ in range(40):  # Instagram processes the video before it can be published
+    cid = r.json()["id"]
+    for _ in range(40):  # Instagram downloads and processes the video before it can be published
         time.sleep(15)
         s = requests.get(f"{api}/{cid}", params={"fields": "status_code,status", "access_token": tok}, timeout=30).json()
         if s.get("status_code") == "FINISHED":
@@ -165,16 +177,22 @@ def run_videos(state, limit, dry):
         if dry:
             print("--- video", v["key"], v["slug"], "\n", ig_caption, "\n", th_text)
             continue
-        need_file = (not v["long"] and v["key"] not in done["instagram_videos"]) or v["key"] not in done["facebook_videos"]
+        need_file = v["key"] not in done["facebook_videos"]   # the Reel is made from the Page video's URL
         data = video_file(v) if need_file else None
         if need_file and data is None:
             note("warning", f"{v['slug']}: video file no longer kept; Reel and Page video skipped")
-        for key, ok, fn in (("instagram_videos", not v["long"] and E.get("IG_ACCESS_TOKEN") and data, lambda: instagram_reel(v, data, ig_caption)),
-                            ("facebook_videos", E.get("FB_PAGE_TOKEN") and data, lambda: facebook_video(v, data, fb_text)),
+        def fb_ref():
+            ref = done["facebook_videos"].get(v["key"], {}).get("ref")
+            return ref if ref and ref != "skipped" else None
+        for key, ok, fn in (("facebook_videos", E.get("FB_PAGE_TOKEN") and data, lambda: facebook_video(v, data, fb_text)),
+                            ("instagram_videos", not v["long"] and E.get("IG_ACCESS_TOKEN") and E.get("FB_PAGE_TOKEN") and fb_ref(),
+                             lambda: instagram_reel(fb_video_source(fb_ref()), ig_caption)),
                             ("threads_videos", E.get("THREADS_ACCESS_TOKEN"), lambda: threads_post(th_text, guide))):
             if v["key"] in done[key]:
                 continue
             if not ok:
+                if key == "instagram_videos" and not v["long"] and v["key"] not in done["facebook_videos"]:
+                    continue   # the Reel waits for the Page video it is made from
                 if key != "instagram_videos" or not v["long"]:
                     done[key][v["key"]] = stamp("skipped")   # do not try again every run
                 continue
