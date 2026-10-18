@@ -59,6 +59,10 @@
     "olive-young-korea-guide": {
       "at": "2026-10-18T00:11:25+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3my4cyiwpai2v"
+    },
+    "papago-translation-app": {
+      "at": "2026-10-18T06:34:53+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3my4yg7fs2i2f"
     }
   },
   "bluesky_videos": {
@@ -91,6 +95,10 @@
     "vAo-ajdZxPY": {
       "at": "2026-10-18T00:12:05+00:00",
       "ref": "17888857056618648"
+    },
+    "qSv1ySQfzh4": {
+      "at": "2026-10-18T06:35:36+00:00",
+      "ref": "18159263674541649"
     }
   },
   "facebook_videos": {
@@ -169,6 +177,10 @@
     "olive-young-korea-guide": {
       "at": "2026-10-18T00:12:10+00:00",
       "ref": "1261611360380213_122103826317509276"
+    },
+    "papago-translation-app": {
+      "at": "2026-10-18T06:35:41+00:00",
+      "ref": "1261611360380213_122104036341509276"
     }
   },
   "threads": {
@@ -211,6 +223,10 @@
     "olive-young-korea-guide": {
       "at": "2026-10-18T00:12:21+00:00",
       "ref": "18635184565010874"
+    },
+    "papago-translation-app": {
+      "at": "2026-10-18T06:35:52+00:00",
+      "ref": "18081436469401705"
     }
   }
 }
