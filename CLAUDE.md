@@ -78,6 +78,8 @@ Shorts end with a subscribe ask and a SUBSCRIBE end card (`video_text.SHORT_OUTR
 `yt-analytics.readonly` scope also average % viewed, subscribers gained and a retention summary per video.
 "Keyword ideas (weekly)" runs `keyword_ideas.py` (Google autocomplete for travel seeds, compared with page titles) →
 `content/keyword_ideas.json`: "gaps" (common searches with no page) feed new topics, "retitle" feeds title fixes.
+Daily Publish runs `refill_topics.py` before the guide: under 7 unused topics, it asks the model to choose new ones
+from the gaps (plus a seasonal one) and appends them to `content/topics.json` (searched phrase kept as `"query"`).
 Every description starts with the link to the free guide (`scripts/video_text.py`); to retitle videos already on
 YouTube, list them in `content/shorts/retitle.json` and run the "YouTube titles" workflow (`youtube_meta.py`).
 

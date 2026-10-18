@@ -53,6 +53,14 @@ jobs:
         if: steps.guard.outputs.skip != 'true'
         run: pip install requests openai pillow
 
+      - name: Top up the topic list when it runs low
+        if: steps.guard.outputs.skip != 'true'
+        continue-on-error: true
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-6-luna
+        run: python scripts/refill_topics.py
+
       - name: Write a general guide
         id: guide
         if: steps.guard.outputs.skip != 'true'

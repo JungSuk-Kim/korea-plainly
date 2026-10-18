@@ -25,7 +25,9 @@ serves the files as they are.
 
 Two workflows, both in `.github/workflows/`:
 
-- **Daily Publish** (`daily-publish.yml`, 08:17 Korea time, or run by hand): writes one
+- **Daily Publish** (`daily-publish.yml`, 08:17 Korea time, or run by hand): first tops up `content/topics.json`
+  when fewer than 7 unused topics remain (`refill_topics.py`: picks up to 12 from the keyword-research gaps and
+  the coming season, skipping anything an existing page covers), then writes one
   general guide (`generate_post.py` + `add_article_faq.py`) and three regional
   articles (`generate_regional_day.py`: the next 3 of the 8 categories for the current region; the region changes
   once all 8 are done, so each region takes 3 days), then runs
