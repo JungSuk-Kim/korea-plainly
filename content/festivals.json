@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15",
+ "updated": "2026-10-19",
  "source": "EngService2",
  "festivals": [
   {
@@ -129,15 +129,6 @@
    "lon": 126.4722831164
   },
   {
-   "id": "4108069",
-   "title": "Moonlight Music Festival (달빛 음악공감)",
-   "start": "2026-09-11",
-   "end": "2026-10-17",
-   "address": "246 Doandong-ro, Seo-gu, Daejeon",
-   "lat": 36.3266036648,
-   "lon": 127.3515672497
-  },
-  {
    "id": "3358416",
    "title": "Hantangang Garden Festa (포천 한탄강 가든페스타)",
    "start": "2026-09-12",
@@ -192,6 +183,15 @@
    "lon": 127.3775139215
   },
   {
+   "id": "4126385",
+   "title": "Uiryeong Gigang Rich Flower Festival (의령기강리치꽃축제)",
+   "start": "2026-09-24",
+   "end": "2026-10-25",
+   "address": "228 Seongsan-ri, Jijeong-myeon, Uiryeong-gun, Gyeongsangnam-do",
+   "lat": 35.3962139306,
+   "lon": 128.4320700618
+  },
+  {
    "id": "3114722",
    "title": "Yangjae Art Salon (양재아트살롱)",
    "start": "2026-10-02",
@@ -199,24 +199,6 @@
    "address": "261-23 Yangjae-dong, Seocho-gu, Seoul",
    "lat": 37.476743,
    "lon": 127.041497
-  },
-  {
-   "id": "4113182",
-   "title": "Guardians of Jinju (진주의 수호자들)",
-   "start": "2026-10-03",
-   "end": "2026-10-18",
-   "address": "287 Gangnam-ro, Jinju-si, Gyeongsangnam-do 진주성",
-   "lat": 35.1879338891,
-   "lon": 128.0858237357
-  },
-  {
-   "id": "697197",
-   "title": "Jinju Namgang Yudeung Festival (진주 남강유등축제)",
-   "start": "2026-10-03",
-   "end": "2026-10-18",
-   "address": "626, Namgang-ro, Jinju-si, Gyeongsangnam-do",
-   "lat": 35.1904937892,
-   "lon": 128.0800831631
   },
   {
    "id": "4116387",
@@ -246,33 +228,6 @@
    "lon": 127.7365765798
   },
   {
-   "id": "1373574",
-   "title": "Chuncheon Makguksu & Dakgalbi Festival (춘천막국수닭갈비축제)",
-   "start": "2026-10-14",
-   "end": "2026-10-18",
-   "address": "586 Onui-dong, Chuncheon-si, Gangwon-do",
-   "lat": 37.8697694,
-   "lon": 127.7219052
-  },
-  {
-   "id": "697361",
-   "title": "Bonghwa Pine Mushroom Festival (봉화송이축제)",
-   "start": "2026-10-15",
-   "end": "2026-10-18",
-   "address": "13 Naeseong-ro 5-gil, Bonghwa-eup, Bonghwa-gun, Gyeongsangbuk-do",
-   "lat": 36.8889046907,
-   "lon": 128.7389554817
-  },
-  {
-   "id": "697209",
-   "title": "Ganggyeong Salted Seafood Festival (강경젓갈축제)",
-   "start": "2026-10-15",
-   "end": "2026-10-18",
-   "address": "198 Hwangsan-ri, Ganggyeong-eup, Nonsan-si, Chungcheongnam-do",
-   "lat": 36.1575562492,
-   "lon": 127.009806299
-  },
-  {
    "id": "697443",
    "title": "Gochang Moyang Fortress Festival (고창모양성제)",
    "start": "2026-10-15",
@@ -280,150 +235,6 @@
    "address": "11 Moyangseong-ro, Gochang-eup, Gochang-gun, Jeonbuk-do",
    "lat": 35.4331479316,
    "lon": 126.7035018266
-  },
-  {
-   "id": "3045214",
-   "title": "Gwangju Seochang Silver Grass Festival (광주서창억새축제)",
-   "start": "2026-10-15",
-   "end": "2026-10-18",
-   "address": "377 Seochangduk-gil, Seo-gu, Jeonnam-Gwangju Special Metropolitan City",
-   "lat": 35.1384947137,
-   "lon": 126.8287603579
-  },
-  {
-   "id": "3358450",
-   "title": "Hurshimchung Bräu Oktoberfest (허심청브로이 옥토버페스트)",
-   "start": "2026-10-15",
-   "end": "2026-10-17",
-   "address": "23 Geumganggongwon-ro 20beon-gil, Dongnae-gu, Busan",
-   "lat": 35.2199004043,
-   "lon": 129.0826007801
-  },
-  {
-   "id": "4116388",
-   "title": "Korea AI Content Awards (대한민국 AI 콘텐츠 어워즈)",
-   "start": "2026-10-15",
-   "end": "2026-10-16",
-   "address": "134 Sehwa-ro, Gwonseon-gu, Suwon-si, Gyeonggi-do 4th Floor",
-   "lat": 37.2641627269,
-   "lon": 126.997385539
-  },
-  {
-   "id": "978307",
-   "title": "Sunchang Jangryu Festival (순창장류축제)",
-   "start": "2026-10-15",
-   "end": "2026-10-18",
-   "address": "55, Jangnyu-ro, Sunchang-eup, Sunchang-gun, Jeonbuk-do",
-   "lat": 35.3687554717,
-   "lon": 127.1123214189
-  },
-  {
-   "id": "293085",
-   "title": "Yeongdong Nangye Korean Traditional Music Festival (영동난계국악축제)",
-   "start": "2026-10-15",
-   "end": "2026-10-18",
-   "address": "117, Yeongdong healing-ro, Yeongdong-eup, Yeongdong-gun, Chungcheongbuk-do",
-   "lat": 36.1563534107,
-   "lon": 127.786513691
-  },
-  {
-   "id": "1854973",
-   "title": "Cheongdo Seedless Persimmon Festival (청도반시축제)",
-   "start": "2026-10-16",
-   "end": "2026-10-18",
-   "address": "1846 Cheongnyeo-ro, Hwayang-eup, Cheongdo-gun, Gyeongsangbuk-do",
-   "lat": 35.6511627157,
-   "lon": 128.7202127849
-  },
-  {
-   "id": "1876897",
-   "title": "Dongnaeeupseong History Festival (동래읍성역사축제)",
-   "start": "2026-10-16",
-   "end": "2026-10-18",
-   "address": "80, Munhwa-ro, Dongnae-gu, Busan",
-   "lat": 35.2121014637,
-   "lon": 129.0901058527
-  },
-  {
-   "id": "4088698",
-   "title": "Gangdong Prehistoric Culture Festival (강동선사문화축제)",
-   "start": "2026-10-16",
-   "end": "2026-10-18",
-   "address": "875, Olympic-ro, Gangdong-gu, Seoul",
-   "lat": 37.5590614348,
-   "lon": 127.1306006547
-  },
-  {
-   "id": "3307776",
-   "title": "Gwanak Gang Gam-chan Festival (관악강감찬축제)",
-   "start": "2026-10-16",
-   "end": "2026-10-18",
-   "address": "77 Nakseongdae-ro, Gwanak-gu, Seoul",
-   "lat": 37.4715859169,
-   "lon": 126.9587177427
-  },
-  {
-   "id": "1853462",
-   "title": "Jeongdong Culture Festival (정동문화축제)",
-   "start": "2026-10-16",
-   "end": "2026-10-17",
-   "address": "Jeong-dong, Jung-gu, Seoul",
-   "lat": 37.5670422,
-   "lon": 126.975347
-  },
-  {
-   "id": "1807096",
-   "title": "Mokpo Port Festival (목포항구축제)",
-   "start": "2026-10-16",
-   "end": "2026-10-18",
-   "address": "6, Samhak-ro 92beon-gil, Mokpo-si, Jeonnam-Gwangju",
-   "lat": 34.7865334008,
-   "lon": 126.3936724331
-  },
-  {
-   "id": "2433585",
-   "title": "Sanjeonghosu Lake Myeongseonsan Mountain Eulalia Festival (포천 산정호수 명성산 억새꽃축제)",
-   "start": "2026-10-16",
-   "end": "2026-10-18",
-   "address": "108 Sanjeonghosu-ro 411beon-gil, Yeongbuk-myeon, Pocheon-si, Gyeonggi-do",
-   "lat": 38.0683053869,
-   "lon": 127.3239505196
-  },
-  {
-   "id": "697207",
-   "title": "Yangyang Pine Mushroom & Salmon Festival (양양송이연어축제)",
-   "start": "2026-10-16",
-   "end": "2026-10-18",
-   "address": "589 Ilchul-ro, Yangyang-eup, Yangyang-gun, Gangwon-do",
-   "lat": 38.0728218224,
-   "lon": 128.6234986636
-  },
-  {
-   "id": "1850494",
-   "title": "Dasan Jeong Yak-yong Culture Festival (다산정약용문화제)",
-   "start": "2026-10-17",
-   "end": "2026-10-18",
-   "address": "11 Dasan-ro 747beon-gil, Namyangju-si, Gyeonggi-do",
-   "lat": 37.5163138398,
-   "lon": 127.2998987869
-  },
-  {
-   "id": "3559353",
-   "title": "Downtown Night Tour: The Season for Jeju Island Nights (원도심 야간여행 ‘섬夜시즌’)",
-   "start": "2026-10-17",
-   "end": "2026-10-18",
-   "address": "1 Jungang-ro, Jeju-si, Jeju-do",
-   "lat": 33.5181484529,
-   "lon": 126.5251247992
-  },
-  {
-   "id": "4104871",
-   "title": "Geumcheon Harmony Festival (금천하모니축제)",
-   "start": "2026-10-17",
-   "end": "2026-10-18",
-   "address": "70 Siheung-daero 73-gil, Geumcheon-gu, Seoul",
-   "lat": 37.457065652,
-   "lon": 126.8960368503
   },
   {
    "id": "4076928",
@@ -451,6 +262,15 @@
    "address": "286 Yeonsam-ro, Jeju-si, Jeju-do",
    "lat": 33.4918468474,
    "lon": 126.5238513705
+  },
+  {
+   "id": "4126454",
+   "title": "Sium Sium Morning (쉬엄쉬엄모닝)",
+   "start": "2026-10-18",
+   "end": "2026-11-29",
+   "address": "83-19 Seonsa-ro, Gangdong-gu, Seoul",
+   "lat": 37.5452481279,
+   "lon": 127.1179813872
   },
   {
    "id": "1675246",
@@ -610,9 +430,9 @@
    "title": "Cheongsong Apple Festival (청송사과축제)",
    "start": "2026-11-04",
    "end": "2026-11-08",
-   "address": "269 Geumwol-ro, Cheongsong-eup, Cheongsong-gun, Gyeongsangbuk-do",
-   "lat": 36.4331226625,
-   "lon": 129.0559881717
+   "address": "484-1, Wolmak-ri, Cheongsong-eup, Cheongsong-gun, Gyeongsangbuk-do",
+   "lat": 36.4340985891,
+   "lon": 129.0521130873
   },
   {
    "id": "4116386",
@@ -622,6 +442,15 @@
    "address": "140 Gwanggyojungang-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do",
    "lat": 37.2858286641,
    "lon": 127.0594469415
+  },
+  {
+   "id": "3366992",
+   "title": "Goesan Gimjang Festival (괴산김장축제)",
+   "start": "2026-11-05",
+   "end": "2026-11-08",
+   "address": "92 Imkkeokjeong-ro, Goesan-eup, Goesan-gun, Chungcheongbuk-do",
+   "lat": 36.8145153033,
+   "lon": 127.7865237323
   },
   {
    "id": "1084180",
@@ -655,9 +484,9 @@
    "title": "Gumi Ramyun Festival (구미라면 축제)",
    "start": "2026-11-06",
    "end": "2026-11-08",
-   "address": "124-23, Wonpyeong-dong, Gumi-si, Gyeongsangbuk-do",
-   "lat": 36.129404,
-   "lon": 128.331422
+   "address": "Yeokjeon-ro, Gumi-si, Gyeongsangbuk-do",
+   "lat": 36.1309792684,
+   "lon": 128.3323188678
   },
   {
    "id": "4116443",
