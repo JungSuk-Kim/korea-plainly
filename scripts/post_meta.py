@@ -74,17 +74,28 @@ def video_file(v):
 
 # ---------------------------------------------------------------- Instagram (Reels)
 
+def check(r, what):
+    """raise_for_status, but keep the API's own error message (Meta explains what is wrong in the body)."""
+    if not r.ok:
+        try:
+            err = r.json().get("error", {})
+            msg = f"{err.get('message')} (code {err.get('code')}, subcode {err.get('error_subcode')}, {err.get('type')})"
+        except Exception:
+            msg = r.text[:300]
+        raise RuntimeError(f"{what}: HTTP {r.status_code}: {msg}")
+
+
 def instagram_reel(v, data, caption):
     uid, tok = E["IG_USER_ID"].strip(), E["IG_ACCESS_TOKEN"].strip()
     api = f"https://graph.instagram.com/{GV}"
     r = requests.post(f"{api}/{uid}/media", timeout=60, data={
         "media_type": "REELS", "upload_type": "resumable", "caption": caption, "share_to_feed": "true",
         "access_token": tok})
-    r.raise_for_status()
+    check(r, "create Reel container")
     cid, uri = r.json()["id"], r.json().get("uri") or f"https://rupload.facebook.com/ig-api-upload/{GV}/{r.json()['id']}"
     up = requests.post(uri, data=data, timeout=600, headers={
         "Authorization": f"OAuth {tok}", "offset": "0", "file_size": str(len(data))})
-    up.raise_for_status()
+    check(up, "upload Reel video")
     for _ in range(40):  # Instagram processes the video before it can be published
         time.sleep(15)
         s = requests.get(f"{api}/{cid}", params={"fields": "status_code,status", "access_token": tok}, timeout=30).json()
@@ -95,7 +106,7 @@ def instagram_reel(v, data, caption):
     else:
         raise RuntimeError("Instagram took too long to process the video")
     p = requests.post(f"{api}/{uid}/media_publish", data={"creation_id": cid, "access_token": tok}, timeout=60)
-    p.raise_for_status()
+    check(p, "publish Reel")
     return p.json()["id"]
 
 
