@@ -85,6 +85,28 @@ def check(r, what):
         raise RuntimeError(f"{what}: HTTP {r.status_code}: {msg}")
 
 
+def release_url(v, data):
+    """Put the video on a GitHub release of this (public) repo and return its download link for Instagram to fetch."""
+    repo, token = E.get("GITHUB_REPOSITORY"), E.get("GITHUB_TOKEN")
+    h = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
+    api = f"https://api.github.com/repos/{repo}"
+    r = requests.get(f"{api}/releases/tags/reels", headers=h, timeout=30)
+    if r.status_code == 404:
+        r = requests.post(f"{api}/releases", headers=h, timeout=30, json={
+            "tag_name": "reels", "name": "Reel files", "body": "Video files Instagram downloads to publish our Reels.",
+            "prerelease": True})
+    check(r, "find the reels release")
+    rel = r.json()
+    name = f"{v['slug']}.mp4"
+    for a in rel.get("assets", []):
+        if a["name"] == name:
+            return a["browser_download_url"]
+    up = requests.post(rel["upload_url"].split("{")[0], params={"name": name}, data=data, timeout=600,
+                       headers={**h, "Content-Type": "video/mp4"})
+    check(up, "upload the Reel file")
+    return up.json()["browser_download_url"]
+
+
 def fb_video_source(video_id):
     """A direct, public CDN link to a video already on our Facebook Page (Instagram fetches Reels from a URL)."""
     tok = E["FB_PAGE_TOKEN"].strip()
@@ -177,7 +199,7 @@ def run_videos(state, limit, dry):
         if dry:
             print("--- video", v["key"], v["slug"], "\n", ig_caption, "\n", th_text)
             continue
-        need_file = v["key"] not in done["facebook_videos"]   # the Reel is made from the Page video's URL
+        need_file = v["key"] not in done["facebook_videos"] or (not v["long"] and v["key"] not in done["instagram_videos"])
         data = video_file(v) if need_file else None
         if need_file and data is None:
             note("warning", f"{v['slug']}: video file no longer kept; Reel and Page video skipped")
@@ -186,7 +208,7 @@ def run_videos(state, limit, dry):
             return ref if ref and ref != "skipped" else None
         for key, ok, fn in (("facebook_videos", E.get("FB_PAGE_TOKEN") and data, lambda: facebook_video(v, data, fb_text)),
                             ("instagram_videos", not v["long"] and E.get("IG_ACCESS_TOKEN") and E.get("FB_PAGE_TOKEN") and fb_ref(),
-                             lambda: instagram_reel(fb_video_source(fb_ref()), ig_caption)),
+                             lambda: instagram_reel(release_url(v, data) if data else fb_video_source(fb_ref()), ig_caption)),
                             ("threads_videos", E.get("THREADS_ACCESS_TOKEN"), lambda: threads_post(th_text, guide))):
             if v["key"] in done[key]:
                 continue
