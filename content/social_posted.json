@@ -47,6 +47,10 @@
     "yeosu-food-crab-1st-avenue-kkotdol": {
       "at": "2026-10-17T13:55:28+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3my3al3svpb2q"
+    },
+    "yeosu-cafe-cafe-hoi-an": {
+      "at": "2026-10-18T00:07:15+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3my4cr2oqiv2s"
     }
   },
   "bluesky_videos": {
@@ -140,6 +144,10 @@
     "yeosu-food-crab-1st-avenue-kkotdol": {
       "at": "2026-10-17T13:55:37+00:00",
       "ref": "1261611360380213_122103431379509276"
+    },
+    "yeosu-cafe-cafe-hoi-an": {
+      "at": "2026-10-18T00:07:24+00:00",
+      "ref": "1261611360380213_122103823809509276"
     }
   },
   "threads": {
@@ -170,6 +178,10 @@
     "yeosu-food-crab-1st-avenue-kkotdol": {
       "at": "2026-10-17T13:55:49+00:00",
       "ref": "17964219666227662"
+    },
+    "yeosu-cafe-cafe-hoi-an": {
+      "at": "2026-10-18T00:07:37+00:00",
+      "ref": "17922325710448974"
     }
   }
 }
