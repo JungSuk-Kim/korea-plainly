@@ -68,7 +68,8 @@ Interactive pages (learn-hangul, packing list, cost calculator, city quiz) keep 
 Festivals: "Festivals (weekly)" runs `fetch_festivals.py` (KTO English TourAPI, secret `TOURAPI_KEY`) into
 `content/festivals.json`; `festival_pages.py` fills korea-festivals.html and "Festivals coming up" on region hubs.
 Meta: "Social posts" also runs `post_meta.py` (public videos → Instagram Reels, Facebook Page video, Threads link;
-articles → Page and Threads link posts; state in `content/social_posted.json`). "Meta token refresh" renews the 60-day
+articles → Page and Threads link posts; state in `content/social_posted.json`). Reels are created from a public `video_url` (Instagram Login has no resumable upload): the Short is put on the
+`reels` GitHub release and Instagram downloads it from there. "Meta token refresh" renews the 60-day
 Instagram/Threads tokens into Secrets (`GH_SECRETS_TOKEN`); "Meta check" tests all tokens read-only.
 Shorts end with a subscribe ask and a SUBSCRIBE end card (`video_text.SHORT_OUTRO`, `make_short.end_card`); `youtube_playlists.py`
 (run by the 2-hourly check) sorts every upload into playlists (state: `content/youtube_playlists.json`). Subscribe buttons
