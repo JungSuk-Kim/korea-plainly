@@ -55,6 +55,10 @@
     "vegetarian-food-korea": {
       "at": "2026-10-18T00:09:09+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3my4cuh7r3y24"
+    },
+    "olive-young-korea-guide": {
+      "at": "2026-10-18T00:11:25+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3my4cyiwpai2v"
     }
   },
   "bluesky_videos": {
@@ -83,7 +87,12 @@
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mxybiiznoa2w"
     }
   },
-  "instagram_videos": {},
+  "instagram_videos": {
+    "vAo-ajdZxPY": {
+      "at": "2026-10-18T00:12:05+00:00",
+      "ref": "17888857056618648"
+    }
+  },
   "facebook_videos": {
     "5vIbm2LQPmY": {
       "at": "2026-10-15T10:42:23+00:00",
@@ -156,6 +165,10 @@
     "vegetarian-food-korea": {
       "at": "2026-10-18T00:09:33+00:00",
       "ref": "1261611360380213_122103825057509276"
+    },
+    "olive-young-korea-guide": {
+      "at": "2026-10-18T00:12:10+00:00",
+      "ref": "1261611360380213_122103826317509276"
     }
   },
   "threads": {
@@ -194,6 +207,10 @@
     "vegetarian-food-korea": {
       "at": "2026-10-18T00:09:45+00:00",
       "ref": "18074514929562740"
+    },
+    "olive-young-korea-guide": {
+      "at": "2026-10-18T00:12:21+00:00",
+      "ref": "18635184565010874"
     }
   }
 }
