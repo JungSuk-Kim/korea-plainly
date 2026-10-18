@@ -498,6 +498,10 @@
       "https://commons.wikimedia.org/wiki/File:Seoul-Myeongdong-01.jpg"
     ]
   },
+  "papago-translation-app": {
+    "none": true,
+    "query": "Papago Other Translation Korea"
+  },
   "seollal-travel-tips": {
     "file": "photo-seollal-travel-tips.jpg",
     "credit": "Photo: Republic of Korea from Seoul, Republic of Korea, CC BY-SA 2.0, via Wikimedia Commons",

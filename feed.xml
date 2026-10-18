@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Sat, 17 Oct 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Sun, 18 Oct 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Using Papago and Other Translation Apps in Korea</title>
+<link>https://korea-plainly.com/papago-translation-app.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/papago-translation-app.html</guid>
+<pubDate>Sun, 18 Oct 2026 08:00:00 +0000</pubDate>
+<description>Learn how to use Papago, Google Translate, and other translation tools for menus, signs, conversations, and everyday tasks while visiting Korea.</description>
+</item>
 <item>
 <title>Hyangilam Hermitage: A Sea-Cliff Temple in Yeosu</title>
 <link>https://korea-plainly.com/yeosu-travel-hyangilam-hermitage.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/ktx-train-guide.html</guid>
 <pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
 <description>A practical guide to booking KTX tickets, choosing the right station and seat, and finding your train on travel day.</description>
-</item>
-<item>
-<title>Korea's Winter Festivals: Ice Fishing, Snow and Lights</title>
-<link>https://korea-plainly.com/korea-winter-festivals.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/korea-winter-festivals.html</guid>
-<pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
-<description>The best winter festivals in Korea for visitors: Hwacheon's trout ice fishing, Pyeongchang, Taebaek's snow sculptures, Seoul's lantern festival and winter light gardens, with how to get there.</description>
 </item>
 </channel>
 </rss>
