@@ -1,0 +1,50 @@
+{
+  "article": "korea-in-november",
+  "fallback": "photo-korea-in-january.jpg",
+  "title": "Korea In November: What To Pack For Changing Weather",
+  "summary": "Korea shifts from autumn to winter in November. Learn what layers to pack, how weather differs by region, and where to catch the last autumn colors.",
+  "hashtags": "#Korea #KoreaTravel #NovemberTravel #KoreaWeather #PackingTips",
+  "music": "Laid Back Guitars",
+  "slides": [
+    {
+      "kicker": "NOVEMBER",
+      "title": "Pack For Two Seasons",
+      "sub": "Korea turns from autumn to winter",
+      "voice": "Korea in November swings from autumn to winter. Pack layers.",
+      "image": "photo-korea-in-january.jpg"
+    },
+    {
+      "kicker": "PACKING",
+      "title": "Build Your Layers",
+      "sub": "Thin top, warm jumper, proper jacket",
+      "voice": "Start with a thin top, add a warm jumper or fleece, then wear a proper jacket. You can peel layers off indoors.",
+      "photo_query": "layered clothing Korea travel",
+      "require": [
+        "clothing"
+      ]
+    },
+    {
+      "kicker": "LATE MONTH",
+      "title": "Bring Winter Extras",
+      "sub": "Padded jacket, hat, and gloves",
+      "voice": "For the second half of November, bring a padded jacket, hat, and gloves. Seoul nights can get close to freezing.",
+      "photo_query": "winter coat gloves South Korea",
+      "require": [
+        "coat"
+      ]
+    },
+    {
+      "kicker": "AUTUMN COLORS",
+      "title": "Head South For Leaves",
+      "sub": "Colors last longer in the south",
+      "voice": "For autumn color, head south. Foliage often lasts there a little longer than in Seoul.",
+      "image": "photo-korea-autumn-foliage-2026.jpg"
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday and Friday."
+    }
+  ]
+}
