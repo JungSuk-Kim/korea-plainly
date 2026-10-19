@@ -603,7 +603,6 @@
   },
   "wowpass-card-korea": {
     "none": true,
-    "query": "Myeongdong shopping street Seoul",
-    "retry": true
+    "query": "Myeongdong shopping street Seoul"
   }
 }
