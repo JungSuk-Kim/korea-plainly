@@ -602,7 +602,9 @@
     "query": "Busan Gwangalli Bridge night"
   },
   "wowpass-card-korea": {
-    "none": true,
-    "query": "Myeongdong shopping street Seoul"
+    "file": "photo-korea-money-exchange.jpg",
+    "credit": "Photo: Christian Bolz (크리스티안 볼츠), CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Myeongdong_at_night.jpg",
+    "manual": true
   }
 }
