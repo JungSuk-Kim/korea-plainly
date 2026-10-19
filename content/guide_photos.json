@@ -600,5 +600,9 @@
     "credit": "Photo: by frakorea, CC BY 2.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Korea-Busan-Gwangan.Bridge-06.jpg",
     "query": "Busan Gwangalli Bridge night"
+  },
+  "wowpass-card-korea": {
+    "none": true,
+    "query": "WOWPASS Card Prepaid Korea"
   }
 }

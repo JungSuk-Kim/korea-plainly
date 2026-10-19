@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Sun, 18 Oct 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Mon, 19 Oct 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>WOWPASS Card in Korea: How the Prepaid Travel Card Works</title>
+<link>https://korea-plainly.com/wowpass-card-korea.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/wowpass-card-korea.html</guid>
+<pubDate>Mon, 19 Oct 2026 08:00:00 +0000</pubDate>
+<description>Learn how to get, load and use a WOWPASS card in Korea, including its separate payment and transit balances, and what to check before relying on it.</description>
+</item>
 <item>
 <title>Using Papago and Other Translation Apps in Korea</title>
 <link>https://korea-plainly.com/papago-translation-app.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/korea-in-january.html</guid>
 <pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
 <description>Korea in January: Seoul, Busan and Jeju weather in the coldest month, what to wear, ice fishing festivals, skiing, snowy palaces and New Year's Day tips.</description>
-</item>
-<item>
-<title>Korea in February: Weather, Seollal and What to Do</title>
-<link>https://korea-plainly.com/korea-in-february.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/korea-in-february.html</guid>
-<pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
-<description>Visiting Korea in February: still cold but warming up, Lunar New Year (Seollal) on 6-9 February 2027, the last ski weeks, snow festivals and early signs of spring in the south.</description>
 </item>
 </channel>
 </rss>
