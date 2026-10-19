@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19T10:30+09:00",
+  "updated": "2026-10-19T10:53+09:00",
   "analytics": true,
   "videos": [
     {
@@ -10,7 +10,7 @@
       "uploaded": "2026-10-16T14:48:57+09:00",
       "status": "public",
       "seconds": 53,
-      "views": 97,
+      "views": 98,
       "likes": 1,
       "comments": 0,
       "avg_view_seconds": 14,
@@ -113,7 +113,7 @@
       "uploaded": "2026-10-14T08:50:00+09:00",
       "status": "public",
       "seconds": null,
-      "views": 61,
+      "views": 62,
       "likes": 2,
       "comments": 0,
       "avg_view_seconds": 15,
@@ -163,7 +163,7 @@
     }
   ],
   "total": {
-    "views": 226,
+    "views": 228,
     "likes": 6,
     "comments": 0,
     "subscribers_gained": 0
