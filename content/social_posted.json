@@ -71,6 +71,10 @@
     "wowpass-card-korea": {
       "at": "2026-10-19T06:48:26+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3my7jneb4vj2r"
+    },
+    "nami-island-gapyeong": {
+      "at": "2026-10-19T17:09:26+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myamds6kmu2r"
     }
   },
   "bluesky_videos": {
@@ -221,6 +225,10 @@
     "wowpass-card-korea": {
       "at": "2026-10-19T06:48:45+00:00",
       "ref": "1261611360380213_122104824099509276"
+    },
+    "nami-island-gapyeong": {
+      "at": "2026-10-19T17:09:34+00:00",
+      "ref": "1261611360380213_122105209629509276"
     }
   },
   "threads": {
@@ -275,6 +283,10 @@
     "wowpass-card-korea": {
       "at": "2026-10-19T06:48:55+00:00",
       "ref": "18194226715403189"
+    },
+    "nami-island-gapyeong": {
+      "at": "2026-10-19T17:09:47+00:00",
+      "ref": "17962090826996044"
     }
   }
 }
