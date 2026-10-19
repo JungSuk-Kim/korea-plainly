@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-18T10:35+09:00",
-  "analytics": false,
+  "updated": "2026-10-19T10:30+09:00",
+  "analytics": true,
   "videos": [
     {
       "id": "vAo-ajdZxPY",
@@ -10,9 +10,24 @@
       "uploaded": "2026-10-16T14:48:57+09:00",
       "status": "public",
       "seconds": 53,
-      "views": 80,
+      "views": 97,
       "likes": 1,
-      "comments": 0
+      "comments": 0,
+      "avg_view_seconds": 14,
+      "avg_view_percent": 27.149999999999995,
+      "subscribers_gained": 0,
+      "shares": 0,
+      "retention": {
+        "at": {
+          "10%": 90,
+          "25%": 40,
+          "50%": 20,
+          "75%": 10,
+          "95%": 10
+        },
+        "biggest_drop_at": "33%",
+        "biggest_drop": 20
+      }
     },
     {
       "id": "5vIbm2LQPmY",
@@ -24,7 +39,11 @@
       "seconds": 539,
       "views": 6,
       "likes": 0,
-      "comments": 0
+      "comments": 0,
+      "avg_view_seconds": 53,
+      "avg_view_percent": 9.96,
+      "subscribers_gained": 0,
+      "shares": 0
     },
     {
       "id": "aXsQ--xbyuM",
@@ -34,9 +53,24 @@
       "uploaded": "2026-10-14T21:00:00+09:00",
       "status": "public",
       "seconds": 515,
-      "views": 29,
+      "views": 30,
       "likes": 1,
-      "comments": 0
+      "comments": 0,
+      "avg_view_seconds": 136,
+      "avg_view_percent": 26.46,
+      "subscribers_gained": 0,
+      "shares": 0,
+      "retention": {
+        "at": {
+          "10%": 46,
+          "25%": 38,
+          "50%": 23,
+          "75%": 15,
+          "95%": 15
+        },
+        "biggest_drop_at": "4%",
+        "biggest_drop": 15
+      }
     },
     {
       "id": "qSv1ySQfzh4",
@@ -46,9 +80,13 @@
       "uploaded": "2026-10-14T15:05:52+09:00",
       "status": "public",
       "seconds": 51,
-      "views": 8,
+      "views": 10,
       "likes": 1,
-      "comments": 0
+      "comments": 0,
+      "avg_view_seconds": 14,
+      "avg_view_percent": 27.04,
+      "subscribers_gained": 0,
+      "shares": 0
     },
     {
       "id": "QPsof1_LFbA",
@@ -60,7 +98,12 @@
       "seconds": 59,
       "views": 22,
       "likes": 1,
-      "comments": 0
+      "comments": 0,
+      "avg_view_seconds": 27,
+      "avg_view_percent": 45.99,
+      "subscribers_gained": 0,
+      "shares": 0,
+      "retention": null
     },
     {
       "id": "P5Dq3oF2XfY",
@@ -72,16 +115,55 @@
       "seconds": null,
       "views": 61,
       "likes": 2,
-      "comments": 0
+      "comments": 0,
+      "avg_view_seconds": 15,
+      "avg_view_percent": 28.01,
+      "subscribers_gained": 0,
+      "shares": 0,
+      "retention": null
     }
   ],
   "scopes": [
     "youtube",
     "yt-analytics.readonly"
   ],
-  "analytics_error": "500: {\n  \"error\": {\n    \"code\": 500,\n    \"message\": \"An internal error has occurred.\",\n    \"errors\": [\n      {\n        \"message\": \"An internal error has occurred.\",\n        \"domain\": \"global\",\n        \"rea",
+  "countries": [],
+  "traffic_sources": [
+    {
+      "source": "SHORTS",
+      "views": 33
+    },
+    {
+      "source": "YT_SEARCH",
+      "views": 28
+    },
+    {
+      "source": "RELATED_VIDEO",
+      "views": 15
+    },
+    {
+      "source": "SUBSCRIBER",
+      "views": 13
+    },
+    {
+      "source": "YT_CHANNEL",
+      "views": 7
+    },
+    {
+      "source": "YT_OTHER_PAGE",
+      "views": 2
+    },
+    {
+      "source": "EXT_URL",
+      "views": 1
+    },
+    {
+      "source": "NO_LINK_OTHER",
+      "views": 0
+    }
+  ],
   "total": {
-    "views": 206,
+    "views": 226,
     "likes": 6,
     "comments": 0,
     "subscribers_gained": 0
