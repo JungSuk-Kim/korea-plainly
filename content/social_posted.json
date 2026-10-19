@@ -67,6 +67,10 @@
     "noraebang-korean-karaoke-guide": {
       "at": "2026-10-18T14:08:50+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3my5rrvsks62z"
+    },
+    "wowpass-card-korea": {
+      "at": "2026-10-19T06:48:26+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3my7jneb4vj2r"
     }
   },
   "bluesky_videos": {
@@ -107,6 +111,10 @@
     "QPsof1_LFbA": {
       "at": "2026-10-18T14:08:57+00:00",
       "ref": "skipped"
+    },
+    "P5Dq3oF2XfY": {
+      "at": "2026-10-19T06:48:27+00:00",
+      "ref": "skipped"
     }
   },
   "facebook_videos": {
@@ -129,6 +137,10 @@
     "QPsof1_LFbA": {
       "at": "2026-10-18T14:08:57+00:00",
       "ref": "1101319446054956"
+    },
+    "P5Dq3oF2XfY": {
+      "at": "2026-10-19T06:48:27+00:00",
+      "ref": "skipped"
     }
   },
   "threads_videos": {
@@ -151,6 +163,10 @@
     "QPsof1_LFbA": {
       "at": "2026-10-18T14:09:11+00:00",
       "ref": "18639708982043876"
+    },
+    "P5Dq3oF2XfY": {
+      "at": "2026-10-19T06:48:38+00:00",
+      "ref": "18108621947613792"
     }
   },
   "facebook": {
@@ -201,6 +217,10 @@
     "noraebang-korean-karaoke-guide": {
       "at": "2026-10-18T14:09:21+00:00",
       "ref": "1261611360380213_122104311459509276"
+    },
+    "wowpass-card-korea": {
+      "at": "2026-10-19T06:48:45+00:00",
+      "ref": "1261611360380213_122104824099509276"
     }
   },
   "threads": {
@@ -251,6 +271,10 @@
     "noraebang-korean-karaoke-guide": {
       "at": "2026-10-18T14:09:31+00:00",
       "ref": "18466774723136929"
+    },
+    "wowpass-card-korea": {
+      "at": "2026-10-19T06:48:55+00:00",
+      "ref": "18194226715403189"
     }
   }
 }
