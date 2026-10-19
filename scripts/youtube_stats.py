@@ -7,10 +7,13 @@ Always: views, likes and comments per video (YouTube Data API, scope youtube).
 If the refresh token also has yt-analytics.readonly: average % viewed, average view length, subscribers gained,
 shares, and a retention summary (how many viewers are still watching at 10%, 25%, 50%, 75% and 95% of the video,
 and where the biggest drop is). Analytics numbers lag YouTube Studio by about two days.
+Analytics calls are retried on 5xx/429 (5s, 15s, 45s). If they still fail, the last good analytics numbers are
+carried over from the previous content/youtube_stats.json with "analytics_stale_since" set to their date.
 Needs YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN.
 """
 import json
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -25,10 +28,47 @@ KST = timezone(timedelta(hours=9))
 DATA = "https://www.googleapis.com/youtube/v3"
 ANALYTICS = "https://youtubeanalytics.googleapis.com/v2/reports"
 MARKS = (0.1, 0.25, 0.5, 0.75, 0.95)
+BACKOFF = (5, 15, 45)   # seconds between retries of an Analytics call
+CARRY = ("avg_view_seconds", "avg_view_percent", "subscribers_gained", "shares", "retention")
+
+
+def analytics_get(auth, params):
+    """GET an Analytics report, retrying on 5xx and 429 only."""
+    for wait in BACKOFF + (None,):
+        try:
+            r = requests.get(ANALYTICS, headers=auth, timeout=30, params=params)
+        except requests.RequestException as exc:
+            if wait is None:
+                raise
+            print(f"Analytics request failed ({exc.__class__.__name__}); retrying in {wait}s")
+            time.sleep(wait)
+            continue
+        if wait is None or not (r.status_code == 429 or r.status_code >= 500):
+            return r
+        print(f"Analytics returned {r.status_code}; retrying in {wait}s")
+        time.sleep(wait)
+
+
+def carry_over(out, prev):
+    """Keep the last good analytics numbers when today's Analytics call failed."""
+    if prev.get("analytics"):
+        since = str(prev.get("updated", ""))[:10]
+    else:
+        since = prev.get("analytics_stale_since")
+    if not since:
+        return
+    old = {v.get("id"): v for v in prev.get("videos", [])}
+    for e in out["videos"]:
+        o = old.get(e["id"], {})
+        e.update({k: o[k] for k in CARRY if k in o})
+    for k in ("countries", "traffic_sources"):
+        if k in prev:
+            out[k] = prev[k]
+    out["analytics_stale_since"] = since
 
 
 def retention(auth, vid, start, end):
-    r = requests.get(ANALYTICS, headers=auth, timeout=30, params={
+    r = analytics_get(auth, {
         "ids": "channel==MINE", "startDate": start, "endDate": end, "dimensions": "elapsedVideoTimeRatio",
         "metrics": "audienceWatchRatio", "filters": f"video=={vid}"})
     if r.status_code != 200:
@@ -66,10 +106,10 @@ def main():
 
     end = datetime.now(KST).date().isoformat()
     start = min(v.get("uploaded", end)[:10] for v in videos.values())
-    a = requests.get(ANALYTICS, headers=auth, timeout=30, params={
+    a = analytics_get(auth, {
         "ids": "channel==MINE", "startDate": start, "endDate": end, "dimensions": "video",
         "metrics": "views,averageViewDuration,averageViewPercentage,subscribersGained,shares,likes",
-        "filters": "video==" + ",".join(videos), "sort": "-views"})
+        "filters": "video==" + ",".join(videos), "sort": "-views", "maxResults": 200})
     rows = {}
     if a.status_code == 200:
         out["analytics"] = True
@@ -80,12 +120,12 @@ def main():
         print(f"::notice::YouTube Analytics not available yet ({a.status_code}); saving views, likes and comments only")
 
     if out["analytics"]:   # where viewers are, to choose when to publish
-        c = requests.get(ANALYTICS, headers=auth, timeout=30, params={
+        c = analytics_get(auth, {
             "ids": "channel==MINE", "startDate": start, "endDate": end, "dimensions": "country",
             "metrics": "views,estimatedMinutesWatched", "sort": "-views", "maxResults": 15})
         if c.status_code == 200:
             out["countries"] = [{"country": r[0], "views": r[1], "minutes": r[2]} for r in c.json().get("rows") or []]
-        t = requests.get(ANALYTICS, headers=auth, timeout=30, params={
+        t = analytics_get(auth, {
             "ids": "channel==MINE", "startDate": start, "endDate": end, "dimensions": "insightTrafficSourceType",
             "metrics": "views", "sort": "-views"})
         if t.status_code == 200:
@@ -107,6 +147,8 @@ def main():
                 e["retention"] = retention(auth, vid, start, end)
         out["videos"].append(e)
     out["videos"].sort(key=lambda e: e["uploaded"], reverse=True)
+    if not out["analytics"]:
+        carry_over(out, load(OUT) if OUT.exists() else {})
     total = {k: sum(e.get(k) or 0 for e in out["videos"]) for k in ("views", "likes", "comments", "subscribers_gained")}
     out["total"] = total
     save(OUT, out)

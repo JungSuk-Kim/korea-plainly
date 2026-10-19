@@ -77,6 +77,7 @@ Shorts end with a subscribe ask and a SUBSCRIBE end card (`video_text.SHORT_OUTR
 (`.kp-sub`, `?sub_confirmation=1`) come from site_mascot.py, embed_videos.py and video_hub.py.
 "YouTube stats" (daily 08:53 KST) runs `youtube_stats.py` → `content/youtube_stats.json`: views/likes/comments, and with the
 `yt-analytics.readonly` scope also average % viewed, subscribers gained and a retention summary per video.
+Analytics calls retry on 5xx/429; if they still fail, the last good numbers are kept with `analytics_stale_since`.
 "Keyword ideas (weekly)" runs `keyword_ideas.py` (Google autocomplete for travel seeds, compared with page titles) →
 `content/keyword_ideas.json`: "gaps" (common searches with no page) feed new topics, "retitle" feeds title fixes.
 Daily Publish runs `refill_topics.py` before the guide: under 7 unused topics, it asks the model to choose new ones
