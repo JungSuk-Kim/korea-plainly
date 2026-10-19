@@ -603,6 +603,7 @@
   },
   "wowpass-card-korea": {
     "none": true,
-    "query": "WOWPASS Card Prepaid Korea"
+    "query": "Myeongdong shopping street Seoul",
+    "retry": true
   }
 }
