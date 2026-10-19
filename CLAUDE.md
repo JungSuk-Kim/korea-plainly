@@ -54,11 +54,11 @@ with a poster frame in `img/`; `scripts/embed_videos.py` then shows it in its ar
 The "Shorts (automatic)" workflow does all of this: `write_short.py` writes the script from the next article in
 `content/shorts/queue.json`, `make_short.py` renders it (narration, subtitles, Kevin MacLeod music, CC BY 4.0),
 `youtube_shorts.py upload` uploads it as private (log: `content/shorts/uploads.json`), the owner makes it public,
-and `youtube_shorts.py check` (every 2 hours) adds it to the article. Videos are not committed (`_shorts/*.mp4`
+and `youtube_shorts.py check` (every hour) adds it to the article. Videos are not committed (`_shorts/*.mp4`
 is ignored); each run keeps its video as a 30-day artifact. Never use Google Maps photos in videos.
 Long-form (16:9, 8-9 min): "Long-form video (weekly)" runs Tuesdays: `write_longform.py` (script from the next article in
 `content/longform/queue.json`, map stops geocoded with OSM Nominatim) → `make_longform.py` (OSM maps, chapters, subtitles,
-Kkachi) → `youtube_upload.py` (private) → `youtube_shorts.py record-long`; the 2-hourly check embeds it at the top of the
+Kkachi) → `youtube_upload.py` (private) → `youtube_shorts.py record-long`; the hourly check embeds it at the top of the
 article once public (a Short for the same article moves to the end). Kkachi the magpie mascot lives in `scripts/mascot/`;
 `site_mascot.py` puts Kkachi on the site (article sign-off, About, 404) and `video_hub.py` builds videos.html and the
 home page "Watch" section from `content/videos.json`.
@@ -73,7 +73,7 @@ articles → Page and Threads link posts; state in `content/social_posted.json`)
 `reels` GitHub release and Instagram downloads it from there. "Meta token refresh" renews the 60-day
 Instagram/Threads tokens into Secrets (`GH_SECRETS_TOKEN`); "Meta check" tests all tokens read-only.
 Shorts end with a subscribe ask and a SUBSCRIBE end card (`video_text.SHORT_OUTRO`, `make_short.end_card`); `youtube_playlists.py`
-(run by the 2-hourly check) sorts every upload into playlists (state: `content/youtube_playlists.json`). Subscribe buttons
+(run by the hourly check) sorts every upload into playlists (state: `content/youtube_playlists.json`). Subscribe buttons
 (`.kp-sub`, `?sub_confirmation=1`) come from site_mascot.py, embed_videos.py and video_hub.py.
 "YouTube stats" (daily 08:53 KST) runs `youtube_stats.py` → `content/youtube_stats.json`: views/likes/comments, and with the
 `yt-analytics.readonly` scope also average % viewed, subscribers gained and a retention summary per video.

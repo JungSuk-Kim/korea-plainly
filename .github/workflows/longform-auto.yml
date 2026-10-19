@@ -2,7 +2,7 @@ name: Long-form video (weekly)
 
 # Tuesdays 10:23 KST: write a long-form script from the next article (content/longform/queue.json),
 # render it (maps, Kkachi, subtitles, music) and upload it to YouTube as PRIVATE for the owner to check.
-# "Shorts (automatic)" checks every 2 hours and adds it to its article once it is public.
+# "Shorts (automatic)" checks every hour and adds it to its article once it is public.
 on:
   schedule:
     - cron: "23 1 * * 2"
