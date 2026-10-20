@@ -1,0 +1,944 @@
+{
+  "title": "Jeju Island 3-Day Itinerary: West Coast, Udo and Hallasan",
+  "intro": "Plan three days in Jeju, from the turquoise west coast to Sunrise Peak and the south shore. Get a practical route, transport advice, and simple alternatives for rain, wind, or a mountain hike.",
+  "hashtags": "#Jeju #JejuIsland #KoreaTravel #JejuItinerary #SouthKorea",
+  "thumb": {
+    "big": "3 DAYS",
+    "mid": "IN JEJU",
+    "small": "WEST, EAST AND SOUTH"
+  },
+  "maps": {
+    "overview": {
+      "stops": [
+        {
+          "name": "Jeju City",
+          "lat": 33.4998289,
+          "lon": 126.5313902
+        },
+        {
+          "name": "Aewol Coast",
+          "lat": 33.45079,
+          "lon": 126.3752
+        },
+        {
+          "name": "Hyeopjae Beach",
+          "lat": 33.395112,
+          "lon": 126.2402796
+        },
+        {
+          "name": "Seongsan Ilchulbong",
+          "lat": 33.4584403,
+          "lon": 126.9414363
+        },
+        {
+          "name": "Udo Island",
+          "lat": 33.5072572,
+          "lon": 126.9550015
+        },
+        {
+          "name": "Hallasan",
+          "lat": 33.3922451,
+          "lon": 126.4942816
+        }
+      ],
+      "route": false,
+      "note": "One side of the island each day"
+    },
+    "west": {
+      "stops": [
+        {
+          "name": "Aewol Coast",
+          "lat": 33.45079,
+          "lon": 126.3752
+        },
+        {
+          "name": "Hyeopjae Beach",
+          "lat": 33.395112,
+          "lon": 126.2402796
+        },
+        {
+          "name": "Arte Museum",
+          "lat": 33.3966097,
+          "lon": 126.3448899
+        }
+      ],
+      "route": true,
+      "note": "West coast, then inland"
+    },
+    "east": {
+      "stops": [
+        {
+          "name": "Sunrise Peak",
+          "lat": 33.4584403,
+          "lon": 126.9414363
+        },
+        {
+          "name": "Udo Island",
+          "lat": 33.5072572,
+          "lon": 126.9550015
+        },
+        {
+          "name": "Seopjikoji",
+          "lat": 33.4240857,
+          "lon": 126.9306299
+        }
+      ],
+      "route": true,
+      "note": "Start early on the east coast"
+    },
+    "daythree": {
+      "stops": [
+        {
+          "name": "Hallasan",
+          "lat": 33.3922451,
+          "lon": 126.4942816
+        },
+        {
+          "name": "Jeongbang Falls",
+          "lat": 33.2448578,
+          "lon": 126.5715451
+        },
+        {
+          "name": "Cheonjiyeon Falls",
+          "lat": 33.2469271,
+          "lon": 126.5545282
+        },
+        {
+          "name": "Olle Market",
+          "lat": 33.2492515,
+          "lon": 126.5633597
+        }
+      ],
+      "route": false,
+      "note": "Choose the mountain or the south coast"
+    }
+  },
+  "chapters": [
+    {
+      "name": "Intro",
+      "segments": [
+        {
+          "voice": "Jeju’s black-rock coast opens onto water so clear it looks turquoise.",
+          "show": [
+            {
+              "photo_query": "Hyeopjae Beach",
+              "require": [
+                "hyeopjae"
+              ]
+            }
+          ]
+        },
+        {
+          "voice": "At Sunrise Peak, a volcanic crater rises straight from the sea.",
+          "show": [
+            {
+              "image": "photo-jeju-3-day-itinerary.jpg"
+            }
+          ]
+        },
+        {
+          "voice": "On Udo, quiet coastal roads invite you to slow down and explore.",
+          "show": [
+            {
+              "photo_query": "Udo Island coast",
+              "require": [
+                "udo"
+              ]
+            }
+          ]
+        },
+        {
+          "voice": "And on the south coast, waterfalls tumble into a very different landscape.",
+          "show": [
+            {
+              "photo_query": "Jeongbang Falls",
+              "require": [
+                "jeongbang"
+              ]
+            }
+          ]
+        },
+        {
+          "voice": "By the end, you’ll have the three-day route in order, plus practical options for getting around and changing weather.",
+          "show": [
+            {
+              "photo_query": "Jeju Island coast",
+              "require": [
+                "jeju"
+              ]
+            },
+            {
+              "map": "overview"
+            }
+          ]
+        },
+        {
+          "voice": "Here is the island at a glance: west coast, east coast, then the mountain or the south.",
+          "show": [
+            {
+              "map": "overview"
+            }
+          ]
+        },
+        {
+          "voice": "Three days in Jeju, planned plainly.",
+          "show": [
+            {
+              "card": {
+                "big": "JEJU",
+                "title": "A three-day first-timer plan",
+                "sub": "West coast · East coast · South"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Before you go",
+      "segments": [
+        {
+          "voice": "A little planning makes this route much easier. Jeju is bigger than it looks, so think about your transport, your base, and the day’s weather before you set off.",
+          "show": [
+            {
+              "card": {
+                "big": "BEFORE",
+                "title": "A few useful things to know",
+                "sub": "Plan for distance, wind and changing conditions"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "For a short trip, Jeju City is a practical base. It is close to the airport, and many restaurants and buses start there. Aewol on the west or Seogwipo on the south are alternatives if you want to stay by the coast.",
+          "show": [
+            {
+              "photo_query": "Maison GLAD Jeju",
+              "require": [
+                "maison"
+              ]
+            },
+            {
+              "list": {
+                "heading": "Places to base yourself",
+                "items": [
+                  "Jeju City: airport, restaurants and buses",
+                  "Aewol: west coast",
+                  "Seogwipo: south coast"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "voice": "If you plan to rent a car, bring your passport and an International Driving Permit, or the type of licence Korea accepts from your country. Check the requirements before you travel.",
+          "show": [
+            {
+              "image": "photo-arriving-in-korea-checklist.jpg"
+            },
+            {
+              "list": {
+                "heading": "For a rental car",
+                "items": [
+                  "Passport",
+                  "International Driving Permit or accepted licence"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Book flights from Seoul early for weekends and holidays. This is one of the busiest air routes in the world, so leaving flights until the last moment can make your plans harder.",
+          "show": [
+            {
+              "image": "photo-incheon-airport-to-seoul.jpg"
+            },
+            {
+              "list": {
+                "heading": "Before your flight",
+                "items": [
+                  "Check your travel dates",
+                  "Book early for weekends and holidays"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Jeju weather changes quickly, and wind is common. Pack a windproof layer whatever the season, and check conditions before outdoor plans, especially a mountain hike or a ferry trip.",
+          "show": [
+            {
+              "photo_query": "Hallasan mountain weather",
+              "require": [
+                "hallasan"
+              ]
+            },
+            {
+              "list": {
+                "heading": "Bring along",
+                "items": [
+                  "A windproof layer",
+                  "A flexible plan"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Day 1: the west coast",
+      "segments": [
+        {
+          "voice": "Day one follows Jeju’s west coast, with a cafe stop, a beach walk, and an indoor or outdoor afternoon.",
+          "show": [
+            {
+              "card": {
+                "big": "DAY 1",
+                "title": "The west coast",
+                "sub": "Sea views, beach and sunset"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Start in Aewol, continue to Hyeopjae, then head inland for the afternoon.",
+          "show": [
+            {
+              "map": "west"
+            }
+          ]
+        },
+        {
+          "voice": "Begin with a coastal drive from Jeju City to Aewol. Lava rock borders the shoreline, and cafes look out over the water. Haejigae Cafe is a relaxed place to pause and enjoy the sea view.",
+          "show": [
+            {
+              "photo_query": "Aewol coast cafe",
+              "require": [
+                "aewol"
+              ]
+            },
+            {
+              "map": "west"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 1 - MORNING",
+            "title": "Aewol Coast"
+          }
+        },
+        {
+          "voice": "Next, take a slow walk at Hyeopjae Beach. The water is clear and turquoise, and Biyangdo sits just offshore. In summer, people come to swim; in other seasons, the sand and coastal path make a lovely walk.",
+          "show": [
+            {
+              "photo_query": "Hyeopjae Beach Biyangdo",
+              "require": [
+                "hyeopjae"
+              ]
+            },
+            {
+              "map": "west"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 1 - MIDDAY",
+            "title": "Hyeopjae Beach"
+          }
+        },
+        {
+          "voice": "For lunch, head to nearby Hallim. Then choose the afternoon around the weather. Arte Museum Jeju is a large immersive digital art space and a useful indoor plan when rain makes a long outdoor stop less appealing.",
+          "show": [
+            {
+              "photo_query": "Arte Museum Jeju",
+              "require": [
+                "arte"
+              ]
+            },
+            {
+              "list": {
+                "heading": "Rainy-day option",
+                "items": [
+                  "Lunch in Hallim",
+                  "Immersive digital art at Arte Museum Jeju"
+                ]
+              }
+            }
+          ],
+          "label": {
+            "kicker": "DAY 1 - AFTERNOON",
+            "title": "Arte Museum Jeju"
+          }
+        },
+        {
+          "voice": "On a clear day, swap the museum for a short climb up an oreum, one of Jeju’s small volcanic cones. You get a different view over the fields and a taste of the island’s volcanic landscape.",
+          "show": [
+            {
+              "photo_query": "Jeju oreum cone",
+              "require": [
+                "oreum"
+              ]
+            },
+            {
+              "list": {
+                "heading": "Clear-weather alternative",
+                "items": [
+                  "Skip the museum",
+                  "Choose a short oreum climb"
+                ]
+              }
+            }
+          ],
+          "label": {
+            "kicker": "DAY 1 - OPTION",
+            "title": "A short oreum walk"
+          }
+        },
+        {
+          "voice": "Stay on the west coast for sunset. This side of the island faces the evening light, so you can finish the day by the water before driving back to Jeju City.",
+          "show": [
+            {
+              "photo_query": "Aewol coast sunset",
+              "require": [
+                "aewol"
+              ]
+            },
+            {
+              "map": "west"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 1 - EVENING",
+            "title": "West coast sunset"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Day 2: the east coast",
+      "segments": [
+        {
+          "voice": "Day two is an early start on the east coast, with a crater climb, a ferry to Udo, and a walk above the sea.",
+          "show": [
+            {
+              "card": {
+                "big": "DAY 2",
+                "title": "The east coast",
+                "sub": "Sunrise Peak, Udo and Seopjikoji"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "The route starts at Seongsan, crosses to Udo, then continues to Seopjikoji.",
+          "show": [
+            {
+              "map": "east"
+            }
+          ]
+        },
+        {
+          "voice": "Start early at Seongsan Ilchulbong, also called Sunrise Peak. This huge volcanic crater rises from the sea and is part of Jeju’s UNESCO World Natural Heritage. The steps to the crater rim take about twenty to thirty minutes.",
+          "show": [
+            {
+              "map": "east"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 2 - EARLY",
+            "title": "Seongsan Ilchulbong"
+          }
+        },
+        {
+          "voice": "Come for sunrise or early in the morning to avoid tour groups. After your visit, go to nearby Seongsan Port for the ferry to Udo. Check ferry conditions on the day, because bad weather or strong wind can cancel sailings.",
+          "show": [
+            {
+              "photo_query": "Seongsan Port ferry",
+              "require": [
+                "seongsan"
+              ]
+            },
+            {
+              "list": {
+                "heading": "Before boarding",
+                "items": [
+                  "Check the ferry on the day",
+                  "Wind and bad weather can cancel sailings"
+                ]
+              }
+            }
+          ],
+          "label": {
+            "kicker": "DAY 2 - MORNING",
+            "title": "Ferry to Udo"
+          }
+        },
+        {
+          "voice": "Udo is a small island with white-sand beaches, quiet coastal roads, and peanut ice cream. Rent a bicycle, e-bike, or scooter to explore. Take your time here rather than treating the island as just another quick photo stop.",
+          "show": [
+            {
+              "photo_query": "Udo Island coast",
+              "require": [
+                "udo"
+              ]
+            },
+            {
+              "list": {
+                "heading": "Getting around Udo",
+                "items": [
+                  "Bicycle",
+                  "E-bike",
+                  "Scooter"
+                ]
+              }
+            }
+          ],
+          "label": {
+            "kicker": "DAY 2 - LATE MORNING",
+            "title": "Explore Udo Island"
+          }
+        },
+        {
+          "voice": "Back on Jeju, walk the clifftop path at Seopjikoji. It is just south of Seongsan, and the views look back toward Sunrise Peak. On the way back toward Jeju City, families and adventure lovers can consider Jeju Leports Land in Jocheon.",
+          "show": [
+            {
+              "photo_query": "Seopjikoji coastal path",
+              "require": [
+                "seopjikoji"
+              ]
+            },
+            {
+              "map": "east"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 2 - AFTERNOON",
+            "title": "Seopjikoji"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Day 3: mountain or south coast",
+      "segments": [
+        {
+          "voice": "For your final day, choose one big plan: a mountain hike or a slower day among the south coast waterfalls and market.",
+          "show": [
+            {
+              "card": {
+                "big": "DAY 3",
+                "title": "Mountain or south coast",
+                "sub": "Pick the day that suits you"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Hallasan is the mountain option. The south-coast route links Seogwipo’s waterfalls with the Olle Trail and market.",
+          "show": [
+            {
+              "map": "daythree"
+            }
+          ]
+        },
+        {
+          "voice": "Hallasan is Korea’s highest mountain, at one thousand nine hundred and forty-seven metres. The summit routes, Seongpanak and Gwaneumsa, take most of a day and require an online reservation for the final section. Check the official Hallasan website for current rules.",
+          "show": [
+            {
+              "photo_query": "Hallasan summit trail",
+              "require": [
+                "hallasan"
+              ]
+            },
+            {
+              "list": {
+                "heading": "Summit hike",
+                "items": [
+                  "Reserve the final section online",
+                  "Check current rules and cut-off times"
+                ]
+              }
+            }
+          ],
+          "label": {
+            "kicker": "DAY 3 - OPTION A",
+            "title": "Hike Hallasan"
+          }
+        },
+        {
+          "voice": "If you want a shorter mountain walk, try the Eoseungsaengak trail. It takes about an hour up and down and gives you a taste of Hallasan without committing to a summit hike.",
+          "show": [
+            {
+              "photo_query": "Eoseungsaengak trail",
+              "require": [
+                "eoseungsaengak"
+              ]
+            },
+            {
+              "map": "daythree"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 3 - SHORTER HIKE",
+            "title": "Eoseungsaengak Trail"
+          }
+        },
+        {
+          "voice": "For any mountain walk, start early and bring water and warm layers. Hallasan can be much colder and windier than the coast, so check the weather before you leave and be ready to change plans.",
+          "show": [
+            {
+              "photo_query": "Hallasan mountain weather",
+              "require": [
+                "hallasan"
+              ]
+            },
+            {
+              "list": {
+                "heading": "For the mountain",
+                "items": [
+                  "Start early",
+                  "Bring water and warm layers",
+                  "Check the weather"
+                ]
+              }
+            }
+          ],
+          "label": {
+            "kicker": "DAY 3 - HIKE PREP",
+            "title": "Check conditions first"
+          }
+        },
+        {
+          "voice": "If you choose the south instead, cross to Seogwipo. Jeongbang Falls drops straight into the sea, making it a striking first stop on this coastal day.",
+          "show": [
+            {
+              "photo_query": "Jeongbang Falls",
+              "require": [
+                "jeongbang"
+              ]
+            },
+            {
+              "map": "daythree"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 3 - OPTION B",
+            "title": "Jeongbang Falls"
+          }
+        },
+        {
+          "voice": "Continue to Cheonjiyeon Falls, which is lit in the evening. Then walk a section of the Jeju Olle Trail along the coast before heading into town for a relaxed finish.",
+          "show": [
+            {
+              "photo_query": "Cheonjiyeon Falls",
+              "require": [
+                "cheonjiyeon"
+              ]
+            },
+            {
+              "map": "daythree"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 3 - LATE DAY",
+            "title": "Cheonjiyeon Falls"
+          }
+        },
+        {
+          "voice": "Finish at Seogwipo Maeil Olle Market for snacks and Jeju tangerines. If your visit falls on the second or seventh, twelfth, seventeenth, twenty-second, or twenty-seventh of the month, Jeju City’s Traditional Five-Day Market is another option before you fly home.",
+          "show": [
+            {
+              "photo_query": "Seogwipo Olle Market",
+              "require": [
+                "olle"
+              ]
+            },
+            {
+              "list": {
+                "heading": "Market choices",
+                "items": [
+                  "Seogwipo Maeil Olle Market",
+                  "Jeju Traditional Five-Day Market on dates ending in two or seven"
+                ]
+              }
+            }
+          ],
+          "label": {
+            "kicker": "DAY 3 - EVENING",
+            "title": "Olle Market"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Getting around",
+      "segments": [
+        {
+          "voice": "A car makes this three-day plan much easier, because Jeju’s sights are spread across a large island.",
+          "show": [
+            {
+              "card": {
+                "big": "GETTING",
+                "title": "Around Jeju",
+                "sub": "Choose transport to fit your days"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Most visitors rent a car. You will need an International Driving Permit, or the kind of licence Korea accepts from your country, and your passport. Use Naver Map or KakaoMap for driving directions and routes.",
+          "show": [
+            {
+              "image": "photo-kakao-t-taxi-korea.jpg"
+            },
+            {
+              "list": {
+                "heading": "Driving basics",
+                "items": [
+                  "Bring your passport",
+                  "Check your licence requirements",
+                  "Use Naver Map or KakaoMap"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "voice": "You can also reach every stop by bus, but journeys take much longer. If you rely on buses, drop one stop per day and check routes before leaving. Buses may run only every half hour or less often, and timetables can change.",
+          "show": [
+            {
+              "image": "photo-seoul-bus-guide.jpg"
+            },
+            {
+              "list": {
+                "heading": "If travelling by bus",
+                "items": [
+                  "Plan fewer stops",
+                  "Check current routes and times"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "voice": "For the east coast, a taxi or day tour can be a useful alternative to driving. Keep the day flexible around the Udo ferry, since wind or bad weather can disrupt the crossing.",
+          "show": [
+            {
+              "photo_query": "Jeju taxi east coast",
+              "require": [
+                "jeju"
+              ]
+            },
+            {
+              "map": "east"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mistakes to avoid",
+      "segments": [
+        {
+          "voice": "These are the common ways to make a short Jeju trip harder than it needs to be.",
+          "show": [
+            {
+              "card": {
+                "big": "AVOID",
+                "title": "Four easy mistakes",
+                "sub": "Leave room for distance and changing conditions"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "The main things to watch are trying to fit in too much, relying on unplanned bus trips, assuming ferries always sail, and treating Hallasan like a warm coastal walk.",
+          "show": [
+            {
+              "list": {
+                "heading": "Watch out for",
+                "items": [
+                  "Too many stops in one day",
+                  "Bus journeys without checking routes",
+                  "Ferry cancellations",
+                  "Mountain weather"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "voice": "First, do not plan the whole island in a single day. This itinerary works because it gives the west, east, and south or mountain their own days. If you are travelling by bus, cut a stop rather than racing between sights.",
+          "show": [
+            {
+              "photo_query": "Jeju Island driving",
+              "require": [
+                "jeju"
+              ]
+            },
+            {
+              "map": "overview"
+            }
+          ]
+        },
+        {
+          "voice": "Second, check your bus route and times before setting off. Buses reach the main stops, but they are slower than driving, and some come only every half hour or less often. Timetables can change, so check again before each journey.",
+          "show": [
+            {
+              "image": "photo-korea-public-transport-transfers.jpg"
+            },
+            {
+              "list": {
+                "heading": "Before a bus journey",
+                "items": [
+                  "Check the route",
+                  "Check current times"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Third, do not assume the Udo ferry will run in every kind of weather. Strong wind or bad conditions can cancel it. Check on the day, and keep enough flexibility to adjust your east-coast plan.",
+          "show": [
+            {
+              "photo_query": "Udo ferry Jeju",
+              "require": [
+                "udo"
+              ]
+            },
+            {
+              "map": "east"
+            }
+          ]
+        },
+        {
+          "voice": "And do not underestimate Hallasan. It is colder and windier than the coast. Summit routes also have reservation requirements and strict cut-off times for starting the final climb, so check the rules and weather rather than simply showing up.",
+          "show": [
+            {
+              "photo_query": "Hallasan hiking trail",
+              "require": [
+                "hallasan"
+              ]
+            },
+            {
+              "list": {
+                "heading": "Before a summit hike",
+                "items": [
+                  "Check reservations and cut-off times",
+                  "Check weather and bring warm layers"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quick questions",
+      "segments": [
+        {
+          "voice": "Is three days enough for Jeju? It is enough for the west coast, the east coast, and either Hallasan or the south coast. With four or five days, you can slow down, add beaches and oreum, and keep a spare day for rain or a cancelled ferry.",
+          "show": [
+            {
+              "photo_query": "Jeju Island coast",
+              "require": [
+                "jeju"
+              ]
+            },
+            {
+              "map": "overview"
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "Is three days enough?"
+          }
+        },
+        {
+          "voice": "Do you need a car? It makes the trip much easier, but it is not essential. Buses reach the main sights; just plan fewer stops, allow more time, and check current routes and times on Naver Map or KakaoMap.",
+          "show": [
+            {
+              "list": {
+                "heading": "Without a car",
+                "items": [
+                  "Use buses, a taxi or a day tour",
+                  "Plan fewer stops"
+                ]
+              }
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "Do I need a car?"
+          }
+        },
+        {
+          "voice": "Do you need to book Hallasan? Yes, for the final summit sections on the Seongpanak and Gwaneumsa trails. Shorter trails do not need a reservation. Check the official Hallasan website because rules can change.",
+          "show": [
+            {
+              "photo_query": "Hallasan summit trail",
+              "require": [
+                "hallasan"
+              ]
+            },
+            {
+              "list": {
+                "heading": "Hallasan reservations",
+                "items": [
+                  "Summit sections: reservation required",
+                  "Shorter trails: no reservation"
+                ]
+              }
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "Do I need to book Hallasan?"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Summary",
+      "segments": [
+        {
+          "voice": "Keep the plan simple: spend day one on the west coast, day two around Seongsan and Udo, then choose Hallasan or Seogwipo for day three. Check weather, ferry conditions, routes, and current rules before setting out.",
+          "show": [
+            {
+              "photo_query": "Jeju Island coast",
+              "require": [
+                "jeju"
+              ]
+            },
+            {
+              "list": {
+                "heading": "Three days, one island",
+                "items": [
+                  "Day one: Aewol, Hyeopjae and a west-coast sunset",
+                  "Day two: Sunrise Peak, Udo and Seopjikoji",
+                  "Day three: Hallasan or Seogwipo"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "voice": "The full guide, with maps and links for every stop, is free at Korea Plainly dot com. The link is at the top of the description. If this helped, subscribe for more plain, practical guides to Korea.",
+          "show": [
+            {
+              "card": {
+                "big": "KOREA PLAINLY",
+                "title": "The full guide is in the description",
+                "sub": "korea-plainly.com"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "article": "jeju-3-day-itinerary",
+  "music": "Carefree",
+  "fallback": "photo-jeju-3-day-itinerary.jpg",
+  "thumb_photo": "photo-jeju-3-day-itinerary.jpg"
+}
