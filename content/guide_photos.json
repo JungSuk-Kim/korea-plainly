@@ -567,6 +567,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:Korea-Busan-Haeundae-Beach-03.jpg",
     "query": "Busan Haeundae beach skyline"
   },
+  "seoul-with-kids": {
+    "none": true,
+    "query": "Seoul Kids Easy Korea"
+  },
   "start-here": {
     "file": "photo-start-here.jpg",
     "credit": "Photo: Bgag, CC0, via Wikimedia Commons",

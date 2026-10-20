@@ -236,8 +236,8 @@
     "updated": null
   },
   "korea-festivals.html": {
-    "hash": "5892032b0858",
-    "updated": "2026-10-19"
+    "hash": "372e97411c17",
+    "updated": "2026-10-20"
   },
   "korea-in-april.html": {
     "hash": "553832874f86",
@@ -276,8 +276,8 @@
     "updated": null
   },
   "korea-in-november.html": {
-    "hash": "4337e0b26e75",
-    "updated": "2026-10-18"
+    "hash": "362da69437ec",
+    "updated": "2026-10-20"
   },
   "korea-in-october.html": {
     "hash": "89570bbe4b27",
@@ -497,6 +497,10 @@
   },
   "seoul-vs-busan.html": {
     "hash": "dab2f21a88ff",
+    "updated": null
+  },
+  "seoul-with-kids.html": {
+    "hash": "e23a9b824f4a",
     "updated": null
   },
   "sim-esim-wifi-korea.html": {
