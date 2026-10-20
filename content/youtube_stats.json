@@ -1,7 +1,24 @@
 {
-  "updated": "2026-10-19T10:53+09:00",
+  "updated": "2026-10-20T11:11+09:00",
   "analytics": true,
   "videos": [
+    {
+      "id": "dZHgCjZqXwY",
+      "title": "Korea In November: What To Pack For Changing Weather",
+      "article": "korea-in-november",
+      "format": "short",
+      "uploaded": "2026-10-19T15:00:04+09:00",
+      "status": "public",
+      "seconds": 37,
+      "views": 20,
+      "likes": 0,
+      "comments": 0,
+      "avg_view_seconds": null,
+      "avg_view_percent": null,
+      "subscribers_gained": 0,
+      "shares": 0,
+      "retention": null
+    },
     {
       "id": "vAo-ajdZxPY",
       "title": "Jeju Three-Day Itinerary: The Easy Coast-by-Coast Plan",
@@ -10,23 +27,23 @@
       "uploaded": "2026-10-16T14:48:57+09:00",
       "status": "public",
       "seconds": 53,
-      "views": 98,
+      "views": 99,
       "likes": 1,
       "comments": 0,
-      "avg_view_seconds": 14,
-      "avg_view_percent": 27.149999999999995,
+      "avg_view_seconds": 13,
+      "avg_view_percent": 25.569999999999997,
       "subscribers_gained": 0,
       "shares": 0,
       "retention": {
         "at": {
-          "10%": 90,
-          "25%": 40,
-          "50%": 20,
-          "75%": 10,
-          "95%": 10
+          "10%": 88,
+          "25%": 36,
+          "50%": 12,
+          "75%": 8,
+          "95%": 4
         },
-        "biggest_drop_at": "33%",
-        "biggest_drop": 20
+        "biggest_drop_at": "10%",
+        "biggest_drop": 12
       }
     },
     {
@@ -56,8 +73,8 @@
       "views": 30,
       "likes": 1,
       "comments": 0,
-      "avg_view_seconds": 136,
-      "avg_view_percent": 26.46,
+      "avg_view_seconds": 145,
+      "avg_view_percent": 28.13,
       "subscribers_gained": 0,
       "shares": 0,
       "retention": {
@@ -83,8 +100,8 @@
       "views": 10,
       "likes": 1,
       "comments": 0,
-      "avg_view_seconds": 14,
-      "avg_view_percent": 27.04,
+      "avg_view_seconds": 20,
+      "avg_view_percent": 38.97,
       "subscribers_gained": 0,
       "shares": 0
     },
@@ -96,7 +113,7 @@
       "uploaded": "2026-10-14T10:18:59+09:00",
       "status": "public",
       "seconds": 59,
-      "views": 22,
+      "views": 23,
       "likes": 1,
       "comments": 0,
       "avg_view_seconds": 27,
@@ -131,19 +148,19 @@
   "traffic_sources": [
     {
       "source": "SHORTS",
-      "views": 33
+      "views": 89
     },
     {
       "source": "YT_SEARCH",
-      "views": 28
+      "views": 36
+    },
+    {
+      "source": "SUBSCRIBER",
+      "views": 15
     },
     {
       "source": "RELATED_VIDEO",
       "views": 15
-    },
-    {
-      "source": "SUBSCRIBER",
-      "views": 13
     },
     {
       "source": "YT_CHANNEL",
@@ -155,7 +172,7 @@
     },
     {
       "source": "EXT_URL",
-      "views": 1
+      "views": 2
     },
     {
       "source": "NO_LINK_OTHER",
@@ -163,7 +180,7 @@
     }
   ],
   "total": {
-    "views": 228,
+    "views": 250,
     "likes": 6,
     "comments": 0,
     "subscribers_gained": 0
