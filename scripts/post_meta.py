@@ -206,13 +206,14 @@ def run_videos(state, limit, dry):
         def fb_ref():
             ref = done["facebook_videos"].get(v["key"], {}).get("ref")
             return ref if ref and ref != "skipped" else None
-        for key, ok, fn in (("facebook_videos", E.get("FB_PAGE_TOKEN") and data, lambda: facebook_video(v, data, fb_text)),
-                            ("instagram_videos", not v["long"] and E.get("IG_ACCESS_TOKEN") and E.get("FB_PAGE_TOKEN") and fb_ref(),
+        # "ok" is checked when each platform's turn comes, so the Reel sees the Page video posted just before it
+        for key, ok, fn in (("facebook_videos", lambda: E.get("FB_PAGE_TOKEN") and data, lambda: facebook_video(v, data, fb_text)),
+                            ("instagram_videos", lambda: not v["long"] and E.get("IG_ACCESS_TOKEN") and (data or fb_ref()),
                              lambda: instagram_reel(release_url(v, data) if data else fb_video_source(fb_ref()), ig_caption)),
-                            ("threads_videos", E.get("THREADS_ACCESS_TOKEN"), lambda: threads_post(th_text, guide))):
+                            ("threads_videos", lambda: E.get("THREADS_ACCESS_TOKEN"), lambda: threads_post(th_text, guide))):
             if v["key"] in done[key]:
                 continue
-            if not ok:
+            if not ok():
                 if key == "instagram_videos" and not v["long"] and v["key"] not in done["facebook_videos"]:
                     continue   # the Reel waits for the Page video it is made from
                 if key != "instagram_videos" or not v["long"]:
