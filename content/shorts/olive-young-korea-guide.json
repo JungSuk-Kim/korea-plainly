@@ -1,0 +1,59 @@
+{
+  "article": "olive-young-korea-guide",
+  "fallback": "photo-olive-young-korea-guide.jpg",
+  "title": "Olive Young Korea Shopping: Get The Tax Refund",
+  "summary": "Shop Olive Young in Korea without missing the instant tax refund. Learn where to go, what to try, and what to show at checkout.",
+  "hashtags": "#Korea #OliveYoung #KBeauty #KoreaTravel #TaxFree",
+  "music": "Easy Lemon",
+  "slides": [
+    {
+      "kicker": "OLIVE YOUNG",
+      "title": "Don't Miss The Tax Refund",
+      "sub": "Show your passport before paying",
+      "voice": "Olive Young shoppers: don’t miss the instant tax refund.",
+      "photo_query": "Olive Young store exterior in Korea",
+      "require": [
+        "olive",
+        "young"
+      ]
+    },
+    {
+      "kicker": "WHERE TO SHOP",
+      "title": "Choose A Myeongdong Flagship",
+      "sub": "More testers and English-speaking staff",
+      "voice": "Myeongdong’s large branches have more testers, English-speaking staff, and dedicated tax-free counters.",
+      "photo_query": "Olive Young flagship store Myeongdong Seoul interior",
+      "require": [
+        "olive",
+        "young"
+      ]
+    },
+    {
+      "kicker": "WHAT TO TRY",
+      "title": "Test Before You Buy",
+      "sub": "Start with sunscreen or sheet masks",
+      "voice": "Test products first. Start with popular sunscreen or sheet masks, and check the ranking shelves.",
+      "photo_query": "Korean sunscreen and sheet masks",
+      "require": [
+        "sunscreen"
+      ]
+    },
+    {
+      "kicker": "AT CHECKOUT",
+      "title": "Claim It At Checkout",
+      "sub": "Passport, one receipt, choose won if asked",
+      "voice": "At checkout, show your physical passport and combine purchases on one receipt. Check the current minimum; choose won if your card asks.",
+      "photo_query": "Olive Young tax refund checkout in Korea",
+      "require": [
+        "olive",
+        "young"
+      ]
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday and Friday."
+    }
+  ]
+}
