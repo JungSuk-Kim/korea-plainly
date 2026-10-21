@@ -4,7 +4,8 @@
     "itinerary": "PLZ-NPayfdsic",
     "busan": "PLHR-o6SKCRAs",
     "seasons": "PLPAmMLMMHRV0",
-    "jeju": "PLAWfo6ykY960"
+    "jeju": "PLAWfo6ykY960",
+    "basics": "PLVPmVKfBaFtA"
   },
   "added": {
     "P5Dq3oF2XfY": [
@@ -36,6 +37,13 @@
     "dKbNKD3d8oI": [
       "jeju",
       "itinerary"
+    ],
+    "oRDEWeKT3Z4": [
+      "basics"
+    ],
+    "ZsojFLy6Lgc": [
+      "itinerary",
+      "basics"
     ]
   }
 }

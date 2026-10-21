@@ -52,15 +52,28 @@
     "description": "When to see autumn leaves in Korea: the short version of our guide.",
     "caption": "Watch the one-minute version"
   },
-  "jeju-3-day-itinerary": {
-    "youtube": "vAo-ajdZxPY",
-    "title": "Jeju Three-Day Itinerary: The Easy Coast-by-Coast Plan",
-    "uploaded": "2026-10-16T14:48:57+09:00",
-    "seconds": 53,
-    "poster": "img/video-jeju-3-day-itinerary.jpg",
-    "description": "Jeju Three-Day Itinerary: The Easy Coast-by-Coast Plan: the short version of our guide.",
-    "caption": "Watch the one-minute version"
-  },
+  "jeju-3-day-itinerary": [
+    {
+      "youtube": "dKbNKD3d8oI",
+      "title": "Jeju Island 3-Day Itinerary: West Coast, Udo and Hallasan",
+      "uploaded": "2026-10-20T15:33:19+09:00",
+      "seconds": 587,
+      "poster": "img/video-jeju-3-day-itinerary-long.jpg",
+      "format": "long",
+      "description": "Jeju Island 3-Day Itinerary: West Coast, Udo and Hallasan: the full guide as a video.",
+      "caption": "Watch the whole guide, with maps (10 minutes)"
+    },
+    {
+      "youtube": "vAo-ajdZxPY",
+      "title": "Jeju Three-Day Itinerary: The Easy Coast-by-Coast Plan",
+      "uploaded": "2026-10-16T14:48:57+09:00",
+      "seconds": 53,
+      "poster": "img/video-jeju-3-day-itinerary.jpg",
+      "description": "Jeju Three-Day Itinerary: The Easy Coast-by-Coast Plan: the short version of our guide.",
+      "caption": "Short on time? The guide in under a minute",
+      "place": "end"
+    }
+  ],
   "korea-in-november": {
     "youtube": "dZHgCjZqXwY",
     "title": "Korea In November: What To Pack For Changing Weather",
@@ -68,6 +81,15 @@
     "seconds": 37,
     "poster": "img/video-korea-in-november.jpg",
     "description": "Korea In November: What To Pack For Changing Weather: the short version of our guide.",
+    "caption": "Watch the one-minute version"
+  },
+  "olive-young-korea-guide": {
+    "youtube": "oRDEWeKT3Z4",
+    "title": "Olive Young Korea Shopping: Get The Tax Refund",
+    "uploaded": "2026-10-21T12:00:10+09:00",
+    "seconds": 37,
+    "poster": "img/video-olive-young-korea-guide.jpg",
+    "description": "Olive Young Korea Shopping: Get The Tax Refund: the short version of our guide.",
     "caption": "Watch the one-minute version"
   }
 }
