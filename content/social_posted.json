@@ -83,6 +83,10 @@
     "maisan-tapsa-temple": {
       "at": "2026-10-20T15:22:14+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mycwsz7zl62w"
+    },
+    "temple-stay-korea": {
+      "at": "2026-10-21T06:33:53+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myejr6ncd52c"
     }
   },
   "bluesky_videos": {
@@ -113,6 +117,10 @@
     "dZHgCjZqXwY": {
       "at": "2026-10-20T06:35:48+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mybzfoq4tz2v"
+    },
+    "oRDEWeKT3Z4": {
+      "at": "2026-10-21T06:33:55+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myejramgpm2m"
     }
   },
   "instagram_videos": {
@@ -134,6 +142,10 @@
     },
     "dZHgCjZqXwY": {
       "at": "2026-10-20T06:35:54+00:00",
+      "ref": "skipped"
+    },
+    "oRDEWeKT3Z4": {
+      "at": "2026-10-21T06:34:01+00:00",
       "ref": "skipped"
     }
   },
@@ -165,6 +177,10 @@
     "dZHgCjZqXwY": {
       "at": "2026-10-20T06:35:54+00:00",
       "ref": "1128571766237893"
+    },
+    "oRDEWeKT3Z4": {
+      "at": "2026-10-21T06:34:01+00:00",
+      "ref": "1747654039645770"
     }
   },
   "threads_videos": {
@@ -195,6 +211,10 @@
     "dZHgCjZqXwY": {
       "at": "2026-10-20T06:36:07+00:00",
       "ref": "18444973723121427"
+    },
+    "oRDEWeKT3Z4": {
+      "at": "2026-10-21T06:34:13+00:00",
+      "ref": "18108121019194228"
     }
   },
   "facebook": {
@@ -261,6 +281,10 @@
     "maisan-tapsa-temple": {
       "at": "2026-10-20T15:22:23+00:00",
       "ref": "1261611360380213_122106096255509276"
+    },
+    "temple-stay-korea": {
+      "at": "2026-10-21T06:34:27+00:00",
+      "ref": "1261611360380213_122106740637509276"
     }
   },
   "threads": {
@@ -327,6 +351,10 @@
     "maisan-tapsa-temple": {
       "at": "2026-10-20T15:22:34+00:00",
       "ref": "18116303939042001"
+    },
+    "temple-stay-korea": {
+      "at": "2026-10-21T06:34:36+00:00",
+      "ref": "17920213320241946"
     }
   }
 }
