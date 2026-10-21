@@ -1,7 +1,23 @@
 {
-  "updated": "2026-10-20T11:11+09:00",
+  "updated": "2026-10-21T11:04+09:00",
   "analytics": true,
   "videos": [
+    {
+      "id": "dKbNKD3d8oI",
+      "title": "Jeju Island 3-Day Itinerary: West Coast, Udo and Hallasan",
+      "article": "jeju-3-day-itinerary",
+      "format": "long",
+      "uploaded": "2026-10-20T15:33:19+09:00",
+      "status": "private",
+      "seconds": 587,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "avg_view_seconds": null,
+      "avg_view_percent": null,
+      "subscribers_gained": 0,
+      "shares": 0
+    },
     {
       "id": "dZHgCjZqXwY",
       "title": "Korea In November: What To Pack For Changing Weather",
@@ -10,8 +26,8 @@
       "uploaded": "2026-10-19T15:00:04+09:00",
       "status": "public",
       "seconds": 37,
-      "views": 20,
-      "likes": 0,
+      "views": 93,
+      "likes": 1,
       "comments": 0,
       "avg_view_seconds": null,
       "avg_view_percent": null,
@@ -31,19 +47,19 @@
       "likes": 1,
       "comments": 0,
       "avg_view_seconds": 13,
-      "avg_view_percent": 25.569999999999997,
+      "avg_view_percent": 24.64,
       "subscribers_gained": 0,
       "shares": 0,
       "retention": {
         "at": {
-          "10%": 88,
-          "25%": 36,
-          "50%": 12,
-          "75%": 8,
+          "10%": 85,
+          "25%": 33,
+          "50%": 11,
+          "75%": 7,
           "95%": 4
         },
         "biggest_drop_at": "10%",
-        "biggest_drop": 12
+        "biggest_drop": 15
       }
     },
     {
@@ -100,8 +116,8 @@
       "views": 10,
       "likes": 1,
       "comments": 0,
-      "avg_view_seconds": 20,
-      "avg_view_percent": 38.97,
+      "avg_view_seconds": 19,
+      "avg_view_percent": 38.43,
       "subscribers_gained": 0,
       "shares": 0
     },
@@ -113,7 +129,7 @@
       "uploaded": "2026-10-14T10:18:59+09:00",
       "status": "public",
       "seconds": 59,
-      "views": 23,
+      "views": 27,
       "likes": 1,
       "comments": 0,
       "avg_view_seconds": 27,
@@ -152,7 +168,7 @@
     },
     {
       "source": "YT_SEARCH",
-      "views": 36
+      "views": 44
     },
     {
       "source": "SUBSCRIBER",
@@ -180,8 +196,8 @@
     }
   ],
   "total": {
-    "views": 250,
-    "likes": 6,
+    "views": 327,
+    "likes": 7,
     "comments": 0,
     "subscribers_gained": 0
   }
