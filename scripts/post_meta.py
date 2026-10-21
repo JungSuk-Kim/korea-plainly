@@ -127,6 +127,8 @@ def instagram_reel(video_url, caption):
     api = f"https://graph.instagram.com/{GV}"
     r = requests.post(f"{api}/{uid}/media", timeout=60, data={
         "media_type": "REELS", "video_url": video_url, "caption": caption, "share_to_feed": "true",
+        # Shorts fade in from black, so the default cover (frame 0) is black; 1.5 s in shows the photo and title
+        "thumb_offset": "1500",
         "access_token": tok})
     check(r, "create Reel container")
     cid = r.json()["id"]
