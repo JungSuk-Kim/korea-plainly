@@ -104,8 +104,18 @@ Requirements:
 - Simple, natural English.
 - Practical and useful for foreign visitors.
 - Editorial, clean and easy-to-read tone.
-- Avoid invented prices, opening hours, statistics,
-  laws, or uncertain facts.
+- Be specific, like a local friend who knows the city:
+  name real places, districts, subway lines and stations,
+  official websites or apps, dishes and Korean words a
+  visitor will meet. Every section needs at least one
+  concrete detail a generic travel article would not have.
+- Well-known, stable facts are fine (e.g. children under 6
+  ride the Seoul subway free). Give prices only as rough
+  ranges with the year ("around ₩10,000 (2026)"), and never
+  invent opening hours, statistics or laws.
+- Do not pad with hedging. Say "check current details on
+  Naver Map / the official site" at most once in the whole
+  article, not in every section.
 - No Markdown.
 - body_html may use only:
   p, h2, h3, ul, ol, li, strong
