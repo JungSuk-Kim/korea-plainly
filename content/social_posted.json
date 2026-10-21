@@ -91,6 +91,10 @@
     "lotte-world-vs-everland": {
       "at": "2026-10-21T12:58:29+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myf7avgavm2e"
+    },
+    "kpop-seoul-guide": {
+      "at": "2026-10-21T15:36:35+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myfi3lyudh2m"
     }
   },
   "bluesky_videos": {
@@ -129,6 +133,10 @@
     "ZsojFLy6Lgc": {
       "at": "2026-10-21T12:58:31+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myf7axiung2b"
+    },
+    "dKbNKD3d8oI": {
+      "at": "2026-10-21T15:36:38+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myfi3o6uiy2e"
     }
   },
   "instagram_videos": {
@@ -143,6 +151,10 @@
     "ZsojFLy6Lgc": {
       "at": "2026-10-21T12:59:20+00:00",
       "ref": "18209044831366075"
+    },
+    "oRDEWeKT3Z4": {
+      "at": "2026-10-21T15:37:39+00:00",
+      "ref": "18130596901749398"
     }
   },
   "facebook_videos": {
@@ -293,6 +305,10 @@
     "lotte-world-vs-everland": {
       "at": "2026-10-21T12:59:42+00:00",
       "ref": "1261611360380213_122107020249509276"
+    },
+    "kpop-seoul-guide": {
+      "at": "2026-10-21T15:37:47+00:00",
+      "ref": "1261611360380213_122107085331509276"
     }
   },
   "threads": {
@@ -367,6 +383,10 @@
     "lotte-world-vs-everland": {
       "at": "2026-10-21T12:59:52+00:00",
       "ref": "18452768803121515"
+    },
+    "kpop-seoul-guide": {
+      "at": "2026-10-21T15:37:58+00:00",
+      "ref": "17992031880061306"
     }
   }
 }
