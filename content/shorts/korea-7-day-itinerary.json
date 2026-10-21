@@ -1,0 +1,51 @@
+{
+  "article": "korea-7-day-itinerary",
+  "fallback": "photo-korea-7-day-itinerary.jpg",
+  "title": "Korea 7 Day Itinerary: Seoul, Gyeongju & Busan",
+  "summary": "Plan a first week in Korea with time for Seoul, historic Gyeongju, and coastal Busan. Follow the route and learn when to book the KTX.",
+  "hashtags": "#Korea #KoreaTravel #Seoul #Gyeongju #Busan",
+  "music": "Wallpaper",
+  "slides": [
+    {
+      "kicker": "ONE WEEK",
+      "title": "Seoul, Gyeongju, Busan",
+      "sub": "Three cities, one easy route",
+      "voice": "One week in Korea? Do Seoul, Gyeongju, then Busan.",
+      "image": "photo-korea-7-day-itinerary.jpg"
+    },
+    {
+      "kicker": "DAYS ONE TO FOUR",
+      "title": "Start In Seoul",
+      "sub": "Three city days, then one day trip",
+      "voice": "Spend three days in Seoul, then take one day trip on day four.",
+      "image": "photo-seoul-3-day-itinerary.jpg"
+    },
+    {
+      "kicker": "BOOK AHEAD",
+      "title": "Take The KTX South",
+      "sub": "Book ahead for weekends and holidays",
+      "voice": "Book your KTX ahead, especially on weekends and holidays.",
+      "image": "photo-ktx-train-guide.jpg"
+    },
+    {
+      "kicker": "DAY FIVE",
+      "title": "Stay In Gyeongju",
+      "sub": "See Wolji Pond after dark",
+      "voice": "Stay overnight in Gyeongju; visit Donggung Palace and Wolji Pond after dark.",
+      "image": "photo-gyeongju-1-day-itinerary.jpg"
+    },
+    {
+      "kicker": "DAYS SIX & SEVEN",
+      "title": "Finish In Busan",
+      "sub": "Visit Haeundae Beach at midday",
+      "voice": "In Busan, visit Haedong Yonggungsa in the morning, then Haeundae Beach at midday.",
+      "image": "photo-busan-1-day-itinerary.jpg"
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday and Friday."
+    }
+  ]
+}
