@@ -140,6 +140,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:Cherry_blossoms_in_Seoul_Forest,_South_Korea2.jpg",
     "query": "cherry blossom Seoul"
   },
+  "korea-domestic-flights-budget-airlines": {
+    "none": true,
+    "query": "Budget Airlines Domestic Korea"
+  },
   "korea-emergency-help": {
     "file": "photo-korea-emergency-help.jpg",
     "credit": "Photo: Oleg Kurtsev, CC BY-SA 3.0, via Wikimedia Commons",
