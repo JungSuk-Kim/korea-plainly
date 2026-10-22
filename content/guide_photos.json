@@ -142,7 +142,6 @@
   },
   "korea-domestic-flights-budget-airlines": {
     "none": true,
-    "retry": true,
     "query": "Gimpo International Airport"
   },
   "korea-emergency-help": {
