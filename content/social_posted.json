@@ -95,6 +95,10 @@
     "kpop-seoul-guide": {
       "at": "2026-10-21T15:36:35+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myfi3lyudh2m"
+    },
+    "korea-domestic-flights-budget-airlines": {
+      "at": "2026-10-22T06:34:18+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myh2aswzt72t"
     }
   },
   "bluesky_videos": {
@@ -193,6 +197,10 @@
     "ZsojFLy6Lgc": {
       "at": "2026-10-21T12:58:39+00:00",
       "ref": "1433049671650417"
+    },
+    "dKbNKD3d8oI": {
+      "at": "2026-10-22T06:34:28+00:00",
+      "ref": "1132177022605435"
     }
   },
   "threads_videos": {
@@ -231,6 +239,10 @@
     "ZsojFLy6Lgc": {
       "at": "2026-10-21T12:59:33+00:00",
       "ref": "18107727479220770"
+    },
+    "dKbNKD3d8oI": {
+      "at": "2026-10-22T06:34:39+00:00",
+      "ref": "18128073925748737"
     }
   },
   "facebook": {
@@ -309,6 +321,10 @@
     "kpop-seoul-guide": {
       "at": "2026-10-21T15:37:47+00:00",
       "ref": "1261611360380213_122107085331509276"
+    },
+    "korea-domestic-flights-budget-airlines": {
+      "at": "2026-10-22T06:34:45+00:00",
+      "ref": "1261611360380213_122107391829509276"
     }
   },
   "threads": {
@@ -387,6 +403,10 @@
     "kpop-seoul-guide": {
       "at": "2026-10-21T15:37:58+00:00",
       "ref": "17992031880061306"
+    },
+    "korea-domestic-flights-budget-airlines": {
+      "at": "2026-10-22T06:34:56+00:00",
+      "ref": "18106202294623150"
     }
   }
 }
