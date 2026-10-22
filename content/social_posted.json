@@ -99,6 +99,10 @@
     "korea-domestic-flights-budget-airlines": {
       "at": "2026-10-22T06:34:18+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myh2aswzt72t"
+    },
+    "korea-money-exchange": {
+      "at": "2026-10-22T15:38:55+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myhyopkhtf24"
     }
   },
   "bluesky_videos": {
@@ -159,6 +163,10 @@
     "oRDEWeKT3Z4": {
       "at": "2026-10-21T15:37:39+00:00",
       "ref": "18130596901749398"
+    },
+    "dZHgCjZqXwY": {
+      "at": "2026-10-22T15:40:40+00:00",
+      "ref": "18152103571550261"
     }
   },
   "facebook_videos": {
@@ -325,6 +333,10 @@
     "korea-domestic-flights-budget-airlines": {
       "at": "2026-10-22T06:34:45+00:00",
       "ref": "1261611360380213_122107391829509276"
+    },
+    "korea-money-exchange": {
+      "at": "2026-10-22T15:40:46+00:00",
+      "ref": "1261611360380213_122107601889509276"
     }
   },
   "threads": {
@@ -407,6 +419,10 @@
     "korea-domestic-flights-budget-airlines": {
       "at": "2026-10-22T06:34:56+00:00",
       "ref": "18106202294623150"
+    },
+    "korea-money-exchange": {
+      "at": "2026-10-22T15:40:59+00:00",
+      "ref": "18153457240526490"
     }
   }
 }
