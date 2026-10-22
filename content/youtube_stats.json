@@ -1,16 +1,50 @@
 {
-  "updated": "2026-10-21T11:04+09:00",
+  "updated": "2026-10-22T10:59+09:00",
   "analytics": true,
   "videos": [
+    {
+      "id": "ZsojFLy6Lgc",
+      "title": "Korea 7 Day Itinerary: Seoul, Gyeongju & Busan",
+      "article": "korea-7-day-itinerary",
+      "format": "short",
+      "uploaded": "2026-10-21T14:55:40+09:00",
+      "status": "public",
+      "seconds": 35,
+      "views": 91,
+      "likes": 1,
+      "comments": 0,
+      "avg_view_seconds": null,
+      "avg_view_percent": null,
+      "subscribers_gained": 0,
+      "shares": 0,
+      "retention": null
+    },
+    {
+      "id": "oRDEWeKT3Z4",
+      "title": "Olive Young Korea Shopping: Get The Tax Refund",
+      "article": "olive-young-korea-guide",
+      "format": "short",
+      "uploaded": "2026-10-21T12:00:10+09:00",
+      "status": "public",
+      "seconds": 37,
+      "views": 26,
+      "likes": 0,
+      "comments": 0,
+      "avg_view_seconds": null,
+      "avg_view_percent": null,
+      "subscribers_gained": 0,
+      "shares": 0,
+      "retention": null
+    },
     {
       "id": "dKbNKD3d8oI",
       "title": "Jeju Island 3-Day Itinerary: West Coast, Udo and Hallasan",
       "article": "jeju-3-day-itinerary",
       "format": "long",
       "uploaded": "2026-10-20T15:33:19+09:00",
-      "status": "private",
+      "status": "public",
       "seconds": 587,
-      "views": 0,
+      "views": 5,
       "likes": 0,
       "comments": 0,
       "avg_view_seconds": null,
@@ -26,14 +60,24 @@
       "uploaded": "2026-10-19T15:00:04+09:00",
       "status": "public",
       "seconds": 37,
-      "views": 93,
-      "likes": 1,
+      "views": 189,
+      "likes": 3,
       "comments": 0,
-      "avg_view_seconds": null,
-      "avg_view_percent": null,
+      "avg_view_seconds": 25,
+      "avg_view_percent": 68.48,
       "subscribers_gained": 0,
       "shares": 0,
-      "retention": null
+      "retention": {
+        "at": {
+          "10%": 115,
+          "25%": 90,
+          "50%": 70,
+          "75%": 50,
+          "95%": 30
+        },
+        "biggest_drop_at": "42%",
+        "biggest_drop": 10
+      }
     },
     {
       "id": "vAo-ajdZxPY",
@@ -129,11 +173,11 @@
       "uploaded": "2026-10-14T10:18:59+09:00",
       "status": "public",
       "seconds": 59,
-      "views": 27,
+      "views": 28,
       "likes": 1,
       "comments": 0,
-      "avg_view_seconds": 27,
-      "avg_view_percent": 45.99,
+      "avg_view_seconds": 30,
+      "avg_view_percent": 51.849999999999994,
       "subscribers_gained": 0,
       "shares": 0,
       "retention": null
@@ -164,15 +208,15 @@
   "traffic_sources": [
     {
       "source": "SHORTS",
-      "views": 89
+      "views": 102
     },
     {
       "source": "YT_SEARCH",
-      "views": 44
+      "views": 68
     },
     {
       "source": "SUBSCRIBER",
-      "views": 15
+      "views": 17
     },
     {
       "source": "RELATED_VIDEO",
@@ -184,7 +228,7 @@
     },
     {
       "source": "YT_OTHER_PAGE",
-      "views": 2
+      "views": 3
     },
     {
       "source": "EXT_URL",
@@ -196,8 +240,8 @@
     }
   ],
   "total": {
-    "views": 327,
-    "likes": 7,
+    "views": 546,
+    "likes": 10,
     "comments": 0,
     "subscribers_gained": 0
   }
