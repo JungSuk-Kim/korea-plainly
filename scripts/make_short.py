@@ -82,7 +82,23 @@ def wrap(draw, text, f, width):
 SAFE_RIGHT = W - 170
 
 
-def caption_overlay(slide, path):
+SERIES = "KOREA BEFORE YOU GO"   # every Short is a numbered episode: a series gives viewers a reason to subscribe
+
+
+def follow_png(path):
+    """A short "follow" pill shown for a few seconds mid-video, since most viewers swipe away before the end card."""
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    f = font(46)
+    label = "Follow for Korea tips  ·  Mon  Wed  Fri"
+    bw, bh, by = d.textlength(label, font=f) + 130, 92, int(H * 0.455)
+    d.rounded_rectangle([80, by, 80 + bw, by + bh], radius=bh // 2, fill=RED)
+    d.polygon([(118, by + 28), (118, by + bh - 28), (148, by + bh / 2)], fill=WHITE)
+    d.text((170, by + (bh - 46) / 2 - 5), label, font=f, fill=WHITE)
+    img.save(path)
+
+
+def caption_overlay(slide, path, series=None):
     """Transparent PNG: a dark fade from the top with kicker, title and subtitle, clear of the app's buttons."""
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
@@ -90,6 +106,8 @@ def caption_overlay(slide, path):
     for y in range(H):
         grad.putpixel((0, y), int(min(1, max(0, (H * 0.5 - y) / (H * 0.32))) * 215))
     img.paste(Image.new("RGBA", (W, H), (10, 16, 28, 255)), (0, 0), grad.resize((W, H)))
+    if series:   # the series name and episode number above the first slide's title
+        d.text((82, int(H * 0.052)), series, font=font(46), fill=CREAM)
     y = int(H * 0.11)
     kicker = slide.get("kicker", "")
     if kicker:  # white on a red label, readable on any photo
@@ -328,7 +346,7 @@ def run(cmd):
     subprocess.run(cmd, check=True, capture_output=True)
 
 
-def segment(slide, i, tmp, voice, mascot=False):
+def segment(slide, i, tmp, voice, mascot=False, series=None, follow=False):
     seg = tmp / f"seg{i:02d}.mp4"
     audio = None
     if voice and slide.get("voice"):
@@ -346,6 +364,10 @@ def segment(slide, i, tmp, voice, mascot=False):
             else:
                 subtitle_png(text, png, int(H * 0.6))
             subs.append((png, a, min(b, dur)))
+    if follow and dur > 3.0:
+        png = tmp / f"follow{i:02d}.png"
+        follow_png(png)
+        subs.append((png, 1.0, min(3.6, dur - 0.4)))
     audio_in = ["-i", str(audio)] if audio else ["-f", "lavfi", "-t", f"{dur:.2f}", "-i", "anullsrc=r=44100:cl=stereo"]
     fade = f"fade=t=in:st=0:d=0.25,fade=t=out:st={dur - 0.25:.2f}:d=0.25"
     if slide.get("end"):
@@ -368,7 +390,7 @@ def segment(slide, i, tmp, voice, mascot=False):
     photo = tmp / f"photo{i:02d}.jpg"
     pan.save(photo, quality=92)
     over = tmp / f"cap{i:02d}.png"
-    caption_overlay(slide, over)
+    caption_overlay(slide, over, series)
     travel = max(pan.width - W, 0)
     x = f"min({travel},{travel}*t/{dur:.2f})" if i % 2 == 0 else f"max(0,{travel}-{travel}*t/{dur:.2f})"
     chain, last = sub_chain(subs, 3, "base")
@@ -434,6 +456,14 @@ def mix_music(video, music, total, voiced, out):
          "-movflags", "+faststart", str(out)])
 
 
+def episode(stem):
+    """This Short's number in the series: its place among uploaded Shorts, or the next number for a new one."""
+    path = ROOT / "content" / "shorts" / "uploads.json"
+    log = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    shorts = [k for k, v in log.items() if not k.endswith("-long") and (v.get("seconds") or 0) < 180]
+    return shorts.index(stem) + 1 if stem in shorts else len(shorts) + 1
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("spec")
@@ -450,7 +480,11 @@ def main():
             if not s.get("end"):
                 s["file"] = slide_photo(s, taken, spec.get("fallback"))
         mascot = spec.get("mascot", True) and (MASCOT_DIR / "kkachi_closed.png").exists()
-        segs = [segment(s, i, tmp, args.voice, mascot) for i, s in enumerate(spec["slides"])]
+        series = f"{SERIES}  #{episode(Path(args.spec).stem)}" if spec.get("series", True) else None
+        body = [i for i, s in enumerate(spec["slides"]) if not s.get("end")]
+        mid = body[len(body) // 2] if len(body) > 1 else None
+        segs = [segment(s, i, tmp, args.voice, mascot, series if i == 0 else None, i == mid)
+                for i, s in enumerate(spec["slides"])]
         lst = tmp / "list.txt"
         lst.write_text("".join(f"file '{p}'\n" for p, _ in segs))
         joined = tmp / "joined.mp4"

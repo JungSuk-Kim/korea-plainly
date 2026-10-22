@@ -72,7 +72,8 @@ Meta: "Social posts" also runs `post_meta.py` (public videos → Instagram Reels
 articles → Page and Threads link posts; state in `content/social_posted.json`). Reels are created from a public `video_url` (Instagram Login has no resumable upload): the Short is put on the
 `reels` GitHub release and Instagram downloads it from there. "Meta token refresh" renews the 60-day
 Instagram/Threads tokens into Secrets (`GH_SECRETS_TOKEN`); "Meta check" tests all tokens read-only.
-Shorts end with a subscribe ask and a SUBSCRIBE end card (`video_text.SHORT_OUTRO`, `make_short.end_card`); `youtube_playlists.py`
+Shorts are numbered episodes of "KOREA BEFORE YOU GO #n" (first slide; number from uploads.json), show a
+"Follow for Korea tips" pill on the middle slide, and end with a subscribe ask and a SUBSCRIBE end card (`video_text.SHORT_OUTRO`, `make_short.end_card`); `youtube_playlists.py`
 (run by the hourly check) sorts every upload into playlists (state: `content/youtube_playlists.json`). Subscribe buttons
 (`.kp-sub`, `?sub_confirmation=1`) come from site_mascot.py, embed_videos.py and video_hub.py.
 "YouTube stats" (daily 08:53 KST) runs `youtube_stats.py` → `content/youtube_stats.json`: views/likes/comments, and with the
