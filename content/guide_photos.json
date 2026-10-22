@@ -141,8 +141,10 @@
     "query": "cherry blossom Seoul"
   },
   "korea-domestic-flights-budget-airlines": {
-    "none": true,
-    "query": "Gimpo International Airport"
+    "file": "photo-korea-packing-list.jpg",
+    "credit": "Photo: Jnpet, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Incheon_Airport3.JPG",
+    "manual": true
   },
   "korea-emergency-help": {
     "file": "photo-korea-emergency-help.jpg",
