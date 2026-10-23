@@ -150,6 +150,24 @@
     "category": "Food"
   },
   {
+    "title": "Things to Do in Busan, South Korea: A First-Timer's Guide by Area",
+    "slug": "things-to-do-in-busan",
+    "category": "Travel",
+    "query": "things to do in busan south korea"
+  },
+  {
+    "title": "Jeonju Hanok Village from Seoul: A Simple Day Trip by Train or Bus",
+    "slug": "jeonju-hanok-village-from-seoul",
+    "category": "Travel",
+    "query": "jeonju hanok village from seoul"
+  },
+  {
+    "title": "Visit Busan Pass: Is It Worth It for First-Time Visitors?",
+    "slug": "visit-busan-pass",
+    "category": "Money",
+    "query": "busan travel pass"
+  },
+  {
     "title": "Visiting Korean Traditional Markets: What to Know",
     "slug": "korean-traditional-markets",
     "category": "Food"
@@ -178,17 +196,5 @@
     "title": "Public Restrooms in Korea: What to Know",
     "slug": "public-restrooms-korea",
     "category": "Daily Korea"
-  },
-  {
-    "title": "Things to Do in Busan, South Korea: A First-Timer's Guide by Area",
-    "slug": "things-to-do-in-busan",
-    "category": "Travel",
-    "query": "things to do in busan south korea"
-  },
-  {
-    "title": "Visit Busan Pass: Is It Worth It for First-Time Visitors?",
-    "slug": "visit-busan-pass",
-    "category": "Money",
-    "query": "busan travel pass"
   }
 ]
