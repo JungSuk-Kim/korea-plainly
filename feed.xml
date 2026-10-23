@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Thu, 22 Oct 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Fri, 23 Oct 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Myeongdong Night Market and Street Food: What to Know</title>
+<link>https://korea-plainly.com/myeongdong-night-market.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/myeongdong-night-market.html</guid>
+<pubDate>Fri, 23 Oct 2026 08:00:00 +0000</pubDate>
+<description>A practical guide to finding Myeongdong’s evening food stalls, choosing Korean street snacks, paying, and getting around.</description>
+</item>
 <item>
 <title>Korean Budget Airlines and Domestic Flights: Seoul to Jeju and Busan</title>
 <link>https://korea-plainly.com/korea-domestic-flights-budget-airlines.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/korea-trip-cost-calculator.html</guid>
 <pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
 <description>Work out a rough budget for your trip to Korea: choose how many days, your travel style, KTX trains and a Jeju flight, and see the cost per person in won and your own currency.</description>
-</item>
-<item>
-<title>How Much Does a Trip to Korea Cost? A Daily Budget Guide</title>
-<link>https://korea-plainly.com/korea-travel-budget.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/korea-travel-budget.html</guid>
-<pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
-<description>A plain daily budget for Korea: what hotels, food, transport and sights cost, three sample budgets from backpacker to comfortable, and easy ways to save.</description>
 </item>
 </channel>
 </rss>
