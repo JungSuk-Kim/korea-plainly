@@ -1,0 +1,61 @@
+{
+  "article": "korea-in-december",
+  "fallback": "photo-korea-in-december.jpg",
+  "title": "Korea in December: What to Wear and Do",
+  "summary": "Planning a Korea trip in December? Learn what to pack, how Seoul, Busan, and Jeju differ, and what to enjoy on cold days.",
+  "hashtags": "#Korea #KoreaInDecember #KoreaTravel #Seoul #Busan #Jeju",
+  "music": "Daily Beetle",
+  "slides": [
+    {
+      "kicker": "DECEMBER",
+      "title": "Wind Makes Seoul Feel Colder",
+      "sub": "Pack for cold, windy streets",
+      "voice": "Seoul’s December wind makes the cold feel worse.",
+      "photo_query": "Seoul winter street pedestrians padded coats",
+      "require": [
+        "seoul",
+        "winter"
+      ]
+    },
+    {
+      "kicker": "PACK SMART",
+      "title": "Layers Work Indoors",
+      "sub": "Bring warm layers you can remove",
+      "voice": "Pack a padded coat, hat, gloves, and scarf. Use thin layers indoors.",
+      "image": "photo-korean-cafe-etiquette.jpg"
+    },
+    {
+      "kicker": "SOUTHERN KOREA",
+      "title": "Busan Is Milder",
+      "sub": "Jeju can feel cold in sea winds",
+      "voice": "Busan is milder; Jeju’s sea winds still feel cold.",
+      "photo_query": "Busan winter coastline South Korea",
+      "require": [
+        "busan"
+      ]
+    },
+    {
+      "kicker": "AFTER DARK",
+      "title": "See Seoul’s Lanterns",
+      "sub": "Weekday evenings are less crowded",
+      "voice": "See lanterns after dark on a weekday. Check festival dates before you go.",
+      "image": "photo-korea-in-december.jpg"
+    },
+    {
+      "kicker": "STREET FOOD",
+      "title": "Warm Up With Snacks",
+      "sub": "Try hotteok or fish cakes in broth",
+      "voice": "Warm up with hotteok or fish cakes in hot broth.",
+      "photo_query": "Hotteok street food Korea",
+      "require": [
+        "hotteok"
+      ]
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday and Friday."
+    }
+  ]
+}
