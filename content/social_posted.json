@@ -103,6 +103,10 @@
     "korea-money-exchange": {
       "at": "2026-10-22T15:38:55+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myhyopkhtf24"
+    },
+    "myeongdong-night-market": {
+      "at": "2026-10-23T06:28:11+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myjket2tki2l"
     }
   },
   "bluesky_videos": {
@@ -167,6 +171,10 @@
     "dZHgCjZqXwY": {
       "at": "2026-10-22T15:40:40+00:00",
       "ref": "18152103571550261"
+    },
+    "QPsof1_LFbA": {
+      "at": "2026-10-23T06:29:10+00:00",
+      "ref": "18124567084904617"
     }
   },
   "facebook_videos": {
@@ -337,6 +345,10 @@
     "korea-money-exchange": {
       "at": "2026-10-22T15:40:46+00:00",
       "ref": "1261611360380213_122107601889509276"
+    },
+    "myeongdong-night-market": {
+      "at": "2026-10-23T06:29:16+00:00",
+      "ref": "1261611360380213_122107860027509276"
     }
   },
   "threads": {
@@ -423,6 +435,10 @@
     "korea-money-exchange": {
       "at": "2026-10-22T15:40:59+00:00",
       "ref": "18153457240526490"
+    },
+    "myeongdong-night-market": {
+      "at": "2026-10-23T06:29:28+00:00",
+      "ref": "18116403257095185"
     }
   }
 }
