@@ -8,6 +8,26 @@ INTROS_FILE = ROOT / "content" / "region_intros.json"
 OVERVIEWS_FILE = ROOT / "content" / "region_overviews.json"   # practical "planning a trip" text for each hub
 INTROS = json.loads(INTROS_FILE.read_text(encoding="utf-8")) if INTROS_FILE.exists() else {}
 OVERVIEWS = json.loads(OVERVIEWS_FILE.read_text(encoding="utf-8")) if OVERVIEWS_FILE.exists() else {}
+# first-timer pages linked in one sentence at the top of "Planning a trip to ..." (only if the page exists)
+START_LINKS = {
+    "seoul": [("seoul-3-day-itinerary.html", "a 3-day itinerary"),
+              ("seoul-neighborhoods-guide.html", "where to stay by neighbourhood"),
+              ("seoul-subway-for-foreigners.html", "how to use the subway")],
+    "busan": [("busan-1-day-itinerary.html", "a 1-day itinerary"),
+              ("ktx-train-guide.html", "the KTX train from Seoul")],
+}
+
+def hub_title(name):
+    t = "{} Travel Guide: Things to Do, Food and Where to Stay".format(name)
+    return t if len(t) <= 60 else "{} Travel Guide: Things to Do and Local Tips".format(name)
+
+def start_links(slug, name):
+    links = ['<a href="{}">{}</a>'.format(esc(f), esc(t)) for f, t in START_LINKS.get(slug, [])
+             if (ROOT / f).exists() and "kp-redirect" not in (ROOT / f).read_text(encoding="utf-8", errors="ignore")]
+    if not links:
+        return ""
+    joined = links[0] if len(links) == 1 else ", ".join(links[:-1]) + " and " + links[-1]
+    return '<p class="start">New to {}? Start with {}.</p>'.format(esc(name), joined)
 
 CATS = {
     "travel":"Travel","food":"Food","cafe":"Cafe","shopping":"Shopping",
@@ -55,7 +75,7 @@ def page(region):
         cards = '<p class="empty">New recommendations for this region will appear here automatically.</p>'
     template = '''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{name} Travel, Food, Shopping & Local Guides | Korea Plainly</title>
+<title>{title} | Korea Plainly</title>
 <meta name="description" content="{description}">
 <link rel="canonical" href="https://korea-plainly.com/{slug}.html">
 <style>
@@ -71,7 +91,7 @@ h1{{font-size:clamp(44px,8vw,82px);line-height:1;margin:12px 0}}.intro{{max-widt
 .plan img{{width:100%;height:100%;min-height:120px;object-fit:cover;display:block}}.plan small{{color:#b73535;font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:11px}}
 .plan b{{display:block;font-size:22px;line-height:1.25;margin:6px 22px 6px 0}}.plan em{{font-style:normal;font-size:14px;font-weight:700}}
 @media(max-width:600px){{.plan{{grid-template-columns:110px 1fr;gap:14px}}.plan b{{font-size:17px}}}}.empty{{padding:30px;background:#fff;border:1px solid #ded6c8}}
-.overview{{max-width:760px;margin-top:56px}}.overview h2{{font-size:32px;line-height:1.15;margin:0 0 6px}}.overview h3{{font-size:19px;margin:24px 0 4px}}.overview p{{margin:0;font-size:17px}}
+.overview{{max-width:760px;margin-top:56px}}.overview h2{{font-size:32px;line-height:1.15;margin:0 0 6px}}.overview h3{{font-size:19px;margin:24px 0 4px}}.overview p{{margin:0;font-size:17px}}.overview .start{{margin:8px 0 0}}.overview .start a{{color:#b73535;font-weight:700}}
 @media(max-width:900px){{.grid{{grid-template-columns:repeat(2,1fr)}}}}
 @media(max-width:600px){{.grid{{grid-template-columns:1fr}}}}
 </style></head>
@@ -87,11 +107,13 @@ h1{{font-size:clamp(44px,8vw,82px);line-height:1;margin:12px 0}}.intro{{max-widt
             esc(p.name), esc(thumb_for(p)), esc(get_title(p)))
         for p in sorted(ROOT.glob(slug + "-*itinerary*.html"))
         if "kp-redirect" not in p.read_text(encoding="utf-8", errors="ignore"))
-    description = intro if len(intro) <= 160 else intro[:157].rsplit(" ", 1)[0] + "…"
+    lead = "A {} travel guide for first-time visitors: ".format(name)
+    desc = lead + intro
+    description = desc if len(desc) <= 160 else desc[:157].rsplit(" ", 1)[0].rstrip(" ,.;:") + "…"
     ov = OVERVIEWS.get(slug) or []
-    overview = ('<section class="overview"><h2>Planning a trip to {}</h2>{}</section>'.format(
-        esc(name), "".join("<h3>{}</h3><p>{}</p>".format(esc(h), esc(t)) for h, t in ov)) if ov else "")
-    return template.format(name=esc(name),slug=esc(slug),cards=cards,chips=chips,intro=esc(intro),
+    overview = ('<section class="overview"><h2>Planning a trip to {}</h2>{}{}</section>'.format(
+        esc(name), start_links(slug, name), "".join("<h3>{}</h3><p>{}</p>".format(esc(h), esc(t)) for h, t in ov)) if ov else "")
+    return template.format(name=esc(name),title=esc(hub_title(name)),slug=esc(slug),cards=cards,chips=chips,intro=esc(intro),
                            plans=plans,description=esc(description),overview=overview)
 
 data = json.loads(REGION_FILE.read_text(encoding="utf-8"))
