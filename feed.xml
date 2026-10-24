@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Fri, 23 Oct 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Sat, 24 Oct 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Things to Do in Busan, South Korea: A First-Timer's Guide by Area</title>
+<link>https://korea-plainly.com/things-to-do-in-busan.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/things-to-do-in-busan.html</guid>
+<pubDate>Sat, 24 Oct 2026 08:00:00 +0000</pubDate>
+<description>Plan your first Busan trip by neighborhood, with practical tips for beaches, markets, hillside villages, food, and getting around.</description>
+</item>
 <item>
 <title>Myeongdong Night Market and Street Food: What to Know</title>
 <link>https://korea-plainly.com/myeongdong-night-market.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/korea-winter-festivals.html</guid>
 <pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
 <description>The best winter festivals in Korea for visitors: Hwacheon's trout ice fishing, Pyeongchang, Taebaek's snow sculptures, Seoul's lantern festival and winter light gardens, with how to get there.</description>
-</item>
-<item>
-<title>Korea Trip Cost Calculator: How Much Will Your Trip Cost?</title>
-<link>https://korea-plainly.com/korea-trip-cost-calculator.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/korea-trip-cost-calculator.html</guid>
-<pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
-<description>Work out a rough budget for your trip to Korea: choose how many days, your travel style, KTX trains and a Jeju flight, and see the cost per person in won and your own currency.</description>
 </item>
 </channel>
 </rss>
