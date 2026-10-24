@@ -1,16 +1,16 @@
 {
-  "updated": "2026-10-23T11:03+09:00",
+  "updated": "2026-10-24T11:02+09:00",
   "analytics": true,
   "videos": [
     {
-      "id": "ZsojFLy6Lgc",
-      "title": "Korea 7 Day Itinerary: Seoul, Gyeongju & Busan",
-      "article": "korea-7-day-itinerary",
+      "id": "apUaMdk-ycI",
+      "title": "Korea in December: What to Wear and Do",
+      "article": "korea-in-december",
       "format": "short",
-      "uploaded": "2026-10-21T14:55:40+09:00",
+      "uploaded": "2026-10-23T14:55:27+09:00",
       "status": "public",
-      "seconds": 35,
-      "views": 223,
+      "seconds": 34,
+      "views": 284,
       "likes": 1,
       "comments": 0,
       "avg_view_seconds": null,
@@ -20,6 +20,33 @@
       "retention": null
     },
     {
+      "id": "ZsojFLy6Lgc",
+      "title": "Korea 7 Day Itinerary: Seoul, Gyeongju & Busan",
+      "article": "korea-7-day-itinerary",
+      "format": "short",
+      "uploaded": "2026-10-21T14:55:40+09:00",
+      "status": "public",
+      "seconds": 35,
+      "views": 279,
+      "likes": 1,
+      "comments": 0,
+      "avg_view_seconds": 14,
+      "avg_view_percent": 40.21,
+      "subscribers_gained": 0,
+      "shares": 0,
+      "retention": {
+        "at": {
+          "10%": 103,
+          "25%": 42,
+          "50%": 29,
+          "75%": 26,
+          "95%": 5
+        },
+        "biggest_drop_at": "16%",
+        "biggest_drop": 8
+      }
+    },
+    {
       "id": "oRDEWeKT3Z4",
       "title": "Olive Young Korea Shopping: Get The Tax Refund",
       "article": "olive-young-korea-guide",
@@ -27,11 +54,11 @@
       "uploaded": "2026-10-21T12:00:10+09:00",
       "status": "public",
       "seconds": 37,
-      "views": 38,
+      "views": 40,
       "likes": 0,
       "comments": 0,
-      "avg_view_seconds": 4,
-      "avg_view_percent": 12.73,
+      "avg_view_seconds": 11,
+      "avg_view_percent": 30.09,
       "subscribers_gained": 0,
       "shares": 0,
       "retention": null
@@ -44,11 +71,11 @@
       "uploaded": "2026-10-20T15:33:19+09:00",
       "status": "public",
       "seconds": 587,
-      "views": 6,
+      "views": 9,
       "likes": 0,
       "comments": 0,
-      "avg_view_seconds": 0,
-      "avg_view_percent": 0,
+      "avg_view_seconds": 8,
+      "avg_view_percent": 1.49,
       "subscribers_gained": 0,
       "shares": 0
     },
@@ -60,20 +87,20 @@
       "uploaded": "2026-10-19T15:00:04+09:00",
       "status": "public",
       "seconds": 37,
-      "views": 197,
+      "views": 206,
       "likes": 3,
       "comments": 0,
-      "avg_view_seconds": 23,
-      "avg_view_percent": 63.27,
+      "avg_view_seconds": 20,
+      "avg_view_percent": 55.49000000000001,
       "subscribers_gained": 0,
       "shares": 0,
       "retention": {
         "at": {
-          "10%": 108,
-          "25%": 82,
-          "50%": 61,
-          "75%": 49,
-          "95%": 18
+          "10%": 105,
+          "25%": 71,
+          "50%": 51,
+          "75%": 43,
+          "95%": 12
         },
         "biggest_drop_at": "13%",
         "biggest_drop": 10
@@ -114,7 +141,7 @@
       "uploaded": "2026-10-14T23:09:13+09:00",
       "status": "public",
       "seconds": 539,
-      "views": 7,
+      "views": 14,
       "likes": 0,
       "comments": 0,
       "avg_view_seconds": 53,
@@ -130,7 +157,7 @@
       "uploaded": "2026-10-14T21:00:00+09:00",
       "status": "public",
       "seconds": 515,
-      "views": 31,
+      "views": 34,
       "likes": 1,
       "comments": 0,
       "avg_view_seconds": 145,
@@ -173,7 +200,7 @@
       "uploaded": "2026-10-14T10:18:59+09:00",
       "status": "public",
       "seconds": 59,
-      "views": 28,
+      "views": 30,
       "likes": 1,
       "comments": 0,
       "avg_view_seconds": 33,
@@ -204,23 +231,34 @@
     "youtube",
     "yt-analytics.readonly"
   ],
-  "countries": [],
+  "countries": [
+    {
+      "country": "KR",
+      "views": 47,
+      "minutes": 3
+    },
+    {
+      "country": "IN",
+      "views": 32,
+      "minutes": 2
+    }
+  ],
   "traffic_sources": [
     {
       "source": "SHORTS",
-      "views": 146
+      "views": 338
     },
     {
       "source": "YT_SEARCH",
-      "views": 113
+      "views": 155
     },
     {
       "source": "SUBSCRIBER",
-      "views": 20
+      "views": 24
     },
     {
       "source": "RELATED_VIDEO",
-      "views": 15
+      "views": 16
     },
     {
       "source": "YT_CHANNEL",
@@ -228,7 +266,7 @@
     },
     {
       "source": "YT_OTHER_PAGE",
-      "views": 3
+      "views": 4
     },
     {
       "source": "EXT_URL",
@@ -240,8 +278,8 @@
     }
   ],
   "total": {
-    "views": 701,
-    "likes": 10,
+    "views": 1067,
+    "likes": 11,
     "comments": 0,
     "subscribers_gained": 0
   }
