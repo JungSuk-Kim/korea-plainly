@@ -600,7 +600,8 @@
   },
   "things-to-do-in-busan": {
     "none": true,
-    "query": "Busan South First-Timer Korea"
+    "retry": true,
+    "query": "Gwangalli Beach Busan"
   },
   "tipping-in-korea": {
     "file": "thumb-dining-etiquette.jpg",

@@ -50,7 +50,7 @@
     "category": "Daily Korea"
   },
   {
-    "title": "Incheon Airport to Seoul: AREX, Buses and Taxis Compared",
+    "title": "Incheon Airport to Seoul Station by AREX Train, Bus or Taxi",
     "slug": "incheon-airport-to-seoul",
     "category": "Transport"
   },
@@ -166,6 +166,12 @@
     "slug": "visit-busan-pass",
     "category": "Money",
     "query": "busan travel pass"
+  },
+  {
+    "title": "Discover Seoul Pass: Is the Seoul Travel Pass Worth It?",
+    "slug": "seoul-travel-pass",
+    "category": "Money",
+    "query": "seoul travel pass"
   },
   {
     "title": "Visiting Korean Traditional Markets: What to Know",
