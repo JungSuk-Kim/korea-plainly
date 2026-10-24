@@ -44,6 +44,7 @@ QUERIES = {
     "gungnamji-pond-buyeo": "Gungnamji Buyeo",
     "maisan-tapsa-temple": "Maisan Tapsa",
     "korea-emergency-help": "pharmacy Seoul",
+    "korea-travel-apps": "Gangnam Station Seoul",
     "vegetarian-food-korea": "bibimbap vegetables",
     "kpop-seoul-guide": "Hongdae street Seoul",
     "hanbok-rental-guide": "hanbok Gyeongbokgung",
