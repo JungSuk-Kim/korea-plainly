@@ -314,7 +314,8 @@
     "file": "photo-korea-travel-apps.jpg",
     "credit": "Photo: hyolee2, CC BY-SA 3.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Seoul_Gangnam_Police_Station.JPG",
-    "query": "Gangnam Station Seoul"
+    "query": "Hongdae street Seoul",
+    "retry": true
   },
   "korea-travel-budget": {
     "file": "photo-korea-travel-budget.jpg",
