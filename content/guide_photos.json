@@ -312,10 +312,12 @@
   },
   "korea-travel-apps": {
     "file": "photo-korea-travel-apps.jpg",
-    "credit": "Photo: hyolee2, CC BY-SA 3.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Seoul_Gangnam_Police_Station.JPG",
+    "credit": "Photo: Christian Bolz (크리스티안 볼츠), CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gyeonguiseon_Forest_Trail_Park_and_Ttaeng-ttaeng_Street_in_Seoul_(near_Hongdae,_2).jpg",
     "query": "Hongdae street Seoul",
-    "retry": true
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Seoul_Gangnam_Police_Station.JPG"
+    ]
   },
   "korea-travel-budget": {
     "file": "photo-korea-travel-budget.jpg",
