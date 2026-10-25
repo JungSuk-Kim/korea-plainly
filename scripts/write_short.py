@@ -102,6 +102,11 @@ Rules:
   Others: "Most first-timers waste day one in Seoul. Here's the fix.", "Busan in one day? Do it in this order."
   Never start with a greeting, the channel name, the series name, "In this video" or "Welcome", and do not just read
   out the video title or the slide title. The hook's on-screen "title" says the same promise in a few words.
+- What has worked best on our channel (Oct 2026: "Korea in December: What to Wear and Do", 431 views;
+  "Korea 7 Day Itinerary: Seoul, Gyeongju & Busan", 281): about 35 seconds, 4-5 slides, each "voice" one short
+  sentence of 8-14 words, a hook that names the viewer's situation ("One week in Korea? Do Seoul, Gyeongju, then
+  Busan."), and one plain, useful fact per slide. Copy that shape. Avoid long lists of days or places (8-slide
+  videos lost most viewers by the middle).
 - Slide 2 starts the first tip straight away (no "first, let's talk about", no recap of the hook).
   Slides 2 onwards: one concrete tip each, said in one or two short sentences, in the order a visitor would use them.
   Do not add an ending slide; it is added for you.
@@ -121,6 +126,7 @@ Rules:
 - "title" of the video: at most 60 characters. Start with the words a traveller would type into YouTube search
   (place + what they want), then a short promise, e.g. "Busan One Day Itinerary: The Easy East Coast Route",
   "Seoul Subway for Foreigners: 5 Things to Know", "Korea in December: What to Pack and Do". Title Case.
+  For a topic about the whole country, start with "Korea" (e.g. "Korea in January: ...", "Korea 10 Day Itinerary: ...").
 - "summary": one or two plain sentences for the top of the description, naming the place and what the viewer learns.
 - "hashtags": 4-6 hashtags, the place first.
 
