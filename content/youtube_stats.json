@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T10:48+09:00",
+  "updated": "2026-10-25T19:45+09:00",
   "analytics": true,
   "videos": [
     {
@@ -10,8 +10,8 @@
       "uploaded": "2026-10-23T14:55:27+09:00",
       "status": "public",
       "seconds": 34,
-      "views": 404,
-      "likes": 1,
+      "views": 431,
+      "likes": 2,
       "comments": 0,
       "avg_view_seconds": null,
       "avg_view_percent": null,
@@ -54,7 +54,7 @@
       "uploaded": "2026-10-21T12:00:10+09:00",
       "status": "public",
       "seconds": 37,
-      "views": 41,
+      "views": 42,
       "likes": 0,
       "comments": 0,
       "avg_view_seconds": 11,
@@ -87,7 +87,7 @@
       "uploaded": "2026-10-19T15:00:04+09:00",
       "status": "public",
       "seconds": 37,
-      "views": 215,
+      "views": 218,
       "likes": 3,
       "comments": 0,
       "avg_view_seconds": 20,
@@ -157,7 +157,7 @@
       "uploaded": "2026-10-14T21:00:00+09:00",
       "status": "public",
       "seconds": 515,
-      "views": 45,
+      "views": 47,
       "likes": 1,
       "comments": 0,
       "avg_view_seconds": 176,
@@ -231,6 +231,11 @@
     "youtube",
     "yt-analytics.readonly"
   ],
+  "channel": {
+    "subscribers": 2,
+    "views": 1132,
+    "videos": 11
+  },
   "countries": [
     {
       "country": "KR",
@@ -278,8 +283,8 @@
     }
   ],
   "total": {
-    "views": 1214,
-    "likes": 11,
+    "views": 1247,
+    "likes": 12,
     "comments": 0,
     "subscribers_gained": 0
   }
