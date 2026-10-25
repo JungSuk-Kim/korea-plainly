@@ -447,8 +447,9 @@
     "query": "delivery Seoul"
   },
   "korean-food-to-try": {
-    "none": true,
-    "retry": true,
+    "file": "photo-korean-food-to-try.jpg",
+    "credit": "Photo: Bgag, CC0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gwangjang_Market,_Seoul_02.jpg",
     "query": "Gwangjang Market"
   },
   "korean-phrases-cheat-sheet": {
