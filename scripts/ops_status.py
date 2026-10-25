@@ -102,6 +102,7 @@ def yt_stats():
     d = load("content/youtube_stats.json", {})
     keep = ("title", "format", "status", "views", "likes", "comments", "avg_view_percent", "subscribers_gained", "retention")
     return {"updated": d.get("updated", ""), "analytics": d.get("analytics", False), "total": d.get("total", {}),
+            "channel": d.get("channel", {}),
             "videos": [{k: v.get(k) for k in keep} for v in d.get("videos", []) if v.get("status") == "public"][:8]}
 
 

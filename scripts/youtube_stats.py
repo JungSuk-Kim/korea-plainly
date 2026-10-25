@@ -9,6 +9,8 @@ shares, and a retention summary (how many viewers are still watching at 10%, 25%
 and where the biggest drop is). Analytics numbers lag YouTube Studio by about two days.
 Analytics calls are retried on 5xx/429 (5s, 15s, 45s). If they still fail, the last good analytics numbers are
 carried over from the previous content/youtube_stats.json with "analytics_stale_since" set to their date.
+Also the channel's current subscriber, view and video counts (Data API channels?mine=true, no lag), so a new
+subscriber shows up the same day even though Analytics "subscribers gained" lags and only counts per-video subscribes.
 Needs YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN.
 """
 import json
@@ -103,6 +105,13 @@ def main():
                      params={"part": "statistics,status", "id": ",".join(videos)})
     r.raise_for_status()
     stats = {i["id"]: i for i in r.json().get("items", [])}
+    ch = requests.get(f"{DATA}/channels", headers=auth, timeout=30, params={"part": "statistics", "mine": "true"})
+    if ch.status_code == 200 and ch.json().get("items"):
+        cs = ch.json()["items"][0].get("statistics", {})
+        out["channel"] = {"subscribers": None if cs.get("hiddenSubscriberCount") else int(cs.get("subscriberCount", 0)),
+                          "views": int(cs.get("viewCount", 0)), "videos": int(cs.get("videoCount", 0))}
+    else:
+        print(f"::notice::YouTube channel statistics not available ({ch.status_code})")
 
     end = datetime.now(KST).date().isoformat()
     start = min(v.get("uploaded", end)[:10] for v in videos.values())
@@ -152,7 +161,8 @@ def main():
     total = {k: sum(e.get(k) or 0 for e in out["videos"]) for k in ("views", "likes", "comments", "subscribers_gained")}
     out["total"] = total
     save(OUT, out)
-    print(f"YouTube stats: {len(out['videos'])} videos, {total['views']} views, analytics {'on' if out['analytics'] else 'off'}")
+    print(f"YouTube stats: {len(out['videos'])} videos, {total['views']} views, "
+          f"subscribers {out.get('channel', {}).get('subscribers')}, analytics {'on' if out['analytics'] else 'off'}")
 
 
 if __name__ == "__main__":

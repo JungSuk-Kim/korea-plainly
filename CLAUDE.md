@@ -76,7 +76,7 @@ Shorts are numbered episodes of "KOREA BEFORE YOU GO #n" (first slide; number fr
 "Follow for Korea tips" pill on the middle slide, and end with a subscribe ask and a SUBSCRIBE end card (`video_text.SHORT_OUTRO`, `make_short.end_card`); `youtube_playlists.py`
 (run by the hourly check) sorts every upload into playlists (state: `content/youtube_playlists.json`). Subscribe buttons
 (`.kp-sub`, `?sub_confirmation=1`) come from site_mascot.py, embed_videos.py and video_hub.py.
-"YouTube stats" (daily 08:53 KST) runs `youtube_stats.py` → `content/youtube_stats.json`: views/likes/comments, and with the
+"YouTube stats" (daily 08:53 KST) runs `youtube_stats.py` → `content/youtube_stats.json`: views/likes/comments, channel subscriber count (same day), and with the
 `yt-analytics.readonly` scope also average % viewed, subscribers gained and a retention summary per video.
 Analytics calls retry on 5xx/429; if they still fail, the last good numbers are kept with `analytics_stale_since`.
 "Keyword ideas (weekly)" runs `keyword_ideas.py` (Google autocomplete for travel seeds, compared with page titles) →
