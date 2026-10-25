@@ -55,7 +55,7 @@ def article_box(nl):
     return block(nl, STYLE + '<aside class="kp-kkachi"><img src="kkachi.png" alt="Kkachi, the Korea Plainly magpie" '
                      'width="72" height="78" loading="lazy">'
                      "<p><strong>Kkachi says:</strong> in Korea, a magpie's call is said to mean good news and welcome "
-                     f'guests are on the way. Have a wonderful trip! New one-minute Korea tips every Monday, Wednesday and Friday on '
+                     f'guests are on the way. Have a wonderful trip! New one-minute Korea tips every Monday, Wednesday, Friday and Saturday on '
                      f'<a href="{YOUTUBE}" target="_blank" rel="noopener">YouTube</a>.<br>'
                      f'<a class="kp-sub" href="{SUBSCRIBE}" target="_blank" rel="noopener">Subscribe on YouTube</a></p></aside>')
 

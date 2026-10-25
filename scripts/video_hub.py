@@ -88,7 +88,7 @@ def main():
             inner += f'<div class="kp-vhead"><h2>Full travel plans</h2></div>{grid(longs, "long")}'
         if shorts:
             inner += f'<div class="kp-vhead"><h2>One-minute guides</h2></div>{grid(shorts, "short")}'
-        inner += (f'<p class="kp-vsub" style="margin:30px 0 0;font-size:15px">New one-minute Korea tips every Monday, Wednesday and Friday. '
+        inner += (f'<p class="kp-vsub" style="margin:30px 0 0;font-size:15px">New one-minute Korea tips every Monday, Wednesday, Friday and Saturday. '
                   f'<a class="kp-sub" href="{CHANNEL}" target="_blank" rel="noopener">Subscribe on YouTube</a></p>')
         s = page.read_text(encoding="utf-8")
         new = put(s, START, END, inner)

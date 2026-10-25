@@ -6,7 +6,7 @@ the free guide on the site; the summary follows, then a subscribe link.
 """
 SITE = "https://korea-plainly.com"
 CHANNEL = "https://www.youtube.com/@KoreaPlainly?sub_confirmation=1"
-SHORT_OUTRO = "Subscribe for more Korea tips every Monday, Wednesday and Friday."
+SHORT_OUTRO = "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
 
 
 def header(article, summary):
