@@ -83,6 +83,10 @@ SAFE_RIGHT = W - 170
 
 
 SERIES = "KOREA BEFORE YOU GO"   # every Short is a numbered episode: a series gives viewers a reason to subscribe
+# Viewers decide in the first second or two (YouTube stats, Oct 2026: most drops in the first ~5 s), so the first
+# slide shows its hook from frame one (no fade-in), the series name is only a small line above it, and the slide
+# holds at most FIRST_HOLD seconds after its narration ends.
+FIRST_HOLD = 0.3
 
 
 def follow_png(path):
@@ -106,8 +110,8 @@ def caption_overlay(slide, path, series=None):
     for y in range(H):
         grad.putpixel((0, y), int(min(1, max(0, (H * 0.5 - y) / (H * 0.32))) * 215))
     img.paste(Image.new("RGBA", (W, H), (10, 16, 28, 255)), (0, 0), grad.resize((W, H)))
-    if series:   # the series name and episode number above the first slide's title
-        d.text((82, int(H * 0.052)), series, font=font(46), fill=CREAM)
+    if series:   # the series name and episode number: a small line above the first slide's hook, not a beat of its own
+        d.text((82, int(H * 0.06)), series, font=font(34, False), fill=(200, 205, 215))
     y = int(H * 0.11)
     kicker = slide.get("kicker", "")
     if kicker:  # white on a red label, readable on any photo
@@ -352,7 +356,7 @@ def segment(slide, i, tmp, voice, mascot=False, series=None, follow=False):
     if voice and slide.get("voice"):
         audio = tmp / f"voice{i:02d}.mp3"
         tts(slide["voice"], audio)
-        dur = duration(audio) + 0.45
+        dur = duration(audio) + (min(FIRST_HOLD, 2.5) if i == 0 else 0.45)
     else:
         dur = SILENT_SECONDS if not slide.get("end") else 3.0
     subs = []
@@ -369,7 +373,9 @@ def segment(slide, i, tmp, voice, mascot=False, series=None, follow=False):
         follow_png(png)
         subs.append((png, 1.0, min(3.6, dur - 0.4)))
     audio_in = ["-i", str(audio)] if audio else ["-f", "lavfi", "-t", f"{dur:.2f}", "-i", "anullsrc=r=44100:cl=stereo"]
-    fade = f"fade=t=in:st=0:d=0.25,fade=t=out:st={dur - 0.25:.2f}:d=0.25"
+    fade = f"fade=t=out:st={dur - 0.25:.2f}:d=0.25"
+    if i:  # the first slide starts fully visible so the hook is on screen from the first frame
+        fade = f"fade=t=in:st=0:d=0.25,{fade}"
     if slide.get("end"):
         card = tmp / f"end{i:02d}.png"
         end_card(slide, card)

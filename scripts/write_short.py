@@ -96,11 +96,14 @@ Return JSON only, in this form:
 
 Rules:
 - 4 or 5 slides, about 25 seconds in total. Viewers swipe away fast, so every second must earn its place.
-- Slide 1 is the hook, and the first two seconds decide everything: at most 10 spoken words, naming the viewer's
-  problem or a surprising, useful fact about THIS place or topic (e.g. "Most first-timers waste day one in Seoul.
-  Here's the fix.", "Busan in one day? Do it in this order."). Never start with a greeting, the channel name,
-  "In this video" or "Welcome". The hook's on-screen "title" says the same promise in a few words.
-- Slides 2 onwards: one concrete tip each, said in one or two short sentences, in the order a visitor would use them.
+- Slide 1 is the hook, and the first two seconds decide everything (most viewers who leave do so in the first
+  five seconds). Its "voice" is at most 10 spoken words: a concrete promise, or a mistake to avoid, that names the
+  viewer's own problem with THIS place or topic. Model: "Korea in November swings from autumn to winter. Pack layers."
+  Others: "Most first-timers waste day one in Seoul. Here's the fix.", "Busan in one day? Do it in this order."
+  Never start with a greeting, the channel name, the series name, "In this video" or "Welcome", and do not just read
+  out the video title or the slide title. The hook's on-screen "title" says the same promise in a few words.
+- Slide 2 starts the first tip straight away (no "first, let's talk about", no recap of the hook).
+  Slides 2 onwards: one concrete tip each, said in one or two short sentences, in the order a visitor would use them.
   Do not add an ending slide; it is added for you.
 - Narration ("voice"): warm, plain spoken English, like a friendly local. All slides together at most {max_words} words.
   Short sentences. Spell numbers as they are spoken. No hashtags or emoji in the voice.
@@ -151,6 +154,12 @@ def write(slug):
             s["image"] = cover if cover in photos else next(iter(photos))
         s["kicker"] = s.get("kicker", "").upper()[:28]
         slides.append(s)
+    # the hook: at most 10 spoken words (keep its first sentence if the model ran long)
+    hook = slides[0].get("voice", "") if slides else ""
+    if len(hook.split()) > 10:
+        first = re.split(r"(?<=[.?!])\s+", hook.strip())[0]
+        if len(first.split()) <= 10:
+            slides[0]["voice"] = first
     # keep the narration short: drop middle slides until it fits
     while sum(len(s["voice"].split()) for s in slides) > MAX_WORDS and len(slides) > 4:
         slides.pop(-2)
