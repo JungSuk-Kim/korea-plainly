@@ -446,6 +446,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:McDelivery_Seoul_2008.jpg",
     "query": "delivery Seoul"
   },
+  "korean-food-to-try": {
+    "none": true,
+    "query": "Gwangjang Market food stall Seoul"
+  },
   "korean-phrases-cheat-sheet": {
     "file": "photo-korean-phrases-cheat-sheet.jpg",
     "credit": "Photo: travelmate2021 東大策略顧問有限公司, CC BY 2.0, via Wikimedia Commons",
