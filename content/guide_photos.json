@@ -448,7 +448,8 @@
   },
   "korean-food-to-try": {
     "none": true,
-    "query": "Gwangjang Market food stall Seoul"
+    "retry": true,
+    "query": "Gwangjang Market"
   },
   "korean-phrases-cheat-sheet": {
     "file": "photo-korean-phrases-cheat-sheet.jpg",
