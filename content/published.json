@@ -1190,7 +1190,7 @@
   {
     "slug": "korea-domestic-flights-budget-airlines",
     "filename": "korea-domestic-flights-budget-airlines.html",
-    "title": "Korean Budget Airlines and Domestic Flights: Seoul to Jeju and Busan",
+    "title": "Korea Budget Airlines and Domestic Flights: Seoul to Jeju and Busan",
     "category": "Transport"
   },
   {
@@ -1216,5 +1216,11 @@
     "filename": "jeonju-hanok-village-from-seoul.html",
     "title": "Jeonju Hanok Village from Seoul: A Simple Day Trip by Train or Bus",
     "category": "Travel"
+  },
+  {
+    "slug": "korean-food-to-try",
+    "filename": "korean-food-to-try.html",
+    "title": "Korean Food to Try in Seoul: 20 Dishes for First-Timers",
+    "category": "Food"
   }
 ]

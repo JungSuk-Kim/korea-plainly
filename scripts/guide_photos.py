@@ -45,6 +45,7 @@ QUERIES = {
     "maisan-tapsa-temple": "Maisan Tapsa",
     "korea-emergency-help": "pharmacy Seoul",
     "korea-travel-apps": "Hongdae street Seoul",
+    "korean-food-to-try": "Gwangjang Market food stall Seoul",
     "vegetarian-food-korea": "bibimbap vegetables",
     "kpop-seoul-guide": "Hongdae street Seoul",
     "hanbok-rental-guide": "hanbok Gyeongbokgung",
