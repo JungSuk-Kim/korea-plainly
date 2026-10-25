@@ -123,6 +123,10 @@
     "korean-food-to-try": {
       "at": "2026-10-25T06:50:32+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myomkmotv22k"
+    },
+    "jeonju-hanok-village-from-seoul": {
+      "at": "2026-10-25T14:33:58+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mypghcnqao2g"
     }
   },
   "bluesky_videos": {
@@ -401,6 +405,10 @@
     "korean-food-to-try": {
       "at": "2026-10-25T06:50:39+00:00",
       "ref": "1261611360380213_122108704779509276"
+    },
+    "jeonju-hanok-village-from-seoul": {
+      "at": "2026-10-25T14:34:04+00:00",
+      "ref": "1261611360380213_122108838723509276"
     }
   },
   "threads": {
@@ -507,6 +515,10 @@
     "korean-food-to-try": {
       "at": "2026-10-25T06:50:49+00:00",
       "ref": "17864298852695983"
+    },
+    "jeonju-hanok-village-from-seoul": {
+      "at": "2026-10-25T14:34:18+00:00",
+      "ref": "18101863709641491"
     }
   }
 }
