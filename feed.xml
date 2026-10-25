@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Sat, 24 Oct 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Sun, 25 Oct 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Jeonju Hanok Village from Seoul: A Simple Day Trip by Train or Bus</title>
+<link>https://korea-plainly.com/jeonju-hanok-village-from-seoul.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/jeonju-hanok-village-from-seoul.html</guid>
+<pubDate>Sun, 25 Oct 2026 08:00:00 +0000</pubDate>
+<description>Plan an easy day trip from Seoul to Jeonju Hanok Village, with practical train and bus options, local transport tips, and ideas for what to see and eat.</description>
+</item>
 <item>
 <title>Things to Do in Busan, South Korea: A First-Timer's Guide by Area</title>
 <link>https://korea-plainly.com/things-to-do-in-busan.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/learn-hangul.html</guid>
 <pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
 <description>Learn to read the Korean alphabet before your trip: every letter with its sound, how syllable blocks work, a read-the-sign quiz and a memory game, with real words from Korean signs and menus.</description>
-</item>
-<item>
-<title>KTX Train from Seoul to Busan: Tickets, Times and How to Ride</title>
-<link>https://korea-plainly.com/ktx-train-guide.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/ktx-train-guide.html</guid>
-<pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
-<description>How to take the KTX train from Seoul to Busan: stations, journey times, rough fares, booking in the app, Seoul Station vs Suseo and finding your seat.</description>
 </item>
 </channel>
 </rss>
