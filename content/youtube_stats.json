@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26T09:44+09:00",
+  "updated": "2026-10-26T10:50+09:00",
   "analytics": true,
   "videos": [
     {
@@ -213,7 +213,7 @@
       "uploaded": "2026-10-14T21:00:00+09:00",
       "status": "public",
       "seconds": 515,
-      "views": 47,
+      "views": 48,
       "likes": 1,
       "comments": 0,
       "avg_view_seconds": 212,
@@ -393,7 +393,7 @@
     }
   ],
   "total": {
-    "views": 1280,
+    "views": 1281,
     "likes": 12,
     "comments": 0,
     "subscribers_gained": 0
