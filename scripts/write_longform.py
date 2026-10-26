@@ -55,7 +55,7 @@ first-time visitors to Korea, narrated by a warm, plain-spoken local. Turn the a
 
 Return JSON only:
 {{
- "title": "YouTube title, at most 70 characters, starting with the words a traveller would type into YouTube search, e.g. 'Busan One Day Itinerary: Temple, Beach and Market' or 'Korea Winter Festivals: Ice Fishing, Snow and Lights'",
+ "title": "YouTube title, at most 70 characters, starting with the words a traveller would type into YouTube search, e.g. 'Busan One Day Itinerary: Temple, Beach and Market' or 'Korea in January: Ice Fishing, Snow and Light Festivals'. For anything seasonal name the month(s), not the season (our 'Korea in December' short got 444 views, 'Korea Autumn Leaves' 11): 'Korea in December and January: ...', not 'Korea in Winter: ...'",
  "intro": "two sentences for the video description",
  "hashtags": "#Place #KoreaTravel ... (4-6)",
  "thumb": {{"big": "at most 8 characters, e.g. '1 DAY'", "mid": "at most 10 characters, e.g. 'IN BUSAN'", "small": "at most 22 characters"}},

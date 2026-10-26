@@ -127,6 +127,10 @@ Rules:
   (place + what they want), then a short promise, e.g. "Busan One Day Itinerary: The Easy East Coast Route",
   "Seoul Subway for Foreigners: 5 Things to Know", "Korea in December: What to Pack and Do". Title Case.
   For a topic about the whole country, start with "Korea" (e.g. "Korea in January: ...", "Korea 10 Day Itinerary: ...").
+  For anything seasonal, name the month, not the season: viewers search and click month names ("Korea in December"
+  444 views, "Korea in November" 226) far more than seasons ("Korea Autumn Leaves" 11). So "Korea in January:
+  Winter Festivals to See", not "Korea Winter Festivals"; "Jeju in December: ...", not "Jeju in Winter". Use the
+  month(s) the article itself gives; the hook and the first slide's on-screen title name the month too.
 - "summary": one or two plain sentences for the top of the description, naming the place and what the viewer learns.
 - "hashtags": 4-6 hashtags, the place first.
 

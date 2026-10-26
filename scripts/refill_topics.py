@@ -117,6 +117,8 @@ Rules:
   already answers. Skip searches answered by an existing page (for example an eSIM or SIM search when a SIM/eSIM
   page exists), tour packages, news, other countries, and single restaurants, hotels or shops.
 - Include at least one seasonal topic useful for visitors in {ahead[0]} or {ahead[1]}, unless the site already covers it.
+  Name the month in its title, not the season (e.g. "Korea Festivals in {ahead[1]}", not "Korea Winter Festivals"):
+  month titles get far more clicks on this site's videos than season titles.
 - One practical, evergreen-as-possible subject per topic, broad enough for an 800-1000 word guide.
 - Title: plain British-leaning English, under 70 characters, containing the searched phrase naturally when the
   topic comes from a search. No years unless the topic is a dated event.
