@@ -127,6 +127,10 @@
     "jeonju-hanok-village-from-seoul": {
       "at": "2026-10-25T14:33:58+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mypghcnqao2g"
+    },
+    "visit-busan-pass": {
+      "at": "2026-10-26T06:57:13+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myr5fix7qy24"
     }
   },
   "bluesky_videos": {
@@ -409,6 +413,10 @@
     "jeonju-hanok-village-from-seoul": {
       "at": "2026-10-25T14:34:04+00:00",
       "ref": "1261611360380213_122108838723509276"
+    },
+    "visit-busan-pass": {
+      "at": "2026-10-26T06:57:19+00:00",
+      "ref": "1261611360380213_122109088587509276"
     }
   },
   "threads": {
@@ -519,6 +527,10 @@
     "jeonju-hanok-village-from-seoul": {
       "at": "2026-10-25T14:34:18+00:00",
       "ref": "18101863709641491"
+    },
+    "visit-busan-pass": {
+      "at": "2026-10-26T06:57:31+00:00",
+      "ref": "18234109303322080"
     }
   }
 }
