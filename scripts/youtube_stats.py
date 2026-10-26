@@ -6,7 +6,10 @@
 Always: views, likes and comments per video (YouTube Data API, scope youtube).
 If the refresh token also has yt-analytics.readonly: average % viewed, average view length, subscribers gained,
 shares, and a retention summary (how many viewers are still watching at 10%, 25%, 50%, 75% and 95% of the video,
-and where the biggest drop is). Analytics numbers lag YouTube Studio by about two days.
+and where the biggest drop is). Long-form videos also get retention from their first view (Shorts from 20), the share of viewers still watching at
+15 s, 30 s, 1 min and 2 min ("at_seconds"), and their own traffic sources ("traffic_sources": search, suggested,
+browse ...), so we can see exactly where and why viewers of long videos leave.
+Analytics numbers lag YouTube Studio by about two days.
 Analytics calls are retried on 5xx/429 (5s, 15s, 45s). If they still fail, the last good analytics numbers are
 carried over from the previous content/youtube_stats.json with "analytics_stale_since" set to their date.
 Also the channel's current subscriber, view and video counts (Data API channels?mine=true, no lag), so a new
@@ -31,7 +34,8 @@ DATA = "https://www.googleapis.com/youtube/v3"
 ANALYTICS = "https://youtubeanalytics.googleapis.com/v2/reports"
 MARKS = (0.1, 0.25, 0.5, 0.75, 0.95)
 BACKOFF = (5, 15, 45)   # seconds between retries of an Analytics call
-CARRY = ("avg_view_seconds", "avg_view_percent", "subscribers_gained", "shares", "retention")
+CARRY = ("avg_view_seconds", "avg_view_percent", "subscribers_gained", "shares", "retention", "traffic_sources")
+SECONDS = (15, 30, 60, 120)   # long-form: still watching at these points
 
 
 def analytics_get(auth, params):
@@ -69,7 +73,7 @@ def carry_over(out, prev):
     out["analytics_stale_since"] = since
 
 
-def retention(auth, vid, start, end):
+def retention(auth, vid, start, end, length=None):
     r = analytics_get(auth, {
         "ids": "channel==MINE", "startDate": start, "endDate": end, "dimensions": "elapsedVideoTimeRatio",
         "metrics": "audienceWatchRatio", "filters": f"video=={vid}"})
@@ -84,8 +88,21 @@ def retention(auth, vid, start, end):
         return round(min(curve, key=lambda p: abs(p[0] - t))[1] * 100)
     drops = [(curve[i][0], curve[i - 1][1] - curve[i][1]) for i in range(1, len(curve))]
     worst = max(drops, key=lambda d: d[1]) if drops else (0, 0)
-    return {"at": {f"{int(m * 100)}%": at(m) for m in MARKS}, "biggest_drop_at": f"{round(worst[0] * 100)}%",
-            "biggest_drop": round(worst[1] * 100)}
+    out = {"at": {f"{int(m * 100)}%": at(m) for m in MARKS}, "biggest_drop_at": f"{round(worst[0] * 100)}%",
+           "biggest_drop": round(worst[1] * 100)}
+    if length:
+        out["biggest_drop_at_seconds"] = round(worst[0] * length)
+        out["at_seconds"] = {(f"{t}s" if t < 60 else f"{t // 60}m"): at(t / length) for t in SECONDS if t < length}
+    return out
+
+
+def video_sources(auth, vid, start, end):
+    r = analytics_get(auth, {
+        "ids": "channel==MINE", "startDate": start, "endDate": end, "dimensions": "insightTrafficSourceType",
+        "metrics": "views,averageViewDuration", "filters": f"video=={vid}", "sort": "-views"})
+    if r.status_code != 200:
+        return None
+    return [{"source": x[0], "views": x[1], "avg_view_seconds": x[2]} for x in r.json().get("rows") or []] or None
 
 
 def main():
@@ -152,8 +169,11 @@ def main():
             row = rows.get(vid, {})
             e.update(avg_view_seconds=row.get("averageViewDuration"), avg_view_percent=row.get("averageViewPercentage"),
                      subscribers_gained=row.get("subscribersGained", 0), shares=row.get("shares", 0))
-            if e["status"] == "public" and e["views"] >= 20:
-                e["retention"] = retention(auth, vid, start, end)
+            long = e["format"] == "long"
+            if e["status"] == "public" and e["views"] >= (1 if long else 20):
+                e["retention"] = retention(auth, vid, start, end, e["seconds"] if long else None)
+            if long and e["status"] == "public" and e["views"]:
+                e["traffic_sources"] = video_sources(auth, vid, start, end)
         out["videos"].append(e)
     out["videos"].sort(key=lambda e: e["uploaded"], reverse=True)
     if not out["analytics"]:

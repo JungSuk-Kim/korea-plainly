@@ -5,9 +5,11 @@
     python scripts/write_longform.py <slug>     # a given article
 
 Writes content/longform/<slug>.json for scripts/make_longform.py and prints its path.
-The script follows the Seoul video's shape: an intro, "before you go", one chapter per
-day or topic with a map of the stops, mistakes to avoid, quick questions and a summary,
-about 8-9 minutes of narration. Map stops are placed with OpenStreetMap's geocoder
+The script follows the Seoul video's shape, the only long-form video viewers stayed with: the first
+sentence promises what the viewer gets and the whole-route map follows within 15 seconds, then two
+"before you go" tips, one chapter per day or topic with a map of the stops, the other practical tips
+("Good to know"), mistakes to avoid, quick questions and a summary, about 5-6 minutes of narration
+(Oct 2026: viewers of the 9-minute Jeju and Busan videos left within the first minute). Map stops are placed with OpenStreetMap's geocoder
 (Nominatim); a stop it cannot find is left off the map rather than guessed.
 """
 import json
@@ -25,7 +27,7 @@ LONG = ROOT / "content" / "longform"
 QUEUE = LONG / "queue.json"
 UPLOADS = ROOT / "content" / "shorts" / "uploads.json"
 TRACKS = json.loads((ROOT / "content" / "shorts" / "music.json").read_text(encoding="utf-8"))["tracks"]
-MIN_WORDS, MAX_WORDS = 1150, 1400     # about 8-9 minutes, so mid-roll ads are possible
+MIN_WORDS, MAX_WORDS = 720, 860      # about 5-6 minutes (the Seoul video ran about 140 words a minute)
 
 
 def done():
@@ -48,7 +50,7 @@ def next_article():
     return None
 
 
-PROMPT = """You write long-form YouTube videos (8-9 minutes, 16:9) for Korea Plainly, an English travel guide for
+PROMPT = """You write long-form YouTube videos (5-6 minutes, 16:9) for Korea Plainly, an English travel guide for
 first-time visitors to Korea, narrated by a warm, plain-spoken local. Turn the article below into one video.
 
 Return JSON only:
@@ -68,15 +70,18 @@ VISUAL is one of:
   {{"map": "<map id>"}}  |  {{"card": {{"big": "SHORT CAPS", "title": "...", "sub": "..."}}}}  |  {{"list": {{"heading": "...", "items": ["...", "..."]}}}}
 
 Structure (use these chapter names where they fit):
-- "Intro": a fast cold open first, because our viewers left in the first minute: 3-4 very short segments (at most 12
-  words each, one striking photo each) showing the best moments of the plan, then one sentence that promises exactly
-  what the viewer gets (e.g. "By the end, you'll have the whole day in the right order, with nothing wasted.").
-  The first spoken words must be about the place, never a greeting, the channel name or "In this video".
-  Only then a segment over an overview map of all stops, then a title card.
-- "Before you go": 3-4 practical tips from the article (closing days, transport cards, map apps, where to stay, arriving).
+- "Intro" (all of it within the first 15 seconds, because our viewers left in the first minute):
+  1. one segment, at most 20 words, over the most striking photo: the first sentence names the place and promises
+     exactly what the viewer gets, with the plan's numbers and highlights (e.g. "Three days in Seoul: palaces,
+     markets and the best night view, in the right order, with nothing wasted."). Never a greeting, the channel
+     name or "In this video".
+  2. one segment, at most 15 words, over the overview map of all stops (e.g. "Here's the whole route.").
+  3. at most 2 very short highlight segments (at most 10 words, one photo each), then a title card.
+- "Before you go": only the 2 tips a visitor most needs before the first stop (e.g. a closing day, the transport
+  card). Every other practical tip goes in "Good to know" near the end.
 - One chapter per day or per main part of the article, each starting with a title card and that part's route map,
   then one segment per stop, each with a "label" naming the place.
-- "Getting around", "Mistakes to avoid" (a list of 3-4, then a segment explaining them), "Quick questions" (2-3 Q&A
+- "Getting around", "Good to know" (the remaining practical tips, 2-3 short segments), "Mistakes to avoid" (a list of 3-4, then a segment explaining them), "Quick questions" (2-3 Q&A
   from the article's FAQ), "Summary" (a list recapping the plan, then a closing card with "korea-plainly.com" and
   the line "The full guide, with maps and links for every stop, is free at Korea Plainly dot com. The link is at
   the top of the description. If this helped, subscribe for more plain, practical guides to Korea."). The closing card is
