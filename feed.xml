@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Sun, 25 Oct 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Mon, 26 Oct 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Visit Busan Pass: Is It Worth It for First-Time Visitors?</title>
+<link>https://korea-plainly.com/visit-busan-pass.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/visit-busan-pass.html</guid>
+<pubDate>Mon, 26 Oct 2026 08:00:00 +0000</pubDate>
+<description>Find out how the Visit Busan Pass works, which Busan attractions can make it worthwhile, and how to plan your days around its time limit.</description>
+</item>
 <item>
 <title>Korean Food to Try in Seoul: 20 Dishes for First-Timers</title>
 <link>https://korea-plainly.com/korean-food-to-try.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/seoul-night-views.html</guid>
 <pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
 <description>Where to see Seoul at night: N Seoul Tower, the old city wall at Naksan Park, Seoul Sky, Han River bridges, Cheonggyecheon and more, with tips on timing and getting there.</description>
-</item>
-<item>
-<title>5 Days in Seoul: A Relaxed Itinerary for First-Timers</title>
-<link>https://korea-plainly.com/seoul-5-day-itinerary.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/seoul-5-day-itinerary.html</guid>
-<pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
-<description>Five days in Seoul for first-time visitors: palaces and hanok lanes, markets and Namsan, Hongdae and the Han River, Gangnam and Jamsil, and a day trip to the DMZ or Suwon.</description>
 </item>
 </channel>
 </rss>
