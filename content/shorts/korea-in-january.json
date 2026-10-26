@@ -1,0 +1,60 @@
+{
+  "article": "korea-in-january",
+  "fallback": "photo-korea-in-january.jpg",
+  "title": "Korea In January: What To Pack And Do",
+  "summary": "Planning a January trip to Korea? Learn how Seoul’s cold compares with Busan, what to pack, and what to see after snowfall.",
+  "hashtags": "#Korea #KoreaTravel #KoreaInJanuary #Seoul #Busan",
+  "music": "Carefree",
+  "slides": [
+    {
+      "kicker": "JANUARY",
+      "title": "January: Pack For Seoul's Cold",
+      "sub": "Seoul days often stay below freezing.",
+      "voice": "Korea in January? Pack for Seoul's below-freezing days.",
+      "image": "photo-korea-in-january.jpg"
+    },
+    {
+      "kicker": "BUSAN",
+      "title": "The South Is Milder",
+      "sub": "Busan averages about eight degrees by day.",
+      "voice": "Busan averages around eight degrees by day, far milder than Seoul.",
+      "photo_query": "Busan winter coast South Korea",
+      "require": [
+        "busan"
+      ]
+    },
+    {
+      "kicker": "PACKING",
+      "title": "Layer Up And Grip",
+      "sub": "Bring waterproof shoes with good grip.",
+      "voice": "Wear a long padded coat, thermal layers, and grippy waterproof shoes.",
+      "photo_query": "winter coat South Korea",
+      "require": [
+        "coat"
+      ]
+    },
+    {
+      "kicker": "ICE FEST",
+      "title": "Check Festival Dates",
+      "sub": "Dates depend on ice conditions.",
+      "voice": "Gangwon's ice festivals offer trout fishing; dates depend on safe ice.",
+      "image": "photo-korea-winter-festivals.jpg"
+    },
+    {
+      "kicker": "PALACES",
+      "title": "Go Early After Snow",
+      "sub": "Visit before footprints mark the snow.",
+      "voice": "After snowfall, visit Gyeongbokgung early, before the snow gets trampled.",
+      "photo_query": "Gyeongbokgung Palace snow Seoul",
+      "require": [
+        "gyeongbokgung"
+      ]
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
