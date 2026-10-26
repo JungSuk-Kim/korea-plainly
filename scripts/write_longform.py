@@ -5,8 +5,8 @@
     python scripts/write_longform.py <slug>     # a given article
 
 Writes content/longform/<slug>.json for scripts/make_longform.py and prints its path.
-The script follows the Seoul video's shape, the only long-form video viewers stayed with: the first
-sentence promises what the viewer gets and the whole-route map follows within 15 seconds, then two
+The script follows the Seoul video's shape, the only long-form video viewers stayed with, and leads with the payoff:
+it opens on the best view and the signature food (3-4 quick shots), the first sentence promises what the viewer gets and the whole-route map follows within 15 seconds, then two
 "before you go" tips, one chapter per day or topic with a map of the stops, the other practical tips
 ("Good to know"), mistakes to avoid, quick questions and a summary, about 5-6 minutes of narration
 (Oct 2026: viewers of the 9-minute Jeju and Busan videos left within the first minute). Map stops are placed with OpenStreetMap's geocoder
@@ -70,13 +70,16 @@ VISUAL is one of:
   {{"map": "<map id>"}}  |  {{"card": {{"big": "SHORT CAPS", "title": "...", "sub": "..."}}}}  |  {{"list": {{"heading": "...", "items": ["...", "..."]}}}}
 
 Structure (use these chapter names where they fit):
-- "Intro" (all of it within the first 15 seconds, because our viewers left in the first minute):
-  1. one segment, at most 20 words, over the most striking photo: the first sentence names the place and promises
-     exactly what the viewer gets, with the plan's numbers and highlights (e.g. "Three days in Seoul: palaces,
-     markets and the best night view, in the right order, with nothing wasted."). Never a greeting, the channel
-     name or "In this video".
+- "Intro" (all of it within the first 15 seconds, because our viewers left in the first minute). Lead with the
+  payoff: the very first frame is the best thing in the video, never a card, map, list or a generic street.
+  1. one segment, at most 22 words, with 3-4 visuals that are the video's best moments: the most striking view
+     (a coastline, a night skyline, a temple, a mountain) and the place's signature food or market (a steaming
+     bowl, a street-food stall), each a photo of a real stop in the plan. The first visual must be the single most
+     beautiful view. The narration names these highlights and promises exactly what the viewer gets, with the
+     plan's numbers (e.g. "Three days in Seoul: palace gates, a sunset city view and market food, in the right
+     order, with nothing wasted."). Never a greeting, the channel name or "In this video".
   2. one segment, at most 15 words, over the overview map of all stops (e.g. "Here's the whole route.").
-  3. at most 2 very short highlight segments (at most 10 words, one photo each), then a title card.
+  3. at most 1 more very short highlight segment (at most 10 words, one photo of a view or a dish), then a title card.
 - "Before you go": only the 2 tips a visitor most needs before the first stop (e.g. a closing day, the transport
   card). Every other practical tip goes in "Good to know" near the end.
 - One chapter per day or per main part of the article, each starting with a title card and that part's route map,
@@ -179,6 +182,12 @@ def clean(spec, photos):
             if seg.get("label"):
                 seg["label"]["kicker"] = seg["label"].get("kicker", "").upper()[:24]
                 seg["label"]["title"] = seg["label"]["title"][:34]
+    # lead with the payoff: the video's first frame is a photo (the best view), never a card, map or list
+    first = spec["chapters"][0]["segments"][0]["show"] if spec["chapters"] and spec["chapters"][0]["segments"] else []
+    pics = [v for v in first if "image" in v or "photo_query" in v]
+    if pics and first[0] is not pics[0]:
+        first.remove(pics[0])
+        first.insert(0, pics[0])
     return spec
 
 
