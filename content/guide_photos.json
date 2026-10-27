@@ -595,8 +595,8 @@
     "query": "Seoul Metropolitan Subway train"
   },
   "seoul-travel-pass": {
-    "none": true,
-    "query": "Discover Seoul Pass Korea"
+    "retry": true,
+    "query": "N Seoul Tower Namsan Seoul"
   },
   "seoul-vs-busan": {
     "file": "photo-seoul-vs-busan.jpg",
