@@ -363,5 +363,45 @@
     "file": "_shorts/photos/gyeongbokgung-palace-snow-seoul.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:KOCIS_Korea_Snowfall_in_Gyeongbokgung_01_(11318872064).jpg",
     "credit": "Photo: Korea.net / Korean Culture and Information Service (Jeon Han), CC BY-SA 2.0, via Wikimedia Commons"
+  },
+  "Haedong Yonggungsa Temple": {
+    "file": "_shorts/photos/haedong-yonggungsa-temple.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Haedong_Yonggungsa_Temple_near_Busan.jpg",
+    "credit": "Photo: Christian Bolz, CC BY-SA 4.0, via Wikimedia Commons"
+  },
+  "Donggung Wolji night": {
+    "file": "_shorts/photos/donggung-wolji-night.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Donggung_Palace_%26_Wolji_Pond,_Gyeongju_-_Donggung2687.jpg",
+    "credit": "Photo: lumoplank, CC0, via Wikimedia Commons"
+  },
+  "Bukchon Hanok Village": {
+    "file": "_shorts/photos/bukchon-hanok-village.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Bukchon_Hanok_Village_01.jpg",
+    "credit": "Photo: Bgag, CC0, via Wikimedia Commons"
+  },
+  "Hongdae Seoul street": {
+    "file": "_shorts/photos/hongdae-seoul-street.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Gyeonguiseon_Forest_Trail_Park_and_Ttaeng-ttaeng_Street_in_Seoul_(near_Hongdae,_1).jpg",
+    "credit": "Photo: Christian Bolz (크리스티안 볼츠), CC BY-SA 4.0, via Wikimedia Commons"
+  },
+  "Seongsu Seoul cafes": {
+    "file": "_shorts/photos/seongsu-seoul-cafes.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul-Metro-2-Seongsu-station-platform.jpg",
+    "credit": "Photo: LERK, CC BY 2.5, via Wikimedia Commons"
+  },
+  "Daereungwon royal tombs": {
+    "file": "_shorts/photos/daereungwon-royal-tombs.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Trees_surrounded_by_grassy_tumuli_at_sunset_in_Daereungwon_Tomb_Complex_of_Gyeongju_in_South_Korea.jpg",
+    "credit": "Photo: Basile Morin, CC BY-SA 4.0, via Wikimedia Commons"
+  },
+  "Gamcheon Culture Village": {
+    "file": "_shorts/photos/gamcheon-culture-village.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Colorful_houses_in_Gamcheon_Culture_Village_at_sunset_in_Busan_South_Korea.jpg",
+    "credit": "Photo: Basile Morin, CC BY-SA 4.0, via Wikimedia Commons"
+  },
+  "Jagalchi Fish Market": {
+    "file": "_shorts/photos/jagalchi-fish-market.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Inside_Jagalchi_Fish_Market,_Busan.jpg",
+    "credit": "Photo: Weli'mi'nakwan, CC BY 2.0, via Wikimedia Commons"
   }
 }

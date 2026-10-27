@@ -1,0 +1,609 @@
+{
+  "title": "Korea in 7 Days: Seoul, Gyeongju and Busan Itinerary",
+  "intro": "See how to spend a first week in Korea, from Seoul’s royal palace and a lantern-lit pond to Busan’s seaside temple and market food. This seven-day route covers the capital, ancient Gyeongju and coastal Busan, with practical choices for your day trip and journey south.",
+  "hashtags": "#KoreaTravel #Seoul #Gyeongju #Busan #KoreaItinerary",
+  "thumb": {
+    "big": "7 DAYS",
+    "mid": "IN KOREA",
+    "small": "SEOUL TO BUSAN"
+  },
+  "maps": {
+    "week-overview": {
+      "stops": [
+        {
+          "name": "Seoul",
+          "lat": 37.5666791,
+          "lon": 126.9782914
+        },
+        {
+          "name": "Suwon",
+          "lat": 37.2633325,
+          "lon": 127.0287472
+        },
+        {
+          "name": "Gyeongju",
+          "lat": 35.8556705,
+          "lon": 129.2248811
+        },
+        {
+          "name": "Busan",
+          "lat": 35.1799528,
+          "lon": 129.0752365
+        }
+      ],
+      "route": false,
+      "note": "One optional day trip from Seoul"
+    },
+    "seoul-days": {
+      "stops": [
+        {
+          "name": "Gyeongbokgung",
+          "lat": 37.579754,
+          "lon": 126.9766818
+        },
+        {
+          "name": "Bukchon",
+          "lat": 37.5823919,
+          "lon": 126.9858648
+        },
+        {
+          "name": "Insadong",
+          "lat": 37.5732303,
+          "lon": 126.9869357
+        },
+        {
+          "name": "Cheonggyecheon",
+          "lat": 37.5722871,
+          "lon": 127.0367285
+        },
+        {
+          "name": "N Seoul Tower",
+          "lat": 37.5349513,
+          "lon": 126.9870892
+        }
+      ],
+      "route": false,
+      "note": "Three days of Seoul highlights"
+    },
+    "day-trip-options": {
+      "stops": [
+        {
+          "name": "Hwaseong Fortress",
+          "lat": 37.2876277,
+          "lon": 126.9964957
+        },
+        {
+          "name": "Nami Island",
+          "lat": 37.7917285,
+          "lon": 127.525144
+        }
+      ],
+      "route": false,
+      "note": "Choose one day trip"
+    },
+    "gyeongju-day": {
+      "stops": [
+        {
+          "name": "Bulguksa Temple",
+          "lat": 35.7889948,
+          "lon": 129.3308902
+        },
+        {
+          "name": "Donggung and Wolji",
+          "lat": 35.8347003,
+          "lon": 129.2264375
+        }
+      ],
+      "route": true,
+      "note": "Explore the ancient capital"
+    },
+    "busan-days": {
+      "stops": [
+        {
+          "name": "Haedong Yonggungsa",
+          "lat": 35.1884189,
+          "lon": 129.2230985
+        },
+        {
+          "name": "Haeundae Beach",
+          "lat": 35.1577809,
+          "lon": 129.1581318
+        },
+        {
+          "name": "Gamcheon Village",
+          "lat": 35.0963371,
+          "lon": 129.0087897
+        },
+        {
+          "name": "Jagalchi",
+          "lat": 35.0975277,
+          "lon": 129.0325738
+        }
+      ],
+      "route": false,
+      "note": "Two days in coastal Busan"
+    }
+  },
+  "chapters": [
+    {
+      "name": "Intro",
+      "segments": [
+        {
+          "voice": "Seven days in Korea: a temple above the sea, Gyeongju’s glowing pond, Seoul’s palace and market food, in a route that makes the most of your week.",
+          "show": [
+            {
+              "photo_query": "Haedong Yonggungsa Temple",
+              "require": [
+                "haedong"
+              ]
+            },
+            {
+              "photo_query": "Donggung Wolji night",
+              "require": [
+                "donggung"
+              ]
+            },
+            {
+              "image": "photo-seoul-3-day-itinerary.jpg"
+            },
+            {
+              "image": "photo-korean-food-to-try.jpg"
+            }
+          ]
+        },
+        {
+          "voice": "Here is the route, including one flexible day trip from Seoul.",
+          "show": [
+            {
+              "map": "week-overview"
+            }
+          ]
+        },
+        {
+          "voice": "Three cities, one memorable week.",
+          "show": [
+            {
+              "photo_query": "Haeundae Beach Busan",
+              "require": [
+                "haeundae"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Before you go",
+      "segments": [
+        {
+          "voice": "Book your KTX south ahead of time, especially for weekends and holidays. Popular morning trains can fill up, so check availability and book through the Korail website or app.",
+          "show": [
+            {
+              "image": "photo-ktx-train-guide.jpg"
+            },
+            {
+              "image": "photo-korea-public-transport-transfers.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "BEFORE YOU GO",
+            "title": "Book the KTX"
+          }
+        },
+        {
+          "voice": "Get a transit card when you arrive. It works on subways and buses in every city on this plan, making local journeys simpler.",
+          "show": [
+            {
+              "image": "photo-seoul-subway-for-foreigners.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "BEFORE YOU GO",
+            "title": "Get a transit card"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Seoul",
+      "segments": [
+        {
+          "voice": "Spend your first three days in Seoul. Stay somewhere central, such as Myeongdong, Jongno or City Hall, so the main sights are a short ride away.",
+          "show": [
+            {
+              "map": "seoul-days"
+            }
+          ]
+        },
+        {
+          "voice": "On day one, begin at Gyeongbokgung Palace, then explore the traditional lanes of Bukchon and the shops and streets of Insadong. Finish with an evening walk beside Cheonggyecheon stream.",
+          "show": [
+            {
+              "photo_query": "Bukchon Hanok Village",
+              "require": [
+                "bukchon"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DAY 1",
+            "title": "Palace and old lanes"
+          }
+        },
+        {
+          "voice": "Day two starts with breakfast at Gwangjang Market. After that, browse Myeongdong’s shops and street food, then head to N Seoul Tower for sunset.",
+          "show": [
+            {
+              "image": "photo-myeongdong-night-market.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 2",
+            "title": "Market to sunset"
+          }
+        },
+        {
+          "voice": "Keep day three flexible. Choose Hongdae and Yeonnam-dong for youth culture, Seongsu for cafes, Gangnam and Jamsil for the modern city, or a Korean bathhouse.",
+          "show": [
+            {
+              "photo_query": "Hongdae Seoul street",
+              "require": [
+                "hongdae"
+              ]
+            },
+            {
+              "photo_query": "Seongsu Seoul cafes",
+              "require": [
+                "seongsu"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DAY 3",
+            "title": "Choose your Seoul"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Day trip from Seoul",
+      "segments": [
+        {
+          "voice": "Choose one of these three options for day four. They are alternatives, not a race to fit everything in.",
+          "show": [
+            {
+              "map": "day-trip-options"
+            }
+          ]
+        },
+        {
+          "voice": "For the DMZ, the border area with North Korea, you must join an organised tour. Book ahead and bring your passport.",
+          "show": [
+            {
+              "image": "photo-dmz-tour-guide.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 4 OPTION",
+            "title": "The DMZ"
+          }
+        },
+        {
+          "voice": "Suwon is a good choice if you want to walk the walls of Hwaseong Fortress, a UNESCO site. It is about an hour from Seoul by subway or train.",
+          "show": [
+            {
+              "image": "photo-day-trips-from-seoul.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 4 OPTION",
+            "title": "Hwaseong Fortress"
+          }
+        },
+        {
+          "voice": "Choose Nami Island for riverside walks. The article recommends it especially in autumn and winter, when the island is a popular day-trip option.",
+          "show": [
+            {
+              "image": "photo-nami-island-gapyeong.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 4 OPTION",
+            "title": "Nami Island"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Gyeongju",
+      "segments": [
+        {
+          "voice": "Take an early KTX from Seoul to Singyeongju Station. The ride takes about two to two and a half hours. Leave your bags at your hotel or a station locker.",
+          "show": [
+            {
+              "map": "gyeongju-day"
+            }
+          ]
+        },
+        {
+          "voice": "Gyeongju was the Silla kingdom’s capital for nearly a thousand years. Start at Bulguksa Temple, then visit the grassy royal tombs and Cheomseongdae observatory.",
+          "show": [
+            {
+              "image": "regional-gyeongju-culture-bulguksa.jpg"
+            },
+            {
+              "photo_query": "Daereungwon royal tombs",
+              "require": [
+                "daereungwon"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DAY 5",
+            "title": "Temples and royal tombs"
+          }
+        },
+        {
+          "voice": "Stay into the evening for Donggung Palace and Wolji Pond, lit up after dark. Gyeongju is quiet and lovely at night, so stay here rather than rushing straight onward.",
+          "show": [
+            {
+              "image": "photo-gyeongju-1-day-itinerary.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 5 · EVENING",
+            "title": "Donggung and Wolji"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Busan",
+      "segments": [
+        {
+          "voice": "From Gyeongju, Busan is a short KTX journey from Singyeongju, or about an hour by intercity bus. This route gives you two days for the coast, markets and hillside streets.",
+          "show": [
+            {
+              "map": "busan-days"
+            }
+          ]
+        },
+        {
+          "voice": "Start day six at Haedong Yonggungsa, a temple beside the sea. Then spend midday at Haeundae Beach, visit a Korean spa in Centum City, and have dinner by the water.",
+          "show": [
+            {
+              "photo_query": "Haedong Yonggungsa Temple",
+              "require": [
+                "haedong"
+              ]
+            },
+            {
+              "image": "photo-busan-1-day-itinerary.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 6",
+            "title": "Temple and beach"
+          }
+        },
+        {
+          "voice": "On day seven, explore Gamcheon Culture Village and the Jagalchi fish market area, then head home. Busan’s Gimhae Airport has international flights, so you may not need to return to Seoul.",
+          "show": [
+            {
+              "photo_query": "Gamcheon Culture Village",
+              "require": [
+                "gamcheon"
+              ]
+            },
+            {
+              "photo_query": "Jagalchi Fish Market",
+              "require": [
+                "jagalchi"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DAY 7",
+            "title": "Village and fish market"
+          }
+        },
+        {
+          "voice": "If you fly from Incheon, take the KTX back to Seoul and allow plenty of time to reach the airport. The train journey is about two and a half hours.",
+          "show": [
+            {
+              "image": "photo-incheon-airport-to-seoul.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 7",
+            "title": "Plan your flight home"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Getting around",
+      "segments": [
+        {
+          "voice": "The KTX connects the long-distance parts of this itinerary. Subways and buses handle most city travel, and taxis are another option for short trips.",
+          "show": [
+            {
+              "image": "photo-seoul-bus-guide.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "GETTING AROUND",
+            "title": "Train, subway and bus"
+          }
+        },
+        {
+          "voice": "From Incheon Airport, take the airport train or a limousine bus into Seoul. For directions, use Naver Map or KakaoMap rather than Google Maps.",
+          "show": [
+            {
+              "image": "photo-korea-travel-apps.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "GETTING AROUND",
+            "title": "Airport and directions"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Good to know",
+      "segments": [
+        {
+          "voice": "Pack light: you change hotels twice. Large bags can go in station lockers, or you can send them between hotels with a luggage delivery service.",
+          "show": [
+            {
+              "image": "photo-korea-packing-list.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "GOOD TO KNOW",
+            "title": "Keep your bags light"
+          }
+        },
+        {
+          "voice": "Check entry rules for your passport before flying. For the day trip, remember that the DMZ requires an organised tour and a passport.",
+          "show": [
+            {
+              "image": "photo-korea-entry-k-eta-e-arrival.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "GOOD TO KNOW",
+            "title": "Check entry requirements"
+          }
+        },
+        {
+          "voice": "If a beach island and slower pace appeal more than the south-east, swap days five to seven for Jeju. The plan there includes the west coast, Sunrise Peak and Udo Island.",
+          "show": [
+            {
+              "image": "photo-jeju-3-day-itinerary.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "GOOD TO KNOW",
+            "title": "Jeju is an alternative"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Mistakes to avoid",
+      "segments": [
+        {
+          "voice": "Avoid these four common problems: cramming in too many cities, leaving KTX tickets late, missing a closing day, and relying on Google Maps for directions.",
+          "show": [
+            {
+              "list": {
+                "heading": "Four easy mistakes to avoid",
+                "items": [
+                  "Too many cities",
+                  "Late KTX booking",
+                  "Missed closing days",
+                  "Google Maps directions"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Keep the route simple: one city per travel day is enough. Book the train early for weekends and holidays, check palace and museum closing days before you go, and use a Korean map app for directions.",
+          "show": [
+            {
+              "image": "photo-korea-travel-mistakes.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quick questions",
+      "segments": [
+        {
+          "voice": "Yes. A week is enough to see Seoul properly and visit one or two other places. With ten days or more, you could add Jeju or Jeonju.",
+          "show": [
+            {
+              "image": "photo-korea-7-day-itinerary.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "Is a week enough?"
+          }
+        },
+        {
+          "voice": "Busan is a lively seaside city that is easy to reach by train. Jeju is a volcanic island with a slower pace, more nature, and a stronger need for a car.",
+          "show": [
+            {
+              "image": "photo-seoul-vs-busan.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "Busan or Jeju?"
+          }
+        },
+        {
+          "voice": "It is a good idea, especially for weekends, holidays and popular morning trains. Check availability and book through the Korail website or app.",
+          "show": [
+            {
+              "card": {
+                "big": "Q&A",
+                "title": "Book KTX in advance?",
+                "sub": "Korea Plainly"
+              }
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "Book KTX in advance?"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Summary",
+      "segments": [
+        {
+          "voice": "The plan is three days in Seoul, one day trip, one night in Gyeongju, then two days in Busan. Book the KTX ahead, travel light, and leave room to enjoy each stop.",
+          "show": [
+            {
+              "list": {
+                "heading": "Your week at a glance",
+                "items": [
+                  "Days one to three: Seoul",
+                  "Day four: one day trip",
+                  "Day five: Gyeongju",
+                  "Days six and seven: Busan"
+                ]
+              }
+            },
+            {
+              "image": "photo-seoul-first-time.jpg"
+            }
+          ]
+        },
+        {
+          "voice": "The full guide, with maps and links for every stop, is free at Korea Plainly dot com. The link is at the top of the description. If this helped, subscribe for more plain, practical guides to Korea.",
+          "show": [
+            {
+              "card": {
+                "big": "KOREA PLAINLY",
+                "title": "The full guide is in the description",
+                "sub": "korea-plainly.com"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "article": "korea-7-day-itinerary",
+  "music": "Laid Back Guitars",
+  "fallback": "photo-korea-7-day-itinerary.jpg",
+  "thumb_photo": "photo-korea-7-day-itinerary.jpg"
+}
