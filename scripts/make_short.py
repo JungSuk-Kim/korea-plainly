@@ -167,11 +167,16 @@ def tts(text, path):
                               json={"model": os.environ.get("TTS_MODEL", "gpt-4o-mini-tts"),
                                     "voice": os.environ.get("TTS_VOICE", "coral"), "input": text, "response_format": "mp3",
                                     "instructions": "Warm, friendly local travel guide. Clear, relaxed pace."})
+            if r.status_code >= 400:
+                print(f"text-to-speech {r.status_code}: {r.text[:300]} | input ({len(text)} chars): {text[:200]!r}")
+                if r.status_code < 500 and r.status_code != 429:
+                    r.raise_for_status()  # a bad request will not get better by asking again
             r.raise_for_status()
             Path(path).write_bytes(r.content)
             return
         except Exception as e:
-            if attempt == 3:
+            resp = getattr(e, "response", None)
+            if attempt == 3 or (resp is not None and 400 <= resp.status_code < 500 and resp.status_code != 429):
                 raise
             print(f"text-to-speech retry {attempt + 1}: {e}")
             time.sleep(10 * (attempt + 1))

@@ -156,6 +156,10 @@ def clean(spec, photos):
                                 v[key][k2] = HANGUL.sub("", v[key][k2]).strip()
                         if key == "list":
                             v[key]["items"] = [HANGUL.sub("", i).strip() for i in v[key].get("items", [])]
+    # a segment left with nothing to say (it was all Korean script, or empty) makes text-to-speech fail with a 400
+    for ch in spec["chapters"]:
+        ch["segments"] = [seg for seg in ch["segments"] if re.search(r"[A-Za-z0-9]", seg["voice"])]
+    spec["chapters"] = [ch for ch in spec["chapters"] if ch["segments"]]
     for m in spec.get("maps", {}).values():
         stops = []
         for s in m.get("stops", []):
