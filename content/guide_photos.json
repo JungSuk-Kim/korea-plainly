@@ -595,7 +595,9 @@
     "query": "Seoul Metropolitan Subway train"
   },
   "seoul-travel-pass": {
-    "retry": true,
+    "file": "photo-seoul-travel-pass.jpg",
+    "credit": "Photo: Rtflakfizer, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Namsan_Tower_sunset,_Seoul.jpg",
     "query": "N Seoul Tower Namsan Seoul"
   },
   "seoul-vs-busan": {
