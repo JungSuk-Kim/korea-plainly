@@ -135,6 +135,10 @@
     "korea-in-may": {
       "at": "2026-10-26T16:58:55+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mys6zgjiqy2f"
+    },
+    "seoul-travel-pass": {
+      "at": "2026-10-27T06:49:49+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mytnh6bpzc2p"
     }
   },
   "bluesky_videos": {
@@ -181,6 +185,10 @@
     "apUaMdk-ycI": {
       "at": "2026-10-23T15:27:30+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mykij7be6p2h"
+    },
+    "mJRA6nV6VJs": {
+      "at": "2026-10-27T06:49:51+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mytnharxsp2d"
     }
   },
   "instagram_videos": {
@@ -215,6 +223,10 @@
     "P5Dq3oF2XfY": {
       "at": "2026-10-24T06:27:38+00:00",
       "ref": "skipped"
+    },
+    "mJRA6nV6VJs": {
+      "at": "2026-10-27T06:51:22+00:00",
+      "ref": "17973076029156729"
     }
   },
   "facebook_videos": {
@@ -261,6 +273,10 @@
     "apUaMdk-ycI": {
       "at": "2026-10-23T15:27:39+00:00",
       "ref": "2204468417133525"
+    },
+    "mJRA6nV6VJs": {
+      "at": "2026-10-27T06:49:56+00:00",
+      "ref": "2217594525806051"
     }
   },
   "threads_videos": {
@@ -307,6 +323,10 @@
     "apUaMdk-ycI": {
       "at": "2026-10-23T15:29:05+00:00",
       "ref": "18104053958283867"
+    },
+    "mJRA6nV6VJs": {
+      "at": "2026-10-27T06:51:33+00:00",
+      "ref": "17955420069037419"
     }
   },
   "facebook": {
@@ -425,6 +445,10 @@
     "korea-in-may": {
       "at": "2026-10-26T16:59:02+00:00",
       "ref": "1261611360380213_122109249801509276"
+    },
+    "seoul-travel-pass": {
+      "at": "2026-10-27T06:51:38+00:00",
+      "ref": "1261611360380213_122109512067509276"
     }
   },
   "threads": {
@@ -543,6 +567,10 @@
     "korea-in-may": {
       "at": "2026-10-26T16:59:13+00:00",
       "ref": "18078183050552053"
+    },
+    "seoul-travel-pass": {
+      "at": "2026-10-27T06:51:48+00:00",
+      "ref": "18414758848093499"
     }
   }
 }
