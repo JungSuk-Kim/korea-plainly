@@ -139,6 +139,10 @@
     "seoul-travel-pass": {
       "at": "2026-10-27T06:49:49+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mytnh6bpzc2p"
+    },
+    "korea-in-june": {
+      "at": "2026-10-27T16:00:40+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myuma62kw424"
     }
   },
   "bluesky_videos": {
@@ -449,6 +453,10 @@
     "seoul-travel-pass": {
       "at": "2026-10-27T06:51:38+00:00",
       "ref": "1261611360380213_122109512067509276"
+    },
+    "korea-in-june": {
+      "at": "2026-10-27T16:00:47+00:00",
+      "ref": "1261611360380213_122109649515509276"
     }
   },
   "threads": {
@@ -571,6 +579,10 @@
     "seoul-travel-pass": {
       "at": "2026-10-27T06:51:48+00:00",
       "ref": "18414758848093499"
+    },
+    "korea-in-june": {
+      "at": "2026-10-27T16:00:59+00:00",
+      "ref": "18119229865997929"
     }
   }
 }
