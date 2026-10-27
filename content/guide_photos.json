@@ -594,6 +594,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:Seoul-Metropolitan-Rapid-Transit-7010-20070721.jpg",
     "query": "Seoul Metropolitan Subway train"
   },
+  "seoul-travel-pass": {
+    "none": true,
+    "query": "Discover Seoul Pass Korea"
+  },
   "seoul-vs-busan": {
     "file": "photo-seoul-vs-busan.jpg",
     "credit": "Photo: by frakorea, CC BY 2.0, via Wikimedia Commons",

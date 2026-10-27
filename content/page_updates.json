@@ -244,8 +244,8 @@
     "updated": "2026-10-22"
   },
   "korea-festivals.html": {
-    "hash": "65ca0e39b706",
-    "updated": "2026-10-26"
+    "hash": "0db197b25c88",
+    "updated": "2026-10-27"
   },
   "korea-in-april.html": {
     "hash": "553832874f86",
@@ -264,8 +264,8 @@
     "updated": "2026-10-17"
   },
   "korea-in-january.html": {
-    "hash": "0c230ccba678",
-    "updated": "2026-10-18"
+    "hash": "14775982f989",
+    "updated": "2026-10-27"
   },
   "korea-in-july.html": {
     "hash": "d06f0efca5ad",
@@ -513,6 +513,10 @@
   },
   "seoul-travel-cheonggyecheon.html": {
     "hash": "edcea605c04c",
+    "updated": null
+  },
+  "seoul-travel-pass.html": {
+    "hash": "058df40577d9",
     "updated": null
   },
   "seoul-vs-busan.html": {

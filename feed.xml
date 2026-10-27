@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Mon, 26 Oct 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Tue, 27 Oct 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Discover Seoul Pass: Is the Seoul Travel Pass Worth It?</title>
+<link>https://korea-plainly.com/seoul-travel-pass.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/seoul-travel-pass.html</guid>
+<pubDate>Tue, 27 Oct 2026 08:00:00 +0000</pubDate>
+<description>Find out how the Discover Seoul Pass works, which Seoul attractions suit it, and how to decide if it will save you money and time.</description>
+</item>
 <item>
 <title>Visit Busan Pass: Is It Worth It for First-Time Visitors?</title>
 <link>https://korea-plainly.com/visit-busan-pass.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/start-here.html</guid>
 <pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
 <description>Planning your first trip to Korea, step by step: when to go, how long to stay, entry rules, money, phones, getting from the airport, getting around and what to know on the ground.</description>
-</item>
-<item>
-<title>Best Night Views in Seoul: Where to See the City Lights</title>
-<link>https://korea-plainly.com/seoul-night-views.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/seoul-night-views.html</guid>
-<pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
-<description>Where to see Seoul at night: N Seoul Tower, the old city wall at Naksan Park, Seoul Sky, Han River bridges, Cheonggyecheon and more, with tips on timing and getting there.</description>
 </item>
 </channel>
 </rss>
