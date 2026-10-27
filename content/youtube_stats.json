@@ -1,7 +1,24 @@
 {
-  "updated": "2026-10-26T10:50+09:00",
+  "updated": "2026-10-27T11:29+09:00",
   "analytics": true,
   "videos": [
+    {
+      "id": "mJRA6nV6VJs",
+      "title": "Korea In January: What To Pack And Do",
+      "article": "korea-in-january",
+      "format": "short",
+      "uploaded": "2026-10-26T14:58:24+09:00",
+      "status": "public",
+      "seconds": 37,
+      "views": 30,
+      "likes": 1,
+      "comments": 0,
+      "avg_view_seconds": null,
+      "avg_view_percent": null,
+      "subscribers_gained": 0,
+      "shares": 0,
+      "retention": null
+    },
     {
       "id": "apUaMdk-ycI",
       "title": "Korea in December: What to Wear and Do",
@@ -10,23 +27,23 @@
       "uploaded": "2026-10-23T14:55:27+09:00",
       "status": "public",
       "seconds": 34,
-      "views": 444,
+      "views": 445,
       "likes": 2,
       "comments": 0,
-      "avg_view_seconds": 11,
-      "avg_view_percent": 34.23,
-      "subscribers_gained": 0,
+      "avg_view_seconds": 12,
+      "avg_view_percent": 36.57,
+      "subscribers_gained": 1,
       "shares": 0,
       "retention": {
         "at": {
-          "10%": 103,
-          "25%": 38,
-          "50%": 22,
-          "75%": 11,
-          "95%": 8
+          "10%": 102,
+          "25%": 40,
+          "50%": 26,
+          "75%": 16,
+          "95%": 6
         },
-        "biggest_drop_at": "23%",
-        "biggest_drop": 9
+        "biggest_drop_at": "19%",
+        "biggest_drop": 8
       }
     },
     {
@@ -49,10 +66,10 @@
           "10%": 101,
           "25%": 47,
           "50%": 32,
-          "75%": 25,
+          "75%": 26,
           "95%": 5
         },
-        "biggest_drop_at": "13%",
+        "biggest_drop_at": "15%",
         "biggest_drop": 9
       }
     },
@@ -64,11 +81,11 @@
       "uploaded": "2026-10-21T12:00:10+09:00",
       "status": "public",
       "seconds": 37,
-      "views": 42,
+      "views": 43,
       "likes": 0,
       "comments": 0,
-      "avg_view_seconds": 11,
-      "avg_view_percent": 30.09,
+      "avg_view_seconds": 12,
+      "avg_view_percent": 31.65,
       "subscribers_gained": 0,
       "shares": 0,
       "retention": null
@@ -81,7 +98,7 @@
       "uploaded": "2026-10-20T15:33:19+09:00",
       "status": "public",
       "seconds": 587,
-      "views": 11,
+      "views": 15,
       "likes": 0,
       "comments": 0,
       "avg_view_seconds": 68,
@@ -115,23 +132,23 @@
       "uploaded": "2026-10-19T15:00:04+09:00",
       "status": "public",
       "seconds": 37,
-      "views": 226,
+      "views": 233,
       "likes": 3,
       "comments": 0,
-      "avg_view_seconds": 20,
-      "avg_view_percent": 56.68,
+      "avg_view_seconds": 21,
+      "avg_view_percent": 57.07,
       "subscribers_gained": 0,
       "shares": 0,
       "retention": {
         "at": {
           "10%": 103,
-          "25%": 73,
-          "50%": 53,
+          "25%": 74,
+          "50%": 54,
           "75%": 45,
-          "95%": 12
+          "95%": 11
         },
         "biggest_drop_at": "13%",
-        "biggest_drop": 9
+        "biggest_drop": 8
       }
     },
     {
@@ -169,7 +186,7 @@
       "uploaded": "2026-10-14T23:09:13+09:00",
       "status": "public",
       "seconds": 539,
-      "views": 22,
+      "views": 23,
       "likes": 0,
       "comments": 0,
       "avg_view_seconds": 93,
@@ -179,24 +196,24 @@
       "retention": null,
       "traffic_sources": [
         {
+          "source": "SUBSCRIBER",
+          "views": 5,
+          "avg_view_seconds": 39
+        },
+        {
           "source": "RELATED_VIDEO",
           "views": 5,
           "avg_view_seconds": 148
         },
         {
-          "source": "SUBSCRIBER",
+          "source": "YT_SEARCH",
           "views": 4,
-          "avg_view_seconds": 39
+          "avg_view_seconds": 0
         },
         {
           "source": "YT_CHANNEL",
           "views": 2,
           "avg_view_seconds": 28
-        },
-        {
-          "source": "YT_SEARCH",
-          "views": 2,
-          "avg_view_seconds": 0
         },
         {
           "source": "NO_LINK_OTHER",
@@ -213,41 +230,41 @@
       "uploaded": "2026-10-14T21:00:00+09:00",
       "status": "public",
       "seconds": 515,
-      "views": 48,
+      "views": 50,
       "likes": 1,
       "comments": 0,
-      "avg_view_seconds": 212,
-      "avg_view_percent": 41.16,
+      "avg_view_seconds": 207,
+      "avg_view_percent": 40.21,
       "subscribers_gained": 0,
       "shares": 0,
       "retention": {
         "at": {
-          "10%": 55,
-          "25%": 50,
-          "50%": 35,
-          "75%": 35,
-          "95%": 30
+          "10%": 52,
+          "25%": 48,
+          "50%": 37,
+          "75%": 33,
+          "95%": 26
         },
         "biggest_drop_at": "4%",
         "biggest_drop": 15,
         "biggest_drop_at_seconds": 21,
         "at_seconds": {
-          "15s": 95,
-          "30s": 70,
-          "1m": 50,
-          "2m": 50
+          "15s": 93,
+          "30s": 67,
+          "1m": 48,
+          "2m": 48
         }
       },
       "traffic_sources": [
         {
           "source": "SUBSCRIBER",
-          "views": 18,
-          "avg_view_seconds": 211
+          "views": 24,
+          "avg_view_seconds": 201
         },
         {
           "source": "RELATED_VIDEO",
-          "views": 14,
-          "avg_view_seconds": 228
+          "views": 17,
+          "avg_view_seconds": 236
         },
         {
           "source": "YT_SEARCH",
@@ -261,20 +278,20 @@
         },
         {
           "source": "NO_LINK_OTHER",
-          "views": 0,
-          "avg_view_seconds": 0
+          "views": 1,
+          "avg_view_seconds": 3
         }
       ]
     },
     {
       "id": "qSv1ySQfzh4",
-      "title": "Korea Autumn Leaves 2026: When and Where to See Them",
+      "title": "Korea in November: Where to See Autumn Leaves",
       "article": "korea-autumn-foliage-2026",
       "format": "short",
       "uploaded": "2026-10-14T15:05:52+09:00",
       "status": "public",
       "seconds": 51,
-      "views": 11,
+      "views": 12,
       "likes": 1,
       "comments": 0,
       "avg_view_seconds": 19,
@@ -333,8 +350,8 @@
   ],
   "channel": {
     "subscribers": 2,
-    "views": 1258,
-    "videos": 11
+    "views": 1287,
+    "videos": 12
   },
   "countries": [
     {
@@ -353,6 +370,11 @@
       "minutes": 1
     },
     {
+      "country": "JP",
+      "views": 0,
+      "minutes": 0
+    },
+    {
       "country": "PH",
       "views": 0,
       "minutes": 0
@@ -361,19 +383,19 @@
   "traffic_sources": [
     {
       "source": "SHORTS",
-      "views": 755
+      "views": 849
     },
     {
       "source": "YT_SEARCH",
-      "views": 235
+      "views": 264
     },
     {
       "source": "SUBSCRIBER",
-      "views": 31
+      "views": 38
     },
     {
       "source": "RELATED_VIDEO",
-      "views": 20
+      "views": 23
     },
     {
       "source": "YT_CHANNEL",
@@ -381,21 +403,21 @@
     },
     {
       "source": "YT_OTHER_PAGE",
-      "views": 6
+      "views": 7
+    },
+    {
+      "source": "NO_LINK_OTHER",
+      "views": 2
     },
     {
       "source": "EXT_URL",
       "views": 2
-    },
-    {
-      "source": "NO_LINK_OTHER",
-      "views": 1
     }
   ],
   "total": {
-    "views": 1281,
-    "likes": 12,
+    "views": 1328,
+    "likes": 13,
     "comments": 0,
-    "subscribers_gained": 0
+    "subscribers_gained": 1
   }
 }
