@@ -588,6 +588,12 @@
       "https://commons.wikimedia.org/wiki/File:Seoul_Station_Night_View.JPG"
     ]
   },
+  "seoul-shopping-districts": {
+    "file": "photo-seoul-shopping-districts.jpg",
+    "credit": "Photo: Republic of Korea from Seoul, Republic of Korea, CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Korea_Lotte_Fitin_Dongdaemun_04_(14622838761).jpg",
+    "query": "Seoul Shopping Districts Korea"
+  },
   "seoul-subway-for-foreigners": {
     "file": "photo-seoul-subway-for-foreigners.jpg",
     "credit": "Photo: LERK, CC BY 2.5, via Wikimedia Commons",

@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Tue, 27 Oct 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Wed, 28 Oct 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Seoul Shopping Districts: Where to Shop on Your First Trip</title>
+<link>https://korea-plainly.com/seoul-shopping-districts.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/seoul-shopping-districts.html</guid>
+<pubDate>Wed, 28 Oct 2026 08:00:00 +0000</pubDate>
+<description>A practical guide to Seoul’s best shopping areas, from Myeongdong beauty stores to Hongdae fashion, Seongsu pop-ups and traditional markets.</description>
+</item>
 <item>
 <title>Discover Seoul Pass: Is the Seoul Travel Pass Worth It?</title>
 <link>https://korea-plainly.com/seoul-travel-pass.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/which-korean-city-quiz.html</guid>
 <pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
 <description>Seoul, Busan, Jeju, Gyeongju, Jeonju or Gangneung? Answer five quick questions and Kkachi the magpie will tell you which Korean city fits your travel style, with a guide to plan the trip.</description>
-</item>
-<item>
-<title>First Trip to Korea? Start Here: A Step-by-Step Planner</title>
-<link>https://korea-plainly.com/start-here.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/start-here.html</guid>
-<pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
-<description>Planning your first trip to Korea, step by step: when to go, how long to stay, entry rules, money, phones, getting from the airport, getting around and what to know on the ground.</description>
 </item>
 </channel>
 </rss>
