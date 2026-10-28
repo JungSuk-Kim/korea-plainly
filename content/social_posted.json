@@ -147,6 +147,10 @@
     "seoul-shopping-districts": {
       "at": "2026-10-28T07:23:37+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myw7sk3qlf2y"
+    },
+    "korea-in-july": {
+      "at": "2026-10-28T16:50:26+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myx7i3wqzr2p"
     }
   },
   "bluesky_videos": {
@@ -477,6 +481,10 @@
     "seoul-shopping-districts": {
       "at": "2026-10-28T07:24:05+00:00",
       "ref": "1261611360380213_122109876387509276"
+    },
+    "korea-in-july": {
+      "at": "2026-10-28T16:50:32+00:00",
+      "ref": "1261611360380213_122110069155509276"
     }
   },
   "threads": {
@@ -607,6 +615,10 @@
     "seoul-shopping-districts": {
       "at": "2026-10-28T07:24:16+00:00",
       "ref": "17956966515029712"
+    },
+    "korea-in-july": {
+      "at": "2026-10-28T16:50:44+00:00",
+      "ref": "18108151949576991"
     }
   }
 }
