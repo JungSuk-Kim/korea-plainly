@@ -143,6 +143,10 @@
     "korea-in-june": {
       "at": "2026-10-27T16:00:40+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myuma62kw424"
+    },
+    "seoul-shopping-districts": {
+      "at": "2026-10-28T07:23:37+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myw7sk3qlf2y"
     }
   },
   "bluesky_videos": {
@@ -193,6 +197,10 @@
     "mJRA6nV6VJs": {
       "at": "2026-10-27T06:49:51+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mytnharxsp2d"
+    },
+    "IceKAzej3Kw": {
+      "at": "2026-10-28T07:23:39+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myw7slsnyw25"
     }
   },
   "instagram_videos": {
@@ -281,6 +289,10 @@
     "mJRA6nV6VJs": {
       "at": "2026-10-27T06:49:56+00:00",
       "ref": "2217594525806051"
+    },
+    "IceKAzej3Kw": {
+      "at": "2026-10-28T07:23:47+00:00",
+      "ref": "1584834722949087"
     }
   },
   "threads_videos": {
@@ -331,6 +343,10 @@
     "mJRA6nV6VJs": {
       "at": "2026-10-27T06:51:33+00:00",
       "ref": "17955420069037419"
+    },
+    "IceKAzej3Kw": {
+      "at": "2026-10-28T07:24:00+00:00",
+      "ref": "18170472784477134"
     }
   },
   "facebook": {
@@ -457,6 +473,10 @@
     "korea-in-june": {
       "at": "2026-10-27T16:00:47+00:00",
       "ref": "1261611360380213_122109649515509276"
+    },
+    "seoul-shopping-districts": {
+      "at": "2026-10-28T07:24:05+00:00",
+      "ref": "1261611360380213_122109876387509276"
     }
   },
   "threads": {
@@ -583,6 +603,10 @@
     "korea-in-june": {
       "at": "2026-10-27T16:00:59+00:00",
       "ref": "18119229865997929"
+    },
+    "seoul-shopping-districts": {
+      "at": "2026-10-28T07:24:16+00:00",
+      "ref": "17956966515029712"
     }
   }
 }
