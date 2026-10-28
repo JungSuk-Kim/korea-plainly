@@ -1,0 +1,55 @@
+{
+  "article": "korea-10-day-itinerary",
+  "fallback": "photo-korea-10-day-itinerary.jpg",
+  "title": "Korea 10 Day Itinerary: Seoul To Jeju Made Easy",
+  "summary": "Planning ten days in Korea? Follow this southbound route from Seoul through Jeonju, Gyeongju and Busan, ending on Jeju.",
+  "hashtags": "#Korea #KoreaTravel #KoreaItinerary #Seoul #Jeju",
+  "music": "Laid Back Guitars",
+  "slides": [
+    {
+      "kicker": "TEN DAYS",
+      "title": "Seoul To Jeju, Made Easy",
+      "sub": "Travel south; finish on Jeju",
+      "voice": "Ten days in Korea?",
+      "photo_query": "South Korea map Seoul Jeonju Gyeongju Busan Jeju",
+      "require": [
+        "south",
+        "korea"
+      ]
+    },
+    {
+      "kicker": "SEOUL",
+      "title": "Give Seoul Four Days",
+      "sub": "Use one day for Suwon or Nami Island",
+      "voice": "Spend four days in Seoul; use one for Suwon or Nami Island.",
+      "image": "photo-day-trips-from-seoul.jpg"
+    },
+    {
+      "kicker": "JEONJU",
+      "title": "Stay In A Hanok",
+      "sub": "Stay overnight in a traditional hanok",
+      "voice": "Sleep in Jeonju's hanok village, then allow extra time for Gyeongju.",
+      "image": "regional-jeonju-culture-jeonju-hanok-village.jpg"
+    },
+    {
+      "kicker": "BUSAN",
+      "title": "Two Days, Then Jeju",
+      "sub": "Spend two days in Busan, then fly to Jeju",
+      "voice": "After Gyeongju, spend two days in Busan, then fly to Jeju.",
+      "image": "photo-busan-1-day-itinerary.jpg"
+    },
+    {
+      "kicker": "JEJU",
+      "title": "Explore Both Coasts",
+      "sub": "A rental car makes Jeju easier",
+      "voice": "Two days in Jeju covers both coasts; a rental car helps.",
+      "image": "photo-jeju-3-day-itinerary.jpg"
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
