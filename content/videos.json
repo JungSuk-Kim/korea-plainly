@@ -92,15 +92,28 @@
     "description": "Olive Young Korea Shopping: Get The Tax Refund: the short version of our guide.",
     "caption": "Watch the one-minute version"
   },
-  "korea-7-day-itinerary": {
-    "youtube": "ZsojFLy6Lgc",
-    "title": "Korea 7 Day Itinerary: Seoul, Gyeongju & Busan",
-    "uploaded": "2026-10-21T14:55:40+09:00",
-    "seconds": 35,
-    "poster": "img/video-korea-7-day-itinerary.jpg",
-    "description": "Korea 7 Day Itinerary: Seoul, Gyeongju & Busan: the short version of our guide.",
-    "caption": "Watch the one-minute version"
-  },
+  "korea-7-day-itinerary": [
+    {
+      "youtube": "IceKAzej3Kw",
+      "title": "Korea in 7 Days: Seoul, Gyeongju and Busan Itinerary",
+      "uploaded": "2026-10-27T17:12:59+09:00",
+      "seconds": 360,
+      "poster": "img/video-korea-7-day-itinerary-long.jpg",
+      "format": "long",
+      "description": "Korea in 7 Days: Seoul, Gyeongju and Busan Itinerary: the full guide as a video.",
+      "caption": "Watch the whole guide, with maps (6 minutes)"
+    },
+    {
+      "youtube": "ZsojFLy6Lgc",
+      "title": "Korea 7 Day Itinerary: Seoul, Gyeongju & Busan",
+      "uploaded": "2026-10-21T14:55:40+09:00",
+      "seconds": 35,
+      "poster": "img/video-korea-7-day-itinerary.jpg",
+      "description": "Korea 7 Day Itinerary: Seoul, Gyeongju & Busan: the short version of our guide.",
+      "caption": "Short on time? The guide in under a minute",
+      "place": "end"
+    }
+  ],
   "korea-in-december": {
     "youtube": "apUaMdk-ycI",
     "title": "Korea in December: What to Wear and Do",
