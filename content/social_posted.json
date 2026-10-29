@@ -155,6 +155,10 @@
     "korea-nightlife-districts": {
       "at": "2026-10-29T07:40:02+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myyr6suvrb2d"
+    },
+    "korea-in-august": {
+      "at": "2026-10-29T17:04:19+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myzqpttca32g"
     }
   },
   "bluesky_videos": {
@@ -493,6 +497,10 @@
     "korea-nightlife-districts": {
       "at": "2026-10-29T07:40:08+00:00",
       "ref": "1261611360380213_122110283883509276"
+    },
+    "korea-in-august": {
+      "at": "2026-10-29T17:04:28+00:00",
+      "ref": "1261611360380213_122110436061509276"
     }
   },
   "threads": {
@@ -631,6 +639,10 @@
     "korea-nightlife-districts": {
       "at": "2026-10-29T07:40:19+00:00",
       "ref": "18109346629911826"
+    },
+    "korea-in-august": {
+      "at": "2026-10-29T17:04:38+00:00",
+      "ref": "18028508585697144"
     }
   }
 }
