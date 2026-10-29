@@ -266,6 +266,10 @@
     "source": "https://maps.google.com/maps/contrib/103559777499881303976",
     "manual": true
   },
+  "korea-nightlife-districts": {
+    "none": true,
+    "query": "Nightlife First-Timers Seoul Korea"
+  },
   "korea-packing-list": {
     "file": "photo-korea-packing-list.jpg",
     "credit": "Photo: Jnpet, CC BY-SA 3.0, via Wikimedia Commons",

@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Wed, 28 Oct 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Thu, 29 Oct 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Korea Nightlife for First-Timers: Seoul's Main Nightlife Districts Compared</title>
+<link>https://korea-plainly.com/korea-nightlife-districts.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/korea-nightlife-districts.html</guid>
+<pubDate>Thu, 29 Oct 2026 08:00:00 +0000</pubDate>
+<description>Compare Hongdae, Itaewon, Gangnam and Euljiro to find the Seoul nightlife district that fits your style, budget and plans for getting home.</description>
+</item>
 <item>
 <title>Seoul Shopping Districts: Where to Shop on Your First Trip</title>
 <link>https://korea-plainly.com/seoul-shopping-districts.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/korea-in-march.html</guid>
 <pubDate>Fri, 16 Oct 2026 08:00:00 +0000</pubDate>
 <description>Visiting Korea in March: how cold it still is, what to wear, the first plum and cherry blossoms in the south, fine dust, holidays and what to do.</description>
-</item>
-<item>
-<title>Which Korean City Suits You? Take the Quiz</title>
-<link>https://korea-plainly.com/which-korean-city-quiz.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/which-korean-city-quiz.html</guid>
-<pubDate>Thu, 15 Oct 2026 08:00:00 +0000</pubDate>
-<description>Seoul, Busan, Jeju, Gyeongju, Jeonju or Gangneung? Answer five quick questions and Kkachi the magpie will tell you which Korean city fits your travel style, with a guide to plan the trip.</description>
 </item>
 </channel>
 </rss>
