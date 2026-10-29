@@ -151,6 +151,10 @@
     "korea-in-july": {
       "at": "2026-10-28T16:50:26+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myx7i3wqzr2p"
+    },
+    "korea-nightlife-districts": {
+      "at": "2026-10-29T07:40:02+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3myyr6suvrb2d"
     }
   },
   "bluesky_videos": {
@@ -485,6 +489,10 @@
     "korea-in-july": {
       "at": "2026-10-28T16:50:32+00:00",
       "ref": "1261611360380213_122110069155509276"
+    },
+    "korea-nightlife-districts": {
+      "at": "2026-10-29T07:40:08+00:00",
+      "ref": "1261611360380213_122110283883509276"
     }
   },
   "threads": {
@@ -619,6 +627,10 @@
     "korea-in-july": {
       "at": "2026-10-28T16:50:44+00:00",
       "ref": "18108151949576991"
+    },
+    "korea-nightlife-districts": {
+      "at": "2026-10-29T07:40:19+00:00",
+      "ref": "18109346629911826"
     }
   }
 }
