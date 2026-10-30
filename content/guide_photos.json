@@ -548,8 +548,8 @@
     "query": "Seollal Korea hanbok"
   },
   "seoraksan-hikes": {
-    "none": true,
-    "query": "Seoraksan Hikes First-Time Korea"
+    "retry": true,
+    "query": "Ulsanbawi Seoraksan"
   },
   "seoul-3-day-itinerary": {
     "file": "photo-seoul-3-day-itinerary.jpg",

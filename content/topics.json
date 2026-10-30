@@ -192,6 +192,17 @@
     "query": "seoraksan hikes"
   },
   {
+    "title": "Korean Won Explained: Notes, Coins and the Money Name for Visitors",
+    "slug": "korean-won-notes-coins",
+    "category": "Money",
+    "query": "korea money name"
+  },
+  {
+    "title": "Ice Skating in Seoul: Winter Outdoor Rinks for Visitors",
+    "slug": "seoul-ice-skating-rinks",
+    "category": "Travel"
+  },
+  {
     "title": "Visiting Korean Traditional Markets: What to Know",
     "slug": "korean-traditional-markets",
     "category": "Food"
@@ -219,6 +230,16 @@
   {
     "title": "Public Restrooms in Korea: What to Know",
     "slug": "public-restrooms-korea",
+    "category": "Daily Korea"
+  },
+  {
+    "title": "Buying Medicine in Korea: Pharmacies for Travellers",
+    "slug": "korea-pharmacy-guide",
+    "category": "Daily Korea"
+  },
+  {
+    "title": "Doing Laundry in Korea: Coin Laundries and Hotel Options",
+    "slug": "laundry-in-korea",
     "category": "Daily Korea"
   }
 ]
