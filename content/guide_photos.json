@@ -548,7 +548,9 @@
     "query": "Seollal Korea hanbok"
   },
   "seoraksan-hikes": {
-    "retry": true,
+    "file": "photo-seoraksan-hikes.jpg",
+    "credit": "Photo: Olga Lipunova, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoraksan,_Ulsanbawi.jpg",
     "query": "Ulsanbawi Seoraksan"
   },
   "seoul-3-day-itinerary": {
