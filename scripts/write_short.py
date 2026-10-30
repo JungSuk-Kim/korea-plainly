@@ -24,7 +24,8 @@ ROOT = Path(__file__).resolve().parent.parent
 SHORTS = ROOT / "content" / "shorts"
 QUEUE = SHORTS / "queue.json"
 MODEL = os.environ.get("OPENAI_MODEL", "gpt-6-luna").strip()
-MAX_WORDS = 58           # about 25 seconds of narration: viewers left our 50-60 s Shorts after 15-25 s
+MAX_WORDS = 68           # content narration; with the outro about 30-38 s (our best Short, Korea in November, was 37 s)
+MAX_SLIDES = 5           # content slides, before the outro
 TRACKS = json.loads((SHORTS / "music.json").read_text(encoding="utf-8"))["tracks"]
 
 
@@ -95,19 +96,25 @@ Return JSON only, in this form:
 ]}}
 
 Rules:
-- 4 or 5 slides, about 25 seconds in total. Viewers swipe away fast, so every second must earn its place.
+- 4 or 5 slides, 30-38 seconds in total (the subscribe ending is included in that). Viewers swipe away fast, so
+  every second must earn its place.
 - Slide 1 is the hook, and the first two seconds decide everything (most viewers who leave do so in the first
   five seconds). Its "voice" is at most 10 spoken words: a concrete promise, or a mistake to avoid, that names the
   viewer's own problem with THIS place or topic. Model: "Korea in November swings from autumn to winter. Pack layers."
   Others: "Most first-timers waste day one in Seoul. Here's the fix.", "Busan in one day? Do it in this order."
   Never start with a greeting, the channel name, the series name, "In this video" or "Welcome", and do not just read
   out the video title or the slide title. The hook's on-screen "title" says the same promise in a few words.
-- What has worked best on our channel (Oct 2026: "Korea in December: What to Wear and Do", 431 views;
-  "Korea 7 Day Itinerary: Seoul, Gyeongju & Busan", 281): about 35 seconds, 4-5 slides, each "voice" one short
-  sentence of 8-14 words, a hook that names the viewer's situation ("One week in Korea? Do Seoul, Gyeongju, then
-  Busan."), and one plain, useful fact per slide. Copy that shape. Avoid long lists of days or places (8-slide
-  videos lost most viewers by the middle).
-- Slide 2 starts the first tip straight away (no "first, let's talk about", no recap of the hook).
+- What has worked best on our channel (Oct 2026): "Korea in November" (37 s, 4 slides) kept viewers best: 56% of
+  the video watched on average and 55% still there at the halfway point. Copy its shape exactly:
+  hook = month or topic + the viewer's problem + a 2-word action ("Korea in November swings from autumn to winter.
+  Pack layers."), then slide 2 immediately pays off that action with a concrete, countable answer ("Thin top, warm
+  jumper, proper jacket"), not a general sentence. Each "voice" one or two short sentences, one plain useful fact
+  per slide. Month and whole-trip topics get clicks ("Korea in December" 444 views, "Korea 7 Day Itinerary" 284),
+  but in both, slide 2 was general and half the viewers left at the hand-off from slide 1 to slide 2.
+  Avoid long lists of days or places (8-slide videos lost most viewers by the middle).
+- Slide 2 starts the first tip straight away (no "first, let's talk about", no recap of the hook). Its "sub" must
+  be the concrete list or number the hook promised (e.g. 3 items: "Thin top, warm jumper, proper jacket"), and its
+  picture must show that exact thing (the clothes, the ticket, the dish), never a loosely related site photo.
   Slides 2 onwards: one concrete tip each, said in one or two short sentences, in the order a visitor would use them.
   Do not add an ending slide; it is added for you.
 - Narration ("voice"): warm, plain spoken English, like a friendly local. All slides together at most {max_words} words.
@@ -142,6 +149,27 @@ Article: {title}
 """
 
 
+def trim_words(slides, max_words):
+    """Cut narration from the end until all slides together fit max_words (so no Short runs past about 40 s).
+    Whole sentences go first; a slide keeps at least its first sentence (cut to fit if it must)."""
+    def total():
+        return sum(len(s.get("voice", "").split()) for s in slides)
+    for s in reversed(slides[1:]):
+        sentences = re.split(r"(?<=[.?!])\s+", s.get("voice", "").strip())
+        while total() > max_words and len(sentences) > 1:
+            sentences.pop()
+            s["voice"] = " ".join(sentences)
+    for s in reversed(slides):
+        over = total() - max_words
+        if over <= 0:
+            break
+        words = s.get("voice", "").split()
+        keep = max(len(words) - over, min(4, len(words)))
+        if keep < len(words):
+            s["voice"] = " ".join(words[:keep]).rstrip(",;:") + ("" if words[keep - 1][-1:] in ".?!" else ".")
+    return slides
+
+
 def write(slug):
     from openai import OpenAI
     title, text, cover = article_text(slug)
@@ -153,7 +181,7 @@ def write(slug):
     raw = r.output_text.strip()
     spec = json.loads(raw[raw.find("{"): raw.rfind("}") + 1])
     slides = []
-    for s in spec["slides"][:6]:
+    for s in spec["slides"][:MAX_SLIDES]:  # extras dropped from the end, before the outro
         s = {k: v for k, v in s.items() if k in ("kicker", "title", "sub", "voice", "image", "photo_query", "require")}
         if s.get("image") and s["image"] not in photos:
             s.pop("image")  # not one of ours: search instead
@@ -173,6 +201,7 @@ def write(slug):
     # keep the narration short: drop middle slides until it fits
     while sum(len(s["voice"].split()) for s in slides) > MAX_WORDS and len(slides) > 4:
         slides.pop(-2)
+    trim_words(slides, MAX_WORDS)
     slides.append({"end": True, "title": "New Korea tips", "sub": "Mon · Wed · Fri · Sat",
                    "voice": SHORT_OUTRO})
     out = {"article": slug, "fallback": cover if cover in photos else slides[0].get("image", ""), "title": spec["title"][:90],
