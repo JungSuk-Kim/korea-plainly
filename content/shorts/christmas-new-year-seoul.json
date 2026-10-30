@@ -1,0 +1,56 @@
+{
+  "article": "christmas-new-year-seoul",
+  "fallback": "photo-christmas-new-year-seoul.jpg",
+  "title": "Seoul in December: Christmas Lights and New Year's Eve",
+  "summary": "Plan a warm Christmas lights walk in Seoul and know what to expect at the Bosingak bell on New Year’s Eve.",
+  "hashtags": "#Seoul #SeoulTravel #Korea #ChristmasInSeoul #KoreaTravel",
+  "music": "Easy Lemon",
+  "slides": [
+    {
+      "kicker": "DECEMBER IN SEOUL",
+      "title": "Cold After Dark? Dress Warmly",
+      "sub": "December evenings call for warm layers",
+      "voice": "Seoul in December gets icy after dark. Dress warmly.",
+      "photo_query": "Seoul winter night street cold weather",
+      "require": [
+        "seoul",
+        "winter"
+      ]
+    },
+    {
+      "kicker": "TIP 1",
+      "title": "Pack Four Warm Essentials",
+      "sub": "Padded coat, hat, gloves, heat packs",
+      "voice": "Wear a padded coat, hat, and gloves. Grab heat packs at a convenience store.",
+      "photo_query": "winter travel clothing padded coat hat gloves heat packs Korea",
+      "require": [
+        "coat",
+        "gloves"
+      ]
+    },
+    {
+      "kicker": "TIP 2",
+      "title": "Walk The Central Lights",
+      "sub": "Myeongdong → Cheonggyecheon → Gwanghwamun",
+      "voice": "Walk from Myeongdong to Cheonggyecheon, then Gwanghwamun. It’s about two kilometres, or two hours with stops.",
+      "image": "regional-seoul-travel-cheonggyecheon.jpg"
+    },
+    {
+      "kicker": "NEW YEAR’S EVE",
+      "title": "Get There Before Eleven",
+      "sub": "Bosingak bell rings thirty-three times",
+      "voice": "At Bosingak, the bell rings thirty-three times at midnight. Arrive well before eleven; expect big crowds.",
+      "photo_query": "Bosingak bell pavilion Jongno Seoul New Year's Eve",
+      "require": [
+        "bosingak",
+        "bell"
+      ]
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
