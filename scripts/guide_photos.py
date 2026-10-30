@@ -54,6 +54,7 @@ QUERIES = {
     "olive-young-korea-guide": "Myeongdong street Seoul",
     "lotte-world-vs-everland": "Lotte World Seoul",
     "jeju-in-winter": "Hallasan snow Jeju",
+    "busan-in-winter": "Haedong Yonggungsa Busan",
     "korea-money-exchange": "Myeongdong night",
     "best-time-to-visit-korea": "Gyeongbokgung palace spring",
     "korea-in-september": "Haneul Park Seoul",
