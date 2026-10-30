@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Thu, 29 Oct 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Fri, 30 Oct 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Seoraksan Hikes for First-Time Visitors: Easy, Moderate and Full-Day Trails</title>
+<link>https://korea-plainly.com/seoraksan-hikes.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/seoraksan-hikes.html</guid>
+<pubDate>Fri, 30 Oct 2026 08:00:00 +0000</pubDate>
+<description>Choose a Seoraksan trail that fits your time and fitness level, from waterfall walks near Seorak-dong to the steep climb to Daecheongbong.</description>
+</item>
 <item>
 <title>Korea Nightlife for First-Timers: Seoul's Main Nightlife Districts Compared</title>
 <link>https://korea-plainly.com/korea-nightlife-districts.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/korea-in-october.html</guid>
 <pubDate>Fri, 16 Oct 2026 08:00:00 +0000</pubDate>
 <description>Seoul, Busan and Jeju weather in October, with average temperatures, what to pack, when the autumn leaves turn, festivals and busy holiday dates.</description>
-</item>
-<item>
-<title>Korea in March: Weather, What to Pack and What to Do</title>
-<link>https://korea-plainly.com/korea-in-march.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/korea-in-march.html</guid>
-<pubDate>Fri, 16 Oct 2026 08:00:00 +0000</pubDate>
-<description>Visiting Korea in March: how cold it still is, what to wear, the first plum and cherry blossoms in the south, fine dust, holidays and what to do.</description>
 </item>
 </channel>
 </rss>
