@@ -171,6 +171,10 @@
     "korean-won-notes-coins": {
       "at": "2026-10-31T07:29:31+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mz5rjtwrjf2a"
+    },
+    "korea-in-april": {
+      "at": "2026-10-31T15:52:21+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mz6nmyhvjo2g"
     }
   },
   "bluesky_videos": {
@@ -541,6 +545,10 @@
     "korean-won-notes-coins": {
       "at": "2026-10-31T07:29:39+00:00",
       "ref": "1261611360380213_122110956501509276"
+    },
+    "korea-in-april": {
+      "at": "2026-10-31T15:52:27+00:00",
+      "ref": "1261611360380213_122111091939509276"
     }
   },
   "threads": {
@@ -695,6 +703,10 @@
     "korean-won-notes-coins": {
       "at": "2026-10-31T07:29:51+00:00",
       "ref": "18099686639433080"
+    },
+    "korea-in-april": {
+      "at": "2026-10-31T15:52:37+00:00",
+      "ref": "18098564699544102"
     }
   }
 }
