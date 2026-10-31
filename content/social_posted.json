@@ -167,6 +167,10 @@
     "busan-in-winter": {
       "at": "2026-10-30T16:49:37+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mz4aehu3wm2y"
+    },
+    "korean-won-notes-coins": {
+      "at": "2026-10-31T07:29:31+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mz5rjtwrjf2a"
     }
   },
   "bluesky_videos": {
@@ -533,6 +537,10 @@
     "busan-in-winter": {
       "at": "2026-10-30T16:49:45+00:00",
       "ref": "1261611360380213_122110760247509276"
+    },
+    "korean-won-notes-coins": {
+      "at": "2026-10-31T07:29:39+00:00",
+      "ref": "1261611360380213_122110956501509276"
     }
   },
   "threads": {
@@ -683,6 +691,10 @@
     "busan-in-winter": {
       "at": "2026-10-30T16:49:59+00:00",
       "ref": "17968775265196515"
+    },
+    "korean-won-notes-coins": {
+      "at": "2026-10-31T07:29:51+00:00",
+      "ref": "18099686639433080"
     }
   }
 }
