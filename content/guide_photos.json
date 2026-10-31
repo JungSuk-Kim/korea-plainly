@@ -483,6 +483,10 @@
     "source": "",
     "query": "street food Myeongdong Seoul"
   },
+  "korean-won-notes-coins": {
+    "none": true,
+    "query": "Won Notes Coins Korea"
+  },
   "kpop-seoul-guide": {
     "file": "photo-kpop-seoul-guide.jpg",
     "credit": "Photo: Christian Bolz (크리스티안 볼츠), CC BY-SA 4.0, via Wikimedia Commons",
