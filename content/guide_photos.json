@@ -484,8 +484,9 @@
     "query": "street food Myeongdong Seoul"
   },
   "korean-won-notes-coins": {
-    "none": true,
-    "retry": true,
+    "file": "photo-korean-won-notes-coins.jpg",
+    "credit": "Photo: Stck w This photo was taken with Sharp Aquos R3, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gwangjang_Market,_Seoul_2020-02-01.jpg",
     "query": "Gwangjang Market Seoul"
   },
   "kpop-seoul-guide": {
