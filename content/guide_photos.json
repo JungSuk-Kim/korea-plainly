@@ -485,7 +485,8 @@
   },
   "korean-won-notes-coins": {
     "none": true,
-    "query": "Won Notes Coins Korea"
+    "retry": true,
+    "query": "Gwangjang Market Seoul"
   },
   "kpop-seoul-guide": {
     "file": "photo-kpop-seoul-guide.jpg",
