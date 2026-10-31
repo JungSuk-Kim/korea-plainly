@@ -394,12 +394,9 @@ def main():
             slug = f"{slug_base}-{n}"
             n += 1
 
-        image_info = google_place_image(place)
+        # Wikimedia Commons only: Google Maps photos belong to the people who uploaded them (Oct 2026)
+        image_info = wikimedia_image(f"{place['name']} {region_name} Korea")
         image_name = download_image(image_info, slug) if image_info else None
-
-        if not image_name:
-            image_info = wikimedia_image(f"{place['name']} {region_name} Korea")
-            image_name = download_image(image_info, slug) if image_info else None
         credit = image_info if image_name else None
 
         if not image_name:

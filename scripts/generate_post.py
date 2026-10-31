@@ -28,6 +28,9 @@ published = json.loads(
 published_slugs = {
     item["slug"] for item in published
 }
+# merged articles (content/redirects.json) and pages that already exist are not written again
+published_slugs |= {k[:-5] for k in json.loads((ROOT / "content" / "redirects.json").read_text(encoding="utf-8"))}
+published_slugs |= {p.stem for p in ROOT.glob("*.html")}
 
 topic = next(
     (

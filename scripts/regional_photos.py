@@ -3,18 +3,20 @@
 
 For every regional article (content/published.json entries with a place_name):
 
-  1. Photo. Looks for a freely licensed Wikimedia Commons photo of the place
-     first. If there is none, it uses the place's Google Maps photo, credited to
-     its author as Google requires. The photo replaces the article's existing
-     cover file (same file name), so every page that shows it updates.
+  1. Photo. Looks for a freely licensed Wikimedia Commons photo of the place.
+     If there is none, the cover becomes a plain Korea Plainly title card (place
+     name and region). Google Maps photos are no longer used (Oct 2026: they are
+     uploaded by businesses and visitors, so a credit line is not a licence).
+     The photo replaces the article's existing cover file (same file name), so
+     every page that shows it updates.
   2. Credit line under the cover photo.
   3. A Naver Map link next to the Google Maps link in "Useful links".
 
 Choices are stored in content/regional_photos.json. Add "retry": true to an
 entry to look again, or {"skip": true} to leave an article alone.
 
-Searching and downloading only happen when KP_FETCH_PHOTOS=1; Google needs
-GOOGLE_PLACES_API_KEY. At most MAX_FETCH articles are fetched per run.
+Searching and downloading only happen when KP_FETCH_PHOTOS=1. At most
+MAX_FETCH articles are fetched per run.
 """
 import html
 import json
@@ -30,7 +32,6 @@ from guide_photos import search_commons, download, sources_in_use, USER_AGENT  #
 
 STATE_PATH = ROOT / "content" / "regional_photos.json"
 FETCH = os.environ.get("KP_FETCH_PHOTOS") == "1"
-GOOGLE_KEY = os.environ.get("GOOGLE_PLACES_API_KEY", "").strip()
 MAX_FETCH = 12
 # Places often share a name with their subway station; skip station photos
 # unless the place itself is a station or terminal.
@@ -47,25 +48,34 @@ def distinctive_words(name):
     return [w for w in re.findall(r"[A-Za-z]+", name) if len(w) > 3 and w.lower() not in GENERIC]
 
 
-def google_photo(place, region, reject=()):
-    import requests
-    r = requests.post("https://places.googleapis.com/v1/places:searchText", timeout=30, headers={
-        "Content-Type": "application/json", "X-Goog-Api-Key": GOOGLE_KEY,
-        "X-Goog-FieldMask": "places.displayName,places.photos"},
-        json={"textQuery": f"{place} {region}", "languageCode": "en", "regionCode": "KR", "pageSize": 1})
-    r.raise_for_status()
-    places = r.json().get("places") or []
-    photos = (places[0].get("photos") or []) if places else []
-    # skip photos by authors already rejected with "retry": true
-    photos = [ph for ph in photos if not any(a.get("uri", "") in reject for a in ph.get("authorAttributions") or [])]
-    if not photos:
-        return None
-    ph = photos[0]
-    authors = ph.get("authorAttributions") or []
-    author = (authors[0].get("displayName") or "").strip() if authors else ""
-    return {"url": f"https://places.googleapis.com/v1/{ph['name']}/media?maxWidthPx=1600&maxHeightPx=1200&key={GOOGLE_KEY}",
-            "credit": f"Photo: {author} via Google Maps" if author else "Photo: Google Maps",
-            "source": authors[0].get("uri", "") if authors else ""}
+NAVY, RED, CREAM = (23, 36, 60), (201, 65, 58), (247, 245, 239)
+FONTS = Path(__file__).resolve().parent / "fonts"
+
+
+def title_card(path, place, region, category=""):
+    """A plain cover for places with no freely licensed photo: the place name on the site's navy."""
+    from PIL import Image, ImageDraw, ImageFont
+    W, H = 1200, 800
+    img = Image.new("RGB", (W, H), NAVY)
+    d = ImageDraw.Draw(img)
+    f = lambda size, bold=True: ImageFont.truetype(str(FONTS / ("Carlito-Bold.ttf" if bold else "Carlito-Regular.ttf")), size)
+    kicker = " · ".join(x for x in (region.upper(), category.upper()) if x)
+    d.rectangle([90, 250, 98, 550], fill=RED)
+    d.text((130, 255), kicker, font=f(40), fill=(200, 205, 215))
+    words, lines, line = re.sub(r"[^\x00-\x7f]+", "", place).split(), [], ""
+    for w in words:
+        if line and d.textlength(f"{line} {w}", font=f(92)) > W - 230:
+            lines.append(line)
+            line = w
+        else:
+            line = f"{line} {w}".strip()
+    lines.append(line)
+    y = 330
+    for ln in lines[:3]:
+        d.text((130, y), ln, font=f(92), fill=CREAM)
+        y += 104
+    d.text((130, H - 120), "Korea Plainly", font=f(38, False), fill=(200, 205, 215))
+    img.save(path, quality=90)
 
 
 def apply(page_path, entry, place, region):
@@ -108,11 +118,10 @@ def main():
                 avoid = None if re.search(r"(?i)station|terminal|airport", place) else TRANSIT_PHOTO
                 found = search_commons(f"{place} {region}", reject + sorted(sources_in_use(slug)), require=distinctive_words(place) or [place], avoid=avoid)
                 kind = "wikimedia"
-                if not found and GOOGLE_KEY:
-                    found, kind = google_photo(place, region, set(reject)), "google"
-                elif not found and p.get("image_credit") and not entry.get("source_type"):
-                    # untouched new article: its file is still the Google photo it was published with
-                    found, kind = {"credit": p["image_credit"], "source": "", "url": None}, "google"
+                if not found:   # no free photo: a plain title card instead of anyone else's photo
+                    title_card(ROOT / image, place if place.isascii() else p.get("title", place).split(":")[0], region,
+                               p.get("category", ""))
+                    found, kind = {"credit": "", "source": "", "url": None}, "card"
                 if found:
                     if found.get("url"):
                         download(found["url"], ROOT / image)

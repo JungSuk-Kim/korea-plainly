@@ -10,32 +10,45 @@
     "source": "https://commons.wikimedia.org/wiki/File:Haedong_Yonggungsa_Temple_near_Busan.jpg"
   },
   "busan-food-ribs-of-legend-haeundae": {
-    "source_type": "google",
-    "credit": "Photo: 전설의우대갈비 해운대 ( Legendary Ribs Haeundae ) via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/115418123879406884502"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/115418123879406884502"
+    ]
   },
   "busan-leisure-spa-land-centum-city": {
-    "source_type": "google",
-    "credit": "Photo: Ashely Liu via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/104110222004701770824"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/104110222004701770824"
+    ]
   },
   "busan-shopping-lululemon-busan-shinsegae-centum-city": {
-    "source_type": "google",
-    "credit": "Photo: 羅真 via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/117462514230720452079",
+    "source_type": "card",
+    "credit": "",
+    "source": "",
     "reject": [
-      "https://maps.google.com/maps/contrib/113178048556710064614"
+      "https://maps.google.com/maps/contrib/113178048556710064614",
+      "https://maps.google.com/maps/contrib/117462514230720452079"
     ]
   },
   "busan-stay-ananti-at-busan-cove": {
-    "source_type": "google",
-    "credit": "Photo: Ananti at Busan Cove via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/115728940872563825873"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/115728940872563825873"
+    ]
   },
   "gangneung-cafe-terarosa-coffee": {
-    "source_type": "google",
-    "credit": "Photo: Kevin Ko via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/117180145867579752582"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/117180145867579752582"
+    ]
   },
   "gangneung-culture-ojukheon": {
     "source_type": "wikimedia",
@@ -43,24 +56,36 @@
     "source": "https://commons.wikimedia.org/wiki/File:Korea-Gangneung-Ojukheon-01.jpg"
   },
   "gangneung-food-umjine": {
-    "source_type": "google",
-    "credit": "Photo: Soonjung Kwon (AGR) via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/101900772100268474978"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/101900772100268474978"
+    ]
   },
   "gangneung-leisure-arte-museum-valley-gangneung": {
-    "source_type": "google",
-    "credit": "Photo: 나한정 via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/104534689441183419642"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/104534689441183419642"
+    ]
   },
   "gangneung-stay-skybay-hotel-gyeongpo": {
-    "source_type": "google",
-    "credit": "Photo: 스카이베이호텔 경포 via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/113042545928960502857"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/113042545928960502857"
+    ]
   },
   "gyeongju-cafe-cafe-arae-heon": {
-    "source_type": "google",
-    "credit": "Photo: 카페 아래헌 / Cafe Arae-Heon / カフェアレホン / 咖啡馆 Arae-heon via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/111238702190482501276"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/111238702190482501276"
+    ]
   },
   "gyeongju-culture-bulguksa": {
     "source_type": "wikimedia",
@@ -68,16 +93,20 @@
     "source": "https://commons.wikimedia.org/wiki/File:Bulguksa-Gyeongju-Korea-2007-04.jpg"
   },
   "gyeongju-food-bar-boon-hwangridangil": {
-    "source_type": "google",
-    "credit": "Photo: Bar Boon Hwangridangil via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/102531661887623002291"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/102531661887623002291"
+    ]
   },
   "gyeongju-stay-hilton-gyeongju": {
-    "source_type": "google",
-    "credit": "Photo: Hilton Gyeongju via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/100034863250728021927",
+    "source_type": "card",
+    "credit": "",
+    "source": "",
     "reject": [
-      "https://commons.wikimedia.org/wiki/File:2025_Special_dinner_in_his_honor_of_President_Donald_Trump_and_State_Leaders_hosted_by_President_Lee_Jae_Myung_of_the_Republic_of_Korea_on_October_29_at_the_Hilton_Hotel_in_Gyeongju,_South_Korea.jpg"
+      "https://commons.wikimedia.org/wiki/File:2025_Special_dinner_in_his_honor_of_President_Donald_Trump_and_State_Leaders_hosted_by_President_Lee_Jae_Myung_of_the_Republic_of_Korea_on_October_29_at_the_Hilton_Hotel_in_Gyeongju,_South_Korea.jpg",
+      "https://maps.google.com/maps/contrib/100034863250728021927"
     ]
   },
   "gyeongju-travel-woljeonggyo-bridge": {
@@ -86,29 +115,34 @@
     "source": "https://commons.wikimedia.org/wiki/File:Woljeonggyo_Bridge,_Gyeongju_-_Woljeonggyo2656.jpg"
   },
   "incheon-cafe-joyang-textile": {
-    "source_type": "google",
-    "credit": "Photo: Yongseok Choi via Google Maps",
-    "source": ""
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": []
   },
   "incheon-culture-incheon-international-airport-terminal-2-korean-traditional-cult": {
-    "source_type": "google",
-    "credit": "Photo: Chang via Google Maps",
-    "source": ""
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": []
   },
   "incheon-food-incheon-airport-terminal-2-food-court": {
-    "source_type": "google",
-    "credit": "Photo: Justina Han via Google Maps",
-    "source": ""
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": []
   },
   "incheon-leisure-incheon-grand-park": {
-    "source_type": "google",
-    "credit": "Photo: Andy Kim via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/105529174726771444399",
+    "source_type": "card",
+    "credit": "",
+    "source": "",
     "reject": [
       "https://commons.wikimedia.org/wiki/File:ITC-Incheon_Grand_Park_Stn-Exterior.jpg",
       "https://commons.wikimedia.org/wiki/File:Incheon_Grand_Park_Station_Namecard.jpg",
-      "https://commons.wikimedia.org/wiki/File:Q208234780_Incheon_Grand_Park_A01.jpg"
-    ]
+      "https://commons.wikimedia.org/wiki/File:Q208234780_Incheon_Grand_Park_A01.jpg",
+      "https://maps.google.com/maps/contrib/105529174726771444399"
+    ],
+    "retry": true
   },
   "incheon-local-guide-incheon-chinatown": {
     "source_type": "wikimedia",
@@ -116,9 +150,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:Chinatown,_incheon_20230430_001.jpg"
   },
   "incheon-shopping-hyundai-premium-outlets-songdo": {
-    "source_type": "google",
-    "credit": "Photo: carl hong via Google Maps",
-    "source": ""
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": []
   },
   "incheon-stay-nest-hotel-incheon": {
     "source_type": "wikimedia",
@@ -131,24 +166,36 @@
     "source": "https://commons.wikimedia.org/wiki/File:South_Korea,_Incheon,_Songdo,_the_Sharp_Central_Park_Towers.jpg"
   },
   "jeju-cafe-haejigae-cafe": {
-    "source_type": "google",
-    "credit": "Photo: 해지개 카페 via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/108819225841515050563"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/108819225841515050563"
+    ]
   },
   "jeju-culture-arte-museum-jeju": {
-    "source_type": "google",
-    "credit": "Photo: 아르떼뮤지엄 제주 via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/113524447644470229523"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/113524447644470229523"
+    ]
   },
   "jeju-food-gozip-dol-wooluck-jeju-airport-branch": {
-    "source_type": "google",
-    "credit": "Photo: harry teddy via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/102388651661064802050"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/102388651661064802050"
+    ]
   },
   "jeju-leisure-jeju-leports-land": {
-    "source_type": "google",
-    "credit": "Photo: 제주카트장 제주레포츠랜드(주) via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/101398391086653806529"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/101398391086653806529"
+    ]
   },
   "jeju-shopping-jeju-traditional-five-day-market": {
     "source_type": "wikimedia",
@@ -164,14 +211,21 @@
     "source": "https://commons.wikimedia.org/wiki/File:MAISON_GLAD_JEJU.jpg"
   },
   "jeju-travel-hyeopjae-beach": {
-    "source_type": "google",
-    "credit": "Photo: Sohyun Kwon (Emma) via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/100299570138767954052"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/100299570138767954052"
+    ],
+    "retry": true
   },
   "jeonju-cafe-haeyooldam": {
-    "source_type": "google",
-    "credit": "Photo: Phuong Thao Nguyen via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/116483894873605150916"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/116483894873605150916"
+    ]
   },
   "jeonju-culture-jeonju-hanok-village": {
     "source_type": "wikimedia",
@@ -179,19 +233,28 @@
     "source": "https://commons.wikimedia.org/wiki/File:Jeonju_Hanok_Village_20220701_003.jpg"
   },
   "jeonju-food-ondam": {
-    "source_type": "google",
-    "credit": "Photo: 온담 전주본점(Ondam Korean BBQ) via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/115776776624806052986"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/115776776624806052986"
+    ]
   },
   "jeonju-stay-lahan-hotel-jeonju": {
-    "source_type": "google",
-    "credit": "Photo: Inmook Lee (이인묵) via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/112322727489597014623"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/112322727489597014623"
+    ]
   },
   "seoul-cafe-cafe-onion-anguk": {
-    "source_type": "google",
-    "credit": "Photo: 허재훈 via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/110821042411586342840"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/110821042411586342840"
+    ]
   },
   "seoul-culture-gyeongbokgung-palace": {
     "source_type": "wikimedia",
@@ -199,9 +262,12 @@
     "source": "https://commons.wikimedia.org/wiki/File:Gyeonghoeru_(Royal_Banquet_Hall)_at_Gyeongbokgung_Palace,_Seoul.jpg"
   },
   "seoul-food-kampungku-restaurant": {
-    "source_type": "google",
-    "credit": "Photo: Kampungku Restaurant via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/114630104963798806391"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/114630104963798806391"
+    ]
   },
   "seoul-shopping-myeongdong-shopping-street": {
     "source_type": "wikimedia",
@@ -209,9 +275,12 @@
     "source": "https://commons.wikimedia.org/wiki/File:Namdaemun-ro_and_Aloft_Seoul_Myeongdong_by_night.jpg"
   },
   "seoul-stay-four-seasons-hotel-seoul": {
-    "source_type": "google",
-    "credit": "Photo: Four Seasons Hotel Seoul via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/102097517410195567225"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/102097517410195567225"
+    ]
   },
   "seoul-travel-cheonggyecheon": {
     "source_type": "wikimedia",
@@ -219,9 +288,12 @@
     "source": "https://commons.wikimedia.org/wiki/File:Cheonggyecheon_Seoul_3.jpg"
   },
   "sokcho-cafe-seaside-garden": {
-    "source_type": "google",
-    "credit": "Photo: 바다정원 via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/105659642939494417667"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/105659642939494417667"
+    ]
   },
   "sokcho-culture-naksansa-temple": {
     "source_type": "wikimedia",
@@ -229,19 +301,30 @@
     "source": "https://commons.wikimedia.org/wiki/File:Korea-Naksansa_2110-07_Uisangdae.JPG"
   },
   "sokcho-food-chungchosoo-mulhoe": {
-    "source_type": "google",
-    "credit": "Photo: 청초수물회 via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/104585115653001336225"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/104585115653001336225"
+    ]
   },
   "sokcho-leisure-biseondae-peak": {
-    "source_type": "google",
-    "credit": "Photo: Sun Chul Kim via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/109246567885716347732"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/109246567885716347732"
+    ],
+    "retry": true
   },
   "sokcho-local-guide-yeonggeumjeong-sunrise-pavilion": {
-    "source_type": "google",
-    "credit": "Photo: KYUNG HEO via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/103559777499881303976"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/103559777499881303976"
+    ],
+    "retry": true
   },
   "sokcho-shopping-sokcho-tourist-fishery-market": {
     "source_type": "wikimedia",
@@ -249,28 +332,45 @@
     "source": "https://commons.wikimedia.org/wiki/File:Fish_market_in_Sokcho.jpg"
   },
   "sokcho-stay-lotte-resort-sokcho": {
-    "source_type": "google",
-    "credit": "Photo: 롯데리조트 속초 via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/103502858672140896603"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/103502858672140896603"
+    ]
   },
   "sokcho-travel-seoraksan-national-park": {
-    "source_type": "google",
-    "credit": "Photo: Ayan Bardhan via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/113124878451300041934"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/113124878451300041934"
+    ],
+    "retry": true
   },
   "yeosu-cafe-cafe-hoi-an": {
-    "source_type": "google",
-    "credit": "Photo: Byul (별) via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/101260041845954254543"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/101260041845954254543"
+    ]
   },
   "yeosu-food-crab-1st-avenue-kkotdol": {
-    "source_type": "google",
-    "credit": "Photo: Ro RuleOut via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/106790560990184510011"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/106790560990184510011"
+    ]
   },
   "yeosu-travel-hyangilam-hermitage": {
-    "source_type": "google",
-    "credit": "Photo: 최영민_YOUNGMIN CHOI via Google Maps",
-    "source": "https://maps.google.com/maps/contrib/118160373166826566759"
+    "source_type": "card",
+    "credit": "",
+    "source": "",
+    "reject": [
+      "https://maps.google.com/maps/contrib/118160373166826566759"
+    ],
+    "retry": true
   }
 }

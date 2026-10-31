@@ -58,5 +58,17 @@
   "gangneung-local-guide-ojukheon.html": {
     "to": "gangneung-culture-ojukheon.html",
     "title": "Ojukheon, Gangneung: A Thoughtful Visit to the Home of Shin Saimdang and Yi I"
+  },
+  "korean-convenience-store-meals.html": {
+    "to": "korean-convenience-store-tips.html",
+    "title": "Korean Convenience Stores: CU vs GS25, What to Eat and How They Work"
+  },
+  "korean-convenience-stores-compared.html": {
+    "to": "korean-convenience-store-tips.html",
+    "title": "Korean Convenience Stores: CU vs GS25, What to Eat and How They Work"
+  },
+  "korean-won-notes-coins.html": {
+    "to": "korea-money-exchange.html",
+    "title": "Korean Money to USD: Won Prices Explained and Where to Exchange in Korea"
   }
 }

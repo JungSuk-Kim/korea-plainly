@@ -13,9 +13,10 @@ STEPS = [
     "guide_photos.py",                # first, so hub cards show the new photos; credited Wikimedia photos for guides (fetches when KP_FETCH_PHOTOS=1)
     "lazy_cards.py",                  # guide card photos load lazily, as real <img> tags
     "apply_redirects.py",             # merged articles redirect to the article that replaced them (content/redirects.json)
-    "regional_photos.py",             # credited photos (Wikimedia, else Google Maps) + Naver Map links for regional articles
+    "regional_photos.py",             # credited Wikimedia photos (else a title card) + Naver Map links for regional articles
     "generate_region_pages.py",       # region hub pages from content/published.json
     "fix_navigation_and_regions.py",  # region/category hubs and menus
+    "guide_numbers.py",               # number guide cards 01, 02, ... in page order
     "build_category_region_hubs.py",  # category hubs (travel.html, food.html, ...)
     "add_internal_links.py",          # "related guides" blocks
     "site_chrome.py",                 # same header, stylesheet and footer everywhere
