@@ -1,0 +1,52 @@
+{
+  "article": "korea-winter-festivals",
+  "fallback": "photo-korea-winter-festivals.jpg",
+  "title": "Korea in January: Winter Festivals and Safety Tips",
+  "summary": "Planning a Korea trip in January? Learn how to check ice festival conditions, when to visit Hwacheon, and where to see winter lights in Seoul.",
+  "hashtags": "#Korea #KoreaTravel #WinterInKorea #Hwacheon #Seoul",
+  "music": "Wallpaper",
+  "slides": [
+    {
+      "kicker": "JANUARY",
+      "title": "Ice Festivals Can Cancel",
+      "sub": "Check conditions before you go",
+      "voice": "Korea in January: ice festivals can cancel. Check conditions.",
+      "photo_query": "Hwacheon Sancheoneo Ice Festival ice fishing Korea",
+      "require": [
+        "hwacheon",
+        "sancheoneo"
+      ]
+    },
+    {
+      "kicker": "TIP 1",
+      "title": "Confirm The Ice",
+      "sub": "Check official updates a few days ahead",
+      "voice": "Check the official site a few days before; thin ice can delay or cancel the event.",
+      "image": "photo-korea-winter-festivals.jpg"
+    },
+    {
+      "kicker": "HWACHEON",
+      "title": "Plan For An Early Start",
+      "sub": "Planned Jan 9–31, 2027",
+      "voice": "Hwacheon is planned for January ninth to thirty-first, 2027. From Seoul, the bus takes about three hours.",
+      "photo_query": "Dong Seoul Bus Terminal intercity bus Hwacheon Korea",
+      "require": [
+        "dong",
+        "seoul"
+      ]
+    },
+    {
+      "kicker": "SEOUL",
+      "title": "See The Winter Lights",
+      "sub": "Visit Cheonggyecheon on a weekday evening",
+      "voice": "For lights without a long trip, walk Cheonggyecheon in Seoul. Go on a weekday evening to miss the biggest crowds.",
+      "image": "photo-korea-in-december.jpg"
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
