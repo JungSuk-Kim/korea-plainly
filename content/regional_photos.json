@@ -141,8 +141,7 @@
       "https://commons.wikimedia.org/wiki/File:Incheon_Grand_Park_Station_Namecard.jpg",
       "https://commons.wikimedia.org/wiki/File:Q208234780_Incheon_Grand_Park_A01.jpg",
       "https://maps.google.com/maps/contrib/105529174726771444399"
-    ],
-    "retry": true
+    ]
   },
   "incheon-local-guide-incheon-chinatown": {
     "source_type": "wikimedia",
@@ -216,8 +215,7 @@
     "source": "",
     "reject": [
       "https://maps.google.com/maps/contrib/100299570138767954052"
-    ],
-    "retry": true
+    ]
   },
   "jeonju-cafe-haeyooldam": {
     "source_type": "card",
@@ -314,8 +312,7 @@
     "source": "",
     "reject": [
       "https://maps.google.com/maps/contrib/109246567885716347732"
-    ],
-    "retry": true
+    ]
   },
   "sokcho-local-guide-yeonggeumjeong-sunrise-pavilion": {
     "source_type": "card",
@@ -323,8 +320,7 @@
     "source": "",
     "reject": [
       "https://maps.google.com/maps/contrib/103559777499881303976"
-    ],
-    "retry": true
+    ]
   },
   "sokcho-shopping-sokcho-tourist-fishery-market": {
     "source_type": "wikimedia",
@@ -345,8 +341,7 @@
     "source": "",
     "reject": [
       "https://maps.google.com/maps/contrib/113124878451300041934"
-    ],
-    "retry": true
+    ]
   },
   "yeosu-cafe-cafe-hoi-an": {
     "source_type": "card",
@@ -370,7 +365,6 @@
     "source": "",
     "reject": [
       "https://maps.google.com/maps/contrib/118160373166826566759"
-    ],
-    "retry": true
+    ]
   }
 }
