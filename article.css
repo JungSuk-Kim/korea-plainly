@@ -227,3 +227,6 @@
 .kp-article nav.kp-toc { position: static; left: auto; right: auto; top: auto; box-shadow: none; z-index: auto; }
 .kp-article nav.kp-crumbs { display: flex; background: none; border: 0; padding: 0; }
 .kp-article nav.kp-toc { display: block; }
+
+/* data tables in articles (prices, monthly weather) */
+.kp-prices{width:100%;border-collapse:collapse;margin:8px 0 22px;font-size:16px}.kp-prices th,.kp-prices td{text-align:left;padding:8px 6px;border-bottom:1px solid rgba(20,28,42,.1);vertical-align:top}.kp-prices th{border-bottom:2px solid #17243c}

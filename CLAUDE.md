@@ -32,7 +32,7 @@ reply in Korean and address him as "주인님" (not "사장님"), keep site cont
 - Facts that change (opening hours, prices, closing days, routes) must be stated cautiously and point readers to
   Naver Map / KakaoMap. Opening hours are never stored (Google Places terms; they go stale).
 - Photos: Wikimedia Commons only with a reusable licence (CC0, public domain, CC BY, CC BY-SA) and a credit line;
-  Google Places photos credited to their author. Choices live in `content/guide_photos.json` and
+  never Google Maps/Places photos. Choices live in `content/guide_photos.json` and
   `content/regional_photos.json`; use `"retry": true` (optionally a new `"query"`) to get a different photo. Photo
   searches only run in GitHub Actions (`KP_FETCH_PHOTOS=1`), so push and let Site Maintenance fetch them.
 - Regional articles: a local-guide voice that never narrates sources ("search results", "not confirmed").
