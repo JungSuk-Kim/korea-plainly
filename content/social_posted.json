@@ -175,6 +175,10 @@
     "korea-in-april": {
       "at": "2026-10-31T15:52:21+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mz6nmyhvjo2g"
+    },
+    "seoul-ice-skating-rinks": {
+      "at": "2026-11-01T08:08:21+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzae67u4272f"
     }
   },
   "bluesky_videos": {
@@ -549,6 +553,10 @@
     "korea-in-april": {
       "at": "2026-10-31T15:52:27+00:00",
       "ref": "1261611360380213_122111091939509276"
+    },
+    "seoul-ice-skating-rinks": {
+      "at": "2026-11-01T08:08:28+00:00",
+      "ref": "1261611360380213_122111316675509276"
     }
   },
   "threads": {
@@ -707,6 +715,10 @@
     "korea-in-april": {
       "at": "2026-10-31T15:52:37+00:00",
       "ref": "18098564699544102"
+    },
+    "seoul-ice-skating-rinks": {
+      "at": "2026-11-01T08:08:39+00:00",
+      "ref": "17882271057631455"
     }
   }
 }
