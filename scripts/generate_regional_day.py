@@ -43,6 +43,11 @@ region_name = region["name"]
 
 published_slugs = {x.get("slug") for x in published if isinstance(x, dict)}
 used_places = {str(x.get("place_name","")).strip().lower() for x in published if isinstance(x, dict) and x.get("place_name")}
+# places retired before the AdSense re-review (cafes, restaurants, hotels nobody on the team had visited): never again
+_retired = ROOT / "content" / "retired_places.json"
+if _retired.exists():
+    used_places |= {str(x.get("place_name", "")).strip().lower() for x in json.loads(_retired.read_text(encoding="utf-8"))}
+    published_slugs |= {x.get("slug") for x in json.loads(_retired.read_text(encoding="utf-8"))}
 used_topics = {str(x.get("title","")).strip().lower() for x in published if isinstance(x, dict) and x.get("title")}
 
 def clean_text(s):

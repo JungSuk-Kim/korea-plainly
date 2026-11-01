@@ -127,9 +127,23 @@ def nav_script(s):
     s=s.replace('</body>', NAV_JS+'\n</body>')
     return s
 
+def _live_hub(name):
+    """A region sub-hub that exists and is not a redirect (empty hubs redirect to their region page)."""
+    p = ROOT/name
+    return p.exists() and 'kp-redirect' not in p.read_text(encoding='utf-8', errors='ignore')[:3000]
+
+def _empty_hub_redirect(name, region_page, title):
+    page = (f'<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<title>Moved: {html.escape(title)} | Korea Plainly</title>\n'
+            f'<meta name="robots" content="noindex,follow">\n<link rel="canonical" href="https://korea-plainly.com/{region_page}">\n'
+            f'<meta http-equiv="refresh" content="0; url={region_page}">\n<!-- kp-redirect: empty hub, see {region_page} -->\n</head>\n'
+            f'<body>\n<p>This page has moved: <a href="{region_page}">{html.escape(title)}</a>.</p>\n</body>\n</html>\n')
+    p = ROOT/name
+    if not p.exists() or p.read_text(encoding='utf-8', errors='ignore') != page:
+        p.write_text(page, encoding='utf-8')
+
 def make_hub(filename, heading, intro, cards, back_href, back_label, prefix=None):
     if prefix:
-        cat_links=''.join(f'<a href="{prefix}-{g}.html">{html.escape(n)}</a>' for g,n,_ in GROUPS if (ROOT/f'{prefix}-{g}.html').exists() or g in filename)
+        cat_links=''.join(f'<a href="{prefix}-{g}.html">{html.escape(n)}</a>' for g,n,_ in GROUPS if (_live_hub(f'{prefix}-{g}.html')) or g in filename)
     else:
         cat_links=''.join(f'<a href="{g}.html">{html.escape(n)}</a>' for g,n,_ in GROUPS)
     cards_html=''.join(
@@ -150,7 +164,9 @@ for slug,name in _all_regions():
     for g,gname,cats in GROUPS:
         cards=group_cards(slug,cats)
         target=ROOT/f'{slug}-{g}.html'
-        if not cards and not target.exists():
+        if not cards:
+            if target.exists():   # nothing left in it: send visitors to the region page, no "coming soon" page
+                _empty_hub_redirect(target.name, f'{slug}.html', name)
             continue
         target.write_text(
             make_hub(f'{slug}-{g}.html',f'{gname} in {name}',GROUP_INTRO[g].format(where=name),cards,f'{slug}.html',f'← {name}',slug),encoding='utf-8')

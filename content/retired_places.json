@@ -1,0 +1,170 @@
+[
+  {
+    "slug": "seoul-food-kampungku-restaurant",
+    "place_name": "Kampungku Restaurant",
+    "region": "Seoul",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "seoul-cafe-cafe-onion-anguk",
+    "place_name": "Cafe Onion Anguk",
+    "region": "Seoul",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "seoul-stay-four-seasons-hotel-seoul",
+    "place_name": "Four Seasons Hotel Seoul",
+    "region": "Seoul",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "busan-food-ribs-of-legend-haeundae",
+    "place_name": "Ribs of Legend haeundae",
+    "region": "Busan",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "busan-cafe-waveon-coffee",
+    "place_name": "Waveon Coffee",
+    "region": "Busan",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "busan-shopping-lululemon-busan-shinsegae-centum-city",
+    "place_name": "lululemon Busan Shinsegae Centum City",
+    "region": "Busan",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "busan-stay-ananti-at-busan-cove",
+    "place_name": "Ananti at Busan Cove",
+    "region": "Busan",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "jeju-food-gozip-dol-wooluck-jeju-airport-branch",
+    "place_name": "Gozip Dol Wooluck Jeju Airport Branch",
+    "region": "Jeju",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "jeju-cafe-haejigae-cafe",
+    "place_name": "Haejigae Cafe",
+    "region": "Jeju",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "jeju-stay-maison-glad-jeju",
+    "place_name": "Maison GLAD Jeju",
+    "region": "Jeju",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "gyeongju-food-bar-boon-hwangridangil",
+    "place_name": "Bar Boon Hwangridangil",
+    "region": "Gyeongju",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "gyeongju-cafe-cafe-arae-heon",
+    "place_name": "Cafe Arae Heon",
+    "region": "Gyeongju",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "gyeongju-stay-hilton-gyeongju",
+    "place_name": "Hilton Gyeongju",
+    "region": "Gyeongju",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "jeonju-food-ondam",
+    "place_name": "Ondam",
+    "region": "Jeonju",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "jeonju-cafe-haeyooldam",
+    "place_name": "해율담 haeyooldam",
+    "region": "Jeonju",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "jeonju-stay-lahan-hotel-jeonju",
+    "place_name": "Lahan Hotel Jeonju",
+    "region": "Jeonju",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "gangneung-food-umjine",
+    "place_name": "Umjine",
+    "region": "Gangneung",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "gangneung-cafe-terarosa-coffee",
+    "place_name": "Terarosa Coffee",
+    "region": "Gangneung",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "gangneung-stay-skybay-hotel-gyeongpo",
+    "place_name": "Skybay Hotel Gyeongpo",
+    "region": "Gangneung",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "incheon-food-incheon-airport-terminal-2-food-court",
+    "place_name": "Incheon Airport Terminal 2 Food Court",
+    "region": "Incheon",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "incheon-cafe-joyang-textile",
+    "place_name": "Joyang Textile",
+    "region": "Incheon",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "incheon-shopping-hyundai-premium-outlets-songdo",
+    "place_name": "Hyundai Premium Outlets Songdo",
+    "region": "Incheon",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "incheon-stay-nest-hotel-incheon",
+    "place_name": "Nest Hotel Incheon",
+    "region": "Incheon",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "sokcho-food-chungchosoo-mulhoe",
+    "place_name": "Chungchosoo Mulhoe",
+    "region": "Sokcho",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "sokcho-cafe-seaside-garden",
+    "place_name": "Seaside Garden",
+    "region": "Sokcho",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "sokcho-stay-lotte-resort-sokcho",
+    "place_name": "Lotte Resort Sokcho",
+    "region": "Sokcho",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "yeosu-food-crab-1st-avenue-kkotdol",
+    "place_name": "Crab 1st Avenue kkotdol",
+    "region": "Yeosu",
+    "retired": "2026-11-02"
+  },
+  {
+    "slug": "yeosu-cafe-cafe-hoi-an",
+    "place_name": "카페 호이안",
+    "region": "Yeosu",
+    "retired": "2026-11-02"
+  }
+]

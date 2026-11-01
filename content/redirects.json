@@ -70,5 +70,117 @@
   "korean-won-notes-coins.html": {
     "to": "korea-money-exchange.html",
     "title": "Korean Money to USD: Won Prices Explained and Where to Exchange in Korea"
+  },
+  "seoul-food-kampungku-restaurant.html": {
+    "to": "seoul.html",
+    "title": "Seoul travel guide"
+  },
+  "seoul-cafe-cafe-onion-anguk.html": {
+    "to": "seoul.html",
+    "title": "Seoul travel guide"
+  },
+  "seoul-stay-four-seasons-hotel-seoul.html": {
+    "to": "seoul.html",
+    "title": "Seoul travel guide"
+  },
+  "busan-food-ribs-of-legend-haeundae.html": {
+    "to": "busan.html",
+    "title": "Busan travel guide"
+  },
+  "busan-cafe-waveon-coffee.html": {
+    "to": "busan.html",
+    "title": "Busan travel guide"
+  },
+  "busan-shopping-lululemon-busan-shinsegae-centum-city.html": {
+    "to": "busan.html",
+    "title": "Busan travel guide"
+  },
+  "busan-stay-ananti-at-busan-cove.html": {
+    "to": "busan.html",
+    "title": "Busan travel guide"
+  },
+  "jeju-food-gozip-dol-wooluck-jeju-airport-branch.html": {
+    "to": "jeju.html",
+    "title": "Jeju travel guide"
+  },
+  "jeju-cafe-haejigae-cafe.html": {
+    "to": "jeju.html",
+    "title": "Jeju travel guide"
+  },
+  "jeju-stay-maison-glad-jeju.html": {
+    "to": "jeju.html",
+    "title": "Jeju travel guide"
+  },
+  "gyeongju-food-bar-boon-hwangridangil.html": {
+    "to": "gyeongju.html",
+    "title": "Gyeongju travel guide"
+  },
+  "gyeongju-cafe-cafe-arae-heon.html": {
+    "to": "gyeongju.html",
+    "title": "Gyeongju travel guide"
+  },
+  "gyeongju-stay-hilton-gyeongju.html": {
+    "to": "gyeongju.html",
+    "title": "Gyeongju travel guide"
+  },
+  "jeonju-food-ondam.html": {
+    "to": "jeonju.html",
+    "title": "Jeonju travel guide"
+  },
+  "jeonju-cafe-haeyooldam.html": {
+    "to": "jeonju.html",
+    "title": "Jeonju travel guide"
+  },
+  "jeonju-stay-lahan-hotel-jeonju.html": {
+    "to": "jeonju.html",
+    "title": "Jeonju travel guide"
+  },
+  "gangneung-food-umjine.html": {
+    "to": "gangneung.html",
+    "title": "Gangneung travel guide"
+  },
+  "gangneung-cafe-terarosa-coffee.html": {
+    "to": "gangneung.html",
+    "title": "Gangneung travel guide"
+  },
+  "gangneung-stay-skybay-hotel-gyeongpo.html": {
+    "to": "gangneung.html",
+    "title": "Gangneung travel guide"
+  },
+  "incheon-food-incheon-airport-terminal-2-food-court.html": {
+    "to": "incheon.html",
+    "title": "Incheon travel guide"
+  },
+  "incheon-cafe-joyang-textile.html": {
+    "to": "incheon.html",
+    "title": "Incheon travel guide"
+  },
+  "incheon-shopping-hyundai-premium-outlets-songdo.html": {
+    "to": "incheon.html",
+    "title": "Incheon travel guide"
+  },
+  "incheon-stay-nest-hotel-incheon.html": {
+    "to": "incheon.html",
+    "title": "Incheon travel guide"
+  },
+  "sokcho-food-chungchosoo-mulhoe.html": {
+    "to": "sokcho.html",
+    "title": "Sokcho travel guide"
+  },
+  "sokcho-cafe-seaside-garden.html": {
+    "to": "sokcho.html",
+    "title": "Sokcho travel guide"
+  },
+  "sokcho-stay-lotte-resort-sokcho.html": {
+    "to": "sokcho.html",
+    "title": "Sokcho travel guide"
+  },
+  "yeosu-food-crab-1st-avenue-kkotdol.html": {
+    "to": "yeosu.html",
+    "title": "Yeosu travel guide"
+  },
+  "yeosu-cafe-cafe-hoi-an.html": {
+    "to": "yeosu.html",
+    "title": "Yeosu travel guide"
   }
 }

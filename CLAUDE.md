@@ -38,6 +38,9 @@ reply in Korean and address him as "주인님" (not "사장님"), keep site cont
 - Regional articles: a local-guide voice that never narrates sources ("search results", "not confirmed").
   Fix bad ones with the "Rewrite regional articles" workflow rather than by hand.
 - One article per place. The regional generator skips places already in `content/published.json`.
+- 2 Nov 2026: 28 generated cafe/restaurant/hotel/brand-shop articles nobody had visited were retired (redirects to the region
+  page; list in `content/retired_places.json`, which the regional generator also skips). Region sub-hubs left empty
+  redirect to the region page. No Google Maps photos anywhere: places without a free Commons photo get a title card.
 - AdSense quality work (Oct 2026, after a "low value content" review): regional place articles are paused while
   `content/regional_paused` exists; `content/noindex.json` lists pages kept out of search (link-only hubs, hotel/shop
   listings, and since 18 Oct every generated regional place article without the owner's photos; re-index one only after
