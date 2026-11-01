@@ -595,6 +595,9 @@
       "https://commons.wikimedia.org/wiki/File:Seoul_city_skyline_at_night_from_Namsan_Mountain_(49174548523).jpg"
     ]
   },
+  "seoul-ice-skating-rinks": {
+    "query": "Seoul Plaza ice skating rink"
+  },
   "seoul-neighborhoods-guide": {
     "file": "photo-seoul-neighborhoods-guide.jpg",
     "credit": "Photo: Bgag, CC0, via Wikimedia Commons",

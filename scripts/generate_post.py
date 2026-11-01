@@ -650,21 +650,15 @@ Read guide →
 </a>
 """
 
-    marker = """
-</section>
-</main>
-"""
-
-    if marker not in guides:
+    # insert before the closing </section></main> of the card grid; whitespace between them varies
+    # (guide_numbers.py can leave "</a></section>" after dropping a duplicate last card)
+    end = list(re.finditer(r"</section>\s*</main>", guides))
+    if not end:
         raise RuntimeError(
             "Could not find Guides insertion point."
         )
-
-    guides = guides.replace(
-        marker,
-        card + marker,
-        1
-    )
+    at = end[-1].start()
+    guides = guides[:at] + "\n" + card + guides[at:]
 
     GUIDES_FILE.write_text(
         guides,
