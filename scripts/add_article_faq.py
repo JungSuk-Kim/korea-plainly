@@ -1,4 +1,4 @@
-import json, os, re
+import json, os, re, time
 from pathlib import Path
 from html import escape
 from openai import OpenAI
@@ -45,12 +45,30 @@ Rules:
 - Avoid repeating the article verbatim.
 """
 
-response=client.responses.create(
-    model=os.getenv("OPENAI_MODEL","gpt-6-luna"),
-    input=prompt
-)
-raw=re.sub(r"^```json\s*|\s*```$","",response.output_text.strip(),flags=re.I).strip()
-data=json.loads(raw)
+def ask():
+    response=client.responses.create(
+        model=os.getenv("OPENAI_MODEL","gpt-6-luna"),
+        input=prompt
+    )
+    raw=re.sub(r"^```json\s*|\s*```$","",response.output_text.strip(),flags=re.I).strip()
+    m=re.search(r"\{.*\}",raw,re.S)  # tolerate text around the JSON
+    data=json.loads(m.group(0) if m else raw)
+    faqs=[f for f in data.get("faqs",[]) if str(f.get("question","")).strip() and str(f.get("answer","")).strip()]
+    if len(faqs)<3:
+        raise ValueError(f"only {len(faqs)} usable FAQ items")
+    return faqs
+
+# retry: a single bad or truncated reply used to fail the whole Daily Publish run
+for attempt in range(1,4):
+    try:
+        faqs=ask()
+        break
+    except Exception as e:
+        print(f"FAQ attempt {attempt} failed: {e}")
+        if attempt==3:
+            raise
+        time.sleep(5*attempt)
+data={"faqs":faqs}
 
 items=[]
 for faq in data["faqs"][:3]:
