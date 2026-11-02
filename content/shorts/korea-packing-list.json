@@ -1,0 +1,63 @@
+{
+  "article": "korea-packing-list",
+  "fallback": "photo-korea-packing-list.jpg",
+  "title": "Korea Packing List: What to Bring in Every Season",
+  "summary": "Packing for Korea depends on the season. Here’s what to bring for summer, winter, spring and autumn, plus the plug adapter you’ll need.",
+  "hashtags": "#Korea #KoreaTravel #PackingList #TravelTips #KoreaSummer #KoreaWinter",
+  "music": "Daily Beetle",
+  "slides": [
+    {
+      "kicker": "KOREA PACKING",
+      "title": "Pack For Each Season",
+      "sub": "Different seasons need different gear",
+      "voice": "Korea packing? Every season needs different gear. Pack by season.",
+      "image": "photo-korea-packing-list.jpg"
+    },
+    {
+      "kicker": "SUMMER",
+      "title": "Stay Cool And Dry",
+      "sub": "Quick-dry clothes, umbrella, puddle-safe shoes",
+      "voice": "Summer: quick-dry clothes, a compact umbrella, and shoes that handle puddles.",
+      "photo_query": "Korea summer travel umbrella quick-drying clothes shoes",
+      "require": [
+        "umbrella"
+      ]
+    },
+    {
+      "kicker": "WINTER",
+      "title": "Layer Up For Cold",
+      "sub": "Long coat, thermal layer, hat, scarf, gloves",
+      "voice": "Winter: a long padded coat, thermal layer, hat, scarf and gloves.",
+      "photo_query": "Korea winter padded coat thermal clothing hat scarf gloves",
+      "require": [
+        "coat"
+      ]
+    },
+    {
+      "kicker": "SPRING + AUTUMN",
+      "title": "Dress For Both Ends",
+      "sub": "T-shirt, jumper, light jacket; warmer coat",
+      "voice": "Spring and autumn: T-shirt, jumper, light jacket. Add a warmer coat for early March or November.",
+      "photo_query": "Korea spring autumn layered clothing light jacket",
+      "require": [
+        "jacket"
+      ]
+    },
+    {
+      "kicker": "DON’T FORGET",
+      "title": "Bring The Right Adapter",
+      "sub": "Type C or F adapter; 220 volts",
+      "voice": "Bring a Type C or F adapter. Korea uses two hundred twenty volts; check appliance labels.",
+      "photo_query": "Korea Type C Type F plug adapter",
+      "require": [
+        "adapter"
+      ]
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
