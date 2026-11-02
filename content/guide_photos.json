@@ -359,6 +359,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:Gwangjang_Market,_Seoul_01.jpg",
     "query": "Gwangjang Market Seoul"
   },
+  "korea-trip-package-vs-diy": {
+    "none": true,
+    "query": "Trip Packages Planning Korea"
+  },
   "korea-weather-by-season": {
     "file": "photo-korea-weather-by-season.jpg",
     "credit": "Photo: Alexey Komarov, CC BY 3.0, via Wikimedia Commons",
