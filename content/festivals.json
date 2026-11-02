@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-11-02",
  "source": "EngService2",
  "festivals": [
   {
@@ -10,15 +10,6 @@
    "address": "10 Insadong 5-gil, Jongno-gu, Seoul",
    "lat": 37.5728652641047,
    "lon": 126.985653181823
-  },
-  {
-   "id": "3435534",
-   "title": "Buyeo-gun Chungnam Gugak Group’s Saturday Show(부여군충남국악단 토요상설공연)",
-   "start": "2026-03-07",
-   "end": "2026-10-31",
-   "address": "충청남도 부여군 규암면 백제문로 388 Buyeo-gun Gugak Center",
-   "lat": 36.30442715710748,
-   "lon": 126.89939645578066
   },
   {
    "id": "3435973",
@@ -93,24 +84,6 @@
    "lon": 128.671582418
   },
   {
-   "id": "3487931",
-   "title": "Jeonju Hanok Village Traditional Performance Parade (한옥마을전통연희 퍼레이드-노상놀이야)",
-   "start": "2026-04-18",
-   "end": "2026-10-31",
-   "address": "44 Taejo-ro, Wansan-gu, Jeonju-si, Jeonbuk-do",
-   "lat": 35.8141717863,
-   "lon": 127.1500212472
-  },
-  {
-   "id": "3112035",
-   "title": "Night of Light Show (나오라쇼)",
-   "start": "2026-04-25",
-   "end": "2026-10-31",
-   "address": "127 Sogeumsan-gil, Jijeong-myeon, Wonju-si, Gangwon-do",
-   "lat": 37.3645764311,
-   "lon": 127.8340379931
-  },
-  {
    "id": "1751075",
    "title": "Hongseong Namdang Port Jumbo Shrimp Festival (홍성남당항 대하축제)",
    "start": "2026-09-04",
@@ -118,24 +91,6 @@
    "address": "1-1 Namdanghang-ro 213beon-gil, Seobu-myeon, Hongseong-gun, Chungcheongnam-do",
    "lat": 36.5388309018,
    "lon": 126.4722831164
-  },
-  {
-   "id": "3358416",
-   "title": "Hantangang Garden Festa (포천 한탄강 가든페스타)",
-   "start": "2026-09-12",
-   "end": "2026-11-01",
-   "address": "832 Changdong-ro, Gwanin-myeon, Pocheon-si, Gyeonggi-do",
-   "lat": 38.0829307871,
-   "lon": 127.2085797227
-  },
-  {
-   "id": "1391047",
-   "title": "Gyeonggi Ceramics Biennale (경기도자비엔날레)",
-   "start": "2026-09-18",
-   "end": "2026-11-01",
-   "address": "263 Gyeongchung-daero 2697beon-gil, Icheon-si, Gyeonggi-do",
-   "lat": 37.2769208162,
-   "lon": 127.4237253326
   },
   {
    "id": "3364856",
@@ -154,33 +109,6 @@
    "address": "73 Simingongwon-ro, Busanjin-gu, Busan",
    "lat": 35.1655426683,
    "lon": 129.0558397915
-  },
-  {
-   "id": "716565",
-   "title": "Gyeongnam Goseong Dinosaur World Expo (경남고성공룡세계엑스포)",
-   "start": "2026-09-22",
-   "end": "2026-11-01",
-   "address": "1116 Danghangman-ro, Goseong-gun, Gyeongsangnam-do",
-   "lat": 35.0533072967,
-   "lon": 128.3915143393
-  },
-  {
-   "id": "3345719",
-   "title": "Seomjinggang Interntional Experimental Arts Festvial (섬진강국제실험예술제(SIEAF))",
-   "start": "2026-09-22",
-   "end": "2026-10-30",
-   "address": "1012 Seomjingang-ro, Jukgok-myeon, Gokseong-gun, Jeonnam-Gwangju",
-   "lat": 35.1919618078,
-   "lon": 127.3775139215
-  },
-  {
-   "id": "3562425",
-   "title": "Tripitaka Koreana Cultural Festival (대장경기록문화축제)",
-   "start": "2026-10-09",
-   "end": "2026-11-01",
-   "address": "1160 Gayasan-ro, Gaya-myeon, Hapcheon-gun, Gyeongsangnam-do",
-   "lat": 35.767343728,
-   "lon": 128.1364929393
   },
   {
    "id": "4122007",
@@ -210,15 +138,6 @@
    "lon": 126.5199494216
   },
   {
-   "id": "1853185",
-   "title": "Iksan Gukhwa Festival (익산천만송이국화축제)",
-   "start": "2026-10-23",
-   "end": "2026-11-01",
-   "address": "322 Hana-ro, Iksan-si, Jeonbuk-do",
-   "lat": 35.9492205972,
-   "lon": 126.9844539027
-  },
-  {
    "id": "1855864",
    "title": "Pohang Steel Art Festival (포항스틸아트페스티벌)",
    "start": "2026-10-24",
@@ -226,15 +145,6 @@
    "address": "78 Seonchak-ro, Buk-gu, Pohang-si, Gyeongsangbuk-do",
    "lat": 36.048642917,
    "lon": 129.3716116616
-  },
-  {
-   "id": "4116559",
-   "title": "Korea Maritime Mobility · Safety Expo (대한민국 해양 모빌리티･안전 엑스포)",
-   "start": "2026-10-26",
-   "end": "2026-10-28",
-   "address": "206 Chungjang-daero, Dong-gu, Busan",
-   "lat": 35.1175129767,
-   "lon": 129.0493834405
   },
   {
    "id": "3386385",
@@ -246,33 +156,6 @@
    "lon": 128.6205920321
   },
   {
-   "id": "3547117",
-   "title": "Hongseong Global BBQ Festival (홍성글로벌바비큐페스티벌)",
-   "start": "2026-10-29",
-   "end": "2026-11-01",
-   "address": "27 Amun-gil, Hongseong-eup, Hongseong-gun, Chungcheongnam-do",
-   "lat": 36.6017210412,
-   "lon": 126.6613891711
-  },
-  {
-   "id": "3544280",
-   "title": "100 Years Night Night Market (백년나이트 야시장)",
-   "start": "2026-10-30",
-   "end": "2026-10-31",
-   "address": "16 Hancheon-ro 144-gil, Gangbuk-gu, Seoul",
-   "lat": 37.641720888,
-   "lon": 127.0259140093
-  },
-  {
-   "id": "3337796",
-   "title": "International Ki Sports Festival (키스포츠페스티벌)",
-   "start": "2026-10-31",
-   "end": "2026-11-01",
-   "address": "180 Haeyang-ro 195beon-gil, Yeongdo-gu, Busan",
-   "lat": 35.0863911924,
-   "lon": 129.0767259912
-  },
-  {
    "id": "1244634",
    "title": "Masan Gagopa Chrysanthemum Festival (마산가고파국화축제)",
    "start": "2026-10-31",
@@ -280,24 +163,6 @@
    "address": "46-3 Wollam-dong 1(il)-ga, Masanhappo-gu, Changwon-si, Gyeongsangnam-do",
    "lat": 35.1867289,
    "lon": 128.5639269
-  },
-  {
-   "id": "3396183",
-   "title": "Yeosu Night Sea Fireworks Festival (여수밤바다 불꽃축제)",
-   "start": "2026-10-31",
-   "end": "2026-10-31",
-   "address": "1 Bangnamhoe-gil, Yeosu-si, Jeonnam-Gwangju Special Metropolitan City",
-   "lat": 34.7509493146,
-   "lon": 127.7470910959
-  },
-  {
-   "id": "3337753",
-   "title": "Young Mic Chungcheong Region Special Performance (청춘마이크 충청권 특별공연)",
-   "start": "2026-10-31",
-   "end": "2026-11-01",
-   "address": "30 Deokbeol-ro, Cheongwon-gu, Cheongju-si, Chungcheongbuk-do",
-   "lat": 36.6545173576,
-   "lon": 127.4913174723
   },
   {
    "id": "1398781",
@@ -316,15 +181,6 @@
    "address": "140 Gwanggyojungang-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do",
    "lat": 37.2858286641,
    "lon": 127.0594469415
-  },
-  {
-   "id": "3366992",
-   "title": "Goesan Gimjang Festival (괴산김장축제)",
-   "start": "2026-11-05",
-   "end": "2026-11-08",
-   "address": "92 Imkkeokjeong-ro, Goesan-eup, Goesan-gun, Chungcheongbuk-do",
-   "lat": 36.8145153033,
-   "lon": 127.7865237323
   },
   {
    "id": "1084180",
@@ -385,9 +241,18 @@
    "title": "Pohang International Fireworks Festival (포항국제불빛축제)",
    "start": "2026-11-19",
    "end": "2026-11-21",
-   "address": "Duho-dong, Buk-gu, Pohang-si, Gyeongsangbuk-do",
-   "lat": 36.017732,
-   "lon": 129.374477
+   "address": "48, Haean-ro, Buk-gu, Pohang-si, Gyeongsangbuk-do",
+   "lat": 36.0530051077,
+   "lon": 129.3775942753
+  },
+  {
+   "id": "4135883",
+   "title": "Busan Christmas Village (크리스마스 빌리지 부산)",
+   "start": "2026-11-26",
+   "end": "2026-12-25",
+   "address": "120 Suyeonggangbyeon-daero, Haeundae-gu, Busan",
+   "lat": 35.1710365257,
+   "lon": 129.1270845116
   },
   {
    "id": "2758139",
