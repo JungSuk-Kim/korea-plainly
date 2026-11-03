@@ -29,6 +29,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:Haedong_Yonggungsa_Temple,_Busan,_South_Korea.jpg",
     "query": "Haedong Yonggungsa Busan"
   },
+  "busan-with-kids": {
+    "none": true,
+    "query": "Busan Kids Easy Korea"
+  },
   "cash-cards-payments-korea": {
     "file": "photo-cash-cards-payments-korea.jpg",
     "credit": "Photo: No machine-readable author provided. IGEL assumed (based on copyright claims)., CC BY-SA 3.0, via Wikimedia Commons",
