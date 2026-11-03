@@ -1,0 +1,665 @@
+{
+  "title": "Korea in December, January and February: Weather and What to Do",
+  "intro": "Planning a winter trip to Korea? This guide covers Seoul temperatures, what to pack, and where to find lights, ski slopes and warming food.",
+  "hashtags": "#KoreaTravel #KoreaInWinter #SeoulTravel #KoreaWeather #WinterTravel",
+  "thumb": {
+    "big": "KOREA",
+    "mid": "IN WINTER",
+    "small": "WEATHER AND WHAT TO DO"
+  },
+  "maps": {
+    "winter-overview": {
+      "stops": [
+        {
+          "name": "Gyeongbokgung Palace",
+          "lat": 37.579754,
+          "lon": 126.9766818
+        },
+        {
+          "name": "Hallasan",
+          "lat": 33.3922451,
+          "lon": 126.4942816
+        }
+      ],
+      "route": false,
+      "note": "Winter highlights across Korea"
+    },
+    "winter-weather": {
+      "stops": [
+        {
+          "name": "Seoul",
+          "lat": 37.5666791,
+          "lon": 126.9782914
+        },
+        {
+          "name": "Busan",
+          "lat": 35.1799528,
+          "lon": 129.0752365
+        },
+        {
+          "name": "Jeju City",
+          "lat": 33.4998289,
+          "lon": 126.5313902
+        }
+      ],
+      "route": false,
+      "note": "Compare the mainland and southern weather"
+    },
+    "seoul-winter": {
+      "stops": [
+        {
+          "name": "Gyeongbokgung Palace",
+          "lat": 37.579754,
+          "lon": 126.9766818
+        },
+        {
+          "name": "Myeongdong",
+          "lat": 37.5627106,
+          "lon": 126.984707
+        },
+        {
+          "name": "Bosingak Pavilion",
+          "lat": 37.569818,
+          "lon": 126.9834316
+        }
+      ],
+      "route": false,
+      "note": "Winter sights and lights in Seoul"
+    },
+    "mountains-and-festivals": {
+      "stops": [],
+      "route": false,
+      "note": "Check resort and festival details before travel"
+    },
+    "south-and-east-coast": {
+      "stops": [
+        {
+          "name": "Hallasan",
+          "lat": 33.3922451,
+          "lon": 126.4942816
+        }
+      ],
+      "route": false,
+      "note": "A winter taste of the coast and Jeju"
+    }
+  },
+  "chapters": [
+    {
+      "name": "Intro",
+      "segments": [
+        {
+          "voice": "Three winter months in Korea: snowy palace roofs, Seoul lights, mountain festivals and hot street food, plus the packing advice to enjoy them.",
+          "show": [
+            {
+              "image": "photo-korea-in-january.jpg"
+            },
+            {
+              "image": "photo-christmas-new-year-seoul.jpg"
+            },
+            {
+              "image": "photo-korea-winter-festivals.jpg"
+            },
+            {
+              "image": "photo-korean-food-to-try.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "KOREA · DEC–FEB",
+            "title": "Winter, made simple"
+          }
+        },
+        {
+          "voice": "Here are the places and regions we will cover.",
+          "show": [
+            {
+              "map": "winter-overview"
+            }
+          ],
+          "label": {
+            "kicker": "THE BIG PICTURE",
+            "title": "Winter across Korea"
+          }
+        },
+        {
+          "voice": "Pack for the cold, and the season opens up.",
+          "show": [
+            {
+              "image": "photo-korea-ski-resorts-guide.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "START HERE",
+            "title": "Cold, bright days"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Before you go",
+      "segments": [
+        {
+          "voice": "First, pack for below-freezing nights in Seoul. Take a warm padded coat, thermal layers, gloves, a hat, a scarf and shoes with good grip.",
+          "show": [
+            {
+              "image": "photo-korea-packing-list.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "BEFORE YOU GO",
+            "title": "Dress for the cold"
+          }
+        },
+        {
+          "voice": "Second, check the forecast a few days before you leave. Averages are not a prediction, and a cold snap or strong wind can change how the day feels.",
+          "show": [
+            {
+              "image": "photo-seoraksan-hikes.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "BEFORE YOU GO",
+            "title": "Check the forecast"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Winter weather",
+      "segments": [
+        {
+          "voice": "These are the three cities to compare.",
+          "show": [
+            {
+              "map": "winter-weather"
+            }
+          ],
+          "label": {
+            "kicker": "WEATHER MAP",
+            "title": "Seoul, Busan and Jeju"
+          }
+        },
+        {
+          "voice": "In Seoul, average daytime highs are about two to five degrees from December through February. Average night lows range from about minus three to minus six, with January coldest.",
+          "show": [
+            {
+              "photo_query": "Seoul snowy palace",
+              "require": [
+                "seoul"
+              ]
+            },
+            {
+              "map": "winter-weather"
+            }
+          ],
+          "label": {
+            "kicker": "SEOUL",
+            "title": "Expect freezing nights"
+          }
+        },
+        {
+          "voice": "Cold waves can push Seoul down to minus ten degrees or lower at night. The dry north-westerly wind can make it feel several degrees colder than the thermometer says.",
+          "show": [
+            {
+              "photo_query": "Seoul winter street",
+              "require": [
+                "seoul"
+              ]
+            },
+            {
+              "map": "winter-weather"
+            }
+          ],
+          "label": {
+            "kicker": "COLD SNAPS",
+            "title": "Wind changes the feel"
+          }
+        },
+        {
+          "voice": "Busan is milder: average highs sit around eight to ten degrees, and lows around zero to two. It can still feel windy by the sea.",
+          "show": [
+            {
+              "image": "photo-seoul-vs-busan.jpg"
+            },
+            {
+              "map": "winter-weather"
+            }
+          ],
+          "label": {
+            "kicker": "BUSAN",
+            "title": "Milder, but windy"
+          }
+        },
+        {
+          "voice": "Jeju is also milder than Seoul, with average highs around nine to eleven degrees. It can be windy, and winter flights may be delayed by wind or snow.",
+          "show": [
+            {
+              "image": "photo-jeju-3-day-itinerary.jpg"
+            },
+            {
+              "map": "winter-weather"
+            }
+          ],
+          "label": {
+            "kicker": "JEJU",
+            "title": "Mild and breezy"
+          }
+        },
+        {
+          "voice": "Snow falls a few times most winters in Seoul, usually lightly. Gangwon Province gets more, and days are short: in December, it gets dark around half past five.",
+          "show": [
+            {
+              "photo_query": "Seoul winter snow",
+              "require": [
+                "seoul"
+              ]
+            },
+            {
+              "map": "winter-weather"
+            }
+          ],
+          "label": {
+            "kicker": "SNOW AND DAYLIGHT",
+            "title": "Plan outdoors for midday"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Seoul in winter",
+      "segments": [
+        {
+          "voice": "Here are three Seoul stops that show winter in the city.",
+          "show": [
+            {
+              "map": "seoul-winter"
+            }
+          ],
+          "label": {
+            "kicker": "SEOUL MAP",
+            "title": "Palaces and city lights"
+          }
+        },
+        {
+          "voice": "If snow falls, head to Gyeongbokgung or Changdeokgung early. Snow on the curved palace roofs is beautiful, but the paths may be cleared as the day goes on.",
+          "show": [
+            {
+              "photo_query": "Gyeongbokgung winter",
+              "require": [
+                "gyeongbokgung"
+              ]
+            },
+            {
+              "map": "seoul-winter"
+            }
+          ],
+          "label": {
+            "kicker": "PALACE MORNING",
+            "title": "Gyeongbokgung Palace"
+          }
+        },
+        {
+          "voice": "From late November, Seoul's department stores, shopping streets and squares put on lights. Take an evening walk through the city, then warm up with a hot snack.",
+          "show": [
+            {
+              "image": "regional-seoul-shopping-myeongdong-shopping-street.jpg"
+            },
+            {
+              "map": "seoul-winter"
+            }
+          ],
+          "label": {
+            "kicker": "AFTER DARK",
+            "title": "Myeongdong lights"
+          }
+        },
+        {
+          "voice": "New Year's Eve brings bell ringing at Bosingak. For winter comfort any day, look for hotteok, fish-shaped buns, roasted sweet potatoes or fish cakes in hot broth.",
+          "show": [
+            {
+              "photo_query": "Bosingak New Year",
+              "require": [
+                "bosingak"
+              ]
+            },
+            {
+              "image": "photo-korea-in-december.jpg"
+            },
+            {
+              "map": "seoul-winter"
+            }
+          ],
+          "label": {
+            "kicker": "NEW YEAR",
+            "title": "Bosingak and street food"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Mountains and festivals",
+      "segments": [
+        {
+          "voice": "Ski resorts and winter festivals are the big draws in the colder mountains.",
+          "show": [
+            {
+              "card": {
+                "big": "MOUNTAIN MAP",
+                "title": "Ski slopes and festivals",
+                "sub": "Korea Plainly"
+              }
+            }
+          ],
+          "label": {
+            "kicker": "MOUNTAIN MAP",
+            "title": "Ski slopes and festivals"
+          }
+        },
+        {
+          "voice": "Korea's ski season runs roughly from December to early March. Resorts are within an easy day trip of Seoul, and shuttle buses and English-speaking rental counters make a first ski day simpler.",
+          "show": [
+            {
+              "card": {
+                "big": "SKI DAY",
+                "title": "Yongpyong Resort",
+                "sub": "Korea Plainly"
+              }
+            }
+          ],
+          "label": {
+            "kicker": "SKI DAY",
+            "title": "Yongpyong Resort"
+          }
+        },
+        {
+          "voice": "In January, the Hwacheon Sancheoneo Ice Festival is known for fishing through holes in a frozen river, then having the catch grilled on the spot.",
+          "show": [
+            {
+              "photo_query": "Hwacheon ice festival",
+              "require": [
+                "hwacheon"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "JANUARY FESTIVAL",
+            "title": "Hwacheon ice fishing"
+          }
+        },
+        {
+          "voice": "Pyeongchang also holds a trout festival around the same time. Festival dates depend on the ice and are announced in autumn, so check the official website before booking.",
+          "show": [
+            {
+              "card": {
+                "big": "PYEONGCHANG",
+                "title": "Trout on the ice",
+                "sub": "Korea Plainly"
+              }
+            }
+          ],
+          "label": {
+            "kicker": "PYEONGCHANG",
+            "title": "Trout on the ice"
+          }
+        }
+      ]
+    },
+    {
+      "name": "South and east coast",
+      "segments": [
+        {
+          "voice": "These two stops offer a taste of winter beyond Seoul and the mountains.",
+          "show": [
+            {
+              "card": {
+                "big": "COAST AND ISLAND",
+                "title": "Two winter options",
+                "sub": "Korea Plainly"
+              }
+            }
+          ],
+          "label": {
+            "kicker": "COAST AND ISLAND",
+            "title": "Two winter options"
+          }
+        },
+        {
+          "voice": "On the east coast, winter and early spring are snow crab season. Yeongdeok and Uljin are among the towns serving it steamed, with crab butter mixed into fried rice at the end.",
+          "show": [
+            {
+              "photo_query": "Yeongdeok snow crab",
+              "require": [
+                "yeongdeok"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "EAST COAST",
+            "title": "Yeongdeok snow crab"
+          }
+        },
+        {
+          "voice": "Jeju is milder than the mainland. Look for camellias and seasonal tangerines; Hallasan may be snow-covered, so a winter hike needs proper gear.",
+          "show": [
+            {
+              "photo_query": "Hallasan winter",
+              "require": [
+                "hallasan"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "JEJU ISLAND",
+            "title": "Camellias and Hallasan"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Getting around",
+      "segments": [
+        {
+          "voice": "For a ski day, shuttle buses from Seoul can make getting to a resort straightforward. Confirm the current schedule and booking details before you travel.",
+          "show": [
+            {
+              "image": "photo-seoul-bus-guide.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "GETTING AROUND",
+            "title": "Check ski shuttles"
+          }
+        },
+        {
+          "voice": "Keep plans flexible if you are flying to Jeju. Wind or snow can delay flights, and mountain trails may close or require crampons after snowfall.",
+          "show": [
+            {
+              "image": "photo-ktx-train-guide.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "TRAVEL PLANS",
+            "title": "Leave room for changes"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Good to know",
+      "segments": [
+        {
+          "voice": "Korea's heating is strong indoors, so layers are useful: take one off when you step inside. The air is dry outside and in heated rooms, so pack lip balm and moisturiser.",
+          "show": [
+            {
+              "image": "photo-korean-cafe-etiquette.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "COMFORT",
+            "title": "Layers and dry air"
+          }
+        },
+        {
+          "voice": "Hand warmers are sold in convenience stores. Keep one in a pocket for outdoor sightseeing, especially when the wind makes a cold day feel harsher.",
+          "show": [
+            {
+              "image": "photo-korean-convenience-stores-compared.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "WARM UP",
+            "title": "A pocket-sized helper"
+          }
+        },
+        {
+          "voice": "Some winter days are hazy with fine dust. Check an air quality app before planning a long day outside, and check the weather again before mountain walks.",
+          "show": [
+            {
+              "image": "photo-korea-travel-apps.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "CHECK FIRST",
+            "title": "Air and trail conditions"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Mistakes to avoid",
+      "segments": [
+        {
+          "voice": "Avoid these four winter surprises.",
+          "show": [
+            {
+              "list": {
+                "heading": "Watch for",
+                "items": [
+                  "Icy shaded paths",
+                  "Seollal closures and sold-out transport",
+                  "Closed or icy mountain trails",
+                  "Changing crab prices"
+                ]
+              }
+            }
+          ],
+          "label": {
+            "kicker": "MISTAKES TO AVOID",
+            "title": "Four things to watch"
+          }
+        },
+        {
+          "voice": "Walk carefully on icy pavements, steps and hills. Around Seollal, some shops close and trains or buses can sell out. Check trail conditions and use crampons if required. Snow crab prices change with the catch.",
+          "show": [
+            {
+              "image": "photo-korea-travel-mistakes.jpg"
+            },
+            {
+              "image": "regional-sokcho-shopping-sokcho-tourist-fishery-market.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "PLAN AHEAD",
+            "title": "Check conditions and dates"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Quick questions",
+      "segments": [
+        {
+          "voice": "How cold is Seoul? Average daytime highs are about two to five degrees, and average nights about minus three to minus six. Cold snaps can reach minus ten or lower.",
+          "show": [
+            {
+              "photo_query": "Seoul winter weather",
+              "require": [
+                "seoul"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "How cold is Seoul?"
+          }
+        },
+        {
+          "voice": "Is winter a good time to visit? Yes, if you like crisp weather, lights, skiing, festivals and warming food, and do not mind packing for the cold.",
+          "show": [
+            {
+              "image": "photo-korea-in-february.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "Is winter worth visiting?"
+          }
+        },
+        {
+          "voice": "Does it snow in Seoul? A few times most winters, usually lightly. The mountains of Gangwon Province get far more snow.",
+          "show": [
+            {
+              "photo_query": "Gangwon winter snow",
+              "require": [
+                "gangwon"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "Does Seoul get snow?"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Summary",
+      "segments": [
+        {
+          "voice": "The short version: pack warm layers and shoes with grip, check the forecast, enjoy Seoul's lights and food, and head to the mountains for snow or festivals.",
+          "show": [
+            {
+              "list": {
+                "heading": "Winter trip checklist",
+                "items": [
+                  "Dress warmly",
+                  "Check weather and air quality",
+                  "Plan for lights, food or snow",
+                  "Keep travel plans flexible"
+                ]
+              }
+            },
+            {
+              "image": "photo-korea-in-august.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "YOUR WINTER PLAN",
+            "title": "Ready for Korea"
+          }
+        },
+        {
+          "voice": "The full guide, with maps and links for every stop, is free at Korea Plainly dot com. The link is at the top of the description. If this helped, subscribe for more plain, practical guides to Korea.",
+          "show": [
+            {
+              "image": "regional-busan-culture-haedong-yonggungsa-temple.jpg"
+            },
+            {
+              "card": {
+                "big": "KOREA PLAINLY",
+                "title": "The full guide is in the description",
+                "sub": "korea-plainly.com"
+              }
+            }
+          ],
+          "label": {
+            "kicker": "MORE FROM US",
+            "title": "Korea Plainly"
+          }
+        }
+      ]
+    }
+  ],
+  "article": "korea-winter-travel-guide",
+  "music": "Easy Lemon",
+  "fallback": ""
+}
