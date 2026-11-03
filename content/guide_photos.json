@@ -30,8 +30,9 @@
     "query": "Haedong Yonggungsa Busan"
   },
   "busan-with-kids": {
-    "none": true,
-    "retry": true,
+    "file": "photo-busan-with-kids.jpg",
+    "credit": "Photo: bryan..., CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gamcheon_Culture_Village_Busan_(30809158777).jpg",
     "query": "Gamcheon Culture Village Busan"
   },
   "cash-cards-payments-korea": {
