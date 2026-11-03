@@ -167,5 +167,17 @@
     "poster": "img/video-korea-packing-list.jpg",
     "description": "Korea Packing List: What to Bring in Every Season: the short version of our guide.",
     "caption": "Watch the one-minute version"
-  }
+  },
+  "korea-winter-travel-guide": [
+    {
+      "youtube": "SElTmhw6JUM",
+      "title": "Korea in December, January and February: Weather and What to Do",
+      "uploaded": "2026-11-03T17:21:18+09:00",
+      "seconds": 359,
+      "poster": "img/video-korea-winter-travel-guide-long.jpg",
+      "format": "long",
+      "description": "Korea in December, January and February: Weather and What to Do: the full guide as a video.",
+      "caption": "Watch the whole guide, with maps (6 minutes)"
+    }
+  ]
 }
