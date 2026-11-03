@@ -31,7 +31,8 @@
   },
   "busan-with-kids": {
     "none": true,
-    "query": "Busan Kids Easy Korea"
+    "retry": true,
+    "query": "Gamcheon Culture Village Busan"
   },
   "cash-cards-payments-korea": {
     "file": "photo-cash-cards-payments-korea.jpg",
