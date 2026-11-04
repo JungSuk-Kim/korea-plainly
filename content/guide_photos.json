@@ -493,6 +493,10 @@
     "source": "",
     "query": "street food Myeongdong Seoul"
   },
+  "korean-traditional-markets": {
+    "none": true,
+    "query": "Visiting Traditional Markets Korea"
+  },
   "korean-won-notes-coins": {
     "file": "photo-korean-won-notes-coins.jpg",
     "credit": "Photo: Stck w, CC BY-SA 4.0, via Wikimedia Commons",

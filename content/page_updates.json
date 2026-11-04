@@ -252,8 +252,8 @@
     "updated": "2026-10-27"
   },
   "korea-festivals.html": {
-    "hash": "3b006e0e720e",
-    "updated": "2026-11-02"
+    "hash": "29b268597dfa",
+    "updated": "2026-11-04"
   },
   "korea-in-april.html": {
     "hash": "9f7b5daa5280",
@@ -368,8 +368,8 @@
     "updated": "2026-11-02"
   },
   "korea-winter-travel-guide.html": {
-    "hash": "e21f8b5f3a61",
-    "updated": "2026-10-30"
+    "hash": "7f576ac63de7",
+    "updated": "2026-11-04"
   },
   "korean-atm-guide.html": {
     "hash": "17e0e7eef41a",
@@ -426,6 +426,10 @@
   "korean-street-food-guide.html": {
     "hash": "74edd0d003ef",
     "updated": "2026-10-31"
+  },
+  "korean-traditional-markets.html": {
+    "hash": "48746ff90204",
+    "updated": null
   },
   "korean-won-notes-coins.html": {
     "hash": "a7ccab10c31d",
