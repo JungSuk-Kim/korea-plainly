@@ -179,5 +179,14 @@
       "description": "Korea in December, January and February: Weather and What to Do: the full guide as a video.",
       "caption": "Watch the whole guide, with maps (6 minutes)"
     }
-  ]
+  ],
+  "korea-in-february": {
+    "youtube": "IBu_Y2JxwKk",
+    "title": "Korea in February: Pack Smart, Plan Seollal",
+    "uploaded": "2026-11-04T16:26:24+09:00",
+    "seconds": 41,
+    "poster": "img/video-korea-in-february.jpg",
+    "description": "Korea in February: Pack Smart, Plan Seollal: the short version of our guide.",
+    "caption": "Watch the one-minute version"
+  }
 }
