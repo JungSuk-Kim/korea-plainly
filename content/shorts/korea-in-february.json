@@ -1,0 +1,56 @@
+{
+  "article": "korea-in-february",
+  "fallback": "photo-korea-in-february.jpg",
+  "title": "Korea in February: Pack Smart, Plan Seollal",
+  "summary": "Korea in February shifts from deep winter toward early spring. Learn what to pack, how to plan around Seollal travel, and where to look for the first blossoms.",
+  "hashtags": "#Korea #KoreaTravel #Seollal #Jeju #FebruaryInKorea",
+  "music": "Carefree",
+  "slides": [
+    {
+      "kicker": "KOREA",
+      "title": "February: Pack Layers",
+      "sub": "Cold early days, milder afternoons",
+      "voice": "Korea in February swings from winter to spring. Pack layers.",
+      "photo_query": "Korea February winter weather",
+      "require": [
+        "korea",
+        "winter"
+      ]
+    },
+    {
+      "kicker": "PACK",
+      "title": "Three Cold-Weather Basics",
+      "sub": "Warm coat, removable layers, grippy shoes",
+      "voice": "Bring a warm coat, removable layers, and grippy shoes. Early February and mountain days stay cold.",
+      "photo_query": "winter coat layers grippy shoes Korea",
+      "require": [
+        "coat",
+        "shoes"
+      ]
+    },
+    {
+      "kicker": "SEOLLAL",
+      "title": "Book Intercity Trips Early",
+      "sub": "Trains and buses sell out weeks ahead",
+      "voice": "Around Seollal, trains and buses between cities sell out weeks ahead. Book early or stay put on the busiest days.",
+      "image": "photo-ktx-train-guide.jpg"
+    },
+    {
+      "kicker": "LATE FEB",
+      "title": "Look For Jeju Blossoms",
+      "sub": "First plum blossoms near Seogwipo",
+      "voice": "Late February can bring the first plum blossoms around Seogwipo. Jeju feels springlike while Seoul can still need winter coats.",
+      "photo_query": "Seogwipo Jeju plum blossoms Korea",
+      "require": [
+        "seogwipo",
+        "plum"
+      ]
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
