@@ -199,6 +199,10 @@
     "hanbok-rental-guide": {
       "at": "2026-11-03T18:03:13+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzggdrhswo24"
+    },
+    "korean-traditional-markets": {
+      "at": "2026-11-04T07:59:40+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzhv3h4cwp24"
     }
   },
   "bluesky_videos": {
@@ -657,6 +661,10 @@
     "hanbok-rental-guide": {
       "at": "2026-11-03T18:03:49+00:00",
       "ref": "1261611360380213_122112104415509276"
+    },
+    "korean-traditional-markets": {
+      "at": "2026-11-04T07:59:46+00:00",
+      "ref": "1261611360380213_122112298377509276"
     }
   },
   "threads": {
@@ -839,6 +847,10 @@
     "hanbok-rental-guide": {
       "at": "2026-11-03T18:04:00+00:00",
       "ref": "17949266457073750"
+    },
+    "korean-traditional-markets": {
+      "at": "2026-11-04T07:59:58+00:00",
+      "ref": "18108238370252441"
     }
   }
 }
