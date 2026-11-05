@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Wed, 04 Nov 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Thu, 05 Nov 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Korea’s Express and Intercity Buses: A Simple Guide</title>
+<link>https://korea-plainly.com/korea-intercity-bus-guide.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/korea-intercity-bus-guide.html</guid>
+<pubDate>Thu, 05 Nov 2026 08:00:00 +0000</pubDate>
+<description>Learn the difference between express and intercity buses in Korea, where to book tickets, how to find your platform, and what to expect on the journey.</description>
+</item>
 <item>
 <title>Visiting Korean Traditional Markets: What to Know</title>
 <link>https://korea-plainly.com/korean-traditional-markets.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/dmz-tour-guide.html</guid>
 <pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
 <description>DMZ tours from Seoul compared: coach tours, Paju's own shuttle from Imjingak and the DMZ train, plus the 2026 JSA status, passport rules and Monday closures.</description>
-</item>
-<item>
-<title>Best Time to Visit Korea: Month-by-Month Guide and What Month Autumn Starts</title>
-<link>https://korea-plainly.com/best-time-to-visit-korea.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/best-time-to-visit-korea.html</guid>
-<pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
-<description>Best months to visit South Korea, what month autumn starts, blossom and leaf timing, holidays to plan around and quieter months, with a guide to every month.</description>
 </item>
 </channel>
 </rss>

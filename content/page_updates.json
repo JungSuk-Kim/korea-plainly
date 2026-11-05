@@ -252,8 +252,8 @@
     "updated": "2026-10-27"
   },
   "korea-festivals.html": {
-    "hash": "29b268597dfa",
-    "updated": "2026-11-04"
+    "hash": "384f725c3081",
+    "updated": "2026-11-05"
   },
   "korea-in-april.html": {
     "hash": "9f7b5daa5280",
@@ -268,8 +268,8 @@
     "updated": "2026-10-30"
   },
   "korea-in-february.html": {
-    "hash": "455d5055b6dc",
-    "updated": "2026-11-02"
+    "hash": "3e0102aee246",
+    "updated": "2026-11-05"
   },
   "korea-in-january.html": {
     "hash": "14775982f989",
@@ -302,6 +302,10 @@
   "korea-in-september.html": {
     "hash": "a5987a6855c8",
     "updated": "2026-11-02"
+  },
+  "korea-intercity-bus-guide.html": {
+    "hash": "01edc3fbf7ae",
+    "updated": null
   },
   "korea-money-exchange.html": {
     "hash": "299ca112aa0c",

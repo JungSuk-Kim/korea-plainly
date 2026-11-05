@@ -263,6 +263,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:Gyeonghoeru_(Royal_Banquet_Hall)_at_Gyeongbokgung_Palace,_Seoul.jpg",
     "manual": true
   },
+  "korea-intercity-bus-guide": {
+    "none": true,
+    "query": "Express Intercity Buses Korea"
+  },
   "korea-money-exchange": {
     "file": "photo-korea-money-exchange.jpg",
     "credit": "Photo: Christian Bolz (크리스티안 볼츠), CC BY-SA 4.0, via Wikimedia Commons",
