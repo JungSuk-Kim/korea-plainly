@@ -211,6 +211,10 @@
     "korea-intercity-bus-guide": {
       "at": "2026-11-05T08:30:27+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzkhbga7vn25"
+    },
+    "dmz-tour-guide": {
+      "at": "2026-11-05T18:16:47+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzlhzuj4yn25"
     }
   },
   "bluesky_videos": {
@@ -697,6 +701,10 @@
     "korea-intercity-bus-guide": {
       "at": "2026-11-05T08:30:33+00:00",
       "ref": "1261611360380213_122112614505509276"
+    },
+    "dmz-tour-guide": {
+      "at": "2026-11-05T18:16:57+00:00",
+      "ref": "1261611360380213_122112765363509276"
     }
   },
   "threads": {
@@ -891,6 +899,10 @@
     "korea-intercity-bus-guide": {
       "at": "2026-11-05T08:30:44+00:00",
       "ref": "17969552448207060"
+    },
+    "dmz-tour-guide": {
+      "at": "2026-11-05T18:17:10+00:00",
+      "ref": "18648235486024737"
     }
   }
 }
