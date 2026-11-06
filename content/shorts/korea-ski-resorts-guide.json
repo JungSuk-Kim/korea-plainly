@@ -1,0 +1,63 @@
+{
+  "article": "korea-ski-resorts-guide",
+  "fallback": "photo-korea-ski-resorts-guide.jpg",
+  "title": "Korea Skiing From Seoul: Easy Shuttle Tips",
+  "summary": "Planning a ski day trip from Seoul? Learn where shuttle tours pick up, which nearby resort to choose, and what to bring.",
+  "hashtags": "#Korea #KoreaSkiing #Seoul #SkiTrip #KoreaTravel",
+  "music": "Laid Back Guitars",
+  "slides": [
+    {
+      "kicker": "KOREA SKIING",
+      "title": "Book A Shuttle",
+      "sub": "Skip the gear hassle",
+      "voice": "Korea skiing from Seoul? Skip gear stress. Book a shuttle.",
+      "image": "photo-korea-ski-resorts-guide.jpg"
+    },
+    {
+      "kicker": "TIP 1",
+      "title": "Three Pickup Areas",
+      "sub": "Hongdae, Myeongdong, Gangnam",
+      "voice": "Shuttles pick up in Hongdae, Myeongdong, and Gangnam; many include rentals.",
+      "photo_query": "ski shuttle bus Seoul Korea resort",
+      "require": [
+        "shuttle"
+      ]
+    },
+    {
+      "kicker": "TIP 2",
+      "title": "Closest Major Resort",
+      "sub": "Konjiam: forty minutes to an hour",
+      "voice": "Konjiam is about forty minutes to an hour from southern Seoul, the closest major resort.",
+      "photo_query": "Konjiam Resort ski Korea",
+      "require": [
+        "konjiam"
+      ]
+    },
+    {
+      "kicker": "TIP 3",
+      "title": "Bring These Layers",
+      "sub": "Gloves, warm layers, and socks",
+      "voice": "Rent skis and boots there; bring gloves, warm layers, and socks.",
+      "photo_query": "ski rental equipment Korea resort",
+      "require": [
+        "ski"
+      ]
+    },
+    {
+      "kicker": "TIP 4",
+      "title": "Beat Weekend Queues",
+      "sub": "Choose a weekday if you can",
+      "voice": "Choose a weekday: popular resorts can have long weekend lift queues.",
+      "photo_query": "ski lift queue Korea resort",
+      "require": [
+        "ski"
+      ]
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
