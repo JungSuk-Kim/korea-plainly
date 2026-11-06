@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Thu, 05 Nov 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Fri, 06 Nov 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Luggage Storage and Delivery in Korea: A Practical Guide</title>
+<link>https://korea-plainly.com/luggage-storage-korea.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/luggage-storage-korea.html</guid>
+<pubDate>Fri, 06 Nov 2026 08:00:00 +0000</pubDate>
+<description>Find out where to store bags at Korean subway stations, airports and hotels, and how to arrange luggage delivery between the airport and your accommodation.</description>
+</item>
 <item>
 <title>Korea’s Express and Intercity Buses: A Simple Guide</title>
 <link>https://korea-plainly.com/korea-intercity-bus-guide.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/gungnamji-pond-buyeo.html</guid>
 <pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
 <description>A local's guide to Gungnamji in Buyeo, the Baekje kingdom's 7th-century royal pond: the island pavilion, willow walks, the July lotus festival, night views and getting there.</description>
-</item>
-<item>
-<title>DMZ Tours from Seoul: What You'll See and How to Choose One</title>
-<link>https://korea-plainly.com/dmz-tour-guide.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/dmz-tour-guide.html</guid>
-<pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
-<description>DMZ tours from Seoul compared: coach tours, Paju's own shuttle from Imjingak and the DMZ train, plus the 2026 JSA status, passport rules and Monday closures.</description>
 </item>
 </channel>
 </rss>
