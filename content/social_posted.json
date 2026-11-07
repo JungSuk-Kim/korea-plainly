@@ -227,6 +227,10 @@
     "korean-public-holidays": {
       "at": "2026-11-07T07:45:49+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzpfpgialz2s"
+    },
+    "seoul-vs-busan": {
+      "at": "2026-11-07T16:37:15+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzqdfq4gxc2d"
     }
   },
   "bluesky_videos": {
@@ -745,6 +749,10 @@
     "korean-public-holidays": {
       "at": "2026-11-07T07:45:55+00:00",
       "ref": "1261611360380213_122113244199509276"
+    },
+    "seoul-vs-busan": {
+      "at": "2026-11-07T16:37:20+00:00",
+      "ref": "1261611360380213_122113362507509276"
     }
   },
   "threads": {
@@ -955,6 +963,10 @@
     "korean-public-holidays": {
       "at": "2026-11-07T07:46:04+00:00",
       "ref": "18638877607032941"
+    },
+    "seoul-vs-busan": {
+      "at": "2026-11-07T16:37:31+00:00",
+      "ref": "17914346838472339"
     }
   }
 }
