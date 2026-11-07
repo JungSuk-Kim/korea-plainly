@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Fri, 06 Nov 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Sat, 07 Nov 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Korean Public Holidays and How They Affect Your Trip</title>
+<link>https://korea-plainly.com/korean-public-holidays.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/korean-public-holidays.html</guid>
+<pubDate>Sat, 07 Nov 2026 08:00:00 +0000</pubDate>
+<description>Learn what to expect during Seollal, Chuseok and other Korean public holidays, from transport crowds to restaurant closures and seasonal events.</description>
+</item>
 <item>
 <title>Luggage Storage and Delivery in Korea: A Practical Guide</title>
 <link>https://korea-plainly.com/luggage-storage-korea.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/hanbok-rental-guide.html</guid>
 <pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
 <description>Hanbok rental near Gyeongbokgung Palace: where the shops are, 2026 prices, how free palace entry in hanbok works, closing days and what to wear underneath.</description>
-</item>
-<item>
-<title>Gungnamji Pond in Buyeo: Korea's Oldest Garden Pond, by Day and Night</title>
-<link>https://korea-plainly.com/gungnamji-pond-buyeo.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/gungnamji-pond-buyeo.html</guid>
-<pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
-<description>A local's guide to Gungnamji in Buyeo, the Baekje kingdom's 7th-century royal pond: the island pavilion, willow walks, the July lotus festival, night views and getting there.</description>
 </item>
 </channel>
 </rss>
