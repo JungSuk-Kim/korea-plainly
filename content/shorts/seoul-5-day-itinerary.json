@@ -1,0 +1,59 @@
+{
+  "article": "seoul-5-day-itinerary",
+  "fallback": "photo-seoul-5-day-itinerary.jpg",
+  "title": "Seoul 5 Day Itinerary: Easy, No-Zigzag Plan",
+  "summary": "A relaxed five-day Seoul itinerary that groups each day by area, with a palace walk, a Han River evening and an easy day-trip choice.",
+  "hashtags": "#Seoul #SeoulTravel #Korea #KoreaTravel #SeoulItinerary",
+  "music": "Easy Lemon",
+  "slides": [
+    {
+      "kicker": "SEOUL 5 DAYS",
+      "title": "Five Days, No Zigzag",
+      "sub": "Keep each day in one area",
+      "voice": "Five days in Seoul? Avoid zigzagging. Group stops.",
+      "image": "photo-seoul-5-day-itinerary.jpg"
+    },
+    {
+      "kicker": "ROUTE PLAN",
+      "title": "Five Days, Five Zones",
+      "sub": "North · markets · west · east · day trip",
+      "voice": "Five days, five zones: palace north, central markets, west, east, then one day trip.",
+      "photo_query": "Seoul district map",
+      "require": [
+        "seoul",
+        "map"
+      ]
+    },
+    {
+      "kicker": "DAY 1",
+      "title": "Palaces To The Stream",
+      "sub": "Palace, hanok lanes, Insadong, stream",
+      "voice": "Start early at Gyeongbokgung, then walk Bukchon and Insadong. Finish beside Cheonggyecheon.",
+      "image": "regional-seoul-culture-gyeongbokgung-palace.jpg"
+    },
+    {
+      "kicker": "RIVER EVENING",
+      "title": "Make The River Your Evening",
+      "sub": "Yeouido or Mangwon; fried chicken riverside",
+      "voice": "Walk Yeouido or Mangwon Hangang Park in the evening; locals order fried chicken to the riverbank.",
+      "photo_query": "Make The River Your Evening Korea"
+    },
+    {
+      "kicker": "DAY 5",
+      "title": "Pick One Day Trip",
+      "sub": "Suwon solo; DMZ by organised tour",
+      "voice": "Suwon is an easy solo day trip. The DMZ needs an organised tour; bring your passport.",
+      "photo_query": "Hwaseong Fortress Suwon",
+      "require": [
+        "hwaseong",
+        "suwon"
+      ]
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
