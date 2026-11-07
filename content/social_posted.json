@@ -223,6 +223,10 @@
     "best-time-to-visit-korea": {
       "at": "2026-11-06T17:40:20+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mznwhm5gd42p"
+    },
+    "korean-public-holidays": {
+      "at": "2026-11-07T07:45:49+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzpfpgialz2s"
     }
   },
   "bluesky_videos": {
@@ -737,6 +741,10 @@
     "best-time-to-visit-korea": {
       "at": "2026-11-06T17:41:45+00:00",
       "ref": "1261611360380213_122113060797509276"
+    },
+    "korean-public-holidays": {
+      "at": "2026-11-07T07:45:55+00:00",
+      "ref": "1261611360380213_122113244199509276"
     }
   },
   "threads": {
@@ -943,6 +951,10 @@
     "best-time-to-visit-korea": {
       "at": "2026-11-06T17:41:57+00:00",
       "ref": "18116163677122472"
+    },
+    "korean-public-holidays": {
+      "at": "2026-11-07T07:46:04+00:00",
+      "ref": "18638877607032941"
     }
   }
 }
