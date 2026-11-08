@@ -235,6 +235,10 @@
     "chimaek-fried-chicken-beer": {
       "at": "2026-11-08T07:57:39+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzrwtk354p2q"
+    },
+    "korean-phrases-cheat-sheet": {
+      "at": "2026-11-08T16:46:47+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzsufp67ce2k"
     }
   },
   "bluesky_videos": {
@@ -777,6 +781,10 @@
     "chimaek-fried-chicken-beer": {
       "at": "2026-11-08T07:59:13+00:00",
       "ref": "1261611360380213_122113537125509276"
+    },
+    "korean-phrases-cheat-sheet": {
+      "at": "2026-11-08T16:46:54+00:00",
+      "ref": "1261611360380213_122113656255509276"
     }
   },
   "threads": {
@@ -995,6 +1003,10 @@
     "chimaek-fried-chicken-beer": {
       "at": "2026-11-08T07:59:23+00:00",
       "ref": "18134086996766224"
+    },
+    "korean-phrases-cheat-sheet": {
+      "at": "2026-11-08T16:47:04+00:00",
+      "ref": "18097226426661250"
     }
   }
 }
