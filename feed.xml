@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Sat, 07 Nov 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Sun, 08 Nov 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Chimaek: Korean Fried Chicken and Beer for Beginners</title>
+<link>https://korea-plainly.com/chimaek-fried-chicken-beer.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/chimaek-fried-chicken-beer.html</guid>
+<pubDate>Sun, 08 Nov 2026 08:00:00 +0000</pubDate>
+<description>A practical guide to ordering chimaek in Korea, from chicken styles and useful Korean phrases to riverside picnics in Seoul and Busan.</description>
+</item>
 <item>
 <title>Korean Public Holidays and How They Affect Your Trip</title>
 <link>https://korea-plainly.com/korean-public-holidays.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/jeju-in-winter.html</guid>
 <pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
 <description>Jeju in December, January and February: weather and wind, tangerine picking, camellias, snowy Hallasan hikes, tips with kids, driving and flight delays.</description>
-</item>
-<item>
-<title>Hanbok Rental in Seoul Near Gyeongbokgung Palace: Prices, Free Entry and Tips</title>
-<link>https://korea-plainly.com/hanbok-rental-guide.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/hanbok-rental-guide.html</guid>
-<pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
-<description>Hanbok rental near Gyeongbokgung Palace: where the shops are, 2026 prices, how free palace entry in hanbok works, closing days and what to wear underneath.</description>
 </item>
 </channel>
 </rss>

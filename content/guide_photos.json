@@ -41,6 +41,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:Seoul_namdaemun_market_2005-08-07.jpg",
     "query": "Namdaemun Market Seoul"
   },
+  "chimaek-fried-chicken-beer": {
+    "none": true,
+    "query": "Chimaek Fried Chicken Korea"
+  },
   "christmas-new-year-seoul": {
     "file": "photo-christmas-new-year-seoul.jpg",
     "credit": "Photo: Ken Eckert, CC BY-SA 4.0, via Wikimedia Commons",
