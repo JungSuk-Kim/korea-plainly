@@ -231,6 +231,10 @@
     "seoul-vs-busan": {
       "at": "2026-11-07T16:37:15+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzqdfq4gxc2d"
+    },
+    "chimaek-fried-chicken-beer": {
+      "at": "2026-11-08T07:57:39+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzrwtk354p2q"
     }
   },
   "bluesky_videos": {
@@ -313,6 +317,10 @@
     "jHcZOGcYw2E": {
       "at": "2026-11-06T17:40:24+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mznwhorpoi2r"
+    },
+    "BO_rom7_XcY": {
+      "at": "2026-11-08T07:57:41+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzrwtlpmvu2s"
     }
   },
   "instagram_videos": {
@@ -375,6 +383,10 @@
     "jHcZOGcYw2E": {
       "at": "2026-11-06T17:41:25+00:00",
       "ref": "18097904063459583"
+    },
+    "BO_rom7_XcY": {
+      "at": "2026-11-08T07:58:57+00:00",
+      "ref": "17952480966342249"
     }
   },
   "facebook_videos": {
@@ -457,6 +469,10 @@
     "jHcZOGcYw2E": {
       "at": "2026-11-06T17:40:30+00:00",
       "ref": "999904066505018"
+    },
+    "BO_rom7_XcY": {
+      "at": "2026-11-08T07:57:47+00:00",
+      "ref": "1344447060999055"
     }
   },
   "threads_videos": {
@@ -539,6 +555,10 @@
     "jHcZOGcYw2E": {
       "at": "2026-11-06T17:41:38+00:00",
       "ref": "17978126700153729"
+    },
+    "BO_rom7_XcY": {
+      "at": "2026-11-08T07:59:09+00:00",
+      "ref": "18119880931790790"
     }
   },
   "facebook": {
@@ -753,6 +773,10 @@
     "seoul-vs-busan": {
       "at": "2026-11-07T16:37:20+00:00",
       "ref": "1261611360380213_122113362507509276"
+    },
+    "chimaek-fried-chicken-beer": {
+      "at": "2026-11-08T07:59:13+00:00",
+      "ref": "1261611360380213_122113537125509276"
     }
   },
   "threads": {
@@ -967,6 +991,10 @@
     "seoul-vs-busan": {
       "at": "2026-11-07T16:37:31+00:00",
       "ref": "17914346838472339"
+    },
+    "chimaek-fried-chicken-beer": {
+      "at": "2026-11-08T07:59:23+00:00",
+      "ref": "18134086996766224"
     }
   }
 }
