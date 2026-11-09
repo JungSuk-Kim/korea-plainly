@@ -1,0 +1,52 @@
+{
+  "article": "korea-winter-travel-guide",
+  "fallback": "photo-korea-in-january.jpg",
+  "title": "Korea In January: What To Wear And Do",
+  "summary": "Korea in January can bring freezing Seoul nights and icy pavements. Learn what to pack and where to find more snow.",
+  "hashtags": "#Korea #KoreaTravel #KoreaInJanuary #SeoulTravel #WinterTravel",
+  "music": "Wallpaper",
+  "slides": [
+    {
+      "kicker": "JANUARY",
+      "title": "January: Pack Layers",
+      "sub": "Seoul cold snaps can reach −10°C",
+      "voice": "Korea in January can hit minus ten. Pack layers.",
+      "image": "photo-korea-in-january.jpg"
+    },
+    {
+      "kicker": "TIP 1",
+      "title": "Dress For The Cold",
+      "sub": "Padded coat, thermals, gloves, grippy shoes",
+      "voice": "Wear a long padded coat over thermal layers. Add gloves, a hat, scarf, and shoes with good grip.",
+      "photo_query": "winter clothing padded coat gloves thermal layers",
+      "require": [
+        "winter",
+        "coat"
+      ]
+    },
+    {
+      "kicker": "TIP 2",
+      "title": "Watch Your Step",
+      "sub": "Shaded pavements can be icy",
+      "voice": "Indoors is strongly heated, so dress in layers you can remove. Watch for ice on shaded pavements.",
+      "photo_query": "icy pavement Seoul Korea winter",
+      "require": [
+        "seoul",
+        "winter"
+      ]
+    },
+    {
+      "kicker": "SNOW DAY",
+      "title": "Head To Gangwon",
+      "sub": "More mountain snow than Seoul",
+      "voice": "For a snow day, head to Gangwon: its mountains get more snow than Seoul. Ski resorts run roughly December to early March.",
+      "image": "photo-korea-ski-resorts-guide.jpg"
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
