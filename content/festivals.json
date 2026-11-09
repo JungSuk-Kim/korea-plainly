@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02",
+ "updated": "2026-11-09",
  "source": "EngService2",
  "festivals": [
   {
@@ -84,42 +84,6 @@
    "lon": 128.671582418
   },
   {
-   "id": "1751075",
-   "title": "Hongseong Namdang Port Jumbo Shrimp Festival (홍성남당항 대하축제)",
-   "start": "2026-09-04",
-   "end": "2026-11-08",
-   "address": "1-1 Namdanghang-ro 213beon-gil, Seobu-myeon, Hongseong-gun, Chungcheongnam-do",
-   "lat": 36.5388309018,
-   "lon": 126.4722831164
-  },
-  {
-   "id": "3364856",
-   "title": "Han River Walk (한강수계 걷기행사)",
-   "start": "2026-09-19",
-   "end": "2026-11-07",
-   "address": "174-3 Daegok-ri, Gapyeong-eup, Gapyeong-gun, Gyeonggi-do",
-   "lat": 37.823886379,
-   "lon": 127.5134174634
-  },
-  {
-   "id": "4110303",
-   "title": "Moonlit Night Exercise Busan Challenge (달밤에체조 부산 챌린지)",
-   "start": "2026-09-19",
-   "end": "2026-11-07",
-   "address": "73 Simingongwon-ro, Busanjin-gu, Busan",
-   "lat": 35.1655426683,
-   "lon": 129.0558397915
-  },
-  {
-   "id": "4122007",
-   "title": "Yeosu National Heritage Media Art Festival: Jinnamgwan Guesthouse (국가유산 미디어아트 여수 진남관)",
-   "start": "2026-10-09",
-   "end": "2026-11-08",
-   "address": "11 Dongmun-ro, Yeosu-si, Jeonnam-Gwangju",
-   "lat": 34.7413433829,
-   "lon": 127.7365765798
-  },
-  {
    "id": "4126454",
    "title": "Sium Sium Morning (쉬엄쉬엄모닝)",
    "start": "2026-10-18",
@@ -127,15 +91,6 @@
    "address": "83-19 Seonsa-ro, Gangdong-gu, Seoul",
    "lat": 37.5452481279,
    "lon": 127.1179813872
-  },
-  {
-   "id": "1738785",
-   "title": "Grand Chrysanthemum Festival (대한민국 국향대전)",
-   "start": "2026-10-23",
-   "end": "2026-11-08",
-   "address": "27 Gonjea-ro, Hampyeong-gun, Jeonnam-Gwangju Special Metropolitan City",
-   "lat": 35.0561887483,
-   "lon": 126.5199494216
   },
   {
    "id": "1855864",
@@ -156,51 +111,6 @@
    "lon": 128.6205920321
   },
   {
-   "id": "1244634",
-   "title": "Masan Gagopa Chrysanthemum Festival (마산가고파국화축제)",
-   "start": "2026-10-31",
-   "end": "2026-11-08",
-   "address": "46-3 Wollam-dong 1(il)-ga, Masanhappo-gu, Changwon-si, Gyeongsangnam-do",
-   "lat": 35.1867289,
-   "lon": 128.5639269
-  },
-  {
-   "id": "1398781",
-   "title": "Cheongsong Apple Festival (청송사과축제)",
-   "start": "2026-11-04",
-   "end": "2026-11-08",
-   "address": "484-1, Wolmak-ri, Cheongsong-eup, Cheongsong-gun, Gyeongsangbuk-do",
-   "lat": 36.4340985891,
-   "lon": 129.0521130873
-  },
-  {
-   "id": "4116386",
-   "title": "Beautysum Suwon (뷰티썸 수원)",
-   "start": "2026-11-05",
-   "end": "2026-11-07",
-   "address": "140 Gwanggyojungang-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do",
-   "lat": 37.2858286641,
-   "lon": 127.0594469415
-  },
-  {
-   "id": "1084180",
-   "title": "Jeju Olle Walking Festival (제주올레걷기축제)",
-   "start": "2026-11-05",
-   "end": "2026-11-07",
-   "address": "1141 Jocheon-ri, Jocheon-eup, Jeju-si, Jeju-do",
-   "lat": 33.5405232248,
-   "lon": 126.6421943052
-  },
-  {
-   "id": "3505777",
-   "title": "Busan Illustration Fair V.6 (부산일러스트레이션페어V.6)",
-   "start": "2026-11-06",
-   "end": "2026-11-08",
-   "address": "55 APEC-ro, Haeundae-gu, Busan",
-   "lat": 35.1687048508,
-   "lon": 129.1354937071
-  },
-  {
    "id": "697445",
    "title": "Gimhae Buncheong Ceramics Festival (김해분청도자기축제)",
    "start": "2026-11-06",
@@ -208,24 +118,6 @@
    "address": "551, Jangyu-ro, Gimhae-si, Gyeongsangnam-do",
    "lat": 35.183247103,
    "lon": 128.8287850953
-  },
-  {
-   "id": "4088990",
-   "title": "Gumi Ramyun Festival (구미라면 축제)",
-   "start": "2026-11-06",
-   "end": "2026-11-08",
-   "address": "Yeokjeon-ro, Gumi-si, Gyeongsangbuk-do",
-   "lat": 36.1309792684,
-   "lon": 128.3323188678
-  },
-  {
-   "id": "4066947",
-   "title": "Peace On: Dam (평화온담)",
-   "start": "2026-11-07",
-   "end": "2026-11-07",
-   "address": "104-1 Hwangnam-dong, Gyeongju-si, Gyeongsangbuk-do",
-   "lat": 35.8353125,
-   "lon": 129.2180625
   },
   {
    "id": "4116443",
@@ -246,6 +138,24 @@
    "lon": 129.3775942753
   },
   {
+   "id": "3554627",
+   "title": "The Souvenir Fair (대한민국 관광기념품 박람회)",
+   "start": "2026-11-20",
+   "end": "2026-11-22",
+   "address": "281 Eulji-ro, Jung-gu, Seoul",
+   "lat": 37.5660539726,
+   "lon": 127.0095547691
+  },
+  {
+   "id": "2513248",
+   "title": "E-World Illumination (이월드 일루미네이션)",
+   "start": "2026-11-21",
+   "end": "2027-02-28",
+   "address": "200 Duryugongwon-ro, Dalseo-gu, Daegu",
+   "lat": 35.8550095336,
+   "lon": 128.5600983436
+  },
+  {
    "id": "4135883",
    "title": "Busan Christmas Village (크리스마스 빌리지 부산)",
    "start": "2026-11-26",
@@ -253,6 +163,60 @@
    "address": "120 Suyeonggangbyeon-daero, Haeundae-gu, Busan",
    "lat": 35.1710365257,
    "lon": 129.1270845116
+  },
+  {
+   "id": "3565954",
+   "title": "Haeundae Light Festival (해운대 빛축제)",
+   "start": "2026-11-29",
+   "end": "2027-01-18",
+   "address": "280 Haeundaehaebyeon-ro, Haeundae-gu, Busan",
+   "lat": 35.1594965784,
+   "lon": 129.1625766016
+  },
+  {
+   "id": "1866962",
+   "title": "Lighting Festival at The Garden of Morning Calm (아침고요수목원 오색별빛정원전)",
+   "start": "2026-12-04",
+   "end": "2027-03-14",
+   "address": "432 Sumogwon-ro, Gapyeong-gun, Gyeonggi-do",
+   "lat": 37.7447847934,
+   "lon": 127.3525659127
+  },
+  {
+   "id": "3536904",
+   "title": "Oh Slow Vintage Christmas Market (오슬로우 빈티지 크리스마스 마켓)",
+   "start": "2026-12-04",
+   "end": "2026-12-20",
+   "address": "33 Wolmi-ro, Jemulpo-gu, Incheon",
+   "lat": 37.476568524,
+   "lon": 126.6144291728
+  },
+  {
+   "id": "3043397",
+   "title": "Gwanghwamun Market (광화문 마켓)",
+   "start": "2026-12-11",
+   "end": "2027-01-10",
+   "address": "B172 Sejong-daero, Jongno-gu, Seoul",
+   "lat": 37.5716249337,
+   "lon": 126.9767679222
+  },
+  {
+   "id": "1121607",
+   "title": "Seoul Lantern Festival (서울빛초롱축제)",
+   "start": "2026-12-11",
+   "end": "2027-01-31",
+   "address": "Taepyeongno 1(il)-ga, Jung-gu, Seoul",
+   "lat": 37.569204,
+   "lon": 126.977633
+  },
+  {
+   "id": "4135897",
+   "title": "Seoul Light Gwanghwamun (서울라이트 광화문)",
+   "start": "2026-12-11",
+   "end": "2027-01-03",
+   "address": "1-68 Sejongno, Jongno-gu, Seoul",
+   "lat": 37.5716249337,
+   "lon": 126.9767679222
   },
   {
    "id": "2758139",
@@ -264,6 +228,42 @@
    "lon": 126.982887725
   },
   {
+   "id": "293277",
+   "title": "Homigot Sunrise Festival (호미곶한민족해맞이축전)",
+   "start": "2026-12-31",
+   "end": "2027-01-01",
+   "address": "136 Haemaji-ro, Nam-gu, Pohang-si, Gyeongsangbuk-do",
+   "lat": 36.0760611496,
+   "lon": 129.5665059024
+  },
+  {
+   "id": "1117592",
+   "title": "Jeongdongjin Sunrise Festival (정동진 해맞이 행사)",
+   "start": "2026-12-31",
+   "end": "2027-01-01",
+   "address": "515 Gyeongpo-ro, Gangneung-si, Gangwon-do",
+   "lat": 37.8052239456,
+   "lon": 128.9067457491
+  },
+  {
+   "id": "1490063",
+   "title": "Yeosu Hyangiram Sunrise Festival (여수향일암일출제)",
+   "start": "2026-12-31",
+   "end": "2027-01-01",
+   "address": "60 Hyangiram-ro, Dolsan-eup, Yeosu-si, Jeonnam-Gwangju Special Metropolitan City",
+   "lat": 34.5937941765,
+   "lon": 127.8029879311
+  },
+  {
+   "id": "661861",
+   "title": "Pyeongchang Trout Festival (평창송어축제)",
+   "start": "2027-01-01",
+   "end": "2027-01-31",
+   "address": "3562, Gyeonggang-ro, Jinbu-myeon, Pyeongchang-gun, Gangwon-do",
+   "lat": 37.633179513,
+   "lon": 128.5569912325
+  },
+  {
    "id": "685135",
    "title": "Hwacheon Sancheoneo Ice Festival (얼음나라화천 산천어축제)",
    "start": "2027-01-09",
@@ -271,6 +271,24 @@
    "address": "137, Sancheoneo-gil, Hwacheon-eup, Hwacheon-gun, Gangwon-do",
    "lat": 38.1126243028,
    "lon": 127.7098811689
+  },
+  {
+   "id": "3310502",
+   "title": "Cheorwon Hantangang River Ice Trekking Festival (철원 한탄강 얼음트레킹 축제)",
+   "start": "2027-01-16",
+   "end": "2027-02-14",
+   "address": "208, Hantangang-gil, Dongsong-eup, Cheorwon-gun, Gangwon-do",
+   "lat": 38.2034447208,
+   "lon": 127.2700362977
+  },
+  {
+   "id": "892611",
+   "title": "Taebaeksan Mountain Snow Festival (태백산 눈축제)",
+   "start": "2027-01-31",
+   "end": "2027-02-08",
+   "address": "Sodo-dong, Taebaek-si, Gangwon-do",
+   "lat": 37.115737,
+   "lon": 128.949162
   }
  ]
 }
