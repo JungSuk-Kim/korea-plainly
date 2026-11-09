@@ -243,6 +243,10 @@
     "public-restrooms-korea": {
       "at": "2026-11-09T08:40:24+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzujovdcno2u"
+    },
+    "korea-new-year-sunrise": {
+      "at": "2026-11-09T21:03:37+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzvt7ucmaz2b"
     }
   },
   "bluesky_videos": {
@@ -329,6 +333,10 @@
     "BO_rom7_XcY": {
       "at": "2026-11-08T07:57:41+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzrwtlpmvu2s"
+    },
+    "EKSnEZxPeNE": {
+      "at": "2026-11-09T21:03:40+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3mzvt7wojwz2b"
     }
   },
   "instagram_videos": {
@@ -395,6 +403,10 @@
     "BO_rom7_XcY": {
       "at": "2026-11-08T07:58:57+00:00",
       "ref": "17952480966342249"
+    },
+    "EKSnEZxPeNE": {
+      "at": "2026-11-09T21:04:28+00:00",
+      "ref": "18093046322235273"
     }
   },
   "facebook_videos": {
@@ -481,6 +493,10 @@
     "BO_rom7_XcY": {
       "at": "2026-11-08T07:57:47+00:00",
       "ref": "1344447060999055"
+    },
+    "EKSnEZxPeNE": {
+      "at": "2026-11-09T21:03:47+00:00",
+      "ref": "2337088503733530"
     }
   },
   "threads_videos": {
@@ -567,6 +583,10 @@
     "BO_rom7_XcY": {
       "at": "2026-11-08T07:59:09+00:00",
       "ref": "18119880931790790"
+    },
+    "EKSnEZxPeNE": {
+      "at": "2026-11-09T21:04:41+00:00",
+      "ref": "18099566501110386"
     }
   },
   "facebook": {
@@ -793,6 +813,10 @@
     "public-restrooms-korea": {
       "at": "2026-11-09T08:40:30+00:00",
       "ref": "1261611360380213_122113836975509276"
+    },
+    "korea-new-year-sunrise": {
+      "at": "2026-11-09T21:04:47+00:00",
+      "ref": "1261611360380213_122114002239509276"
     }
   },
   "threads": {
@@ -1019,6 +1043,10 @@
     "public-restrooms-korea": {
       "at": "2026-11-09T08:40:42+00:00",
       "ref": "18648844912012414"
+    },
+    "korea-new-year-sunrise": {
+      "at": "2026-11-09T21:04:57+00:00",
+      "ref": "18401271616165262"
     }
   }
 }
