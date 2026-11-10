@@ -300,7 +300,8 @@
     "file": "photo-korea-pharmacy-guide.jpg",
     "credit": "Photo: Bonnielou2013 This photo was taken with Samsung Galaxy Note 4, CC BY-SA 4.0, via Wikimedia Commons",
     "source": "https://commons.wikimedia.org/wiki/File:Pharmacy_Jongno_2.jpg",
-    "query": "Pharmacy Seoul"
+    "query": "Yakguk pharmacy Korea",
+    "retry": true
   },
   "korea-public-transport-transfers": {
     "file": "photo-korea-public-transport-transfers.jpg",
