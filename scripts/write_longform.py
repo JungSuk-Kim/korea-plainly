@@ -6,8 +6,10 @@
 
 Writes content/longform/<slug>.json for scripts/make_longform.py and prints its path.
 The script follows the Seoul video's shape, the only long-form video viewers stayed with, and leads with the payoff:
-it opens on the best view and the signature food (3-4 quick shots), the first sentence promises what the viewer gets and the whole-route map follows within 15 seconds, then two
-"before you go" tips, one chapter per day or topic with a map of the stops, the other practical tips
+it opens on the best view and the signature food (3-4 quick shots), the first sentence promises what the viewer gets and the whole-route map follows within 15 seconds, then straight
+into the first day or part (no tips-only chapter: Nov 2026 retention fell from 73-80% at 30 s to 53-54% at 1 min while
+"Before you go" played), one chapter per day or topic with a map of the stops, the 1-2 must-know tips said at the stop
+where they matter, the other practical tips
 ("Good to know"), mistakes to avoid, quick questions and a summary, about 5-6 minutes of narration
 (Oct 2026: viewers of the 9-minute Jeju and Busan videos left within the first minute). Map stops are placed with OpenStreetMap's geocoder
 (Nominatim); a stop it cannot find is left off the map rather than guessed.
@@ -80,8 +82,10 @@ Structure (use these chapter names where they fit):
      order, with nothing wasted."). Never a greeting, the channel name or "In this video".
   2. one segment, at most 15 words, over the overview map of all stops (e.g. "Here's the whole route.").
   3. at most 1 more very short highlight segment (at most 10 words, one photo of a view or a dish), then a title card.
-- "Before you go": only the 2 tips a visitor most needs before the first stop (e.g. a closing day, the transport
-  card). Every other practical tip goes in "Good to know" near the end.
+- No "Before you go" chapter. After the Intro's title card go straight into the first day or part. The 1-2 tips a
+  visitor must know go inside the stop where they matter, as one short sentence in that stop's segment (e.g. "It's
+  closed on Tuesdays, so come another day." on the palace stop; the transport card on the first subway ride).
+  Every other practical tip goes in "Good to know" near the end.
 - One chapter per day or per main part of the article, each starting with a title card and that part's route map,
   then one segment per stop, each with a "label" naming the place.
 - "Getting around", "Good to know" (the remaining practical tips, 2-3 short segments), "Mistakes to avoid" (a list of 3-4, then a segment explaining them), "Quick questions" (2-3 Q&A
@@ -93,6 +97,7 @@ Structure (use these chapter names where they fit):
 Rules:
 - Narration: {min_words}-{max_words} words in total. Short spoken sentences, numbers as spoken, no emoji.
   English letters only: never write Korean script (say "show the driver the name on your map app" instead).
+- No chapter of only tips before the first stop: within 30 seconds the viewer must be at the first place.
 - Use only facts from the article. Never invent prices, times or dates; for things that change say "check before you go".
 - Every picture must show exactly what its segment talks about. Prefer a site photo when its description matches;
   otherwise a photo_query for that exact place. Never use one photo twice.
