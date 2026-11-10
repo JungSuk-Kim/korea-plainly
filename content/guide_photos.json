@@ -297,10 +297,13 @@
     "query": "Incheon Airport departure hall"
   },
   "korea-pharmacy-guide": {
-    "file": "photo-korea-pharmacy-guide.jpg",
-    "credit": "Photo: Bonnielou2013 This photo was taken with Samsung Galaxy Note 4, CC BY-SA 4.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Pharmacy_Jongno_2.jpg",
-    "query": "Yakguk pharmacy Korea"
+    "file": "photo-korea-emergency-help.jpg",
+    "credit": "Photo: Oleg Kurtsev, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoul_National_University_Hospital.jpg",
+    "manual": true,
+    "reject": [
+      "https://commons.wikimedia.org/wiki/File:Pharmacy_Jongno_2.jpg"
+    ]
   },
   "korea-public-transport-transfers": {
     "file": "photo-korea-public-transport-transfers.jpg",
