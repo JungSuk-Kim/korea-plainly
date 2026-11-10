@@ -104,8 +104,13 @@ Rules:
   Others: "Most first-timers waste day one in Seoul. Here's the fix.", "Busan in one day? Do it in this order."
   Never start with a greeting, the channel name, the series name, "In this video" or "Welcome", and do not just read
   out the video title or the slide title. The hook's on-screen "title" says the same promise in a few words.
-- What has worked best on our channel (Oct 2026): "Korea in November" (37 s, 4 slides) kept viewers best: 56% of
-  the video watched on average and 55% still there at the halfway point. Copy its shape exactly:
+- The hook must promise something the viewer gains (what to pack, wear or do, the order to do it). Never open with a
+  warning that something may be cancelled, closed or dangerous: "Ice Festivals Can Cancel" kept only 38% of viewers
+  past the first quarter. Put such cautions on slide 3 or later as "check before you go".
+- What has worked best on our channel (Nov 2026): "Korea in January: What to Pack and Do" (37 s, 6 slides, hook
+  "January: Pack For Seoul's Cold") is the best so far: 111% watched on average (viewers rewatch it), 113% still
+  there at the halfway point. "Korea in November" (37 s, 4 slides) is the other model: 56% watched on average.
+  Copy their shape exactly:
   hook = month or topic + the viewer's problem + a 2-word action ("Korea in November swings from autumn to winter.
   Pack layers."), then slide 2 immediately pays off that action with a concrete, countable answer ("Thin top, warm
   jumper, proper jacket"), not a general sentence. Each "voice" one or two short sentences, one plain useful fact
@@ -117,6 +122,7 @@ Rules:
   picture must show that exact thing (the clothes, the ticket, the dish), never a loosely related site photo.
   Slides 2 onwards: one concrete tip each, said in one or two short sentences, in the order a visitor would use them.
   Do not add an ending slide; it is added for you.
+- The video title says what the viewer gets ("What to Pack and Do"), never "Safety Tips" or a warning.
 - Narration ("voice"): warm, plain spoken English, like a friendly local. All slides together at most {max_words} words.
   Short sentences. Spell numbers as they are spoken. No hashtags or emoji in the voice.
 - On screen: "kicker" is 1-4 words in capitals (e.g. "DAY 1", "TIP 2", "BUSAN"); "title" at most 32 characters;
