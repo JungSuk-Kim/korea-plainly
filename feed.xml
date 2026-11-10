@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Mon, 09 Nov 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Tue, 10 Nov 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Buying Medicine in Korea: Pharmacies for Travellers</title>
+<link>https://korea-plainly.com/korea-pharmacy-guide.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/korea-pharmacy-guide.html</guid>
+<pubDate>Tue, 10 Nov 2026 08:00:00 +0000</pubDate>
+<description>How to find a pharmacy, explain common symptoms, buy basic medicine and get help with prescriptions while travelling in Korea.</description>
+</item>
 <item>
 <title>Public Restrooms in Korea: What to Know</title>
 <link>https://korea-plainly.com/public-restrooms-korea.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/korea-in-april.html</guid>
 <pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
 <description>Visiting Korea in April: cherry blossom season in Seoul and beyond, spring weather, fine dust, what to wear and how to beat the crowds.</description>
-</item>
-<item>
-<title>Sick in Korea? Pharmacies, Hospitals and Emergency Numbers</title>
-<link>https://korea-plainly.com/korea-emergency-help.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/korea-emergency-help.html</guid>
-<pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
-<description>What to do if you get ill or hurt in Korea: emergency numbers, free interpretation, pharmacies and late-night medicine, clinics, international hospital centres and costs.</description>
 </item>
 </channel>
 </rss>

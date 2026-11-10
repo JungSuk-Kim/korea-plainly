@@ -296,6 +296,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:Incheon_Airport3.JPG",
     "query": "Incheon Airport departure hall"
   },
+  "korea-pharmacy-guide": {
+    "none": true,
+    "query": "Buying Medicine Pharmacies Korea"
+  },
   "korea-public-transport-transfers": {
     "file": "photo-korea-public-transport-transfers.jpg",
     "credit": "Photo: LERK, CC BY-SA 4.0, via Wikimedia Commons",
