@@ -100,6 +100,12 @@ title
 description
 body_html
 thumbnail_alt
+bottom_line
+
+bottom_line: one or two sentences (under 45 words) of the
+specific takeaway for this topic, e.g. the two or three
+actions a visitor should remember. No generic wrap-ups
+such as "a little preparation helps" or "enjoy your trip".
 
 Requirements:
 
@@ -234,6 +240,13 @@ if not thumbnail_path.exists():
     )
 
 body_html = article["body_html"]
+
+# a specific takeaway from the model; no generic filler box if it is missing
+bottom_line = escape(str(article.get("bottom_line") or "").strip())
+bottom_html = (
+    f'<div class="tip">\n\n<strong>\nBottom line:\n</strong>\n\n{bottom_line}\n\n</div>\n'
+    if bottom_line else ""
+)
 
 # --------------------------------------------------
 # 6. V5 스타일 자동 글 생성
@@ -533,19 +546,7 @@ ALL GUIDES →
 
 {body_html}
 
-<div class="tip">
-
-<strong>
-Bottom line:
-</strong>
-
-A little preparation can make your
-time in Korea much easier.
-Keep this guide handy and enjoy
-exploring at your own pace.
-
-</div>
-
+{bottom_html}
 </article>
 
 </main>

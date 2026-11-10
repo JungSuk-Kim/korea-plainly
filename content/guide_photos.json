@@ -298,7 +298,8 @@
   },
   "korea-pharmacy-guide": {
     "none": true,
-    "query": "Buying Medicine Pharmacies Korea"
+    "query": "Pharmacy Seoul",
+    "retry": true
   },
   "korea-public-transport-transfers": {
     "file": "photo-korea-public-transport-transfers.jpg",
