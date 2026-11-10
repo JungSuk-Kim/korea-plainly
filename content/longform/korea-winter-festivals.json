@@ -1,0 +1,570 @@
+{
+  "title": "Korea Winter Festivals in January: Ice Fishing, Snow and Lights",
+  "intro": "Try ice fishing on a frozen river, see snow sculptures and follow lanterns through Seoul. This guide compares Korea’s winter festivals and explains how to plan around cold weather and changing ice conditions.",
+  "hashtags": "#KoreaTravel #WinterFestivals #Hwacheon #Seoul #KoreaInJanuary",
+  "thumb": {
+    "big": "ICE FISH",
+    "mid": "KOREA",
+    "small": "SNOW AND LIGHTS"
+  },
+  "maps": {
+    "overview": {
+      "stops": [
+        {
+          "name": "Seoul Lantern Festival",
+          "lat": 37.5722871,
+          "lon": 127.0367285
+        },
+        {
+          "name": "Garden of Morning Calm",
+          "lat": 37.7417282,
+          "lon": 127.3520162
+        }
+      ],
+      "route": false,
+      "note": "Festival locations across Korea; choose by interest and dates."
+    },
+    "gangwon": {
+      "stops": [],
+      "route": false,
+      "note": "These are separate festival options, not one route."
+    },
+    "lights": {
+      "stops": [
+        {
+          "name": "Cheonggyecheon",
+          "lat": 37.5722871,
+          "lon": 127.0367285
+        },
+        {
+          "name": "Gwanghwamun Square",
+          "lat": 37.5727839,
+          "lon": 126.9768558
+        },
+        {
+          "name": "Garden of Morning Calm",
+          "lat": 37.7417282,
+          "lon": 127.3520162
+        }
+      ],
+      "route": false,
+      "note": "City lights and a separate garden day trip."
+    }
+  },
+  "chapters": [
+    {
+      "name": "Intro",
+      "segments": [
+        {
+          "voice": "Four winter festivals bring ice fishing, snow sculptures, Seoul lanterns and grilled trout. Here are the best picks, how to reach them and what to check before you go.",
+          "show": [
+            {
+              "photo_query": "Hwacheon frozen river festival",
+              "require": [
+                "hwacheon"
+              ]
+            },
+            {
+              "photo_query": "Sancheoneo grilled trout",
+              "require": [
+                "sancheoneo"
+              ]
+            },
+            {
+              "photo_query": "Taebaek snow sculptures",
+              "require": [
+                "taebaek"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "KOREA · JANUARY",
+            "title": "Ice, Snow and Lanterns"
+          }
+        },
+        {
+          "voice": "Here are the festival locations, from Gangwon’s frozen rivers to Seoul’s city lights.",
+          "show": [
+            {
+              "map": "overview"
+            }
+          ],
+          "label": {
+            "kicker": "THE BIG PICTURE",
+            "title": "Where to go"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Gangwon Ice and Snow Festivals",
+      "segments": [
+        {
+          "voice": "Start with the famous ice festival, then choose another event if snow, skiing or a quieter local feel matters more to you.",
+          "show": [
+            {
+              "card": {
+                "big": "GANGWON",
+                "title": "Four festival choices",
+                "sub": "Pick the experience that fits your trip"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "These are alternatives spread across the province, not stops on one easy day route.",
+          "show": [
+            {
+              "card": {
+                "big": "GANGWON ICE AND SNOW",
+                "title": "Gangwon Ice and Snow Festivals",
+                "sub": "Korea Plainly"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Hwacheon Sancheoneo Ice Festival is the best-known event. On the frozen river, visitors fish through small holes with short rods. There are also ice sculptures, sledging, ice football and, for the brave, bare-hand fishing.",
+          "show": [
+            {
+              "photo_query": "Hwacheon ice fishing",
+              "require": [
+                "hwacheon"
+              ]
+            },
+            {
+              "photo_query": "Hwacheon ice sculptures",
+              "require": [
+                "hwacheon"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "THE BIG FESTIVAL",
+            "title": "Hwacheon Ice Festival"
+          }
+        },
+        {
+          "voice": "Hwacheon usually runs for about three weeks in January. The twenty twenty-seven festival is planned for January ninth to thirty-first, but thin ice can change that. Check the official site a few days before travelling.",
+          "show": [
+            {
+              "photo_query": "Hwacheon festival river",
+              "require": [
+                "hwacheon"
+              ]
+            },
+            {
+              "photo_query": "Hwacheon festival food",
+              "require": [
+                "hwacheon"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DATES AND FOOD",
+            "title": "Plan for Hwacheon"
+          }
+        },
+        {
+          "voice": "The riverbank stalls can grill or prepare the fish you catch, and there is usually a fishing area for foreign visitors. From Seoul, take an intercity bus or book a day tour.",
+          "show": [
+            {
+              "photo_query": "Hwacheon trout grilling",
+              "require": [
+                "hwacheon"
+              ]
+            },
+            {
+              "photo_query": "Dong Seoul Bus Terminal",
+              "require": [
+                "dong"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "GETTING THERE",
+            "title": "Hwacheon from Seoul"
+          }
+        },
+        {
+          "voice": "Pyeongchang Trout Festival takes place in Jinbu, usually from late December into January. Try ice fishing, sledging, snowmobiles and ice slides. Jinbu is reachable by KTX on the Gangneung line, and skiing nearby makes a good pairing.",
+          "show": [
+            {
+              "image": "photo-korea-winter-festivals.jpg"
+            },
+            {
+              "image": "photo-ktx-train-guide.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "FISHING AND SKIING",
+            "title": "Pyeongchang Trout Festival"
+          }
+        },
+        {
+          "voice": "Choose Taebaek if you want snow more than fishing. Its festival is known for large snow sculptures, snow slides and a winter climb on Taebaeksan. It usually falls from late January into early February.",
+          "show": [
+            {
+              "photo_query": "Taebaek snow festival",
+              "require": [
+                "taebaek"
+              ]
+            },
+            {
+              "photo_query": "Taebaeksan winter climb",
+              "require": [
+                "taebaeksan"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "SNOW AND MOUNTAINS",
+            "title": "Taebaek Snow Festival"
+          }
+        },
+        {
+          "voice": "Inje is smaller and more local, with fishing for tiny bingeo on a frozen lake. It was not held from twenty twenty-four through twenty twenty-six because the lake did not freeze safely, so confirm that it is running before planning around it.",
+          "show": [
+            {
+              "photo_query": "Inje ice fishing festival",
+              "require": [
+                "inje"
+              ]
+            },
+            {
+              "photo_query": "Inje frozen lake",
+              "require": [
+                "inje"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "CHECK BEFORE GOING",
+            "title": "Inje Icefish Festival"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Seoul Lights and Winter Gardens",
+      "segments": [
+        {
+          "voice": "For a simpler evening, stay in the city. Or trade the streets for a garden day trip filled with winter lights.",
+          "show": [
+            {
+              "card": {
+                "big": "LIGHTS",
+                "title": "Seoul and beyond",
+                "sub": "An easy city evening or a garden trip"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Seoul’s lights are central; the Garden of Morning Calm is a separate trip outside the city.",
+          "show": [
+            {
+              "map": "lights"
+            }
+          ]
+        },
+        {
+          "voice": "The Seoul Lantern Festival lines Cheonggyecheon stream with illuminated lanterns and art. It is free and easy to reach on foot from Gwanghwamun or Jonggak stations. Go on a weekday evening to avoid the biggest crowds.",
+          "show": [
+            {
+              "image": "regional-seoul-travel-cheonggyecheon.jpg"
+            },
+            {
+              "image": "photo-korea-in-december.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "IN THE CITY",
+            "title": "Seoul Lantern Festival"
+          }
+        },
+        {
+          "voice": "The Seoul Winter Festa has also included a Christmas market in Gwanghwamun Square and an ice rink at Seoul Plaza. Dates change each year and are usually announced in late autumn, so check before you go.",
+          "show": [
+            {
+              "photo_query": "Gwanghwamun winter market",
+              "require": [
+                "gwanghwamun"
+              ]
+            },
+            {
+              "photo_query": "Seoul Plaza ice rink",
+              "require": [
+                "seoul"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "WINTER FESTA",
+            "title": "Markets and skating"
+          }
+        },
+        {
+          "voice": "For a bigger light display, the Garden of Morning Calm in Gapyeong decorates its paths, trees and hills. It is often combined with Nami Island on a day trip. Boseong’s green tea fields also light up in winter.",
+          "show": [
+            {
+              "photo_query": "Garden",
+              "require": [
+                "morning"
+              ]
+            },
+            {
+              "photo_query": "Boseong tea field lights",
+              "require": [
+                "boseong"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "LIGHTS OUTSIDE SEOUL",
+            "title": "Winter light gardens"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Getting around",
+      "segments": [
+        {
+          "voice": "For Hwacheon, buses from Dong Seoul take roughly two and a half to three hours each way. Leave early; an early bus gives you more time on the ice. Day tours are an easier option, especially on a busy weekend.",
+          "show": [
+            {
+              "image": "photo-seoul-bus-guide.jpg"
+            },
+            {
+              "image": "photo-korea-travel-apps.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "FROM SEOUL",
+            "title": "Buses and day tours"
+          }
+        },
+        {
+          "voice": "Pyeongchang’s Jinbu station is on the KTX Gangneung line. Taebaek is about three and a half to four hours from Seoul by bus or train. Check current routes and times on Naver Map or KakaoMap.",
+          "show": [
+            {
+              "image": "photo-korea-public-transport-transfers.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "TRAINS AND TIMINGS",
+            "title": "Plan each journey"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Good to know",
+      "segments": [
+        {
+          "voice": "Dress for standing still, not just walking. Wear thermal layers, a padded coat, waterproof boots, a hat and gloves. Sitting on ice gets cold quickly.",
+          "show": [
+            {
+              "image": "photo-korea-packing-list.jpg"
+            },
+            {
+              "image": "photo-korea-in-january.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DRESS WARMLY",
+            "title": "Cold-weather essentials"
+          }
+        },
+        {
+          "voice": "Heat packs are easy to find at convenience stores. Bring some cash for food stalls, although cards are widely accepted. Check festival details and what to wear before you set out.",
+          "show": [
+            {
+              "image": "photo-korean-convenience-stores-compared.jpg"
+            },
+            {
+              "image": "photo-cash-cards-payments-korea.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "PACK AND PAY",
+            "title": "Small things that help"
+          }
+        },
+        {
+          "voice": "If you can, choose a weekday. The first weekend is especially crowded, fishing areas can fill up, and fish tend to bite better in the morning. Book tickets, tours and busy-weekend return buses ahead.",
+          "show": [
+            {
+              "photo_query": "Hwacheon festival crowd",
+              "require": [
+                "hwacheon"
+              ]
+            },
+            {
+              "image": "photo-kakao-t-taxi-korea.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "TIMING AND BOOKINGS",
+            "title": "Beat the crowds"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Mistakes to avoid",
+      "segments": [
+        {
+          "voice": "Three avoidable mistakes: assuming the ice is safe, arriving late, and treating the Gangwon festivals as one short trip.",
+          "show": [
+            {
+              "list": {
+                "heading": "Avoid these",
+                "items": [
+                  "Assuming the ice is safe",
+                  "Arriving late",
+                  "Underestimating travel"
+                ]
+              }
+            },
+            {
+              "image": "photo-korea-travel-mistakes.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "PLAN AHEAD",
+            "title": "Three common mistakes"
+          }
+        },
+        {
+          "voice": "Ice festivals depend on safe ice; mild weather can delay, shorten or cancel them. Arrive early because fishing areas fill up. And check journey times: Hwacheon alone takes hours each way, so plan a full day.",
+          "show": [
+            {
+              "photo_query": "Hwacheon frozen fishing area",
+              "require": [
+                "hwacheon"
+              ]
+            },
+            {
+              "image": "photo-incheon-airport-to-seoul.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "WHY IT MATTERS",
+            "title": "Leave room for changes"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Quick questions",
+      "segments": [
+        {
+          "voice": "When is the Hwacheon festival? It is planned for January ninth to thirty-first, twenty twenty-seven, at the time of writing. It usually runs for about three weeks, but check the official site because dates can change.",
+          "show": [
+            {
+              "photo_query": "Hwacheon festival calendar",
+              "require": [
+                "hwacheon"
+              ]
+            },
+            {
+              "photo_query": "Hwacheon ice festival river",
+              "require": [
+                "hwacheon"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "When is Hwacheon?"
+          }
+        },
+        {
+          "voice": "Can you visit Hwacheon from Seoul in one day? Yes. Buses take about two and a half to three hours each way, so leave early. A tour is another option, especially on a busy weekend.",
+          "show": [
+            {
+              "photo_query": "Dong Seoul bus departure",
+              "require": [
+                "dong"
+              ]
+            },
+            {
+              "photo_query": "Hwacheon festival day trip",
+              "require": [
+                "hwacheon"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "Can I go for a day?"
+          }
+        },
+        {
+          "voice": "What if the ice is too thin? Fishing can be delayed, reduced or cancelled. Organisers post changes on their official sites. Check a few days ahead, then check again on the morning you travel.",
+          "show": [
+            {
+              "photo_query": "ice festival safety",
+              "require": [
+                "festival"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "What if the ice is thin?"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Summary",
+      "segments": [
+        {
+          "voice": "Choose Hwacheon for ice fishing, Pyeongchang for trout and skiing, Taebaek for snow, or Inje for a smaller event. For easy lights, stay in Seoul; check every festival’s dates and ice conditions.",
+          "show": [
+            {
+              "list": {
+                "heading": "Pick your winter festival",
+                "items": [
+                  "Hwacheon: ice fishing",
+                  "Pyeongchang: trout and skiing",
+                  "Taebaek: snow sculptures",
+                  "Seoul: lanterns and lights"
+                ]
+              }
+            },
+            {
+              "photo_query": "Seoul lantern festival stream",
+              "require": [
+                "seoul"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "YOUR QUICK RECAP",
+            "title": "Choose your festival"
+          }
+        },
+        {
+          "voice": "The full guide, with maps and links for every stop, is free at Korea Plainly dot com. The link is at the top of the description. If this helped, subscribe for more plain, practical guides to Korea.",
+          "show": [
+            {
+              "card": {
+                "big": "KOREA PLAINLY",
+                "title": "The full guide is in the description",
+                "sub": "korea-plainly.com"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "article": "korea-winter-festivals",
+  "music": "Wallpaper",
+  "fallback": "photo-korea-winter-festivals.jpg",
+  "thumb_photo": "photo-korea-winter-festivals.jpg"
+}
