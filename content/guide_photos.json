@@ -539,8 +539,8 @@
     "query": "KTX train"
   },
   "laundry-in-korea": {
-    "none": true,
-    "query": "Doing Laundry Coin Korea"
+    "retry": true,
+    "query": "Coin laundry Seoul"
   },
   "learn-hangul": {
     "file": "photo-learn-hangul.jpg",
