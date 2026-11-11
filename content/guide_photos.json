@@ -539,7 +539,7 @@
     "query": "KTX train"
   },
   "laundry-in-korea": {
-    "retry": true,
+    "none": true,
     "query": "Coin laundry Seoul"
   },
   "learn-hangul": {
