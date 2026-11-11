@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Tue, 10 Nov 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Wed, 11 Nov 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Doing Laundry in Korea: Coin Laundries and Hotel Options</title>
+<link>https://korea-plainly.com/laundry-in-korea.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/laundry-in-korea.html</guid>
+<pubDate>Wed, 11 Nov 2026 08:00:00 +0000</pubDate>
+<description>How to find and use a Korean self-service laundry, what to expect from hotel laundry, and how to avoid common washing and payment problems.</description>
+</item>
 <item>
 <title>Buying Medicine in Korea: Pharmacies for Travellers</title>
 <link>https://korea-plainly.com/korea-pharmacy-guide.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/korea-in-august.html</guid>
 <pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
 <description>Visiting Korea in August: the hottest month, typhoon season, peak holiday crowds, beaches and valleys, staying cool in the city and Liberation Day.</description>
-</item>
-<item>
-<title>Korea in April: Cherry Blossoms, Weather and What to Pack</title>
-<link>https://korea-plainly.com/korea-in-april.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/korea-in-april.html</guid>
-<pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
-<description>Visiting Korea in April: cherry blossom season in Seoul and beyond, spring weather, fine dust, what to wear and how to beat the crowds.</description>
 </item>
 </channel>
 </rss>

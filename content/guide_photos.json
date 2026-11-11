@@ -538,6 +538,10 @@
     "source": "https://commons.wikimedia.org/wiki/File:KOREAN_RAIL_KTX_TRAIN_AT_BUSAN_STATION_SOUTH_KOREA_OCT_2012_(8176085968).jpg",
     "query": "KTX train"
   },
+  "laundry-in-korea": {
+    "none": true,
+    "query": "Doing Laundry Coin Korea"
+  },
   "learn-hangul": {
     "file": "photo-learn-hangul.jpg",
     "credit": "Photo: Pinterpandai, CC BY-SA 4.0, via Wikimedia Commons",
