@@ -263,6 +263,10 @@
     "korea-in-march": {
       "at": "2026-11-11T18:02:23+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n22jzmr5hv22"
+    },
+    "korean-skincare-shopping-apps": {
+      "at": "2026-11-12T08:49:28+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n243lvgio22c"
     }
   },
   "bluesky_videos": {
@@ -849,6 +853,10 @@
     "korea-in-march": {
       "at": "2026-11-11T18:02:29+00:00",
       "ref": "1261611360380213_122114572407509276"
+    },
+    "korean-skincare-shopping-apps": {
+      "at": "2026-11-12T08:49:34+00:00",
+      "ref": "1261611360380213_122114736495509276"
     }
   },
   "threads": {
@@ -1095,6 +1103,10 @@
     "korea-in-march": {
       "at": "2026-11-11T18:02:41+00:00",
       "ref": "18026824631941464"
+    },
+    "korean-skincare-shopping-apps": {
+      "at": "2026-11-12T08:49:45+00:00",
+      "ref": "18115346891465567"
     }
   }
 }
