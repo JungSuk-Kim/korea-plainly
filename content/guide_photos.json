@@ -511,8 +511,10 @@
     ]
   },
   "korean-skincare-shopping-apps": {
-    "none": true,
-    "query": "Myeongdong shopping street Seoul"
+    "file": "photo-seoul-shopping-districts.jpg",
+    "credit": "Photo: Republic of Korea from Seoul, Republic of Korea, CC BY-SA 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Korea_Lotte_Fitin_Dongdaemun_04_(14622838761).jpg",
+    "manual": true
   },
   "korean-street-food-guide": {
     "file": "thumb-street-food.jpg",
