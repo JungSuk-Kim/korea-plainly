@@ -150,15 +150,28 @@
     "description": "Seoul in December: Christmas Lights and New Year's Eve: the short version of our guide.",
     "caption": "Watch the one-minute version"
   },
-  "korea-winter-festivals": {
-    "youtube": "Jv-RBf2mWho",
-    "title": "Korea in January: Winter Festivals and Safety Tips",
-    "uploaded": "2026-10-31T15:53:58+09:00",
-    "seconds": 39,
-    "poster": "img/video-korea-winter-festivals.jpg",
-    "description": "Korea in January: Winter Festivals and Safety Tips: the short version of our guide.",
-    "caption": "Watch the one-minute version"
-  },
+  "korea-winter-festivals": [
+    {
+      "youtube": "TLc-ukGZnAc",
+      "title": "Korea Winter Festivals in January: Ice Fishing, Snow and Lights",
+      "uploaded": "2026-11-10T17:42:50+09:00",
+      "seconds": 358,
+      "poster": "img/video-korea-winter-festivals-long.jpg",
+      "format": "long",
+      "description": "Korea Winter Festivals in January: Ice Fishing, Snow and Lights: the full guide as a video.",
+      "caption": "Watch the whole guide, with maps (6 minutes)"
+    },
+    {
+      "youtube": "Jv-RBf2mWho",
+      "title": "Korea in January: Winter Festivals and Safety Tips",
+      "uploaded": "2026-10-31T15:53:58+09:00",
+      "seconds": 39,
+      "poster": "img/video-korea-winter-festivals.jpg",
+      "description": "Korea in January: Winter Festivals and Safety Tips: the short version of our guide.",
+      "caption": "Short on time? The guide in under a minute",
+      "place": "end"
+    }
+  ],
   "korea-packing-list": {
     "youtube": "Frf65ratbjQ",
     "title": "Korea Packing List: What to Bring in Every Season",
