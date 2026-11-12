@@ -511,7 +511,7 @@
     ]
   },
   "korean-skincare-shopping-apps": {
-    "retry": true,
+    "none": true,
     "query": "Myeongdong shopping street Seoul"
   },
   "korean-street-food-guide": {
