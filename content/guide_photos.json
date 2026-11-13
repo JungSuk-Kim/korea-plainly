@@ -350,8 +350,9 @@
     ]
   },
   "korea-travel-advisory": {
-    "none": true,
-    "retry": true,
+    "file": "photo-korea-travel-advisory.jpg",
+    "credit": "Photo: Richard Mortel from Riyadh, Saudi Arabia, CC BY 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gwanghwamun_Square,_Seoul_(26259210037).jpg",
     "query": "Gwanghwamun Square Seoul"
   },
   "korea-travel-apps": {
