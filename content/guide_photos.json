@@ -551,7 +551,7 @@
     "query": "KTX train"
   },
   "laundry-in-korea": {
-    "retry": true,
+    "none": true,
     "query": "Laundromat Seoul"
   },
   "learn-hangul": {
@@ -611,7 +611,7 @@
     "manual": true
   },
   "public-restrooms-korea": {
-    "retry": true,
+    "none": true,
     "query": "Seoul subway station toilet"
   },
   "seollal-travel-tips": {
