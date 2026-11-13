@@ -551,8 +551,8 @@
     "query": "KTX train"
   },
   "laundry-in-korea": {
-    "none": true,
-    "query": "Coin laundry Seoul"
+    "retry": true,
+    "query": "Laundromat Seoul"
   },
   "learn-hangul": {
     "file": "photo-learn-hangul.jpg",
@@ -611,8 +611,8 @@
     "manual": true
   },
   "public-restrooms-korea": {
-    "none": true,
-    "query": "Public Restrooms Korea"
+    "retry": true,
+    "query": "Seoul subway station toilet"
   },
   "seollal-travel-tips": {
     "file": "photo-seollal-travel-tips.jpg",

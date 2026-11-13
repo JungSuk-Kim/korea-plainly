@@ -278,7 +278,8 @@ def main():
             continue
 
         placeholder = thumb.lower().endswith(".svg") or thumb.rsplit("/", 1)[-1] == "og-default.jpg"
-        if not placeholder and not entry.get("file"):
+        stock_retry = thumb.rsplit("/", 1)[-1] in SHARED_STOCK and entry.get("retry")
+        if not placeholder and not entry.get("file") and not stock_retry:
             # Already has a real thumbnail: only stop sharing the stock photo.
             s = read(page)
             og = re.search(r'property=["\']og:image["\'][^>]*content="[^"]*/([^"/]+)"', s, re.S)
