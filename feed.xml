@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Thu, 12 Nov 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Fri, 13 Nov 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Korea Travel Advisory: Safety and Official Updates</title>
+<link>https://korea-plainly.com/korea-travel-advisory.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/korea-travel-advisory.html</guid>
+<pubDate>Fri, 13 Nov 2026 08:00:00 +0000</pubDate>
+<description>Know where to check official safety notices in Korea, how to get help in an emergency, and what to do during severe weather, crowded events, or travel disruptions.</description>
+</item>
 <item>
 <title>Korean Skincare Shopping Apps for Visitors</title>
 <link>https://korea-plainly.com/korean-skincare-shopping-apps.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/korea-in-june.html</guid>
 <pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
 <description>Visiting Korea in June: early summer heat, when the rainy season starts, what to pack, beaches, hydrangeas on Jeju and indoor plans for wet days.</description>
-</item>
-<item>
-<title>Korea in July: Weather, Monsoon, Festivals and What to Do</title>
-<link>https://korea-plainly.com/korea-in-july.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/korea-in-july.html</guid>
-<pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
-<description>Visiting Korea in July: monsoon rain then summer heat, what to pack, beaches, the Boryeong Mud Festival, staying cool and planning around typhoons.</description>
 </item>
 </channel>
 </rss>

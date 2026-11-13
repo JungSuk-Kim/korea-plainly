@@ -349,6 +349,10 @@
       "https://commons.wikimedia.org/wiki/File:3_sly_old_cards!_(BM_1896,0501.1638).jpg"
     ]
   },
+  "korea-travel-advisory": {
+    "none": true,
+    "query": "Travel Advisory Safety Korea"
+  },
   "korea-travel-apps": {
     "file": "photo-korea-travel-apps.jpg",
     "credit": "Photo: Christian Bolz (크리스티안 볼츠), CC BY-SA 4.0, via Wikimedia Commons",
