@@ -351,7 +351,8 @@
   },
   "korea-travel-advisory": {
     "none": true,
-    "query": "Travel Advisory Safety Korea"
+    "retry": true,
+    "query": "Gwanghwamun Square Seoul"
   },
   "korea-travel-apps": {
     "file": "photo-korea-travel-apps.jpg",
