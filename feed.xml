@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Fri, 13 Nov 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Sat, 14 Nov 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Korean Hot Pot Guide: Jeongol, Budae-jjigae and Shabu-shabu for Visitors</title>
+<link>https://korea-plainly.com/korean-hot-pot-guide.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/korean-hot-pot-guide.html</guid>
+<pubDate>Sat, 14 Nov 2026 08:00:00 +0000</pubDate>
+<description>Learn how Korean jeongol, spicy budae-jjigae and shabu-shabu differ, what to order, how to eat them and where to try them in Seoul and beyond.</description>
+</item>
 <item>
 <title>Korea Travel Advisory: Safety and Official Updates</title>
 <link>https://korea-plainly.com/korea-travel-advisory.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/korea-in-may.html</guid>
 <pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
 <description>Visiting Korea in May: warm sunny weather, the Lotus Lantern Festival for Buddha's Birthday, Children's Day crowds, roses and what to pack.</description>
-</item>
-<item>
-<title>Korea in June: Weather, Rainy Season and What to Do</title>
-<link>https://korea-plainly.com/korea-in-june.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/korea-in-june.html</guid>
-<pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
-<description>Visiting Korea in June: early summer heat, when the rainy season starts, what to pack, beaches, hydrangeas on Jeju and indoor plans for wet days.</description>
 </item>
 </channel>
 </rss>
