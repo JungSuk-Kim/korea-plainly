@@ -496,9 +496,10 @@
     "query": "Gwangjang Market"
   },
   "korean-hot-pot-guide": {
-    "none": true,
-    "query": "Budae-jjigae",
-    "retry": true
+    "file": "photo-korean-hot-pot-guide.jpg",
+    "credit": "Photo: Jo del Corro, CC BY 2.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Budae-jjigae.jpg",
+    "query": "Budae-jjigae"
   },
   "korean-phrases-cheat-sheet": {
     "file": "photo-korean-phrases-cheat-sheet.jpg",
