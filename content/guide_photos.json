@@ -497,7 +497,8 @@
   },
   "korean-hot-pot-guide": {
     "none": true,
-    "query": "Hot Pot Jeongol Korea"
+    "query": "Budae-jjigae",
+    "retry": true
   },
   "korean-phrases-cheat-sheet": {
     "file": "photo-korean-phrases-cheat-sheet.jpg",
