@@ -6,7 +6,14 @@
 <description>Plain, practical English guides for first-time visitors to Korea.</description>
 <language>en</language>
 <atom:link href="https://korea-plainly.com/feed.xml" rel="self" type="application/rss+xml"/>
-<lastBuildDate>Sat, 14 Nov 2026 08:00:00 +0000</lastBuildDate>
+<lastBuildDate>Sun, 15 Nov 2026 08:00:00 +0000</lastBuildDate>
+<item>
+<title>Halal Korean Fried Chicken: What Visitors Should Know</title>
+<link>https://korea-plainly.com/halal-korean-fried-chicken.html</link>
+<guid isPermaLink="true">https://korea-plainly.com/halal-korean-fried-chicken.html</guid>
+<pubDate>Sun, 15 Nov 2026 08:00:00 +0000</pubDate>
+<description>How to find Korean-style fried chicken that meets your halal needs, what to ask about ingredients and fryers, and where to start in Seoul.</description>
+</item>
 <item>
 <title>Korean Hot Pot Guide: Jeongol, Budae-jjigae and Shabu-shabu for Visitors</title>
 <link>https://korea-plainly.com/korean-hot-pot-guide.html</link>
@@ -279,13 +286,6 @@
 <guid isPermaLink="true">https://korea-plainly.com/korea-in-september.html</guid>
 <pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
 <description>Visiting Korea in September: the end of summer heat, the Chuseok harvest holiday and how it affects travel, typhoons, early autumn flowers and festivals.</description>
-</item>
-<item>
-<title>Korea in May: Weather, Holidays and What to Do</title>
-<link>https://korea-plainly.com/korea-in-may.html</link>
-<guid isPermaLink="true">https://korea-plainly.com/korea-in-may.html</guid>
-<pubDate>Sat, 17 Oct 2026 08:00:00 +0000</pubDate>
-<description>Visiting Korea in May: warm sunny weather, the Lotus Lantern Festival for Buddha's Birthday, Children's Day crowds, roses and what to pack.</description>
 </item>
 </channel>
 </rss>
