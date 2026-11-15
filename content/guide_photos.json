@@ -85,7 +85,7 @@
     "query": "Donggung Palace Wolji Pond Gyeongju"
   },
   "halal-korean-fried-chicken": {
-    "retry": true,
+    "none": true,
     "query": "Yangnyeom chicken Korean fried chicken"
   },
   "hanbok-rental-guide": {
