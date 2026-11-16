@@ -1,0 +1,55 @@
+{
+  "article": "korea-tax-refund-guide",
+  "fallback": "photo-korea-tax-refund-guide.jpg",
+  "title": "Korea Tax Refund: Claim It At The Airport",
+  "summary": "Claim your Korea tax refund in the right order, from the airport kiosk to collecting your money. Learn what to bring and how much you can expect back.",
+  "hashtags": "#Korea #KoreaTravel #TaxRefund #IncheonAirport #TravelTips",
+  "music": "Daily Beetle",
+  "slides": [
+    {
+      "kicker": "AIRPORT REFUND",
+      "title": "Claim In The Right Order",
+      "sub": "Korea airport tax refund steps",
+      "voice": "Korea airport refunds are easy to miss. Claim in order.",
+      "image": "photo-korea-tax-refund-guide.jpg"
+    },
+    {
+      "kicker": "STEP 1",
+      "title": "Before You Check Bags",
+      "sub": "Kiosk → customs check → check-in",
+      "voice": "Before check-in, scan your passport and receipts. If customs requests the goods, show them before checking your bags.",
+      "photo_query": "Incheon Airport tax refund kiosk",
+      "require": [
+        "incheon",
+        "refund"
+      ]
+    },
+    {
+      "kicker": "STEP 2",
+      "title": "Bring These To The Shop",
+      "sub": "Physical passport; unused goods; 15,000 won minimum",
+      "voice": "Keep goods unused; carry your physical passport. One participating-shop purchase must reach fifteen thousand won.",
+      "photo_query": "South Korea passport tax free shopping",
+      "require": [
+        "passport"
+      ]
+    },
+    {
+      "kicker": "STEP 3",
+      "title": "Collect After Security",
+      "sub": "Airside kiosk or desk; about 3–8% back",
+      "voice": "After passport control, collect at an airside kiosk or desk. Expect roughly three to eight percent back.",
+      "photo_query": "Incheon Airport tax refund collection counter",
+      "require": [
+        "incheon",
+        "refund"
+      ]
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
