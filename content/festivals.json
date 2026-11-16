@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09",
+ "updated": "2026-11-16",
  "source": "EngService2",
  "festivals": [
   {
@@ -87,19 +87,10 @@
    "id": "4126454",
    "title": "Sium Sium Morning (쉬엄쉬엄모닝)",
    "start": "2026-10-18",
-   "end": "2026-11-29",
+   "end": "2026-11-22",
    "address": "83-19 Seonsa-ro, Gangdong-gu, Seoul",
    "lat": 37.5452481279,
    "lon": 127.1179813872
-  },
-  {
-   "id": "1855864",
-   "title": "Pohang Steel Art Festival (포항스틸아트페스티벌)",
-   "start": "2026-10-24",
-   "end": "2026-11-15",
-   "address": "78 Seonchak-ro, Buk-gu, Pohang-si, Gyeongsangbuk-do",
-   "lat": 36.048642917,
-   "lon": 129.3716116616
   },
   {
    "id": "3386385",
@@ -111,22 +102,13 @@
    "lon": 128.6205920321
   },
   {
-   "id": "697445",
-   "title": "Gimhae Buncheong Ceramics Festival (김해분청도자기축제)",
-   "start": "2026-11-06",
-   "end": "2026-11-10",
-   "address": "551, Jangyu-ro, Gimhae-si, Gyeongsangnam-do",
-   "lat": 35.183247103,
-   "lon": 128.8287850953
-  },
-  {
-   "id": "4116443",
-   "title": "Citywide Energy Walk Festival (대전 세계태양광총회 개최 기념 온시민에너지걷기한마당)",
-   "start": "2026-11-15",
-   "end": "2026-11-15",
-   "address": "169 Dunsan-daero, Seo-gu, Daejeon",
-   "lat": 36.3664690154,
-   "lon": 127.388017285
+   "id": "4149562",
+   "title": "MATERIALISM | Curated Exhibition by the Bjarke Ingels Group (MATERIALISM｜비야케 잉겔스 그룹 기획 전시)",
+   "start": "2026-11-07",
+   "end": "2027-02-28",
+   "address": "119 Sejong-daero, Jung-gu, Seoul",
+   "lat": 37.5668837502,
+   "lon": 126.9767024196
   },
   {
    "id": "1037621",
@@ -156,6 +138,15 @@
    "lon": 128.5600983436
   },
   {
+   "id": "3507211",
+   "title": "Jemulpo Wave Market (제물포웨이브마켓)",
+   "start": "2026-11-21",
+   "end": "2026-11-22",
+   "address": "33 Wolmi-ro, Jemulpo-gu, Incheon",
+   "lat": 37.4760834131,
+   "lon": 126.6146527143
+  },
+  {
    "id": "4135883",
    "title": "Busan Christmas Village (크리스마스 빌리지 부산)",
    "start": "2026-11-26",
@@ -163,6 +154,15 @@
    "address": "120 Suyeonggangbyeon-daero, Haeundae-gu, Busan",
    "lat": 35.1710365257,
    "lon": 129.1270845116
+  },
+  {
+   "id": "3583850",
+   "title": "Ulsan Christmas Market (울산 크리스마스 마켓)",
+   "start": "2026-11-27",
+   "end": "2026-12-26",
+   "address": "94 Daegongwon-ro, Nam-gu, Ulsan",
+   "lat": 35.5316566254,
+   "lon": 129.2935190325
   },
   {
    "id": "3565954",
