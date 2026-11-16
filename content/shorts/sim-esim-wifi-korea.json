@@ -1,0 +1,60 @@
+{
+  "article": "sim-esim-wifi-korea",
+  "fallback": "photo-incheon-airport-to-seoul.jpg",
+  "title": "Korea eSIM vs SIM Card: Choose The Right Option",
+  "summary": "Choosing mobile data for Korea? See when to use an eSIM, a tourist SIM or pocket Wi-Fi, and what to prepare before you fly.",
+  "hashtags": "#Korea #KoreaTravel #KoreaSIM #eSIM #TravelTips",
+  "music": "Laid Back Guitars",
+  "slides": [
+    {
+      "kicker": "KOREA DATA",
+      "title": "Pick Your Phone Setup",
+      "sub": "Choose the right option before landing",
+      "voice": "Korea phone data: Pick the right setup before landing.",
+      "image": "photo-incheon-airport-to-seoul.jpg"
+    },
+    {
+      "kicker": "YOUR OPTION",
+      "title": "Match It To Your Needs",
+      "sub": "eSIM: data | SIM: number | Wi-Fi: groups",
+      "voice": "Data only? eSIM. Need a Korean number? Tourist SIM. Groups? Pocket Wi-Fi.",
+      "photo_query": "Tourist SIM card and pocket Wi-Fi in Korea",
+      "require": [
+        "sim"
+      ]
+    },
+    {
+      "kicker": "PHONE NUMBERS",
+      "title": "Know What A Number Does",
+      "sub": "Calls and texts, not Korean identity checks",
+      "voice": "Tourist numbers handle calls and texts, but usually fail Korean identity checks. Most visitors need data only.",
+      "photo_query": "Korean tourist SIM card smartphone",
+      "require": [
+        "sim"
+      ]
+    },
+    {
+      "kicker": "AT INCHEON",
+      "title": "Bring Your Passport",
+      "sub": "Required for a phone-number plan",
+      "voice": "At Incheon, bring your physical passport for a number plan.",
+      "image": "photo-arriving-in-korea-checklist.jpg"
+    },
+    {
+      "kicker": "BEFORE YOU FLY",
+      "title": "Save Offline Maps",
+      "sub": "Download maps and translation ahead of time",
+      "voice": "Download offline maps and translation before flying, in case setup takes longer.",
+      "photo_query": "smartphone offline map app",
+      "require": [
+        "map"
+      ]
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
