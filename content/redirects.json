@@ -182,5 +182,9 @@
   "yeosu-cafe-cafe-hoi-an.html": {
     "to": "yeosu.html",
     "title": "Yeosu travel guide"
+  },
+  "jjimjilbang-korean-bathhouse.html": {
+    "to": "korean-bathhouse-guide.html",
+    "title": "Jjimjilbang in Seoul: Meaning, Etiquette and How to Visit a Korean Bathhouse"
   }
 }
