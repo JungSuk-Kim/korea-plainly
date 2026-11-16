@@ -186,5 +186,101 @@
   "jjimjilbang-korean-bathhouse.html": {
     "to": "korean-bathhouse-guide.html",
     "title": "Jjimjilbang in Seoul: Meaning, Etiquette and How to Visit a Korean Bathhouse"
+  },
+  "korean-restaurant-words.html": {
+    "to": "how-to-order-korean-food.html",
+    "title": "How to Order Korean Food as a Foreigner"
+  },
+  "read-korean-menu.html": {
+    "to": "how-to-order-korean-food.html",
+    "title": "How to Order Korean Food as a Foreigner"
+  },
+  "tipping-in-korea.html": {
+    "to": "korean-dining-etiquette.html",
+    "title": "Korean Dining Etiquette: 9 Simple Things to Know"
+  },
+  "korean-cafe-etiquette.html": {
+    "to": "korean-cafe-menu-basics.html",
+    "title": "Korean Café Menu Basics: What to Order and How"
+  },
+  "korean-food-delivery-guide.html": {
+    "to": "korean-food-to-try.html",
+    "title": "Korean Food to Try in Seoul: 20 Dishes for First-Timers"
+  },
+  "korean-hot-pot-guide.html": {
+    "to": "korean-food-to-try.html",
+    "title": "Korean Food to Try in Seoul: 20 Dishes for First-Timers"
+  },
+  "chimaek-fried-chicken-beer.html": {
+    "to": "korean-food-to-try.html",
+    "title": "Korean Food to Try in Seoul: 20 Dishes for First-Timers"
+  },
+  "halal-korean-fried-chicken.html": {
+    "to": "vegetarian-food-korea.html",
+    "title": "Vegetarian, Vegan and Halal Food in Korea, Including Halal Korean BBQ"
+  },
+  "korean-phrases-cheat-sheet.html": {
+    "to": "useful-korean-phrases.html",
+    "title": "Useful Korean Words and Phrases for Travelers (With Easy Pronunciation)"
+  },
+  "korean-atm-guide.html": {
+    "to": "cash-cards-payments-korea.html",
+    "title": "Do You Need Cash in Korea? Cards, ATMs and Payments"
+  },
+  "korea-public-transport-transfers.html": {
+    "to": "korea-transit-card-guide.html",
+    "title": "T-money Card in Korea: How Tourists Buy, Top Up and Use a Transportation Card"
+  },
+  "seoul-bus-guide.html": {
+    "to": "seoul-subway-for-foreigners.html",
+    "title": "Seoul Subway Map and How to Use It: A Guide for Foreigners"
+  },
+  "kakao-t-taxi-korea.html": {
+    "to": "korea-travel-apps.html",
+    "title": "South Korea Apps for Tourists: The Ones You Actually Need (2026)"
+  },
+  "korea-pharmacy-guide.html": {
+    "to": "korea-emergency-help.html",
+    "title": "Sick in Korea? Pharmacies, Hospitals and Emergency Numbers"
+  },
+  "korea-weather-by-season.html": {
+    "to": "best-time-to-visit-korea.html",
+    "title": "Best Time to Visit Korea: Month-by-Month Guide and What Month Autumn Starts"
+  },
+  "best-time-seoul-attractions.html": {
+    "to": "seoul-3-day-itinerary.html",
+    "title": "3 Days in Seoul: A First-Timer's Itinerary"
+  },
+  "first-evening-seoul.html": {
+    "to": "seoul-3-day-itinerary.html",
+    "title": "3 Days in Seoul: A First-Timer's Itinerary"
+  },
+  "seoul-night-views.html": {
+    "to": "seoul-3-day-itinerary.html",
+    "title": "3 Days in Seoul: A First-Timer's Itinerary"
+  },
+  "seoul-first-time.html": {
+    "to": "korea-travel-mistakes.html",
+    "title": "South Korea Travel Tips: 16 First-Timer Mistakes to Avoid"
+  },
+  "korea-recycling-guide.html": {
+    "to": "korea-travel-mistakes.html",
+    "title": "South Korea Travel Tips: 16 First-Timer Mistakes to Avoid"
+  },
+  "public-restrooms-korea.html": {
+    "to": "korea-travel-mistakes.html",
+    "title": "South Korea Travel Tips: 16 First-Timer Mistakes to Avoid"
+  },
+  "korea-trip-package-vs-diy.html": {
+    "to": "start-here.html",
+    "title": "First Trip to Korea? Start Here: A Step-by-Step Planner"
+  },
+  "laundry-in-korea.html": {
+    "to": "start-here.html",
+    "title": "First Trip to Korea? Start Here: A Step-by-Step Planner"
+  },
+  "korean-skincare-shopping-apps.html": {
+    "to": "olive-young-korea-guide.html",
+    "title": "Olive Young in Korea: How to Shop for K-Beauty as a Visitor"
   }
 }

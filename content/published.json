@@ -6,34 +6,10 @@
     "category": "Daily Korea"
   },
   {
-    "slug": "korea-recycling-guide",
-    "filename": "korea-recycling-guide.html",
-    "title": "How Korean Recycling Works for Visitors",
-    "category": "Daily Korea"
-  },
-  {
-    "slug": "korean-atm-guide",
-    "filename": "korean-atm-guide.html",
-    "title": "How to Use Korean ATMs as a Foreigner",
-    "category": "Money"
-  },
-  {
     "slug": "korea-transit-card-guide",
     "filename": "korea-transit-card-guide.html",
     "title": "T-money Card in Korea: How Tourists Buy, Top Up and Use a Transportation Card",
     "category": "Transport"
-  },
-  {
-    "slug": "seoul-bus-guide",
-    "filename": "seoul-bus-guide.html",
-    "title": "How to Use Seoul Buses as a Foreigner",
-    "category": "Transport"
-  },
-  {
-    "slug": "best-time-seoul-attractions",
-    "filename": "best-time-seoul-attractions.html",
-    "title": "Best Times to Visit Seoul Attractions",
-    "category": "Travel"
   },
   {
     "title": "Cheonggyecheon: A Quiet Walk Through the Heart of Seoul",
@@ -99,12 +75,6 @@
     "naver_checked": true,
     "published_at": "2026-10-08T15:53:22.454208+00:00",
     "image": "regional-busan-leisure-spa-land-centum-city.jpg"
-  },
-  {
-    "slug": "korean-food-delivery-guide",
-    "filename": "korean-food-delivery-guide.html",
-    "title": "What to Know About Korean Delivery Food",
-    "category": "Food"
   },
   {
     "title": "Hyeopjae Beach, Jeju: A Clear-Water Escape on the Island’s West Coast",
@@ -327,12 +297,6 @@
     "category": "Travel"
   },
   {
-    "slug": "korea-weather-by-season",
-    "filename": "korea-weather-by-season.html",
-    "title": "Korea's Seasons: What the Weather Is Like and What to Pack",
-    "category": "Travel"
-  },
-  {
     "slug": "jeju-3-day-itinerary",
     "filename": "jeju-3-day-itinerary.html",
     "title": "Things to Do in Jeju Island: A 3-Day Itinerary for First-Timers",
@@ -400,12 +364,6 @@
     "slug": "korea-in-november",
     "filename": "korea-in-november.html",
     "title": "Korea in November: Things to Do in Seoul, Busan and Jeju, Weather and What to Pack",
-    "category": "Travel"
-  },
-  {
-    "slug": "seoul-night-views",
-    "filename": "seoul-night-views.html",
-    "title": "Best Night Views in Seoul: Where to See the City Lights",
     "category": "Travel"
   },
   {
@@ -550,12 +508,6 @@
     "category": "Travel"
   },
   {
-    "slug": "tipping-in-korea",
-    "filename": "tipping-in-korea.html",
-    "title": "Do You Tip in Korea? What Visitors Should Know",
-    "category": "Money"
-  },
-  {
     "title": "Yeonggeumjeong Sunrise Pavilion: Sea Views in Sokcho",
     "slug": "sokcho-local-guide-yeonggeumjeong-sunrise-pavilion",
     "category": "Local Guide",
@@ -593,12 +545,6 @@
     "filename": "korea-in-october.html",
     "title": "Korea in October: Seoul, Busan and Jeju Weather and What to Pack",
     "category": "Travel"
-  },
-  {
-    "slug": "korean-phrases-cheat-sheet",
-    "filename": "korean-phrases-cheat-sheet.html",
-    "title": "Korean Phrases Cheat Sheet: A Printable Page for Your Trip",
-    "category": "Language"
   },
   {
     "slug": "korea-in-april",
@@ -838,12 +784,6 @@
     "category": "Travel"
   },
   {
-    "slug": "korea-trip-package-vs-diy",
-    "filename": "korea-trip-package-vs-diy.html",
-    "title": "Korea Trip Packages vs Planning It Yourself: Which Suits a First Visit",
-    "category": "Travel"
-  },
-  {
     "slug": "busan-with-kids",
     "filename": "busan-with-kids.html",
     "title": "Things to Do in Busan with Kids: An Easy Family Guide",
@@ -874,51 +814,9 @@
     "category": "Culture"
   },
   {
-    "slug": "chimaek-fried-chicken-beer",
-    "filename": "chimaek-fried-chicken-beer.html",
-    "title": "Chimaek: Korean Fried Chicken and Beer for Beginners",
-    "category": "Food"
-  },
-  {
-    "slug": "public-restrooms-korea",
-    "filename": "public-restrooms-korea.html",
-    "title": "Public Restrooms in Korea: What to Know",
-    "category": "Daily Korea"
-  },
-  {
-    "slug": "korea-pharmacy-guide",
-    "filename": "korea-pharmacy-guide.html",
-    "title": "Buying Medicine in Korea: Pharmacies for Travellers",
-    "category": "Daily Korea"
-  },
-  {
-    "slug": "laundry-in-korea",
-    "filename": "laundry-in-korea.html",
-    "title": "Doing Laundry in Korea: Coin Laundries and Hotel Options",
-    "category": "Daily Korea"
-  },
-  {
-    "slug": "korean-skincare-shopping-apps",
-    "filename": "korean-skincare-shopping-apps.html",
-    "title": "Korean Skincare Shopping Apps for Visitors",
-    "category": "Apps"
-  },
-  {
     "slug": "korea-travel-advisory",
     "filename": "korea-travel-advisory.html",
     "title": "Korea Travel Advisory: Safety and Official Updates",
     "category": "Travel"
-  },
-  {
-    "slug": "korean-hot-pot-guide",
-    "filename": "korean-hot-pot-guide.html",
-    "title": "Korean Hot Pot Guide: Jeongol, Budae-jjigae and Shabu-shabu for Visitors",
-    "category": "Food"
-  },
-  {
-    "slug": "halal-korean-fried-chicken",
-    "filename": "halal-korean-fried-chicken.html",
-    "title": "Halal Korean Fried Chicken: What Visitors Should Know",
-    "category": "Food"
   }
 ]
