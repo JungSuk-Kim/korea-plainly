@@ -1,0 +1,64 @@
+{
+  "article": "jeju-in-winter",
+  "fallback": "photo-own-jeju-hamdeok-winter.jpg",
+  "title": "Jeju in December to February: What to Pack and Do",
+  "summary": "Jeju is milder than Seoul in winter, but coastal winds can make it feel much colder. Learn what to wear and how to enjoy tangerines, camellias, and snowy Hallasan.",
+  "hashtags": "#Jeju #JejuTravel #KoreaTravel #WinterTravel #Hallasan",
+  "music": "Carefree",
+  "slides": [
+    {
+      "kicker": "JEJU WINTER",
+      "title": "December–February: Pack Layers",
+      "sub": "Dress for the wind",
+      "voice": "Jeju from December to February gets windy. Pack layers.",
+      "image": "photo-own-jeju-coast-waves.jpg"
+    },
+    {
+      "kicker": "PACK",
+      "title": "Three Layers For Wind",
+      "sub": "Base layer, warm mid-layer, windproof jacket",
+      "voice": "Base layer, warm mid-layer, windproof jacket. Coastal highs are about nine to thirteen degrees, but wind feels colder.",
+      "photo_query": "winter base layer mid-layer windproof jacket",
+      "require": [
+        "jacket"
+      ]
+    },
+    {
+      "kicker": "TANGERINES",
+      "title": "Pick Winter Tangerines",
+      "sub": "Search 귤따기 for picking farms",
+      "voice": "Winter is tangerine season. Search “귤따기” in Naver or KakaoMap for picking farms.",
+      "photo_query": "Jeju tangerine picking farm",
+      "require": [
+        "tangerine"
+      ]
+    },
+    {
+      "kicker": "CAMELLIAS",
+      "title": "Find Winter Blooms",
+      "sub": "Check garden hours before you go",
+      "voice": "Camellias bloom through winter. Check garden hours before you go.",
+      "photo_query": "Jeju camellia flowers",
+      "require": [
+        "camellia"
+      ]
+    },
+    {
+      "kicker": "HALLASAN",
+      "title": "Get Ready For Snow",
+      "sub": "Bring crampons; check trail status",
+      "voice": "For snowy Hallasan, bring crampons; check trail status that morning.",
+      "photo_query": "Hallasan winter snow hiking",
+      "require": [
+        "hallasan",
+        "snow"
+      ]
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
