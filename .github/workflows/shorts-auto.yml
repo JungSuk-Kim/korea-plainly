@@ -51,7 +51,10 @@ jobs:
         if: steps.write.outputs.spec != ''
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: python scripts/make_short.py "${{ steps.write.outputs.spec }}" --voice
+        run: |
+          # show the end of the error as an annotation (run logs cannot be read from outside)
+          python scripts/make_short.py "${{ steps.write.outputs.spec }}" --voice 2> >(tee err.txt >&2) || {
+            echo "::error::render failed: $(tail -c 900 err.txt | tr '\n' ' ')"; exit 1; }
       - name: Keep the video for 30 days (download from this run's page)
         if: steps.write.outputs.spec != ''
         uses: actions/upload-artifact@v4
