@@ -41,6 +41,8 @@ reply in Korean and address him as "주인님" (not "사장님"), keep site cont
 - 2 Nov 2026: 28 generated cafe/restaurant/hotel/brand-shop articles nobody had visited were retired (redirects to the region
   page; list in `content/retired_places.json`, which the regional generator also skips). Region sub-hubs left empty
   redirect to the region page. No Google Maps photos anywhere: places without a free Commons photo get a title card.
+- 16 Nov 2026 (second "low value content" result): automatic daily guides are paused while `content/guides_paused`
+  exists (Daily Publish skips refill_topics and generate_post). New guides only with the owner's own experience/photos.
 - AdSense quality work (Oct 2026, after a "low value content" review): regional place articles are paused while
   `content/regional_paused` exists; `content/noindex.json` lists pages kept out of search (link-only hubs, hotel/shop
   listings, and since 18 Oct every generated regional place article without the owner's photos; re-index one only after
