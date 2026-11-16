@@ -489,7 +489,8 @@ def main():
         taken = set()
         for s in spec["slides"]:
             if not s.get("end"):
-                s["file"] = slide_photo(s, taken, spec.get("fallback"))
+                fb = spec.get("fallback") or next((x.get("image") for x in spec["slides"] if x.get("image")), None)
+                s["file"] = slide_photo(s, taken, fb)
         mascot = spec.get("mascot", True) and (MASCOT_DIR / "kkachi_closed.png").exists()
         series = f"{SERIES}  #{episode(Path(args.spec).stem)}" if spec.get("series", True) else None
         body = [i for i, s in enumerate(spec["slides"]) if not s.get("end")]

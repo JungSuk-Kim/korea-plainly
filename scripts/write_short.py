@@ -83,6 +83,12 @@ def site_photos():
             if (ROOT / f).exists():
                 shows = unquote(e["source"].rsplit("File:", 1)[-1]).rsplit(".", 1)[0]
                 out[f] = shows.replace("_", " ").strip()
+    # the owner's own photos (photo-own-*.jpg), described by their alt text on the site
+    for page in ROOT.glob("*.html"):
+        for f, alt in re.findall(r'<img\b[^>]*\bsrc="(photo-own-[^"]+\.jpg)"[^>]*\balt="([^"]*)"', read(page)):
+            if (ROOT / f).exists() and f not in out:
+                what = alt.strip() or f[len("photo-own-"):-4].replace("-", " ")
+                out[f] = what + " (owner's own photo)"
     return out
 
 
@@ -210,7 +216,9 @@ def write(slug):
     trim_words(slides, MAX_WORDS)
     slides.append({"end": True, "title": "New Korea tips", "sub": "Mon · Wed · Fri · Sat",
                    "voice": SHORT_OUTRO})
-    out = {"article": slug, "fallback": cover if cover in photos else slides[0].get("image", ""), "title": spec["title"][:90],
+    # the photo used when a slide's Commons search finds nothing: the cover, else any site photo the slides use
+    fallback = cover if cover in photos else next((x["image"] for x in slides if x.get("image")), next(iter(photos), ""))
+    out = {"article": slug, "fallback": fallback, "title": spec["title"][:90],
            "summary": spec.get("summary", ""), "hashtags": spec.get("hashtags", "#Korea #KoreaTravel"),
            "music": TRACKS[len(done()) % len(TRACKS)], "slides": slides}
     path = SHORTS / f"{slug}.json"
