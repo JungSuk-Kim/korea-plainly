@@ -303,6 +303,10 @@
     "korea-trip-cost-calculator": {
       "at": "2026-11-16T20:40:15+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n2hf6j33ol2d"
+    },
+    "korea-travel-budget": {
+      "at": "2026-11-17T09:47:02+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n2ir5fn4n524"
     }
   },
   "bluesky_videos": {
@@ -957,6 +961,10 @@
     "korea-trip-cost-calculator": {
       "at": "2026-11-16T20:41:51+00:00",
       "ref": "1261611360380213_122115964437509276"
+    },
+    "korea-travel-budget": {
+      "at": "2026-11-17T09:47:07+00:00",
+      "ref": "1261611360380213_122116135497509276"
     }
   },
   "threads": {
@@ -1243,6 +1251,10 @@
     "korea-trip-cost-calculator": {
       "at": "2026-11-16T20:42:02+00:00",
       "ref": "18149049343572120"
+    },
+    "korea-travel-budget": {
+      "at": "2026-11-17T09:47:20+00:00",
+      "ref": "17904167547608848"
     }
   }
 }
