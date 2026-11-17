@@ -143,7 +143,7 @@ def hub_photo(name):
     return None
 
 
-def related_cards(s, name, guide_thumbs):
+def related_cards(s, name, guide_thumbs, titles=None):
     sec = re.search(r'(<section class="related-guides"[^>]*>)(.*?)(</section>)', s, re.S)
     if not sec:
         return s
@@ -152,6 +152,8 @@ def related_cards(s, name, guide_thumbs):
     seen = {name}  # never link to itself, never the same guide twice (merged guides share one target)
     links = [(h, re.sub(r"<[^>]+>", "", t).strip()) for h, t in links
              if h.endswith(".html") and not (h in seen or seen.add(h))][:3]
+    # a merged guide's old link text would label the card with the retired title: use the target's current title
+    links = [(h, esc((titles or {}).get(h)) if (titles or {}).get(h) else t) for h, t in links]
     if not links:
         return s
     cards = "".join(f'<a href="{esc(h)}"><img src="{esc(thumb_for(h, guide_thumbs))}" alt="" loading="lazy"><span>{t}</span></a>'
@@ -238,6 +240,12 @@ def main():
     guide_thumbs = thumbs_from_guides()
     guide_cats = guide_categories()
     files = set(guide_thumbs) | {p["slug"] + ".html" for p in published}
+    titles = {p["slug"] + ".html": p["title"] for p in published if p.get("title")}
+    for f in ROOT.glob("*.html"):  # guides not in published.json: use the page's own <title>
+        if f.name not in titles:
+            m = re.search(r"<title>(.*?)</title>", read(f), re.S)
+            if m and m.group(1).strip():
+                titles[f.name] = re.sub(r"\s*\|\s*Korea Plainly$", "", html.unescape(m.group(1).strip()))
     changed = 0
     for name in sorted(files):
         p = ROOT / name
@@ -267,7 +275,7 @@ def main():
         new = breadcrumbs(new, trail)
         new = toc(new)
         new = own_cover(new, name, guide_thumbs)
-        new = related_cards(new, name, guide_thumbs)
+        new = related_cards(new, name, guide_thumbs, titles)
         if new != s:
             p.write_bytes(new.encode("utf-8"))
             changed += 1
