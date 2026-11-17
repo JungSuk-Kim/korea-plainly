@@ -1,0 +1,727 @@
+{
+  "title": "Korea 10-Day Itinerary: Seoul to Jeju, With Two-Week Options",
+  "intro": "Ten days is enough to see Korea beyond Seoul: follow this easy route south to Jeonju, Gyeongju, Busan and Jeju. Want two weeks? We’ll also show you where to add the east coast.",
+  "hashtags": "#KoreaTravel #KoreaItinerary #Seoul #Busan #Jeju",
+  "thumb": {
+    "big": "10 DAYS",
+    "mid": "IN KOREA",
+    "small": "SEOUL TO JEJU"
+  },
+  "maps": {
+    "overview": {
+      "stops": [
+        {
+          "name": "Seoul",
+          "lat": 37.5666791,
+          "lon": 126.9782914
+        },
+        {
+          "name": "Jeonju Hanok Village",
+          "lat": 35.8159507,
+          "lon": 127.1530019
+        },
+        {
+          "name": "Gyeongju",
+          "lat": 35.8556705,
+          "lon": 129.2248811
+        },
+        {
+          "name": "Busan",
+          "lat": 35.1799528,
+          "lon": 129.0752365
+        },
+        {
+          "name": "Jeju",
+          "lat": 33.3803475,
+          "lon": 126.5482545
+        }
+      ],
+      "route": true,
+      "note": "South by train, then fly to Jeju"
+    },
+    "seoul": {
+      "stops": [
+        {
+          "name": "Gyeongbokgung Palace",
+          "lat": 37.579754,
+          "lon": 126.9766818
+        },
+        {
+          "name": "Bukchon Hanok Village",
+          "lat": 37.5823919,
+          "lon": 126.9858648
+        },
+        {
+          "name": "Myeongdong",
+          "lat": 37.5608977,
+          "lon": 126.9863762
+        }
+      ],
+      "route": false,
+      "note": "Three city days, then choose a day trip"
+    },
+    "jeonju": {
+      "stops": [
+        {
+          "name": "Jeonju Hanok Village",
+          "lat": 35.8159507,
+          "lon": 127.1530019
+        },
+        {
+          "name": "Jeonju Hanok Guesthouse",
+          "lat": 35.8159507,
+          "lon": 127.1530019
+        }
+      ],
+      "route": true,
+      "note": "Explore the village on foot"
+    },
+    "gyeongju": {
+      "stops": [
+        {
+          "name": "Donggung Palace and Wolji Po",
+          "lat": 35.8347003,
+          "lon": 129.2264375
+        },
+        {
+          "name": "Bulguksa Temple",
+          "lat": 35.7889948,
+          "lon": 129.3308902
+        }
+      ],
+      "route": true,
+      "note": "City sights, evening pond, temple next morning"
+    },
+    "busan": {
+      "stops": [
+        {
+          "name": "Haedong Yonggungsa Temple",
+          "lat": 35.1884189,
+          "lon": 129.2230985
+        },
+        {
+          "name": "Haeundae Beach",
+          "lat": 35.1577809,
+          "lon": 129.1581318
+        },
+        {
+          "name": "Gamcheon Culture Village",
+          "lat": 35.0963371,
+          "lon": 129.0087897
+        },
+        {
+          "name": "Jagalchi Fish Market",
+          "lat": 35.0966115,
+          "lon": 129.0305184
+        },
+        {
+          "name": "Gwangalli Beach",
+          "lat": 35.1508879,
+          "lon": 129.1167806
+        }
+      ],
+      "route": false,
+      "note": "East-side and west-side days"
+    },
+    "jeju": {
+      "stops": [
+        {
+          "name": "Seongsan Ilchulbong",
+          "lat": 33.4584403,
+          "lon": 126.9414363
+        },
+        {
+          "name": "Udo Island",
+          "lat": 33.5072572,
+          "lon": 126.9550015
+        },
+        {
+          "name": "Hyeopjae Beach",
+          "lat": 33.395112,
+          "lon": 126.2402796
+        },
+        {
+          "name": "Aewol Cafes",
+          "lat": 33.45079,
+          "lon": 126.3752
+        },
+        {
+          "name": "Hallasan",
+          "lat": 33.3922451,
+          "lon": 126.4942816
+        }
+      ],
+      "route": false,
+      "note": "Pick east and west, or swap in a hike"
+    },
+    "east_coast": {
+      "stops": [
+        {
+          "name": "Gangneung",
+          "lat": 37.7525313,
+          "lon": 128.8759523
+        },
+        {
+          "name": "Anmok Beach",
+          "lat": 37.7727565,
+          "lon": 128.947583
+        },
+        {
+          "name": "Sokcho",
+          "lat": 38.2069574,
+          "lon": 128.5913424
+        },
+        {
+          "name": "Seoraksan",
+          "lat": 38.1669103,
+          "lon": 128.5172053
+        }
+      ],
+      "route": false,
+      "note": "Choose one or both east-coast stops"
+    }
+  },
+  "chapters": [
+    {
+      "name": "Intro",
+      "segments": [
+        {
+          "voice": "Ten days in Korea: Jeju’s volcanic coast, Busan’s seaside temple, Jeonju’s hanok lanes and Gyeongju after dark, in a clear route.",
+          "show": [
+            {
+              "image": "photo-jeju-3-day-itinerary.jpg"
+            },
+            {
+              "photo_query": "Haedong Yonggungsa Temple",
+              "require": [
+                "haedong"
+              ]
+            },
+            {
+              "photo_query": "Jeonju bibimbap",
+              "require": [
+                "jeonju"
+              ]
+            },
+            {
+              "image": "photo-gyeongju-1-day-itinerary.jpg"
+            }
+          ]
+        },
+        {
+          "voice": "Here’s the whole trip, from Seoul south to Jeju.",
+          "show": [
+            {
+              "map": "overview"
+            }
+          ]
+        },
+        {
+          "voice": "And with four extra days, you can add Korea’s east coast.",
+          "show": [
+            {
+              "photo_query": "Seoraksan National Park",
+              "require": [
+                "seoraksan"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Days 1 to 4: Seoul",
+      "segments": [
+        {
+          "voice": "Start in Seoul, where most international flights arrive. Spend three days on the city, then use day four for a trip outside it.",
+          "show": [
+            {
+              "map": "seoul"
+            }
+          ]
+        },
+        {
+          "voice": "Begin with Seoul’s palaces and traditional neighbourhoods. Gyeongbokgung gives you a sense of the city’s royal history, and nearby Bukchon has traditional tiled-roof houses. Check the palace’s opening information before you go.",
+          "show": [
+            {
+              "image": "photo-seoul-3-day-itinerary.jpg"
+            },
+            {
+              "map": "seoul"
+            }
+          ],
+          "label": {
+            "kicker": "DAYS 1–3",
+            "title": "Palaces and old lanes"
+          }
+        },
+        {
+          "voice": "Leave time for markets, neighbourhoods and a night view. Myeongdong is one option for a busy shopping area; follow the three-day Seoul plan to fit the city highlights together without rushing.",
+          "show": [
+            {
+              "image": "photo-myeongdong-night-market.jpg"
+            },
+            {
+              "map": "seoul"
+            }
+          ],
+          "label": {
+            "kicker": "DAYS 1–3",
+            "title": "Markets and city nights"
+          }
+        },
+        {
+          "voice": "For day four, choose one trip: the DMZ, Suwon’s Hwaseong Fortress, or Nami Island. They’re different experiences, so pick the one that fits your interests rather than trying to squeeze in several.",
+          "show": [
+            {
+              "image": "photo-day-trips-from-seoul.jpg"
+            },
+            {
+              "map": "seoul"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 4",
+            "title": "A day beyond Seoul"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Day 5: Jeonju",
+      "segments": [
+        {
+          "voice": "Take the KTX from Seoul to Jeonju. The ride takes about one and a half to two hours. Here’s the short walking plan around the village.",
+          "show": [
+            {
+              "map": "jeonju"
+            }
+          ]
+        },
+        {
+          "voice": "Jeonju Hanok Village has hundreds of traditional houses with tiled roofs. Walk the lanes, visit Gyeonggijeon Shrine, and try bibimbap, the dish the city is especially known for. Leave room for street snacks, too.",
+          "show": [
+            {
+              "image": "regional-jeonju-culture-jeonju-hanok-village.jpg"
+            },
+            {
+              "map": "jeonju"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 5",
+            "title": "Jeonju Hanok Village"
+          }
+        },
+        {
+          "voice": "Stay overnight in a hanok guesthouse. The village feels different when it quiets down in the evening, and an early walk lets you see it before the day gets busy.",
+          "show": [
+            {
+              "image": "photo-jeonju-hanok-village-from-seoul.jpg"
+            },
+            {
+              "map": "jeonju"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 5 · EVENING",
+            "title": "Sleep in a hanok"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Day 6: Gyeongju",
+      "segments": [
+        {
+          "voice": "Plan this as a travel day. There’s no fast direct train from Jeonju to Gyeongju; buses and train connections take around three to four hours.",
+          "show": [
+            {
+              "map": "gyeongju"
+            }
+          ]
+        },
+        {
+          "voice": "Check your route on Naver Map the night before. Once you arrive, see the royal tombs, Cheomseongdae Observatory and the Gyochon hanok area. They make a good introduction to Gyeongju’s history and traditional streets.",
+          "show": [
+            {
+              "map": "gyeongju"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 6",
+            "title": "Tombs and old streets"
+          }
+        },
+        {
+          "voice": "After dark, visit Donggung Palace and Wolji Pond, where the palace grounds and water are lit up. The next morning, go to Bulguksa Temple before continuing your trip.",
+          "show": [
+            {
+              "photo_query": "Donggung Wolji night",
+              "require": [
+                "donggung"
+              ]
+            },
+            {
+              "map": "gyeongju"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 6 · NIGHT",
+            "title": "Wolji Pond after dark"
+          }
+        },
+        {
+          "voice": "If this travel day feels too full, return to Seoul from Jeonju and take the KTX to Gyeongju from there. Or skip Jeonju and travel straight from Seoul to Gyeongju.",
+          "show": [
+            {
+              "image": "regional-gyeongju-culture-bulguksa.jpg"
+            },
+            {
+              "map": "gyeongju"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 7 · MORNING",
+            "title": "Bulguksa Temple"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Days 7 and 8: Busan",
+      "segments": [
+        {
+          "voice": "Busan is a short KTX ride, or about an hour by bus, from Gyeongju. Split your time between the east side and the older west side.",
+          "show": [
+            {
+              "map": "busan"
+            }
+          ]
+        },
+        {
+          "voice": "Spend one day on the east side. Visit Haedong Yonggungsa Temple by the sea, then Haeundae Beach. This gives you a temple visit and time beside the water in one part of the city.",
+          "show": [
+            {
+              "image": "photo-busan-in-winter.jpg"
+            },
+            {
+              "map": "busan"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 7",
+            "title": "Temple and Haeundae"
+          }
+        },
+        {
+          "voice": "Use the other day for the older west side: walk around Gamcheon Culture Village, visit Jagalchi fish market, then make time for the night views over Gwangalli Bridge. See the Busan guide for more ways to fill the day.",
+          "show": [
+            {
+              "image": "photo-busan-with-kids.jpg"
+            },
+            {
+              "map": "busan"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 8",
+            "title": "Gamcheon to Gwangalli"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Days 9 and 10: Jeju",
+      "segments": [
+        {
+          "voice": "Fly from Busan’s Gimhae Airport to Jeju. The flight takes about an hour. With only two days, choose a few stops rather than trying to see the whole island.",
+          "show": [
+            {
+              "map": "jeju"
+            }
+          ]
+        },
+        {
+          "voice": "One option is to explore the east coast, including Sunrise Peak and Udo Island. For the west, visit Hyeopjae Beach and the cafes around Aewol. A rental car makes getting around much easier.",
+          "show": [
+            {
+              "map": "jeju"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 9",
+            "title": "Jeju’s east coast"
+          }
+        },
+        {
+          "voice": "You could swap one coast for Hallasan or the waterfalls around Seogwipo. Check the weather before you set your plans, especially if you’re counting on flights or a ferry to Udo.",
+          "show": [
+            {
+              "image": "photo-own-jeju-coast-waves.jpg"
+            },
+            {
+              "map": "jeju"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 10",
+            "title": "Choose your Jeju day"
+          }
+        },
+        {
+          "voice": "Jeju has some international flights, but many visitors fly back to Seoul to connect. If you’re continuing home from Seoul, leave enough flexibility in your plan for the flight back.",
+          "show": [
+            {
+              "image": "photo-incheon-airport-to-seoul.jpg"
+            },
+            {
+              "map": "jeju"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 10",
+            "title": "Flying home from Jeju"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Stretching it to two weeks",
+      "segments": [
+        {
+          "voice": "With four extra days, add the east coast between Seoul and the south, or at the end of your trip. Here are two places to consider.",
+          "show": [
+            {
+              "map": "east_coast"
+            }
+          ]
+        },
+        {
+          "voice": "Spend one or two days in Gangneung for beaches, Gyeongpo Lake, Ojukheon and the coffee street at Anmok Beach. The KTX journey from Seoul takes about two hours.",
+          "show": [
+            {
+              "photo_query": "Gangneung Anmok Beach",
+              "require": [
+                "gangneung"
+              ]
+            },
+            {
+              "map": "east_coast"
+            }
+          ],
+          "label": {
+            "kicker": "OPTIONAL STOP",
+            "title": "Gangneung"
+          }
+        },
+        {
+          "voice": "Or visit Sokcho and Seoraksan for a national park, a fish market and seaside cafes. Give this area one or two days, depending on whether you want more time for the mountain or the coast.",
+          "show": [
+            {
+              "image": "photo-seoraksan-hikes.jpg"
+            },
+            {
+              "map": "east_coast"
+            }
+          ],
+          "label": {
+            "kicker": "OPTIONAL STOP",
+            "title": "Sokcho and Seoraksan"
+          }
+        },
+        {
+          "voice": "You can also keep the extra days in Seoul. Use them for neighbourhoods, a bathhouse, markets or another day trip instead of adding more long travel days.",
+          "show": [
+            {
+              "image": "photo-seoul-5-day-itinerary.jpg"
+            },
+            {
+              "map": "east_coast"
+            }
+          ],
+          "label": {
+            "kicker": "OPTIONAL STOP",
+            "title": "A slower Seoul"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Getting around",
+      "segments": [
+        {
+          "voice": "Use KTX for the fast train legs, and check connections for journeys without a fast direct train, especially Jeonju to Gyeongju. A Korean map app helps you compare routes before you leave.",
+          "show": [
+            {
+              "image": "photo-ktx-train-guide.jpg"
+            },
+            {
+              "image": "photo-korea-public-transport-transfers.jpg"
+            }
+          ]
+        },
+        {
+          "voice": "A transit card and a Korean map app are useful in every city on this route. On Jeju, a car is easiest, but buses and taxis also work. Travel light, and use station lockers or luggage delivery between hotels.",
+          "show": [
+            {
+              "image": "photo-kakao-t-taxi-korea.jpg"
+            },
+            {
+              "image": "photo-seoul-bus-guide.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Good to know",
+      "segments": [
+        {
+          "voice": "Book KTX trains and your Jeju flight ahead, especially for weekends and holidays. Check schedules and availability before you go.",
+          "show": [
+            {
+              "image": "photo-korea-entry-k-eta-e-arrival.jpg"
+            }
+          ]
+        },
+        {
+          "voice": "Check the season before choosing your dates. Spring blossoms and autumn leaves are especially busy times, so expect more visitors around popular sights.",
+          "show": [
+            {
+              "image": "photo-korea-weather-by-season.jpg"
+            },
+            {
+              "image": "photo-korea-autumn-foliage-2026.jpg"
+            }
+          ]
+        },
+        {
+          "voice": "Keep some flexibility for Jeju weather. Strong winds can cancel flights and Udo ferries, so avoid making every connection depend on a single tight plan.",
+          "show": [
+            {
+              "image": "photo-own-jeju-coast-snow.jpg"
+            },
+            {
+              "image": "photo-korea-travel-advisory.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mistakes to avoid",
+      "segments": [
+        {
+          "voice": "Four things to avoid: changing hotels every night; underestimating cross-country travel; booking Jeju without checking weather; and forgetting to budget for the trip.",
+          "show": [
+            {
+              "list": {
+                "heading": "Keep the trip comfortable",
+                "items": [
+                  "Change hotels every night",
+                  "Underestimate cross-country travel",
+                  "Ignore Jeju weather",
+                  "Forget the budget"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Two nights in a place is more relaxing than one. Fast trains mainly run to and from Seoul, so trips across the country can take longer. Leave slack around Jeju flights and ferries, and work out your budget before you book.",
+          "show": [
+            {
+              "image": "photo-korea-travel-mistakes.jpg"
+            },
+            {
+              "image": "photo-korea-travel-budget.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quick questions",
+      "segments": [
+        {
+          "voice": "Is ten days too long? Not at all. It gives you time to see Seoul properly and add three or four other places at a relaxed pace.",
+          "show": [
+            {
+              "image": "photo-seoul-first-time.jpg"
+            },
+            {
+              "image": "photo-korea-10-day-itinerary.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "Is ten days too long?"
+          }
+        },
+        {
+          "voice": "What’s the best order? Start in Seoul, then head south by train and finish in Busan or Jeju. Many visitors fly home from Busan or return to Seoul from Jeju.",
+          "show": [
+            {
+              "image": "photo-busan-1-day-itinerary.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "What order should I go?"
+          }
+        },
+        {
+          "voice": "Can you do this without a car? Yes. Trains, buses and subways cover the route. On Jeju, a car is easiest, but buses and taxis are also options.",
+          "show": [
+            {
+              "image": "photo-seoul-subway-for-foreigners.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "Can I travel without a car?"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Summary",
+      "segments": [
+        {
+          "voice": "The ten-day route is Seoul for four days, Jeonju for one, Gyeongju for one, Busan for two, then Jeju for two. Add Gangneung or Sokcho for an east-coast extension.",
+          "show": [
+            {
+              "list": {
+                "heading": "Your Korea route",
+                "items": [
+                  "Days 1–4: Seoul",
+                  "Day 5: Jeonju",
+                  "Day 6: Gyeongju",
+                  "Days 7–8: Busan",
+                  "Days 9–10: Jeju"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "voice": "The full guide, with maps and links for every stop, is free at Korea Plainly dot com. The link is at the top of the description. If this helped, subscribe for more plain, practical guides to Korea.",
+          "show": [
+            {
+              "card": {
+                "big": "KOREA PLAINLY",
+                "title": "The full guide is in the description",
+                "sub": "korea-plainly.com"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "article": "korea-10-day-itinerary",
+  "music": "Daily Beetle",
+  "fallback": "photo-korea-10-day-itinerary.jpg",
+  "thumb_photo": "photo-korea-10-day-itinerary.jpg"
+}
