@@ -282,7 +282,7 @@ Facts:
 - Do not invent prices, opening hours, specific menu items, awards, booking rules, or travel times.
 - General, reliable context is welcome: the neighbourhood, what this kind of place is like in Korea,
   local customs, how to combine it with well-known nearby sights.
-- Mention the Google rating and review count once, naturally.
+- Never mention ratings, review counts or what reviewers say.
 
 Format:
 - 700-1000 words.

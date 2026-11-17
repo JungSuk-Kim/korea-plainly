@@ -200,10 +200,6 @@ def visit_card(s, place):
     address = place.get("address") or (html.unescape(found.group(1)).strip() if found else "")
     if address and not found:  # the summary box above already shows it
         rows.append(("Address", esc(address)))
-    if place.get("google_rating"):
-        count = f" from {int(place['google_review_count']):,} reviews" if place.get("google_review_count") else ""
-        when = nice_date(place.get("published_at", ""))
-        rows.append(("Google rating", f"{place['google_rating']}/5{count}" + (f" <small>({when})</small>" if when else "")))
     naver = f"https://map.naver.com/p/search/{quote(name + ' ' + region)}"
     buttons = [f'<a href="{esc(naver)}" target="_blank" rel="noopener">Naver Map</a>']
     if gmap:

@@ -1,5 +1,5 @@
 {
-  "why": "Kept out of search results while the site builds trust (AdSense review, Oct 2026): link-only hub pages, hotel/shop listings, and generated regional place articles without the owner's own photos. They stay on the site and in region hubs. Remove a page from this list to let it be indexed again, best after improving it (own photos, first-hand detail).",
+  "why": "Kept out of search results: link-only pages (search, videos). Generated regional place articles were retired on 2 and 17 Nov 2026 (content/retired_places.json); thin hubs redirect to their region page.",
   "pages": [
     "shop",
     "stay",
@@ -8,29 +8,6 @@
     "incheon-see-do",
     "jeju-see-do",
     "sokcho-see-do",
-    "seoul-travel-cheonggyecheon",
-    "seoul-shopping-myeongdong-shopping-street",
-    "seoul-culture-gyeongbokgung-palace",
-    "busan-culture-haedong-yonggungsa-temple",
-    "busan-leisure-spa-land-centum-city",
-    "jeju-travel-hyeopjae-beach",
-    "jeju-shopping-jeju-traditional-five-day-market",
-    "jeju-culture-arte-museum-jeju",
-    "jeju-leisure-jeju-leports-land",
-    "gyeongju-travel-woljeonggyo-bridge",
-    "gyeongju-culture-bulguksa",
-    "jeonju-culture-jeonju-hanok-village",
-    "gangneung-culture-ojukheon",
-    "gangneung-leisure-arte-museum-valley-gangneung",
-    "incheon-travel-songdo-central-park",
-    "incheon-culture-incheon-international-airport-terminal-2-korean-traditional-cult",
-    "incheon-leisure-incheon-grand-park",
-    "sokcho-travel-seoraksan-national-park",
-    "sokcho-shopping-sokcho-tourist-fishery-market",
-    "sokcho-culture-naksansa-temple",
-    "sokcho-leisure-biseondae-peak",
-    "sokcho-local-guide-yeonggeumjeong-sunrise-pavilion",
-    "yeosu-travel-hyangilam-hermitage",
     "videos"
   ]
 }

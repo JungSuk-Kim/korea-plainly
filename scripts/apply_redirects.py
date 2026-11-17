@@ -37,6 +37,20 @@ def main():
         nxt = redirects.get(name, {}).get("to")
         return final(nxt, seen + (name,)) if nxt and nxt not in seen else name
     targets = {old: final(old) for old in redirects}
+    # redirect pages written by other steps (old hubs, older merges) count too: no link should land on a stub
+    stubs = {}
+    for p in ROOT.glob("*.html"):
+        if p.name in redirects:
+            continue
+        head = read(p)[:1500]
+        m = re.search(r'http-equiv="refresh" content="0; url=([^"#]+)"', head) if "kp-redirect" in head else None
+        if m and (ROOT / m.group(1)).exists():
+            stubs[p.name] = m.group(1)
+    def stub_final(name, seen=()):
+        nxt = stubs.get(name) or redirects.get(name, {}).get("to")
+        return stub_final(nxt, seen + (name,)) if nxt and nxt not in seen else name
+    link_targets = dict(targets)
+    link_targets.update({old: stub_final(old) for old in stubs})
 
     pages = 0
     for old, new in targets.items():
@@ -46,12 +60,12 @@ def main():
             pages += 1
 
     relinked = 0
-    pattern = re.compile(r'href="(' + "|".join(re.escape(k) for k in targets) + r')(#[^"]*)?"')
+    pattern = re.compile(r'href="(' + "|".join(re.escape(k) for k in link_targets) + r')(#[^"]*)?"')
     for p in ROOT.glob("*.html"):
         s = read(p)
         if "kp-redirect" in s:
             continue
-        new = pattern.sub(lambda m: f'href="{targets[m.group(1)]}{m.group(2) or ""}"', s)
+        new = pattern.sub(lambda m: f'href="{link_targets[m.group(1)]}{m.group(2) or ""}"', s)
         if new != s:
             p.write_bytes(new.encode("utf-8"))
             relinked += 1

@@ -48,7 +48,7 @@ Two workflows, both in `.github/workflows/`:
 | --- | --- |
 | `apply_redirects.py` | Merged articles: old pages become noindex redirects and every link points to the article that replaced them (`content/redirects.json`) |
 | `lazy_cards.py` | Guide cards on guides.html: real `<img loading="lazy">` thumbnails and a category on every card |
-| `regional_photos.py` | Regional articles: credited cover photo (Wikimedia Commons first, else the place's Google Maps photo) and a Naver Map link; choices in `content/regional_photos.json` |
+| `regional_photos.py` | Regional articles: credited Wikimedia Commons cover photo and a Naver Map link (never Google Maps photos); choices in `content/regional_photos.json` |
 | `generate_region_pages.py`, `fix_navigation_and_regions.py`, `build_category_region_hubs.py` | Rebuild region hubs and the four group hubs per region (See & Do = travel/culture/leisure/local guide, Eat & Drink = food/cafe, Shop, Stay) plus nationwide group hubs; old 8-category hub URLs redirect to their group |
 | `add_internal_links.py` | Adds "Related guides" blocks |
 | `site_chrome.py` | Same header, stylesheet, footer, mobile menu, AdSense and Google Analytics (G-F508WWT8G9) on every page (copied from `guides.html`) |

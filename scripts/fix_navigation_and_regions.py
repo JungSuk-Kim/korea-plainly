@@ -160,19 +160,27 @@ import sys as _sys
 _sys.path.insert(0, str(Path("scripts").resolve()))
 from kp_nav import regions as _all_regions
 
+MIN_HUB = 3   # a hub with fewer articles than this is not worth a page of its own: it redirects to its parent
+DEAD_HUBS = {}
+
 for slug,name in _all_regions():
     for g,gname,cats in GROUPS:
         cards=group_cards(slug,cats)
         target=ROOT/f'{slug}-{g}.html'
-        if not cards:
-            if target.exists():   # nothing left in it: send visitors to the region page, no "coming soon" page
+        if len(cards) < MIN_HUB:
+            if target.exists():   # send visitors to the region page, no thin or "coming soon" page
                 _empty_hub_redirect(target.name, f'{slug}.html', name)
+                DEAD_HUBS[target.name] = (f'{slug}.html', name)
             continue
         target.write_text(
             make_hub(f'{slug}-{g}.html',f'{gname} in {name}',GROUP_INTRO[g].format(where=name),cards,f'{slug}.html',f'← {name}',slug),encoding='utf-8')
 
 for g,gname,cats in GROUPS:
     cards=group_cards('*',cats)
+    if len(cards) < MIN_HUB:
+        _empty_hub_redirect(f'{g}.html', 'regions.html', 'Regions of Korea')
+        DEAD_HUBS[f'{g}.html'] = ('regions.html', 'Regions of Korea')
+        continue
     (ROOT/f'{g}.html').write_text(
         make_hub(f'{g}.html',f'{gname} in Korea',GROUP_INTRO[g].format(where='Korea'),cards,'index.html','← Home'),encoding='utf-8')
 
@@ -194,7 +202,13 @@ for cat,cname in CATEGORIES:
     for slug,name in _all_regions():
         if cat != g:
             OLD_TO_NEW[f'{slug}-{cat}.html'] = (f'{slug}-{g}.html', f'{gname} in {name}')
+OLD_TO_NEW.update(DEAD_HUBS)
 for old,(new,title) in list(OLD_TO_NEW.items()):
+    if new in DEAD_HUBS:
+        new, title = DEAD_HUBS[new]
+        OLD_TO_NEW[old] = (new, title)
+    if old in DEAD_HUBS:
+        continue   # already a redirect page
     if not (ROOT/new).exists():
         # nothing in that group yet: send people to the region page instead
         region = old.split('-')[0]
@@ -243,10 +257,9 @@ def _region_cards():
     out = []
     for slug, name in _regions():
         # cover of the region's best "showcase" article: travel first, then culture, ...
-        order = ["Travel", "Culture", "Local Guide", "Leisure", "Food", "Cafe", "Shopping", "Stay"]
-        arts = [x for x in published if x.get("region") == name and (ROOT / f"{x.get('slug')}.html").exists()]
-        arts.sort(key=lambda x: order.index(x.get("category")) if x.get("category") in order else 99)
-        img = thumb_for(ROOT / f"{arts[0]['slug']}.html") if arts else ""
+        photos_path = ROOT / "content" / "region_photos.json"
+        ph = (json.loads(photos_path.read_text(encoding="utf-8")) if photos_path.exists() else {}).get(slug) or {}
+        img = ph["file"] if ph.get("file") and (ROOT / ph["file"]).exists() else ""
         intro = intros.get(slug, "")
         short = intro.split(". ")[0].rstrip(".") + "." if intro else ""
         pic = f'<img src="{html.escape(img)}" alt="" loading="lazy">' if img and img != "og-default.jpg" else ""
@@ -256,7 +269,7 @@ def _region_cards():
 
 REGION_CARDS = _region_cards()
 
-regions = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Explore Korea by region with practical travel, food, cafe, shopping, culture, leisure and stay guides."><link rel="canonical" href="https://korea-plainly.com/regions.html"><title>Regions of Korea | Korea Plainly</title><link rel="stylesheet" href="style.css?v={CSS_VERSION}"><style>.regions-hero{{padding:48px 0 30px}}.regions-hero h1{{font-size:clamp(46px,8vw,82px);line-height:1;margin:8px 0 18px}}.regions-hero p{{max-width:700px;font-size:18px;line-height:1.7}}.back-btn{{display:inline-block;margin-bottom:24px;color:#666;font-size:14px}}.regions-grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:25px 0 90px}}.regions-card img{{display:block;width:calc(100% + 56px);margin:-28px -28px 18px;aspect-ratio:16/9;object-fit:cover}}.regions-card{{background:var(--card);border:1px solid var(--line);padding:28px;overflow:hidden;min-height:190px}}.regions-card a{{display:block;height:100%}}.regions-card h2{{font-size:30px;margin:0 0 10px}}.regions-card p{{line-height:1.65;color:var(--muted)}}@media(max-width:800px){{.regions-grid{{grid-template-columns:1fr}}}}</style></head><body><header><div class="nav wrap"><a class="brand" href="index.html"><span class="taegeuk"></span><span>Korea <b>Plainly</b></span></a>{nav_html()}<a class="top-link" href="guides.html">Latest <span>↗</span></a><button class="menu" aria-label="menu">☰</button></div></header><main><section class="wrap regions-hero"><a class="back-btn" href="index.html">← Home</a><p class="kicker"><i></i> EXPLORE KOREA</p><h1>Regions</h1><p>Discover Korea through regional travel, food, cafes, shopping, culture, leisure and stay recommendations.</p></section><section class="wrap regions-grid">{REGION_CARDS}</section></main><footer><div class="wrap foot"><div><a class="brand" href="index.html"><span class="taegeuk"></span><span>Korea <b>Plainly</b></span></a><p>Korea, Made Easy for Everyone.</p></div><div class="foot-links"><a href="guides.html">Guides</a><a href="regions.html">Regions</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div></div></footer><script>document.querySelector('.menu').addEventListener('click',()=>document.querySelector('nav').classList.toggle('show'));</script>{NAV_JS}</body></html>'''
+regions = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Korea by region: how to get there, how long to stay, what to eat and the places worth your time in twelve cities and islands."><link rel="canonical" href="https://korea-plainly.com/regions.html"><title>Regions of Korea | Korea Plainly</title><link rel="stylesheet" href="style.css?v={CSS_VERSION}"><style>.regions-hero{{padding:48px 0 30px}}.regions-hero h1{{font-size:clamp(46px,8vw,82px);line-height:1;margin:8px 0 18px}}.regions-hero p{{max-width:700px;font-size:18px;line-height:1.7}}.back-btn{{display:inline-block;margin-bottom:24px;color:#666;font-size:14px}}.regions-grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:25px 0 90px}}.regions-card img{{display:block;width:calc(100% + 56px);margin:-28px -28px 18px;aspect-ratio:16/9;object-fit:cover}}.regions-card{{background:var(--card);border:1px solid var(--line);padding:28px;overflow:hidden;min-height:190px}}.regions-card a{{display:block;height:100%}}.regions-card h2{{font-size:30px;margin:0 0 10px}}.regions-card p{{line-height:1.65;color:var(--muted)}}@media(max-width:800px){{.regions-grid{{grid-template-columns:1fr}}}}</style></head><body><header><div class="nav wrap"><a class="brand" href="index.html"><span class="taegeuk"></span><span>Korea <b>Plainly</b></span></a>{nav_html()}<a class="top-link" href="guides.html">Latest <span>↗</span></a><button class="menu" aria-label="menu">☰</button></div></header><main><section class="wrap regions-hero"><a class="back-btn" href="index.html">← Home</a><p class="kicker"><i></i> EXPLORE KOREA</p><h1>Regions</h1><p>Twelve cities and islands, each with how to get there, how long to stay, what to eat and the places worth your time.</p></section><section class="wrap regions-grid">{REGION_CARDS}</section></main><footer><div class="wrap foot"><div><a class="brand" href="index.html"><span class="taegeuk"></span><span>Korea <b>Plainly</b></span></a><p>Korea, Made Easy for Everyone.</p></div><div class="foot-links"><a href="guides.html">Guides</a><a href="regions.html">Regions</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a></div></div></footer><script>document.querySelector('.menu').addEventListener('click',()=>document.querySelector('nav').classList.toggle('show'));</script>{NAV_JS}</body></html>'''
 (ROOT/'regions.html').write_text(regions,encoding='utf-8')
 
 # 4. Normalize navigation + cache-bust CSS on every root HTML page.

@@ -166,5 +166,143 @@
     "place_name": "카페 호이안",
     "region": "Yeosu",
     "retired": "2026-11-02"
+  },
+  {
+    "slug": "seoul-travel-cheonggyecheon",
+    "place_name": "Cheonggyecheon",
+    "region": "Seoul",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "seoul-shopping-myeongdong-shopping-street",
+    "place_name": "Myeongdong Shopping Street",
+    "region": "Seoul",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "seoul-culture-gyeongbokgung-palace",
+    "place_name": "Gyeongbokgung Palace",
+    "region": "Seoul",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "busan-culture-haedong-yonggungsa-temple",
+    "place_name": "Haedong Yonggungsa Temple",
+    "region": "Busan",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "busan-leisure-spa-land-centum-city",
+    "place_name": "SPA LAND Centum City",
+    "region": "Busan",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "jeju-travel-hyeopjae-beach",
+    "place_name": "Hyeopjae Beach",
+    "region": "Jeju",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "jeju-shopping-jeju-traditional-five-day-market",
+    "place_name": "Jeju Traditional Five-Day Market",
+    "region": "Jeju",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "jeju-culture-arte-museum-jeju",
+    "place_name": "Arte Museum Jeju",
+    "region": "Jeju",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "jeju-leisure-jeju-leports-land",
+    "place_name": "Jeju Leports Land",
+    "region": "Jeju",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "gyeongju-travel-woljeonggyo-bridge",
+    "place_name": "Woljeonggyo Bridge",
+    "region": "Gyeongju",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "gyeongju-culture-bulguksa",
+    "place_name": "Bulguksa",
+    "region": "Gyeongju",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "jeonju-culture-jeonju-hanok-village",
+    "place_name": "Jeonju Hanok Village",
+    "region": "Jeonju",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "gangneung-culture-ojukheon",
+    "place_name": "Ojukheon",
+    "region": "Gangneung",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "gangneung-leisure-arte-museum-valley-gangneung",
+    "place_name": "Arte Museum Valley Gangneung",
+    "region": "Gangneung",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "incheon-travel-songdo-central-park",
+    "place_name": "Songdo Central Park",
+    "region": "Incheon",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "incheon-culture-incheon-international-airport-terminal-2-korean-traditional-cult",
+    "place_name": "Incheon International Airport Terminal 2 Korean Traditional Culture Experience Center (East)",
+    "region": "Incheon",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "incheon-leisure-incheon-grand-park",
+    "place_name": "Incheon Grand Park",
+    "region": "Incheon",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "sokcho-travel-seoraksan-national-park",
+    "place_name": "설악산국립공원 설악동지구",
+    "region": "Sokcho",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "sokcho-shopping-sokcho-tourist-fishery-market",
+    "place_name": "Sokcho Tourist & Fishery Market",
+    "region": "Sokcho",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "sokcho-culture-naksansa-temple",
+    "place_name": "Naksansa Temple",
+    "region": "Sokcho",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "sokcho-leisure-biseondae-peak",
+    "place_name": "Biseondae Peak",
+    "region": "Sokcho",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "sokcho-local-guide-yeonggeumjeong-sunrise-pavilion",
+    "place_name": "Yeonggeumjeong Sunrise Pavilion",
+    "region": "Sokcho",
+    "retired": "2026-11-17"
+  },
+  {
+    "slug": "yeosu-travel-hyangilam-hermitage",
+    "place_name": "Hyangilam Hermitage",
+    "region": "Yeosu",
+    "retired": "2026-11-17"
   }
 ]

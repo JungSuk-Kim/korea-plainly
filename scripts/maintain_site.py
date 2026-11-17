@@ -14,7 +14,8 @@ STEPS = [
     "lazy_cards.py",                  # guide card photos load lazily, as real <img> tags
     "apply_redirects.py",             # merged articles redirect to the article that replaced them (content/redirects.json)
     "regional_photos.py",             # credited Wikimedia photos (else a title card) + Naver Map links for regional articles
-    "generate_region_pages.py",       # region hub pages from content/published.json
+    "region_photos.py",               # one credited photo per region page (content/region_photos.json)
+    "generate_region_pages.py",       # region pages: photo, planning notes, places list (content/region_*.json)
     "fix_navigation_and_regions.py",  # region/category hubs and menus
     "guide_numbers.py",               # number guide cards 01, 02, ... in page order
     "build_category_region_hubs.py",  # category hubs (travel.html, food.html, ...)

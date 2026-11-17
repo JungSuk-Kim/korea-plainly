@@ -206,7 +206,7 @@ def search_commons(query, reject=(), require=(), avoid=None):
 def sources_in_use(except_key=None):
     """Every photo source already used by another guide or regional article, so no photo appears twice."""
     used = set()
-    for name in ("guide_photos.json", "regional_photos.json"):
+    for name in ("guide_photos.json", "regional_photos.json", "region_photos.json"):
         path = ROOT / "content" / name
         if path.exists():
             for key, entry in json.loads(path.read_text(encoding="utf-8")).items():

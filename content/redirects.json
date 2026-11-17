@@ -282,5 +282,97 @@
   "korean-skincare-shopping-apps.html": {
     "to": "olive-young-korea-guide.html",
     "title": "Olive Young in Korea: How to Shop for K-Beauty as a Visitor"
+  },
+  "seoul-travel-cheonggyecheon.html": {
+    "to": "seoul.html",
+    "title": "Seoul travel guide"
+  },
+  "seoul-shopping-myeongdong-shopping-street.html": {
+    "to": "seoul.html",
+    "title": "Seoul travel guide"
+  },
+  "seoul-culture-gyeongbokgung-palace.html": {
+    "to": "seoul.html",
+    "title": "Seoul travel guide"
+  },
+  "busan-culture-haedong-yonggungsa-temple.html": {
+    "to": "busan.html",
+    "title": "Busan travel guide"
+  },
+  "busan-leisure-spa-land-centum-city.html": {
+    "to": "busan.html",
+    "title": "Busan travel guide"
+  },
+  "jeju-travel-hyeopjae-beach.html": {
+    "to": "jeju.html",
+    "title": "Jeju travel guide"
+  },
+  "jeju-shopping-jeju-traditional-five-day-market.html": {
+    "to": "jeju.html",
+    "title": "Jeju travel guide"
+  },
+  "jeju-culture-arte-museum-jeju.html": {
+    "to": "jeju.html",
+    "title": "Jeju travel guide"
+  },
+  "jeju-leisure-jeju-leports-land.html": {
+    "to": "jeju.html",
+    "title": "Jeju travel guide"
+  },
+  "gyeongju-travel-woljeonggyo-bridge.html": {
+    "to": "gyeongju.html",
+    "title": "Gyeongju travel guide"
+  },
+  "gyeongju-culture-bulguksa.html": {
+    "to": "gyeongju.html",
+    "title": "Gyeongju travel guide"
+  },
+  "jeonju-culture-jeonju-hanok-village.html": {
+    "to": "jeonju.html",
+    "title": "Jeonju travel guide"
+  },
+  "gangneung-culture-ojukheon.html": {
+    "to": "gangneung.html",
+    "title": "Gangneung travel guide"
+  },
+  "gangneung-leisure-arte-museum-valley-gangneung.html": {
+    "to": "gangneung.html",
+    "title": "Gangneung travel guide"
+  },
+  "incheon-travel-songdo-central-park.html": {
+    "to": "incheon.html",
+    "title": "Incheon travel guide"
+  },
+  "incheon-culture-incheon-international-airport-terminal-2-korean-traditional-cult.html": {
+    "to": "incheon.html",
+    "title": "Incheon travel guide"
+  },
+  "incheon-leisure-incheon-grand-park.html": {
+    "to": "incheon.html",
+    "title": "Incheon travel guide"
+  },
+  "sokcho-travel-seoraksan-national-park.html": {
+    "to": "sokcho.html",
+    "title": "Sokcho travel guide"
+  },
+  "sokcho-shopping-sokcho-tourist-fishery-market.html": {
+    "to": "sokcho.html",
+    "title": "Sokcho travel guide"
+  },
+  "sokcho-culture-naksansa-temple.html": {
+    "to": "sokcho.html",
+    "title": "Sokcho travel guide"
+  },
+  "sokcho-leisure-biseondae-peak.html": {
+    "to": "sokcho.html",
+    "title": "Sokcho travel guide"
+  },
+  "sokcho-local-guide-yeonggeumjeong-sunrise-pavilion.html": {
+    "to": "sokcho.html",
+    "title": "Sokcho travel guide"
+  },
+  "yeosu-travel-hyangilam-hermitage.html": {
+    "to": "yeosu.html",
+    "title": "Yeosu travel guide"
   }
 }

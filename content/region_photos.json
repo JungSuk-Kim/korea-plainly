@@ -1,0 +1,70 @@
+{
+  "seoul": {
+    "file": "regional-seoul-culture-gyeongbokgung-palace.jpg",
+    "credit": "Photo: Frank Schulenburg, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gyeonghoeru_(Royal_Banquet_Hall)_at_Gyeongbokgung_Palace,_Seoul.jpg",
+    "alt": "Gyeongbokgung Palace in Seoul",
+    "manual": true
+  },
+  "busan": {
+    "file": "regional-busan-culture-haedong-yonggungsa-temple.jpg",
+    "credit": "Photo: Christian Bolz, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Haedong_Yonggungsa_Temple_near_Busan.jpg",
+    "alt": "Haedong Yonggungsa temple on the coast of Busan",
+    "manual": true
+  },
+  "jeju": {
+    "file": "photo-own-jeju-hamdeok-winter.jpg",
+    "credit": "Photo: Jungsuk Kim, Korea Plainly",
+    "source": "",
+    "alt": "Hamdeok Beach on Jeju in winter",
+    "manual": true
+  },
+  "gyeongju": {
+    "file": "regional-gyeongju-travel-woljeonggyo-bridge.jpg",
+    "credit": "Photo: lumoplank, CC0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Woljeonggyo_Bridge,_Gyeongju_-_Woljeonggyo2656.jpg",
+    "alt": "Woljeonggyo Bridge in Gyeongju",
+    "manual": true
+  },
+  "jeonju": {
+    "file": "regional-jeonju-culture-jeonju-hanok-village.jpg",
+    "credit": "Photo: Mobius6, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Jeonju_Hanok_Village_20220701_003.jpg",
+    "alt": "Tiled roofs of Jeonju Hanok Village",
+    "manual": true
+  },
+  "gangneung": {
+    "file": "regional-gangneung-culture-ojukheon.jpg",
+    "credit": "Photo: Klaus314 at English Wikipedia, Public domain, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Korea-Gangneung-Ojukheon-01.jpg",
+    "alt": "Ojukheon in Gangneung",
+    "manual": true
+  },
+  "incheon": {
+    "file": "regional-incheon-travel-songdo-central-park.jpg",
+    "credit": "Photo: Vincent van Zeijst, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:South_Korea,_Incheon,_Songdo,_the_Sharp_Central_Park_Towers.jpg",
+    "alt": "Songdo Central Park in Incheon",
+    "manual": true
+  },
+  "sokcho": {
+    "file": "photo-seoraksan-hikes.jpg",
+    "credit": "Photo: Olga Lipunova, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seoraksan,_Ulsanbawi.jpg",
+    "alt": "Ulsanbawi rock in Seoraksan National Park, near Sokcho",
+    "manual": true
+  },
+  "yeosu": {
+    "query": "Yeosu Dolsan Bridge"
+  },
+  "daegu": {
+    "query": "Daegu Seomun Market"
+  },
+  "daejeon": {
+    "query": "Daejeon Expo Bridge"
+  },
+  "gwangju": {
+    "query": "Gwangju Mudeungsan"
+  }
+}

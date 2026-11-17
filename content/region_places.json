@@ -1,0 +1,350 @@
+{
+ "seoul": [
+  {
+   "name": "Gyeongbokgung Palace",
+   "ko": "경복궁",
+   "text": "The main palace of the Joseon dynasty, first built in 1395. Arrive for the changing of the guard at Gwanghwamun gate, then walk through to Gyeonghoeru, the pavilion on the pond. It is closed on Tuesdays, and entry is free if you wear hanbok."
+  },
+  {
+   "name": "Bukchon Hanok Village",
+   "ko": "북촌한옥마을",
+   "text": "Lanes of traditional tiled-roof houses on the hill between Gyeongbokgung and Changdeokgung. People live here, so keep your voice down; the busiest residential lanes are open to visitors only during daytime hours."
+  },
+  {
+   "name": "Cheonggyecheon Stream",
+   "ko": "청계천",
+   "text": "A restored stream that runs for nearly 11 kilometres through the centre, a few steps below street level. It is at its best in the evening: start at Cheonggye Plaza near Gwanghwamun and walk east towards Gwangjang Market."
+  },
+  {
+   "name": "Gwangjang Market",
+   "ko": "광장시장",
+   "text": "One of Seoul's oldest covered markets and the easiest place to try market food: bindaetteok (mung bean pancakes), mayak gimbap and knife-cut noodles, eaten at the stall's bench.",
+   "guide": "korean-street-food-guide.html"
+  },
+  {
+   "name": "Myeongdong",
+   "ko": "명동",
+   "text": "Seoul's best-known shopping streets for cosmetics and fashion. Street food stalls set up from late afternoon, and Myeongdong Cathedral at the top of the hill is a quiet break from the crowds.",
+   "guide": "olive-young-korea-guide.html"
+  },
+  {
+   "name": "N Seoul Tower on Namsan",
+   "ko": "남산서울타워",
+   "text": "The tower on the hill in the middle of the city. Take the cable car or the Namsan circular bus, or walk up through the park in about 30 to 40 minutes, and time it for sunset."
+  }
+ ],
+ "busan": [
+  {
+   "name": "Haedong Yonggungsa Temple",
+   "ko": "해동용궁사",
+   "text": "A temple built on the rocks above the sea, north-east of Haeundae, which is rare in a country where most temples are in the mountains. Go early in the morning, before the tour buses, and expect a lot of steps."
+  },
+  {
+   "name": "Haeundae Beach and Blueline Park",
+   "ko": "해운대블루라인파크",
+   "text": "Busan's most famous beach. From Mipo, at its eastern end, small sky capsules and a beach train run along the old coastal railway to Cheongsapo and Songjeong; book ahead at weekends."
+  },
+  {
+   "name": "Gamcheon Culture Village",
+   "ko": "감천문화마을",
+   "text": "Brightly painted houses stacked up a steep hillside, with murals, small galleries and viewpoints. Take the village bus or a taxi up from Toseong Station and walk down."
+  },
+  {
+   "name": "Jagalchi Fish Market",
+   "ko": "자갈치시장",
+   "text": "Korea's largest seafood market. Choose your fish from the tanks on the ground floor and have it prepared in the restaurants upstairs; BIFF Square and Gukje Market are a short walk away."
+  },
+  {
+   "name": "Gwangalli Beach",
+   "ko": "광안리해수욕장",
+   "text": "The beach with the view of Gwangan Bridge, which is lit up after dark. Cafés and bars line the seafront, and a drone light show is held on many Saturday evenings."
+  },
+  {
+   "name": "Spa Land Centum City",
+   "ko": "스파랜드 센텀시티",
+   "text": "A large, modern jjimjilbang inside the Shinsegae Centum City department store, with hot spring baths and many themed sauna rooms. It is an easy first Korean bathhouse.",
+   "guide": "korean-bathhouse-guide.html"
+  }
+ ],
+ "jeju": [
+  {
+   "name": "Seongsan Ilchulbong",
+   "ko": "성산일출봉",
+   "text": "A volcanic crater rising out of the sea on the east coast. The stair climb to the rim takes 20 to 30 minutes, and sunrise is the classic time to go. Udo island is a short ferry ride from the nearby port."
+  },
+  {
+   "name": "Hyeopjae Beach",
+   "ko": "협재해수욕장",
+   "text": "White sand, black lava rock and shallow turquoise water on the west coast, with the small island of Biyangdo straight ahead. Hallim Park is across the road."
+  },
+  {
+   "name": "Hamdeok Beach",
+   "ko": "함덕해수욕장",
+   "text": "A wide, pale beach about 30 minutes east of Jeju City, with a short walk up Seoubong hill for the view. It is easy to reach by bus, and good even in winter, when the sea turns a milky green.",
+   "guide": "jeju-in-winter.html"
+  },
+  {
+   "name": "Hallasan",
+   "ko": "한라산",
+   "text": "South Korea's highest mountain at 1,947 metres. The two summit trails, Seongpanak and Gwaneumsa, need a free advance reservation and an early start; Eorimok and Yeongsil are shorter and reach the high plateau but not the crater."
+  },
+  {
+   "name": "Jeju Five-Day Market",
+   "ko": "제주시민속오일시장",
+   "text": "A big traditional market near the airport, held on dates ending in 2 and 7. Come for tangerines, dried fish, street snacks and a look at everyday island life."
+  },
+  {
+   "name": "Arte Museum Jeju",
+   "ko": "아르떼뮤지엄 제주",
+   "text": "A large immersive media art space in Aewol, with rooms of projected waves, flowers and waterfalls. It is a useful plan for a rainy or very windy day."
+  }
+ ],
+ "gyeongju": [
+  {
+   "name": "Bulguksa Temple",
+   "ko": "불국사",
+   "text": "A UNESCO-listed temple from the Silla kingdom, known for its stone staircases and the two pagodas in the main courtyard, Dabotap and Seokgatap. Seokguram grotto is further up the mountain by shuttle bus or a forest path."
+  },
+  {
+   "name": "Daereungwon Tomb Complex",
+   "ko": "대릉원",
+   "text": "A park of grassy royal burial mounds in the middle of town. You can walk inside one of them, Cheonmachong, to see how a Silla tomb was built."
+  },
+  {
+   "name": "Donggung Palace and Wolji Pond",
+   "ko": "동궁과 월지",
+   "text": "The site of a Silla palace garden, best visited just after dark, when the rebuilt pavilions are lit and reflected in the pond."
+  },
+  {
+   "name": "Woljeonggyo Bridge",
+   "ko": "월정교",
+   "text": "A grand covered wooden bridge, rebuilt on its Silla-era site beside the Gyochon hanok village. It is free to cross and beautifully lit at night."
+  },
+  {
+   "name": "Hwangnidan-gil",
+   "ko": "황리단길",
+   "text": "The street beside the tomb park where old hanok houses have become cafés, restaurants and small shops. This is where to try Gyeongju bread and ten-won bread."
+  }
+ ],
+ "jeonju": [
+  {
+   "name": "Jeonju Hanok Village",
+   "ko": "전주한옥마을",
+   "text": "Hundreds of traditional houses in one district, many of them guesthouses, tea rooms and craft shops. Renting hanbok for a few hours is popular here, and the lanes are prettiest early in the morning and after dark."
+  },
+  {
+   "name": "Gyeonggijeon Shrine",
+   "ko": "경기전",
+   "text": "A shrine built in 1410 to hold the portrait of King Taejo, founder of the Joseon dynasty, with a small bamboo grove inside the walls."
+  },
+  {
+   "name": "Jeondong Cathedral",
+   "ko": "전동성당",
+   "text": "A red-brick Catholic cathedral from the early 1900s, directly opposite Gyeonggijeon and one of the most photographed buildings in the city."
+  },
+  {
+   "name": "Omokdae",
+   "ko": "오목대",
+   "text": "A pavilion on a low hill at the edge of the hanok village. A ten-minute climb gives you the view over all the tiled roofs."
+  },
+  {
+   "name": "Nambu Market",
+   "ko": "남부시장",
+   "text": "The old market just south of the village, known for kongnamul gukbap (bean sprout soup with rice) in the morning and a night market on weekend evenings."
+  }
+ ],
+ "gangneung": [
+  {
+   "name": "Ojukheon",
+   "ko": "오죽헌",
+   "text": "The birthplace of the scholar Yi I and his mother, the artist Shin Saimdang, who appear on the 5,000 and 50,000 won notes. The house is named after the black bamboo that grows around it."
+  },
+  {
+   "name": "Gyeongpo Beach and Lake",
+   "ko": "경포해변",
+   "text": "A long sandy beach with a lagoon just behind it. A flat path circles the lake, lined with cherry trees in April, and Gyeongpodae pavilion looks over the water."
+  },
+  {
+   "name": "Anmok Coffee Street",
+   "ko": "안목해변 커피거리",
+   "text": "A row of cafés facing the sea at Anmok Beach, the heart of Gangneung's reputation as Korea's coffee city. Take a window seat upstairs."
+  },
+  {
+   "name": "Jeongdongjin",
+   "ko": "정동진",
+   "text": "A small seaside village south of the city with a railway station right on the beach, famous as a sunrise spot, especially on New Year's Day.",
+   "guide": "korea-new-year-sunrise.html"
+  },
+  {
+   "name": "Arte Museum Gangneung",
+   "ko": "아르떼뮤지엄 강릉",
+   "text": "An immersive media art museum near Gyeongpo Lake, with themes drawn from the mountains and sea of Gangwon. A good plan for a rainy day."
+  }
+ ],
+ "incheon": [
+  {
+   "name": "Incheon Chinatown",
+   "ko": "인천 차이나타운",
+   "text": "Korea's oldest Chinatown, at the end of subway Line 1, and the home of jjajangmyeon. The painted Fairy Tale Village and Jayu Park are next door.",
+   "guide": "incheon-local-guide-incheon-chinatown.html"
+  },
+  {
+   "name": "Songdo Central Park",
+   "ko": "송도 센트럴파크",
+   "text": "A park built around a seawater canal in the new city of Songdo, surrounded by glass towers. You can rent small boats, and the skyline is at its best around sunset."
+  },
+  {
+   "name": "Wolmido",
+   "ko": "월미도",
+   "text": "A seafront promenade with fairground rides, seafood restaurants and ferries, a short bus or monorail ride from Incheon Station."
+  },
+  {
+   "name": "Incheon Grand Park",
+   "ko": "인천대공원",
+   "text": "A very large city park with a lake, an arboretum and bike rental, known for its cherry blossom tunnel in April and its autumn leaves."
+  }
+ ],
+ "sokcho": [
+  {
+   "name": "Seoraksan National Park",
+   "ko": "설악산국립공원",
+   "text": "The granite peaks behind the town. From the main Sogongwon entrance, a cable car goes up to Gwongeumseong for wide views with very little walking, and trails lead to Ulsanbawi rock and Biryong Falls.",
+   "guide": "seoraksan-hikes.html"
+  },
+  {
+   "name": "Biseondae",
+   "ko": "비선대",
+   "text": "A broad rock terrace beside a clear stream in Cheonbuldong Valley, reached by a mostly gentle walk of about an hour from the Sogongwon entrance. Despite the English name sometimes used, it is not a summit.",
+   "guide": "seoraksan-hikes.html"
+  },
+  {
+   "name": "Yeonggeumjeong",
+   "ko": "영금정",
+   "text": "A pavilion on the rocks at the edge of Dongmyeong Port, reached by a short bridge over the waves. It is one of the easiest sunrise spots on the east coast.",
+   "guide": "korea-new-year-sunrise.html"
+  },
+  {
+   "name": "Sokcho Tourist and Fishery Market",
+   "ko": "속초관광수산시장",
+   "text": "The central market, also called Jungang Market, where queues form for boxes of dakgangjeong (sweet crispy chicken), and for fresh and dried seafood."
+  },
+  {
+   "name": "Abai Village",
+   "ko": "아바이마을",
+   "text": "A neighbourhood settled by refugees from the North during the Korean War. Cross on the gaetbae, a small ferry pulled by hand along a cable, and try squid sundae."
+  },
+  {
+   "name": "Naksansa Temple",
+   "ko": "낙산사",
+   "text": "A temple on a sea cliff in Yangyang, about 20 minutes south of Sokcho. Walk out to the Hongryeonam hermitage above the waves and up to the tall statue of the Bodhisattva of Compassion."
+  }
+ ],
+ "yeosu": [
+  {
+   "name": "Hyangiram Hermitage",
+   "ko": "향일암",
+   "text": "A small hermitage on the cliffs at the tip of Dolsan island, its name meaning \"facing the sun\". The climb from the village takes 20 to 30 minutes, through narrow gaps between boulders, and it is a famous place to watch the sunrise."
+  },
+  {
+   "name": "Odongdo Island",
+   "ko": "오동도",
+   "text": "A small wooded island joined to the city by a long breakwater. Its camellias flower from late winter into early spring, and a path leads to a lighthouse and sea cliffs."
+  },
+  {
+   "name": "Yeosu Maritime Cable Car",
+   "ko": "여수해상케이블카",
+   "text": "A cable car across the harbour between Dolsan Park and Jasan Park, with glass-floored cabins if you want them. Ride it around dusk for the lights."
+  },
+  {
+   "name": "Jongpo Marine Park",
+   "ko": "종포해양공원",
+   "text": "The waterfront promenade where Yeosu's well-known night sea is at its liveliest, with buskers, street food stalls and views of the bridges."
+  },
+  {
+   "name": "Yi Sun-sin Square",
+   "ko": "이순신광장",
+   "text": "The central square by the old harbour, with a replica of a turtle ship beside it. Admiral Yi Sun-sin's navy was based in Yeosu during the wars of the 1590s."
+  }
+ ],
+ "daegu": [
+  {
+   "name": "Seomun Market",
+   "ko": "서문시장",
+   "text": "One of the biggest traditional markets in Korea, known for fabric and for its food alleys: flat dumplings (napjak mandu) and knife-cut noodles. A night market runs in the warmer months."
+  },
+  {
+   "name": "Kim Gwang-seok Street",
+   "ko": "김광석 다시그리기길",
+   "text": "A lane of murals, music and small cafés dedicated to a much-loved folk singer who grew up nearby, beside Bangcheon Market."
+  },
+  {
+   "name": "Cheongna Hill and the Modern History Alley",
+   "ko": "청라언덕",
+   "text": "Missionary houses from the early 1900s, the 90 steps of the March First Movement and Gyesan Cathedral, linked by an easy signposted walk through the old town."
+  },
+  {
+   "name": "Apsan Observatory",
+   "ko": "앞산전망대",
+   "text": "A viewpoint over the whole city, reached by cable car and a short walk. Go just before sunset and stay for the lights."
+  },
+  {
+   "name": "Donghwasa Temple",
+   "ko": "동화사",
+   "text": "A large temple on Palgongsan, north of the city, with a towering stone Buddha. A cable car nearby climbs higher up the mountain."
+  }
+ ],
+ "daejeon": [
+  {
+   "name": "Hanbat Arboretum",
+   "ko": "한밭수목원",
+   "text": "A large, free garden in the middle of the city, next to the Expo site and the art museums. It is an easy place for a slow walk in spring and autumn."
+  },
+  {
+   "name": "National Science Museum",
+   "ko": "국립중앙과학관",
+   "text": "Korea's main science museum, with hands-on halls that work well with children. Much of it is free or low-cost."
+  },
+  {
+   "name": "Sungsimdang Bakery",
+   "ko": "성심당",
+   "text": "The bakery, founded in 1956, that Koreans travel to Daejeon for. The main shop is near Jungangno Station; expect a queue for the fried soboro bread."
+  },
+  {
+   "name": "Yuseong Hot Springs Foot Bath",
+   "ko": "유성온천 족욕체험장",
+   "text": "A free outdoor foot bath fed by hot spring water in the Yuseong district. Bring a small towel."
+  },
+  {
+   "name": "Gyejoksan Red Clay Trail",
+   "ko": "계족산 황톳길",
+   "text": "A forest trail covered in soft red clay and made for walking barefoot, with places to wash your feet afterwards."
+  }
+ ],
+ "gwangju": [
+  {
+   "name": "Asia Culture Center and May 18 Democracy Square",
+   "ko": "국립아시아문화전당",
+   "text": "A large arts complex built around the square and the former provincial office at the centre of the May 1980 uprising. Exhibitions change often, and the grounds are pleasant in the evening."
+  },
+  {
+   "name": "May 18th National Cemetery",
+   "ko": "국립5·18민주묘지",
+   "text": "The memorial and resting place of those who died in the 1980 democratic uprising, north of the city, with a small exhibition hall. A quiet, moving visit."
+  },
+  {
+   "name": "Yangnim-dong and Penguin Village",
+   "ko": "양림동 펭귄마을",
+   "text": "A neighbourhood of early 20th-century missionary houses and hanok, plus an alley decorated by residents with clocks, pots and old signs."
+  },
+  {
+   "name": "Mudeungsan National Park",
+   "ko": "무등산국립공원",
+   "text": "The mountain on the edge of the city, known for its columns of volcanic rock near the top. The walk to Jeungsimsa temple is an easy introduction."
+  },
+  {
+   "name": "Juknokwon Bamboo Forest, Damyang",
+   "ko": "죽녹원",
+   "text": "Walking paths through a dense bamboo grove in the next county, about 40 minutes away by bus, near the tree-lined Metasequoia Road."
+  }
+ ]
+}

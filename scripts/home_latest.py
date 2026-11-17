@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Fill the home page "Latest guides" list with the newest articles, and the
-"Find Korea by place" grid with a photo card for every region that has a hub.
+"Find Korea by place" grid with a photo card for every region that has a photo.
 
-Two newest general guides (cards on guides.html) and the two newest regional
-articles (content/published.json), newest first. Dates come from
+The four newest indexed articles (guide cards on guides.html and regional
+articles in content/published.json), newest first. Dates come from
 content/page_dates.json, which article_enhance.py keeps up to date.
 """
 import html
@@ -71,12 +71,19 @@ def card(i, item):
 
 
 def region_photo(slug):
-    for cat in PHOTO_ORDER:
-        for img in sorted(ROOT.glob(f"regional-{slug}-{cat}-*.jpg")):
-            page = ROOT / (img.stem[len("regional-"):] + ".html")
-            if page.exists() and "kp-redirect" not in read(page):
-                return img.name
-    return None
+    """The region's own photo (content/region_photos.json, credited on the region page)."""
+    path = ROOT / "content" / "region_photos.json"
+    e = (json.loads(read(path)) if path.exists() else {}).get(slug) or {}
+    return e["file"] if e.get("file") and (ROOT / e["file"]).exists() else None
+
+
+def indexed(href):
+    """Only pages that search engines may index belong on the home page."""
+    p = ROOT / href
+    if not p.exists():
+        return False
+    s = read(p)
+    return "kp-redirect" not in s[:4000] and not re.search(r'name="robots"[^>]*noindex', s)
 
 
 def region_grid(s, nl):
@@ -117,8 +124,8 @@ def main():
     for n, it in enumerate(regional):
         order[it["href"]] = n             # published.json is in publishing order
     key = lambda it: (dates.get(it["href"], ""), order.get(it["href"], 0))
-    picks = sorted(guides, key=key, reverse=True)[:2] + sorted(regional, key=key, reverse=True)[:2]
-    picks.sort(key=key, reverse=True)
+    # the four newest articles overall
+    picks = sorted((it for it in guides + regional if indexed(it["href"])), key=key, reverse=True)[:4]
     if not picks:
         return
 

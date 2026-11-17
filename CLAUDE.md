@@ -40,9 +40,16 @@ reply in Korean and address him as "주인님" (not "사장님"), keep site cont
 - One article per place. The regional generator skips places already in `content/published.json`.
 - 2 Nov 2026: 28 generated cafe/restaurant/hotel/brand-shop articles nobody had visited were retired (redirects to the region
   page; list in `content/retired_places.json`, which the regional generator also skips). Region sub-hubs left empty
-  redirect to the region page. No Google Maps photos anywhere: places without a free Commons photo get a title card.
+  redirect to the region page. No Google Maps photos anywhere: no title cards are left in use.
 - 16 Nov 2026 (second "low value content" result): automatic daily guides are paused while `content/guides_paused`
   exists (Daily Publish skips refill_topics and generate_post). New guides only with the owner's own experience/photos.
+- 17 Nov 2026: the last 23 generated place articles (they showed Google ratings) were retired too; only places with the
+  owner's own material remain as articles. Region pages are now built from `content/region_overviews.json`,
+  `content/region_places.json` (places list: name, Korean name, a few lines, optional `guide`) and
+  `content/region_photos.json` (`region_photos.py`: one credited photo per region; a `query`-only entry is fetched in
+  Actions). Hubs with fewer than 3 articles redirect to their region page; `apply_redirects.py` relinks links to any
+  redirect stub; `add_internal_links.py` rebuilds a "Related guides" block that has gone stale. Never show Google
+  ratings or review counts.
 - AdSense quality work (Oct 2026, after a "low value content" review): regional place articles are paused while
   `content/regional_paused` exists; `content/noindex.json` lists pages kept out of search (link-only hubs, hotel/shop
   listings, and since 18 Oct every generated regional place article without the owner's photos; re-index one only after

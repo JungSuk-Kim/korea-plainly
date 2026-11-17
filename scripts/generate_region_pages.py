@@ -8,6 +8,10 @@ INTROS_FILE = ROOT / "content" / "region_intros.json"
 OVERVIEWS_FILE = ROOT / "content" / "region_overviews.json"   # practical "planning a trip" text for each hub
 INTROS = json.loads(INTROS_FILE.read_text(encoding="utf-8")) if INTROS_FILE.exists() else {}
 OVERVIEWS = json.loads(OVERVIEWS_FILE.read_text(encoding="utf-8")) if OVERVIEWS_FILE.exists() else {}
+PLACES_FILE = ROOT / "content" / "region_places.json"       # the places list on each region page (name, Korean name, why go)
+PLACES = json.loads(PLACES_FILE.read_text(encoding="utf-8")) if PLACES_FILE.exists() else {}
+PHOTOS_FILE = ROOT / "content" / "region_photos.json"       # one credited photo per region (scripts/region_photos.py)
+PHOTOS = json.loads(PHOTOS_FILE.read_text(encoding="utf-8")) if PHOTOS_FILE.exists() else {}
 # first-timer pages linked in one sentence at the top of "Planning a trip to ..." (only if the page exists)
 START_LINKS = {
     "seoul": [("seoul-3-day-itinerary.html", "a 3-day itinerary"),
@@ -51,6 +55,36 @@ def thumb_for(p):
     src = m.group(1) if m else "og-default.jpg"
     return src if (ROOT / src).exists() else "og-default.jpg"
 
+def hero(slug, name):
+    """The region's photo with its credit line (the licence asks for the credit next to the photo)."""
+    e = PHOTOS.get(slug) or {}
+    if not e.get("file") or not (ROOT / e["file"]).exists():
+        return ""
+    credit = esc(e.get("credit", ""))
+    if e.get("source"):
+        credit = '<a href="{}" target="_blank" rel="noopener nofollow">{}</a>'.format(esc(e["source"]), credit)
+    return '<figure class="hero"><img src="{}" alt="{}"><figcaption>{}</figcaption></figure>'.format(
+        esc(e["file"]), esc(e.get("alt") or name), credit)
+
+
+def places(slug, name):
+    """The places list: Korean name (to show a driver or paste into a map app), a few lines, a Naver Map search."""
+    from urllib.parse import quote
+    rows = []
+    for pl in PLACES.get(slug) or []:
+        links = ['<a href="https://map.naver.com/p/search/{}" target="_blank" rel="noopener nofollow">Find it on Naver Map</a>'.format(
+            quote(pl["ko"]))]
+        g = pl.get("guide")
+        if g and (ROOT / g).exists() and "kp-redirect" not in (ROOT / g).read_text(encoding="utf-8", errors="ignore")[:4000]:
+            links.append('<a href="{}">Read our guide</a>'.format(esc(g)))
+        rows.append('<li><h3>{} <span lang="ko">{}</span></h3><p>{}</p><p class="links">{}</p></li>'.format(
+            esc(pl["name"]), esc(pl["ko"]), esc(pl["text"]), " &middot; ".join(links)))
+    if not rows:
+        return ""
+    return ('<section class="places"><h2>Places worth your time in {}</h2><p class="note">The Korean name is the one to show a '
+            'taxi driver or paste into Naver Map or KakaoMap.</p><ul>{}</ul></section>').format(esc(name), "".join(rows))
+
+
 def page(region):
     slug, name = region["slug"], region["name"]
     items, cats_with_items = [], []
@@ -71,8 +105,7 @@ def page(region):
     chips = "".join('<a href="{}-{}.html">{}</a>'.format(esc(slug), g, label) for g, label in groups
                     if (ROOT / "{}-{}.html".format(slug, g)).exists()
                     and "kp-redirect" not in (ROOT / "{}-{}.html".format(slug, g)).read_text(encoding="utf-8", errors="ignore"))
-    if not cards:
-        cards = '<p class="empty">New recommendations for this region will appear here automatically.</p>'
+    grid = '<section class="grid">{}</section>'.format(cards) if cards else ""
     template = '''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} | Korea Plainly</title>
@@ -92,6 +125,9 @@ h1{{font-size:clamp(44px,8vw,82px);line-height:1;margin:12px 0}}.intro{{max-widt
 .plan b{{display:block;font-size:22px;line-height:1.25;margin:6px 22px 6px 0}}.plan em{{font-style:normal;font-size:14px;font-weight:700}}
 @media(max-width:600px){{.plan{{grid-template-columns:110px 1fr;gap:14px}}.plan b{{font-size:17px}}}}.empty{{padding:30px;background:#fff;border:1px solid #ded6c8}}
 .overview{{max-width:760px;margin-top:56px}}.overview h2{{font-size:32px;line-height:1.15;margin:0 0 6px}}.overview h3{{font-size:19px;margin:24px 0 4px}}.overview p{{margin:0;font-size:17px}}.overview .start{{margin:8px 0 0}}.overview .start a{{color:#b73535;font-weight:700}}
+.hero{{margin:30px 0 0;max-width:900px}}.hero img{{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}}.hero figcaption{{font-size:12px;color:#777;margin-top:6px}}.hero figcaption a{{color:inherit}}
+.places{{max-width:760px;margin-top:56px}}.places h2{{font-size:32px;line-height:1.15;margin:0 0 6px}}.places .note{{margin:0 0 10px;color:#5d6470;font-size:15px}}.places ul{{list-style:none;margin:0;padding:0}}.places li{{padding:18px 0;border-top:1px solid #ded6c8}}
+.places h3{{font-size:20px;margin:0 0 4px}}.places h3 span{{font-weight:400;color:#5d6470;font-size:16px;margin-left:6px}}.places p{{margin:0;font-size:17px}}.places .links{{margin-top:6px;font-size:14px}}.places .links a{{color:#b73535;font-weight:700}}
 @media(max-width:900px){{.grid{{grid-template-columns:repeat(2,1fr)}}}}
 @media(max-width:600px){{.grid{{grid-template-columns:1fr}}}}
 </style></head>
@@ -99,8 +135,9 @@ h1{{font-size:clamp(44px,8vw,82px);line-height:1;margin:12px 0}}.intro{{max-widt
 <main><div class="kicker">Regional hub</div><h1>{name}</h1>
 <p class="intro">{intro}</p>
 <div class="chips">{chips}</div>
+{hero}
 {plans}
-<section class="grid">{cards}</section>{overview}</main></body></html>'''
+{overview}{places}{grid}</main></body></html>'''
     intro = INTROS.get(slug) or "A practical collection of places and experiences in {} for foreign visitors, from travel and food to cafes, shopping, culture, leisure and stays.".format(name)
     plans = "".join(
         '<a class="plan" href="{}"><img src="{}" alt="" loading="lazy"><div><small>Plan your days</small><b>{}</b><em>Read the itinerary &rarr;</em></div></a>'.format(
@@ -113,7 +150,8 @@ h1{{font-size:clamp(44px,8vw,82px);line-height:1;margin:12px 0}}.intro{{max-widt
     ov = OVERVIEWS.get(slug) or []
     overview = ('<section class="overview"><h2>Planning a trip to {}</h2>{}{}</section>'.format(
         esc(name), start_links(slug, name), "".join("<h3>{}</h3><p>{}</p>".format(esc(h), esc(t)) for h, t in ov)) if ov else "")
-    return template.format(name=esc(name),title=esc(hub_title(name)),slug=esc(slug),cards=cards,chips=chips,intro=esc(intro),
+    return template.format(name=esc(name),title=esc(hub_title(name)),slug=esc(slug),grid=grid,chips=chips,intro=esc(intro),
+                           hero=hero(slug, name),places=places(slug, name),
                            plans=plans,description=esc(description),overview=overview)
 
 data = json.loads(REGION_FILE.read_text(encoding="utf-8"))
