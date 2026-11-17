@@ -56,15 +56,31 @@
     "manual": true
   },
   "yeosu": {
-    "query": "Yeosu Dolsan Bridge"
+    "query": "Yeosu Dolsan Bridge",
+    "file": "region-yeosu.jpg",
+    "credit": "Photo: Choi2451, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Dolsan_Bridge_seen_from_Dolsan_Park,_Yeosu.jpg",
+    "alt": ""
   },
   "daegu": {
-    "query": "Daegu Seomun Market"
+    "query": "Daegu Seomun Market",
+    "file": "region-daegu.jpg",
+    "credit": "Photo: Choi2451, CC BY-SA 3.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Seomun_Night_Market,_Daegu.jpg",
+    "alt": ""
   },
   "daejeon": {
-    "query": "Daejeon Expo Bridge"
+    "query": "Daejeon Expo Bridge",
+    "file": "region-daejeon.jpg",
+    "credit": "Photo: Yoo Chung, CC BY-SA 2.5, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Daejeon_Expo_Bridge.jpg",
+    "alt": ""
   },
   "gwangju": {
-    "query": "Gwangju Mudeungsan"
+    "query": "Gwangju Mudeungsan",
+    "file": "region-gwangju.jpg",
+    "credit": "Photo: Kgw1226, CC BY-SA 4.0, via Wikimedia Commons",
+    "source": "https://commons.wikimedia.org/wiki/File:Gwangju_Mudeungsan.jpg",
+    "alt": ""
   }
 }
