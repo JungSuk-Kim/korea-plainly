@@ -311,6 +311,10 @@
     "korea-packing-list": {
       "at": "2026-11-17T19:22:49+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n2jrcyvijv2f"
+    },
+    "korea-in-november": {
+      "at": "2026-11-18T09:05:58+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n2l7cvbqza2f"
     }
   },
   "bluesky_videos": {
@@ -409,6 +413,10 @@
     "2-ceOv4yBE4": {
       "at": "2026-11-16T20:40:17+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n2hf6lhffm2w"
+    },
+    "7dHgtBa1Lz4": {
+      "at": "2026-11-18T09:06:00+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n2l7cxm6it2b"
     }
   },
   "instagram_videos": {
@@ -483,6 +491,10 @@
     "2-ceOv4yBE4": {
       "at": "2026-11-16T20:41:31+00:00",
       "ref": "18140528911630687"
+    },
+    "7dHgtBa1Lz4": {
+      "at": "2026-11-18T09:07:34+00:00",
+      "ref": "18102259751408308"
     }
   },
   "facebook_videos": {
@@ -581,6 +593,10 @@
     "2-ceOv4yBE4": {
       "at": "2026-11-16T20:40:26+00:00",
       "ref": "969971095835037"
+    },
+    "7dHgtBa1Lz4": {
+      "at": "2026-11-18T09:06:08+00:00",
+      "ref": "2396202407819879"
     }
   },
   "threads_videos": {
@@ -679,6 +695,10 @@
     "2-ceOv4yBE4": {
       "at": "2026-11-16T20:41:44+00:00",
       "ref": "18117393341611524"
+    },
+    "7dHgtBa1Lz4": {
+      "at": "2026-11-18T09:07:45+00:00",
+      "ref": "18115127530884709"
     }
   },
   "facebook": {
@@ -973,6 +993,10 @@
     "korea-packing-list": {
       "at": "2026-11-17T19:22:58+00:00",
       "ref": "1261611360380213_122116246047509276"
+    },
+    "korea-in-november": {
+      "at": "2026-11-18T09:07:51+00:00",
+      "ref": "1261611360380213_122116384815509276"
     }
   },
   "threads": {
@@ -1267,6 +1291,10 @@
     "korea-packing-list": {
       "at": "2026-11-17T19:23:11+00:00",
       "ref": "18470557093137974"
+    },
+    "korea-in-november": {
+      "at": "2026-11-18T09:08:02+00:00",
+      "ref": "18118489307144765"
     }
   }
 }
