@@ -117,6 +117,102 @@
     ]
    ],
    "title": "Order a WOWPASS card ahead"
+  },
+  "hanbok-rental-guide": {
+   "after": "Hanbok rental near Gyeongbokgung",
+   "title": "Reserve a hanbok rental ahead",
+   "text": "Walk-ins are fine on quiet days, but a reservation guarantees your slot at weekends and in blossom and autumn season. This is one bookable shop near the palace; check what is included, such as hairstyling and the rental hours.",
+   "links": [
+    [
+     "Hanbok rental on Klook",
+     "https://www.klook.com/activity/111262-hanbok-rental-in-seoul-gyeongbokgung/"
+    ]
+   ]
+  },
+  "jeju-3-day-itinerary": {
+   "after": "Tips for Jeju",
+   "title": "Car rental or a day tour on Jeju",
+   "text": "A rental car is the easiest way to follow this plan, and you need an International Driving Permit to pick one up. If you do not drive, a small-group day tour covers one side of the island at a time.",
+   "links": [
+    [
+     "Jeju car rentals on Klook",
+     "https://www.klook.com/car-rentals/city/20544-jeju-car-rentals/"
+    ],
+    [
+     "Jeju day tours on Klook",
+     "https://www.klook.com/destination/c20544-jeju/1001-tours/"
+    ]
+   ]
+  },
+  "seoul-3-day-itinerary": {
+   "after": "Day 2:",
+   "title": "N Seoul Tower observatory ticket",
+   "text": "The plaza around the tower is free, but the observatory needs a ticket. Buying it online before you go is often cheaper than the counter and saves a queue at sunset.",
+   "links": [
+    [
+     "N Seoul Tower ticket on Klook",
+     "https://www.klook.com/activity/412-n-seoul-tower-seoul/"
+    ]
+   ]
+  },
+  "korea-7-day-itinerary": {
+   "after": "Getting around and costs",
+   "title": "Is a KORAIL PASS worth it for this route?",
+   "text": "This plan uses two or three KTX rides. Add up the single fares first; if a pass comes out cheaper for your dates, you can buy one online before you travel and then reserve your seats.",
+   "links": [
+    [
+     "KORAIL PASS on Klook",
+     "https://www.klook.com/activity/2847-korea-rail-pass-seoul/"
+    ]
+   ]
+  },
+  "korea-10-day-itinerary": {
+   "after": "Before you go",
+   "title": "Is a KORAIL PASS worth it for this route?",
+   "text": "With Seoul, Jeonju, Gyeongju and Busan on one trip, the train fares add up. Compare the single tickets with a pass for your dates; a pass is bought online before you travel, and you still reserve each seat.",
+   "links": [
+    [
+     "KORAIL PASS on Klook",
+     "https://www.klook.com/activity/2847-korea-rail-pass-seoul/"
+    ]
+   ]
+  },
+  "day-trips-from-seoul": {
+   "after": "Tips for day trips",
+   "title": "Day tours from Seoul",
+   "text": "Most of these trips are easy to do on your own by train or bus. A coach tour makes sense for places with awkward transfers, such as the DMZ, Nami Island with the Garden of Morning Calm, or a ski resort.",
+   "links": [
+    [
+     "See day trips from Seoul on Klook",
+     "https://www.klook.com/destination/c13-seoul/1002-day-trips/"
+    ]
+   ]
+  },
+  "seoul-with-kids": {
+   "after": "More family favourites",
+   "title": "Tickets for a rainy or cold day",
+   "text": "Indoor attractions are busiest at weekends and in school holidays. Tickets bought online ahead are often cheaper than at the gate, and some are for overseas visitors only, so carry passports.",
+   "links": [
+    [
+     "COEX Aquarium on Klook",
+     "https://www.klook.com/activity/8185-coex-aquarium-admission-ticket-seoul/"
+    ],
+    [
+     "Lotte World on Klook",
+     "https://www.klook.com/activity/251-lotte-world-seoul/"
+    ]
+   ]
+  },
+  "seoraksan-hikes": {
+   "after": "Getting to the trails",
+   "title": "Seoraksan as a day tour from Seoul",
+   "text": "If you are based in Seoul and short on time, a coach tour saves the bus transfers. It leaves only a few hours in the park: enough for the cable car or a short valley walk, not for Ulsanbawi.",
+   "links": [
+    [
+     "Seoraksan day tour on Klook",
+     "https://www.klook.com/activity/7802-nami-island-mt-seorak-day-tour-gangwon-do/"
+    ]
+   ]
   }
  }
 }
