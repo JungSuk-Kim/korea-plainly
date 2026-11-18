@@ -20,6 +20,7 @@ STEPS = [
     "guide_numbers.py",               # number guide cards 01, 02, ... in page order
     "build_category_region_hubs.py",  # category hubs (travel.html, food.html, ...)
     "add_internal_links.py",          # "related guides" blocks
+    "affiliate_links.py",             # booking boxes with labelled affiliate links (content/affiliates.json)
     "site_chrome.py",                 # same header, stylesheet and footer everywhere
     "site_integrity_fix.py",          # dropdown menu markup, CSS version, canonical tags
     "article_enhance.py",             # publish date + Article structured data

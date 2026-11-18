@@ -109,3 +109,6 @@ gh api -X POST repos/JungSuk-Kim/korea-plainly/actions/workflows/daily-publish.y
 ## Analytics and ads
 
 Google Analytics 4 `G-F508WWT8G9`, AdSense `ca-pub-7379462117232471` (both added by `scripts/site_chrome.py`).
+Affiliate links (since 18 Nov 2026): Klook partner id 143923. `scripts/affiliate_links.py` puts one "Booking ahead" box in
+each guide listed in `content/affiliates.json` (end of the section named by `after`; links get `?aid=`, `rel="sponsored nofollow"`
+and a disclosure line). Keep it to one box per guide and only real klook.com pages; About and Privacy disclose it.

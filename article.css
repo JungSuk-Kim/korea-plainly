@@ -230,3 +230,6 @@
 
 /* data tables in articles (prices, monthly weather) */
 .kp-prices{width:100%;border-collapse:collapse;margin:8px 0 22px;font-size:16px}.kp-prices th,.kp-prices td{text-align:left;padding:8px 6px;border-bottom:1px solid rgba(20,28,42,.1);vertical-align:top}.kp-prices th{border-bottom:2px solid #17243c}
+
+/* booking box with a labelled affiliate link (scripts/affiliate_links.py) */
+.kp-aff{margin:26px 0;padding:16px 18px;border:1px solid rgba(20,28,42,.14);border-radius:10px;background:#fffdf8}.kp-aff p{margin:0 0 8px}.kp-aff .kp-aff-k{font-size:12px;letter-spacing:.08em;font-weight:700;color:#62635f}.kp-aff .kp-aff-l a{font-weight:700}.kp-aff .kp-aff-d{margin:0;font-size:13px;color:#62635f}

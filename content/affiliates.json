@@ -1,0 +1,112 @@
+{
+ "note": "Booking links shown in guides (scripts/affiliate_links.py). One box per guide, placed at the end of the section whose h2 contains 'after'. Remove a guide here to remove its box; set enabled to false to remove them all.",
+ "enabled": true,
+ "klook_aid": "143923",
+ "disclosure": "Affiliate link: if you book through it, Korea Plainly may earn a small commission at no extra cost to you.",
+ "boxes": {
+  "sim-esim-wifi-korea": {
+   "after": "Which one should you choose",
+   "text": "If you would rather have it sorted before you land, you can compare Korea eSIMs, airport SIM pick-ups and pocket Wi-Fi rental in one place, and keep the QR code or voucher on your phone.",
+   "links": [
+    [
+     "Compare Korea eSIM, SIM and pocket Wi-Fi options on Klook",
+     "https://www.klook.com/wifi-sim-card/?region=31-South+Korea"
+    ]
+   ]
+  },
+  "dmz-tour-guide": {
+   "after": "How to choose a DMZ tour",
+   "text": "Most first-time visitors book a coach tour with pick-up in Seoul. Looking online a few days ahead lets you compare routes and see which dates are running; tours can be cancelled at short notice, so read the refund terms.",
+   "links": [
+    [
+     "See DMZ tours from Seoul on Klook",
+     "https://www.klook.com/activity/29601-dmz-tour-seoul/"
+    ]
+   ]
+  },
+  "seoul-travel-pass": {
+   "after": "Who should buy it",
+   "text": "If the sums work for your itinerary, you can buy the pass online before your trip. Check which version you are buying and how it is collected or activated.",
+   "links": [
+    [
+     "Check Discover Seoul Pass prices on Klook",
+     "https://www.klook.com/activity/3819-discover-seoul-pass-seoul/"
+    ]
+   ]
+  },
+  "incheon-airport-to-seoul": {
+   "after": "AREX Express Train",
+   "text": "You can buy an AREX Express ticket online before you fly, which saves working out the ticket machines after a long flight. Follow the redemption steps on the voucher when you reach the station.",
+   "links": [
+    [
+     "AREX Express ticket on Klook",
+     "https://www.klook.com/activity/1163-airport-to-seoul-city-center-arex-train-incheon/"
+    ]
+   ]
+  },
+  "nami-island-gapyeong": {
+   "after": "Getting there",
+   "text": "A day tour with transport from Seoul is the least effort, and most of them combine Nami Island with the Garden of Morning Calm, Petite France or the Gangchon rail bike.",
+   "links": [
+    [
+     "See Nami Island day tours on Klook",
+     "https://www.klook.com/destination/p50053561-nami-island/"
+    ]
+   ]
+  },
+  "korea-ski-resorts-guide": {
+   "after": "Renting gear and taking lessons",
+   "text": "For a first ski day, booking the lift pass, gear rental and a beginner lesson together online is simpler than arranging each at the resort. Vivaldi Park is one of the easiest resorts to reach from Seoul.",
+   "links": [
+    [
+     "Vivaldi Park lift passes, rental and lessons on Klook",
+     "https://www.klook.com/activity/6886-vivaldi-park-ski-world-day-tour-seoul/"
+    ]
+   ]
+  },
+  "lotte-world-vs-everland": {
+   "after": "Tickets",
+   "text": "Both parks sell tickets online for overseas visitors, often for less than the gate price. Bring your passport if the ticket is for foreigners only.",
+   "links": [
+    [
+     "Lotte World tickets on Klook",
+     "https://www.klook.com/activity/251-lotte-world-seoul/"
+    ],
+    [
+     "Everland tickets on Klook",
+     "https://www.klook.com/activity/17477-everland-seoul/"
+    ]
+   ]
+  },
+  "ktx-train-guide": {
+   "after": "Korea Rail Pass worth it",
+   "text": "If the pass makes sense for your route, you can buy a KORAIL PASS online before you travel and then reserve your seats.",
+   "links": [
+    [
+     "KORAIL PASS on Klook",
+     "https://www.klook.com/activity/2847-korea-rail-pass-seoul/"
+    ]
+   ]
+  },
+  "busan-1-day-itinerary": {
+   "after": "Practical tips for a day in Busan",
+   "text": "If you plan to pay for several attractions in one day, the Visit Busan Pass bundles many of them for a fixed price. Check that the places you want are on its list before you buy.",
+   "links": [
+    [
+     "Visit Busan Pass on Klook",
+     "https://www.klook.com/activity/81576-visit-busan-pass/"
+    ]
+   ]
+  },
+  "wowpass-card-korea": {
+   "after": "Getting and loading a card",
+   "text": "You can also order a WOWPASS card online before your trip. Check the pick-up point and what is included on the booking page.",
+   "links": [
+    [
+     "WOWPASS card on Klook",
+     "https://www.klook.com/activity/86208-wowpass-card-seoul/"
+    ]
+   ]
+  }
+ }
+}
