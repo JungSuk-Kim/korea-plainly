@@ -2,7 +2,7 @@
 """Booking boxes with affiliate links in a few guides (content/affiliates.json). Idempotent.
 
 Each guide listed under "boxes" gets one small box at the end of the section whose <h2> contains "after":
-a sentence of honest context, one or two links, and the disclosure line. Links carry the Klook partner id
+a title, a sentence of honest context, one or two buttons, and the disclosure line. Links carry the Klook partner id
 (?aid=...), open in a new tab and are marked rel="sponsored nofollow". A guide that is no longer listed, or
 "enabled": false, loses its box on the next run. Keep it to one box per guide: these are guides, not shop pages.
 """
@@ -25,13 +25,15 @@ def with_aid(url, aid):
 
 
 def box(entry, conf):
-    links = " &middot; ".join(
-        '<a href="{}" target="_blank" rel="sponsored nofollow noopener">{} &rarr;</a>'.format(
+    """A banner-style card in the site's own colours: title, one sentence, button(s), disclosure. No partner images or scripts."""
+    buttons = "".join(
+        '<a class="kp-aff-btn" href="{}" target="_blank" rel="sponsored nofollow noopener">{} &rarr;</a>'.format(
             html.escape(with_aid(url, conf["klook_aid"])), html.escape(label))
         for label, url in entry["links"])
-    return ('<aside class="kp-aff" data-kp-aff="klook"><p class="kp-aff-k">BOOKING AHEAD</p><p>{}</p>'
+    title = '<p class="kp-aff-t">{}</p>'.format(html.escape(entry["title"])) if entry.get("title") else ""
+    return ('<aside class="kp-aff" data-kp-aff="klook"><p class="kp-aff-k">BOOK AHEAD</p>{}<p>{}</p>'
             '<p class="kp-aff-l">{}</p><p class="kp-aff-d">{}</p></aside>\n').format(
-                html.escape(entry["text"]), links, html.escape(conf["disclosure"]))
+                title, html.escape(entry["text"]), buttons, html.escape(conf["disclosure"]))
 
 
 def place(s, entry, new):
