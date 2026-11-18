@@ -1,0 +1,54 @@
+{
+  "article": "korea-entry-k-eta-e-arrival",
+  "fallback": "photo-korea-entry-k-eta-e-arrival.jpg",
+  "title": "Korea Entry Requirements 2026-27: Check These Forms",
+  "summary": "Korea entry requirements depend on your passport and arrival date. Learn when US and UK visitors need a K-ETA or e-Arrival Card, and where to check the rules for other passports.",
+  "hashtags": "#Korea #KoreaTravel #KoreaVisa #KETA #TravelTips",
+  "music": "Easy Lemon",
+  "slides": [
+    {
+      "kicker": "BEFORE YOU FLY",
+      "title": "Check Your Entry Forms",
+      "sub": "Rules vary by passport",
+      "voice": "Korea entry rules vary by passport. Check first.",
+      "photo_query": "Incheon Airport immigration Korea",
+      "require": [
+        "incheon",
+        "airport"
+      ]
+    },
+    {
+      "kicker": "US + UK",
+      "title": "Arriving By Dec 2026",
+      "sub": "No K-ETA; free e-Arrival Card",
+      "voice": "US and UK tourists: visa-free up to ninety days. Through December thirty-first, twenty twenty-six, skip K-ETA; file the free e-Arrival Card within three days before arrival.",
+      "image": "photo-korea-entry-k-eta-e-arrival.jpg"
+    },
+    {
+      "kicker": "US + UK",
+      "title": "Arriving From Jan 2027",
+      "sub": "K-ETA expected; apply 72 hours early",
+      "voice": "From January first, twenty twenty-seven, K-ETA is expected. Apply seventy-two hours early; check k-eta.go.kr for updates.",
+      "photo_query": "K-ETA Korea electronic travel authorization",
+      "require": [
+        "k-eta"
+      ]
+    },
+    {
+      "kicker": "OTHER PASSPORTS",
+      "title": "Check Your Own Rules",
+      "sub": "Use official visa and K-ETA sites",
+      "voice": "Other passports: check visa.go.kr and k-eta.go.kr. Without K-ETA, file the free e-Arrival Card within three days before arrival.",
+      "photo_query": "Korea visa application passport",
+      "require": [
+        "visa"
+      ]
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
