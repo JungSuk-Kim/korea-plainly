@@ -132,15 +132,28 @@
     "description": "Korea In January: What To Pack And Do: the short version of our guide.",
     "caption": "Watch the one-minute version"
   },
-  "korea-10-day-itinerary": {
-    "youtube": "9jfsMaSILdg",
-    "title": "Korea 10 Day Itinerary: Seoul To Jeju Made Easy",
-    "uploaded": "2026-10-28T15:48:00+09:00",
-    "seconds": 34,
-    "poster": "img/video-korea-10-day-itinerary.jpg",
-    "description": "Korea 10 Day Itinerary: Seoul To Jeju Made Easy: the short version of our guide.",
-    "caption": "Watch the one-minute version"
-  },
+  "korea-10-day-itinerary": [
+    {
+      "youtube": "e8eL0hCR8bs",
+      "title": "Korea 10-Day Itinerary: Seoul to Jeju, With Two-Week Options",
+      "uploaded": "2026-11-17T18:46:39+09:00",
+      "seconds": 450,
+      "poster": "img/video-korea-10-day-itinerary-long.jpg",
+      "format": "long",
+      "description": "Korea 10-Day Itinerary: Seoul to Jeju, With Two-Week Options: the full guide as a video.",
+      "caption": "Watch the whole guide, with maps (8 minutes)"
+    },
+    {
+      "youtube": "9jfsMaSILdg",
+      "title": "Korea 10 Day Itinerary: Seoul To Jeju Made Easy",
+      "uploaded": "2026-10-28T15:48:00+09:00",
+      "seconds": 34,
+      "poster": "img/video-korea-10-day-itinerary.jpg",
+      "description": "Korea 10 Day Itinerary: Seoul To Jeju Made Easy: the short version of our guide.",
+      "caption": "Short on time? The guide in under a minute",
+      "place": "end"
+    }
+  ],
   "christmas-new-year-seoul": {
     "youtube": "BMaEaDAh6O4",
     "title": "Seoul in December: Christmas Lights and New Year's Eve",
@@ -255,6 +268,15 @@
     "seconds": 41,
     "poster": "img/video-sim-esim-wifi-korea.jpg",
     "description": "Korea eSIM vs SIM Card: Choose The Right Option: the short version of our guide.",
+    "caption": "Watch the one-minute version"
+  },
+  "korea-entry-k-eta-e-arrival": {
+    "youtube": "g1nm2n-aRxc",
+    "title": "Korea Entry Requirements 2026-27: Check These Forms",
+    "uploaded": "2026-11-18T17:26:10+09:00",
+    "seconds": 54,
+    "poster": "img/video-korea-entry-k-eta-e-arrival.jpg",
+    "description": "Korea Entry Requirements 2026-27: Check These Forms: the short version of our guide.",
     "caption": "Watch the one-minute version"
   }
 }
