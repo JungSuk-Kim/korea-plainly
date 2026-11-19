@@ -6,7 +6,8 @@
 
 Writes content/longform/<slug>.json for scripts/make_longform.py and prints its path.
 The script follows the Seoul video's shape, the only long-form video viewers stayed with, and leads with the payoff:
-it opens on the best view and the signature food (3-4 quick shots), the first sentence promises what the viewer gets and the whole-route map follows within 15 seconds, then straight
+it opens on the best view and the signature food (at most 2 shots under a first line of at most 12 words naming the trip
+and its best view), then a second-person promise ("I'll show you ...") over the whole-route map within 15 seconds, then straight
 into the first day or part (no tips-only chapter: Nov 2026 retention fell from 73-80% at 30 s to 53-54% at 1 min while
 "Before you go" played), one chapter per day or topic with a map of the stops, the 1-2 must-know tips said at the stop
 where they matter, the other practical tips
@@ -74,13 +75,15 @@ VISUAL is one of:
 Structure (use these chapter names where they fit):
 - "Intro" (all of it within the first 15 seconds, because our viewers left in the first minute). Lead with the
   payoff: the very first frame is the best thing in the video, never a card, map, list or a generic street.
-  1. one segment, at most 22 words, with 3-4 visuals that are the video's best moments: the most striking view
-     (a coastline, a night skyline, a temple, a mountain) and the place's signature food or market (a steaming
-     bowl, a street-food stall), each a photo of a real stop in the plan. The first visual must be the single most
-     beautiful view. The narration names these highlights and promises exactly what the viewer gets, with the
-     plan's numbers (e.g. "Three days in Seoul: palace gates, a sunset city view and market food, in the right
-     order, with nothing wasted."). Never a greeting, the channel name or "In this video".
-  2. one segment, at most 15 words, over the overview map of all stops (e.g. "Here's the whole route.").
+  1. one segment, ONE sentence of at most 12 words, naming the trip and its single best view, over at most 2
+     photos of real stops in the plan: first the single most beautiful view (a coastline, a night skyline, a temple,
+     a mountain), then the signature food or market (a steaming bowl, a street-food stall). E.g. "Three days in
+     Seoul, from palace gates to a sunset city view." Never a list of many places, a greeting, the channel name or
+     "In this video" (Nov 2026: our videos that opened with one long list sentence over a 3-4 photo montage lost
+     15-23% of viewers at 7 seconds; the Seoul video that opened "Three days in Seoul." lost 8%).
+  2. one segment over the overview map of all stops, so the route map is on screen within 15 seconds: a concrete
+     promise to the viewer in the second person, at most 20 words, with the plan's numbers, e.g. "I'll show you the
+     route for every day, what to eat, and the mistakes to skip."
   3. at most 1 more very short highlight segment (at most 10 words, one photo of a view or a dish), then a title card.
 - No "Before you go" chapter. After the Intro's title card go straight into the first day or part. The 1-2 tips a
   visitor must know go inside the stop where they matter, as one short sentence in that stop's segment (e.g. "It's
@@ -197,7 +200,36 @@ def clean(spec, photos):
     if pics and first[0] is not pics[0]:
         first.remove(pics[0])
         first.insert(0, pics[0])
+    # a short opening: at most 2 photos in the first segment (the best view first), so the first line stays quick
+    if len(pics) > OPENING_PHOTOS_MAX:
+        drop = pics[OPENING_PHOTOS_MAX:]
+        first[:] = [v for v in first if not any(v is d for d in drop)]
     return spec
+
+
+FIRST_LINE_MAX = 12   # words in the first spoken sentence (Nov 2026: long opening lists lost 15-23% at 7 s)
+OPENING_PHOTOS_MAX = 2
+
+
+def intro_problems(spec):
+    """What is wrong with the opening, as sentences to send back to the model (empty if it is fine)."""
+    probs = []
+    segs = spec.get("chapters", [{}])[0].get("segments", []) if spec.get("chapters") else []
+    if not segs:
+        return ["The Intro has no segments."]
+    first = segs[0].get("voice", "")
+    sentence = re.split(r"(?<=[.!?])\s+", first.strip())[0]
+    if len(sentence.split()) > FIRST_LINE_MAX:
+        probs.append(f"The first voice line has {len(sentence.split())} words; make it one sentence of at most "
+                     f"{FIRST_LINE_MAX} words naming the trip and its single best view.")
+    if len(re.split(r"(?<=[.!?])\s+", first.strip())) > 1 and len(first.split()) > FIRST_LINE_MAX:
+        probs.append("The first segment must be one short sentence only; move the rest to the second segment.")
+    pics = [v for v in segs[0].get("show", []) if "image" in v or "photo_query" in v]
+    if len(pics) > OPENING_PHOTOS_MAX:
+        probs.append(f"The first segment shows {len(pics)} photos; show at most {OPENING_PHOTOS_MAX}, best view first.")
+    if len(segs) < 2 or not any("map" in v for v in segs[1].get("show", [])) or "you" not in segs[1].get("voice", "").lower():
+        probs.append("The second segment must be the promise to the viewer ('I'll show you ...') over the overview map.")
+    return probs
 
 
 def words(spec):
@@ -212,14 +244,21 @@ def write(slug):
     prompt = PROMPT.format(min_words=MIN_WORDS, max_words=MAX_WORDS, title=title, text=text,
                            photos="\n".join(f"{f}: {d}" for f, d in sorted(photos.items())))
     spec = None
-    for attempt in range(2):
+    for attempt in range(3):
+        fix = []
+        if spec:
+            if not MIN_WORDS * 0.9 <= words(spec) <= MAX_WORDS * 1.1:
+                fix.append(f"Your last version had {words(spec)} words of narration. "
+                           f"Write it again with {MIN_WORDS}-{MAX_WORDS} words.")
+            fix += intro_problems(spec)
         r = client.responses.create(model=MODEL, input=prompt if not spec else
-                                    prompt + f"\n\nYour last version had {words(spec)} words of narration. "
-                                             f"Write it again with {MIN_WORDS}-{MAX_WORDS} words.")
+                                    prompt + "\n\nFix these in your last version and write it again:\n- " + "\n- ".join(fix))
         raw = r.output_text.strip()
         spec = json.loads(raw[raw.find("{"): raw.rfind("}") + 1])
-        if MIN_WORDS * 0.9 <= words(spec) <= MAX_WORDS * 1.1:
+        if MIN_WORDS * 0.9 <= words(spec) <= MAX_WORDS * 1.1 and not intro_problems(spec):
             break
+    for p in intro_problems(spec):
+        print(f"::warning::long-form opening: {p}")
     spec = clean(spec, photos)
     spec.update(article=slug, music=TRACKS[(len(done()) + 2) % len(TRACKS)],
                 fallback=cover if cover in photos else "", thumb_photo=cover if cover in photos else None)
