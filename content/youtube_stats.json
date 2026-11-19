@@ -1,7 +1,23 @@
 {
-  "updated": "2026-11-18T13:45+09:00",
+  "updated": "2026-11-19T13:35+09:00",
   "analytics": true,
   "videos": [
+    {
+      "id": "g1nm2n-aRxc",
+      "title": "Korea Entry Requirements 2026-27: Check These Forms",
+      "article": "korea-entry-k-eta-e-arrival",
+      "format": "short",
+      "uploaded": "2026-11-18T17:26:10+09:00",
+      "status": "private",
+      "seconds": 54,
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "avg_view_seconds": null,
+      "avg_view_percent": null,
+      "subscribers_gained": 0,
+      "shares": 0
+    },
     {
       "id": "e8eL0hCR8bs",
       "title": "Korea 10-Day Itinerary: Seoul to Jeju, With Two-Week Options",
@@ -24,9 +40,9 @@
       "article": "sim-esim-wifi-korea",
       "format": "short",
       "uploaded": "2026-11-16T16:52:08+09:00",
-      "status": "private",
+      "status": "public",
       "seconds": 41,
-      "views": 0,
+      "views": 11,
       "likes": 0,
       "comments": 0,
       "avg_view_seconds": null,
@@ -42,7 +58,7 @@
       "uploaded": "2026-11-16T11:22:59+09:00",
       "status": "public",
       "seconds": 42,
-      "views": 3,
+      "views": 14,
       "likes": 0,
       "comments": 0,
       "avg_view_seconds": null,
@@ -58,11 +74,11 @@
       "uploaded": "2026-11-16T11:15:08+09:00",
       "status": "public",
       "seconds": 37,
-      "views": 22,
+      "views": 27,
       "likes": 1,
       "comments": 0,
-      "avg_view_seconds": null,
-      "avg_view_percent": null,
+      "avg_view_seconds": 85,
+      "avg_view_percent": 225.47000000000003,
       "subscribers_gained": 0,
       "shares": 0,
       "retention": null
@@ -99,23 +115,23 @@
       "uploaded": "2026-11-09T16:52:19+09:00",
       "status": "public",
       "seconds": 38,
-      "views": 46,
+      "views": 51,
       "likes": 1,
       "comments": 0,
       "avg_view_seconds": 22,
-      "avg_view_percent": 57.89,
+      "avg_view_percent": 57.97,
       "subscribers_gained": 0,
       "shares": 0,
       "retention": {
         "at": {
-          "10%": 95,
+          "10%": 96,
           "25%": 65,
-          "50%": 55,
-          "75%": 45,
-          "95%": 20
+          "50%": 57,
+          "75%": 43,
+          "95%": 17
         },
         "biggest_drop_at": "4%",
-        "biggest_drop": 15
+        "biggest_drop": 13
       }
     },
     {
@@ -146,11 +162,21 @@
       "views": 24,
       "likes": 0,
       "comments": 0,
-      "avg_view_seconds": 14,
-      "avg_view_percent": 38.74,
+      "avg_view_seconds": 16,
+      "avg_view_percent": 44.15,
       "subscribers_gained": 0,
       "shares": 0,
-      "retention": null
+      "retention": {
+        "at": {
+          "10%": 90,
+          "25%": 40,
+          "50%": 50,
+          "75%": 30,
+          "95%": 10
+        },
+        "biggest_drop_at": "4%",
+        "biggest_drop": 10
+      }
     },
     {
       "id": "IBu_Y2JxwKk",
@@ -176,36 +202,36 @@
       "uploaded": "2026-11-03T17:21:18+09:00",
       "status": "public",
       "seconds": 359,
-      "views": 71,
+      "views": 84,
       "likes": 0,
       "comments": 0,
-      "avg_view_seconds": 124,
-      "avg_view_percent": 34.6,
+      "avg_view_seconds": 127,
+      "avg_view_percent": 35.45,
       "subscribers_gained": 0,
       "shares": 0,
       "retention": {
         "at": {
-          "10%": 54,
-          "25%": 51,
-          "50%": 40,
-          "75%": 29,
-          "95%": 23
+          "10%": 56,
+          "25%": 54,
+          "50%": 41,
+          "75%": 31,
+          "95%": 21
         },
         "biggest_drop_at": "2%",
-        "biggest_drop": 23,
+        "biggest_drop": 21,
         "biggest_drop_at_seconds": 7,
         "at_seconds": {
           "15s": 74,
-          "30s": 71,
-          "1m": 57,
-          "2m": 51
+          "30s": 72,
+          "1m": 56,
+          "2m": 54
         }
       },
       "traffic_sources": [
         {
           "source": "YT_SEARCH",
-          "views": 37,
-          "avg_view_seconds": 112
+          "views": 40,
+          "avg_view_seconds": 121
         },
         {
           "source": "SUBSCRIBER",
@@ -285,11 +311,11 @@
       "uploaded": "2026-10-30T15:59:42+09:00",
       "status": "public",
       "seconds": 36,
-      "views": 125,
+      "views": 131,
       "likes": 1,
       "comments": 0,
       "avg_view_seconds": 17,
-      "avg_view_percent": 49.81,
+      "avg_view_percent": 49.92,
       "subscribers_gained": 0,
       "shares": 0,
       "retention": {
@@ -332,26 +358,26 @@
       "views": 48,
       "likes": 0,
       "comments": 0,
-      "avg_view_seconds": 131,
-      "avg_view_percent": 36.5,
+      "avg_view_seconds": 127,
+      "avg_view_percent": 35.36,
       "subscribers_gained": 0,
       "shares": 1,
       "retention": {
         "at": {
-          "10%": 50,
-          "25%": 47,
-          "50%": 30,
+          "10%": 48,
+          "25%": 45,
+          "50%": 29,
           "75%": 23,
           "95%": 10
         },
         "biggest_drop_at": "2%",
-        "biggest_drop": 17,
+        "biggest_drop": 19,
         "biggest_drop_at_seconds": 7,
         "at_seconds": {
-          "15s": 67,
-          "30s": 57,
-          "1m": 60,
-          "2m": 53
+          "15s": 65,
+          "30s": 55,
+          "1m": 58,
+          "2m": 52
         }
       },
       "traffic_sources": [
@@ -362,13 +388,13 @@
         },
         {
           "source": "YT_SEARCH",
-          "views": 14,
+          "views": 15,
           "avg_view_seconds": 91
         },
         {
           "source": "SUBSCRIBER",
-          "views": 11,
-          "avg_view_seconds": 194
+          "views": 12,
+          "avg_view_seconds": 162
         },
         {
           "source": "NO_LINK_OTHER",
@@ -385,7 +411,7 @@
       "uploaded": "2026-10-26T14:58:24+09:00",
       "status": "public",
       "seconds": 37,
-      "views": 198,
+      "views": 200,
       "likes": 3,
       "comments": 0,
       "avg_view_seconds": 38,
@@ -493,7 +519,7 @@
       "uploaded": "2026-10-20T15:33:19+09:00",
       "status": "public",
       "seconds": 587,
-      "views": 106,
+      "views": 107,
       "likes": 0,
       "comments": 0,
       "avg_view_seconds": 170,
@@ -521,7 +547,7 @@
       "traffic_sources": [
         {
           "source": "YT_SEARCH",
-          "views": 46,
+          "views": 48,
           "avg_view_seconds": 162
         },
         {
@@ -799,8 +825,8 @@
   ],
   "channel": {
     "subscribers": 2,
-    "views": 2186,
-    "videos": 25
+    "views": 2252,
+    "videos": 26
   },
   "countries": [
     {
@@ -832,11 +858,11 @@
   "traffic_sources": [
     {
       "source": "SHORTS",
-      "views": 1076
+      "views": 1086
     },
     {
       "source": "YT_SEARCH",
-      "views": 754
+      "views": 776
     },
     {
       "source": "RELATED_VIDEO",
@@ -844,7 +870,7 @@
     },
     {
       "source": "SUBSCRIBER",
-      "views": 88
+      "views": 89
     },
     {
       "source": "YT_CHANNEL",
@@ -872,7 +898,7 @@
     }
   ],
   "total": {
-    "views": 2213,
+    "views": 2267,
     "likes": 18,
     "comments": 0,
     "subscribers_gained": 1
