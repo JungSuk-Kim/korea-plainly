@@ -323,6 +323,10 @@
     "korea-in-february": {
       "at": "2026-11-19T09:29:44+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n2nr4chikg24"
+    },
+    "korea-in-december": {
+      "at": "2026-11-19T19:09:22+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n2orirlemq2j"
     }
   },
   "bluesky_videos": {
@@ -1029,6 +1033,10 @@
     "korea-in-february": {
       "at": "2026-11-19T09:30:54+00:00",
       "ref": "1261611360380213_122116658865509276"
+    },
+    "korea-in-december": {
+      "at": "2026-11-19T19:09:29+00:00",
+      "ref": "1261611360380213_122116769211509276"
     }
   },
   "threads": {
@@ -1335,6 +1343,10 @@
     "korea-in-february": {
       "at": "2026-11-19T09:31:05+00:00",
       "ref": "18095325026212690"
+    },
+    "korea-in-december": {
+      "at": "2026-11-19T19:09:41+00:00",
+      "ref": "18476561617184683"
     }
   }
 }
