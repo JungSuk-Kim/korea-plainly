@@ -1,0 +1,44 @@
+{
+  "article": "seollal-travel-tips",
+  "fallback": "photo-seollal-travel-tips.jpg",
+  "title": "Seollal 2027 in Korea: How to Plan Your Trip",
+  "summary": "Visiting Korea during Seollal? Learn how to plan intercity travel, check what’s open, and enjoy a quieter Seoul.",
+  "hashtags": "#Korea #Seollal #KoreaTravel #Seoul #LunarNewYear",
+  "music": "Wallpaper",
+  "slides": [
+    {
+      "kicker": "SEOLLAL 2027",
+      "title": "Book Early For Seollal",
+      "sub": "Plan around packed holiday travel",
+      "voice": "Seollal 2027 packs Korea’s trains. Book early.",
+      "image": "photo-seollal-travel-tips.jpg"
+    },
+    {
+      "kicker": "TRAVEL",
+      "title": "Reserve Intercity Trips",
+      "sub": "Intercity trains, express buses",
+      "voice": "Intercity trains and express buses sell out early. Book ahead, or stay in one city.",
+      "image": "photo-ktx-train-guide.jpg"
+    },
+    {
+      "kicker": "OPENINGS",
+      "title": "Check What’s Open",
+      "sub": "Convenience stores, cafes, chain restaurants",
+      "voice": "Small family-run restaurants may close, but convenience stores, cafes and chains usually stay open. Check Naver Map.",
+      "image": "photo-korean-convenience-stores-compared.jpg"
+    },
+    {
+      "kicker": "SEOUL",
+      "title": "Enjoy A Quieter City",
+      "sub": "Stay put and explore Seoul",
+      "voice": "Seoul’s roads and subways can feel quieter. Stay in one city and enjoy the change.",
+      "image": "photo-seoul-subway-for-foreigners.jpg"
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
