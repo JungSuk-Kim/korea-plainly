@@ -214,7 +214,7 @@ def write(slug):
     while sum(len(s["voice"].split()) for s in slides) > MAX_WORDS and len(slides) > 4:
         slides.pop(-2)
     trim_words(slides, MAX_WORDS)
-    slides.append({"end": True, "title": "New Korea tips", "sub": "Mon · Wed · Fri · Sat",
+    slides.append({"end": True, "title": "New Korea tips", "sub": "Five days a week",
                    "voice": SHORT_OUTRO})
     # the photo used when a slide's Commons search finds nothing: the cover, else any site photo the slides use
     fallback = cover if cover in photos else next((x["image"] for x in slides if x.get("image")), next(iter(photos), ""))

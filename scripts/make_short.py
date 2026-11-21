@@ -94,7 +94,7 @@ def follow_png(path):
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     f = font(46)
-    label = "Follow for Korea tips  ·  Mon  Wed  Fri"
+    label = "Follow for Korea tips  ·  5 days a week"
     bw, bh, by = d.textlength(label, font=f) + 130, 92, int(H * 0.455)
     d.rounded_rectangle([80, by, 80 + bw, by + bh], radius=bh // 2, fill=RED)
     d.polygon([(118, by + 28), (118, by + bh - 28), (148, by + bh / 2)], fill=WHITE)

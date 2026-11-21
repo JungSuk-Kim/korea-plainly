@@ -16,7 +16,7 @@ from affiliate_links import tracked
 AFFILIATES = Path(__file__).resolve().parent.parent / "content" / "affiliates.json"
 SITE = "https://korea-plainly.com"
 CHANNEL = "https://www.youtube.com/@KoreaPlainly?sub_confirmation=1"
-SHORT_OUTRO = "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+SHORT_OUTRO = "Subscribe for more Korea tips five days a week."
 
 
 def booking(article):

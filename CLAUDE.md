@@ -63,7 +63,7 @@ reply in Korean and address him as "주인님" (not "사장님"), keep site cont
 in `_shorts/`, not published). Slides use a site photo (`image`) or a Commons search for the exact place named
 (`photo_query`, logged in `content/shorts/photos.json`). Once the owner uploads a short, add it to `content/videos.json`
 with a poster frame in `img/`; `scripts/embed_videos.py` then shows it in its article.
-The "Shorts (automatic)" workflow does all of this: `write_short.py` writes the script from the next article in
+The "Shorts (automatic)" workflow (Mon, Wed, Thu, Fri, Sat since 21 Nov 2026: a two-week trial of five a week, review about 5 Dec) does all of this: `write_short.py` writes the script from the next article in
 `content/shorts/queue.json`, `make_short.py` renders it (narration, subtitles, Kevin MacLeod music, CC BY 4.0),
 `youtube_shorts.py upload` uploads it as private (log: `content/shorts/uploads.json`), the owner makes it public,
 and `youtube_shorts.py check` (every hour) adds it to the article. Videos are not committed (`_shorts/*.mp4`
