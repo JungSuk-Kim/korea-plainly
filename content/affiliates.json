@@ -2,7 +2,11 @@
  "note": "Booking links shown in guides (scripts/affiliate_links.py). One banner card per guide (title, a sentence, one or two buttons), placed at the end of the section whose h2 contains 'after'. Remove a guide here to remove its box; set enabled to false to remove them all.",
  "enabled": true,
  "klook_aid": "143923",
- "disclosure": "Affiliate link: if you book through it, Korea Plainly may earn a small commission at no extra cost to you.",
+ "trip": {
+  "allianceid": "11444350",
+  "sid": "336630008"
+ },
+ "disclosure": "Affiliate links: if you book through one, Korea Plainly may earn a small commission at no extra cost to you.",
  "boxes": {
   "sim-esim-wifi-korea": {
    "after": "Which one should you choose",
@@ -220,8 +224,13 @@
    "text": "Once you have picked an area, check a few places within a five-minute walk of a subway station. Prices jump at weekends, in cherry blossom season and in October, so compare your exact dates before you commit.",
    "links": [
     [
-     "Hotels in Seoul on Klook",
+     "Seoul hotels on Klook",
      "https://www.klook.com/destination/c13-seoul/3-hotel/"
+    ],
+    [
+     "Seoul hotels on Trip.com",
+     "https://www.trip.com/hotels/seoul-hotels-list-274/",
+     "trip"
     ]
    ]
   },
@@ -231,27 +240,25 @@
    "text": "Room rates decide most of your budget, and they change a lot with the season and the day of the week. Looking up your real dates is the quickest way to see which of the sample budgets below fits you.",
    "links": [
     [
-     "Hotels in Seoul on Klook",
+     "Seoul hotels on Klook",
      "https://www.klook.com/destination/c13-seoul/3-hotel/"
     ],
     [
-     "Hotels in Busan on Klook",
-     "https://www.klook.com/destination/c46-busan/3-hotel/"
+     "Seoul hotels on Trip.com",
+     "https://www.trip.com/hotels/seoul-hotels-list-274/",
+     "trip"
     ]
    ]
   },
   "korea-domestic-flights-budget-airlines": {
-   "after": "Planning a Busan stay",
-   "title": "A room near your arrival airport",
-   "text": "If you land late in Jeju or Busan, book the first night before you fly and choose somewhere you can reach easily from the airport. You can move to another part of the island or city the next day.",
+   "after": "Budget airlines and booking",
+   "title": "Compare fares across airlines",
+   "text": "Domestic fares differ a lot between airlines and times of day, so look at several carriers for your exact date before you buy. Check what the fare includes, especially checked baggage, before you pay.",
    "links": [
     [
-     "Hotels in Jeju on Klook",
-     "https://www.klook.com/destination/c20544-jeju/3-hotel/"
-    ],
-    [
-     "Hotels in Busan on Klook",
-     "https://www.klook.com/destination/c46-busan/3-hotel/"
+     "Seoul to Jeju flights on Trip.com",
+     "https://www.trip.com/flights/seoul-to-jeju/airfares-sel-cju/",
+     "trip"
     ]
    ]
   }

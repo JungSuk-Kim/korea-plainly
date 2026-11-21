@@ -2,8 +2,9 @@
 """Booking boxes with affiliate links in a few guides (content/affiliates.json). Idempotent.
 
 Each guide listed under "boxes" gets one small box at the end of the section whose <h2> contains "after":
-a title, a sentence of honest context, one or two buttons, and the disclosure line. Links carry the Klook partner id
-(?aid=...), open in a new tab and are marked rel="sponsored nofollow". A guide that is no longer listed, or
+a title, a sentence of honest context, one or two buttons, and the disclosure line. A link is [label, url] for Klook
+(gets ?aid=...) or [label, url, "trip"] for Trip.com (gets Allianceid and SID); all open in a new tab and are marked
+rel="sponsored nofollow". A guide that is no longer listed, or
 "enabled": false, loses its box on the next run. Keep it to one box per guide: these are guides, not shop pages.
 """
 import html
@@ -24,16 +25,28 @@ def with_aid(url, aid):
     return url + ("&" if "?" in url else "?") + "aid=" + aid
 
 
+def tracked(link, conf):
+    """The link with its partner's ids, and the partner name: [label, url] is Klook, [label, url, "trip"] is Trip.com."""
+    partner = link[2] if len(link) > 2 else "klook"
+    url = link[1]
+    if partner == "trip":
+        t = conf["trip"]
+        return url + ("&" if "?" in url else "?") + "Allianceid={}&SID={}".format(t["allianceid"], t["sid"]), partner
+    return with_aid(url, conf["klook_aid"]), partner
+
+
 def box(entry, conf):
     """A banner-style card in the site's own colours: title, one sentence, button(s), disclosure. No partner images or scripts."""
+    links = [(link[0],) + tracked(link, conf) for link in entry["links"]]
+    partners = " ".join(dict.fromkeys(p for _, _, p in links))
     buttons = "".join(
         '<a class="kp-aff-btn" href="{}" target="_blank" rel="sponsored nofollow noopener">{} &rarr;</a>'.format(
-            html.escape(with_aid(url, conf["klook_aid"])), html.escape(label))
-        for label, url in entry["links"])
+            html.escape(url), html.escape(label))
+        for label, url, _ in links)
     title = '<p class="kp-aff-t">{}</p>'.format(html.escape(entry["title"])) if entry.get("title") else ""
-    return ('<aside class="kp-aff" data-kp-aff="klook"><p class="kp-aff-k">BOOK AHEAD</p>{}<p>{}</p>'
+    return ('<aside class="kp-aff" data-kp-aff="{}"><p class="kp-aff-k">BOOK AHEAD</p>{}<p>{}</p>'
             '<p class="kp-aff-l">{}</p><p class="kp-aff-d">{}</p></aside>\n').format(
-                title, html.escape(entry["text"]), buttons, html.escape(conf["disclosure"]))
+                partners, title, html.escape(entry["text"]), buttons, html.escape(conf["disclosure"]))
 
 
 def place(s, entry, new):
