@@ -60,7 +60,14 @@
     "credit": "Photo: Jungsuk Kim, Korea Plainly",
     "source": "",
     "alt": "The sea and islands off Yeosu seen from the cable car station at Dolsan Park",
-    "manual": true
+    "manual": true,
+    "more": [
+      {
+        "file": "photo-own-yeosu-coast-walkway.jpg",
+        "alt": "A blue walkway on stilts curving along a rocky coast near Yeosu",
+        "caption": "The coast around Yeosu: cliffs, clear water and walkways built out over the sea."
+      }
+    ]
   },
   "daegu": {
     "file": "photo-own-daegu-83-tower.jpg",

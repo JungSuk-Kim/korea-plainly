@@ -67,6 +67,18 @@ def hero(slug, name):
         esc(e["file"]), esc(e.get("alt") or name), credit)
 
 
+def more_photos(slug):
+    """Extra photos of the owner's for a region ("more" in content/region_photos.json), shown under the places list."""
+    out = []
+    for e in (PHOTOS.get(slug) or {}).get("more") or []:
+        if (ROOT / e["file"]).exists():
+            out.append('<figure class="kp-own" style="margin:26px auto;max-width:640px"><img src="{}" alt="{}" loading="lazy" '
+                       'style="width:100%;height:auto;border-radius:12px;display:block"><figcaption style="font-size:13px;'
+                       'color:#62635f;margin-top:6px;text-align:center">{} Photo: Jungsuk Kim</figcaption></figure>'.format(
+                           esc(e["file"]), esc(e.get("alt", "")), esc(e.get("caption", ""))))
+    return "".join(out)
+
+
 def places(slug, name):
     """The places list: Korean name (to show a driver or paste into a map app), a few lines, a Naver Map search."""
     from urllib.parse import quote
@@ -151,7 +163,7 @@ h1{{font-size:clamp(44px,8vw,82px);line-height:1;margin:12px 0}}.intro{{max-widt
     overview = ('<section class="overview"><h2>Planning a trip to {}</h2>{}{}</section>'.format(
         esc(name), start_links(slug, name), "".join("<h3>{}</h3><p>{}</p>".format(esc(h), esc(t)) for h, t in ov)) if ov else "")
     return template.format(name=esc(name),title=esc(hub_title(name)),slug=esc(slug),grid=grid,chips=chips,intro=esc(intro),
-                           hero=hero(slug, name),places=places(slug, name),
+                           hero=hero(slug, name),places=places(slug, name) + more_photos(slug),
                            plans=plans,description=esc(description),overview=overview)
 
 data = json.loads(REGION_FILE.read_text(encoding="utf-8"))
