@@ -335,6 +335,10 @@
     "korea-cherry-blossom-2027": {
       "at": "2026-11-20T18:48:54+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n2rat4a26b2d"
+    },
+    "korea-7-day-itinerary": {
+      "at": "2026-11-21T08:45:25+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n2spkvwnja26"
     }
   },
   "bluesky_videos": {
@@ -1081,6 +1085,10 @@
     "korea-cherry-blossom-2027": {
       "at": "2026-11-20T18:49:26+00:00",
       "ref": "1261611360380213_122117021373509276"
+    },
+    "korea-7-day-itinerary": {
+      "at": "2026-11-21T08:45:31+00:00",
+      "ref": "1261611360380213_122117152263509276"
     }
   },
   "threads": {
@@ -1399,6 +1407,10 @@
     "korea-cherry-blossom-2027": {
       "at": "2026-11-20T18:49:38+00:00",
       "ref": "18094764323199062"
+    },
+    "korea-7-day-itinerary": {
+      "at": "2026-11-21T08:45:42+00:00",
+      "ref": "17885306571534637"
     }
   }
 }
