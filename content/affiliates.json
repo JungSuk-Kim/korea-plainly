@@ -6,6 +6,7 @@
   "allianceid": "11444350",
   "sid": "336630008"
  },
+ "creatrip_aff": "AFF-iux2hsb",
  "disclosure": "Affiliate links: if you book through one, Korea Plainly may earn a small commission at no extra cost to you.",
  "boxes": {
   "sim-esim-wifi-korea": {
@@ -259,6 +260,30 @@
      "Seoul to Jeju flights on Trip.com",
      "https://www.trip.com/flights/seoul-to-jeju/airfares-sel-cju/",
      "trip"
+    ]
+   ]
+  },
+  "kpop-seoul-guide": {
+   "after": "Fan cafés and birthday events",
+   "title": "Try a K-pop dance class",
+   "text": "If you would rather join in than watch, one-day group dance classes in Seoul teach a current choreography in English and film you at the end. Classes are date-specific, so book a slot before you travel.",
+   "links": [
+    [
+     "K-pop dance class on Creatrip",
+     "https://creatrip.com/en/spot/13305",
+     "creatrip"
+    ]
+   ]
+  },
+  "olive-young-korea-guide": {
+   "after": "What to buy on a first visit",
+   "title": "Find your colours before you shop",
+   "text": "A personal colour analysis tells you which shades of make-up and clothing suit your skin tone, which makes choosing among hundreds of tints much easier. Studios in Myeongdong take bookings in English; sessions fill up, so reserve ahead.",
+   "links": [
+    [
+     "Personal colour analysis in Myeongdong on Creatrip",
+     "https://creatrip.com/en/spot/15186",
+     "creatrip"
     ]
    ]
   }

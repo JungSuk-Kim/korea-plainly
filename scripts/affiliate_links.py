@@ -3,7 +3,8 @@
 
 Each guide listed under "boxes" gets one small box at the end of the section whose <h2> contains "after":
 a title, a sentence of honest context, one or two buttons, and the disclosure line. A link is [label, url] for Klook
-(gets ?aid=...) or [label, url, "trip"] for Trip.com (gets Allianceid and SID); all open in a new tab and are marked
+(gets ?aid=...), [label, url, "trip"] for Trip.com (gets Allianceid and SID) or [label, url, "creatrip"] for Creatrip
+(gets utm_source and aff_id); all open in a new tab and are marked
 rel="sponsored nofollow". A guide that is no longer listed, or
 "enabled": false, loses its box on the next run. Keep it to one box per guide: these are guides, not shop pages.
 """
@@ -26,12 +27,16 @@ def with_aid(url, aid):
 
 
 def tracked(link, conf):
-    """The link with its partner's ids, and the partner name: [label, url] is Klook, [label, url, "trip"] is Trip.com."""
+    """The link with its partner's ids, and the partner name: [label, url] is Klook, [label, url, "trip"] is Trip.com,
+    [label, url, "creatrip"] is Creatrip."""
     partner = link[2] if len(link) > 2 else "klook"
     url = link[1]
     if partner == "trip":
         t = conf["trip"]
         return url + ("&" if "?" in url else "?") + "Allianceid={}&SID={}".format(t["allianceid"], t["sid"]), partner
+    if partner == "creatrip":
+        a = conf["creatrip_aff"]
+        return url + ("&" if "?" in url else "?") + "utm_source={0}&aff_id={0}".format(a), partner
     return with_aid(url, conf["klook_aid"]), partner
 
 
