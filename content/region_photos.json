@@ -18,7 +18,19 @@
     "credit": "Photo: Jungsuk Kim, Korea Plainly",
     "source": "",
     "alt": "Hamdeok Beach on Jeju in winter",
-    "manual": true
+    "manual": true,
+    "more": [
+      {
+        "file": "photo-own-jeju-black-coast.jpg",
+        "alt": "Waves breaking on black lava rock along the Jeju coast",
+        "caption": "Black lava rock and winter surf on Jeju's coast."
+      },
+      {
+        "file": "photo-own-jeju-snow-village.jpg",
+        "alt": "A pine tree and low houses under snow in a Jeju village",
+        "caption": "A Jeju village after snow."
+      }
+    ]
   },
   "gyeongju": {
     "file": "regional-gyeongju-travel-woljeonggyo-bridge.jpg",
@@ -66,6 +78,11 @@
         "file": "photo-own-yeosu-coast-walkway.jpg",
         "alt": "A blue walkway on stilts curving along a rocky coast near Yeosu",
         "caption": "The coast around Yeosu: cliffs, clear water and walkways built out over the sea."
+      },
+      {
+        "file": "photo-own-yeosu-harbour-dolsan.jpg",
+        "alt": "Yeosu harbour with a tall glass tower and islands beyond, seen from the cable car route",
+        "caption": "Yeosu harbour from the cable car route."
       }
     ]
   },
