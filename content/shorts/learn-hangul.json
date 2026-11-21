@@ -1,0 +1,53 @@
+{
+  "article": "learn-hangul",
+  "fallback": "photo-learn-hangul.jpg",
+  "title": "Korean Hangul for Travel: Read Signs in an Hour",
+  "summary": "Learn how Hangul syllable blocks work and sound out useful Korean travel words. Even a little practice can make signs and menus easier to read.",
+  "hashtags": "#Korea #Hangul #KoreanLanguage #KoreaTravel #TravelTips",
+  "music": "Daily Beetle",
+  "slides": [
+    {
+      "kicker": "HANGUL",
+      "title": "Read Hangul In An Hour",
+      "sub": "Sound out simple Korean words",
+      "voice": "Korean signs confusing? Sound out Hangul in an hour.",
+      "image": "photo-own-neon-hangul.jpg"
+    },
+    {
+      "kicker": "THE BASICS",
+      "title": "One Syllable, One Block",
+      "sub": "Consonant + vowel (+ final consonant)",
+      "voice": "Each syllable is one square: consonant, vowel, sometimes a final consonant.",
+      "photo_query": "Hangul Korean syllable blocks alphabet",
+      "require": [
+        "hangul"
+      ]
+    },
+    {
+      "kicker": "EXAMPLE",
+      "title": "Seoul In Two Blocks",
+      "sub": "서울 = 서 + 울",
+      "voice": "서 is s plus eo; 울 is silent plus u plus l. Together, 서울 spells Seoul.",
+      "photo_query": "Seoul Hangul 서울 sign Korea",
+      "require": [
+        "seoul"
+      ]
+    },
+    {
+      "kicker": "ON YOUR TRIP",
+      "title": "Read Useful Signs",
+      "sub": "지하철 = subway · 출구 = exit",
+      "voice": "Read 지하철 as subway and 출구 as exit. Station signs often show English alongside Hangul, so check your reading.",
+      "photo_query": "Korean subway exit sign Hangul 지하철 출구",
+      "require": [
+        "hangul"
+      ]
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Mon · Wed · Fri · Sat",
+      "voice": "Subscribe for more Korea tips every Monday, Wednesday, Friday and Saturday."
+    }
+  ]
+}
