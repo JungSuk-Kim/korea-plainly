@@ -112,3 +112,4 @@ Google Analytics 4 `G-F508WWT8G9`, AdSense `ca-pub-7379462117232471` (both added
 Affiliate links (since 18 Nov 2026): Klook partner id 143923; Trip.com (since 21 Nov 2026) Allianceid 11444350, SID 336630008, for hotels and flights only (a link is `[label, url, "trip"]`). `scripts/affiliate_links.py` puts one navy "Book ahead" banner card (title, sentence, buttons; no partner images or scripts) in
 each guide listed in `content/affiliates.json` (end of the section named by `after`; links get `?aid=`, `rel="sponsored nofollow"`
 and a disclosure line). Keep it to one box per guide and only real klook.com and trip.com pages; About and Privacy disclose it.
+Long-form video descriptions list the same links under the summary with a disclosure (`video_text.booking`, at most two); Shorts and Reels do not (their links cannot be clicked).

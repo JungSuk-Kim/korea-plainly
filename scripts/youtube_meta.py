@@ -5,7 +5,8 @@
 
 content/shorts/retitle.json maps an upload (key in content/shorts/uploads.json) to its new
 "title" and "summary". The description keeps its hashtags, chapters and credits; only its top
-is replaced (scripts/video_text.py), so the link to the free guide comes first. The new title
+is replaced (scripts/video_text.py), so the link to the free guide comes first (a long-form video
+also gets the booking links of its guide). The new title
 is also written to uploads.json and content/videos.json so the site matches. Entries are
 removed from retitle.json once done.
 """
@@ -51,7 +52,7 @@ def main():
         title = new["title"]
         if up.get("format") != "long" and "#shorts" not in title.lower():
             title += " #Shorts"
-        snippet = {"title": title[:100], "description": refresh(old, up["article"], new["summary"])[:4900],
+        snippet = {"title": title[:100], "description": refresh(old, up["article"], new["summary"], links=up.get("format") == "long")[:4900],
                    "categoryId": sn.get("categoryId", "19"), "tags": sn.get("tags", []),
                    "defaultLanguage": sn.get("defaultLanguage", "en"),
                    "defaultAudioLanguage": sn.get("defaultAudioLanguage", "en")}

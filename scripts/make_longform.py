@@ -426,7 +426,7 @@ def main():
     stamp = lambda s: f"{int(s // 60)}:{int(s % 60):02d}"  # noqa: E731
     credit_spec = {"slides": [{"file": f} for f in dict.fromkeys(used_photos)]}
     from video_text import header
-    desc = header(spec["article"], spec.get("intro", spec["title"])) + ["Chapters:"]
+    desc = header(spec["article"], spec.get("intro", spec["title"]), links=True) + ["Chapters:"]
     desc += [f"{stamp(s)} {c}" for s, c in chapters]
     desc += ["", spec.get("hashtags", "#Seoul #KoreaTravel #SeoulItinerary #Korea"), "", "Photos (Wikimedia Commons, text added):"]
     desc += [c.replace("Photo: ", "• ") for c in credits(credit_spec)]

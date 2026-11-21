@@ -1,1 +1,22 @@
-{}
+{
+  "seoul-3-day-itinerary-long": {
+    "title": "Seoul 3 Day Itinerary for First-Timers (Relaxed Local's Guide)",
+    "summary": "First Time in Seoul? A Relaxed 3-Day Itinerary (Local's Guide)"
+  },
+  "busan-1-day-itinerary-long": {
+    "title": "Things to Do in Busan in One Day: Temple, Beach and Spa",
+    "summary": "Follow Busan’s east coast for a day of sea views, temple steps, beach snacks and a Korean spa. This practical itinerary keeps the stops on one side of the city, with simple transport advice and options for a longer stay."
+  },
+  "jeju-3-day-itinerary-long": {
+    "title": "Things to Do in Jeju Island: Easy 3-Day Itinerary",
+    "summary": "Plan three days in Jeju, from the turquoise west coast to Sunrise Peak and the south shore. Get a practical route, transport advice, and simple alternatives for rain, wind, or a mountain hike."
+  },
+  "korea-7-day-itinerary-long": {
+    "title": "Korea in 7 Days: Seoul, Gyeongju and Busan Itinerary",
+    "summary": "See how to spend a first week in Korea, from Seoul’s royal palace and a lantern-lit pond to Busan’s seaside temple and market food. This seven-day route covers the capital, ancient Gyeongju and coastal Busan, with practical choices for your day trip and journey south."
+  },
+  "korea-10-day-itinerary-long": {
+    "title": "Korea 10-Day Itinerary: Seoul to Jeju, With Two-Week Options",
+    "summary": "Ten days is enough to see Korea beyond Seoul: follow this easy route south to Jeonju, Gyeongju, Busan and Jeju. Want two weeks? We’ll also show you where to add the east coast."
+  }
+}
