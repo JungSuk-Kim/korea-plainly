@@ -34,12 +34,24 @@ def web_copy():
     """kkachi.png at 260px high, written only when missing or when the source drawing changes."""
     if not SRC.exists():
         return False
-    if WEB.exists() and WEB.stat().st_mtime >= SRC.stat().st_mtime:
-        return True
+    # Compare a hash of the source drawing stored in the PNG, not file times: a fresh
+    # checkout gives files arbitrary mtimes, which made the copy churn between runs.
+    import hashlib
+    from PIL import PngImagePlugin
+    digest = hashlib.sha256(SRC.read_bytes()).hexdigest()[:16]
+    if WEB.exists():
+        try:
+            with Image.open(WEB) as cur:
+                if cur.info.get("kp-source") == digest:
+                    return True
+        except OSError:
+            pass
+    meta = PngImagePlugin.PngInfo()
+    meta.add_text("kp-source", digest)
     with Image.open(SRC) as im:
         im = im.convert("RGBA")
         im = im.resize((round(im.width * 260 / im.height), 260), Image.LANCZOS)
-        im.save(WEB, optimize=True)
+        im.save(WEB, optimize=True, pnginfo=meta)
     return True
 
 
