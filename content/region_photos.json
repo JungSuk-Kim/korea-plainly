@@ -56,18 +56,18 @@
     "manual": true
   },
   "yeosu": {
-    "query": "Yeosu Dolsan Bridge",
-    "file": "region-yeosu.jpg",
-    "credit": "Photo: Choi2451, CC BY-SA 3.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Dolsan_Bridge_seen_from_Dolsan_Park,_Yeosu.jpg",
-    "alt": ""
+    "file": "photo-own-yeosu-cable-car-view.jpg",
+    "credit": "Photo: Jungsuk Kim, Korea Plainly",
+    "source": "",
+    "alt": "The sea and islands off Yeosu seen from the cable car",
+    "manual": true
   },
   "daegu": {
-    "query": "Daegu Seomun Market",
-    "file": "region-daegu.jpg",
-    "credit": "Photo: Choi2451, CC BY-SA 3.0, via Wikimedia Commons",
-    "source": "https://commons.wikimedia.org/wiki/File:Seomun_Night_Market,_Daegu.jpg",
-    "alt": ""
+    "file": "photo-own-daegu-83-tower.jpg",
+    "credit": "Photo: Jungsuk Kim, Korea Plainly",
+    "source": "",
+    "alt": "83 Tower in Daegu at dusk in cherry blossom season",
+    "manual": true
   },
   "daejeon": {
     "query": "Daejeon Expo Bridge",
