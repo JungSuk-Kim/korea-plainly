@@ -347,6 +347,10 @@
     "korean-bbq-guide": {
       "at": "2026-11-22T08:49:17+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n2vaaqklc22f"
+    },
+    "seollal-travel-tips": {
+      "at": "2026-11-22T18:01:30+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n2w746vjg62t"
     }
   },
   "bluesky_videos": {
@@ -1121,6 +1125,10 @@
     "korean-bbq-guide": {
       "at": "2026-11-22T08:49:23+00:00",
       "ref": "1261611360380213_122117387793509276"
+    },
+    "seoul-3-day-itinerary": {
+      "at": "2026-11-22T18:01:34+00:00",
+      "ref": "1261611360380213_122117506473509276"
     }
   },
   "threads": {
@@ -1451,6 +1459,10 @@
     "korean-bbq-guide": {
       "at": "2026-11-22T08:49:33+00:00",
       "ref": "17937188838142283"
+    },
+    "seoul-3-day-itinerary": {
+      "at": "2026-11-22T18:01:46+00:00",
+      "ref": "18113101703241855"
     }
   }
 }
