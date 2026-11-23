@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16",
+ "updated": "2026-11-23",
  "source": "EngService2",
  "festivals": [
   {
@@ -84,24 +84,6 @@
    "lon": 128.671582418
   },
   {
-   "id": "4126454",
-   "title": "Sium Sium Morning (쉬엄쉬엄모닝)",
-   "start": "2026-10-18",
-   "end": "2026-11-22",
-   "address": "83-19 Seonsa-ro, Gangdong-gu, Seoul",
-   "lat": 37.5452481279,
-   "lon": 127.1179813872
-  },
-  {
-   "id": "3386385",
-   "title": "Suseong International Biennale (수성국제비엔날레)",
-   "start": "2026-10-27",
-   "end": "2026-11-22",
-   "address": "112 Muhak-ro, Suseong-gu, Daegu",
-   "lat": 35.8293696738,
-   "lon": 128.6205920321
-  },
-  {
    "id": "4149562",
    "title": "MATERIALISM | Curated Exhibition by the Bjarke Ingels Group (MATERIALISM｜비야케 잉겔스 그룹 기획 전시)",
    "start": "2026-11-07",
@@ -111,24 +93,6 @@
    "lon": 126.9767024196
   },
   {
-   "id": "1037621",
-   "title": "Pohang International Fireworks Festival (포항국제불빛축제)",
-   "start": "2026-11-19",
-   "end": "2026-11-21",
-   "address": "48, Haean-ro, Buk-gu, Pohang-si, Gyeongsangbuk-do",
-   "lat": 36.0530051077,
-   "lon": 129.3775942753
-  },
-  {
-   "id": "3554627",
-   "title": "The Souvenir Fair (대한민국 관광기념품 박람회)",
-   "start": "2026-11-20",
-   "end": "2026-11-22",
-   "address": "281 Eulji-ro, Jung-gu, Seoul",
-   "lat": 37.5660539726,
-   "lon": 127.0095547691
-  },
-  {
    "id": "2513248",
    "title": "E-World Illumination (이월드 일루미네이션)",
    "start": "2026-11-21",
@@ -136,15 +100,6 @@
    "address": "200 Duryugongwon-ro, Dalseo-gu, Daegu",
    "lat": 35.8550095336,
    "lon": 128.5600983436
-  },
-  {
-   "id": "3507211",
-   "title": "Jemulpo Wave Market (제물포웨이브마켓)",
-   "start": "2026-11-21",
-   "end": "2026-11-22",
-   "address": "33 Wolmi-ro, Jemulpo-gu, Incheon",
-   "lat": 37.4760834131,
-   "lon": 126.6146527143
   },
   {
    "id": "4135883",
