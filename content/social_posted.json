@@ -355,6 +355,10 @@
     "korea-winter-travel-guide": {
       "at": "2026-11-23T09:45:25+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n2xttzv5j624"
+    },
+    "korea-tax-refund-guide": {
+      "at": "2026-11-23T22:13:26+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n2z5nllmug2b"
     }
   },
   "bluesky_videos": {
@@ -1137,6 +1141,10 @@
     "seollal-travel-tips": {
       "at": "2026-11-23T09:45:29+00:00",
       "ref": "1261611360380213_122117676837509276"
+    },
+    "korea-winter-travel-guide": {
+      "at": "2026-11-23T22:13:32+00:00",
+      "ref": "1261611360380213_122117810151509276"
     }
   },
   "threads": {
@@ -1475,6 +1483,10 @@
     "seollal-travel-tips": {
       "at": "2026-11-23T09:45:40+00:00",
       "ref": "18128055337722149"
+    },
+    "korea-winter-travel-guide": {
+      "at": "2026-11-23T22:13:42+00:00",
+      "ref": "18097605668668531"
     }
   }
 }
