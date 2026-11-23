@@ -23,6 +23,7 @@ STEPS = [
     "affiliate_links.py",             # booking boxes with labelled affiliate links (content/affiliates.json)
     "site_chrome.py",                 # same header, stylesheet and footer everywhere
     "site_integrity_fix.py",          # dropdown menu markup, CSS version, canonical tags
+    "festival_pages.py",              # before article_enhance, so a day-rollover change gets its Updated date in the same run; festival calendar page and "Festivals coming up" on region hubs
     "article_enhance.py",             # publish date + Article structured data
     "home_latest.py",                 # home page "Latest guides" from the newest articles
     "article_skin.py",                # one article design (article.css), related photo cards, visit info card
@@ -30,7 +31,6 @@ STEPS = [
     "site_mascot.py",                 # Kkachi the magpie: article sign-off, About section, 404
     "video_hub.py",                   # videos.html and the "Watch" section on the home page
     "home_tools.py",                  # "Try it" section on the home page (games, calculator, quiz, checklist)
-    "festival_pages.py",              # festival calendar page and "Festivals coming up" on region hubs
     "optimize_images.py",             # shrink oversized photos
     "responsive_images.py",           # small WebP copies + srcset so phones download less
     "seo_basics.py",                  # favicon, og tags, noindex for thin hubs
