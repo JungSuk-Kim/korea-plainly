@@ -1,0 +1,63 @@
+{
+  "article": "korea-transit-card-guide",
+  "fallback": "photo-seoul-subway-for-foreigners.jpg",
+  "title": "Seoul T-Money Card: Buy, Top Up and Use It",
+  "summary": "Learn where to buy a T-money card in Seoul, how to top it up with cash, and when to tap on and off for subway and bus rides.",
+  "hashtags": "#Korea #Seoul #KoreaTravel #SeoulTravel #Tmoney",
+  "music": "Carefree",
+  "slides": [
+    {
+      "kicker": "SEOUL TRANSIT",
+      "title": "Skip Seoul Ticket Machines",
+      "sub": "Get a T-money card",
+      "voice": "Seoul transit: skip ticket machines. Get T-money.",
+      "image": "photo-seoul-subway-for-foreigners.jpg"
+    },
+    {
+      "kicker": "BUY A CARD",
+      "title": "Find One Nearby",
+      "sub": "CU, GS25, 7-Eleven, airport stores",
+      "voice": "Buy one at CU, GS25, 7-Eleven, or an Incheon Airport convenience store.",
+      "photo_query": "T-money transportation card South Korea",
+      "require": [
+        "t-money",
+        "card"
+      ]
+    },
+    {
+      "kicker": "TOP UP",
+      "title": "Bring Cash",
+      "sub": "Cash top-up: ₩20,000–₩30,000",
+      "voice": "Top up with cash; the card starts empty. Twenty to thirty thousand won is a sensible first load.",
+      "photo_query": "T-money card recharge machine cash Seoul",
+      "require": [
+        "t-money",
+        "recharge"
+      ]
+    },
+    {
+      "kicker": "SUBWAY",
+      "title": "Tap Both Ways",
+      "sub": "Tap in and out at subway gates",
+      "voice": "Tap at the subway gate entering and leaving; your exit tap matters.",
+      "photo_query": "Seoul subway ticket gate",
+      "require": [
+        "subway",
+        "gate"
+      ]
+    },
+    {
+      "kicker": "BUS",
+      "title": "Tap Off, Too",
+      "sub": "Tap on and off; use the same card",
+      "voice": "On buses, tap by the driver, then by the rear door. Tap off to keep transfer discounts.",
+      "image": "photo-seoul-bus-guide.jpg"
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Five days a week",
+      "voice": "Subscribe for more Korea tips five days a week."
+    }
+  ]
+}
