@@ -101,6 +101,9 @@ Rules:
 - Narration: {min_words}-{max_words} words in total. Short spoken sentences, numbers as spoken, no emoji.
   English letters only: never write Korean script (say "show the driver the name on your map app" instead).
 - No chapter of only tips before the first stop: within 30 seconds the viewer must be at the first place.
+- Keep every segment to at most 30 words (about 12 seconds on one picture); split a longer one into two segments
+  with their own photos (Nov 2026: the Busan video, with 40-word segments and 90 s of logistics before the first stop,
+  kept 20% at 2 min; the 7-day video, with 25-word segments and its first stop at 50 s, kept 52%).
 - Use only facts from the article. Never invent prices, times or dates; for things that change say "check before you go".
 - Every picture must show exactly what its segment talks about. Prefer a site photo when its description matches;
   otherwise a photo_query for that exact place. Never use one photo twice.
@@ -209,6 +212,8 @@ def clean(spec, photos):
 
 FIRST_LINE_MAX = 12   # words in the first spoken sentence (Nov 2026: long opening lists lost 15-23% at 7 s)
 OPENING_PHOTOS_MAX = 2
+INTRO_WORDS_MAX = 80     # about 30 s of narration before the first stop
+SEGMENT_WORDS_MAX = 30   # about 12 s on one picture (Nov 2026 retention, see PROMPT)
 
 
 def intro_problems(spec):
@@ -229,6 +234,15 @@ def intro_problems(spec):
         probs.append(f"The first segment shows {len(pics)} photos; show at most {OPENING_PHOTOS_MAX}, best view first.")
     if len(segs) < 2 or not any("map" in v for v in segs[1].get("show", [])) or "you" not in segs[1].get("voice", "").lower():
         probs.append("The second segment must be the promise to the viewer ('I'll show you ...') over the overview map.")
+    chs = spec.get("chapters", [])
+    before = sum(len(x.get("voice", "").split()) for x in segs)   # the Intro, before the first stop
+    if len(chs) > 1 and before > INTRO_WORDS_MAX:
+        probs.append(f"The Intro has {before} words; keep it under {INTRO_WORDS_MAX} so the first stop starts within 30 seconds.")
+    if len(chs) > 1 and re.search(r"before you go|planning|tips", chs[1].get("name", ""), re.I):
+        probs.append(f"Chapter 2 is '{chs[1].get('name')}'; start with the first day or stop and put the tips at their stops.")
+    long = [x for c in chs for x in c.get("segments", []) if len(x.get("voice", "").split()) > SEGMENT_WORDS_MAX]
+    if long:
+        probs.append(f"{len(long)} segments have more than {SEGMENT_WORDS_MAX} words; split each into two shorter segments.")
     return probs
 
 
