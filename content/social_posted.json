@@ -363,6 +363,10 @@
     "korea-ski-resorts-guide": {
       "at": "2026-11-24T11:36:27+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n32kjitxfb26"
+    },
+    "korea-entry-k-eta-e-arrival": {
+      "at": "2026-11-24T20:52:48+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n33jmdnlz22m"
     }
   },
   "bluesky_videos": {
@@ -1169,6 +1173,10 @@
     "korea-tax-refund-guide": {
       "at": "2026-11-24T11:38:17+00:00",
       "ref": "1261611360380213_122117935671509276"
+    },
+    "korea-ski-resorts-guide": {
+      "at": "2026-11-24T20:52:53+00:00",
+      "ref": "1261611360380213_122118032595509276"
     }
   },
   "threads": {
@@ -1515,6 +1523,10 @@
     "korea-tax-refund-guide": {
       "at": "2026-11-24T11:38:27+00:00",
       "ref": "18135117184762680"
+    },
+    "korea-ski-resorts-guide": {
+      "at": "2026-11-24T20:53:04+00:00",
+      "ref": "18488031007116207"
     }
   }
 }
