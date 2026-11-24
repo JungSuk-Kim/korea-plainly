@@ -1,0 +1,753 @@
+{
+  "title": "Seoul 5 Day Itinerary: Palaces, Markets and a Day Trip",
+  "intro": "Spend five relaxed days in Seoul, from palace lanes to river evenings and a day trip beyond the city. This first-timer plan groups each day by neighborhood, with practical tips on getting around and what to book ahead.",
+  "hashtags": "#Seoul #SeoulTravel #KoreaTravel #SeoulItinerary #SouthKorea",
+  "thumb": {
+    "big": "5 DAYS",
+    "mid": "IN SEOUL",
+    "small": "FIRST-TIMER PLAN"
+  },
+  "maps": {
+    "seoul-overview": {
+      "stops": [
+        {
+          "name": "Gyeongbokgung",
+          "lat": 37.579754,
+          "lon": 126.9766818
+        },
+        {
+          "name": "Gwangjang Market",
+          "lat": 37.5697826,
+          "lon": 127.0006548
+        },
+        {
+          "name": "Hongdae",
+          "lat": 37.55792,
+          "lon": 126.926135
+        },
+        {
+          "name": "Seongsu",
+          "lat": 37.5367073,
+          "lon": 127.0556871
+        },
+        {
+          "name": "N Seoul Tower",
+          "lat": 37.5349513,
+          "lon": 126.9870892
+        }
+      ],
+      "route": false,
+      "note": "Five days, grouped by area"
+    },
+    "day-1": {
+      "stops": [
+        {
+          "name": "Gyeongbokgung",
+          "lat": 37.579754,
+          "lon": 126.9766818
+        },
+        {
+          "name": "Bukchon and Anguk",
+          "lat": 37.5823919,
+          "lon": 126.9858648
+        },
+        {
+          "name": "Insadong",
+          "lat": 37.5727757,
+          "lon": 126.9857382
+        },
+        {
+          "name": "Cheonggyecheon",
+          "lat": 37.5722871,
+          "lon": 127.0367285
+        }
+      ],
+      "route": true,
+      "note": "Palaces, lanes and stream"
+    },
+    "day-2": {
+      "stops": [
+        {
+          "name": "Gwangjang Market",
+          "lat": 37.5697826,
+          "lon": 127.0006548
+        },
+        {
+          "name": "Myeongdong",
+          "lat": 37.5627106,
+          "lon": 126.984707
+        },
+        {
+          "name": "N Seoul Tower",
+          "lat": 37.5349513,
+          "lon": 126.9870892
+        }
+      ],
+      "route": true,
+      "note": "Market breakfast to sunset views"
+    },
+    "day-3": {
+      "stops": [
+        {
+          "name": "Yeonnam-dong",
+          "lat": 37.5626596,
+          "lon": 126.9226107
+        },
+        {
+          "name": "Hongdae",
+          "lat": 37.55792,
+          "lon": 126.926135
+        },
+        {
+          "name": "Han River",
+          "lat": 37.5256731,
+          "lon": 126.9360586
+        }
+      ],
+      "route": true,
+      "note": "West Seoul, then the river"
+    },
+    "day-4": {
+      "stops": [
+        {
+          "name": "Seongsu",
+          "lat": 37.5367073,
+          "lon": 127.0556871
+        },
+        {
+          "name": "COEX",
+          "lat": 37.5101676,
+          "lon": 127.0600884
+        },
+        {
+          "name": "Jamsil",
+          "lat": 37.5125537,
+          "lon": 127.102679
+        }
+      ],
+      "route": true,
+      "note": "Modern Seoul, ending in Jamsil"
+    },
+    "day-5": {
+      "stops": [
+        {
+          "name": "Nami Island",
+          "lat": 37.7917285,
+          "lon": 127.525144
+        }
+      ],
+      "route": false,
+      "note": "Choose one day trip"
+    }
+  },
+  "chapters": [
+    {
+      "name": "Intro",
+      "segments": [
+        {
+          "voice": "Five days in Seoul, ending with the city glowing from Namsan.",
+          "show": [
+            {
+              "image": "photo-seoul-night-views.jpg"
+            },
+            {
+              "image": "photo-korean-food-to-try.jpg"
+            }
+          ]
+        },
+        {
+          "voice": "I’ll map all five days, including easy day-trip choices, and show you what to book and where to slow down.",
+          "show": [
+            {
+              "map": "seoul-overview"
+            }
+          ]
+        },
+        {
+          "voice": "Save a few hours for a slow café stop.",
+          "show": [
+            {
+              "image": "photo-own-cafe-latte.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Day 1: Palaces, hanok lanes and the stream",
+      "segments": [
+        {
+          "voice": "Day one stays in central Seoul, moving from the palace to traditional lanes, small shops and an evening stream walk.",
+          "show": [
+            {
+              "card": {
+                "big": "DAY 1",
+                "title": "Palaces, lanes and the stream",
+                "sub": "A full day in central Seoul"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Start early at Gyeongbokgung, then walk through Bukchon and Anguk, browse Insadong, and finish beside Cheonggyecheon.",
+          "show": [
+            {
+              "map": "day-1"
+            }
+          ]
+        },
+        {
+          "voice": "Begin at Gyeongbokgung Palace. Arrive early for the grand gates and the changing of the guard at Gwanghwamun Gate.",
+          "show": [
+            {
+              "image": "photo-seoul-3-day-itinerary.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 1 · MORNING",
+            "title": "Gyeongbokgung Palace"
+          }
+        },
+        {
+          "voice": "Hanbok wearers get free palace entry, and rental shops are near the station. The palace is closed on Tuesdays, so swap days if needed.",
+          "show": [
+            {
+              "image": "photo-hanbok-rental-guide.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 1 · MORNING",
+            "title": "Hanbok and palace entry"
+          }
+        },
+        {
+          "voice": "Walk north into Bukchon’s traditional lanes, then toward Anguk for a café break. Keep your visit unhurried and remember people live here.",
+          "show": [
+            {
+              "photo_query": "Bukchon Hanok Village",
+              "require": [
+                "bukchon"
+              ]
+            },
+            {
+              "photo_query": "Anguk Seoul cafe",
+              "require": [
+                "anguk"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DAY 1 · MIDDAY",
+            "title": "Bukchon and Anguk"
+          }
+        },
+        {
+          "voice": "Continue to Insadong for craft shops and tea houses. It is an easy place to browse without planning a long list of individual stops.",
+          "show": [
+            {
+              "photo_query": "Insadong tea houses",
+              "require": [
+                "insadong"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DAY 1 · AFTERNOON",
+            "title": "Insadong"
+          }
+        },
+        {
+          "voice": "End with a walk along Cheonggyecheon. This streamside path gives you a calmer change of pace after a day among busy streets.",
+          "show": [
+            {
+              "image": "regional-seoul-travel-cheonggyecheon.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 1 · EVENING",
+            "title": "Cheonggyecheon Stream"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Day 2: Markets, Myeongdong and Namsan",
+      "segments": [
+        {
+          "voice": "Day two runs from a market breakfast to shopping and street food, then finishes with a sunset view from Namsan.",
+          "show": [
+            {
+              "card": {
+                "big": "DAY 2",
+                "title": "Markets and a sunset view",
+                "sub": "Gwangjang, Myeongdong and Namsan"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Start at Gwangjang Market, head to Myeongdong for the afternoon, and go up to N Seoul Tower for sunset.",
+          "show": [
+            {
+              "map": "day-2"
+            }
+          ]
+        },
+        {
+          "voice": "Have breakfast at Gwangjang Market and try bindaetteok, a mung bean pancake. Browse the stalls, then leave room for more snacks later.",
+          "show": [
+            {
+              "image": "photo-korea-trip-cost-calculator.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 2 · MORNING",
+            "title": "Gwangjang Market"
+          }
+        },
+        {
+          "voice": "Spend the afternoon among Myeongdong’s shops and street-food stalls. It is a good place to pause, snack and take the day at your own pace.",
+          "show": [
+            {
+              "image": "photo-myeongdong-night-market.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 2 · AFTERNOON",
+            "title": "Myeongdong"
+          }
+        },
+        {
+          "voice": "Head to N Seoul Tower for sunset and the city lights. If you want to visit an observatory, book ahead and check the current details.",
+          "show": [
+            {
+              "card": {
+                "big": "DAY 2 · EVENING",
+                "title": "N Seoul Tower",
+                "sub": "Korea Plainly"
+              }
+            }
+          ],
+          "label": {
+            "kicker": "DAY 2 · EVENING",
+            "title": "N Seoul Tower"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Day 3: Hongdae, Yeonnam-dong and the Han River",
+      "segments": [
+        {
+          "voice": "Day three explores west Seoul: relaxed cafés and a railway park first, lively Hongdae next, then an evening by the Han River.",
+          "show": [
+            {
+              "card": {
+                "big": "DAY 3",
+                "title": "West Seoul and the river",
+                "sub": "Cafés, performers and a riverside evening"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Start in Yeonnam-dong, walk through Hongdae, then choose Mangwon or Yeouido Hangang Park for your river stop.",
+          "show": [
+            {
+              "map": "day-3"
+            }
+          ]
+        },
+        {
+          "voice": "Yeonnam-dong is known for relaxed cafés and a long park along an old railway line. Take time here before heading next door.",
+          "show": [
+            {
+              "image": "photo-korea-travel-apps.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 3 · AFTERNOON",
+            "title": "Yeonnam-dong"
+          }
+        },
+        {
+          "voice": "Hongdae is Seoul’s university area, with street performers, shops and nightlife. Wander the streets, and stay for dinner if the energy suits you.",
+          "show": [
+            {
+              "photo_query": "Hongdae street performers",
+              "require": [
+                "hongdae"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DAY 3 · LATE AFTERNOON",
+            "title": "Hongdae"
+          }
+        },
+        {
+          "voice": "Before dinner, go to Mangwon or Yeouido Hangang Park. Yeouido has river cruises after dark, and locals often order fried chicken to the riverbank.",
+          "show": [
+            {
+              "image": "photo-seoul-5-day-itinerary.jpg"
+            },
+            {
+              "image": "photo-own-fried-chicken-box.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 3 · EVENING",
+            "title": "The Han River"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Day 4: Seongsu, Gangnam and Jamsil",
+      "segments": [
+        {
+          "voice": "Day four is your modern Seoul day: converted factories, a giant library, and a high city view before a lakeside walk.",
+          "show": [
+            {
+              "card": {
+                "big": "DAY 4",
+                "title": "Modern Seoul",
+                "sub": "Seongsu, Gangnam and Jamsil"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Begin in Seongsu, cross the river to COEX in Gangnam, then end in Jamsil at Lotte World Tower and Seokchon Lake.",
+          "show": [
+            {
+              "map": "day-4"
+            }
+          ]
+        },
+        {
+          "voice": "Seongsu-dong is an old factory district turned into cafés, concept stores and pop-ups. Nearby Seoul Forest makes this a good place to slow down.",
+          "show": [
+            {
+              "photo_query": "Seongsu Seoul cafes",
+              "require": [
+                "seongsu"
+              ]
+            },
+            {
+              "photo_query": "Seoul Forest park",
+              "require": [
+                "seoul"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DAY 4 · MORNING",
+            "title": "Seongsu and Seoul Forest"
+          }
+        },
+        {
+          "voice": "Cross the river to COEX mall in Gangnam and see its giant library. Keep this stop simple: browse the space, take a break, and move on.",
+          "show": [
+            {
+              "photo_query": "COEX Starfield Library",
+              "require": [
+                "coex"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DAY 4 · AFTERNOON",
+            "title": "COEX and its library"
+          }
+        },
+        {
+          "voice": "Finish at Lotte World Tower in Jamsil. Seoul Sky has one of the city’s best night views; Seokchon Lake is lovely for a walk nearby.",
+          "show": [
+            {
+              "photo_query": "Lotte World Tower Seoul",
+              "require": [
+                "lotte"
+              ]
+            },
+            {
+              "photo_query": "Seokchon Lake Seoul",
+              "require": [
+                "seokchon"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DAY 4 · EVENING",
+            "title": "Jamsil and Seoul Sky"
+          }
+        },
+        {
+          "voice": "Want a calmer day? Swap Gangnam for Changdeokgung and its Secret Garden, which is visited by guided tour. Book ahead, then finish at a Korean bathhouse.",
+          "show": [
+            {
+              "photo_query": "Changdeokgung Secret Garden",
+              "require": [
+                "changdeokgung"
+              ]
+            }
+          ],
+          "label": {
+            "kicker": "DAY 4 · ALTERNATIVE",
+            "title": "A quieter palace day"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Day 5: A day trip",
+      "segments": [
+        {
+          "voice": "For the last day, choose one trip beyond Seoul. The best fit depends on whether you want history, island walks, a guided visit or an easy city outing.",
+          "show": [
+            {
+              "card": {
+                "big": "DAY 5",
+                "title": "Choose a day trip",
+                "sub": "One day beyond Seoul"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "Here are four options, not four stops to squeeze into one day. Pick one, then check transport and any booking requirements before you go.",
+          "show": [
+            {
+              "card": {
+                "big": "DAY 5: A DAY TRIP",
+                "title": "Day 5: A day trip",
+                "sub": "Korea Plainly"
+              }
+            }
+          ]
+        },
+        {
+          "voice": "The DMZ is the most unusual choice, but visits are by organised tour only. Bring your passport and book ahead.",
+          "show": [
+            {
+              "image": "photo-dmz-tour-guide.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 5 · OPTION 1",
+            "title": "The DMZ"
+          }
+        },
+        {
+          "voice": "Suwon is the easiest option to do on your own. Walk along Hwaseong Fortress, about an hour away by subway or train, then find fried chicken near the market.",
+          "show": [
+            {
+              "image": "photo-day-trips-from-seoul.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 5 · OPTION 2",
+            "title": "Suwon"
+          }
+        },
+        {
+          "voice": "Choose Nami Island for walks by the river. It is especially appealing in autumn, when the island’s scenery is at its best.",
+          "show": [
+            {
+              "image": "photo-nami-island-gapyeong.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 5 · OPTION 3",
+            "title": "Nami Island"
+          }
+        },
+        {
+          "voice": "Incheon is handy if you fly out the next day. Visit Chinatown and Songdo, and make the most of a day that also keeps you near the airport.",
+          "show": [
+            {
+              "image": "regional-incheon-local-guide-incheon-chinatown.jpg"
+            },
+            {
+              "image": "regional-incheon-travel-songdo-central-park.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "DAY 5 · OPTION 4",
+            "title": "Incheon"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Getting around",
+      "segments": [
+        {
+          "voice": "The subway reaches every stop on this plan. Get a transit card when you arrive; transfers between subway and bus are discounted when you use one.",
+          "show": [
+            {
+              "image": "photo-korea-public-transport-transfers.jpg"
+            }
+          ]
+        },
+        {
+          "voice": "Taxis are good value for late nights or short hops. Use a Korean map app to plan routes and show the driver your destination.",
+          "show": [
+            {
+              "image": "photo-kakao-t-taxi-korea.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Good to know",
+      "segments": [
+        {
+          "voice": "For a central base, look at Myeongdong, Jongno or City Hall. Hongdae also suits travelers who want nightlife.",
+          "show": [
+            {
+              "image": "photo-seoul-neighborhoods-guide.jpg"
+            }
+          ]
+        },
+        {
+          "voice": "Do the busiest sights early, then keep evenings for markets, the river and night views. That rhythm helps the five days feel relaxed.",
+          "show": [
+            {
+              "image": "photo-first-evening-seoul.jpg"
+            }
+          ]
+        },
+        {
+          "voice": "Book ahead for a DMZ tour, the Secret Garden tour and observatories at sunset. Check current details before you go.",
+          "show": [
+            {
+              "image": "photo-korea-travel-advisory.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mistakes to avoid",
+      "segments": [
+        {
+          "voice": "Three easy mistakes: arriving late at the busiest sights, forgetting palace closing days, and trying to fit every day-trip choice into one day.",
+          "show": [
+            {
+              "list": {
+                "heading": "Avoid these",
+                "items": [
+                  "Start busy sights early",
+                  "Check palace closing days",
+                  "Choose one day trip"
+                ]
+              }
+            },
+            {
+              "image": "photo-korea-travel-mistakes.jpg"
+            }
+          ]
+        },
+        {
+          "voice": "Gyeongbokgung closes Tuesdays, and Changdeokgung closes Mondays. Swap your days if needed, and leave a little free time for cafés and wandering.",
+          "show": [
+            {
+              "photo_query": "Gyeongbokgung Palace gates",
+              "require": [
+                "gyeongbokgung"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quick questions",
+      "segments": [
+        {
+          "voice": "Is five days enough for Seoul? Yes. You can cover the main sights, several neighborhoods and a day trip without rushing.",
+          "show": [
+            {
+              "image": "photo-seoul-first-time.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "Is five days enough?"
+          }
+        },
+        {
+          "voice": "Where should you stay? Choose somewhere central, such as Myeongdong, Jongno or City Hall, so most days begin with a short ride.",
+          "show": [
+            {
+              "image": "regional-seoul-shopping-myeongdong-shopping-street.jpg"
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "Where should you stay?"
+          }
+        },
+        {
+          "voice": "What is the best day trip? The DMZ is the most unusual, Suwon is easiest on your own, and Nami Island is best in autumn.",
+          "show": [
+            {
+              "card": {
+                "big": "Q&A",
+                "title": "Which day trip is best?",
+                "sub": "Korea Plainly"
+              }
+            }
+          ],
+          "label": {
+            "kicker": "Q&A",
+            "title": "Which day trip is best?"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Summary",
+      "segments": [
+        {
+          "voice": "Five days: palace lanes and the stream; market, Myeongdong and Namsan; Hongdae and the river; modern Seoul; then one day trip.",
+          "show": [
+            {
+              "list": {
+                "heading": "Your five days",
+                "items": [
+                  "Palaces and the stream",
+                  "Market and Namsan",
+                  "Hongdae and the river",
+                  "Seongsu, Gangnam and Jamsil",
+                  "One day trip"
+                ]
+              }
+            },
+            {
+              "image": "photo-own-beach-dusk.jpg"
+            }
+          ]
+        },
+        {
+          "voice": "The full guide, with maps and links for every stop, is free at Korea Plainly dot com. The link is at the top of the description. If this helped, subscribe for more plain, practical guides to Korea.",
+          "show": [
+            {
+              "card": {
+                "big": "KOREA PLAINLY",
+                "title": "The full guide is in the description",
+                "sub": "korea-plainly.com"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "article": "seoul-5-day-itinerary",
+  "music": "Carefree",
+  "fallback": "photo-seoul-5-day-itinerary.jpg",
+  "thumb_photo": "photo-seoul-5-day-itinerary.jpg"
+}
