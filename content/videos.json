@@ -234,15 +234,28 @@
     "description": "Korea Skiing From Seoul: Easy Shuttle Tips: the short version of our guide.",
     "caption": "Watch the one-minute version"
   },
-  "seoul-5-day-itinerary": {
-    "youtube": "BO_rom7_XcY",
-    "title": "Seoul 5 Day Itinerary: Easy, No-Zigzag Plan",
-    "uploaded": "2026-11-07T16:00:36+09:00",
-    "seconds": 41,
-    "poster": "img/video-seoul-5-day-itinerary.jpg",
-    "description": "Seoul 5 Day Itinerary: Easy, No-Zigzag Plan: the short version of our guide.",
-    "caption": "Watch the one-minute version"
-  },
+  "seoul-5-day-itinerary": [
+    {
+      "youtube": "gc6lAJakbrM",
+      "title": "Seoul 5 Day Itinerary: Palaces, Markets and a Day Trip",
+      "uploaded": "2026-11-24T20:29:36+09:00",
+      "seconds": 435,
+      "poster": "img/video-seoul-5-day-itinerary-long.jpg",
+      "format": "long",
+      "description": "Seoul 5 Day Itinerary: Palaces, Markets and a Day Trip: the full guide as a video.",
+      "caption": "Watch the whole guide, with maps (7 minutes)"
+    },
+    {
+      "youtube": "BO_rom7_XcY",
+      "title": "Seoul 5 Day Itinerary: Easy, No-Zigzag Plan",
+      "uploaded": "2026-11-07T16:00:36+09:00",
+      "seconds": 41,
+      "poster": "img/video-seoul-5-day-itinerary.jpg",
+      "description": "Seoul 5 Day Itinerary: Easy, No-Zigzag Plan: the short version of our guide.",
+      "caption": "Short on time? The guide in under a minute",
+      "place": "end"
+    }
+  ],
   "korea-tax-refund-guide": {
     "youtube": "2-ceOv4yBE4",
     "title": "Korea Tax Refund for Tourists: How to Claim It",
@@ -295,6 +308,15 @@
     "seconds": 38,
     "poster": "img/video-learn-hangul.jpg",
     "description": "Korean Hangul for Travel: Read Signs in an Hour: the short version of our guide.",
+    "caption": "Watch the one-minute version"
+  },
+  "korea-transit-card-guide": {
+    "youtube": "UaZqyh0KWwU",
+    "title": "Seoul T-Money Card: Buy, Top Up and Use It",
+    "uploaded": "2026-11-23T17:58:44+09:00",
+    "seconds": 40,
+    "poster": "img/video-korea-transit-card-guide.jpg",
+    "description": "Seoul T-Money Card: Buy, Top Up and Use It: the short version of our guide.",
     "caption": "Watch the one-minute version"
   }
 }
