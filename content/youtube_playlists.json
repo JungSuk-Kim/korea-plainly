@@ -5,7 +5,8 @@
     "busan": "PLHR-o6SKCRAs",
     "seasons": "PLPAmMLMMHRV0",
     "jeju": "PLAWfo6ykY960",
-    "basics": "PLVPmVKfBaFtA"
+    "basics": "PLVPmVKfBaFtA",
+    "regions": "PLW5iD9URH6lw"
   },
   "added": {
     "P5Dq3oF2XfY": [
@@ -117,6 +118,10 @@
     "gc6lAJakbrM": [
       "seoul",
       "itinerary"
+    ],
+    "hdGtd3lwweM": [
+      "seoul",
+      "regions"
     ]
   }
 }
