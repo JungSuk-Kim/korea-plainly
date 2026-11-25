@@ -371,6 +371,10 @@
     "korea-autumn-foliage-2026": {
       "at": "2026-11-25T10:28:23+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n34x6pmpe62i"
+    },
+    "jeju-3-day-itinerary": {
+      "at": "2026-11-25T20:10:17+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n35xpaakbh2g"
     }
   },
   "bluesky_videos": {
@@ -497,6 +501,10 @@
     "gc6lAJakbrM": {
       "at": "2026-11-25T10:28:26+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n34x6rtl3s2z"
+    },
+    "hdGtd3lwweM": {
+      "at": "2026-11-25T20:10:19+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n35xpbucdo2i"
     }
   },
   "instagram_videos": {
@@ -591,6 +599,10 @@
     "mfUmgX7ZeUY": {
       "at": "2026-11-24T11:38:01+00:00",
       "ref": "17961304143256377"
+    },
+    "hdGtd3lwweM": {
+      "at": "2026-11-25T20:11:04+00:00",
+      "ref": "17911621017334583"
     }
   },
   "facebook_videos": {
@@ -717,6 +729,10 @@
     "gc6lAJakbrM": {
       "at": "2026-11-25T10:28:37+00:00",
       "ref": "1661792035641741"
+    },
+    "hdGtd3lwweM": {
+      "at": "2026-11-25T20:10:25+00:00",
+      "ref": "1817152419771290"
     }
   },
   "threads_videos": {
@@ -843,6 +859,10 @@
     "gc6lAJakbrM": {
       "at": "2026-11-25T10:28:48+00:00",
       "ref": "17957028669299492"
+    },
+    "hdGtd3lwweM": {
+      "at": "2026-11-25T20:11:17+00:00",
+      "ref": "18131103934852813"
     }
   },
   "facebook": {
@@ -1197,6 +1217,10 @@
     "korea-entry-k-eta-e-arrival": {
       "at": "2026-11-25T10:28:52+00:00",
       "ref": "1261611360380213_122118153465509276"
+    },
+    "korea-autumn-foliage-2026": {
+      "at": "2026-11-25T20:11:22+00:00",
+      "ref": "1261611360380213_122118263859509276"
     }
   },
   "threads": {
@@ -1551,6 +1575,10 @@
     "korea-entry-k-eta-e-arrival": {
       "at": "2026-11-25T10:29:01+00:00",
       "ref": "18613091680067084"
+    },
+    "korea-autumn-foliage-2026": {
+      "at": "2026-11-25T20:11:32+00:00",
+      "ref": "18121752179052042"
     }
   }
 }
