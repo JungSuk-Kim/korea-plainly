@@ -286,6 +286,17 @@
      "creatrip"
     ]
    ]
+  },
+  "visit-busan-pass": {
+   "after": "Buying, collecting and using it",
+   "text": "If the sums work for your plans, you can buy the pass online before you fly and collect the card in Busan, or use the mobile version.",
+   "links": [
+    [
+     "Visit Busan Pass on Klook",
+     "https://www.klook.com/activity/81576-visit-busan-pass/"
+    ]
+   ],
+   "title": "Visit Busan Pass"
   }
  }
 }
