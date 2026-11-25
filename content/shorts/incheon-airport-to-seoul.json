@@ -1,0 +1,50 @@
+{
+  "article": "incheon-airport-to-seoul",
+  "fallback": "photo-incheon-airport-to-seoul.jpg",
+  "title": "Incheon Airport To Seoul: Choose Your Best Ride",
+  "summary": "Choose the best way from Incheon Airport to Seoul based on where you’re staying. Compare the trains, airport buses and official taxis.",
+  "hashtags": "#IncheonAirport #Seoul #KoreaTravel #AREX #SeoulTransport",
+  "music": "Laid Back Guitars",
+  "slides": [
+    {
+      "kicker": "INCHEON",
+      "title": "Match The Ride To Your Hotel",
+      "sub": "Choose the drop-off closest to your stay",
+      "voice": "Incheon to Seoul? Choose the ride that drops you closest.",
+      "image": "photo-arriving-in-korea-checklist.jpg"
+    },
+    {
+      "kicker": "TRAIN",
+      "title": "Train For Your Hotel",
+      "sub": "Express: Seoul Station | All-Stop: Hongdae",
+      "voice": "Seoul Station? Express, with assigned seats. Hongdae or Gongdeok? All-Stop, paid with a transit card.",
+      "photo_query": "AREX Express train Seoul Incheon Airport",
+      "require": [
+        "arex"
+      ]
+    },
+    {
+      "kicker": "BUS",
+      "title": "Skip The Stairs",
+      "sub": "Check buses for Myeongdong, Gangnam or Jamsil",
+      "voice": "Myeongdong, Gangnam or Jamsil? Check airport buses; many stop near big hotels. Allow extra time for traffic.",
+      "photo_query": "Incheon Airport limousine bus Seoul Korea",
+      "require": [
+        "bus"
+      ]
+    },
+    {
+      "kicker": "TAXI",
+      "title": "For Late Or Luggage",
+      "sub": "Use the official taxi rank outside arrivals",
+      "voice": "Late, in a group, or loaded with bags? Use the official taxi rank. Landing after ten-thirty? Check your terminal’s last train.",
+      "image": "photo-kakao-t-taxi-korea.jpg"
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Five days a week",
+      "voice": "Subscribe for more Korea tips five days a week."
+    }
+  ]
+}
