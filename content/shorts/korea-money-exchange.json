@@ -1,0 +1,62 @@
+{
+  "article": "korea-money-exchange",
+  "fallback": "photo-korea-money-exchange.jpg",
+  "title": "Korean Won and Money Exchange: Get Better Rates",
+  "summary": "Learn how much cash to exchange in Korea, where to find better rates, and what to do with leftover won. A few simple choices can help you avoid poor conversions.",
+  "hashtags": "#Korea #KoreanWon #KoreaTravel #MoneyExchange #TravelTips",
+  "music": "Easy Lemon",
+  "slides": [
+    {
+      "kicker": "KOREAN WON",
+      "title": "Carry Less, Exchange Smarter",
+      "sub": "A little cash goes a long way",
+      "voice": "Korean won: carry less cash. Exchange smarter.",
+      "photo_query": "South Korean won currency and cash",
+      "require": [
+        "won"
+      ]
+    },
+    {
+      "kicker": "TIP 1",
+      "title": "Exchange A Little At Arrival",
+      "sub": "Transit, snack, taxi—just enough",
+      "voice": "Change only enough at the airport for transit, a snack, and a taxi. Rates are usually weaker.",
+      "image": "photo-arriving-in-korea-checklist.jpg"
+    },
+    {
+      "kicker": "TIP 2",
+      "title": "Compare City Rates",
+      "sub": "Licensed Myeongdong changers",
+      "voice": "Licensed Myeongdong changers often offer better rates. Compare boards and keep your receipt.",
+      "image": "photo-korea-money-exchange.jpg"
+    },
+    {
+      "kicker": "TIP 3",
+      "title": "Choose Won On Card Terminals",
+      "sub": "Pay in won, not your home currency",
+      "voice": "When asked, pay in won, not your home currency. The rate is usually better.",
+      "photo_query": "credit card payment terminal in South Korea",
+      "require": [
+        "credit",
+        "card"
+      ]
+    },
+    {
+      "kicker": "TIP 4",
+      "title": "Use Cash, Spend Coins",
+      "sub": "Markets and transit top-ups; use coins",
+      "voice": "Keep cash for markets and transit top-ups. Spend coins before flying; they usually cannot be exchanged abroad.",
+      "photo_query": "South Korean won coins",
+      "require": [
+        "won",
+        "coin"
+      ]
+    },
+    {
+      "end": true,
+      "title": "New Korea tips",
+      "sub": "Five days a week",
+      "voice": "Subscribe for more Korea tips five days a week."
+    }
+  ]
+}
