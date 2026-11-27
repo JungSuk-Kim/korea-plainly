@@ -383,6 +383,10 @@
     "incheon-airport-to-seoul": {
       "at": "2026-11-26T19:49:29+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n3agywzes22x"
+    },
+    "gyeongju-1-day-itinerary": {
+      "at": "2026-11-27T10:07:25+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n3bwx2d36j25"
     }
   },
   "bluesky_videos": {
@@ -1269,6 +1273,10 @@
     "incheon-local-guide-incheon-chinatown": {
       "at": "2026-11-26T19:51:38+00:00",
       "ref": "1261611360380213_122118513837509276"
+    },
+    "incheon-airport-to-seoul": {
+      "at": "2026-11-27T10:07:31+00:00",
+      "ref": "1261611360380213_122118668937509276"
     }
   },
   "threads": {
@@ -1635,6 +1643,10 @@
     "incheon-local-guide-incheon-chinatown": {
       "at": "2026-11-26T19:51:48+00:00",
       "ref": "17882180625635268"
+    },
+    "incheon-airport-to-seoul": {
+      "at": "2026-11-27T10:07:41+00:00",
+      "ref": "18095092214242423"
     }
   }
 }
