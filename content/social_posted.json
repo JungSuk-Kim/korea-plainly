@@ -387,6 +387,10 @@
     "gyeongju-1-day-itinerary": {
       "at": "2026-11-27T10:07:25+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n3bwx2d36j25"
+    },
+    "day-trips-from-seoul": {
+      "at": "2026-11-27T19:39:12+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n3cwvi6elo2x"
     }
   },
   "bluesky_videos": {
@@ -1277,6 +1281,10 @@
     "incheon-airport-to-seoul": {
       "at": "2026-11-27T10:07:31+00:00",
       "ref": "1261611360380213_122118668937509276"
+    },
+    "gyeongju-1-day-itinerary": {
+      "at": "2026-11-27T19:39:18+00:00",
+      "ref": "1261611360380213_122118771537509276"
     }
   },
   "threads": {
@@ -1647,6 +1655,10 @@
     "incheon-airport-to-seoul": {
       "at": "2026-11-27T10:07:41+00:00",
       "ref": "18095092214242423"
+    },
+    "gyeongju-1-day-itinerary": {
+      "at": "2026-11-27T19:39:32+00:00",
+      "ref": "18441212755199513"
     }
   }
 }
