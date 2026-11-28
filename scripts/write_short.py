@@ -113,6 +113,16 @@ Rules:
 - The hook must promise something the viewer gains (what to pack, wear or do, the order to do it). Never open with a
   warning that something may be cancelled, closed or dangerous: "Ice Festivals Can Cancel" kept only 38% of viewers
   past the first quarter. Put such cautions on slide 3 or later as "check before you go".
+- 28 Nov 2026 review of 26 Shorts: by a quarter of the way in (about 9 seconds) only 63% of viewers are still
+  there, and practical "how it works" topics (transit card, airport, money exchange, SIM) do worst: about 29%
+  watched on average, 30-40 views. So the hook must carry a number or a mistake the viewer recognises as their
+  own, and practical topics are told as "the mistake tourists make, then the fix", never as a neutral explainer:
+  * a number from the article, said and shown: "Three things in your bag decide your January trip."
+  * or the common mistake, then the fix: "Tourists queue for the wrong airport train. Take this one."
+  The first three spoken words name the place or thing (the same words as the start of the video title), the
+  on-screen "title" of slide 1 shows the number or the mistake in at most four words, and slide 2 gives the fix
+  at once. This is about a mistake that costs the viewer time or money, not a scare: the rule above still holds.
+  Only say tourists get something wrong when the article itself says so; never invent a mistake, a price or a fee.
 - What has worked best on our channel (Nov 2026): "Korea in January: What to Pack and Do" (37 s, 6 slides, hook
   "January: Pack For Seoul's Cold") is the best so far: 111% watched on average (viewers rewatch it), 113% still
   there at the halfway point. "Korea in November" (37 s, 4 slides) is the other model: 56% watched on average.
@@ -128,7 +138,9 @@ Rules:
   picture must show that exact thing (the clothes, the ticket, the dish), never a loosely related site photo.
   Slides 2 onwards: one concrete tip each, said in one or two short sentences, in the order a visitor would use them.
   Do not add an ending slide; it is added for you.
-- The video title says what the viewer gets ("What to Pack and Do"), never "Safety Tips" or a warning.
+- The video title says what the viewer gets ("What to Pack and Do"), never "Safety Tips" or a warning that
+  something may be cancelled, closed or dangerous. A counted mistake to avoid is a gain and is welcome after the
+  search words ("Seoul T-Money Card: 3 Mistakes Tourists Make", "Korean Street Food: Don't Overpay for These").
 - Narration ("voice"): warm, plain spoken English, like a friendly local. All slides together at most {max_words} words.
   Short sentences. Spell numbers as they are spoken. No hashtags or emoji in the voice.
 - On screen: "kicker" is 1-4 words in capitals (e.g. "DAY 1", "TIP 2", "BUSAN"); "title" at most 32 characters;
@@ -145,6 +157,9 @@ Rules:
 - "title" of the video: at most 60 characters. Start with the words a traveller would type into YouTube search
   (place + what they want), then a short promise, e.g. "Busan One Day Itinerary: The Easy East Coast Route",
   "Seoul Subway for Foreigners: 5 Things to Know", "Korea in December: What to Pack and Do". Title Case.
+  The search words always come first and stay plain: nearly half of our views come from YouTube search (1,156, against
+  1,347 from the Shorts feed, by 27 Nov 2026), so never open the title with a question, "Stop", "Don't" or "Why". The part after the
+  colon carries the pull: a number, a mistake to avoid, or what they save.
   For a topic about the whole country, start with "Korea" (e.g. "Korea in January: ...", "Korea 10 Day Itinerary: ...").
   For anything seasonal, name the month, not the season: viewers search and click month names ("Korea in December"
   444 views, "Korea in November" 226) far more than seasons ("Korea Autumn Leaves" 11). So "Korea in January:

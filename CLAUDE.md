@@ -68,6 +68,10 @@ The "Shorts (automatic)" workflow (Mon, Wed, Thu, Fri, Sat since 21 Nov 2026: a 
 `youtube_shorts.py upload` uploads it as private (log: `content/shorts/uploads.json`), the owner makes it public,
 and `youtube_shorts.py check` (every hour) adds it to the article. Videos are not committed (`_shorts/*.mp4`
 is ignored); each run keeps its video as a 30-day artifact. Never use Google Maps photos in videos.
+28 Nov 2026 (review of 26 Shorts): half the views come from YouTube search, month/season topics lead and practical
+"how it works" topics do worst, so `queue.json` now puts the practical topics last and `write_short.py` keeps the search
+words first in the title, lets a counted mistake follow the colon, and asks for a number or a mistake-then-fix hook.
+Hand-made "Korea vs" comparison Shorts (scheduled Sat/Sun 22:00 KST from 28 Nov) are uploaded by hand, outside this queue.
 Long-form (16:9, 5-6 min; opens on the best view and signature food, first sentence = the promise, route map within 15 s): "Long-form video (weekly)" runs Tuesdays: `write_longform.py` (script from the next article in
 `content/longform/queue.json`, map stops geocoded with OSM Nominatim) → `make_longform.py` (OSM maps, chapters, subtitles,
 Kkachi) → `youtube_upload.py` (private) → `youtube_shorts.py record-long`; the hourly check embeds it at the top of the
