@@ -391,6 +391,10 @@
     "day-trips-from-seoul": {
       "at": "2026-11-27T19:39:12+00:00",
       "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n3cwvi6elo2x"
+    },
+    "christmas-new-year-seoul": {
+      "at": "2026-11-28T09:26:37+00:00",
+      "ref": "at://did:plc:xl66keoz5nzmkdaguxd7kc3j/app.bsky.feed.post/3n3ef4znp3b2q"
     }
   },
   "bluesky_videos": {
@@ -1285,6 +1289,10 @@
     "gyeongju-1-day-itinerary": {
       "at": "2026-11-27T19:39:18+00:00",
       "ref": "1261611360380213_122118771537509276"
+    },
+    "day-trips-from-seoul": {
+      "at": "2026-11-28T09:26:42+00:00",
+      "ref": "1261611360380213_122118899889509276"
     }
   },
   "threads": {
@@ -1659,6 +1667,10 @@
     "gyeongju-1-day-itinerary": {
       "at": "2026-11-27T19:39:32+00:00",
       "ref": "18441212755199513"
+    },
+    "day-trips-from-seoul": {
+      "at": "2026-11-28T09:26:54+00:00",
+      "ref": "18032586266863876"
     }
   }
 }
